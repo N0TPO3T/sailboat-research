@@ -1,0 +1,50 @@
+{
+  "analysis_mode": "observation_event",
+  "models": [
+    {
+      "name": "K5",
+      "k": 5,
+      "attention_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/attention_weights_saclstmatt_s14obst_noise_5_9000_K10.npy",
+      "trajectory_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/trajectory_xy_saclstmatt_s14obst_noise_5_9000_K10.npy",
+      "episode_index": 0
+    },
+    {
+      "name": "K10",
+      "k": 10,
+      "attention_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/attention_weights_saclstm_s14obst_noise_0204_10800_K10.npy",
+      "trajectory_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/trajectory_xy_saclstm_s14obst_noise_0204_10800_K10.npy",
+      "episode_index": 0
+    },
+    {
+      "name": "K20",
+      "k": 20,
+      "attention_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/attention_weights_saclstm_s14obst_v3_0126_20_14400_K10.npy",
+      "trajectory_path": "C:/Users/24809/Desktop/py_RL/part5/SAC-LSTM-att/outputs/trajectory_xy_saclstm_s14obst_v3_0126_20_14400_K10.npy",
+      "episode_index": 0
+    }
+  ],
+  "obstacles": [
+    [190, 10],
+    [90, -90],
+    [300, -76],
+    [330, 57],
+    [197, 150],
+    [160, -220],
+    [350, -205]
+  ],
+  "detection_radius": 150.0,
+  "enter_distance": 120.0,
+  "leave_distance": 150.0,
+  "approach_delta": 1.5,
+  "leave_delta": 1.5,
+  "sustain_steps": 3,
+  "switch_cooldown": 6,
+  "smoothing_alpha": 0.3,
+  "event_window_left": 12,
+  "event_window_right": 3,
+  "event_min_window_len": 4,
+  "fallback_ratios": [0.4, 0.3, 0.3],
+  "recent_fraction": 0.3,
+  "resample_bins": 50,
+  "output_dir": "./attn_stage_compare_results"
+}

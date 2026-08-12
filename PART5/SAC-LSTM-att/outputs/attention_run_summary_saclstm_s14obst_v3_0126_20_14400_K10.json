@@ -1,0 +1,17 @@
+{
+  "model_name": "saclstm_s14obst_v3_0126_20",
+  "model_id": 14400,
+  "env_name": "sailboat-s14-obst-v3",
+  "attention_path": "c:\\Users\\24809\\Desktop\\py_RL\\part5\\SAC-LSTM-att\\outputs\\attention_weights_saclstm_s14obst_v3_0126_20_14400_K10.npy",
+  "trajectory_path": "c:\\Users\\24809\\Desktop\\py_RL\\part5\\SAC-LSTM-att\\outputs\\trajectory_xy_saclstm_s14obst_v3_0126_20_14400_K10.npy",
+  "attention_shape": [
+    367,
+    20
+  ],
+  "trajectory_shape": [
+    367,
+    2
+  ],
+  "total_reward": 223.37198050089725,
+  "steps": 367
+}

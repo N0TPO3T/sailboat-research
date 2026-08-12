@@ -1,0 +1,8 @@
+Runs: 5
+mean_total_reward: -281.8839
+std_total_reward: 261.4856
+mean_steps: 863.20
+std_steps: 176.95
+mean_final_distance: 666.2726
+std_final_distance: 278.5331
+success_rate: 0.00%
