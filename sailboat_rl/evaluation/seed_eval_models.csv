@@ -1,0 +1,7 @@
+enabled,model_id,model_family,algo_type,env_name,model_prefix,model_step,net_width,noise_type,eval_seed
+1,saclstm_nowind_seed100,SAC-LSTM,lstm,sailboat-s14-nowind,saclstm_s14nowind_buf1e6_seed100,7200,256,nowind,100
+1,saclstm_nowind_seed200,SAC-LSTM,lstm,sailboat-s14-nowind,saclstm_s14nowind_buf1e6_seed200,7200,256,nowind,200
+1,sac_nowind_seed100,SAC-nowind,fc,sailboat-s14-nowind,sac_s14nowind_buf1e6_seed100,7200,1024,nowind,100
+1,sac_nowind_seed200,SAC-nowind,fc,sailboat-s14-nowind,sac_s14nowind_buf1e6_seed200,7200,1024,nowind,200
+1,sac_wind_seed100,SAC-wind,fc,sailboat-s14-wind,sac_s14wind_buf1e6_seed100,7200,1024,wind,100
+1,sac_wind_seed200,SAC-wind,fc,sailboat-s14-wind,sac_s14wind_buf1e6_seed200,7200,1024,wind,200

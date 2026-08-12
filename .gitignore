@@ -4,11 +4,13 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+.pytest_cache/
 
 # ===== 模型检查点 & 训练日志（体积过大，不入库） =====
 *.pth
 *.pt
 runs/
+canonical_runs/
 *.zip
 *.rar
 
