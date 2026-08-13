@@ -355,3 +355,71 @@ class ReplayBuffer():
     def update_beta(self, progress):
         # 更新beta值
         self.beta = 0.4 + progress * (1.0 - 0.4)  # 逐渐增加beta值
+
+    def state_dict(self):
+        size = int(self.size)
+        tensor_names = (
+            's_seq',
+            'a_seq',
+            's_curr',
+            'a_curr',
+            'r',
+            's_next_seq',
+            'a_next_seq',
+            's_next_curr',
+            'dw',
+            'priorities',
+        )
+        state = {
+            'schema_version': 1,
+            'max_size': int(self.max_size),
+            'seq_len': int(self.seq_len),
+            'size': size,
+            'ptr': int(self.ptr),
+            'alpha': float(self.alpha),
+            'beta': float(self.beta),
+            'epsilon': float(self.epsilon),
+            'max_priority': float(self.priorities[:size].max().item()) if size else 1.0,
+        }
+        state.update({
+            name: getattr(self, name)[:size].detach().cpu().clone()
+            for name in tensor_names
+        })
+        return state
+
+    def load_state_dict(self, state_dict):
+        if int(state_dict['max_size']) != int(self.max_size):
+            raise ValueError(
+                f"Replay capacity mismatch: checkpoint={state_dict['max_size']}, runtime={self.max_size}"
+            )
+        if int(state_dict['seq_len']) != int(self.seq_len):
+            raise ValueError(
+                f"Replay sequence mismatch: checkpoint={state_dict['seq_len']}, runtime={self.seq_len}"
+            )
+        size = int(state_dict['size'])
+        ptr = int(state_dict['ptr'])
+        if not 0 <= size <= self.max_size or not 0 <= ptr < self.max_size:
+            raise ValueError(f"Invalid replay cursor: size={size}, ptr={ptr}, capacity={self.max_size}")
+        tensor_names = (
+            's_seq',
+            'a_seq',
+            's_curr',
+            'a_curr',
+            'r',
+            's_next_seq',
+            'a_next_seq',
+            's_next_curr',
+            'dw',
+            'priorities',
+        )
+        for name in tensor_names:
+            source = state_dict[name]
+            target = getattr(self, name)
+            if source.shape != target[:size].shape:
+                raise ValueError(f"Replay tensor shape mismatch for {name}: {source.shape} != {target[:size].shape}")
+            target[:size].copy_(source.to(self.dvc))
+        self.size = size
+        self.ptr = ptr
+        self.alpha = float(state_dict['alpha'])
+        self.beta = float(state_dict['beta'])
+        self.epsilon = float(state_dict['epsilon'])

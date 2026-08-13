@@ -269,3 +269,43 @@ class ReplayBuffer():
         
     def update_beta(self, progress):
         self.beta = 0.4 + progress * (1.0 - 0.4)
+
+    def state_dict(self):
+        size = int(self.size)
+        return {
+            'schema_version': 1,
+            'max_size': int(self.max_size),
+            'size': size,
+            'ptr': int(self.ptr),
+            'alpha': float(self.alpha),
+            'beta': float(self.beta),
+            'epsilon': float(self.epsilon),
+            'max_priority': float(self.priorities[:size].max().item()) if size else 1.0,
+            's': self.s[:size].detach().cpu().clone(),
+            'a': self.a[:size].detach().cpu().clone(),
+            'r': self.r[:size].detach().cpu().clone(),
+            's_next': self.s_next[:size].detach().cpu().clone(),
+            'dw': self.dw[:size].detach().cpu().clone(),
+            'priorities': self.priorities[:size].detach().cpu().clone(),
+        }
+
+    def load_state_dict(self, state_dict):
+        if int(state_dict['max_size']) != int(self.max_size):
+            raise ValueError(
+                f"Replay capacity mismatch: checkpoint={state_dict['max_size']}, runtime={self.max_size}"
+            )
+        size = int(state_dict['size'])
+        ptr = int(state_dict['ptr'])
+        if not 0 <= size <= self.max_size or not 0 <= ptr < self.max_size:
+            raise ValueError(f"Invalid replay cursor: size={size}, ptr={ptr}, capacity={self.max_size}")
+        for name in ('s', 'a', 'r', 's_next', 'dw', 'priorities'):
+            source = state_dict[name]
+            target = getattr(self, name)
+            if source.shape != target[:size].shape:
+                raise ValueError(f"Replay tensor shape mismatch for {name}: {source.shape} != {target[:size].shape}")
+            target[:size].copy_(source.to(self.dvc))
+        self.size = size
+        self.ptr = ptr
+        self.alpha = float(state_dict['alpha'])
+        self.beta = float(state_dict['beta'])
+        self.epsilon = float(state_dict['epsilon'])

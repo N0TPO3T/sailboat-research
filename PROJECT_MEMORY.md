@@ -26,23 +26,25 @@ Always `import sailboat_rl` before `gym.make(...)` and run the canonical smoke t
 
 ---
 
-## Training `--seed` is not full determinism in the canonical scripts
+## Canonical package training uses one explicit master seed, but resume is practical rather than bitwise simulator continuation
 
 **Tags:** `seed`, `randomness`, `environment`, `training`, `evaluation`
 
 **Conclusion**
 
-The canonical PART4 training scripts seed Torch and pass a seed to `env.reset`, but they do not seed Python `random` or global NumPy. The environments use `random.uniform` for initial wind/heading/state and `np.random.randn` for Dryden turbulence. Therefore a training label such as `seed=100` does not by itself guarantee a reproducible trajectory distribution.
+The current `sailboat_rl.training` entries seed Python, NumPy, Torch CPU/CUDA, noise RNG and Gym spaces from one master seed; environment worker `i` uses `master_seed + i`. Strict deterministic Torch algorithms are an opt-in diagnostic because they can reduce performance or reject kernels. A resumed process restores learner/replay and main/noise RNG, but intentionally starts fresh environment episodes; it does not continue live simulator trajectories bit-for-bit.
 
 **Evidence**
 
-- `PART4/SAC/parll_lstm_normal.py` seeds Torch/CUDA but has no `random.seed` or `np.random.seed` call.
-- `gymnasium/envs/sailboat/sailboat_s14.py` uses module-level `random` and `np.random` after `super().reset(seed=seed)`.
+- `sailboat_rl/training/runtime.py` implements master/worker seeding and RNG capture/restore.
+- All three canonical training entries apply the same worker rule and record it in `run_manifest.json`.
+- Resume tests compare the restored Python/NumPy/Torch/noise RNG streams and replay sampling exactly.
+- Historical `PART4/SAC/parll_lstm_normal.py` still seeds only Torch/CUDA and therefore retains the older reproducibility gap.
 - The formal seed evaluator explicitly calls `random.seed`, `np.random.seed`, and `torch.manual_seed` per episode, so its evaluation protocol is stronger than the training scripts' seed handling.
 
 **Implication**
 
-Do not interpret training-seed comparisons as deterministic replications without first fixing or measuring this gap. Preserve the evaluator's explicit per-episode seeding when modifying evaluation.
+Use the manifest master seed as the run identity and preserve the evaluator's explicit per-episode seeding. Do not claim cross-machine bitwise equality or uninterrupted-vs-resumed trajectory equality, because VecEnv/simulator state is deliberately not serialized.
 
 ---
 
@@ -67,22 +69,24 @@ Prefer `python -m sailboat_rl...` for new work. When reproducing a historical ex
 
 ---
 
-## Canonical checkpoints are evaluation snapshots, not full resume state
+## Canonical model snapshots and resumable training checkpoints have different contracts
 
 **Tags:** `checkpoint`, `training`, `resume`, `SAC`
 
 **Conclusion**
 
-Canonical SAC-FC and SAC-LSTM checkpoints save actor, Q critic and state normalizer only. They do not save target critic, adaptive alpha/log-alpha, optimizer states, replay contents or training counters.
+`agent.save/load` remains the stable evaluation snapshot format and contains actor, Q critic and state normalizer only. Each canonical run additionally writes atomic resumable checkpoints containing actor, Q/target Q, normalizer, adaptive alpha, optimizer states, counters, valid replay/PER state and main/noise RNG. Resume is a practical learner continuation: environments and online recurrent state/history are reset in the new process.
 
 **Evidence**
 
-- End-to-end smoke training saved and reloaded all three model families from a non-repository working directory; actor, Q critic and normalizer matched the written files exactly.
-- `SAC_fc_continuous.save/load` and `SAC_lstm_countinuous.save/load` contain no serialization for the omitted state.
+- End-to-end smoke training saved and reloaded all three model families from a non-repository working directory; evaluation snapshot actor, Q critic and normalizer matched exactly.
+- FC and LSTM resume regression tests compare every saved learner/replay field and continue finite optimizer updates after recreation.
+- A real FC `SIGTERM` produced a checkpoint at a safe train-loop boundary, and a new process continued updates from that checkpoint; both FC and LSTM training entries have completed cross-process resume.
+- Full-capacity replay round-trips were measured at `1e6` entries for both replay schemas.
 
 **Implication**
 
-The current format is sufficient for deterministic evaluation but cannot provide an exact training resume. Do not claim alpha/optimizer restoration or exact continuation without an explicit future checkpoint-format change.
+Use model snapshots for evaluation and run checkpoints for training resume. Never substitute one for the other. Do not claim bitwise simulator continuation: live VecEnv/ODE state and SAC-LSTM online hidden/history are intentionally absent, so resumed workers begin fresh episodes while replay training sequences remain intact.
 
 ---
 

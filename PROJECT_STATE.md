@@ -15,6 +15,7 @@ SailBoatRL 是基于 Gymnasium 的无人帆船连续控制研究代码库。目�
 
 - `sailboat_rl/`：当前唯一 canonical package；包含基础环境、SAC-FC、SAC-LSTM、三个训练入口和正式 seed evaluation。
 - `tests/test_canonical_core.py`：canonical core 的最小环境/网络/replay/evaluation regression smoke test。
+- `tests/test_training_resume.py`：learner/replay/RNG checkpoint round-trip、续训和 graceful-stop regression test。
 - `gymnasium/envs/sailboat/`：自定义环境源码；包含多个 V1/V2/V3 和 old/fail 副本。
 - `PART4/SAC/`：README 指定的主 SAC/SAC-LSTM 训练与评估代码。
 - `PART4/PPO/`、`PART4/TD3/`、`PART4/MPC/`：基线。
@@ -68,9 +69,16 @@ SailBoatRL 是基于 Gymnasium 的无人帆船连续控制研究代码库。目�
 - Double-Q critic：历史分支同样使用 LSTM，当前 `[state, action]` 使用 MLP；target critic 用 Polyak update。
 - 使用 Z-score state normalizer、prioritized replay、gradient clipping 和 adaptive entropy coefficient。
 - canonical SAC-FC 和 SAC-LSTM replay capacity 均为正式 seed 版本的 `1e6`；`PART4/SAC` 的旧 `1e3` 版本不是当前主干。
-- 默认 `gamma=0.98`、hidden width 256、actor/critic learning rate `5e-5`、batch 256。代码条件是 `total_steps % 20 == 0` 时执行 8 次 critic update；因 `total_steps` 每轮增加 15，当前默认下实际每 60 个 aggregate transitions 命中一次。actor/alpha 每 4 次 critic update 更新一次。
-- checkpoints 保存 actor、Q critic、normalizer 三个 `.pth` 文件；不保存 target critic、alpha 或 optimizer state。TensorBoard 写入 `runs/`。
+- 默认 `gamma=0.98`、SAC-FC hidden width 1024、SAC-LSTM hidden width 256、actor/critic learning rate `5e-5`、batch 256。代码条件是 `total_steps % 20 == 0` 时执行 8 次 critic update；因 `total_steps` 每轮增加 15，当前默认下实际每 60 个 aggregate transitions 命中一次。actor/alpha 每 4 次 critic update 更新一次。
+- evaluation model snapshots 继续保存 actor、Q critic、normalizer 三个 `.pth` 文件，格式未变。训练 run 另有原子写入的 resumable checkpoint，保存 actor、Q/target Q、normalizer、alpha、optimizers、更新计数、有效 replay 内容/PER 状态、主进程 RNG 和 noise RNG；恢复时重新创建并 reset 环境，不保存 live VecEnv/ODE 或 LSTM online hidden/history。
+- canonical 训练以 `--seed` 作为 master seed，覆盖 Python/NumPy/Torch/CUDA、noise RNG、action/observation spaces，并按 `master_seed + worker_rank` 初始化并行环境。每个新 run 写入 `run_manifest.json`，resume 会拒绝 model/env/seed 和关键算法配置漂移。
 - SAC-nowind、SAC-wind、SAC-LSTM 已分别完成 280-transition 短训练；每个模型实际执行 104 次 critic、26 次 actor/alpha update，参数变化、有限 loss、save/load 和 canonical evaluator 均已验证。该 smoke 结果不代表模型性能。
+
+Long-run readiness 已通过以下工程验证，但尚未执行 9M 正式训练：
+
+- SAC-FC 与 SAC-LSTM 的正式 `1e6` replay capacity 已实际分配、全量 materialize、保存、重新加载和恢复；对应 replay checkpoint 满容量约为 123 MiB 与 1.31 GiB。
+- 两个模型均以正式容量、默认并行数/网络宽度/batch/update 配置训练到 19,995 transitions；loss、Q、alpha、transition 和 PER priority 均为有限值。
+- FC 训练已在真实 `SIGTERM` 后于安全边界保存，并由新进程从 5,280 transitions 恢复；FC 和 LSTM 都完成了跨进程续训。
 
 # Evaluation and Reference Results
 
@@ -91,17 +99,17 @@ PART5 attention outputs 是少量单 episode attention/trajectory artifacts；�
 
 # Experiment and Artifact Conventions
 
-- canonical training 默认将 checkpoints 写入根 `canonical_runs/model/`，TensorBoard 写入 `canonical_runs/runs/`；路径由模块位置确定，也可用 `--output_dir` 显式覆盖。
+- canonical evaluation snapshots 默认写入根 `canonical_runs/model/`；每个 canonical training run 的 manifest、TensorBoard 和 resumable checkpoints 位于 `canonical_runs/runs/<model_prefix>/`，也可用 `--run_dir` 显式覆盖。路径由模块位置确定，不跟随 working directory。
 - 多数训练脚本使用相对路径 `./model` 和 `runs/`；输出位置由启动时 working directory 决定。
 - `.gitignore` 排除 `canonical_runs/`、`*.pth`、`*.pt`、`runs/`、压缩包和虚拟环境。
-- 当前仓库没有任何 `.pth/.pt` checkpoint 或 TensorBoard event；已提交的是图片、CSV/NPY/JSON、summary 和部分日志。
+- Git 中没有任何 `.pth/.pt` checkpoint 或 TensorBoard event；本机验证产生的 runtime artifacts 位于 ignored `canonical_runs/`，不属于历史论文证据。
 - 一些 committed config/manifest 保存 Windows 绝对路径；迁移到新机器时必须通过 CLI 参数或本地配置重定位。
 - `tests/test_canonical_core.py` 是 canonical regression suite；历史目录中的其他 `test_*.py` 主要仍是交互式/评估脚本。当前没有 CI 配置。
 - 接手前 Git 只有一次初始化提交，因此不能用历史 commit 判断变体先后、active work 或失败路线。
 
 # Known Constraints and Unknowns
 
-- 历史训练 checkpoint 和原始 TensorBoard logs 不在仓库；canonical 短训练闭环已验证，但完整 9M training 和正式 10,800-episode evaluation 仍未重跑。
+- 历史训练 checkpoint 和原始 TensorBoard logs 不在仓库；canonical 短训练、medium stress 和 practical resume 已验证，但完整 9M training 和正式 10,800-episode evaluation 仍未重跑。
 - 各复制实验目录存在代码漂移；更改一个环境或模型副本不会自动传播到其他实验。
 - 主 README 的从根目录启动示例与脚本的相对输出路径组合，会把 `model/`、`runs/` 写到当前目录；实验目录 README 通常要求先 `cd` 到对应目录。
 - PART5 attention/deep/meanpool 的公平对照、训练 seeds 和总体 benchmark 状态 unknown / not yet verified。
@@ -126,5 +134,11 @@ PART5 attention outputs 是少量单 episode attention/trajectory artifacts；�
 最小 regression/smoke tests：
 
 ```bash
-.venv/bin/python -m unittest discover -s tests -p 'test_canonical_core.py' -v
+.venv/bin/python -m pytest tests/test_canonical_core.py tests/test_training_resume.py -q
+```
+
+中断后从同一 run 继续（正式参数必须与 manifest 一致）：
+
+```bash
+.venv/bin/python -m sailboat_rl.training.train_sac_nowind --resume canonical_runs/runs/<model_prefix>
 ```
