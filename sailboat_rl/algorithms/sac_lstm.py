@@ -43,7 +43,13 @@ class SAC_lstm_countinuous():
         for p in self.q_critic_target.parameters():
             p.requires_grad = False
 
-        self.replay_buffer = ReplayBuffer(self.state_dim, self.action_dim, self.seq_len, max_size=int(1e6), dvc=self.dvc)
+        self.replay_buffer = ReplayBuffer(
+            self.state_dim,
+            self.action_dim,
+            self.seq_len,
+            max_size=int(getattr(self, 'replay_capacity', 1e6)),
+            dvc=self.dvc,
+        )
 
         if self.adaptive_alpha:
             # Target Entropy = −dim(A) (e.g. , -6 for HalfCheetah-v2) as given in the paper
@@ -295,7 +301,7 @@ class ReplayBuffer():
         self.a_seq[self.ptr] = torch.from_numpy(a_seq).to(self.dvc, non_blocking=True)
         self.s_curr[self.ptr] = torch.from_numpy(s_curr).to(self.dvc, non_blocking=True)
         self.a_curr[self.ptr] = torch.from_numpy(action).to(self.dvc, non_blocking=True)
-        self.r[self.ptr] = r
+        self.r[self.ptr] = float(r)
         self.s_next_seq[self.ptr] = torch.from_numpy(s_next_seq).to(self.dvc, non_blocking=True)
         self.a_next_seq[self.ptr] = torch.from_numpy(a_next_seq).to(self.dvc, non_blocking=True)  # 存储下一个动作序列
         self.s_next_curr[self.ptr] = torch.from_numpy(s_next_curr).to(self.dvc, non_blocking=True)

@@ -61,6 +61,11 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Analysis output directory. Defaults to <result_dir>/analysis_report.",
     )
+    parser.add_argument(
+        "--allow_partial",
+        action="store_true",
+        help="Allow a reduced smoke-evaluation row count while retaining the formal default checks.",
+    )
     return parser.parse_args()
 
 
@@ -229,20 +234,23 @@ def plot_metric_boxplot(
             positions.append(centers[s_idx] + offsets[m_idx])
             colors.append(MODEL_COLORS[model])
 
-    bp = ax.boxplot(
-        data,
-        positions=positions,
-        widths=0.18,
-        showfliers=False,
-        patch_artist=True,
-        medianprops={"color": "black", "linewidth": 1.0},
-        whiskerprops={"linewidth": 0.8},
-        capprops={"linewidth": 0.8},
-        boxprops={"linewidth": 0.8},
-    )
-    for patch, color in zip(bp["boxes"], colors):
-        patch.set_facecolor(color)
-        patch.set_alpha(0.72)
+    if data:
+        bp = ax.boxplot(
+            data,
+            positions=positions,
+            widths=0.18,
+            showfliers=False,
+            patch_artist=True,
+            medianprops={"color": "black", "linewidth": 1.0},
+            whiskerprops={"linewidth": 0.8},
+            capprops={"linewidth": 0.8},
+            boxprops={"linewidth": 0.8},
+        )
+        for patch, color in zip(bp["boxes"], colors):
+            patch.set_facecolor(color)
+            patch.set_alpha(0.72)
+    else:
+        ax.text(0.5, 0.5, "No successful episodes", ha="center", va="center", transform=ax.transAxes)
 
     ax.set_ylabel(ylabel)
     ax.set_xticks(centers)
@@ -282,20 +290,23 @@ def plot_sail_rudder_boxplots(boxplot: pd.DataFrame, figures_dir: Path) -> None:
                 data.append(values)
                 positions.append(centers[s_idx] + offsets[m_idx])
                 colors.append(MODEL_COLORS[model])
-        bp = ax.boxplot(
-            data,
-            positions=positions,
-            widths=0.18,
-            showfliers=False,
-            patch_artist=True,
-            medianprops={"color": "black", "linewidth": 1.0},
-            whiskerprops={"linewidth": 0.8},
-            capprops={"linewidth": 0.8},
-            boxprops={"linewidth": 0.8},
-        )
-        for patch, color in zip(bp["boxes"], colors):
-            patch.set_facecolor(color)
-            patch.set_alpha(0.72)
+        if data:
+            bp = ax.boxplot(
+                data,
+                positions=positions,
+                widths=0.18,
+                showfliers=False,
+                patch_artist=True,
+                medianprops={"color": "black", "linewidth": 1.0},
+                whiskerprops={"linewidth": 0.8},
+                capprops={"linewidth": 0.8},
+                boxprops={"linewidth": 0.8},
+            )
+            for patch, color in zip(bp["boxes"], colors):
+                patch.set_facecolor(color)
+                patch.set_alpha(0.72)
+        else:
+            ax.text(0.5, 0.5, "No successful episodes", ha="center", va="center", transform=ax.transAxes)
         ax.set_title("Sail" if metric.startswith("sail") else "Rudder")
         ax.set_ylabel("Change rate (deg/s)")
         ax.set_xticks(centers)
@@ -523,7 +534,7 @@ def main() -> None:
     with files["manifest"].open("r", encoding="utf-8") as f:
         manifest = json.load(f)
 
-    if len(episodes) != 10800:
+    if not args.allow_partial and len(episodes) != 10800:
         raise ValueError(f"Expected 10800 episode rows, got {len(episodes)}")
     expected_models = set(MODEL_ORDER)
     expected_scenarios = set(SCENARIO_ORDER)

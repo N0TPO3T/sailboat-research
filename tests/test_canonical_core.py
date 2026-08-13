@@ -4,19 +4,23 @@ import sys
 import tempfile
 import types
 import unittest
+from collections import deque
 from pathlib import Path
 
 import gymnasium as gym
 import numpy as np
+import pandas as pd
 import torch
 
 import sailboat_rl
+from sailboat_rl.algorithms.sac_fc import ReplayBuffer as FCReplayBuffer
 from sailboat_rl.algorithms.sac_lstm import ReplayBuffer
 from sailboat_rl.algorithms.utils_fc import Actor as FCActor
 from sailboat_rl.algorithms.utils_fc import Double_Q_Critic as FCCritic
 from sailboat_rl.algorithms.utils_lstm import Actor as LSTMActor
 from sailboat_rl.algorithms.utils_lstm import Double_Q_Critic as LSTMCritic
-from sailboat_rl.evaluation import batch_eval
+from sailboat_rl.evaluation import analyze_results, batch_eval
+from sailboat_rl.training.train_sac_lstm import reset_recurrent_environment
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +105,29 @@ class EnvironmentTests(unittest.TestCase):
 
 
 class AlgorithmTests(unittest.TestCase):
+    def test_replay_accepts_numpy_scalar_reward(self):
+        fc_replay = FCReplayBuffer(14, 2, max_size=2, dvc=torch.device("cpu"))
+        state = np.zeros(14, dtype=np.float32)
+        action = np.zeros(2, dtype=np.float32)
+        self.assertTrue(fc_replay.add(state, action, np.float32(1.0), state, False))
+        self.assertEqual(float(fc_replay.r[0].item()), 1.0)
+
+        lstm_replay = ReplayBuffer(14, 2, 10, max_size=2, dvc=torch.device("cpu"))
+        state_sequence = np.zeros((10, 14), dtype=np.float32)
+        action_sequence = np.zeros((10, 2), dtype=np.float32)
+        lstm_replay.add(
+            state_sequence,
+            action_sequence,
+            state,
+            action,
+            np.float32(1.0),
+            state_sequence,
+            action_sequence,
+            state,
+            False,
+        )
+        self.assertEqual(float(lstm_replay.r[0].item()), 1.0)
+
     def test_fc_actor_and_critic_shapes(self):
         torch.manual_seed(3)
         actor = FCActor(14, 2, (32, 16, 8)).eval()
@@ -148,9 +175,22 @@ class AlgorithmTests(unittest.TestCase):
             prev_state=current_state[:1],
             prev_action=torch.zeros(1, 2),
         )
+        actor(
+            current_state=current_state[:1],
+            deterministic=True,
+            with_logprob=False,
+            env_ids=["other"],
+            single_step_mode=True,
+            prev_state=current_state[:1],
+            prev_action=torch.zeros(1, 2),
+        )
         self.assertIn("smoke", actor.hidden_states)
+        other_hidden = tuple(tensor.clone() for tensor in actor.hidden_states["other"])
         actor.reset_hidden_state("smoke")
         self.assertNotIn("smoke", actor.hidden_states)
+        self.assertIn("other", actor.hidden_states)
+        for actual, expected in zip(actor.hidden_states["other"], other_hidden):
+            torch.testing.assert_close(actual, expected)
 
         replay = ReplayBuffer(14, 2, 10, max_size=32, dvc=torch.device("cpu"))
         s_seq = np.zeros((10, 14), dtype=np.float32)
@@ -164,8 +204,68 @@ class AlgorithmTests(unittest.TestCase):
         self.assertEqual(sample[2].shape, (1, 14))
         self.assertEqual(sample[3].shape, (1, 2))
 
+    def test_lstm_done_reset_is_per_environment(self):
+        class HiddenTracker:
+            def __init__(self):
+                self.reset_ids = []
+
+            def reset_hidden_state(self, env_id=None):
+                self.reset_ids.append(env_id)
+
+        agent = types.SimpleNamespace(
+            actor=HiddenTracker(),
+            q_critic=HiddenTracker(),
+            q_critic_target=HiddenTracker(),
+        )
+        state_buffers = [deque([np.ones(14)] * 10, maxlen=10), deque([np.full(14, 2.0)] * 10, maxlen=10)]
+        action_buffers = [deque([np.ones(2)] * 10, maxlen=10), deque([np.full(2, 2.0)] * 10, maxlen=10)]
+        prev_states = [np.ones(14), np.full(14, 2.0)]
+        prev_actions = [np.ones(2), np.full(2, 2.0)]
+        other_states = [state.copy() for state in state_buffers[1]]
+        other_actions = [action.copy() for action in action_buffers[1]]
+        reset_state = np.full(14, 3.0)
+
+        reset_recurrent_environment(
+            agent,
+            state_buffers,
+            action_buffers,
+            prev_states,
+            prev_actions,
+            env_id=0,
+            reset_state=reset_state,
+            action_dim=2,
+            seq_len=10,
+        )
+
+        self.assertEqual(agent.actor.reset_ids, [0])
+        self.assertEqual(agent.q_critic.reset_ids, [0])
+        self.assertEqual(agent.q_critic_target.reset_ids, [0])
+        self.assertTrue(all(np.array_equal(state, reset_state) for state in state_buffers[0]))
+        self.assertTrue(all(np.array_equal(action, np.zeros(2)) for action in action_buffers[0]))
+        for actual, expected in zip(state_buffers[1], other_states):
+            np.testing.assert_array_equal(actual, expected)
+        for actual, expected in zip(action_buffers[1], other_actions):
+            np.testing.assert_array_equal(actual, expected)
+
 
 class EvaluationTests(unittest.TestCase):
+    def test_partial_analysis_plots_accept_no_successes(self):
+        empty_boxplot = pd.DataFrame(
+            columns=["metric", "scenario", "model_family", "success", "value"]
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            figures_dir = Path(directory)
+            analyze_results.plot_metric_boxplot(
+                empty_boxplot,
+                figures_dir,
+                "time_s",
+                "empty_time",
+                "Time (s)",
+            )
+            analyze_results.plot_sail_rudder_boxplots(empty_boxplot, figures_dir)
+            self.assertTrue((figures_dir / "empty_time.png").exists())
+            self.assertTrue((figures_dir / "sail_rudder_rate_success_boxplot.png").exists())
+
     def test_protocol_and_missing_checkpoint_error(self):
         specs = batch_eval.load_model_specs(Path(batch_eval.__file__).with_name("seed_eval_models.csv"))
         args = batch_eval.parse_args([])

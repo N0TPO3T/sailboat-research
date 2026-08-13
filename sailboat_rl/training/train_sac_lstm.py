@@ -32,6 +32,31 @@ def make_env(env_id, seed):
         return env
     return _init
 
+
+def reset_recurrent_environment(
+    agent,
+    state_buffers,
+    action_buffers,
+    prev_states,
+    prev_actions,
+    env_id,
+    reset_state,
+    action_dim,
+    seq_len,
+):
+    """Reset recurrent state for exactly one vector-environment slot."""
+    agent.actor.reset_hidden_state(env_id=env_id)
+    agent.q_critic.reset_hidden_state(env_id=env_id)
+    agent.q_critic_target.reset_hidden_state(env_id=env_id)
+
+    state_buffers[env_id].clear()
+    action_buffers[env_id].clear()
+    for _ in range(seq_len):
+        state_buffers[env_id].append(reset_state.copy())
+        action_buffers[env_id].append(np.zeros(action_dim))
+    prev_states[env_id] = reset_state.copy()
+    prev_actions[env_id] = np.zeros(action_dim)
+
 def main():
     '''Hyperparameter Setting'''
     parser = argparse.ArgumentParser()
@@ -42,12 +67,15 @@ def main():
     parser.add_argument('--Loadmodel', type=str2bool, default=False, help='Load pretrained model or Not')
     parser.add_argument('--ModelIdex', type=int, default=0, help='which model to load')
     parser.add_argument('--output_dir', type=Path, default=REPO_ROOT / 'canonical_runs', help='Model and TensorBoard output root')
+    parser.add_argument('--model_prefix', type=str, default=None, help='Checkpoint prefix override')
 
     parser.add_argument('--seed', type=int, default=0, help='random seed')
     parser.add_argument('--Max_train_steps', type=int, default=int(9e6), help='Max training steps')
     parser.add_argument('--save_interval', type=int, default=int(6e5), help='Model saving interval, in steps.')
     parser.add_argument('--eval_interval', type=int, default=int(6e4), help='Model evaluating interval, in steps.')
     parser.add_argument('--update_every', type=int, default=8, help='Training Frequency, in steps')
+    parser.add_argument('--learning_starts', type=int, default=int(2e4), help='Transitions collected before updates start')
+    parser.add_argument('--replay_capacity', type=int, default=int(1e6), help='Replay buffer capacity')
 
     parser.add_argument('--gamma', type=float, default=0.98, help='Discounted Factor')
     parser.add_argument('--net_width', type=int, default=256, help='Hidden net width, s_dim-400-300-a_dim')
@@ -72,7 +100,7 @@ def main():
     print(opt)
     
     EnvName = ['sailboat-s14-nowind']
-    BrifEnvName = [f'saclstm_s14nowind_buf1e6_seed{opt.seed}']
+    BrifEnvName = [opt.model_prefix or f'saclstm_s14nowind_buf1e6_seed{opt.seed}']
 
     # Build Env
     env_fns = [make_env(EnvName[opt.EnvIdex], opt.seed + i) for i in range(opt.num_envs)]
@@ -119,6 +147,9 @@ def main():
     # Build DRL model
     Path(opt.model_dir).mkdir(parents=True, exist_ok=True)
     agent = SAC_lstm_countinuous(**vars(opt)) # 传入所有参数
+    initial_actor_parameter = next(agent.actor.parameters()).detach().clone()
+    initial_critic_parameter = next(agent.q_critic.parameters()).detach().clone()
+    initial_target_parameter = next(agent.q_critic_target.parameters()).detach().clone()
 
     if opt.Loadmodel: agent.load(BrifEnvName[opt.EnvIdex], opt.ModelIdex)
 
@@ -143,6 +174,14 @@ def main():
             state_buffers[i].append(s_noisy[i].copy())
             action_buffers[i].append(np.zeros(opt.action_dim))  # 初始动作为0
         prev_states[i] = s_noisy[i].copy()  # 初始化前一状态 (带噪声)
+
+    history_initialized_correctly = all(
+        len(state_buffers[i]) == seq_len
+        and len(action_buffers[i]) == seq_len
+        and all(np.array_equal(state, s_noisy[i]) for state in state_buffers[i])
+        and all(np.array_equal(action, np.zeros(opt.action_dim)) for action in action_buffers[i])
+        for i in range(opt.num_envs)
+    )
     
     current_states = s_noisy  # 当前状态 (带噪声)
 
@@ -157,6 +196,8 @@ def main():
     else:
         total_steps = 0
         start_time = time.time()
+        nonfinite_transition_count = 0
+        done_counts = [0 for _ in range(opt.num_envs)]
         
         # 添加loss和alpha数据记录的变量
         training_log_interval = 20  # 每20步记录一次训练loss
@@ -170,7 +211,7 @@ def main():
                     # 为每个环境选择动作
                     for i in range(opt.num_envs):
                         # 在训练初期可选随机动作，否则使用 agent.select_action
-                        if total_steps < (20 * opt.max_e_steps):
+                        if total_steps < opt.learning_starts:
                             # 针对帆船控制的特殊随机策略
                             random_strategy = np.random.random()
                             
@@ -214,6 +255,17 @@ def main():
                     # ========== 对下一状态添加传感器噪声 ==========
                     s_next_noisy = np.array([noise_manager.add_observation_noise(s) for s in s_next_raw])
                     # =============================================
+
+                    nonfinite_transition_count += sum(
+                        not (
+                            np.all(np.isfinite(current_states[i]))
+                            and np.all(np.isfinite(actions[i]))
+                            and np.isfinite(r[i])
+                            and np.all(np.isfinite(s_next_raw[i]))
+                            and np.all(np.isfinite(s_next_noisy[i]))
+                        )
+                        for i in range(opt.num_envs)
+                    )
                     
                     # 对每个环境存入ReplayBuffer并更新缓存
                     for i in range(opt.num_envs):
@@ -240,21 +292,18 @@ def main():
                         
                         # 如果episode结束，重置该环境的相关状态
                         if done_flags[i]:
-                            agent.actor.reset_hidden_state(env_id=i)
-                            agent.q_critic.reset_hidden_state(env_id=i)
-                            agent.q_critic_target.reset_hidden_state(env_id=i)
-                            
-                            # 重置状态和动作缓存 (使用带噪声的状态)
-                            state_buffers[i].clear()
-                            action_buffers[i].clear()
-                            # 用新的初始状态填充缓存
-                            for _ in range(seq_len):
-                                state_buffers[i].append(s_next_noisy[i].copy())
-                                action_buffers[i].append(np.zeros(opt.action_dim))
-                        
-                            # 重置前一步状态和动作 (使用带噪声的状态)
-                            prev_states[i] = s_next_noisy[i].copy()
-                            prev_actions[i] = np.zeros(opt.action_dim)
+                            done_counts[i] += 1
+                            reset_recurrent_environment(
+                                agent,
+                                state_buffers,
+                                action_buffers,
+                                prev_states,
+                                prev_actions,
+                                i,
+                                s_next_noisy[i],
+                                opt.action_dim,
+                                seq_len,
+                            )
 
                     # 更新当前状态 (使用带噪声的状态)
                     current_states = s_next_noisy
@@ -263,7 +312,7 @@ def main():
                     pbar.update(opt.num_envs)
 
                     '''train after collecting samples from all environments'''
-                    if (total_steps >= 20 * opt.max_e_steps) and (agent.replay_buffer.size >= opt.batch_size):
+                    if (total_steps >= opt.learning_starts) and (agent.replay_buffer.size >= opt.batch_size):
                         # 每20步进行一次训练序列：4次critic更新 + 1次actor和alpha更新
                         if total_steps % 20 == 0:  # 每20步环境采样进行一次训练序列
                             # 计算训练进度，用于更新beta值
@@ -307,7 +356,7 @@ def main():
                                 torch.cuda.empty_cache()
 
                     '''record & log'''
-                    if (total_steps >= 20 * opt.max_e_steps) and (total_steps % opt.eval_interval) == 0:
+                    if (total_steps >= opt.learning_starts) and (total_steps % opt.eval_interval) == 0:
                         # 带噪声评估 - 获得最真实的反馈
                         ep_r = evaluate_policy(eval_env, agent, opt.max_action, turns=4,
                                               total_steps=total_steps, noise_manager=noise_manager, eval_with_noise=True)
@@ -353,12 +402,33 @@ def main():
         
         # 训练完成后保存最终的训练统计信息
         if opt.write:
+            actor_delta = torch.max(torch.abs(next(agent.actor.parameters()).detach() - initial_actor_parameter)).item()
+            critic_delta = torch.max(torch.abs(next(agent.q_critic.parameters()).detach() - initial_critic_parameter)).item()
+            target_delta = torch.max(torch.abs(next(agent.q_critic_target.parameters()).detach() - initial_target_parameter)).item()
+            losses = agent.q_loss_history + agent.a_loss_history + agent.alpha_loss_history
+            replay_sample_shapes = [tuple(tensor.shape) for tensor in agent.replay_buffer.sample(1)[:9]]
             final_stats = {
                 'q_loss_history': agent.q_loss_history,
                 'a_loss_history': agent.a_loss_history,  
                 'alpha_loss_history': agent.alpha_loss_history,
                 'total_steps': total_steps,
-                'final_alpha': agent.alpha.item() if hasattr(agent.alpha, 'item') else agent.alpha
+                'final_alpha': agent.alpha.item() if hasattr(agent.alpha, 'item') else agent.alpha,
+                'replay_size': agent.replay_buffer.size,
+                'critic_updates': agent.training_step,
+                'actor_updates': agent.critic_update_count // agent.policy_update_freq,
+                'alpha_updates': agent.critic_update_count // agent.policy_update_freq if agent.adaptive_alpha else 0,
+                'losses_finite': bool(np.all(np.isfinite(losses))),
+                'alpha_finite': bool(np.isfinite(agent.alpha.item() if hasattr(agent.alpha, 'item') else agent.alpha)),
+                'actor_parameter_max_abs_delta': actor_delta,
+                'critic_parameter_max_abs_delta': critic_delta,
+                'target_parameter_max_abs_delta': target_delta,
+                'history_initialized_correctly': history_initialized_correctly,
+                'history_lengths': [len(buffer) for buffer in state_buffers],
+                'online_hidden_env_ids': sorted(agent.actor.hidden_states),
+                'replay_sample_shapes': replay_sample_shapes,
+                'nonfinite_transition_count': nonfinite_transition_count,
+                'done_counts': done_counts,
+                'replay_priorities_finite': bool(torch.isfinite(agent.replay_buffer.priorities[:agent.replay_buffer.size]).all().item()),
             }
             torch.save(final_stats, Path(opt.model_dir) / f"{BrifEnvName[opt.EnvIdex]}_final_training_stats.pth")
             writer.close()

@@ -40,7 +40,12 @@ class SAC_fc_continuous():
         for p in self.q_critic_target.parameters():
             p.requires_grad = False
 
-        self.replay_buffer = ReplayBuffer(self.state_dim, self.action_dim, max_size=int(1e6), dvc=self.dvc)
+        self.replay_buffer = ReplayBuffer(
+            self.state_dim,
+            self.action_dim,
+            max_size=int(getattr(self, 'replay_capacity', 1e6)),
+            dvc=self.dvc,
+        )
 
         if self.adaptive_alpha:
             self.target_entropy = torch.tensor(-0.5 * float(self.action_dim), dtype=torch.float32, device=self.dvc)
@@ -221,7 +226,7 @@ class ReplayBuffer():
             return False
         self.s[self.ptr] = torch.from_numpy(state).to(self.dvc, non_blocking=True)
         self.a[self.ptr] = torch.from_numpy(action).to(self.dvc, non_blocking=True)
-        self.r[self.ptr] = reward
+        self.r[self.ptr] = float(reward)
         self.s_next[self.ptr] = torch.from_numpy(next_state).to(self.dvc, non_blocking=True)
         self.dw[self.ptr] = bool(dw)
         

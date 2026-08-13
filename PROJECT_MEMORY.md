@@ -67,6 +67,25 @@ Prefer `python -m sailboat_rl...` for new work. When reproducing a historical ex
 
 ---
 
+## Canonical checkpoints are evaluation snapshots, not full resume state
+
+**Tags:** `checkpoint`, `training`, `resume`, `SAC`
+
+**Conclusion**
+
+Canonical SAC-FC and SAC-LSTM checkpoints save actor, Q critic and state normalizer only. They do not save target critic, adaptive alpha/log-alpha, optimizer states, replay contents or training counters.
+
+**Evidence**
+
+- End-to-end smoke training saved and reloaded all three model families from a non-repository working directory; actor, Q critic and normalizer matched the written files exactly.
+- `SAC_fc_continuous.save/load` and `SAC_lstm_countinuous.save/load` contain no serialization for the omitted state.
+
+**Implication**
+
+The current format is sufficient for deterministic evaluation but cannot provide an exact training resume. Do not claim alpha/optimizer restoration or exact continuation without an explicit future checkpoint-format change.
+
+---
+
 ## Wind information and temporal history have measured but different robustness limits
 
 **Tags:** `SAC`, `LSTM`, `wind`, `evaluation`, `baseline`

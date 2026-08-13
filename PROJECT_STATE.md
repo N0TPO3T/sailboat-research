@@ -2,7 +2,7 @@
 
 SailBoatRL 是基于 Gymnasium 的无人帆船连续控制研究代码库。目标是在随机风场、传感器/执行器噪声和障碍物条件下学习到达 `(500, 0)` 的控制策略，并比较显式风信息、时序历史和不同策略结构对鲁棒性的影响。
 
-本快照基于当前 `main` 源码和已提交 artifacts。初始历史只有提交 `1942252`，无法据此恢复更早研究进程。
+本快照基于当前 `main` 源码和已提交 artifacts。接手前历史只有提交 `1942252`，无法据此恢复更早研究进程。
 
 # Current Research Scope
 
@@ -31,7 +31,7 @@ SailBoatRL 是基于 Gymnasium 的无人帆船连续控制研究代码库。目�
 
 - `import sailboat_rl` 会在项目代码内注册 `sailboat-s14-nowind` 和 `sailboat-s14-wind`；不再修改外部 Gymnasium 安装目录。
 - canonical 环境位于 `sailboat_rl/envs/`，从根目录确认的 `sailboat_s14.py` / `sailboat_s14_wind.py` 提取而来；环境和正式 evaluator 都显式使用 `sailboat_rl.envs.globals`，不再由 working directory 选择裸 `globals.py`。
-- 项目根 `.venv` 使用 `--system-site-packages` 复用服务器 base 的 Python 3.12、PyTorch 2.6/CUDA 12.4、Gymnasium 1.0、SB3 2.4、NumPy 2.2 和 SciPy 1.16。canonical 非渲染 smoke tests 已通过。
+- 项目根 `.venv` 使用 `--system-site-packages` 复用服务器 base 的 Python 3.12、PyTorch 2.6/CUDA 12.4、Gymnasium 1.0、SB3 2.4、NumPy 2.2 和 SciPy 1.16。canonical 非渲染 regression tests 和三模型端到端短训练已通过。
 - 当前 runtime 仍缺 `pygame`；canonical 训练和正式评测的 `render_mode=None` 路径可运行，显式 rendering 会给出缺依赖错误。根 `requirements.txt` 仍声明 `pygame==2.6.1`。
 
 # Shared Server Infrastructure
@@ -69,7 +69,8 @@ SailBoatRL 是基于 Gymnasium 的无人帆船连续控制研究代码库。目�
 - 使用 Z-score state normalizer、prioritized replay、gradient clipping 和 adaptive entropy coefficient。
 - canonical SAC-FC 和 SAC-LSTM replay capacity 均为正式 seed 版本的 `1e6`；`PART4/SAC` 的旧 `1e3` 版本不是当前主干。
 - 默认 `gamma=0.98`、hidden width 256、actor/critic learning rate `5e-5`、batch 256。代码条件是 `total_steps % 20 == 0` 时执行 8 次 critic update；因 `total_steps` 每轮增加 15，当前默认下实际每 60 个 aggregate transitions 命中一次。actor/alpha 每 4 次 critic update 更新一次。
-- checkpoints 保存 actor、Q critic、normalizer 三个 `.pth` 文件；TensorBoard 写入 `runs/`。
+- checkpoints 保存 actor、Q critic、normalizer 三个 `.pth` 文件；不保存 target critic、alpha 或 optimizer state。TensorBoard 写入 `runs/`。
+- SAC-nowind、SAC-wind、SAC-LSTM 已分别完成 280-transition 短训练；每个模型实际执行 104 次 critic、26 次 actor/alpha update，参数变化、有限 loss、save/load 和 canonical evaluator 均已验证。该 smoke 结果不代表模型性能。
 
 # Evaluation and Reference Results
 
@@ -92,15 +93,15 @@ PART5 attention outputs 是少量单 episode attention/trajectory artifacts；�
 
 - canonical training 默认将 checkpoints 写入根 `canonical_runs/model/`，TensorBoard 写入 `canonical_runs/runs/`；路径由模块位置确定，也可用 `--output_dir` 显式覆盖。
 - 多数训练脚本使用相对路径 `./model` 和 `runs/`；输出位置由启动时 working directory 决定。
-- `.gitignore` 排除 `*.pth`、`*.pt`、`runs/`、压缩包和虚拟环境。
+- `.gitignore` 排除 `canonical_runs/`、`*.pth`、`*.pt`、`runs/`、压缩包和虚拟环境。
 - 当前仓库没有任何 `.pth/.pt` checkpoint 或 TensorBoard event；已提交的是图片、CSV/NPY/JSON、summary 和部分日志。
 - 一些 committed config/manifest 保存 Windows 绝对路径；迁移到新机器时必须通过 CLI 参数或本地配置重定位。
-- 没有发现 pytest/unittest suite、CI 配置或自动环境 smoke test；名为 `test_*.py` 的文件主要是交互式/评估脚本。
-- Git 当前只有一次初始化提交，因此不能用 commit history 判断变体先后、active work 或失败路线。
+- `tests/test_canonical_core.py` 是 canonical regression suite；历史目录中的其他 `test_*.py` 主要仍是交互式/评估脚本。当前没有 CI 配置。
+- 接手前 Git 只有一次初始化提交，因此不能用历史 commit 判断变体先后、active work 或失败路线。
 
 # Known Constraints and Unknowns
 
-- 训练 checkpoint 和原始 TensorBoard logs 不在仓库；canonical 环境/网络/replay/evaluation import 已验证，但完整训练和 10,800-episode 结果仍未重跑。
+- 历史训练 checkpoint 和原始 TensorBoard logs 不在仓库；canonical 短训练闭环已验证，但完整 9M training 和正式 10,800-episode evaluation 仍未重跑。
 - 各复制实验目录存在代码漂移；更改一个环境或模型副本不会自动传播到其他实验。
 - 主 README 的从根目录启动示例与脚本的相对输出路径组合，会把 `model/`、`runs/` 写到当前目录；实验目录 README 通常要求先 `cd` 到对应目录。
 - PART5 attention/deep/meanpool 的公平对照、训练 seeds 和总体 benchmark 状态 unknown / not yet verified。
