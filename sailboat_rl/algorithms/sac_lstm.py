@@ -21,6 +21,8 @@ class SAC_lstm_countinuous():
         # 添加延迟更新参数
         self.policy_update_freq = 4  # 策略更新频率，critic更新2次actor更新1次
         self.critic_update_count = 0  # critic更新次数计数器
+        self.actor_update_count = 0
+        self.alpha_update_count = 0
         
         # 添加梯度裁剪参数
         self.max_grad_norm = 1.0
@@ -183,6 +185,7 @@ class SAC_lstm_countinuous():
             a_loss.backward()
             torch.nn.utils.clip_grad_norm_(self.actor.parameters(), self.max_grad_norm)
             self.actor_optimizer.step()
+            self.actor_update_count += 1
             
             self.a_loss_history.append(a_loss.item())
 
@@ -215,6 +218,7 @@ class SAC_lstm_countinuous():
                 alpha_loss.backward()  
                 torch.nn.utils.clip_grad_norm_([self.log_alpha], self.max_grad_norm)
                 self.alpha_optim.step()
+                self.alpha_update_count += 1
                 
                 # 更新alpha，移除最小值约束，允许完全自动调节
                 self.alpha = self.log_alpha.exp()
@@ -355,3 +359,71 @@ class ReplayBuffer():
     def update_beta(self, progress):
         # 更新beta值
         self.beta = 0.4 + progress * (1.0 - 0.4)  # 逐渐增加beta值
+
+    def state_dict(self):
+        size = int(self.size)
+        tensor_names = (
+            's_seq',
+            'a_seq',
+            's_curr',
+            'a_curr',
+            'r',
+            's_next_seq',
+            'a_next_seq',
+            's_next_curr',
+            'dw',
+            'priorities',
+        )
+        state = {
+            'schema_version': 1,
+            'max_size': int(self.max_size),
+            'seq_len': int(self.seq_len),
+            'size': size,
+            'ptr': int(self.ptr),
+            'alpha': float(self.alpha),
+            'beta': float(self.beta),
+            'epsilon': float(self.epsilon),
+            'max_priority': float(self.priorities[:size].max().item()) if size else 1.0,
+        }
+        state.update({
+            name: getattr(self, name)[:size].detach().cpu().clone()
+            for name in tensor_names
+        })
+        return state
+
+    def load_state_dict(self, state_dict):
+        if int(state_dict['max_size']) != int(self.max_size):
+            raise ValueError(
+                f"Replay capacity mismatch: checkpoint={state_dict['max_size']}, runtime={self.max_size}"
+            )
+        if int(state_dict['seq_len']) != int(self.seq_len):
+            raise ValueError(
+                f"Replay sequence mismatch: checkpoint={state_dict['seq_len']}, runtime={self.seq_len}"
+            )
+        size = int(state_dict['size'])
+        ptr = int(state_dict['ptr'])
+        if not 0 <= size <= self.max_size or not 0 <= ptr < self.max_size:
+            raise ValueError(f"Invalid replay cursor: size={size}, ptr={ptr}, capacity={self.max_size}")
+        tensor_names = (
+            's_seq',
+            'a_seq',
+            's_curr',
+            'a_curr',
+            'r',
+            's_next_seq',
+            'a_next_seq',
+            's_next_curr',
+            'dw',
+            'priorities',
+        )
+        for name in tensor_names:
+            source = state_dict[name]
+            target = getattr(self, name)
+            if source.shape != target[:size].shape:
+                raise ValueError(f"Replay tensor shape mismatch for {name}: {source.shape} != {target[:size].shape}")
+            target[:size].copy_(source.to(self.dvc))
+        self.size = size
+        self.ptr = ptr
+        self.alpha = float(state_dict['alpha'])
+        self.beta = float(state_dict['beta'])
+        self.epsilon = float(state_dict['epsilon'])

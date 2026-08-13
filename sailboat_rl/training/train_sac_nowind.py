@@ -2,7 +2,7 @@
 训练SAC模型脚本
 """
 
-import os, shutil
+import os
 from pathlib import Path
 os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # 只显示错误信息
@@ -10,8 +10,16 @@ os.environ["KMP_DUPLICATE_LIB_OK"]="TRUE"
 
 from sailboat_rl.algorithms.utils_fc import str2bool, evaluate_policy, Action_adapter, Action_adapter_reverse, Reward_adapter
 from sailboat_rl.noise_utils_nowind import NoiseManager  # 新增噪声模块导入
-from datetime import datetime
 from sailboat_rl.algorithms.sac_fc import SAC_fc_continuous
+from sailboat_rl.training.runtime import (
+    GracefulStop,
+    load_training_checkpoint,
+    prepare_run_manifest,
+    run_directory,
+    save_training_checkpoint,
+    seed_everything,
+    seed_worker_environment,
+)
 import gymnasium as gym
 import argparse
 import torch
@@ -26,7 +34,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 def make_env(env_id, seed):
     def _init():
         env = gym.make(env_id)
-        env.reset(seed=seed)
+        seed_worker_environment(env, seed)
         return env
     return _init
 
@@ -52,6 +60,8 @@ def main():
     parser.add_argument('--ModelIdex', type=int, default=9000, help='which model to load')
     parser.add_argument('--output_dir', type=Path, default=REPO_ROOT / 'canonical_runs', help='Model and TensorBoard output root')
     parser.add_argument('--model_prefix', type=str, default=None, help='Checkpoint prefix override')
+    parser.add_argument('--run_dir', type=Path, default=None, help='Canonical run directory override')
+    parser.add_argument('--resume', type=Path, default=None, help='Checkpoint or run directory to resume')
 
     parser.add_argument('--seed', type=int, default=0, help='random seed')
     parser.add_argument('--Max_train_steps', type=int, default=int(9e6), help='Max training steps')
@@ -60,6 +70,8 @@ def main():
     parser.add_argument('--update_every', type=int, default=8, help='Training Frequency, in steps')
     parser.add_argument('--learning_starts', type=int, default=int(2e4), help='Transitions collected before updates start')
     parser.add_argument('--replay_capacity', type=int, default=int(1e6), help='Replay buffer capacity')
+    parser.add_argument('--training_checkpoint_interval', type=int, default=int(6e5), help='Resumable checkpoint interval')
+    parser.add_argument('--strict_deterministic', type=str2bool, default=False, help='Strict deterministic debug mode')
 
     parser.add_argument('--gamma', type=float, default=0.98, help='Discounted Factor')
     parser.add_argument('--net_width', type=int, default=1024, help='Hidden net width, s_dim-400-300-a_dim')
@@ -78,13 +90,19 @@ def main():
     # =====================================
     
     opt = parser.parse_args()
+    if opt.resume is not None and opt.Loadmodel:
+        parser.error('--resume and --Loadmodel are mutually exclusive')
+    if opt.training_checkpoint_interval <= 0:
+        parser.error('--training_checkpoint_interval must be positive')
     opt.dvc = torch.device(opt.dvc) # from str to torch.device
     opt.output_dir = opt.output_dir.expanduser().resolve()
     opt.model_dir = str(opt.output_dir / 'model')
-    print(opt)
-    
+
     EnvName = ['sailboat-s14-nowind']
     BrifEnvName = [opt.model_prefix or f'sac_s14nowind_buf1e6_seed{opt.seed}']
+    opt.run_dir = run_directory(opt.output_dir, BrifEnvName[opt.EnvIdex], opt.run_dir, opt.resume)
+    seed_everything(opt.seed, opt.strict_deterministic)
+    print(opt)
 
     # Build Env
     env_fns = [make_env(EnvName[opt.EnvIdex], opt.seed + i) for i in range(opt.num_envs)]
@@ -93,6 +111,9 @@ def main():
     opt.state_dim = env.observation_space.shape[0]
     opt.action_dim = env.action_space.shape[0]
     opt.max_action = env.action_space.high.astype(float)
+    env.action_space.seed(opt.seed)
+    eval_env.action_space.seed(opt.seed + 100000)
+    eval_env.observation_space.seed(opt.seed + 100000)
 
     opt.max_e_steps = 1000
     print(f'Env:{EnvName[opt.EnvIdex]}  state_dim:{opt.state_dim}  action_dim:{opt.action_dim}  '
@@ -110,31 +131,52 @@ def main():
           f'actuator_noise={opt.enable_actuator_noise}({opt.actuator_noise_ratio*100}%)')
     # =====================================
 
-    # Seed Everything
-    env_seed = opt.seed
-    torch.manual_seed(opt.seed)
-    torch.cuda.manual_seed(opt.seed)
-    torch.backends.cudnn.deterministic = True
-    torch.backends.cudnn.benchmark = False
-    print("Random Seed: {}".format(opt.seed))
-
-    # Build SummaryWriter to record training curves
-    if opt.write:
-        from torch.utils.tensorboard import SummaryWriter
-        timenow = str(datetime.now())[0:-10]
-        timenow = ' ' + timenow[0:13] + '_' + timenow[-2::]
-        writepath = opt.output_dir / 'runs' / ('{}'.format(BrifEnvName[opt.EnvIdex]) + timenow)
-        if os.path.exists(writepath): shutil.rmtree(writepath)
-        writer = SummaryWriter(log_dir=writepath)
+    print("Master Seed: {} (worker seed = master + rank)".format(opt.seed))
 
     # Build DRL model
     Path(opt.model_dir).mkdir(parents=True, exist_ok=True)
     agent = SAC_fc_continuous(**vars(opt)) # 传入所有参数
+    if opt.Loadmodel: agent.load(BrifEnvName[opt.EnvIdex], opt.ModelIdex)
+
+    total_steps = 0
+    completed_episodes = 0
+    nonfinite_transition_count = 0
+    if opt.resume is not None:
+        resumed = load_training_checkpoint(agent, opt.resume, noise_manager)
+        total_steps = resumed['total_steps']
+        completed_episodes = resumed['completed_episodes']
+        nonfinite_transition_count = int(resumed['extra_counters'].get('nonfinite_transition_count', 0))
+        if total_steps >= opt.Max_train_steps:
+            raise ValueError(f'Resume step {total_steps} already reached Max_train_steps={opt.Max_train_steps}')
+        print(f"Resumed learner/replay state from {resumed['checkpoint']} at transition {total_steps}")
+
+    prepare_run_manifest(
+        opt.run_dir,
+        REPO_ROOT,
+        model_family='SAC-nowind',
+        environment_id=EnvName[opt.EnvIdex],
+        model_prefix=BrifEnvName[opt.EnvIdex],
+        master_seed=opt.seed,
+        config=vars(opt),
+        device=opt.dvc,
+        source_paths=[
+            Path(__file__),
+            REPO_ROOT / 'sailboat_rl/training/runtime.py',
+            REPO_ROOT / 'sailboat_rl/algorithms/sac_fc.py',
+            REPO_ROOT / 'sailboat_rl/algorithms/utils_fc.py',
+            REPO_ROOT / 'sailboat_rl/noise_utils_nowind.py',
+            REPO_ROOT / 'sailboat_rl/envs/sailboat_s14.py',
+        ],
+        resume_source=opt.resume,
+    )
+
+    if opt.write:
+        from torch.utils.tensorboard import SummaryWriter
+        writer = SummaryWriter(log_dir=opt.run_dir / 'tensorboard', purge_step=total_steps if opt.resume else None)
+
     initial_actor_parameter = next(agent.actor.parameters()).detach().clone()
     initial_critic_parameter = next(agent.q_critic.parameters()).detach().clone()
     initial_target_parameter = next(agent.q_critic_target.parameters()).detach().clone()
-
-    if opt.Loadmodel: agent.load(BrifEnvName[opt.EnvIdex], opt.ModelIdex)
 
     # 初始化环境状态
     s_raw = env.reset()  # s_raw: (num_envs, state_dim)
@@ -153,18 +195,19 @@ def main():
                                    noise_manager=noise_manager, eval_with_noise=True)
             print('EnvName:', BrifEnvName[opt.EnvIdex], 'score:', score)
     else:
-        total_steps = 0
         start_time = time.time()
-        nonfinite_transition_count = 0
-        done_count = 0
+        done_count = completed_episodes
+        last_training_checkpoint_step = total_steps
+        graceful_stop = GracefulStop()
+        graceful_stop.install()
         
         # 添加loss和alpha数据记录的变量
         training_log_interval = 20  # 每20步记录一次训练loss
         
-        with tqdm(total=opt.Max_train_steps, desc='Training') as pbar:
-            while total_steps < opt.Max_train_steps:
+        with tqdm(total=opt.Max_train_steps, initial=total_steps, desc='Training') as pbar:
+            while total_steps < opt.Max_train_steps and not graceful_stop.requested:
                 '''Interact & train'''
-                while total_steps < opt.Max_train_steps:
+                while total_steps < opt.Max_train_steps and not graceful_stop.requested:
                     actions = []
                     
                     # 为每个环境选择动作
@@ -241,7 +284,9 @@ def main():
 
                     # 更新当前状态 (使用带噪声的状态)
                     current_states = np.nan_to_num(s_next_noisy, nan=0.0, posinf=1e3, neginf=-1e3)
-                    done_count += int(np.sum(done_flags))
+                    newly_completed = int(np.sum(done_flags))
+                    done_count += newly_completed
+                    completed_episodes += newly_completed
 
                     total_steps += opt.num_envs
                     pbar.update(opt.num_envs)
@@ -331,9 +376,46 @@ def main():
                                 'current_alpha': agent.alpha.item() if hasattr(agent.alpha, 'item') else agent.alpha
                             }
                             torch.save(training_stats, Path(opt.model_dir) / f"{BrifEnvName[opt.EnvIdex]}_training_stats_{int(total_steps/1000)}.pth")
+
+                    if total_steps - last_training_checkpoint_step >= opt.training_checkpoint_interval:
+                        checkpoint_path = save_training_checkpoint(
+                            agent,
+                            opt.run_dir,
+                            total_steps,
+                            completed_episodes,
+                            noise_manager,
+                            extra_counters={'nonfinite_transition_count': nonfinite_transition_count},
+                        )
+                        last_training_checkpoint_step = total_steps
+                        print(f'Resumable checkpoint: {checkpoint_path}')
+
+                    if graceful_stop.requested:
+                        checkpoint_path = save_training_checkpoint(
+                            agent,
+                            opt.run_dir,
+                            total_steps,
+                            completed_episodes,
+                            noise_manager,
+                            extra_counters={'nonfinite_transition_count': nonfinite_transition_count},
+                        )
+                        last_training_checkpoint_step = total_steps
+                        print(f'Graceful stop after signal {graceful_stop.signal_number}; checkpoint: {checkpoint_path}')
+                        break
                         
                 if total_steps >= opt.Max_train_steps:
                     break
+
+        checkpoint_path = save_training_checkpoint(
+            agent,
+            opt.run_dir,
+            total_steps,
+            completed_episodes,
+            noise_manager,
+            extra_counters={'nonfinite_transition_count': nonfinite_transition_count},
+        )
+        if last_training_checkpoint_step != total_steps:
+            print(f'Final resumable checkpoint: {checkpoint_path}')
+        graceful_stop.restore()
         
         # 训练完成后保存最终的训练统计信息
         if opt.write:
