@@ -20,7 +20,7 @@ from sailboat_rl.algorithms.utils_fc import Double_Q_Critic as FCCritic
 from sailboat_rl.algorithms.utils_lstm import Actor as LSTMActor
 from sailboat_rl.algorithms.utils_lstm import Double_Q_Critic as LSTMCritic
 from sailboat_rl.evaluation import analyze_results, batch_eval
-from sailboat_rl.training.train_sac_lstm import reset_recurrent_environment
+from sailboat_rl.training.train_sac_lstm import reset_recurrent_environment, sorted_hidden_env_ids
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -246,6 +246,22 @@ class AlgorithmTests(unittest.TestCase):
             np.testing.assert_array_equal(actual, expected)
         for actual, expected in zip(action_buffers[1], other_actions):
             np.testing.assert_array_equal(actual, expected)
+
+    def test_lstm_final_statistics_sorts_mixed_environment_ids_without_mutation(self):
+        hidden_states = {
+            2: object(),
+            "evaluation": object(),
+            1: object(),
+            "probe": object(),
+        }
+        original_items = list(hidden_states.items())
+
+        env_ids = sorted_hidden_env_ids(hidden_states)
+
+        self.assertEqual(env_ids, [1, 2, "evaluation", "probe"])
+        self.assertEqual(list(hidden_states), [key for key, _value in original_items])
+        for key, value in original_items:
+            self.assertIs(hidden_states[key], value)
 
 
 class EvaluationTests(unittest.TestCase):

@@ -65,6 +65,12 @@ def reset_recurrent_environment(
     prev_states[env_id] = reset_state.copy()
     prev_actions[env_id] = np.zeros(action_dim)
 
+
+def sorted_hidden_env_ids(hidden_states):
+    """Return hidden-state environment IDs in a stable, mixed-type-safe order."""
+    return sorted(hidden_states, key=lambda env_id: (str(env_id), type(env_id).__name__))
+
+
 def main():
     '''Hyperparameter Setting'''
     parser = argparse.ArgumentParser()
@@ -505,7 +511,7 @@ def main():
                 'target_parameter_max_abs_delta': target_delta,
                 'history_initialized_correctly': history_initialized_correctly,
                 'history_lengths': [len(buffer) for buffer in state_buffers],
-                'online_hidden_env_ids': sorted(agent.actor.hidden_states),
+                'online_hidden_env_ids': sorted_hidden_env_ids(agent.actor.hidden_states),
                 'replay_sample_shapes': replay_sample_shapes,
                 'nonfinite_transition_count': nonfinite_transition_count,
                 'done_counts': done_counts,
