@@ -37,7 +37,7 @@ def assert_nested_equal(testcase, actual, expected):
         testcase.assertEqual(actual, expected)
 
 
-def make_agent(agent_type, model_dir):
+def make_agent(agent_type, model_dir, per_backend="legacy"):
     common = dict(
         state_dim=14,
         action_dim=2,
@@ -51,6 +51,7 @@ def make_agent(agent_type, model_dir):
         dvc=torch.device("cpu"),
         model_dir=str(model_dir),
         replay_capacity=32,
+        per_backend=per_backend,
     )
     if agent_type == "fc":
         return SAC_fc_continuous(**common)
@@ -86,11 +87,11 @@ def fill_replay(agent, agent_type):
 
 
 class ResumeCheckpointTests(unittest.TestCase):
-    def check_agent_round_trip(self, agent_type):
+    def check_agent_round_trip(self, agent_type, per_backend="legacy"):
         seed_everything(123)
         with tempfile.TemporaryDirectory() as directory:
             run_dir = Path(directory) / "run"
-            agent = make_agent(agent_type, Path(directory) / "models")
+            agent = make_agent(agent_type, Path(directory) / "models", per_backend)
             noise = NoiseManager(seed=123)
             fill_replay(agent, agent_type)
             self.assertEqual(agent.critic_update_count, 4)
@@ -120,7 +121,7 @@ class ResumeCheckpointTests(unittest.TestCase):
             expected_actuator = noise.actuator_noise.rng.rand()
             expected_indices = agent.replay_buffer.sample(4)[-2].cpu()
 
-            restored = make_agent(agent_type, Path(directory) / "models-restored")
+            restored = make_agent(agent_type, Path(directory) / "models-restored", per_backend)
             restored_noise = NoiseManager(seed=999)
             counters = load_training_checkpoint(restored, run_dir, restored_noise)
 
@@ -150,6 +151,12 @@ class ResumeCheckpointTests(unittest.TestCase):
 
     def test_lstm_training_resume_round_trip(self):
         self.check_agent_round_trip("lstm")
+
+    def test_fc_optimized_per_resume_round_trip(self):
+        self.check_agent_round_trip("fc", per_backend="optimized")
+
+    def test_lstm_optimized_per_resume_round_trip(self):
+        self.check_agent_round_trip("lstm", per_backend="optimized")
 
     def test_graceful_stop_handler_only_sets_flag(self):
         stop = GracefulStop()

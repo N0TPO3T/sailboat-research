@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from .utils_fc import Actor, Double_Q_Critic, ZScoreNormalizer
+from .per_sampling import optimized_sample, validate_per_backend
 import torch.nn.functional as F
 import numpy as np
 import torch
@@ -47,6 +48,7 @@ class SAC_fc_continuous():
             self.action_dim,
             max_size=int(getattr(self, 'replay_capacity', 1e6)),
             dvc=self.dvc,
+            per_backend=getattr(self, 'per_backend', 'optimized'),
         )
 
         if self.adaptive_alpha:
@@ -203,7 +205,7 @@ class SAC_fc_continuous():
 
 
 class ReplayBuffer():
-    def __init__(self, state_dim, action_dim, max_size, dvc, alpha=0.6, beta=0.4):
+    def __init__(self, state_dim, action_dim, max_size, dvc, alpha=0.6, beta=0.4, per_backend='optimized'):
         self.max_size = max_size
         self.dvc = dvc
         self.ptr = 0
@@ -219,6 +221,7 @@ class ReplayBuffer():
         self.alpha = alpha
         self.beta = beta
         self.epsilon = 1e-6
+        self.per_backend = validate_per_backend(per_backend)
 
     def add(self, state, action, reward, next_state, dw):
         if not (
@@ -245,6 +248,18 @@ class ReplayBuffer():
         return True
 
     def sample(self, batch_size):
+        if self.per_backend == 'optimized':
+            indices, weights = optimized_sample(
+                self.priorities,
+                self.size,
+                batch_size,
+                self.epsilon,
+                self.alpha,
+                self.beta,
+            )
+            return (self.s[indices], self.a[indices], self.r[indices], self.s_next[indices],
+                    self.dw[indices], indices, weights)
+
         prios = self.priorities[:self.size]
         
         prios_cpu = prios.cpu().flatten()
@@ -284,6 +299,7 @@ class ReplayBuffer():
             'alpha': float(self.alpha),
             'beta': float(self.beta),
             'epsilon': float(self.epsilon),
+            'per_backend': self.per_backend,
             'max_priority': float(self.priorities[:size].max().item()) if size else 1.0,
             's': self.s[:size].detach().cpu().clone(),
             'a': self.a[:size].detach().cpu().clone(),
@@ -297,6 +313,11 @@ class ReplayBuffer():
         if int(state_dict['max_size']) != int(self.max_size):
             raise ValueError(
                 f"Replay capacity mismatch: checkpoint={state_dict['max_size']}, runtime={self.max_size}"
+            )
+        saved_backend = state_dict.get('per_backend')
+        if saved_backend is not None and validate_per_backend(saved_backend) != self.per_backend:
+            raise ValueError(
+                f"PER backend mismatch: checkpoint={saved_backend}, runtime={self.per_backend}"
             )
         size = int(state_dict['size'])
         ptr = int(state_dict['ptr'])

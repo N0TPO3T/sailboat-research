@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from .utils_lstm import Actor, Double_Q_Critic, ZScoreNormalizer
+from .per_sampling import optimized_sample, validate_per_backend
 import torch.nn.functional as F
 import numpy as np
 import torch
@@ -51,6 +52,7 @@ class SAC_lstm_countinuous():
             self.seq_len,
             max_size=int(getattr(self, 'replay_capacity', 1e6)),
             dvc=self.dvc,
+            per_backend=getattr(self, 'per_backend', 'optimized'),
         )
 
         if self.adaptive_alpha:
@@ -272,7 +274,7 @@ class SAC_lstm_countinuous():
 
 
 class ReplayBuffer():
-    def __init__(self, state_dim, action_dim, seq_len, max_size, dvc, alpha=0.6, beta=0.4):
+    def __init__(self, state_dim, action_dim, seq_len, max_size, dvc, alpha=0.6, beta=0.4, per_backend='optimized'):
         self.max_size = max_size
         self.dvc = dvc
         self.ptr = 0
@@ -296,6 +298,7 @@ class ReplayBuffer():
         self.alpha = alpha   # 控制优先级的重要性
         self.beta = beta     # importance-sampling权重
         self.epsilon = 1e-6  # 防止优先级为0
+        self.per_backend = validate_per_backend(per_backend)
 
     def add(self, s_seq, a_seq, s_curr, action, r, s_next_seq, a_next_seq, s_next_curr, dw):
         # s_seq: (seq_len, state_dim), a_seq: (seq_len, action_dim)
@@ -322,6 +325,19 @@ class ReplayBuffer():
         self.size = min(self.size + 1, self.max_size)
 
     def sample(self, batch_size):
+        if self.per_backend == 'optimized':
+            indices, weights = optimized_sample(
+                self.priorities,
+                self.size,
+                batch_size,
+                self.epsilon,
+                self.alpha,
+                self.beta,
+            )
+            return (self.s_seq[indices], self.a_seq[indices], self.s_curr[indices], self.a_curr[indices],
+                    self.r[indices], self.s_next_seq[indices], self.a_next_seq[indices], self.s_next_curr[indices],
+                    self.dw[indices], indices, weights)
+
         # 从当前样本中根据优先级采样
         prios = self.priorities[:self.size]  # (size,1)
         
@@ -383,6 +399,7 @@ class ReplayBuffer():
             'alpha': float(self.alpha),
             'beta': float(self.beta),
             'epsilon': float(self.epsilon),
+            'per_backend': self.per_backend,
             'max_priority': float(self.priorities[:size].max().item()) if size else 1.0,
         }
         state.update({
@@ -395,6 +412,11 @@ class ReplayBuffer():
         if int(state_dict['max_size']) != int(self.max_size):
             raise ValueError(
                 f"Replay capacity mismatch: checkpoint={state_dict['max_size']}, runtime={self.max_size}"
+            )
+        saved_backend = state_dict.get('per_backend')
+        if saved_backend is not None and validate_per_backend(saved_backend) != self.per_backend:
+            raise ValueError(
+                f"PER backend mismatch: checkpoint={saved_backend}, runtime={self.per_backend}"
             )
         if int(state_dict['seq_len']) != int(self.seq_len):
             raise ValueError(

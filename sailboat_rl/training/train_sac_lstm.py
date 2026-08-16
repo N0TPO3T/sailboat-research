@@ -92,6 +92,7 @@ def main():
     parser.add_argument('--update_every', type=int, default=8, help='Training Frequency, in steps')
     parser.add_argument('--learning_starts', type=int, default=int(2e4), help='Transitions collected before updates start')
     parser.add_argument('--replay_capacity', type=int, default=int(1e6), help='Replay buffer capacity')
+    parser.add_argument('--per_backend', choices=('legacy', 'optimized'), default='optimized', help='PER sampling backend')
     parser.add_argument('--training_checkpoint_interval', type=int, default=int(6e5), help='Resumable checkpoint interval')
     parser.add_argument('--strict_deterministic', type=str2bool, default=False, help='Strict deterministic debug mode')
 
@@ -186,6 +187,7 @@ def main():
             Path(__file__),
             REPO_ROOT / 'sailboat_rl/training/runtime.py',
             REPO_ROOT / 'sailboat_rl/algorithms/sac_lstm.py',
+            REPO_ROOT / 'sailboat_rl/algorithms/per_sampling.py',
             REPO_ROOT / 'sailboat_rl/algorithms/utils_lstm.py',
             REPO_ROOT / 'sailboat_rl/noise_utils_nowind.py',
             REPO_ROOT / 'sailboat_rl/envs/sailboat_s14.py',
