@@ -86,6 +86,52 @@ class SAC_lstm_countinuous():
             
         return a.cpu().numpy()[0]
 
+    def select_actions(
+        self,
+        prev_states,
+        prev_actions,
+        current_states,
+        deterministic,
+        total_steps,
+        env_ids,
+        backend=None,
+    ):
+        backend = backend or getattr(self, 'actor_inference_backend', 'batched')
+        if backend == 'serial':
+            return np.asarray([
+                self.select_action(
+                    prev_states[index],
+                    prev_actions[index],
+                    current_states[index],
+                    deterministic,
+                    total_steps,
+                    env_id,
+                )
+                for index, env_id in enumerate(env_ids)
+            ])
+        if backend != 'batched':
+            raise ValueError("actor_inference_backend must be 'serial' or 'batched'")
+
+        env_ids = list(env_ids)
+        if len(env_ids) != len(current_states):
+            raise ValueError('env_ids and state batch must have the same length')
+        with torch.no_grad():
+            prev_state_batch = torch.as_tensor(np.asarray(prev_states), dtype=torch.float32, device=self.dvc)
+            prev_action_batch = torch.as_tensor(np.asarray(prev_actions), dtype=torch.float32, device=self.dvc)
+            current_state_batch = torch.as_tensor(np.asarray(current_states), dtype=torch.float32, device=self.dvc)
+            prev_state_batch = self.state_normalizer.normalize(prev_state_batch)
+            current_state_batch = self.state_normalizer.normalize(current_state_batch)
+            action_batch, _ = self.actor(
+                current_state=current_state_batch,
+                deterministic=deterministic,
+                with_logprob=False,
+                env_ids=env_ids,
+                single_step_mode=True,
+                prev_state=prev_state_batch,
+                prev_action=prev_action_batch,
+            )
+        return action_batch.cpu().numpy()
+
     def train(self):
         s_seq, a_seq, s_curr, a_curr, r, s_next_seq, a_next_seq, s_next_curr, dw, indices, weights = self.replay_buffer.sample(self.batch_size)
         

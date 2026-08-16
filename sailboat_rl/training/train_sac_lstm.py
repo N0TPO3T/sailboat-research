@@ -93,6 +93,7 @@ def main():
     parser.add_argument('--learning_starts', type=int, default=int(2e4), help='Transitions collected before updates start')
     parser.add_argument('--replay_capacity', type=int, default=int(1e6), help='Replay buffer capacity')
     parser.add_argument('--per_backend', choices=('legacy', 'optimized'), default='optimized', help='PER sampling backend')
+    parser.add_argument('--actor_inference_backend', choices=('serial', 'batched'), default='batched', help='Interaction-time Actor inference backend')
     parser.add_argument('--training_checkpoint_interval', type=int, default=int(6e5), help='Resumable checkpoint interval')
     parser.add_argument('--strict_deterministic', type=str2bool, default=False, help='Strict deterministic debug mode')
 
@@ -257,12 +258,9 @@ def main():
             while total_steps < opt.Max_train_steps and not graceful_stop.requested:
                 '''Interact & train'''
                 while total_steps < opt.Max_train_steps and not graceful_stop.requested:
-                    actions = []
-                    
-                    # 为每个环境选择动作
-                    for i in range(opt.num_envs):
-                        # 在训练初期可选随机动作，否则使用 agent.select_action
-                        if total_steps < opt.learning_starts:
+                    if total_steps < opt.learning_starts:
+                        actions = []
+                        for i in range(opt.num_envs):
                             # 针对帆船控制的特殊随机策略
                             random_strategy = np.random.random()
                             
@@ -286,11 +284,17 @@ def main():
                             else:  # 35%概率：正常随机动作
                                 act = env.action_space.sample()
                                 a = Action_adapter_reverse(act, opt.max_action)
-                        else:
-                            # 使用单步模式：前一状态、前一动作和当前状态选择动作
-                            a = agent.select_action(prev_states[i], prev_actions[i], current_states[i], 
-                                                  deterministic=False, total_steps=total_steps, env_id=i)
-                        actions.append(a)
+                            actions.append(a)
+                    else:
+                        actions = agent.select_actions(
+                            prev_states,
+                            prev_actions,
+                            current_states,
+                            deterministic=False,
+                            total_steps=total_steps,
+                            env_ids=range(opt.num_envs),
+                            backend=opt.actor_inference_backend,
+                        )
                     
                     # ========== 添加执行器噪声并转换动作 ==========
                     act_list = []

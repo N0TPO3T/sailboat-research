@@ -42,6 +42,7 @@ RESUME_CONFIG_KEYS = (
     "enable_actuator_noise",
     "sensor_noise_ratio",
     "actuator_noise_ratio",
+    "actor_inference_backend",
     "strict_deterministic",
 )
 
@@ -423,10 +424,13 @@ def prepare_run_manifest(
         saved_config = manifest.get("config", {})
         current_config = _json_safe(config)
         for key in RESUME_CONFIG_KEYS:
-            if saved_config.get(key) != current_config.get(key):
+            saved_value = saved_config.get(key)
+            if key == "actor_inference_backend" and key not in saved_config:
+                saved_value = "serial"
+            if saved_value != current_config.get(key):
                 raise ValueError(
                     f"Resume configuration mismatch for {key}: "
-                    f"{saved_config.get(key)!r} != {current_config.get(key)!r}"
+                    f"{saved_value!r} != {current_config.get(key)!r}"
                 )
         manifest.setdefault("resume_events", []).append({
             "at": utc_now(),

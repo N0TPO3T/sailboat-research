@@ -72,6 +72,35 @@ class SAC_fc_continuous():
             return np.zeros(self.action_dim, dtype=np.float32)
         return action
 
+    def select_actions(self, states, deterministic, backend=None):
+        backend = backend or getattr(self, 'actor_inference_backend', 'batched')
+        if backend == 'serial':
+            return np.asarray([self.select_action(state, deterministic) for state in states])
+        if backend != 'batched':
+            raise ValueError("actor_inference_backend must be 'serial' or 'batched'")
+
+        states = np.asarray(states, dtype=np.float32)
+        actions = np.zeros((len(states), self.action_dim), dtype=np.float32)
+        valid_rows = np.all(np.isfinite(states), axis=1)
+        if not np.any(valid_rows):
+            return actions
+
+        with torch.no_grad():
+            state_batch = torch.as_tensor(states[valid_rows], dtype=torch.float32, device=self.dvc)
+            state_batch = self.state_normalizer.normalize(state_batch)
+            normalized_rows = torch.isfinite(state_batch).all(dim=1)
+            if normalized_rows.any():
+                valid_indices = np.flatnonzero(valid_rows)[normalized_rows.cpu().numpy()]
+                action_batch, _ = self.actor(
+                    current_state=state_batch[normalized_rows],
+                    deterministic=deterministic,
+                    with_logprob=False,
+                )
+                action_batch = action_batch.cpu().numpy()
+                finite_actions = np.all(np.isfinite(action_batch), axis=1)
+                actions[valid_indices[finite_actions]] = action_batch[finite_actions]
+        return actions
+
     def train(self):
         s, a, r, s_next, dw, indices, weights = self.replay_buffer.sample(self.batch_size)
         
