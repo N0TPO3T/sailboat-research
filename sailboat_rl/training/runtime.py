@@ -115,10 +115,12 @@ def _to_cpu(value: Any) -> Any:
 
 
 def _optimizer_to_device(optimizer, device: torch.device) -> None:
-    for values in optimizer.state.values():
-        for key, value in values.items():
-            if torch.is_tensor(value):
-                values[key] = value.to(device)
+    for group in optimizer.param_groups:
+        step_device = device if group.get("capturable") or group.get("fused") else torch.device("cpu")
+        for parameter in group["params"]:
+            for key, value in optimizer.state.get(parameter, {}).items():
+                if torch.is_tensor(value):
+                    optimizer.state[parameter][key] = value.to(step_device if key == "step" else device)
 
 
 def trainer_state_dict(agent) -> dict[str, Any]:

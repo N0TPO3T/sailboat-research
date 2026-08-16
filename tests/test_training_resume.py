@@ -13,6 +13,7 @@ from sailboat_rl.algorithms.sac_lstm import SAC_lstm_countinuous
 from sailboat_rl.noise_utils_nowind import NoiseManager
 from sailboat_rl.training.runtime import (
     GracefulStop,
+    _optimizer_to_device,
     load_training_checkpoint,
     prepare_run_manifest,
     save_training_checkpoint,
@@ -87,6 +88,22 @@ def fill_replay(agent, agent_type):
 
 
 class ResumeCheckpointTests(unittest.TestCase):
+    @unittest.skipUnless(torch.cuda.is_available(), "CUDA is required for optimizer device placement")
+    def test_noncapturable_adam_step_remains_on_cpu_after_restore(self):
+        parameter = torch.nn.Parameter(torch.ones(1, device="cuda"))
+        optimizer = torch.optim.Adam([parameter], lr=1e-3)
+        parameter.grad = torch.ones_like(parameter)
+        optimizer.step()
+
+        state = optimizer.state[parameter]
+        self.assertEqual(state["step"].device.type, "cpu")
+        state["step"] = state["step"].to("cuda")
+        _optimizer_to_device(optimizer, torch.device("cuda"))
+
+        self.assertEqual(state["step"].device.type, "cpu")
+        self.assertEqual(state["exp_avg"].device.type, "cuda")
+        self.assertEqual(state["exp_avg_sq"].device.type, "cuda")
+
     def check_agent_round_trip(self, agent_type, per_backend="legacy"):
         seed_everything(123)
         with tempfile.TemporaryDirectory() as directory:
