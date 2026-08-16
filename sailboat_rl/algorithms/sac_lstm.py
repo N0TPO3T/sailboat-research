@@ -42,6 +42,10 @@ class SAC_lstm_countinuous():
         self.q_critic = Double_Q_Critic(self.state_dim, self.action_dim, (self.net_width,256),(self.net_width,128)).to(self.dvc)
         self.q_critic_optimizer = torch.optim.Adam(self.q_critic.parameters(), lr=self.c_lr, weight_decay=1e-5)
         self.q_critic_target = copy.deepcopy(self.q_critic)
+        # deepcopy creates new parameter storages after the normal .to(device)
+        # lifecycle, so prepare the target LSTMs once for the cuDNN fast path.
+        self.q_critic_target.lstm_q1.flatten_parameters()
+        self.q_critic_target.lstm_q2.flatten_parameters()
         # Freeze target networks with respect to optimizers (only update via polyak averaging)
         for p in self.q_critic_target.parameters():
             p.requires_grad = False

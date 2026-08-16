@@ -96,9 +96,6 @@ class Actor(nn.Module):
         # 第二层：LSTM层 - 用于处理时序信息
         self.lstm = nn.LSTM(input_size=hid_shape[0], hidden_size=hid_shape[0], num_layers=1, batch_first=True)
         
-        # 确保LSTM权重连续性
-        self.lstm.flatten_parameters()
-        
         # 添加Layer Normalization
         self.lstm_ln = nn.LayerNorm(hid_shape[0])
         
@@ -142,9 +139,6 @@ class Actor(nn.Module):
         '''
         device = current_state.device
         batch_size = current_state.shape[0]
-        
-        # 确保LSTM权重连续性
-        self.lstm.flatten_parameters()
         
         if single_step_mode:
             # 单步模式：用于环境采样
@@ -266,7 +260,6 @@ class Double_Q_Critic(nn.Module):
             nn.Dropout(p=dropout_prob)
         )
         self.lstm_q1 = nn.LSTM(input_size=hid_shape_q1[0], hidden_size=hid_shape_q1[0], num_layers=1, batch_first=True)
-        self.lstm_q1.flatten_parameters()
         self.lstm_ln_q1 = nn.LayerNorm(hid_shape_q1[0])
         
         # Q1当前状态动作预处理层
@@ -290,7 +283,6 @@ class Double_Q_Critic(nn.Module):
             nn.Dropout(p=dropout_prob)
         )
         self.lstm_q2 = nn.LSTM(input_size=hid_shape_q2[0], hidden_size=hid_shape_q2[0], num_layers=1, batch_first=True)
-        self.lstm_q2.flatten_parameters()
         self.lstm_ln_q2 = nn.LayerNorm(hid_shape_q2[0])
         
         # Q2当前状态动作预处理层
@@ -329,10 +321,6 @@ class Double_Q_Critic(nn.Module):
         '''
         device = current_state.device
         batch_size = current_state.shape[0]
-        
-        # 确保LSTM权重连续性
-        self.lstm_q1.flatten_parameters()
-        self.lstm_q2.flatten_parameters()
         
         if single_step_mode:
             # 单步模式：用于环境采样时的Critic评估
