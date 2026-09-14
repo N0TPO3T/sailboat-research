@@ -4,11 +4,11 @@
 - 基于师兄的无人帆船强化学习工作，完成一篇有独立增量的小论文；仅纯仿真。
 - 优先可实现、可复现与投稿可行性；候选CCDC / ICAUS / ICCA / DDCLS，期望约2027-09-14前录用，不保证录用。
 - 具体届次、学校认定要求、计算资源和训练预算未确认；ICCA具体全称待确认。
-- 已授权资料审计、检查点兼容性检查和上下文维护；训练、正式实验、投稿尚未启动。
+- 已授权资料审计、hs范围部署、最小CPU运行验证和上下文维护；训练、正式实验、投稿尚未启动。
 
 ## 项目根目录与职责边界
 - 项目根目录是本文件所在目录；本机路径`/Users/poet/Documents/研究生/小论文`，其他机器可使用不同克隆路径。四个核心文件只在根目录维护。
-- `research/`：用户自己的独立研究工作目录，当前仅含目录占位文件，尚无研究实现。后续新代码、配置与实验产物在此按实际需要创建。
+- `research/`：用户自己的独立研究工作目录，已有smoke_baseline.py工程验证入口，尚无新方法实现。后续新代码、配置与实验产物在此按实际需要创建。
 - `sailboat_RL/`：师兄的参考源码仓库，保留原状，不作为用户新增工作的默认修改入口。
 - 参考仓库origin：`https://github.com/N0TPO3T/sailboat_RL.git`；参考main提交 `19422525cb337831ca68f53a45661d34f3683ee1`。
 - `model/`：已收到的师兄检查点；`师兄大论文.pdf`、`yara.pdf`：参考论文。
@@ -27,7 +27,7 @@
 - 数据由仿真交互生成；代码使用四自由度帆船动力学、风扰动以及传感器/执行器噪声模块。
 - 各实验README及已有分析报告承担实验说明职责，保留；它们不是当前研究计划。
 
-## 训练与评估路径（尚未闭环运行）
+## 训练与评估路径（仅短闭环冒烟通过）
 - 第四章入口：`sailboat_RL/PART4/SAC/parll_lstm_normal.py`、`parll_SAC_normal.py`；模型为`SAC_lstm.py`/`SAC_fc.py`，网络为`utils_lstm.py`/`utils_fc.py`。
 - 第四章评估：`sailboat_RL/PART4/SAC/test_eval_lstm.py`；三类seed实验另见 `sailboat_RL/PART4/seed_reward_ablation/README.md`。
 - 第五章入口：`sailboat_RL/PART5/SAC-LSTM-att/parll_lstm_att_normal.py` → `gym.make('sailboat-s14-obst-v3')` → `SAC_lstm_att_normal.py`/`utils_lstm_att_normal.py`；评估为同目录`batchtest.py`。
@@ -46,7 +46,7 @@
 - 每组有actor7200、q_critic7200、normalizer7200、training_stats_7200；统计记录7200000步，seed100仍需独立运行配置佐证。
 - 已用CPU PyTorch2.10.0、weights_only=True读取；张量有限，normalizer维度匹配且方差非负。
 - 三组actor/critic均strict=True加载到第四章对应网络通过；eval模式合成输入actor前向通过。
-- 以上仅证明参数结构/最小前向兼容；未运行仿真闭环，未复现成功率。没有完整optimizer/replay buffer/RNG状态，不能精确续训。
+- 以上仅证明参数结构/最小前向兼容；已完成服务器50步冒烟闭环，未复现整回合成功率。没有完整optimizer/replay buffer/RNG状态，不能精确续训。
 - 本批不含第五章18维注意力检查点；用户表示可向师兄索取，尚待交付匹配权重、normalizer及运行配置。
 
 ## 实验结果与限制
@@ -64,7 +64,7 @@
 - ARIS采用research-pipeline分阶段推进，当前仅Stage1审计/选题；未完成pilot或深入查新。
 - 用户选择Codex执行、DeepSeek审查。此前会话未暴露llm-chat工具，未完成独立复核；新会话应重新发现工具，不把旧的不可用状态当永久事实。
 
-## 组内服务器（用户提供，尚未现场核验）
+## 组内服务器
 - SSH：`ot@172.16.2.249`；密码不写入项目文档、配置、脚本、命令行或Git。
 - 共享学生根目录：`/home/ot/Students`；用户自己的工作范围：`/home/ot/Students/hs`。
 - Conda入口：`/home/ot/miniconda3/condabin/conda`。仅为本项目创建独立环境，先核对已有环境归属，避免名称冲突；不修改base或他人环境。
@@ -74,7 +74,7 @@
 - 默认只向hs下已确认的项目路径写入；不修改/删除yc或其他学生目录，不停止他人进程，不清理共享缓存、不全局升级依赖、不改系统配置。
 - 停止本任务作业前核对精确PID/作业与授权并保全产物；SSH失联先恢复状态和日志，不据此重启、重复启动或结束作业。
 - yc仅作为待审查参考；使用前比对Git版本、代码、配置、模型和实验产物，不覆盖当前GitHub参考子模块。
-- 服务器连通性、GPU型号、可用容量、hs/yc实际内容和环境版本均未核实；本次记录没有连接、建环境或启动远程工作。
+- SSH与hs路径已现场核验；所有服务器写入硬边界见AGENTS。yc只读审计发现历史代码和检查点，但关键注意力入口为obst-v2/序列5，与GitHub不同；不是最终版本。
 
 ## 多机同步
 - 远程：`https://github.com/N0TPO3T/sailboat-research`（私有）。克隆：`git clone --recurse-submodules https://github.com/N0TPO3T/sailboat-research.git`。
@@ -82,3 +82,13 @@
 - 同步四个上下文文件、research源码/配置、固定参考子模块、两份参考PDF及本次12个基线检查点；该批pth已显式跟踪，未来新权重和日志默认忽略。
 - 需要使用GitHub账号访问两个私有仓库；本机Python环境、API密钥、Codex/ARIS安装不随Git同步。
 - 未来提交显式选择路径，推送前检查凭据和大文件，推送后核对远端SHA。避免两台电脑同时修改同一分支；不强制推送。
+
+## 服务器工程验证（2026-09-14）
+- 部署目录：`/home/ot/Students/hs/sailboat-research`；按显式清单同步318个源码/文档/依赖/检查点文件并通过rsync校验。排除Git内部数据；不是服务器Git克隆。部分历史图像已随首轮传输到达，不作为完整资产同步保证。
+- 环境：项目`.venv`，由共享Python3.13.11创建，system-site-packages只读借用base的torch2.13.0+cu130/numpy2.4.6；scipy1.18.1、gymnasium1.3.0、pygame2.6.1安装于hs。不是完整锁定的论文复现环境。
+- TMPDIR=`/home/ot/Students/hs/tmp`，XDG_CACHE_HOME=`/home/ot/Students/hs/cache`；单CPU线程，禁用CUDA，无训练。
+- `research/smoke_baseline.py`直接从参考文件加载环境类，不修改已安装Gym的注册文件；复用第四章Actor和normalizer，正常传递LSTM历史状态。
+- 三套检查点分别完成50步：观测/动作/奖励有限，无提前终止；均未到达目标，不能统计整回合成功率。obst_V3完成reset和5步零动作检查，不代表避障策略成功。
+- 证据：`research/validation/smoke_cpu_20260914.json`，包含实际版本、结果和所用源码/权重SHA256。
+- 复跑：在服务器项目目录设置上述TMPDIR/XDG_CACHE_HOME及`MPLCONFIGDIR=/home/ot/Students/hs/cache/matplotlib OPENBLAS_NUM_THREADS=1`，执行`.venv/bin/python -B research/smoke_baseline.py --steps 50 --output /home/ot/Students/hs/sailboat-research/research/outputs/smoke_cpu.json`。
+- 本次本地源码已足够完成冒烟，未从yc复制文件；参考源码未修改。后续需单独固定环境依赖、完整终止语义与评估协议，再做正式基线。
