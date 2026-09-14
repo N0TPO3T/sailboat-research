@@ -64,6 +64,18 @@
 - ARIS采用research-pipeline分阶段推进，当前仅Stage1审计/选题；未完成pilot或深入查新。
 - 用户选择Codex执行、DeepSeek审查。此前会话未暴露llm-chat工具，未完成独立复核；新会话应重新发现工具，不把旧的不可用状态当永久事实。
 
+## 组内服务器（用户提供，尚未现场核验）
+- SSH：`ot@172.16.2.249`；密码不写入项目文档、配置、脚本、命令行或Git。
+- 共享学生根目录：`/home/ot/Students`；用户自己的工作范围：`/home/ot/Students/hs`。
+- Conda入口：`/home/ot/miniconda3/condabin/conda`。仅为本项目创建独立环境，先核对已有环境归属，避免名称冲突；不修改base或他人环境。
+- `/home/ot/Students/yc`可能有师兄早期代码；用户明确提醒后期开发不在该服务器，故其版本未经完整审查不能作为最终实现或论文基线。
+- 即使同用ot账号，也不能按Unix用户名认定进程/文件属于本任务；需要工作目录、命令、日志、启动记录等精确归属证据。
+- 实际操作前只读核查目录权限、磁盘、CPU/GPU占用及课题组调度规则；资源空闲不等于可独占，算力额度/时长未确认前不启动训练。
+- 默认只向hs下已确认的项目路径写入；不修改/删除yc或其他学生目录，不停止他人进程，不清理共享缓存、不全局升级依赖、不改系统配置。
+- 停止本任务作业前核对精确PID/作业与授权并保全产物；SSH失联先恢复状态和日志，不据此重启、重复启动或结束作业。
+- yc仅作为待审查参考；使用前比对Git版本、代码、配置、模型和实验产物，不覆盖当前GitHub参考子模块。
+- 服务器连通性、GPU型号、可用容量、hs/yc实际内容和环境版本均未核实；本次记录没有连接、建环境或启动远程工作。
+
 ## 多机同步
 - 远程：`https://github.com/N0TPO3T/sailboat-research`（私有）。克隆：`git clone --recurse-submodules https://github.com/N0TPO3T/sailboat-research.git`。
 - 已有克隆仅在工作区干净且没有正在运行的实验时执行`git pull --ff-only`，然后`git submodule update --init --recursive`。有分叉或本地修改时先检查，不自动reset/rebase。
