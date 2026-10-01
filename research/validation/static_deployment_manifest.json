@@ -1,0 +1,31 @@
+{
+  "config_sha256": "1e26c257e1ab31da26f82fad8acb402b28361684d5e4da0d0e44b9c60e6cac3f",
+  "bank_sha256": "0719885cc70a25d0a943380726880805e36c2a1bbf8337b2ab0db724798897fc",
+  "source_sha256": {
+    "research/chapter5_static.py": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+    "research/chapter5_baseline.py": "70f4359d7a4b183c834860765bc40aa55331b6972bb84791e6456b2391a18a72",
+    "sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py": "ff2e43e2ea40030b2c3eff44649fd9b59306dd0d042d9b0093e6584f8c0fd513",
+    "sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py": "e2a7d72d094aa9c47294fd8d4da66129b7ab3b0f6fd96f5a206b40924acc67e3",
+    "sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c",
+    "sailboat_RL/PART5/SAC-LSTM-att/globals.py": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f",
+    "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+  },
+  "git_revision": "ce83544e8dfd6a6833da03d626025b4e0a2ba000",
+  "git_tracked_diff_sha256": "ae6e2b67a928dfebd94eddac989d7768cfe28b8db78174c2b714e97ee666abd8",
+  "runtime": {
+    "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 08:22:19) [Clang 14.0.6 ]",
+    "torch": "2.10.0",
+    "numpy": "2.5.3"
+  },
+  "deployment_files": {
+    "research/chapter5_static.py": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+    "research/pretrain_static_sanity.py": "2b46aaaa73d3fe7ec5c0e03921039766fbd67b92afd198837010f8035f1b0092",
+    "research/test_chapter5_static.py": "95de24300025c4ce22a0285d27e52d627f8bb7a6efecccf11a2d590338229a1f",
+    "research/v2_v3_static_parity.py": "bd08df6fb6063a18fdc5e73cde221c884b401e15e9eec5d3fdd2757f94258f36",
+    "research/static_training_report.py": "7b19c077ba5bc0b5b2279f06b8e17de9336b8c5a303c559328db2ed9e25fb5a6",
+    "configs/chapter5_static_aligned.json": "b71ea330c994f898aeb627732cefba3f20472b89cd17bae44081830a4d218344",
+    "docs/CHAPTER5_STATIC_RECOVERY.md": "da2a2422f3a2d75164cdf7b11104a46b00a75e603a80d1f4d6d269c3946b15ed",
+    "docs/V2_V3_STATIC_PARITY_AUDIT.md": "fb21dd191a85f7cd230ea9844d52bce2f5fb73a3eeb7f0ba7cccc30c07ccf6c7",
+    "research/validation/v2_v3_static_audit_status.json": "9f5f206b3d6447a9be18a712dd9bd4cd973cab693449b93c4be38b02c0a910b8"
+  }
+}

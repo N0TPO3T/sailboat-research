@@ -1,0 +1,13 @@
+Model: saclstm_s14nowind_final @ step 9000
+Environment: sailboat-s14-nowind
+Seed: 0
+Total Steps: 281
+Total Reward: 371.9910
+Terminated: True
+Truncated: False
+Sensor Noise: True (3.0%)
+Actuator Noise: True (3.0%)
+Start Position: (-0.03, 0.06)
+Final Position: (490.75, 0.01)
+Target Position: (500.00, 0.00)
+Final Distance to Target: 9.25 m

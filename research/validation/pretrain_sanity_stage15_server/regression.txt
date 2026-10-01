@@ -1,0 +1,15 @@
+test_bank_frozen_and_balanced (test_chapter5_static.StaticRecoveryTests.test_bank_frozen_and_balanced) ... ok
+test_checkpoint_evaluation_preserves_training (test_chapter5_static.StaticRecoveryTests.test_checkpoint_evaluation_preserves_training) ... ok
+test_exact_resume_and_config_guard (test_chapter5_static.StaticRecoveryTests.test_exact_resume_and_config_guard) ... ok
+test_freeze_refuses_failed_metrics (test_chapter5_static.StaticRecoveryTests.test_freeze_refuses_failed_metrics) ... ok
+test_hidden_reset_legacy (test_chapter5_static.StaticRecoveryTests.test_hidden_reset_legacy) ... ok
+test_legacy_and_aligned_pairing (test_chapter5_static.StaticRecoveryTests.test_legacy_and_aligned_pairing) ... ok
+test_static_safety_segment_and_termination (test_chapter5_static.StaticRecoveryTests.test_static_safety_segment_and_termination) ... ok
+test_trace_instrumentation_preserves_legacy_dynamics (test_chapter5_static.StaticRecoveryTests.test_trace_instrumentation_preserves_legacy_dynamics) ... ok
+test_v2_rejects_angle_noise_on_coordinate_slots (test_chapter5_static.StaticRecoveryTests.test_v2_rejects_angle_noise_on_coordinate_slots) ... ok
+test_wind_and_noise_not_replay_rng (test_chapter5_static.StaticRecoveryTests.test_wind_and_noise_not_replay_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 21.315s
+
+OK

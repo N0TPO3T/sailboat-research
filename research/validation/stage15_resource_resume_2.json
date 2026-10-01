@@ -1,0 +1,9 @@
+{
+  "status": "RESUMED_SAME_PROCESS",
+  "pid": 2939240,
+  "start_ticks": "190975871",
+  "resumed_unix": 1789481234.2774792,
+  "paused_seconds": 773.0331997871399,
+  "reason": "User clarified: peer jobs joining an already running job are not a reason to pause",
+  "stage_limit": 100000
+}

@@ -1,0 +1,9040 @@
+{
+  "schema": 1,
+  "purpose": "Fixed development/selection bank, not an untouched final paper test",
+  "generation_config_sha256": "ba2ce9842ca69b31d86375ef482976df96d8b414181a05e3b605f14de48c288d",
+  "scenarios": [
+    {
+      "id": "no_obstacle_0000",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.414283872033317,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1253626208,
+      "sensor_seed": 1622147852,
+      "actuator_seed": 1644212241,
+      "policy_seed": 1855106924
+    },
+    {
+      "id": "no_obstacle_0001",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.878514104735313,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 258404063,
+      "sensor_seed": 534714838,
+      "actuator_seed": 1119342277,
+      "policy_seed": 673809388
+    },
+    {
+      "id": "no_obstacle_0002",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.7445086916120278,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 568075310,
+      "sensor_seed": 404132046,
+      "actuator_seed": 189026882,
+      "policy_seed": 409020352
+    },
+    {
+      "id": "no_obstacle_0003",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.6779986229142777,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 481804424,
+      "sensor_seed": 726058899,
+      "actuator_seed": 1083692418,
+      "policy_seed": 1146477708
+    },
+    {
+      "id": "no_obstacle_0004",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.8923180248893294,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1492075586,
+      "sensor_seed": 522866297,
+      "actuator_seed": 240621647,
+      "policy_seed": 1987151989
+    },
+    {
+      "id": "no_obstacle_0005",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.33030308097230804,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 397369538,
+      "sensor_seed": 1266586031,
+      "actuator_seed": 834911703,
+      "policy_seed": 596250211
+    },
+    {
+      "id": "no_obstacle_0006",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.267978648160611,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 999510821,
+      "sensor_seed": 1950821689,
+      "actuator_seed": 961104252,
+      "policy_seed": 686366370
+    },
+    {
+      "id": "no_obstacle_0007",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.881064958144929,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 896379765,
+      "sensor_seed": 1226046153,
+      "actuator_seed": 111007355,
+      "policy_seed": 134896378
+    },
+    {
+      "id": "no_obstacle_0008",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.7597147199391954,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1364320175,
+      "sensor_seed": 1930543160,
+      "actuator_seed": 990801368,
+      "policy_seed": 674747697
+    },
+    {
+      "id": "no_obstacle_0009",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.7250728137233375,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 456696286,
+      "sensor_seed": 858471336,
+      "actuator_seed": 1219466061,
+      "policy_seed": 1974054824
+    },
+    {
+      "id": "no_obstacle_0010",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.7487763504883842,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 340249340,
+      "sensor_seed": 104314720,
+      "actuator_seed": 876547041,
+      "policy_seed": 117186474
+    },
+    {
+      "id": "no_obstacle_0011",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.8037651494000776,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1169773329,
+      "sensor_seed": 931564504,
+      "actuator_seed": 590113870,
+      "policy_seed": 1556083940
+    },
+    {
+      "id": "no_obstacle_0012",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.0730901271909223,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 334025571,
+      "sensor_seed": 937943043,
+      "actuator_seed": 1549500157,
+      "policy_seed": 1053719565
+    },
+    {
+      "id": "no_obstacle_0013",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.1887681627694047,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 191501609,
+      "sensor_seed": 248543281,
+      "actuator_seed": 501740825,
+      "policy_seed": 1144259921
+    },
+    {
+      "id": "no_obstacle_0014",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.5199394551596139,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1380035137,
+      "sensor_seed": 786232670,
+      "actuator_seed": 1679917730,
+      "policy_seed": 105726527
+    },
+    {
+      "id": "no_obstacle_0015",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.4910102759712722,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1008953514,
+      "sensor_seed": 380374802,
+      "actuator_seed": 2057698828,
+      "policy_seed": 262764329
+    },
+    {
+      "id": "no_obstacle_0016",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.6512784582796118,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1835693116,
+      "sensor_seed": 119918235,
+      "actuator_seed": 286295887,
+      "policy_seed": 383376271
+    },
+    {
+      "id": "no_obstacle_0017",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.5373794524690552,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 769684672,
+      "sensor_seed": 1651166663,
+      "actuator_seed": 780762189,
+      "policy_seed": 1040589878
+    },
+    {
+      "id": "no_obstacle_0018",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.055758652843025,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1404158666,
+      "sensor_seed": 1779354550,
+      "actuator_seed": 1506398966,
+      "policy_seed": 1077065480
+    },
+    {
+      "id": "no_obstacle_0019",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.2890250437366624,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 170198823,
+      "sensor_seed": 1922478895,
+      "actuator_seed": 104004358,
+      "policy_seed": 195955405
+    },
+    {
+      "id": "no_obstacle_0020",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.053736728501169,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 954417173,
+      "sensor_seed": 2014330159,
+      "actuator_seed": 1153896357,
+      "policy_seed": 2024748419
+    },
+    {
+      "id": "no_obstacle_0021",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.8772482234446807,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 926508531,
+      "sensor_seed": 1450454766,
+      "actuator_seed": 1930831186,
+      "policy_seed": 571240309
+    },
+    {
+      "id": "no_obstacle_0022",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.5064247692898755,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 551616149,
+      "sensor_seed": 1922872765,
+      "actuator_seed": 23947215,
+      "policy_seed": 1839941590
+    },
+    {
+      "id": "no_obstacle_0023",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.7209700271024055,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1527968243,
+      "sensor_seed": 227726889,
+      "actuator_seed": 695488107,
+      "policy_seed": 795996948
+    },
+    {
+      "id": "no_obstacle_0024",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.8156260270481258,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1651897418,
+      "sensor_seed": 1224201731,
+      "actuator_seed": 487867551,
+      "policy_seed": 697204865
+    },
+    {
+      "id": "no_obstacle_0025",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.6575495354979157,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1183528894,
+      "sensor_seed": 854438777,
+      "actuator_seed": 1678703863,
+      "policy_seed": 1751016291
+    },
+    {
+      "id": "no_obstacle_0026",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.54323400179789,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 532271151,
+      "sensor_seed": 675520758,
+      "actuator_seed": 1947944722,
+      "policy_seed": 1001296387
+    },
+    {
+      "id": "no_obstacle_0027",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.791574614498161,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1071100512,
+      "sensor_seed": 516814623,
+      "actuator_seed": 1608101383,
+      "policy_seed": 945155424
+    },
+    {
+      "id": "no_obstacle_0028",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.4955788125641964,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 151927206,
+      "sensor_seed": 412513119,
+      "actuator_seed": 1488683590,
+      "policy_seed": 2109490314
+    },
+    {
+      "id": "no_obstacle_0029",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.9137009625191186,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2080004896,
+      "sensor_seed": 2029022311,
+      "actuator_seed": 664912035,
+      "policy_seed": 302104336
+    },
+    {
+      "id": "no_obstacle_0030",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.1451959745611493,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1733301910,
+      "sensor_seed": 459645177,
+      "actuator_seed": 2127421526,
+      "policy_seed": 853229869
+    },
+    {
+      "id": "no_obstacle_0031",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.16353261417234827,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1561046320,
+      "sensor_seed": 37813525,
+      "actuator_seed": 1346371658,
+      "policy_seed": 2126101472
+    },
+    {
+      "id": "no_obstacle_0032",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.680897759570966,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1857801411,
+      "sensor_seed": 1640025927,
+      "actuator_seed": 1617949683,
+      "policy_seed": 1298196484
+    },
+    {
+      "id": "no_obstacle_0033",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.7766493176295817,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 950438148,
+      "sensor_seed": 1280024379,
+      "actuator_seed": 1283070924,
+      "policy_seed": 1532089022
+    },
+    {
+      "id": "no_obstacle_0034",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.7979883966458319,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1825135650,
+      "sensor_seed": 1500043646,
+      "actuator_seed": 1144172390,
+      "policy_seed": 1037818794
+    },
+    {
+      "id": "no_obstacle_0035",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.6191474231447547,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2010361458,
+      "sensor_seed": 226710345,
+      "actuator_seed": 1763216296,
+      "policy_seed": 1288524536
+    },
+    {
+      "id": "no_obstacle_0036",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.449877098148843,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 225082107,
+      "sensor_seed": 1756596522,
+      "actuator_seed": 1734386558,
+      "policy_seed": 392933732
+    },
+    {
+      "id": "no_obstacle_0037",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.612364933414168,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1364779460,
+      "sensor_seed": 1425623531,
+      "actuator_seed": 175182517,
+      "policy_seed": 833577758
+    },
+    {
+      "id": "no_obstacle_0038",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.1385137979832654,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 838301203,
+      "sensor_seed": 547535777,
+      "actuator_seed": 60268425,
+      "policy_seed": 399783871
+    },
+    {
+      "id": "no_obstacle_0039",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.1341026143849176,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1206520303,
+      "sensor_seed": 910880935,
+      "actuator_seed": 944342210,
+      "policy_seed": 1400838709
+    },
+    {
+      "id": "no_obstacle_0040",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.30144279830631,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1639102672,
+      "sensor_seed": 1558801814,
+      "actuator_seed": 1503468586,
+      "policy_seed": 2023473103
+    },
+    {
+      "id": "no_obstacle_0041",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.20793334255517473,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1796716167,
+      "sensor_seed": 330187513,
+      "actuator_seed": 1565066202,
+      "policy_seed": 372310121
+    },
+    {
+      "id": "no_obstacle_0042",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.135879739917294,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 445778764,
+      "sensor_seed": 274641486,
+      "actuator_seed": 1454637325,
+      "policy_seed": 1339587381
+    },
+    {
+      "id": "no_obstacle_0043",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.4428728432823113,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 858152521,
+      "sensor_seed": 310419866,
+      "actuator_seed": 2143658766,
+      "policy_seed": 1262039424
+    },
+    {
+      "id": "no_obstacle_0044",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.0828103108492164,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1882667626,
+      "sensor_seed": 157813429,
+      "actuator_seed": 2097091390,
+      "policy_seed": 1098815706
+    },
+    {
+      "id": "no_obstacle_0045",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.7591120639595337,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1328142229,
+      "sensor_seed": 1907280444,
+      "actuator_seed": 1667044376,
+      "policy_seed": 1965421589
+    },
+    {
+      "id": "no_obstacle_0046",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.066841699202164,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 483291190,
+      "sensor_seed": 2025382651,
+      "actuator_seed": 634966314,
+      "policy_seed": 2052971265
+    },
+    {
+      "id": "no_obstacle_0047",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.5203087943628484,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 895483751,
+      "sensor_seed": 561850981,
+      "actuator_seed": 2062455068,
+      "policy_seed": 380157403
+    },
+    {
+      "id": "no_obstacle_0048",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.53003579909651,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1168052602,
+      "sensor_seed": 583226619,
+      "actuator_seed": 1421840305,
+      "policy_seed": 382855900
+    },
+    {
+      "id": "no_obstacle_0049",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.437690651565347,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1527626228,
+      "sensor_seed": 625511655,
+      "actuator_seed": 669301228,
+      "policy_seed": 186839972
+    },
+    {
+      "id": "no_obstacle_0050",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.2783699921660556,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 398347250,
+      "sensor_seed": 1077768973,
+      "actuator_seed": 2145992341,
+      "policy_seed": 901543780
+    },
+    {
+      "id": "no_obstacle_0051",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.6063890768170914,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 361315256,
+      "sensor_seed": 1184152238,
+      "actuator_seed": 515705218,
+      "policy_seed": 544156454
+    },
+    {
+      "id": "no_obstacle_0052",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.5450394168104201,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 106236829,
+      "sensor_seed": 1428668711,
+      "actuator_seed": 134229124,
+      "policy_seed": 1426431108
+    },
+    {
+      "id": "no_obstacle_0053",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.4775800214869015,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 479108284,
+      "sensor_seed": 166979379,
+      "actuator_seed": 555120577,
+      "policy_seed": 1955522157
+    },
+    {
+      "id": "no_obstacle_0054",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.6440572155000677,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1797818094,
+      "sensor_seed": 16863460,
+      "actuator_seed": 1843558277,
+      "policy_seed": 788521905
+    },
+    {
+      "id": "no_obstacle_0055",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.0612705818804913,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 516926454,
+      "sensor_seed": 1626232375,
+      "actuator_seed": 761105198,
+      "policy_seed": 538511239
+    },
+    {
+      "id": "no_obstacle_0056",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.1834582809446452,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 117108848,
+      "sensor_seed": 2091515384,
+      "actuator_seed": 849665800,
+      "policy_seed": 1320291139
+    },
+    {
+      "id": "no_obstacle_0057",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.5684460971177343,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1307926427,
+      "sensor_seed": 1414941519,
+      "actuator_seed": 1528162109,
+      "policy_seed": 1556760198
+    },
+    {
+      "id": "no_obstacle_0058",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.08399974099402384,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1149084200,
+      "sensor_seed": 1563144027,
+      "actuator_seed": 370628244,
+      "policy_seed": 1393327302
+    },
+    {
+      "id": "no_obstacle_0059",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.47067349604106906,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1665230749,
+      "sensor_seed": 1919715380,
+      "actuator_seed": 1717560742,
+      "policy_seed": 493540797
+    },
+    {
+      "id": "no_obstacle_0060",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.007916688048021,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1456990305,
+      "sensor_seed": 77329346,
+      "actuator_seed": 333627997,
+      "policy_seed": 166065302
+    },
+    {
+      "id": "no_obstacle_0061",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.5167315707560846,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 166602875,
+      "sensor_seed": 628502410,
+      "actuator_seed": 996374824,
+      "policy_seed": 444000287
+    },
+    {
+      "id": "no_obstacle_0062",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.1314294129004723,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 235975907,
+      "sensor_seed": 1154066289,
+      "actuator_seed": 1873839032,
+      "policy_seed": 328018789
+    },
+    {
+      "id": "no_obstacle_0063",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.259013474001844,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 679738259,
+      "sensor_seed": 1085151404,
+      "actuator_seed": 1445775905,
+      "policy_seed": 783195856
+    },
+    {
+      "id": "no_obstacle_0064",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.803949821761472,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1803342546,
+      "sensor_seed": 1200432090,
+      "actuator_seed": 1674498235,
+      "policy_seed": 1829561827
+    },
+    {
+      "id": "no_obstacle_0065",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.426244370260361,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1337833620,
+      "sensor_seed": 1181792448,
+      "actuator_seed": 581023805,
+      "policy_seed": 634671061
+    },
+    {
+      "id": "no_obstacle_0066",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.8990820213501212,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 520638304,
+      "sensor_seed": 556595779,
+      "actuator_seed": 1372929929,
+      "policy_seed": 1779967384
+    },
+    {
+      "id": "no_obstacle_0067",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.3730445516832686,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 539205236,
+      "sensor_seed": 1446393092,
+      "actuator_seed": 23433334,
+      "policy_seed": 1253554185
+    },
+    {
+      "id": "no_obstacle_0068",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.4554760997278099,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 995340416,
+      "sensor_seed": 1205598979,
+      "actuator_seed": 1963467628,
+      "policy_seed": 1955200104
+    },
+    {
+      "id": "no_obstacle_0069",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.0140622930869583,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1437745041,
+      "sensor_seed": 1329767948,
+      "actuator_seed": 1704851927,
+      "policy_seed": 342985938
+    },
+    {
+      "id": "no_obstacle_0070",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.43833397297587756,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1104364572,
+      "sensor_seed": 1857149881,
+      "actuator_seed": 216760203,
+      "policy_seed": 1972234996
+    },
+    {
+      "id": "no_obstacle_0071",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.7478027996897657,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1053635324,
+      "sensor_seed": 1464416442,
+      "actuator_seed": 1121863038,
+      "policy_seed": 863356951
+    },
+    {
+      "id": "no_obstacle_0072",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.4812364822362385,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1066314200,
+      "sensor_seed": 1622218422,
+      "actuator_seed": 345242375,
+      "policy_seed": 541917416
+    },
+    {
+      "id": "no_obstacle_0073",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.0421382504532473,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 408361318,
+      "sensor_seed": 2023179652,
+      "actuator_seed": 1483512066,
+      "policy_seed": 319428095
+    },
+    {
+      "id": "no_obstacle_0074",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.774023538431004,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 353139975,
+      "sensor_seed": 1711825584,
+      "actuator_seed": 1236306091,
+      "policy_seed": 565946526
+    },
+    {
+      "id": "no_obstacle_0075",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.22107537473142289,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1192683052,
+      "sensor_seed": 946941640,
+      "actuator_seed": 1303882450,
+      "policy_seed": 410548113
+    },
+    {
+      "id": "no_obstacle_0076",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.5462904400659132,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 15161623,
+      "sensor_seed": 55737105,
+      "actuator_seed": 1664753148,
+      "policy_seed": 914500841
+    },
+    {
+      "id": "no_obstacle_0077",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.0946406205111021,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2003018674,
+      "sensor_seed": 1637057356,
+      "actuator_seed": 903424004,
+      "policy_seed": 42303149
+    },
+    {
+      "id": "no_obstacle_0078",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.9727768094204712,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1566497894,
+      "sensor_seed": 1976419143,
+      "actuator_seed": 547506376,
+      "policy_seed": 791275200
+    },
+    {
+      "id": "no_obstacle_0079",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9847370643439368,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1185967460,
+      "sensor_seed": 1039494382,
+      "actuator_seed": 2076522444,
+      "policy_seed": 266516059
+    },
+    {
+      "id": "no_obstacle_0080",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.140597860747337,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1639308763,
+      "sensor_seed": 1372646142,
+      "actuator_seed": 828833829,
+      "policy_seed": 1634910673
+    },
+    {
+      "id": "no_obstacle_0081",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.1339585095790436,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1428601483,
+      "sensor_seed": 588087183,
+      "actuator_seed": 1542473623,
+      "policy_seed": 125553515
+    },
+    {
+      "id": "no_obstacle_0082",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.17990797583064888,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1992458454,
+      "sensor_seed": 662174613,
+      "actuator_seed": 1162095178,
+      "policy_seed": 2023212616
+    },
+    {
+      "id": "no_obstacle_0083",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.994788433184968,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1431086735,
+      "sensor_seed": 453828392,
+      "actuator_seed": 132542238,
+      "policy_seed": 268651024
+    },
+    {
+      "id": "no_obstacle_0084",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.1440373284958616,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 104304729,
+      "sensor_seed": 2055583653,
+      "actuator_seed": 3936370,
+      "policy_seed": 160623005
+    },
+    {
+      "id": "no_obstacle_0085",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.1708891266627175,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1227299924,
+      "sensor_seed": 67694408,
+      "actuator_seed": 1873120409,
+      "policy_seed": 1697226624
+    },
+    {
+      "id": "no_obstacle_0086",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.627771378600813,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 968443886,
+      "sensor_seed": 879193829,
+      "actuator_seed": 1235552577,
+      "policy_seed": 1538222424
+    },
+    {
+      "id": "no_obstacle_0087",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.22035906677139636,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2059223976,
+      "sensor_seed": 1633799219,
+      "actuator_seed": 697155152,
+      "policy_seed": 542749863
+    },
+    {
+      "id": "no_obstacle_0088",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.0332655472604797,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 323606523,
+      "sensor_seed": 1758128932,
+      "actuator_seed": 190332728,
+      "policy_seed": 1317033947
+    },
+    {
+      "id": "no_obstacle_0089",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.6497583446297612,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 761088962,
+      "sensor_seed": 1876043341,
+      "actuator_seed": 1746495857,
+      "policy_seed": 1794242449
+    },
+    {
+      "id": "no_obstacle_0090",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.6721903483417262,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1025217066,
+      "sensor_seed": 1729790933,
+      "actuator_seed": 65356294,
+      "policy_seed": 1320910677
+    },
+    {
+      "id": "no_obstacle_0091",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.0349793879053362,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1938051769,
+      "sensor_seed": 788908368,
+      "actuator_seed": 1096932229,
+      "policy_seed": 1476375401
+    },
+    {
+      "id": "no_obstacle_0092",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.7059066670726997,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 224439822,
+      "sensor_seed": 1672471837,
+      "actuator_seed": 424751226,
+      "policy_seed": 1115667918
+    },
+    {
+      "id": "no_obstacle_0093",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.14867078736258604,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1790985085,
+      "sensor_seed": 105040076,
+      "actuator_seed": 2008028569,
+      "policy_seed": 2140712155
+    },
+    {
+      "id": "no_obstacle_0094",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.9981243939466369,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1642339315,
+      "sensor_seed": 77479328,
+      "actuator_seed": 1968374763,
+      "policy_seed": 1786877124
+    },
+    {
+      "id": "no_obstacle_0095",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.4142937044633603,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1147666057,
+      "sensor_seed": 146156982,
+      "actuator_seed": 1392792261,
+      "policy_seed": 2009469806
+    },
+    {
+      "id": "no_obstacle_0096",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.45148746787788313,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 93079699,
+      "sensor_seed": 2024615416,
+      "actuator_seed": 1762092824,
+      "policy_seed": 1168760535
+    },
+    {
+      "id": "no_obstacle_0097",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.7754124336262587,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1615195101,
+      "sensor_seed": 1028882797,
+      "actuator_seed": 1171179634,
+      "policy_seed": 982296746
+    },
+    {
+      "id": "no_obstacle_0098",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.1947881112505316,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 311210199,
+      "sensor_seed": 438762698,
+      "actuator_seed": 555584326,
+      "policy_seed": 2008320890
+    },
+    {
+      "id": "no_obstacle_0099",
+      "kind": "no_obstacle",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.3606615290628608,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2002227721,
+      "sensor_seed": 689951264,
+      "actuator_seed": 131078850,
+      "policy_seed": 222124922
+    },
+    {
+      "id": "fixed_static_0000",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.3811874823265162,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 949697564,
+      "sensor_seed": 463486802,
+      "actuator_seed": 230680917,
+      "policy_seed": 1375138282
+    },
+    {
+      "id": "fixed_static_0001",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.7426054166972524,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1761845915,
+      "sensor_seed": 1379657058,
+      "actuator_seed": 656072278,
+      "policy_seed": 919697335
+    },
+    {
+      "id": "fixed_static_0002",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.183911558015542,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 119961710,
+      "sensor_seed": 1568311290,
+      "actuator_seed": 1220388857,
+      "policy_seed": 2024303966
+    },
+    {
+      "id": "fixed_static_0003",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9445676362384348,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 122225148,
+      "sensor_seed": 325498623,
+      "actuator_seed": 1184542740,
+      "policy_seed": 22078432
+    },
+    {
+      "id": "fixed_static_0004",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.1106326376460514,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 121907133,
+      "sensor_seed": 943137211,
+      "actuator_seed": 680504799,
+      "policy_seed": 1490163899
+    },
+    {
+      "id": "fixed_static_0005",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.5089328309106343,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1480275490,
+      "sensor_seed": 519177907,
+      "actuator_seed": 2141421453,
+      "policy_seed": 733371781
+    },
+    {
+      "id": "fixed_static_0006",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.9036676702522367,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1651539531,
+      "sensor_seed": 620135439,
+      "actuator_seed": 432932137,
+      "policy_seed": 734367329
+    },
+    {
+      "id": "fixed_static_0007",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.21698753512333,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 207114295,
+      "sensor_seed": 129670746,
+      "actuator_seed": 1807893101,
+      "policy_seed": 2043800530
+    },
+    {
+      "id": "fixed_static_0008",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.322035949826186,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 222785221,
+      "sensor_seed": 1882237424,
+      "actuator_seed": 1036550526,
+      "policy_seed": 1809665809
+    },
+    {
+      "id": "fixed_static_0009",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.314940297092739,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1483365250,
+      "sensor_seed": 321938279,
+      "actuator_seed": 178411307,
+      "policy_seed": 1256640219
+    },
+    {
+      "id": "fixed_static_0010",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.943115793060064,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 750822173,
+      "sensor_seed": 1506109290,
+      "actuator_seed": 374283591,
+      "policy_seed": 1831346927
+    },
+    {
+      "id": "fixed_static_0011",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.32453008204301254,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1633973105,
+      "sensor_seed": 674102732,
+      "actuator_seed": 344913067,
+      "policy_seed": 116536365
+    },
+    {
+      "id": "fixed_static_0012",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.8341968973143905,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1548064729,
+      "sensor_seed": 318026882,
+      "actuator_seed": 1835549033,
+      "policy_seed": 1587464175
+    },
+    {
+      "id": "fixed_static_0013",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.566240758186007,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1114018600,
+      "sensor_seed": 456731770,
+      "actuator_seed": 1852776463,
+      "policy_seed": 2045297249
+    },
+    {
+      "id": "fixed_static_0014",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.13591382618099837,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1175949423,
+      "sensor_seed": 1498128406,
+      "actuator_seed": 186961660,
+      "policy_seed": 1467299480
+    },
+    {
+      "id": "fixed_static_0015",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.7520112975675932,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1460674398,
+      "sensor_seed": 180540284,
+      "actuator_seed": 1780445309,
+      "policy_seed": 1319214291
+    },
+    {
+      "id": "fixed_static_0016",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.974351481905512,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1629309475,
+      "sensor_seed": 1688446632,
+      "actuator_seed": 1587837440,
+      "policy_seed": 1600503113
+    },
+    {
+      "id": "fixed_static_0017",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.71820027773014,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1727281576,
+      "sensor_seed": 755309332,
+      "actuator_seed": 378318365,
+      "policy_seed": 1452477749
+    },
+    {
+      "id": "fixed_static_0018",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.3416271000042213,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1103237264,
+      "sensor_seed": 1967459342,
+      "actuator_seed": 118842629,
+      "policy_seed": 1124996726
+    },
+    {
+      "id": "fixed_static_0019",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.10203306211601973,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 831707865,
+      "sensor_seed": 141482294,
+      "actuator_seed": 1964128074,
+      "policy_seed": 584276108
+    },
+    {
+      "id": "fixed_static_0020",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.2512350003747479,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1453173601,
+      "sensor_seed": 1122733480,
+      "actuator_seed": 1333657731,
+      "policy_seed": 1397884389
+    },
+    {
+      "id": "fixed_static_0021",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9067725798377018,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 751836036,
+      "sensor_seed": 721270477,
+      "actuator_seed": 1151914420,
+      "policy_seed": 732281273
+    },
+    {
+      "id": "fixed_static_0022",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.2408740862603946,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 475931193,
+      "sensor_seed": 512558499,
+      "actuator_seed": 866700835,
+      "policy_seed": 964441980
+    },
+    {
+      "id": "fixed_static_0023",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.1482010808636476,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 446097153,
+      "sensor_seed": 1628341399,
+      "actuator_seed": 52941441,
+      "policy_seed": 2145481719
+    },
+    {
+      "id": "fixed_static_0024",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.8611376439315666,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1441106607,
+      "sensor_seed": 1789166931,
+      "actuator_seed": 86830607,
+      "policy_seed": 1435914735
+    },
+    {
+      "id": "fixed_static_0025",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.5771573431961434,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 386011861,
+      "sensor_seed": 1124040236,
+      "actuator_seed": 1065022296,
+      "policy_seed": 26883921
+    },
+    {
+      "id": "fixed_static_0026",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.7145144438059394,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 919726949,
+      "sensor_seed": 2134037204,
+      "actuator_seed": 1256368401,
+      "policy_seed": 1295640648
+    },
+    {
+      "id": "fixed_static_0027",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.3536635233306367,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 751351749,
+      "sensor_seed": 1673913738,
+      "actuator_seed": 1340541272,
+      "policy_seed": 1674974696
+    },
+    {
+      "id": "fixed_static_0028",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.8064887689320487,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 948749286,
+      "sensor_seed": 2095697425,
+      "actuator_seed": 1426563343,
+      "policy_seed": 1777419428
+    },
+    {
+      "id": "fixed_static_0029",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.143078272882596,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1719583601,
+      "sensor_seed": 945860966,
+      "actuator_seed": 261930553,
+      "policy_seed": 735099773
+    },
+    {
+      "id": "fixed_static_0030",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.078485951204972,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1026676909,
+      "sensor_seed": 85256600,
+      "actuator_seed": 1148777620,
+      "policy_seed": 1309568070
+    },
+    {
+      "id": "fixed_static_0031",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.49619753185316356,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1428181889,
+      "sensor_seed": 2017625782,
+      "actuator_seed": 1591343697,
+      "policy_seed": 1957670567
+    },
+    {
+      "id": "fixed_static_0032",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.7200733661690614,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2045950211,
+      "sensor_seed": 622044652,
+      "actuator_seed": 861097082,
+      "policy_seed": 513561230
+    },
+    {
+      "id": "fixed_static_0033",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.6024885750366951,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 637248920,
+      "sensor_seed": 165827976,
+      "actuator_seed": 1065493641,
+      "policy_seed": 1828620847
+    },
+    {
+      "id": "fixed_static_0034",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.6818599493172777,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1729369679,
+      "sensor_seed": 490996674,
+      "actuator_seed": 1557720298,
+      "policy_seed": 569138899
+    },
+    {
+      "id": "fixed_static_0035",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.1735861797249076,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 800382282,
+      "sensor_seed": 481545141,
+      "actuator_seed": 1857977000,
+      "policy_seed": 1792695265
+    },
+    {
+      "id": "fixed_static_0036",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.3058541099808085,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 116524793,
+      "sensor_seed": 1731751593,
+      "actuator_seed": 1333089403,
+      "policy_seed": 1318387299
+    },
+    {
+      "id": "fixed_static_0037",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.2077736942682938,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 395756026,
+      "sensor_seed": 436539208,
+      "actuator_seed": 394703620,
+      "policy_seed": 2119881139
+    },
+    {
+      "id": "fixed_static_0038",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.292939583467614,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 126147104,
+      "sensor_seed": 1611712213,
+      "actuator_seed": 970368338,
+      "policy_seed": 177729632
+    },
+    {
+      "id": "fixed_static_0039",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.5377991878395993,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 708320990,
+      "sensor_seed": 651519881,
+      "actuator_seed": 763847705,
+      "policy_seed": 1663060491
+    },
+    {
+      "id": "fixed_static_0040",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.3675054583901068,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 85516341,
+      "sensor_seed": 1662939448,
+      "actuator_seed": 796117664,
+      "policy_seed": 1647602851
+    },
+    {
+      "id": "fixed_static_0041",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.2673537650778146,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 887505857,
+      "sensor_seed": 1620424374,
+      "actuator_seed": 838878099,
+      "policy_seed": 321634142
+    },
+    {
+      "id": "fixed_static_0042",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.906776732460504,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1704222632,
+      "sensor_seed": 826746298,
+      "actuator_seed": 489423195,
+      "policy_seed": 490775294
+    },
+    {
+      "id": "fixed_static_0043",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.5866361468886381,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 231916416,
+      "sensor_seed": 1396398015,
+      "actuator_seed": 262245364,
+      "policy_seed": 47133526
+    },
+    {
+      "id": "fixed_static_0044",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.2242761983808685,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1507920181,
+      "sensor_seed": 1801069739,
+      "actuator_seed": 574685116,
+      "policy_seed": 245878597
+    },
+    {
+      "id": "fixed_static_0045",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.1495074011248751,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 393871578,
+      "sensor_seed": 297292000,
+      "actuator_seed": 2056819221,
+      "policy_seed": 956391841
+    },
+    {
+      "id": "fixed_static_0046",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.02153573958879,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 771472468,
+      "sensor_seed": 1116084154,
+      "actuator_seed": 838623037,
+      "policy_seed": 953046184
+    },
+    {
+      "id": "fixed_static_0047",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        3.1012922644856973,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2000864761,
+      "sensor_seed": 1425021606,
+      "actuator_seed": 1504810978,
+      "policy_seed": 1416044418
+    },
+    {
+      "id": "fixed_static_0048",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.8922816034106302,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1940594609,
+      "sensor_seed": 293209836,
+      "actuator_seed": 943774593,
+      "policy_seed": 1629517449
+    },
+    {
+      "id": "fixed_static_0049",
+      "kind": "fixed_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.8479971799324748,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          190,
+          10
+        ],
+        [
+          90,
+          -90
+        ],
+        [
+          300,
+          -76
+        ],
+        [
+          330,
+          57
+        ],
+        [
+          197,
+          150
+        ],
+        [
+          160,
+          -220
+        ],
+        [
+          350,
+          -205
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 138767879,
+      "sensor_seed": 1984609512,
+      "actuator_seed": 1020858724,
+      "policy_seed": 696786930
+    },
+    {
+      "id": "random_static_0000",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.598050226441358,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          386.71256404151035,
+          151.87833640643856
+        ],
+        [
+          159.34507158608054,
+          217.17052453282275
+        ],
+        [
+          298.3816558182835,
+          -112.44860800041373
+        ],
+        [
+          89.14112638186306,
+          -200.51925762453138
+        ],
+        [
+          26.318227992080836,
+          155.7432862220463
+        ],
+        [
+          267.03072634626557,
+          70.88749143798783
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1349013688,
+      "sensor_seed": 375723063,
+      "actuator_seed": 1000814747,
+      "policy_seed": 468675883
+    },
+    {
+      "id": "random_static_0001",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.0626519774171791,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          51.309821235311695,
+          -235.10789773434354
+        ],
+        [
+          189.6388919785053,
+          131.84629527925972
+        ],
+        [
+          46.22838883223351,
+          137.5892334757095
+        ],
+        [
+          424.9470785197789,
+          -136.2286367292705
+        ],
+        [
+          265.3101541841117,
+          -89.9161926910758
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 64419797,
+      "sensor_seed": 1749038657,
+      "actuator_seed": 767598263,
+      "policy_seed": 38298143
+    },
+    {
+      "id": "random_static_0002",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.1107246457571818,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          496.63750239458346,
+          171.03381384883997
+        ],
+        [
+          329.6006315002634,
+          249.64726344901422
+        ],
+        [
+          159.2092065182581,
+          -225.45776757644998
+        ],
+        [
+          159.78593700182446,
+          94.98110990308007
+        ],
+        [
+          168.85689681918294,
+          -73.87352569022593
+        ],
+        [
+          307.48055651363177,
+          -201.62299905636812
+        ],
+        [
+          321.99527925114126,
+          108.53100577882319
+        ],
+        [
+          0.43242278103261533,
+          221.5079059163124
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 36519678,
+      "sensor_seed": 948859788,
+      "actuator_seed": 57221919,
+      "policy_seed": 738680825
+    },
+    {
+      "id": "random_static_0003",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.5445533029245455,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          183.9633412496837,
+          36.03658824201944
+        ],
+        [
+          193.5122673083431,
+          -130.91704652106694
+        ],
+        [
+          0.7684368390126206,
+          -171.2592022812508
+        ],
+        [
+          402.9469523635761,
+          -228.93373741522583
+        ],
+        [
+          426.95131821575995,
+          148.20055856290602
+        ],
+        [
+          72.46814980665262,
+          216.54436585713927
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 287045208,
+      "sensor_seed": 1126098378,
+      "actuator_seed": 987008168,
+      "policy_seed": 1275088235
+    },
+    {
+      "id": "random_static_0004",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.4371622885892475,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          275.31134811609905,
+          -28.59332206132831
+        ],
+        [
+          213.71063276976122,
+          -177.61097449833002
+        ],
+        [
+          497.13772568759435,
+          -205.3953820737699
+        ],
+        [
+          358.6937246318642,
+          -233.86218927105713
+        ],
+        [
+          225.1269182103332,
+          232.5862308901585
+        ],
+        [
+          144.25454932770316,
+          66.80812364865218
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2019545991,
+      "sensor_seed": 666854337,
+      "actuator_seed": 1217984096,
+      "policy_seed": 1858379908
+    },
+    {
+      "id": "random_static_0005",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.478400064497711,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          247.0243634562398,
+          10.05786950225901
+        ],
+        [
+          35.58635486417722,
+          138.07915943923783
+        ],
+        [
+          488.19285702761397,
+          167.8004548889393
+        ],
+        [
+          409.12281560051014,
+          -109.85192713190479
+        ],
+        [
+          323.4581639020382,
+          169.18251152386134
+        ],
+        [
+          259.1614777517544,
+          -187.00526321418292
+        ],
+        [
+          48.83576464375222,
+          -136.35209776020596
+        ],
+        [
+          181.19070277947458,
+          200.0834754233221
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1693777240,
+      "sensor_seed": 2127945023,
+      "actuator_seed": 378242719,
+      "policy_seed": 369706106
+    },
+    {
+      "id": "random_static_0006",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.9097796263953641,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          210.11381191290835,
+          196.2557059374268
+        ],
+        [
+          315.54784497542687,
+          76.2636213602843
+        ],
+        [
+          175.4805424015935,
+          -158.50606245581739
+        ],
+        [
+          410.6868146695663,
+          197.42646903715178
+        ],
+        [
+          367.5055926096166,
+          -242.87459919659187
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1219406043,
+      "sensor_seed": 1131354436,
+      "actuator_seed": 857373854,
+      "policy_seed": 940282479
+    },
+    {
+      "id": "random_static_0007",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.8938333573504904,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          98.86504922933275,
+          -194.91358346779785
+        ],
+        [
+          241.90061356894373,
+          -55.570158994452115
+        ],
+        [
+          207.00967643119338,
+          185.99338404898174
+        ],
+        [
+          471.68424827626325,
+          -215.2398993256227
+        ],
+        [
+          360.12234531562154,
+          71.19306187977826
+        ],
+        [
+          0.5403066829757219,
+          211.23007316618254
+        ],
+        [
+          308.6391300700078,
+          -178.76581462349773
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1367647144,
+      "sensor_seed": 690225969,
+      "actuator_seed": 942751562,
+      "policy_seed": 1703677367
+    },
+    {
+      "id": "random_static_0008",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.68983844667037,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          137.35621724583186,
+          -130.85709319654453
+        ],
+        [
+          195.0236942945322,
+          84.97804049450004
+        ],
+        [
+          480.2707349628875,
+          -146.17600264922575
+        ],
+        [
+          284.16466089666045,
+          234.35371357384665
+        ],
+        [
+          483.20788786794435,
+          249.7941758725365
+        ],
+        [
+          25.34929542348474,
+          239.76662112635827
+        ],
+        [
+          355.5859132375743,
+          -19.163078190047813
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 759248701,
+      "sensor_seed": 394107947,
+      "actuator_seed": 1557376334,
+      "policy_seed": 1695571830
+    },
+    {
+      "id": "random_static_0009",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9742169618358134,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          242.52546842949525,
+          -47.59860060589194
+        ],
+        [
+          102.35759351801754,
+          -106.13563396544534
+        ],
+        [
+          245.76078247775718,
+          -217.0138858356094
+        ],
+        [
+          260.8202325184009,
+          218.5000264908909
+        ],
+        [
+          355.70931959582913,
+          47.581733006101636
+        ],
+        [
+          418.8762307204977,
+          186.02980857207675
+        ],
+        [
+          54.214646850648975,
+          162.7729889357005
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1141116478,
+      "sensor_seed": 303720188,
+      "actuator_seed": 1970098037,
+      "policy_seed": 310202934
+    },
+    {
+      "id": "random_static_0010",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.0136695644019422,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          175.96193097723616,
+          -163.58081291237193
+        ],
+        [
+          299.3922228626942,
+          24.256435817666897
+        ],
+        [
+          74.49475349913287,
+          147.28179800619634
+        ],
+        [
+          351.2079635098341,
+          -142.07740583484085
+        ],
+        [
+          230.44430449800092,
+          167.55061536322523
+        ],
+        [
+          392.74074256219626,
+          195.75506229190214
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1426558461,
+      "sensor_seed": 1316165902,
+      "actuator_seed": 795344390,
+      "policy_seed": 1280607886
+    },
+    {
+      "id": "random_static_0011",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9441067484473251,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          216.31224526687114,
+          245.85637850146043
+        ],
+        [
+          337.4290468150807,
+          3.3782086379825493
+        ],
+        [
+          129.8687332186338,
+          61.41330485603419
+        ],
+        [
+          242.89924491726495,
+          -189.2045800603731
+        ],
+        [
+          441.9479820980998,
+          145.79065217989157
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1179108663,
+      "sensor_seed": 1038793844,
+      "actuator_seed": 2071143292,
+      "policy_seed": 1160091392
+    },
+    {
+      "id": "random_static_0012",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.26057690731489,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          440.3700862216862,
+          172.14352536900412
+        ],
+        [
+          170.5724455224633,
+          40.64182829161172
+        ],
+        [
+          167.96137593681453,
+          -151.2549637970032
+        ],
+        [
+          354.51536729899425,
+          -27.810341133514214
+        ],
+        [
+          98.6524128000581,
+          202.17008172940686
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1881477789,
+      "sensor_seed": 1333481449,
+      "actuator_seed": 869628219,
+      "policy_seed": 1536816201
+    },
+    {
+      "id": "random_static_0013",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.333617763469272,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          254.67491535129378,
+          -247.10320731539724
+        ],
+        [
+          194.88220731757383,
+          -24.019782129545032
+        ],
+        [
+          285.7308347777294,
+          186.74505063800956
+        ],
+        [
+          100.32576667899967,
+          105.77239112122078
+        ],
+        [
+          431.75672005555526,
+          -208.26820930692153
+        ],
+        [
+          348.3630189011174,
+          2.12626198937782
+        ],
+        [
+          499.83327803428466,
+          210.64817729948493
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 725146356,
+      "sensor_seed": 1719906047,
+      "actuator_seed": 835956546,
+      "policy_seed": 2010994362
+    },
+    {
+      "id": "random_static_0014",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.038820605879033396,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          361.86375862316044,
+          -30.5546830829993
+        ],
+        [
+          107.693925800383,
+          -163.08848066338788
+        ],
+        [
+          450.18378186333393,
+          152.8634259578309
+        ],
+        [
+          94.02636423112287,
+          202.91050125660382
+        ],
+        [
+          431.7682852768908,
+          -203.99259765625578
+        ],
+        [
+          267.665923748085,
+          120.6887156379836
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1094030365,
+      "sensor_seed": 1017794457,
+      "actuator_seed": 1351754908,
+      "policy_seed": 1154143629
+    },
+    {
+      "id": "random_static_0015",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.8991785471345484,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          345.0026967728579,
+          -204.77477361303013
+        ],
+        [
+          251.97345462910081,
+          119.47115218002835
+        ],
+        [
+          109.60941248393213,
+          93.5349698474493
+        ],
+        [
+          393.2307480989597,
+          178.88105129118853
+        ],
+        [
+          209.1104638836914,
+          -102.33375487708834
+        ],
+        [
+          45.73114641904047,
+          -176.56327089426833
+        ],
+        [
+          489.0651841740347,
+          -198.54853916051917
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1973047223,
+      "sensor_seed": 393394891,
+      "actuator_seed": 16505413,
+      "policy_seed": 1077269788
+    },
+    {
+      "id": "random_static_0016",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.12575883829082793,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          435.6604313974229,
+          136.03654910915108
+        ],
+        [
+          204.83075024381813,
+          -117.76424537936443
+        ],
+        [
+          28.745578431702278,
+          -219.92846187060994
+        ],
+        [
+          362.38670694623346,
+          -217.48498851124953
+        ],
+        [
+          150.84097426919246,
+          73.48017698985576
+        ],
+        [
+          288.97199443492275,
+          50.325823122752354
+        ],
+        [
+          324.42365054297943,
+          249.1298220657911
+        ],
+        [
+          3.6399336085711775,
+          202.72559329919022
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 296480424,
+      "sensor_seed": 332413167,
+      "actuator_seed": 1654073019,
+      "policy_seed": 1884092069
+    },
+    {
+      "id": "random_static_0017",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.2478596889257982,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          339.27112299681886,
+          4.634765010520625
+        ],
+        [
+          26.32314175153555,
+          175.08318872463315
+        ],
+        [
+          328.2197916135709,
+          -186.85664380109867
+        ],
+        [
+          134.30615668617102,
+          -165.96972651539477
+        ],
+        [
+          220.09387286179233,
+          240.70137816053372
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1231201356,
+      "sensor_seed": 1027592751,
+      "actuator_seed": 574275847,
+      "policy_seed": 1973975829
+    },
+    {
+      "id": "random_static_0018",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.015741986550278,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          289.37777310746765,
+          -78.46781495216021
+        ],
+        [
+          458.7609901835007,
+          137.61057902589192
+        ],
+        [
+          488.78964996185016,
+          -205.0538848069688
+        ],
+        [
+          40.454060799648474,
+          -152.31355660875033
+        ],
+        [
+          325.9558493960679,
+          84.73462610285448
+        ],
+        [
+          161.30289433476742,
+          59.515220102825005
+        ],
+        [
+          50.95834641269653,
+          215.32204353863833
+        ],
+        [
+          264.22107638835234,
+          242.738819090439
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1788040592,
+      "sensor_seed": 1220865523,
+      "actuator_seed": 407091314,
+      "policy_seed": 2054157014
+    },
+    {
+      "id": "random_static_0019",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.9111665979467538,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          338.823347174846,
+          -180.13664605311308
+        ],
+        [
+          362.63365481604507,
+          82.90833608079984
+        ],
+        [
+          207.52090442970905,
+          -78.4676340907115
+        ],
+        [
+          138.7673723327966,
+          -248.07956922591933
+        ],
+        [
+          157.15321766176638,
+          199.17051143110092
+        ],
+        [
+          18.21427655992125,
+          217.15934112268192
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 912769877,
+      "sensor_seed": 656205292,
+      "actuator_seed": 1376218026,
+      "policy_seed": 2135968507
+    },
+    {
+      "id": "random_static_0020",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.7177982426109057,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          73.55684146990139,
+          205.41694722701342
+        ],
+        [
+          484.7588471117998,
+          236.3042294396136
+        ],
+        [
+          247.0703330050502,
+          154.59305231771657
+        ],
+        [
+          323.6876773674637,
+          -107.11668961340915
+        ],
+        [
+          13.075834548178344,
+          -166.83523165141955
+        ],
+        [
+          210.28463468397058,
+          -206.85791479905373
+        ],
+        [
+          453.4820697902406,
+          -245.76852716905972
+        ],
+        [
+          182.81264367603407,
+          14.87351327068781
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 56928868,
+      "sensor_seed": 1064734239,
+      "actuator_seed": 1951136581,
+      "policy_seed": 1965332841
+    },
+    {
+      "id": "random_static_0021",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.465357465902625,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          212.24489458490552,
+          -171.59524621517463
+        ],
+        [
+          357.48881639797264,
+          -249.05124983651794
+        ],
+        [
+          319.0827356475497,
+          -59.67043796051191
+        ],
+        [
+          254.25815586738432,
+          119.74450656254587
+        ],
+        [
+          3.253493479814795,
+          -164.58196790475017
+        ],
+        [
+          46.284693203580694,
+          156.0198640835474
+        ],
+        [
+          457.87394980865923,
+          156.95451390895676
+        ],
+        [
+          171.01773431306617,
+          245.5512241358715
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1213061529,
+      "sensor_seed": 1242525769,
+      "actuator_seed": 1256528374,
+      "policy_seed": 853469327
+    },
+    {
+      "id": "random_static_0022",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.5072737617999854,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          141.2318876665608,
+          -233.6552518260296
+        ],
+        [
+          46.64949637705651,
+          197.2245958809406
+        ],
+        [
+          301.9088908390584,
+          179.64965124056525
+        ],
+        [
+          171.39332491381998,
+          91.57484895052586
+        ],
+        [
+          462.26249832373975,
+          -160.22437451412748
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 412000336,
+      "sensor_seed": 506375873,
+      "actuator_seed": 1159012701,
+      "policy_seed": 1941627108
+    },
+    {
+      "id": "random_static_0023",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.615707577109954,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          150.0103993158054,
+          161.34702030377736
+        ],
+        [
+          176.76556833424632,
+          -77.99108912357971
+        ],
+        [
+          346.257501618789,
+          -46.88139565970661
+        ],
+        [
+          361.9763519115567,
+          -201.19745750894646
+        ],
+        [
+          485.25815932347575,
+          199.85007519603982
+        ],
+        [
+          217.07664551878923,
+          -218.67731142784436
+        ],
+        [
+          361.8348009105832,
+          126.30952437122622
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1130179143,
+      "sensor_seed": 1452038912,
+      "actuator_seed": 491671549,
+      "policy_seed": 1160774447
+    },
+    {
+      "id": "random_static_0024",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.232444166765231,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          332.4840552407576,
+          33.03915507701488
+        ],
+        [
+          356.3924612213401,
+          -161.47257635410472
+        ],
+        [
+          95.26106277272828,
+          -223.8946778291603
+        ],
+        [
+          24.11721675485612,
+          140.8594225292037
+        ],
+        [
+          200.37686166365475,
+          -41.00846167845407
+        ],
+        [
+          345.0755194577209,
+          220.0532823308744
+        ],
+        [
+          165.02269805020737,
+          220.7355601408525
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 391154277,
+      "sensor_seed": 166910656,
+      "actuator_seed": 654834165,
+      "policy_seed": 303875624
+    },
+    {
+      "id": "random_static_0025",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.22378100994520816,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          199.1972301972962,
+          26.505177881162687
+        ],
+        [
+          118.66414382747465,
+          -111.67262776547182
+        ],
+        [
+          232.54678760852565,
+          229.08018279132637
+        ],
+        [
+          435.07908585823395,
+          223.01760238934833
+        ],
+        [
+          306.7763678028678,
+          -93.45299870998502
+        ],
+        [
+          441.1827876676111,
+          -189.60081319465877
+        ],
+        [
+          82.64545672908102,
+          173.9244266216945
+        ],
+        [
+          225.94324906066976,
+          -210.94152233963388
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 97985387,
+      "sensor_seed": 1860802202,
+      "actuator_seed": 1383721705,
+      "policy_seed": 1735002176
+    },
+    {
+      "id": "random_static_0026",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.36895002237961944,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          337.6814342324355,
+          -203.41546468092886
+        ],
+        [
+          289.0952985662998,
+          72.26670081188658
+        ],
+        [
+          23.631704780535944,
+          213.89649172112402
+        ],
+        [
+          220.36677833578443,
+          210.77501107446994
+        ],
+        [
+          392.91559660274504,
+          177.33120072210423
+        ],
+        [
+          230.17705729111114,
+          -105.577131644577
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 879146627,
+      "sensor_seed": 1852749925,
+      "actuator_seed": 29927056,
+      "policy_seed": 450748432
+    },
+    {
+      "id": "random_static_0027",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.4859327484443774,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          264.0153639561181,
+          -102.6130729501547
+        ],
+        [
+          410.6343687871852,
+          -175.85876155357948
+        ],
+        [
+          114.48324334284277,
+          -110.30874397151447
+        ],
+        [
+          228.57897518469255,
+          167.858114738618
+        ],
+        [
+          404.0143605573558,
+          121.11309125977299
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1773998898,
+      "sensor_seed": 1012311111,
+      "actuator_seed": 1636042954,
+      "policy_seed": 1519424265
+    },
+    {
+      "id": "random_static_0028",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.9415632211477734,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          194.97145670254008,
+          129.9306289264135
+        ],
+        [
+          294.85041911778467,
+          -58.78055814154276
+        ],
+        [
+          282.5113275251924,
+          -216.94386378971853
+        ],
+        [
+          381.79686665944496,
+          207.44109599922083
+        ],
+        [
+          155.25542857163848,
+          -8.549755922928615
+        ],
+        [
+          441.1329782314286,
+          -150.775433555909
+        ],
+        [
+          128.52039434934986,
+          -147.84642559070326
+        ],
+        [
+          52.551643814504835,
+          140.88204054117222
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 545839275,
+      "sensor_seed": 1485746002,
+      "actuator_seed": 2033528403,
+      "policy_seed": 89629191
+    },
+    {
+      "id": "random_static_0029",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.8970599145623954,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          93.06690963217684,
+          -129.50850493896348
+        ],
+        [
+          320.4111724648061,
+          79.5576976847629
+        ],
+        [
+          498.04582021869123,
+          -192.6381609953976
+        ],
+        [
+          65.48928119128078,
+          210.36493138683676
+        ],
+        [
+          339.6224237924425,
+          -175.4814833204545
+        ],
+        [
+          491.2615814255803,
+          172.76486776601257
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 419728264,
+      "sensor_seed": 475675985,
+      "actuator_seed": 1503492939,
+      "policy_seed": 978795558
+    },
+    {
+      "id": "random_static_0030",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.651846069809206,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          42.20514410216414,
+          -221.16256048651812
+        ],
+        [
+          281.531984934459,
+          61.01806734855841
+        ],
+        [
+          462.4814153470963,
+          229.9149544701307
+        ],
+        [
+          202.4159066125588,
+          -223.70511883982962
+        ],
+        [
+          406.052822744712,
+          -212.12657586226308
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 167780108,
+      "sensor_seed": 1393713072,
+      "actuator_seed": 275874000,
+      "policy_seed": 1264573023
+    },
+    {
+      "id": "random_static_0031",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.50435468599815,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          256.248746695265,
+          -69.89745521370827
+        ],
+        [
+          86.8021878715129,
+          150.28804084671083
+        ],
+        [
+          485.127919517377,
+          244.4254793250034
+        ],
+        [
+          171.04597974499163,
+          -237.4232227659926
+        ],
+        [
+          344.78665244845587,
+          -186.13912734992576
+        ],
+        [
+          238.23206172626854,
+          228.794984437304
+        ],
+        [
+          362.41199875388384,
+          151.99600786607064
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1710801192,
+      "sensor_seed": 1525960899,
+      "actuator_seed": 1505729021,
+      "policy_seed": 1421548576
+    },
+    {
+      "id": "random_static_0032",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -1.9887179201286285,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          293.253079091763,
+          -189.31723913723192
+        ],
+        [
+          339.96710929756995,
+          124.58038973755737
+        ],
+        [
+          484.03880985221195,
+          -244.49430600341142
+        ],
+        [
+          92.04691344648258,
+          -248.07400380816043
+        ],
+        [
+          230.49087337084433,
+          20.035993495557292
+        ],
+        [
+          117.82920188726048,
+          188.7610624182509
+        ],
+        [
+          488.7411655337413,
+          195.7424683126731
+        ],
+        [
+          372.4881555229358,
+          -72.01577942980609
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2055925195,
+      "sensor_seed": 1000370590,
+      "actuator_seed": 72188337,
+      "policy_seed": 853886336
+    },
+    {
+      "id": "random_static_0033",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.667586403635977,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          138.17920594525407,
+          108.01360486485362
+        ],
+        [
+          355.8763846906338,
+          168.97364194977703
+        ],
+        [
+          82.64407234825755,
+          -195.92661239862963
+        ],
+        [
+          267.1670943232297,
+          33.06374686790925
+        ],
+        [
+          444.3749301295977,
+          -158.9720913896668
+        ],
+        [
+          203.63594350888366,
+          248.10097235236617
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1200843823,
+      "sensor_seed": 813776446,
+      "actuator_seed": 1418691837,
+      "policy_seed": 1434913644
+    },
+    {
+      "id": "random_static_0034",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.878119078451215,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          438.5177718603927,
+          169.72070032773323
+        ],
+        [
+          257.5140908958499,
+          -101.49659098218994
+        ],
+        [
+          157.54666971607068,
+          44.15174017351903
+        ],
+        [
+          103.34328076694521,
+          192.68828519255294
+        ],
+        [
+          169.51841612711533,
+          -237.86919659244947
+        ],
+        [
+          250.13268233012138,
+          189.34478534903087
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 498354014,
+      "sensor_seed": 704354162,
+      "actuator_seed": 913043580,
+      "policy_seed": 1830668105
+    },
+    {
+      "id": "random_static_0035",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.2044572051982185,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          162.30897069217727,
+          -68.7666482905846
+        ],
+        [
+          329.3641520245355,
+          -232.5558534927777
+        ],
+        [
+          122.11755281150543,
+          170.76435456122934
+        ],
+        [
+          412.9734378536024,
+          148.6961408277021
+        ],
+        [
+          485.8727599248334,
+          -242.02204473504202
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 5559176,
+      "sensor_seed": 868105329,
+      "actuator_seed": 1260744698,
+      "policy_seed": 843500503
+    },
+    {
+      "id": "random_static_0036",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.9734303633014219,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          291.6786551044791,
+          175.8773030977021
+        ],
+        [
+          381.1992372011273,
+          -214.28074804177982
+        ],
+        [
+          148.86911174410272,
+          -126.92279660790395
+        ],
+        [
+          283.30359525219393,
+          -79.14018323032451
+        ],
+        [
+          168.42229806094326,
+          90.38235303856412
+        ],
+        [
+          20.41388626835028,
+          216.34499192765216
+        ],
+        [
+          413.8066045560749,
+          245.0279191858385
+        ],
+        [
+          2.8967350784810386,
+          -247.95945950423527
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 350682656,
+      "sensor_seed": 608621993,
+      "actuator_seed": 1627499091,
+      "policy_seed": 1133975115
+    },
+    {
+      "id": "random_static_0037",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.8165743771257856,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          226.33870795431193,
+          50.34436868864245
+        ],
+        [
+          183.67180399387172,
+          -183.05617500834188
+        ],
+        [
+          429.83805764888916,
+          191.3634461941604
+        ],
+        [
+          448.32946171122575,
+          -146.8290828645265
+        ],
+        [
+          45.31653994249313,
+          136.07884650530383
+        ],
+        [
+          22.197943969432586,
+          -239.64471098013834
+        ],
+        [
+          213.26032849335402,
+          202.9068869428019
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1567134407,
+      "sensor_seed": 1630913862,
+      "actuator_seed": 1845630481,
+      "policy_seed": 1925610123
+    },
+    {
+      "id": "random_static_0038",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.7335917141796541,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          195.13994191038125,
+          -163.8406722729122
+        ],
+        [
+          210.27538000298568,
+          -0.48722447809357305
+        ],
+        [
+          433.28504052087146,
+          -180.89959217920793
+        ],
+        [
+          371.5376225704991,
+          163.02755362084577
+        ],
+        [
+          233.79182235250352,
+          224.24102145891538
+        ],
+        [
+          23.10122573676543,
+          -188.92063373665758
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 2126203330,
+      "sensor_seed": 1378544875,
+      "actuator_seed": 1203453816,
+      "policy_seed": 1441299378
+    },
+    {
+      "id": "random_static_0039",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.8314088804264619,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          488.53641228684177,
+          -146.38091492902257
+        ],
+        [
+          474.31880399051784,
+          176.70359673331444
+        ],
+        [
+          144.5466189880289,
+          205.680072042558
+        ],
+        [
+          84.84996257172045,
+          -235.78105660473702
+        ],
+        [
+          210.1079437325953,
+          76.53481462519751
+        ],
+        [
+          357.9026309024377,
+          91.27240479823179
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1939209503,
+      "sensor_seed": 1561864752,
+      "actuator_seed": 1778429782,
+      "policy_seed": 2028770269
+    },
+    {
+      "id": "random_static_0040",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -0.5934415622866954,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          145.31455365997925,
+          199.59662287564012
+        ],
+        [
+          20.276391144535054,
+          -241.30351377704133
+        ],
+        [
+          294.0734191528354,
+          -245.21814312777747
+        ],
+        [
+          176.276979711049,
+          -27.50294447392787
+        ],
+        [
+          320.54187300707105,
+          34.10980951825054
+        ],
+        [
+          427.0692890916896,
+          213.95642209642313
+        ],
+        [
+          474.31280937743696,
+          -247.24217434826724
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1886315376,
+      "sensor_seed": 647395096,
+      "actuator_seed": 1609655776,
+      "policy_seed": 257320050
+    },
+    {
+      "id": "random_static_0041",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.3973507508886316,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          286.10727976442024,
+          227.61467468273437
+        ],
+        [
+          240.72882487489443,
+          -160.01810836485674
+        ],
+        [
+          79.68562079722136,
+          -183.6479220334843
+        ],
+        [
+          106.50304967956609,
+          208.59293580616594
+        ],
+        [
+          328.357843750452,
+          74.98674014188877
+        ],
+        [
+          379.5466701665067,
+          -115.72678042099731
+        ],
+        [
+          185.6618954916599,
+          70.11980021649956
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 890288702,
+      "sensor_seed": 1408465534,
+      "actuator_seed": 823047945,
+      "policy_seed": 1331974536
+    },
+    {
+      "id": "random_static_0042",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.4782422719819093,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          365.08420220209905,
+          182.31581410537623
+        ],
+        [
+          159.64812407416912,
+          229.217615022156
+        ],
+        [
+          339.790349425383,
+          -78.26592335028715
+        ],
+        [
+          348.59288560559327,
+          -237.9438365761403
+        ],
+        [
+          49.49442889502653,
+          -138.14501515435268
+        ],
+        [
+          227.12240396277733,
+          33.743540976443775
+        ],
+        [
+          175.21797773774816,
+          -207.20149241846462
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 82963108,
+      "sensor_seed": 1708339244,
+      "actuator_seed": 742526216,
+      "policy_seed": 643900194
+    },
+    {
+      "id": "random_static_0043",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.65341719225388,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          354.31017225245813,
+          45.47329878045569
+        ],
+        [
+          153.15269113825303,
+          -225.4959754668185
+        ],
+        [
+          236.68933964886253,
+          -34.9124531471533
+        ],
+        [
+          367.64904419253753,
+          -166.72260951640837
+        ],
+        [
+          123.21643932214438,
+          106.80317209624157
+        ],
+        [
+          163.71899746297274,
+          241.24812032752175
+        ],
+        [
+          427.3400436927429,
+          230.84841664830535
+        ],
+        [
+          16.849772414493426,
+          -145.67918242755883
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1410699520,
+      "sensor_seed": 743412620,
+      "actuator_seed": 758296521,
+      "policy_seed": 970197178
+    },
+    {
+      "id": "random_static_0044",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.197229784798684,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          396.1226887601574,
+          -238.67554482229653
+        ],
+        [
+          251.74227870732562,
+          203.79171284900931
+        ],
+        [
+          77.8925521015154,
+          201.18208656840088
+        ],
+        [
+          341.55882962738167,
+          -80.8107821555028
+        ],
+        [
+          72.22255727934824,
+          -126.95337769783049
+        ],
+        [
+          170.65058783198083,
+          -22.76989952967118
+        ],
+        [
+          336.40379739718156,
+          62.4011947143866
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 577887090,
+      "sensor_seed": 808300531,
+      "actuator_seed": 143209572,
+      "policy_seed": 385814687
+    },
+    {
+      "id": "random_static_0045",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        0.17688861398854494,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          331.72815830963464,
+          233.44833754381094
+        ],
+        [
+          368.7372410693215,
+          51.4238265504034
+        ],
+        [
+          115.20218609761984,
+          -231.86426512378787
+        ],
+        [
+          133.75662693204788,
+          164.6521954079813
+        ],
+        [
+          298.99094340099407,
+          -159.62143105856802
+        ],
+        [
+          198.6213553719464,
+          -0.35548554441783287
+        ],
+        [
+          445.01188069871404,
+          -156.6776373419468
+        ],
+        [
+          466.3488754929034,
+          158.83775323830974
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1320051257,
+      "sensor_seed": 442267888,
+      "actuator_seed": 1301261860,
+      "policy_seed": 570090051
+    },
+    {
+      "id": "random_static_0046",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        2.741088359626734,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          342.83078010385293,
+          -97.13968475329399
+        ],
+        [
+          261.9729952927429,
+          169.67874648645548
+        ],
+        [
+          169.7715341102099,
+          -191.2178619001272
+        ],
+        [
+          86.27579153558995,
+          175.44970610299225
+        ],
+        [
+          453.434012707891,
+          -194.5149147949755
+        ]
+      ],
+      "mean_wind_degrees": 135.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 43485647,
+      "sensor_seed": 807928467,
+      "actuator_seed": 1600696390,
+      "policy_seed": 191935910
+    },
+    {
+      "id": "random_static_0047",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.9256922331620128,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          141.59467078341825,
+          -63.77150468157339
+        ],
+        [
+          394.5344238698733,
+          237.54665115145602
+        ],
+        [
+          446.7672727766684,
+          -135.05753988954484
+        ],
+        [
+          104.5375741540585,
+          -237.92681240696112
+        ],
+        [
+          269.21258991478027,
+          -214.89897189227608
+        ],
+        [
+          281.8047039257315,
+          147.424690881845
+        ],
+        [
+          103.96369297619768,
+          130.0887007302329
+        ],
+        [
+          287.23249026089087,
+          -28.380304821209677
+        ]
+      ],
+      "mean_wind_degrees": 180.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 1227064995,
+      "sensor_seed": 1916053792,
+      "actuator_seed": 1019214245,
+      "policy_seed": 853092676
+    },
+    {
+      "id": "random_static_0048",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        -2.0825366483886802,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          181.9740323546386,
+          187.07376898701906
+        ],
+        [
+          441.0088788461749,
+          224.00747309123565
+        ],
+        [
+          397.23383409487946,
+          -217.4523496162062
+        ],
+        [
+          24.6566711621381,
+          -197.4676964658797
+        ],
+        [
+          220.83134884693868,
+          -36.828678592594144
+        ],
+        [
+          204.6876570887559,
+          -183.86396161313195
+        ],
+        [
+          314.17289169839125,
+          85.00751776727056
+        ],
+        [
+          37.79161587605895,
+          209.01370341672543
+        ]
+      ],
+      "mean_wind_degrees": 0.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 830154678,
+      "sensor_seed": 1381122349,
+      "actuator_seed": 1710317484,
+      "policy_seed": 1543011151
+    },
+    {
+      "id": "random_static_0049",
+      "kind": "random_static",
+      "initial_state": [
+        0.0,
+        0.0,
+        0.0,
+        1.000757270435647,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "obstacles": [
+        [
+          156.46276106003742,
+          73.86275141868326
+        ],
+        [
+          394.3022959672347,
+          212.8741480248128
+        ],
+        [
+          311.31140692609745,
+          -238.73628504111548
+        ],
+        [
+          326.862294867405,
+          -26.300593113266878
+        ],
+        [
+          468.46779943384115,
+          -247.66451905230585
+        ],
+        [
+          208.40695931578313,
+          230.78790320744574
+        ],
+        [
+          192.03102995344045,
+          -163.0914649266857
+        ],
+        [
+          11.874674016209564,
+          224.90548961002
+        ]
+      ],
+      "mean_wind_degrees": 90.0,
+      "mean_wind_speed": 8.0,
+      "wind_seed": 847210306,
+      "sensor_seed": 775586746,
+      "actuator_seed": 1683316292,
+      "policy_seed": 1108676044
+    }
+  ],
+  "bank_sha256": "0719885cc70a25d0a943380726880805e36c2a1bbf8337b2ab0db724798897fc"
+}

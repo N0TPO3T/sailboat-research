@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-01",
+  "archive": "primary-project-complete.tar.gz",
+  "bytes": 1020662564,
+  "sha256": "548c800ccb287b2f64eb83f6a651495a5809f5d8e397bbd0edc5e7e077d619a9",
+  "local_backup_directory": "C:/Users/74095/hs/SailBoat/source-backups/20261001",
+  "archive_file_count": 1115,
+  "unsafe_archive_members": [],
+  "additional_assets_restored_to_project": 439,
+  "existing_file_conflicts": [],
+  "github_archive": {
+    "release_tag": "consolidated-20261001",
+    "verified_asset_count": 256,
+    "full_archive_parts": 244,
+    "source_archive_parts": 9,
+    "part_sizes_and_github_sha256_digests_match": true,
+    "incomplete_or_unexpected_assets": []
+  },
+  "checkpoint": {
+    "path": "research/outputs/chapter5_static_aligned_seed101/step_100000.pt",
+    "sha256": "20fa658b77667a12907cba90f75aebd45629944bf789d7adfaa3a7eaa72ebbfa",
+    "matches_historical_receipt": true,
+    "associated_historical_evidence_files_verified": 5,
+    "historical_receipt_modified": false
+  },
+  "local_actor_normalizer_files_matching_runtime_smoke": 6,
+  "source_archive_reassembly": {
+    "parts": 9,
+    "bytes": 36920479,
+    "sha256": "bd4b0c9c335546db284cd2f4edb4b5311de7c122be72355267a29568cb91d7b5",
+    "verified": true
+  },
+  "original_hainan_download_modified": false,
+  "original_primary_project_modified": false,
+  "no_checkpoint_deserialization_required_for_backup_verification": true
+}

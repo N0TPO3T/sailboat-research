@@ -14,3 +14,7 @@ venv/
 *.pt
 *.ckpt
 *.safetensors
+**/canonical_runs/
+research/weights_library/**/*.zip
+/work/*
+!/work/.gitkeep

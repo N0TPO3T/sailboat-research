@@ -1,0 +1,3359 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-01",
+  "research_base": "ce83544e8dfd6a6833da03d626025b4e0a2ba000",
+  "reference_commit": "19422525cb337831ca68f53a45661d34f3683ee1",
+  "hainan_commit": "143a508c422f746adb7af3577818060053f2620b",
+  "hainan_recovered_extra": "8837440c9eec84fd68cd757845b89f3981103279",
+  "hainan_verified_loose_objects": 123,
+  "primary_host": "ot@172.16.2.249",
+  "primary_workspace": "/home/ot/Students/hs/sailboat-research",
+  "primary_reference_files_verified_against_git": 489,
+  "primary_reference_differences": [],
+  "release_tag": "consolidated-20261001",
+  "full_archive": {
+    "archive": "primary-project-complete.tar.gz",
+    "asset_pattern": "primary-project-complete.tar.gz.part*",
+    "parts_manifest": "primary-project-complete.tar.gz.parts.json",
+    "sha256": "548c800ccb287b2f64eb83f6a651495a5809f5d8e397bbd0edc5e7e077d619a9",
+    "exclusions": [
+      ".venv",
+      ".git",
+      "__pycache__",
+      ".pytest_cache"
+    ]
+  },
+  "source_archive": {
+    "archive": "primary-source.tar.gz",
+    "asset_pattern": "primary-source.tar.gz.part*",
+    "parts_manifest": "primary-source.tar.gz.parts.json",
+    "sha256": "bd4b0c9c335546db284cd2f4edb4b5311de7c122be72355267a29568cb91d7b5",
+    "additional_exclusions": [
+      "*.pth",
+      "*.pt",
+      "*.zip"
+    ]
+  },
+  "integration_changes": [
+    "Preserve reference submodule unchanged",
+    "Move Hainan engine and tests under engineering to avoid Windows case collision",
+    "Adapt canonical-core test reference paths",
+    "Import primary research/config/docs/textual provenance",
+    "Reconcile root operating context; retain source originals in archives"
+  ],
+  "unavailable_sources": [
+    "Original Mac workspace",
+    "research/idea-stage/IDEA_REPORT.md",
+    "research/navigation_trace.py",
+    "research/dynamic_observation.py",
+    "docs/DYNAMIC_OBSTACLE_CODE_AUDIT.md",
+    "docs/CHAPTER5_ARTIFACT_SEARCH.md"
+  ],
+  "primary_source_files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 60,
+      "sha256": "be5045e0436d506bee8c47e881ca4ef868d06758eab61099916ba389e0c2783f"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 147,
+      "sha256": "0f3521fc0bd59b8b332737b09e90b0aec629b6084a621feddb73d78e288fbfb3"
+    },
+    {
+      "path": ".gitmodules",
+      "bytes": 96,
+      "sha256": "21d21aceec692b4ea6ebdb954b0a792fee4ab1f93420ec9370a4427d7ec02081"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 6246,
+      "sha256": "c4504b4af2c6af790ad6b5ee1032177d09586b15cca01bcb757da4cde54019e2"
+    },
+    {
+      "path": "CURRENT_PLAN.md",
+      "bytes": 2629,
+      "sha256": "98b865aa38f249af0d8cb313d1f7f01c7fa9bbacfa4db055a805725b14ce78ed"
+    },
+    {
+      "path": "PROJECT_MEMORY.md",
+      "bytes": 1306,
+      "sha256": "da425b6d3c2e0234a056e686af189f4cba15768dfc92c85df525978bc23a179f"
+    },
+    {
+      "path": "PROJECT_STATE.md",
+      "bytes": 20969,
+      "sha256": "6e3046bafec96b129cb1e1e27a2f39b669eb88dd2ca5e1ec29052f1fe73d2dc9"
+    },
+    {
+      "path": "yara.pdf",
+      "bytes": 2700688,
+      "sha256": "a64dc4d5d85f0e1de11aef92e685f610c24b3b46b781ec0f959f03d23bd81c1b"
+    },
+    {
+      "path": "师兄大论文.pdf",
+      "bytes": 4003047,
+      "sha256": "e73ea4c85a1f5bcd1b29d54b5e1ef69c2f5161f3166f652371e6eddf2b35b0e0"
+    },
+    {
+      "path": "configs/chapter5_static_aligned.json",
+      "bytes": 4611,
+      "sha256": "b71ea330c994f898aeb627732cefba3f20472b89cd17bae44081830a4d218344"
+    },
+    {
+      "path": "docs/CHAPTER5_STATIC_RECOVERY.md",
+      "bytes": 20949,
+      "sha256": "0727baac1a8bddf6db600eb9ec909450ffca226a0f3e44eb9ea640d2017c44e1"
+    },
+    {
+      "path": "docs/V2_V3_STATIC_PARITY_AUDIT.md",
+      "bytes": 16956,
+      "sha256": "fb21dd191a85f7cd230ea9844d52bce2f5fb73a3eeb7f0ba7cccc30c07ccf6c7"
+    },
+    {
+      "path": "research/.gitkeep",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/chapter5_artifacts.py",
+      "bytes": 7351,
+      "sha256": "e1215e3afb46c67d29efba7721a1280d21d1703cdc3b7825966a14c6c2c59180"
+    },
+    {
+      "path": "research/chapter5_baseline.py",
+      "bytes": 28256,
+      "sha256": "70f4359d7a4b183c834860765bc40aa55331b6972bb84791e6456b2391a18a72"
+    },
+    {
+      "path": "research/chapter5_static.py",
+      "bytes": 46962,
+      "sha256": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8"
+    },
+    {
+      "path": "research/pretrain_static_sanity.py",
+      "bytes": 3609,
+      "sha256": "2b46aaaa73d3fe7ec5c0e03921039766fbd67b92afd198837010f8035f1b0092"
+    },
+    {
+      "path": "research/smoke_baseline.py",
+      "bytes": 4430,
+      "sha256": "1897dbb23714c40add4e9cd5139102af52a8203a52efeb16a6e2333841632930"
+    },
+    {
+      "path": "research/static_training_report.py",
+      "bytes": 4083,
+      "sha256": "7b19c077ba5bc0b5b2279f06b8e17de9336b8c5a303c559328db2ed9e25fb5a6"
+    },
+    {
+      "path": "research/test_chapter5_static.py",
+      "bytes": 8357,
+      "sha256": "95de24300025c4ce22a0285d27e52d627f8bb7a6efecccf11a2d590338229a1f"
+    },
+    {
+      "path": "research/v2_v3_static_parity.py",
+      "bytes": 12370,
+      "sha256": "bd08df6fb6063a18fdc5e73cde221c884b401e15e9eec5d3fdd2757f94258f36"
+    },
+    {
+      "path": "research/outputs/chapter5_cpu_components.json",
+      "bytes": 645,
+      "sha256": "52166a489c699785db54cf96bcb15bb3f6f589be9617cf57ed0088fbb2857fb7"
+    },
+    {
+      "path": "research/outputs/navigation_cpu_1000.json",
+      "bytes": 2713,
+      "sha256": "8b5b430933d97ebee5897b9490aaab45d15a2c422bc2d40b02cf27605ff411ce"
+    },
+    {
+      "path": "research/outputs/smoke_cpu.json",
+      "bytes": 2712,
+      "sha256": "1b51cb516fb2743d33c26325aa66b838d8303d26fece81f9dd5e3c2db646b894"
+    },
+    {
+      "path": "research/outputs/yc_selfatt_diagnostic.json",
+      "bytes": 4952,
+      "sha256": "865e6f4609ac186d2eca12ff0c5065458c45eed0366e30695b6c0d9b8157e897"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best.json",
+      "bytes": 207,
+      "sha256": "9727b9947dedaec987e6b7f0341d1537bb2754c3ac8397108dab5bce532b88a3"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best_reward.json",
+      "bytes": 88,
+      "sha256": "b6b789bbd18ab06c109d18d9a57be50169292246cc7d99af0fad4735f1514bbc"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/config.json",
+      "bytes": 4610,
+      "sha256": "1814e17e734d7e35e3578a050c9a887dcca93dc0e4c01ace093a2d15f64f7b98"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/latest.json",
+      "bytes": 223,
+      "sha256": "25e761f097b86fcaaf1a8e695c63ed8bee36c9eabf8b20deaa3a6b9ab5218274"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/log_from_0_1789450769952278328.jsonl",
+      "bytes": 11335863,
+      "sha256": "752b5f505f4331b7e80f2a1b9bc80c12dca5112739fcf5fd40ccdbc64808311f"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/progress.json",
+      "bytes": 257,
+      "sha256": "ceedc4440bced66a15adad4a17cc86119ef2d203913dedd411d6e735375b70d4"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/provenance.json",
+      "bytes": 1368,
+      "sha256": "9c495dd2c041b1360ea4e966bf4cb35a83a5c52e0542e6b994ede3f10478878b"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/run.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/stage100k_review.json",
+      "bytes": 1515,
+      "sha256": "c74beee0896bfdbb9cb178711c8d201cf2d43ea5d7eb4c00a060f9745ce022eb"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/static_eval_bank.json",
+      "bytes": 159824,
+      "sha256": "37b2b12057dbf4c84c21aa81da9a3fd4a57cccfacfe27bfbb0b659d274c33cb3"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/training_health.json",
+      "bytes": 6933,
+      "sha256": "7e60a14d41fb9477f52fe8884366450850145083dd7514edbcddf3fa8ed49e45"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/config_snapshot.json",
+      "bytes": 4610,
+      "sha256": "1814e17e734d7e35e3578a050c9a887dcca93dc0e4c01ace093a2d15f64f7b98"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/episodes.jsonl",
+      "bytes": 114368,
+      "sha256": "a0fd2d9dadebfbfe8efa452b1f23be2259af4e62510c490aa3dd6c5f16d76798"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/provenance.json",
+      "bytes": 1368,
+      "sha256": "9c495dd2c041b1360ea4e966bf4cb35a83a5c52e0542e6b994ede3f10478878b"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/representative_trajectories.json",
+      "bytes": 5311544,
+      "sha256": "a8947a88cb188208e65ff51851814e97fa82b2a97da90c3ba42383aee3f6790c"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/summary.json",
+      "bytes": 2957,
+      "sha256": "f0eaa57eced2b534f18a12310614181852d89598d074351a4856b872ca87f197"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/checkpoint_identity.json",
+      "bytes": 256,
+      "sha256": "59d3b6575e1fcb7caf6e181760d5850d93efa6a9a8373441d69b8e689f62bd3f"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/config_snapshot.json",
+      "bytes": 4610,
+      "sha256": "1814e17e734d7e35e3578a050c9a887dcca93dc0e4c01ace093a2d15f64f7b98"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/episodes.jsonl",
+      "bytes": 113063,
+      "sha256": "d813b5af0cf1f0deee0ce27f60722d08a0a5f87ddb980d2eef5e3bbf40812d85"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/provenance.json",
+      "bytes": 1368,
+      "sha256": "9c495dd2c041b1360ea4e966bf4cb35a83a5c52e0542e6b994ede3f10478878b"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/representative_trajectories.json",
+      "bytes": 3855163,
+      "sha256": "94e7f1b1c828378e1f6e51bcb376c7a37bb523b0ed71972f1782562b0a0c2f26"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/summary.json",
+      "bytes": 2955,
+      "sha256": "abb5173f0fb9ae377a98cc1b57e325cacddc3f328d0c5bcf6f0cb9848840a7be"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_baseline.py",
+      "bytes": 28256,
+      "sha256": "70f4359d7a4b183c834860765bc40aa55331b6972bb84791e6456b2391a18a72"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_static.py",
+      "bytes": 46962,
+      "sha256": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py",
+      "bytes": 42522,
+      "sha256": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py",
+      "bytes": 13163,
+      "sha256": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py",
+      "bytes": 17983,
+      "sha256": "e2a7d72d094aa9c47294fd8d4da66129b7ab3b0f6fd96f5a206b40924acc67e3"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py",
+      "bytes": 28238,
+      "sha256": "ff2e43e2ea40030b2c3eff44649fd9b59306dd0d042d9b0093e6584f8c0fd513"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/attention_test.py",
+      "bytes": 6364,
+      "sha256": "9b7969e4518bc87e2ab7f7caf87ec78ffebb42646659dfd616e4d1114123b57e"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/modeltest_lstm_att.py",
+      "bytes": 19245,
+      "sha256": "3cf531f2dc9311418c5b1fe9eeae05318a46ec6ac49a48c75d05b5b3e76f360b"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/parent_batch_test_lstm_att.py",
+      "bytes": 11788,
+      "sha256": "61f6c2cf110867f8b7d52c49682d5b7bc1dda5525bfaef7b2891e2af999bddca"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/parent_modeltest_lstm_att.py",
+      "bytes": 13981,
+      "sha256": "7f731bd65cd33eec060ce46e6a4fd010fd5479475648eb47484b983fb6cc9ee9"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/parll_lstm_att_normal.py",
+      "bytes": 21065,
+      "sha256": "c0632d2f06ecec7150edccf0bac41f23c2de2810853916cb01e81e881507bdb8"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/parll_lstm_att_normal_awgn.py",
+      "bytes": 30266,
+      "sha256": "70be3be2c8db8b7d5319300e391c641c47372433f154b76c223827ad321d048e"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/provenance.json",
+      "bytes": 5271,
+      "sha256": "c136e059ab306627b56cf653a2a08d2fd7abf9d12e0e65a2ea79e8b879fbd3e7"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/SAC_lstm_att_normal.py",
+      "bytes": 17982,
+      "sha256": "f97e3f7fa4ca4f06d09708270fe95d3c770a50d84a3c564744a2dd68107f6844"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/utils_lstm_att_normal.py",
+      "bytes": 26442,
+      "sha256": "a63e5087c30ddf8108691107bbb298520400a53ee020f51275e4bbaff4f6a346"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/diagnose_cpu.py",
+      "bytes": 3257,
+      "sha256": "da04a777c13042e25d44476ae8b0f80ef1029c6c6bf5d863b054cc28f23e3b58"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/parll_lstm_selfatt.py",
+      "bytes": 18920,
+      "sha256": "02861d6ba96098bc1edf3577e0f4d2c1a7ca8058fc02dbf5c1a75a015412bef2"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/provenance.json",
+      "bytes": 3178,
+      "sha256": "b1c83877e5ad31a9f99ec3e60645025551742362d3e724a37771d2f65f95f615"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/SAC_lstm_selfatt.py",
+      "bytes": 17979,
+      "sha256": "f9eca322a2d2b59155974f836c15d549fe1817c31086494962793dc8694c8fcc"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/utils_lstm_selfatt.py",
+      "bytes": 27498,
+      "sha256": "73e622321fd979a3099eb484a3f8b382f563aa2b67962fce1e958bcd4c5b7ecf"
+    },
+    {
+      "path": "research/validation/chapter5_artifacts_remote_20260915.json",
+      "bytes": 1635599,
+      "sha256": "183b1ae70bdbb2446ee36bf94483e10be1c757c20a16465f4e59e3ea8ab8394a"
+    },
+    {
+      "path": "research/validation/chapter5_static_tests_server_20260915.txt",
+      "bytes": 5982,
+      "sha256": "0e393ccb6df22852e98092fb9dc4e9653b2da764eaaf9035d5b6d8acb6a97a28"
+    },
+    {
+      "path": "research/validation/chapter5_static_tests_server_cacheguard_20260915.txt",
+      "bytes": 5982,
+      "sha256": "220bf7d033e90254b5247914e1b18664ecd9fb3e8b92d306a6c17c7db37e3432"
+    },
+    {
+      "path": "research/validation/stage15_cuda_witness.json",
+      "bytes": 1200,
+      "sha256": "f42dac78df9b3685b63adbd957ab938401be03d57714bcf7a97aa68e6d10339e"
+    },
+    {
+      "path": "research/validation/stage15_exit.json",
+      "bytes": 120,
+      "sha256": "709255ff8ccae279ec5be3b25ae8b4cb34637e0523ee1a509d86f700651f054c"
+    },
+    {
+      "path": "research/validation/stage15_launch.json",
+      "bytes": 255,
+      "sha256": "e5a61306ebb21ca7631e1bc074031bd908896fec3686335c3e2c2cba92f15c44"
+    },
+    {
+      "path": "research/validation/stage15_launch.log",
+      "bytes": 59319,
+      "sha256": "de03610aa1701db30d161621218f2ee43d88aaa11424613d640fad7ef4580e07"
+    },
+    {
+      "path": "research/validation/stage15_resource_pause.json",
+      "bytes": 1146,
+      "sha256": "aac796b2a9caef2b095127b795913f92f224be35dbd67857a9cbef9b1229f0ff"
+    },
+    {
+      "path": "research/validation/stage15_resource_pause_2.json",
+      "bytes": 1270,
+      "sha256": "d22687dcd085e1000df3ac2fa0271e14ffb91ab9026250c75fcba2b1e970eb15"
+    },
+    {
+      "path": "research/validation/stage15_resource_resume.json",
+      "bytes": 333,
+      "sha256": "563564feb7672efab7318797b1a7fbdfd7c52823c017e2e9c0785264e34b911f"
+    },
+    {
+      "path": "research/validation/stage15_resource_resume_2.json",
+      "bytes": 286,
+      "sha256": "f384cf078f9816633a69eb9f582423bc0d658bb3216bea619426a6e6c612bf12"
+    },
+    {
+      "path": "research/validation/stage15_supervisor.py",
+      "bytes": 760,
+      "sha256": "daf3a1456c64c4ba76d72a901d3bd59ad62e734b305cbcd87e63a719552d3f88"
+    },
+    {
+      "path": "research/validation/static_deployment_manifest.json",
+      "bytes": 2385,
+      "sha256": "907df173c4bc34d56dfcf6a80a6755d47ab96d50911a13c78e2e262ecf7fbd23"
+    },
+    {
+      "path": "research/validation/static_eval_bank.json",
+      "bytes": 159824,
+      "sha256": "37b2b12057dbf4c84c21aa81da9a3fd4a57cccfacfe27bfbb0b659d274c33cb3"
+    },
+    {
+      "path": "research/validation/v2_v3_static_audit_status.json",
+      "bytes": 610,
+      "sha256": "9f5f206b3d6447a9be18a712dd9bd4cd973cab693449b93c4be38b02c0a910b8"
+    },
+    {
+      "path": "research/validation/pretrain_sanity_stage15_server/PRETRAIN_SANITY.json",
+      "bytes": 2144,
+      "sha256": "519c1eaacab41c73f6a55894fd929b3e2bc013cc9d4a2b09895d3391d02301ce"
+    },
+    {
+      "path": "research/validation/pretrain_sanity_stage15_server/regression.txt",
+      "bytes": 1364,
+      "sha256": "fe701356bcaa8a6bc794eece5e0949a50d84261c76e480b27a3e51da4836a358"
+    },
+    {
+      "path": "research/weights_library/20260928_import/catalog.csv",
+      "bytes": 26423,
+      "sha256": "a4d1edf668f0ed3e5f3a3574b0e0684aa3d7ce2747239823d799545a9472ba1f"
+    },
+    {
+      "path": "research/weights_library/20260928_import/manifest.json",
+      "bytes": 553502,
+      "sha256": "919f8c90a37795f0f11cd34868b0ece1c18fa660af64cb21ce1d03d46930ef10"
+    },
+    {
+      "path": "research/weights_library/20260928_import/README.md",
+      "bytes": 4772,
+      "sha256": "5ba4580acebb18d7d6abc9a37a75fc1e720d5ac64570e3e32e04e9af5737391d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/inspection.json",
+      "bytes": 11338,
+      "sha256": "e87d167687cc7b2022c4abf712b845413f08625ef49a5fd40583cab1af0112f9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/PPO/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/PPO/PPO_lstm_normal.py",
+      "bytes": 16845,
+      "sha256": "c8f33bef5d92c503999b71d9abacc0dfba30870ad39cee6084e9e9a3131761de"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/PPO/PPO_train.py",
+      "bytes": 11296,
+      "sha256": "a4dfd838e1b938bc9f3832f6f0089981edcb63ad0e70e83f032bfe4b8fc059ed"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/PPO/utils_lstm_normal.py",
+      "bytes": 20943,
+      "sha256": "97df3cc8e1d062717465697eb600b319854d9ea3d3b107c34709b26e42c8d236"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/batch_test_lstm_att.py",
+      "bytes": 11788,
+      "sha256": "61f6c2cf110867f8b7d52c49682d5b7bc1dda5525bfaef7b2891e2af999bddca"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/batch_test_sac.py",
+      "bytes": 11388,
+      "sha256": "7b8a10fb2a343147a6c96400f9b24f14d4dfdff377aa0dbd50158630d01277a0"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/main.py",
+      "bytes": 7832,
+      "sha256": "9d538f2a0cc075e3cdb3e460de8d6dc2bb2ce599e788f39964f9bb4101a7e9fb"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/modeltest.py",
+      "bytes": 5941,
+      "sha256": "5c867d64c0de8c9f11463f6a72e459425ffec132a31d60703e7c86b8c4856513"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/modeltest_1lstm.py",
+      "bytes": 5589,
+      "sha256": "e41481ccf8e17ccf3b98bbb103addc66d9be35aabba44137e89710dfa03b3bac"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/modeltest_lstm.py",
+      "bytes": 5637,
+      "sha256": "0dbd2ae2554b902537086638307257b5a081eac0a1facd719a762646154531da"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/modeltest_lstm_5.py",
+      "bytes": 5843,
+      "sha256": "94e64e99b0956249aab82e6c32eb9a254abac94b75ac4ddbfd7cea4395464845"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/modeltest_lstm_att.py",
+      "bytes": 13981,
+      "sha256": "7f731bd65cd33eec060ce46e6a4fd010fd5479475648eb47484b983fb6cc9ee9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/multest.py",
+      "bytes": 6456,
+      "sha256": "1aa10b9048754ca48df4643ed7cd462e4d5f93fdfaec6f87a26a631cef013425"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_2lstm_pri.py",
+      "bytes": 18574,
+      "sha256": "b55b6416174c837083dbe02c3d0e00ad7f4fd7cdc88b42f9e70152d7675ea3d8"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_2lstm_pri_cpu.py",
+      "bytes": 9812,
+      "sha256": "0b8e3fb02fe7d9441fa91a2ce0c2c20ed1c6eba12272cc23afaf40775daf5774"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_2lstm_pri_new.py",
+      "bytes": 18730,
+      "sha256": "d65638117cd63e12b36d6eb2cab5e90f4ac52660a38583e76ac66861bd1cb9c7"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_2lstm_pri_old.py",
+      "bytes": 12633,
+      "sha256": "9a2ff8bfb063cc4ba270079027c6a9ef56c99e29b15f5f425b46e94ef79ef74f"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_lstm.py",
+      "bytes": 10975,
+      "sha256": "8a242ea9edbcadb04d333cc5bf742d78b7bdee9f0cdf6c45e4d2ac0af27d05d3"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_lstm_normal.py",
+      "bytes": 19035,
+      "sha256": "48e8c268c04980d2c56ab64b604f47fb11d28d746771494697fbc9cf4cebe276"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_main.py",
+      "bytes": 7838,
+      "sha256": "a0a346ce324c6e5ba5c0f8c48d36473b0fced5ee06581ef894232942ae31c80e"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_main_lstm.py",
+      "bytes": 9097,
+      "sha256": "1831e72ffe3923dd850f0262eee367e296fc81bead9779a33e284db7d441c84d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_main_v1.py",
+      "bytes": 7856,
+      "sha256": "000e1698d7241cb16bea0f475b8bbc965a55b4fdc73441eabbe86e2fc8f5eea5"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/parll_sac.py",
+      "bytes": 9369,
+      "sha256": "e2063451381aa03d3d88bf3c18106569a44fbc77ac7f802640e138b9776c19a3"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/SAC_2lstm_pri.py",
+      "bytes": 9069,
+      "sha256": "6e96c18d13c0a2c8716322941763c28a868db9115d2463ef6dfc36a89c57ca1b"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/SAC_2lstm_pri_new.py",
+      "bytes": 14082,
+      "sha256": "585bb13c763f2996e6b3b7f7e42bf25b49623f611758d9eb130b3e34379c1fb6"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/SAC_lstm.py",
+      "bytes": 9710,
+      "sha256": "52acc5f4f2a8e9ba7f99cf44b080b32ea6fb7ffe05014fd8144bb598e629c987"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/SAC_lstm_normal.py",
+      "bytes": 19040,
+      "sha256": "692aba767ab660b9375caac1603e90f66ffc35fe1b17c7ae835e36ff4d0a2bdc"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/SAC_multistate.py",
+      "bytes": 6053,
+      "sha256": "67b201ab59fa61d31ee33a63452158d1108dfbdb1e9ac90b3f834a68b3fe541f"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/testmain_par.py",
+      "bytes": 7111,
+      "sha256": "4798cbcb7c33bf33a68efc6a364c5410dffe2b6987f0a0670ab5ec60405c3c24"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils.py",
+      "bytes": 4011,
+      "sha256": "37513fc63a71837a53127ff365d671e6de040654b8275a1b490696be03163553"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils_2lstm_pri.py",
+      "bytes": 7292,
+      "sha256": "959026ab34d3ea00c613d582a96f3ceb4df9a752c95780cc0935403f4936b6c0"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils_2lstm_pri_old.py",
+      "bytes": 7198,
+      "sha256": "9a1877ba0f219024f970059af9deb074b52202f610b807adbc5733b2c65c7f81"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils_lstm.py",
+      "bytes": 6077,
+      "sha256": "5c4e5f4517e1565f65ecccb0164b6d7712ec3aa4494432fdeee3a73f3c6ded1d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils_lstm_normal.py",
+      "bytes": 21606,
+      "sha256": "f6b479f0967c1418b18a282f7856f6d4979776d6b3b3e5ecf88e3e497d60937a"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/utils_multistate.py",
+      "bytes": 5822,
+      "sha256": "038a229469e20abbf9fa388be7956be21d29523d530af94b784a4fa6d4913ef7"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/attention_test.py",
+      "bytes": 6364,
+      "sha256": "9b7969e4518bc87e2ab7f7caf87ec78ffebb42646659dfd616e4d1114123b57e"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/feature_importance_analysis.py",
+      "bytes": 22743,
+      "sha256": "de7727ba3b70c8cd6f97f90376c0a2581bc7b1f815694d73395a7cda6caa2b6e"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/modeltest_awgn.py",
+      "bytes": 24002,
+      "sha256": "6a719c6aa131cacfd71be50e67b44c71575898d63238ad0676e1048098025d11"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/modeltest_lstm_att.py",
+      "bytes": 19245,
+      "sha256": "3cf531f2dc9311418c5b1fe9eeae05318a46ec6ac49a48c75d05b5b3e76f360b"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/parll_lstm_att_normal.py",
+      "bytes": 21065,
+      "sha256": "c0632d2f06ecec7150edccf0bac41f23c2de2810853916cb01e81e881507bdb8"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/parll_lstm_att_normal_awgn.py",
+      "bytes": 30266,
+      "sha256": "70be3be2c8db8b7d5319300e391c641c47372433f154b76c223827ad321d048e"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/path_test.py",
+      "bytes": 18430,
+      "sha256": "2f7ad3d8195c3653cd369c00fdadca4a1c924142377626a13c64dc9c080c4034"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/SAC_lstm_att_normal.py",
+      "bytes": 17982,
+      "sha256": "f97e3f7fa4ca4f06d09708270fe95d3c770a50d84a3c564744a2dd68107f6844"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/test_all.py",
+      "bytes": 39218,
+      "sha256": "f68c67257405da39724a9e759e34250da554b064d49c34de3fa64c6793129a98"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/utils_lstm_att_normal.py",
+      "bytes": 26442,
+      "sha256": "a63e5087c30ddf8108691107bbb298520400a53ee020f51275e4bbaff4f6a346"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/utils_lstm_tbptt_normal.py",
+      "bytes": 23214,
+      "sha256": "56fa903bd818d51ed5585917fdfc65697b4ec624129f12db0d4a53937cb2a062"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/lstm_att/visualize_reward_pca.py",
+      "bytes": 12617,
+      "sha256": "5abe5175c1bcdcc8957fa21cdfa9e7684bd223734cbadd3887db2cd4c7954e4f"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/modeltest_lstm.py",
+      "bytes": 14805,
+      "sha256": "cb7bece73d79f4884700daf522d9514132ffac9b15ac000ec4d61b2014fd7093"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/parll_lstm_normal.py",
+      "bytes": 18911,
+      "sha256": "045dc92a850a23c3821cf7603edecde4fc80d66f1a1d77472b770d0a1c337da6"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/parll_lstm_normal_deep.py",
+      "bytes": 19045,
+      "sha256": "ee4dce227307bff7927021033d3760bb751acd7a00c85d634c457b3e808af3ba"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/path_test.py",
+      "bytes": 18353,
+      "sha256": "0fdd8ae8e0a729d4a06823729278b68b36e211edc8d0761c382c871e6b636b4b"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/SAC_lstm_normal.py",
+      "bytes": 19041,
+      "sha256": "59a5c50a59cbc8fc1975efa8425ef9099ced6f01a71513606a420835e5eb933c"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/SAC_lstm_normal_deep.py",
+      "bytes": 19510,
+      "sha256": "a76b8b295a9c0da94eb23b5b9a42828ae870b2a2574b8fe1684ff261d81e60ab"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/utils_lstm_normal.py",
+      "bytes": 21606,
+      "sha256": "f6b479f0967c1418b18a282f7856f6d4979776d6b3b3e5ecf88e3e497d60937a"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm/utils_lstm_normal_deep.py",
+      "bytes": 18583,
+      "sha256": "02676438f9a8508df50d35015f640f1a2b03c6459c79bca54518561641f521d9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm-selfatt/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm-selfatt/parll_lstm_selfatt.py",
+      "bytes": 18920,
+      "sha256": "02861d6ba96098bc1edf3577e0f4d2c1a7ca8058fc02dbf5c1a75a015412bef2"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm-selfatt/SAC_lstm_selfatt.py",
+      "bytes": 17979,
+      "sha256": "f9eca322a2d2b59155974f836c15d549fe1817c31086494962793dc8694c8fcc"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/SAC/sac-lstm-selfatt/utils_lstm_selfatt.py",
+      "bytes": 27498,
+      "sha256": "73e622321fd979a3099eb484a3f8b382f563aa2b67962fce1e958bcd4c5b7ecf"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed400/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed400/noise_utils_nowind.py",
+      "bytes": 12753,
+      "sha256": "0c541377c271beb4e55b3a48ebe7cf0f5f2272ec83f9392befecfb184d38617d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed400/parll_lstm_normal.py",
+      "bytes": 21739,
+      "sha256": "7315b7cae4d417663dd1f94537f1194245a9761bfd2b3c502cffb4573593f5f4"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed400/SAC_lstm.py",
+      "bytes": 19028,
+      "sha256": "8eb11f10ba6d95b22a3d55b2520c6951769e2736a999bb20b560aa8183c9b1b9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed400/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed500/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed500/noise_utils_nowind.py",
+      "bytes": 12753,
+      "sha256": "0c541377c271beb4e55b3a48ebe7cf0f5f2272ec83f9392befecfb184d38617d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed500/parll_lstm_normal.py",
+      "bytes": 21739,
+      "sha256": "f8e1bff89150f161f2e1b19b055feefe0222239b98c18d680314a34b4e995f7d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed500/SAC_lstm.py",
+      "bytes": 19028,
+      "sha256": "8eb11f10ba6d95b22a3d55b2520c6951769e2736a999bb20b560aa8183c9b1b9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/saclstmseed500/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/TD3/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/TD3/TD3_lstm_att_normal.py",
+      "bytes": 19655,
+      "sha256": "9c3a671dc0691f9132490436aa0e487441d6769e35e9c5464b79cc6343838720"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/TD3/train_td3.py",
+      "bytes": 14157,
+      "sha256": "66502a7e55c276b5e824aed2c5349f06182c45ac7a9f047ad492dc41ca960c18"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/TD3/utils_lstm_normal.py",
+      "bytes": 20936,
+      "sha256": "ba77a3669f6db132f767a175c079611428c73665e5772d8799260563f82f5462"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/xiaolunwen/globals.py",
+      "bytes": 700,
+      "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/xiaolunwen/noise_utils_nowind.py",
+      "bytes": 12753,
+      "sha256": "0c541377c271beb4e55b3a48ebe7cf0f5f2272ec83f9392befecfb184d38617d"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/xiaolunwen/parll_lstm_normal.py",
+      "bytes": 21741,
+      "sha256": "e884018e4aed327c2f7fe3c2f96b9fc302d8392aa168398af5513c601637a79c"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/xiaolunwen/SAC_lstm.py",
+      "bytes": 19028,
+      "sha256": "8eb11f10ba6d95b22a3d55b2520c6951769e2736a999bb20b560aa8183c9b1b9"
+    },
+    {
+      "path": "research/weights_library/20260928_import/source_evidence/xiaolunwen/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/.gitignore",
+      "bytes": 405,
+      "sha256": "32b02d5c5ea3d55c293c0d2edb879ef80cb78de3c9bce47455760337279f0530"
+    },
+    {
+      "path": "sailboat_RL/parll_lstm_normal.txt",
+      "bytes": 21370,
+      "sha256": "6a889827747c920f8b6f9e1e218257f415002dc521a1a288a1ac358bda07ba74"
+    },
+    {
+      "path": "sailboat_RL/parll_SAC_normal.txt",
+      "bytes": 17620,
+      "sha256": "5a12d94a54910cc89bed7000580cae6e7b7e9ee473966cf6460796912d631f19"
+    },
+    {
+      "path": "sailboat_RL/README.md",
+      "bytes": 3026,
+      "sha256": "b3594e3228a5250cd2d6328edc347aaab1d56d4dcc099668a80ed21443e44970"
+    },
+    {
+      "path": "sailboat_RL/requirements.txt",
+      "bytes": 661,
+      "sha256": "5834227b6622ea9226db4c6f83998e0f33f5a67fef238c942274ee5ffdf2b6b1"
+    },
+    {
+      "path": "sailboat_RL/sailboat_s14_obst_V3.py",
+      "bytes": 42522,
+      "sha256": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP1_1.png",
+      "bytes": 80654,
+      "sha256": "2ac7029ab815fbd4c90b9d0318cce01db195a2040f3c56db544a871780a42514"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP1_2.png",
+      "bytes": 82215,
+      "sha256": "87cee12f5e359478a6cc8241128d57477100ca57184037980c18a42d8e5d0546"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP1_3.png",
+      "bytes": 82006,
+      "sha256": "4aba7aa624e9413283e206ac596af53c70d3a5ba2d50ef62491d6fcbfc560510"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP1_4.png",
+      "bytes": 85735,
+      "sha256": "889279939983f9f8544f09ae93f882735ccb33dfb347adb235bccd0b5e3d2791"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP1_5.png",
+      "bytes": 83855,
+      "sha256": "3913d3680f873fea121f9fc1cb60934071911aaedcf8bb02b5314cea13197d2a"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP2_1.png",
+      "bytes": 66910,
+      "sha256": "9308d54df0d8c3577d7008738d9f7d27c22e7e36d37cf297d06500d06f5395bd"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP2_2.png",
+      "bytes": 68322,
+      "sha256": "a04cc91b54a37e461585a763c4c156cbf994cc13e192c21d1d16fbb067bf75de"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP2_3.png",
+      "bytes": 69014,
+      "sha256": "d96a2e269527110ce7ec6aa5d7e342a93e7eadbbf1bea5de368832c8bf98b8a8"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP2_4.png",
+      "bytes": 65129,
+      "sha256": "bda4d533fcdd2a350919d3024b5e3dce8a0c158fdd864a232444f0852b7b0b7a"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP2_5.png",
+      "bytes": 64680,
+      "sha256": "433cc42fcc796fa637eba3e74d04056c32dc9f47a93dbf0179163b74c64c307d"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP3_1.png",
+      "bytes": 68469,
+      "sha256": "bf2a3dc970ecf07c5c64635c879cc958b3a66e82b1a34040fce37c024346b22a"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP3_2.png",
+      "bytes": 70514,
+      "sha256": "626de3eb48fa8e3482d4955ce5b7d06bc525654a6b6f44a7979a2e82fdc00c15"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP3_3.png",
+      "bytes": 67699,
+      "sha256": "fae07cf64aa9571b26b1c8d9bc721f5aeb305ebc1c95274a6f923679ddc213be"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP3_4.png",
+      "bytes": 70171,
+      "sha256": "d8016421db1c785d38ce9a1d751a84c5feb9c8f5817f3f6f82cf3715bfd7eb3e"
+    },
+    {
+      "path": "sailboat_RL/EP_image/EP3_5.png",
+      "bytes": 69399,
+      "sha256": "1221bd2feeba18041d9ccd241d19ebed6d0051a4dd7ff2579198440ea0056f25"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/env_test.py",
+      "bytes": 1713,
+      "sha256": "abf13085a3cf68e5e4ec0646cc69d5bbd3d52a098a1b0d63547960724b52885c"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/function.py",
+      "bytes": 1017,
+      "sha256": "a1d77026aa5f47d5862048d0103928eda3a5309bffbd82eb8e87a0bd37ceae9a"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_jax_env.py",
+      "bytes": 27499,
+      "sha256": "ac8d08c2337942a1ecfc80e7b0b68cfeff8a01451fc701460507cee32a1bddf8"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_lstm_V1.py",
+      "bytes": 29680,
+      "sha256": "6e9faed1d7338df2ac52fed1bf796837e32ca1ecccf0685f9e63bad0fe7a9a0b"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_lstm_V2.py",
+      "bytes": 28754,
+      "sha256": "f518426bacaf07c3b78d103dcd631d21161864421d59de20c16223dbbb548cf5"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_lstm_V3.py",
+      "bytes": 28579,
+      "sha256": "b7364fd586dbeeb1818ed317646346180479b0b4c49e151f223f978c5c240e4c"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s10_V1.py",
+      "bytes": 32459,
+      "sha256": "8aed3957c9bac52b598f285668f34798a3eeee0783fffd227fbf4d653d44ad90"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14.py",
+      "bytes": 34833,
+      "sha256": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14wind_V1.py",
+      "bytes": 31805,
+      "sha256": "aaee87341cd15594401a614e34dcf2c14836d830b37f315179629f9fd798a383"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V1.py",
+      "bytes": 36476,
+      "sha256": "f9cc8c2cd1a2362f23e9c0a08d81a8b363fcbf0a6200bd25f31c72535bbe1c6e"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V2.py",
+      "bytes": 44751,
+      "sha256": "77c1009a836e1fdc832e605ae870e473d1eba6eac6ecfcd2702f7ceeab205adc"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py",
+      "bytes": 42522,
+      "sha256": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_V1.py",
+      "bytes": 28734,
+      "sha256": "a76c29696aa553ccbb8256518b9399bf1847954a86a7d423564c293de7287fce"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_V1_fail.py",
+      "bytes": 29107,
+      "sha256": "95cbd9e8d62cc4408b5d4d732414e5c72811df02bf7182f636f3233838fdb7e5"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_V1_old.py",
+      "bytes": 30222,
+      "sha256": "0073662eb4d1e82345114bbcef71dd7d4fcf278168f0673975e9c9194cba9d52"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_V2.py",
+      "bytes": 31840,
+      "sha256": "3658b9b93e113d72753f0675a455659a4aa48d383de60711b4a240065783c258"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_wind.py",
+      "bytes": 36147,
+      "sha256": "2e589db34922b4cad671dacc43fed8ce64b4fc825de1e2ecb8e1426ae135f75d"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_V1.py",
+      "bytes": 31746,
+      "sha256": "b5946720fd268d7cbf101ea02f6e9c6603793b2d7c19c5e89c8e954e5aa7a3c6"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_V2.py",
+      "bytes": 30695,
+      "sha256": "33c7bceeedee537f4e88e0ec2aab0fb6f708e82cd6a06f3ad887dc6134ee678b"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_V3.py",
+      "bytes": 31415,
+      "sha256": "bb7e1290e5e0d0fcf818566f7487c49c5b1fc0be5d6dc18c057d453692409f45"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_wind_V1.py",
+      "bytes": 29791,
+      "sha256": "eb2daa4c29295928ef4872b65872b2e7ac8361e3cb41db07bc9402eb8a82abd1"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/sailboat_wind_V1_old.py",
+      "bytes": 30219,
+      "sha256": "c378aff87e4143ecb5a7bd35955f0e20ceb5d42d38f3ec74ed794bf23bd6e6ea"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/test_V1.py",
+      "bytes": 843,
+      "sha256": "6ead485847fe02cefc48e243792cc47be0881814180b602057dd26473049a882"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/torch_wrapper.py",
+      "bytes": 3680,
+      "sha256": "25db94dfb618c39182fd48ea4832da968a0c6e9c4b5bb5d64633963ac8782a8f"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/utils.py",
+      "bytes": 3441,
+      "sha256": "110b20b33b1f742cbebd8c82a036883ff39f58658f30e58a71922857b1878623"
+    },
+    {
+      "path": "sailboat_RL/gymnasium/envs/sailboat/__init__.py",
+      "bytes": 1080,
+      "sha256": "58953389d1f9bd152781c9d2fce666fcfae755adf25e058c098cf0fff283d5bc"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_LSTM_actor_variants_explained.md",
+      "bytes": 12640,
+      "sha256": "30ad22a04e5c7151cab2e4091fff2fb90653c27dae75d77496d296d295c28d5e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/batch_eval.py",
+      "bytes": 9142,
+      "sha256": "adbd1a1c78f0935049c17a8b75574fbaa772b9dac0df9af948e06dc7840f499d"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC_analy.py",
+      "bytes": 6685,
+      "sha256": "bc4954f7f855c9c39300b7d305f4ad71f2c7ad95abf49639660a1d34efa2e722"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/overview_4wind_mpc_saclstm.jpg",
+      "bytes": 10328164,
+      "sha256": "e8d0069016c5335ef13198d103a1968539a78f21797c2546428dd74e15f80b7c"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/totalplot.py",
+      "bytes": 8013,
+      "sha256": "99b4758094a28facb2e1c3b3360a5c646a89d960041cd40a59b7110abbfa4599"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/actions.png",
+      "bytes": 236287,
+      "sha256": "2e8ec81560be86b01520d8223fb6fecfda54b4206e62b10ce07a9dd11deca345"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/actions.txt",
+      "bytes": 7738,
+      "sha256": "999aa0da9bcc52ac1f57c587b3ab1a723a7314cdd6c9a84d41d47ec319991ee8"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/computation_time.png",
+      "bytes": 238315,
+      "sha256": "7fe6e6a50e5ac5c6a891426f832c07168002568f85e90f6ab468028b05cf522e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/config.txt",
+      "bytes": 703,
+      "sha256": "ac55c41825f352771807a845ef6614d4cd9e728775330e94363d9c2b326e1a24"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/distance.png",
+      "bytes": 139440,
+      "sha256": "062b077250d55288c08bc600f5c44d0a055a7b2f32e9e7c47272b841dcdf9cf0"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/observations.txt",
+      "bytes": 70346,
+      "sha256": "de6a9fd3c943aa46fc8366cddb374e41e92635a7c1d48ae4629ef4306bebb843"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/rewards.png",
+      "bytes": 104380,
+      "sha256": "9f5a977e0d257cd5988a3f734b6093b2faa10c330019a0a8f8a034f537900cf2"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/rewards.txt",
+      "bytes": 3856,
+      "sha256": "653455c74146e0c2ce4988ef6eaded85f869c4ce18ebeecad618437f271774a0"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/rudder_angle.png",
+      "bytes": 87240,
+      "sha256": "642635fbfd095c8e4887a655b27a270ef3b4e862f5c14f61256a1008b4f63307"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/sail_angle.png",
+      "bytes": 130711,
+      "sha256": "e65b226b662b6209a4e1b20db1f152c321a89f9517c116390474f8e3595dc92f"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/trajectory.png",
+      "bytes": 145560,
+      "sha256": "933640bf548962598920dd32c422acb16760c3582df0cd251985c85d3826e788"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/velocity.png",
+      "bytes": 130149,
+      "sha256": "5b3b47d799867b2fcc00b8f4aea9dad9f5aa44661aa9d3bf1fc4ec345489f3cb"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/wind_direction.png",
+      "bytes": 230976,
+      "sha256": "d9d0dbd0fe4601531459db03cb374bc3c1de68972a02d941413b1723ea7204d6"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-0/wind_speed.png",
+      "bytes": 196241,
+      "sha256": "6b516427c421a212a1c515b36a9dc93ae84772deeeb95182cefd14942572100d"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/actions.png",
+      "bytes": 269210,
+      "sha256": "07ab0f68601d1fc87aa8975201f3fcacbcbbbe51da007cb7ee8a9a8778b0ebf3"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/actions.txt",
+      "bytes": 13848,
+      "sha256": "284e5baff5a0107c097b00e5bd11c7b5fd198cab0eb7d2a9aa28e31196c9987b"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/computation_time.png",
+      "bytes": 310036,
+      "sha256": "717f991870c8bfe8545899a271a3949e09e6e6765b6ab9fa6c86fb483fa05caf"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/config.txt",
+      "bytes": 708,
+      "sha256": "6b8b5c016e7c1c7f9d5bc6f280fb096d03a3c17d7aba2e0561527223e7566fed"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/distance.png",
+      "bytes": 159191,
+      "sha256": "1347f1e899f6f2adcac959f980efd8a642cb573792b1d867fe7fbcb7209f2f63"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/observations.txt",
+      "bytes": 125149,
+      "sha256": "72870412803122732958bf4ed3e545e18b50aeff60ecec9b9f7a6fef3dbffa2c"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/rewards.png",
+      "bytes": 146112,
+      "sha256": "d560096a2c453af6975fa452d1ef88dcd42ea663ee059ef6097ed13055c7f249"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/rewards.txt",
+      "bytes": 6914,
+      "sha256": "898a5d7ad46fb3ec797e7ce1b06207d92ebaeffdd6e82afe02c698016f46dc8e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/rudder_angle.png",
+      "bytes": 137876,
+      "sha256": "42bdcf3f761d5d55660eba0d5d80930e9d9a6bede8f24509d146dbb447d6f4c5"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/sail_angle.png",
+      "bytes": 128052,
+      "sha256": "375729922367876dc53bc51451dc81e3fa466b4f02cf963ad857af8c53612373"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/trajectory.png",
+      "bytes": 190743,
+      "sha256": "2c8e08f10c3b0c29b453f12fc30c5b6b6d8d19222931bb570f1d7cfea843cb51"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/velocity.png",
+      "bytes": 251315,
+      "sha256": "f1e73e2a9e428f57c8a38ff4bb85dcdcd2b80937bdd0712bd4833ad46bef51ee"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/wind_direction.png",
+      "bytes": 290093,
+      "sha256": "50e3c4805d2876b027aed1fe5e9552133dc76fd66c4314568f68bea5b96ce6e1"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-150/wind_speed.png",
+      "bytes": 242487,
+      "sha256": "2eee0a2ef32fcb43c525a96f6d4c7d84fc413e5f808fc8f2a25fd64aec16c118"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/actions.png",
+      "bytes": 293242,
+      "sha256": "ca1373f7b4cf4a29a2ace0dfa966fbcc40da9a9cd621882c7d497051d1e7ea14"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/actions.txt",
+      "bytes": 17734,
+      "sha256": "4dec058e5821e1910ac0dd3b4c89abf860b3bbf1721d988823040788a8b25fb8"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/computation_time.png",
+      "bytes": 312750,
+      "sha256": "d9af3fbd451c43d49718ec34c640a4e8ed0905bf56b728d3d316eed4a0361230"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/config.txt",
+      "bytes": 708,
+      "sha256": "5b614e51b3e58e53c88484ae4e5d0f724690fe44f25520d75e6ca674e6f818b3"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/distance.png",
+      "bytes": 164635,
+      "sha256": "d361bb5569552e834751c164bb0281fb1d7fade136dd076ed373bc6d0eef6d9b"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/observations.txt",
+      "bytes": 160442,
+      "sha256": "60eaca4389d1cfd696f2457cbee069453cf9f03c081b146acfc90ad40b9a738a"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/rewards.png",
+      "bytes": 147388,
+      "sha256": "6b08afff5841ec0c8ae695899f0bc93c87b882935bbb910399b4b0c1b2a4e4b3"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/rewards.txt",
+      "bytes": 8847,
+      "sha256": "2422167419054adaa45b419cec541d406b3aec1b0062ebc2e934f6d466359630"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/rudder_angle.png",
+      "bytes": 138630,
+      "sha256": "c15b0cd1724bf182d75814678d697f5c6e9346cfc03e97a4e292602a3904bfd8"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/sail_angle.png",
+      "bytes": 140547,
+      "sha256": "838bf2f7869e7e03932e8ea43fdbb1ce55662c047db6144e5cbfc6cee05070f9"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/trajectory.png",
+      "bytes": 221424,
+      "sha256": "8e0ed85d8297342ca8026b72e413422e3ec9b1322015470c4e0aede7b29b2c86"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/velocity.png",
+      "bytes": 230831,
+      "sha256": "8ac69ae6ee06957db8044fe2af760da28f016daf1c27b23a54e11784a9083c0e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/wind_direction.png",
+      "bytes": 307325,
+      "sha256": "2db3930c3bccf86a056dd33c992ed043455ffcfe238be8b79eea8f2fe9d6ed6e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-180/wind_speed.png",
+      "bytes": 314496,
+      "sha256": "feaf279c8c365c57172864013d5eec149daa9559a9ea1b092c7d098727f202b4"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/actions.png",
+      "bytes": 233586,
+      "sha256": "f2d81699918cc106bda6e6acbe91d5a68ef71b09e3b845faefb574a737fd4f38"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/actions.txt",
+      "bytes": 7187,
+      "sha256": "d7615d82dac15589b097545883aec021d4781a9ca51f8167a3a760717b0db278"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/computation_time.png",
+      "bytes": 293260,
+      "sha256": "228ff82d28f9a57c7bbb8ebc504b8c1b3a42bd75f5efb4d572643c51e15863a6"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/config.txt",
+      "bytes": 706,
+      "sha256": "e37a0cf3a23fcb807a313a6153f4347d39295f01765412034823cfc0daf20dcb"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/distance.png",
+      "bytes": 160746,
+      "sha256": "1eda090ed4dbc109cde2946dfadfdf54c02ce1a63ad13570d16882ad9fb7dff9"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/observations.txt",
+      "bytes": 65245,
+      "sha256": "fdba8e15a46d1e999cc3f86488b7e7388a05da1913c516cb6f7547f5447f911c"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/rewards.png",
+      "bytes": 150737,
+      "sha256": "818e1d5e15de151e3a351c844b3f34ae4e715418c392b5ec68cd6dd84ffd9b92"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/rewards.txt",
+      "bytes": 3596,
+      "sha256": "3b3aef5775a29ca206b29266c23cbb9cce5a01b311a3bca4ef0b58df7e2926a6"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/rudder_angle.png",
+      "bytes": 118178,
+      "sha256": "094e9cc30664d4824768d9ee1d5b256ea74d282c3025df6feeec0a3ec048d4e7"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/sail_angle.png",
+      "bytes": 140867,
+      "sha256": "747a335d1beaa310a78313b0319b24ed5941d3b9a1fdd1c851b347e1e439bfd5"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/trajectory.png",
+      "bytes": 178910,
+      "sha256": "aff9c9ab0fe771c67ce3a34374ef131da44e93b91ca171762fddedf4e52dff51"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/velocity.png",
+      "bytes": 200122,
+      "sha256": "ae75e75c6bd1a7136ccc53f738937eef0634be1d0ab4d2abc9226c646b6d3f1b"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/wind_direction.png",
+      "bytes": 251116,
+      "sha256": "4c7e55811fff6df4518d3ac76894b38631fb0ec09a839522bfa5b0bf4c353eef"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/MPC-90/wind_speed.png",
+      "bytes": 223666,
+      "sha256": "66ebd794c2871559af54c0b235a60c96bedce1ecafc210c6d00285add47c8579"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/actions_agent.txt",
+      "bytes": 6935,
+      "sha256": "e86541b2d2011ea2e52412d8ef4abecd4dda4333d84ba83caccc0320f5e980bc"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/actions_env.txt",
+      "bytes": 6792,
+      "sha256": "e2ec102dada2b6ddad7bddc57a9365b5548ba36cf95abc44d41a6f54ed1066ab"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/action_commands.png",
+      "bytes": 84889,
+      "sha256": "5b67f6ed56e6fa470e6a5b3d3ce8684158a3091389d4d56f8273c6fb56d12de3"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/observations_noisy.txt",
+      "bytes": 48368,
+      "sha256": "c1204851448d294096e3425a1b314820370c8ebacecf47f2acbbfd3a2d3449df"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/observations_raw.txt",
+      "bytes": 48366,
+      "sha256": "2117ea434482a1b729e443931b4345d496280d3d203524dd5056d3d7f5636656"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/rewards.png",
+      "bytes": 67361,
+      "sha256": "e96cbb317a51078f4258d2714bf0dd67cf8c17093f189f103910e49caa4b1887"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/rewards.txt",
+      "bytes": 6767,
+      "sha256": "252ecc5e1126cf57299c50fdc44a1543594d0331fff74b9cc01162eb52deb2db"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/sail_rudder_angles.png",
+      "bytes": 72362,
+      "sha256": "14660b0eb49ad95e4743becf4329190fb41d1e8d53301301c31544c2306c8e29"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/speed_heading.png",
+      "bytes": 92972,
+      "sha256": "9d169ea470b9b17875b754dc1510a76ca9e0b1f49c66c5e7371c20c408cc2012"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/summary.txt",
+      "bytes": 338,
+      "sha256": "b6738ddaa40c51687f611509c41b734f2fea983b1af231bdd77ed51728c197b9"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/trajectory.png",
+      "bytes": 71265,
+      "sha256": "c2b352b5a9c6cfb342885cc5f036988385acfef3e1b3e0cb2b0cf5d1e2fe651a"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/wind_info.png",
+      "bytes": 164041,
+      "sha256": "bc5eb098da47fe1dd465f30980da8d9cd078777ad0c7b9b9cce9d593f543e8a0"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/wind_info.txt",
+      "bytes": 10215,
+      "sha256": "fc23d4d6f75a73ff3e44f1527fd31c26f25c581cacdbad32457fcc716151e654"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/总览图_路径与帆舵角.jpg",
+      "bytes": 2271378,
+      "sha256": "45f4398795aeb5ca1c06e403aac5e10acb5c38e127c91a46f318f6c7c62dfe9e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/总览图_路径与帆舵角.png",
+      "bytes": 601303,
+      "sha256": "94a2e8cffc1f21c7f241e29938bd70f7afa6d9b6cb3c7dcf62cdc7b4c8c75c86"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_0/总览图_路径与帆舵角.svg",
+      "bytes": 82198,
+      "sha256": "a57d65af1b59ce0748281c167afcc72a2895685c68d167bec7f986dfc97c54c8"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/actions_agent.txt",
+      "bytes": 14137,
+      "sha256": "decd5458526e396ac9b7f5592298e9b3950f68bc35f7650fb67937042b9d61cf"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/actions_env.txt",
+      "bytes": 14016,
+      "sha256": "0efe568911c8c44d5953517621d054b7ff00db73b3afafaefeabbb573ca54454"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/action_commands.png",
+      "bytes": 140520,
+      "sha256": "39daee28e4704713fd967416d3407d598e6d20b4fee161a2e56544192688d234"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/observations_noisy.txt",
+      "bytes": 98284,
+      "sha256": "37a1cc9b48ef262d6c6042e1a4f18fa72bcc251b26ee696e31a374ba2aa318b0"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/observations_raw.txt",
+      "bytes": 98282,
+      "sha256": "6332478c4c05fdc815e95350ca88067ea1421bc6b4e991e8159a3a132e2abf35"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/rewards.png",
+      "bytes": 75214,
+      "sha256": "c681f22153403a171241d3355fd148f7260b9187a45efe89d044727c6e68f1fa"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/rewards.txt",
+      "bytes": 13901,
+      "sha256": "65236e532a93e46451a867eead289a0f4a5812731ff561f4bdffdcb3909d4ac4"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/sail_rudder_angles.png",
+      "bytes": 103237,
+      "sha256": "f9b6c80caec2c4b29eb378df9bab4f5a69ed6f80eedcf6fbc0c3cde47bcd5049"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/speed_heading.png",
+      "bytes": 119084,
+      "sha256": "11c43519b1d8f7d43bc1a67377f72236c3202f01615c30b96e609170689e5646"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/summary.txt",
+      "bytes": 338,
+      "sha256": "2f51d977bfc9c195d54a2c2902108c0801fab834a84b015ff475fd56c067e18c"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/trajectory.png",
+      "bytes": 89151,
+      "sha256": "6b3f38b652397f1c757d55ddc329cd9e4f84cca63b267a63b945274135556218"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/wind_info.png",
+      "bytes": 183808,
+      "sha256": "85e20f43441cb9fdcecf464c7b2b8e430b75eae117501607fee4175719398b59"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/wind_info.txt",
+      "bytes": 20806,
+      "sha256": "1a8557aa9171afcb007c51667475f93d6251a844eb23d19ad11e91331457bcea"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/总览图_路径与帆舵角.jpg",
+      "bytes": 2401835,
+      "sha256": "0307c9aa38b45b3ad24b5c0c523be173fb664c3cea296138d4670e00fd543623"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/总览图_路径与帆舵角.png",
+      "bytes": 722486,
+      "sha256": "8b2143bbf0cd1da93d2a6684fa86896e9747310a5b37d5296d14a8250dd5d78f"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_150/总览图_路径与帆舵角.svg",
+      "bytes": 85114,
+      "sha256": "5d25b194b2b3aebc2fb8c69f4f182fd2a501ae24c5a923c23484b6113ad6f8bc"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/actions_agent.txt",
+      "bytes": 14314,
+      "sha256": "b429dad5a9b8afa5cb1d17997904aca5ade91bd5457ea3c340907761507f8051"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/actions_env.txt",
+      "bytes": 14208,
+      "sha256": "486fb723e4e0193c60bacc498e017496373027d9e29ea922c24e03608c89cb23"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/action_commands.png",
+      "bytes": 149911,
+      "sha256": "921144403bca717247b7a1b8dd8e15df14ab866967dfc35327e3bc5301a6e4d3"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/observations_noisy.txt",
+      "bytes": 100015,
+      "sha256": "8d339421400db7a08d6304e2688b3960fbeb728d51d6ed5733ef246a7e18b927"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/observations_raw.txt",
+      "bytes": 100023,
+      "sha256": "a73893cb96de215c723db50ce3073abed6873393f80c42420dd496ab260aa669"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/rewards.png",
+      "bytes": 75934,
+      "sha256": "d223bb521590ad180aa5745995a9bbfdaaab41310c107d5b6971a63d86e28d47"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/rewards.txt",
+      "bytes": 14091,
+      "sha256": "8306ec1ed0d623c7a05f9df977a34c014e2d8a69fc2cc3246ce0a2ff14e4d0f0"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/sail_rudder_angles.png",
+      "bytes": 103054,
+      "sha256": "58d61d5783e92115924db62c2559edbca7d969d8dd08a8864aa163bd2a60a64e"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/speed_heading.png",
+      "bytes": 122304,
+      "sha256": "add0938d4a76aa405f562d352c129ba8a2efc5ebf6b9ff213141591eef3cbc4a"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/summary.txt",
+      "bytes": 338,
+      "sha256": "5e3b7cb1661d0efc72b7c6451647b9b17cc018280fb7ece9b868acb8fd9df84b"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/trajectory.png",
+      "bytes": 87672,
+      "sha256": "179b93beba3f61ddf72b195e38811f4a438b70290af84065690247288e2a46f4"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/wind_info.png",
+      "bytes": 176200,
+      "sha256": "d7e326efeda80e334c2b7fc96b57f63391a1f0baf85918f3d64c9bbe7b7b4ff2"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/wind_info.txt",
+      "bytes": 21226,
+      "sha256": "abee0a7d2f7b8b7e41ed4b4452da93f7f59043ffebad304f3c48cd0bed955520"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/总览图_路径与帆舵角.jpg",
+      "bytes": 2426208,
+      "sha256": "3d0804e88fd3d20b182c41685c803a0a0a3f4c0acd2be5c28f2ed90d2d05c180"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/总览图_路径与帆舵角.png",
+      "bytes": 745064,
+      "sha256": "12f9c774272ad4e28e4cc2b82b3ce2e58a803c124e503ff365efcbd737330ff1"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_180/总览图_路径与帆舵角.svg",
+      "bytes": 85866,
+      "sha256": "ec80b42207d15b56f84616782c58c8a48ba326e004a5ea4af32c3fda761ebb0b"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/actions_agent.txt",
+      "bytes": 8515,
+      "sha256": "deb4630c7149cc8055921f705b3a96dddaf0dab0ed7b2b2d33878dc910bdf413"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/actions_env.txt",
+      "bytes": 8422,
+      "sha256": "e9680c6d293aa7935704572b7eb47ba238ff2b0515d780878622eca57dc32997"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/action_commands.png",
+      "bytes": 115035,
+      "sha256": "0c6b125f6aecbb670d9ee2de2fafe067001e29b8fb520e130f09fd1ce80e41aa"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/observations_noisy.txt",
+      "bytes": 59372,
+      "sha256": "cb8f507b291a5086d5e14e41ed284361218caf5a1ec032cc213e0d3c7e8585a7"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/observations_raw.txt",
+      "bytes": 59368,
+      "sha256": "e416e64669704f28b016e3bd6fbb461c764ed46dd3a128953851d1c8465dfab6"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/rewards.png",
+      "bytes": 72571,
+      "sha256": "32cb86df8b9ce7363876304114a876ce36b22da28c26f3bc50f110ddf0973ee2"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/rewards.txt",
+      "bytes": 8387,
+      "sha256": "4ff8a7e786aed12b2a335d033a42284e2977a80b56229f780447d0c7b3e4da87"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/sail_rudder_angles.png",
+      "bytes": 94336,
+      "sha256": "bcf28a608aea5a89f537af6cf2f895fbc6450427b667eb094776a81e52357bca"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/speed_heading.png",
+      "bytes": 108678,
+      "sha256": "2240d2835fbb71e83ac2fdd7d731d13838437fd5b9cdba2ae38ad23ab5beecfa"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/summary.txt",
+      "bytes": 337,
+      "sha256": "6e3b6373a42d3551bcfff0f31b399cd7a58c54af7b9c259e87b296fbb8b3e6bd"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/trajectory.png",
+      "bytes": 76101,
+      "sha256": "f098f9bd5f8c61213192e7572cfe8f3ba07add3d5efb89f5b419f55715036ac4"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/wind_info.png",
+      "bytes": 167905,
+      "sha256": "81a4fdfc6abf6c06e4500fb097533cf1e48cdcd4af9611aea23577a33d60ad3d"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/wind_info.txt",
+      "bytes": 12556,
+      "sha256": "735d1b163857454ffb69ddb4544e8760a0f6b24a919fbafa42557704c6367527"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/总览图_路径与帆舵角.jpg",
+      "bytes": 2360029,
+      "sha256": "76137c8d02e5a6c8a6e545fef5f8595a34642442a1800636ba65edd6241b3d64"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/总览图_路径与帆舵角.png",
+      "bytes": 674590,
+      "sha256": "46891f0878b3d47e7e7ad2e7ebb984ff54e5076127fec8c2681742111e91c542"
+    },
+    {
+      "path": "sailboat_RL/PART4/MPC/saclstm_s14nowind_final_90/总览图_路径与帆舵角.svg",
+      "bytes": 83197,
+      "sha256": "95736d68caf95af1b0dd0e6b10d4fce4be71ef3eec2786dd97a48054e727be79"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/noise_utils_nowind.py",
+      "bytes": 12348,
+      "sha256": "cc4878135c684c0fb2934de44542582cddf19b8ebb72030f42a0e10815f23a6a"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/PPO_lstm_normal.py",
+      "bytes": 18667,
+      "sha256": "d8a31c599f4601ccdb4d1a0870a82de1f534f1b63773d74326ce07aed0fba843"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/PPO_train.py",
+      "bytes": 13629,
+      "sha256": "8372b9e12f248df5167c3248fcc046961466100da33d246a78375453ec15dcff"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_eval.py",
+      "bytes": 15965,
+      "sha256": "9039415a0eae6bd90932234310ff280c1ddf012e4784ce6bbb4e3d99f060c739"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/utils_lstm_normal.py",
+      "bytes": 23974,
+      "sha256": "ae7452676546f7f3a6c2d2d9fd26e619fb8c0b985bb402aee5185163b6b62a52"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/actions_agent.txt",
+      "bytes": 31081,
+      "sha256": "a3d7ed254383b14e8e38b3790a66373e6becb6bf150d4a8376a92a9d3bfcf5d5"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/actions_env.txt",
+      "bytes": 31060,
+      "sha256": "aee9d8b0e882ad8bffb63be9f3243b2d77d430b7982ef651b4f719982d3b3edc"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/action_commands.png",
+      "bytes": 424898,
+      "sha256": "cc099f61fa5c4fe4e7a54c30a3ecefe5179f0fc02807d0843c6cc58a739d1a49"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/observations_noisy.txt",
+      "bytes": 216784,
+      "sha256": "f097ed6aa6ce62dab863f3ec556276c09306389e6b332ae4e6d6a02034aecaf9"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/observations_raw.txt",
+      "bytes": 216735,
+      "sha256": "9f5337b799e06a516013ed28b1f3245c0c24e0de75d6ef6edb582b73318146b5"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/rewards.png",
+      "bytes": 101498,
+      "sha256": "82fd719cff64d293a6faaf165256b5054b260ca7e8930029523257a75bcc1d2d"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/rewards.txt",
+      "bytes": 31037,
+      "sha256": "7340c0f4518a35502c75625833c9a732584f20f766c442265d54e2000bed4b01"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/sail_rudder_angles.png",
+      "bytes": 187429,
+      "sha256": "b7a38e9736c3c9b40228278f0ef06b1aa55b4b8376f911d446d09733aaee791e"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/speed_heading.png",
+      "bytes": 154703,
+      "sha256": "a7061103fd59ddd5d1022e17de40ed3c7843a33e51756c758bfd95956211cf97"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/summary.txt",
+      "bytes": 340,
+      "sha256": "119cdf734fc0b457d17dfa25f2a4e75d9934ec6156530ff99621420990205da3"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/trajectory.png",
+      "bytes": 92333,
+      "sha256": "33607829f6a066a46a38fdc301883ba6044e70224ff86b241c04c7be89b1f5e2"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/wind_info.png",
+      "bytes": 209396,
+      "sha256": "0cdfc21aee6e176de331e6819afc0591621510682fe505adc6eada2550ec0933"
+    },
+    {
+      "path": "sailboat_RL/PART4/PPO/test_results/ppolstm_s14nowind_final_20260309_133740/wind_info.txt",
+      "bytes": 46204,
+      "sha256": "7ed202cc49e5c33d08fefdde095db706b1cc1f66172673cc99c68cc34c0aeb18"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/README.md",
+      "bytes": 1197,
+      "sha256": "87f1962dd6793e3c3469c12ca65b9ce6d7efabc339f886b28788ad6105da6094"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/README.md",
+      "bytes": 581,
+      "sha256": "8c73864783a6d24be403caa1b6253bc0a58dd767edda7d28a5303c85538b5be0"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/reward_env.py",
+      "bytes": 33550,
+      "sha256": "29568973632529472804badcfad734cb82ca6f2b82bdada017c5900e65caf46b"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/SAC_lstm.py",
+      "bytes": 19033,
+      "sha256": "45c53a12e1841a44137387167067093085768cb4ed3b13aff4e14965980e206c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/test_eval_lstm.py",
+      "bytes": 14402,
+      "sha256": "dc9de557c059e51aae8577c77d27ea0133ca13da7f5d620dde7400c26e028fb5"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/test_eval_lstm_5runs.py",
+      "bytes": 22041,
+      "sha256": "91990fbb2c15943e7f53b5a373ec2c6ce3f256b6afa3f83f0287fa408dfff931"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/train_lstm_reward_ablation.py",
+      "bytes": 21594,
+      "sha256": "9a7fb254215da759fa5b239b5e7ad1f4b6f52629d59a64f11fc954d41e395ac1"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/01_no_dense_progress_speed/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/README.md",
+      "bytes": 640,
+      "sha256": "0e37219fd8287f19df3e98495c60e13dda689d140ae775cd3730544bd46e220d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/reward_env.py",
+      "bytes": 33537,
+      "sha256": "1b0988eb78a950dafc20f853f1ca637c883ddd5ad6bbd3a9b0b7f87936a73f62"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/SAC_lstm.py",
+      "bytes": 19033,
+      "sha256": "45c53a12e1841a44137387167067093085768cb4ed3b13aff4e14965980e206c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/test_eval_lstm.py",
+      "bytes": 14390,
+      "sha256": "e1a392db4528c50e40192018bf57677528ae643153c34e156a35bd0a449d8ea5"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/test_eval_lstm_5runs.py",
+      "bytes": 22029,
+      "sha256": "4721937632121d02f7f6a39761ce11a39d5830e8dcc54c6bc650faf915ca8755"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/train_lstm_reward_ablation.py",
+      "bytes": 21582,
+      "sha256": "acda4ee43f8d1f0390eb85d0b04f35e24a83411e1367ecf7d8c5f53dfc4ee3a8"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/02_no_action_penalty/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/README.md",
+      "bytes": 564,
+      "sha256": "572a8331cf82d4bbb65450feba60be91722fc48c92c3d65ced138f4939f5bcf3"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/reward_env.py",
+      "bytes": 33222,
+      "sha256": "efa777bcf623f4f8487ff7bfff53347bae963f9ae1ca9ef63581a4473f0057ea"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/SAC_lstm.py",
+      "bytes": 19034,
+      "sha256": "b2a7c07f7e12a5dc8cab70751a166f48ddec375d6fde5213334acbd8bba1a305"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/test_eval_lstm.py",
+      "bytes": 14386,
+      "sha256": "1a19f48d9af23393147db72b9f23bdedbc6ebcaefef975765f7f706d2b23cc37"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/test_eval_lstm_5runs.py",
+      "bytes": 22025,
+      "sha256": "fa51e6edc5df06d4cee2046772614a7a6f0f32b56649989a6504a418977780ae"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/train_lstm_reward_ablation.py",
+      "bytes": 21578,
+      "sha256": "d208b52aa514b100f12acdea28d5689679d5e087a9fd0f202af965a2b360a8f0"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/03_no_checkpoint/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/README.md",
+      "bytes": 572,
+      "sha256": "6ccc00089e4a6bcb43f6b0335d4460cce417d9ba29d79f90a8f0043c42b0494d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/reward_env.py",
+      "bytes": 33545,
+      "sha256": "135541b3ea0cb70bc183a96279be35a9b248eb9e20532f61b3bbcb8723cebae1"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/SAC_lstm.py",
+      "bytes": 19034,
+      "sha256": "b2a7c07f7e12a5dc8cab70751a166f48ddec375d6fde5213334acbd8bba1a305"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/test_eval_lstm.py",
+      "bytes": 14384,
+      "sha256": "43eaebf1c97140e8cc88da2331bbb3d832e7615a5705d1e9301af9e9d8a7e549"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/test_eval_lstm_5runs.py",
+      "bytes": 22023,
+      "sha256": "ce7cec977bd8b7ab2aa022a71d6c664327598bfaad0c13484fc964261a3f3edf"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/train_lstm_reward_ablation.py",
+      "bytes": 21576,
+      "sha256": "ff282f83ff4bb701f4f9733c9d774e24e355a4119e3614a9a150c4c2c6e004a4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/04_no_arrival/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/README.md",
+      "bytes": 616,
+      "sha256": "a8f4fc4c58a26402ddc17a15991da8397225ed5b4cc7ad97efbd8aab0b7e261f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/reward_env.py",
+      "bytes": 33552,
+      "sha256": "cc449de6ad580f27ffbacc4acba840530c25ad997e6fac7fa6dac5c65c4ddc88"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/SAC_lstm.py",
+      "bytes": 19033,
+      "sha256": "45c53a12e1841a44137387167067093085768cb4ed3b13aff4e14965980e206c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/test_eval_lstm.py",
+      "bytes": 14398,
+      "sha256": "6ba8cb0216c65703292c078c8e72c6fd486dcedc2ef70f3e65a6036504c74390"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/test_eval_lstm_5runs.py",
+      "bytes": 22037,
+      "sha256": "66fa2ad6594ce9e8500b002112b69318e927d3b3031ce7d522992f67e0d65822"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/train_lstm_reward_ablation.py",
+      "bytes": 21590,
+      "sha256": "191e21dd0f7320d3c28f995e62826427226e922c86a328b6566a6bb4bd899dce"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation/05_no_terminal_step_cost/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/batch_eval_reward_ablation.py",
+      "bytes": 21979,
+      "sha256": "e0f6289a4f9769e56f27ad49a425a3f5cab5cf67870ab5f6f63e504b6586c60d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/README.md",
+      "bytes": 2362,
+      "sha256": "ce134922f21cf9914d43a1ec2a8f93f593273b6fc0311bc7f6f3f36d3e2c27f7"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/validate_reward_ablation_import.py",
+      "bytes": 5341,
+      "sha256": "48e5c8ad6a167b5d3f66458258354f3e564e03d222c8beb43a70c3c900ae68c1"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/README.md",
+      "bytes": 453,
+      "sha256": "db08862349f4257d076cdd8077e6d46c3c410d2d7f2ab736e89669344ee0d0df"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/reward_env.py",
+      "bytes": 33387,
+      "sha256": "c91fdb6f54488ba882ca3a06771cd18c4e2b27bfa35d44b400d75e5d65d5369c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/test_eval_lstm.py",
+      "bytes": 14432,
+      "sha256": "f91c133649e92ad2cbc51a7965cbaf6b98659d1c47c8144983fd79bcd2ab4d1e"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/test_eval_lstm_5runs.py",
+      "bytes": 22079,
+      "sha256": "d1ede8a2f56f47cbf81bf37b5ae2178d524798cbafc077ab8037536d88810039"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/train_lstm_reward_ablation.py",
+      "bytes": 24232,
+      "sha256": "dea876584e2163f33153360c3cb25ae3d4d7584ce6862912eca2d4b6e737d649"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/01_no_dense_progress_speed/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/README.md",
+      "bytes": 454,
+      "sha256": "c8f2929e511ae720f8494f761a7cc4d37a2428b3518880a8a0a1864de2ab9d15"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/reward_env.py",
+      "bytes": 33383,
+      "sha256": "f4f94a54c9287b1864245efc148e37e8904c826246a31685bf5afeae4908755c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/test_eval_lstm.py",
+      "bytes": 14420,
+      "sha256": "96c57440bedc41e5dceff67019dc76314f4cec26338388aa650ac99b67e19fea"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/test_eval_lstm_5runs.py",
+      "bytes": 22067,
+      "sha256": "4a7a536a90d802b3877b822e0da4045ef452857ab2c058852440a5d57532d2dd"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/train_lstm_reward_ablation.py",
+      "bytes": 24221,
+      "sha256": "d2e00ad7015e38016402b1a1e53afc2117119fd1740a95ebbee74639b15974e3"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/02_no_action_penalty/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/README.md",
+      "bytes": 450,
+      "sha256": "bed45843739c40f2f1f29e08ca40bbe58bd87f28bca19062a1b71caa518455e3"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/reward_env.py",
+      "bytes": 33391,
+      "sha256": "880e33dc7dbc274173cfd8f5930eb0719d5f4545190a1b4c7d1642d1d0285ee1"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/SAC_lstm.py",
+      "bytes": 19152,
+      "sha256": "0830ff09969f8a2760945b4b2c1e2db0babce88a80b477b987dd80a016e42659"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/test_eval_lstm.py",
+      "bytes": 14412,
+      "sha256": "04e7aeaf9450653c96efc639efa8670e67d9f35bc38f5cb4ddb58f4fa3050adc"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/test_eval_lstm_5runs.py",
+      "bytes": 22059,
+      "sha256": "5619f1e81d2fa9b9def606f2c8eeb4f2077c4ff3cdc88f38e3bf7465542971be"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/train_lstm_reward_ablation.py",
+      "bytes": 24213,
+      "sha256": "e38f71d4c2564aae1eb9eb41c0f36aaafbc96ca975686c2c6fd086fcbe26226c"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/03_no_checkpoint/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/README.md",
+      "bytes": 479,
+      "sha256": "16dada78fa8b4703bf7176fa47388f8b30b36ab1bddcd53a3f3592829191d6b6"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/reward_env.py",
+      "bytes": 33385,
+      "sha256": "afbb8962c010ec6badf4b9186e7256b2f436bf04352ceae7e987fdec88f10581"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/SAC_lstm.py",
+      "bytes": 19152,
+      "sha256": "0830ff09969f8a2760945b4b2c1e2db0babce88a80b477b987dd80a016e42659"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/test_eval_lstm.py",
+      "bytes": 14406,
+      "sha256": "dbf47a873432d0b9f5f99ca914a375e4feac620037d2dac134be435be43e3e5b"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/test_eval_lstm_5runs.py",
+      "bytes": 22053,
+      "sha256": "0d95afe33552f49d10ecabf3ffea736331a6737b74b2b54ab683b48f5774b5bb"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/train_lstm_reward_ablation.py",
+      "bytes": 24207,
+      "sha256": "3504995cbdc2361ff6cbb254176aefc432c93561fbcd5cdf22f8ebe7763cefb0"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/04_no_arrival/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/README.md",
+      "bytes": 496,
+      "sha256": "664d9bed3cb5007260f75574781a6082af58ad318379e248574f6e4cda10b5fe"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/reward_env.py",
+      "bytes": 33385,
+      "sha256": "be1bc1d0ff4a1bf95b54508c55c6dc23c06d7a21e01b09a69410a348f3490d94"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/test_eval_lstm.py",
+      "bytes": 14406,
+      "sha256": "d92deef190fbfec9ea29d44b724afd225d98206b67e7b53efea15501459d4232"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/test_eval_lstm_5runs.py",
+      "bytes": 22053,
+      "sha256": "507000a7f48dfa89306d5b968c960c5ca8241e6fe35bbf4a6738a12961ec5831"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/train_lstm_reward_ablation.py",
+      "bytes": 24207,
+      "sha256": "da7f7ad048640788638352b5a87f2081e8ecba1c344507b1239135f00e27696d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_fast/05_no_penalty/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/batch_eval_reward_ablation.py",
+      "bytes": 22063,
+      "sha256": "766bdd2b4f076f56ea13895f7dadcbef05fd5a6475c57ca959889c10ea5276be"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/README.md",
+      "bytes": 1866,
+      "sha256": "693c921b7e6ed2266f609c64ce3027a0c14980e110e3b35055b666f6f5cdc1b2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/validate_reward_ablation_import.py",
+      "bytes": 5341,
+      "sha256": "48e5c8ad6a167b5d3f66458258354f3e564e03d222c8beb43a70c3c900ae68c1"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/README.md",
+      "bytes": 457,
+      "sha256": "8c65a7855db81293056e3ea991d3d410fbb5c601c8cb916ca2d435cd6de38a2f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/reward_env.py",
+      "bytes": 33387,
+      "sha256": "5ed9144619e8edbcef71fc3dff3d969e8377a8c104e55c9278c19f3fdac1c42f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/test_eval_lstm.py",
+      "bytes": 14432,
+      "sha256": "f91c133649e92ad2cbc51a7965cbaf6b98659d1c47c8144983fd79bcd2ab4d1e"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/test_eval_lstm_5runs.py",
+      "bytes": 22079,
+      "sha256": "d1ede8a2f56f47cbf81bf37b5ae2178d524798cbafc077ab8037536d88810039"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/train_lstm_reward_ablation.py",
+      "bytes": 21624,
+      "sha256": "2320b3f43223b6a5d5baa0526cff99acfd84f6bbe78ddc72ae434f01b6ede60f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/01_no_dense_progress_speed/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/README.md",
+      "bytes": 458,
+      "sha256": "79f184c1d58c00b73c74e5614562374dc8b984b6777764bc7cefdc2f0bf40936"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/reward_env.py",
+      "bytes": 33383,
+      "sha256": "748b959ed90be1654b0fd598c2ac10e5c5b56060f1f39babc39da42722a240f8"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/test_eval_lstm.py",
+      "bytes": 14420,
+      "sha256": "96c57440bedc41e5dceff67019dc76314f4cec26338388aa650ac99b67e19fea"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/test_eval_lstm_5runs.py",
+      "bytes": 22067,
+      "sha256": "4a7a536a90d802b3877b822e0da4045ef452857ab2c058852440a5d57532d2dd"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/train_lstm_reward_ablation.py",
+      "bytes": 21612,
+      "sha256": "aeb2e972ff833e37e8d4e679b0bf5dcbbd2fb755bb089e28ff66b97eab41d6e4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/02_no_action_penalty/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/README.md",
+      "bytes": 454,
+      "sha256": "4c4485dc1334bcea16e58e11a9b5744183748d2a827697c097cc025cb3e91e5d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/reward_env.py",
+      "bytes": 33391,
+      "sha256": "ad357310155134e27ba522b8125b72613e3daa9521bc262ba85be35d7e72ee3d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/SAC_lstm.py",
+      "bytes": 19152,
+      "sha256": "0830ff09969f8a2760945b4b2c1e2db0babce88a80b477b987dd80a016e42659"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/test_eval_lstm.py",
+      "bytes": 14412,
+      "sha256": "04e7aeaf9450653c96efc639efa8670e67d9f35bc38f5cb4ddb58f4fa3050adc"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/test_eval_lstm_5runs.py",
+      "bytes": 22059,
+      "sha256": "5619f1e81d2fa9b9def606f2c8eeb4f2077c4ff3cdc88f38e3bf7465542971be"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/train_lstm_reward_ablation.py",
+      "bytes": 21604,
+      "sha256": "b065f9d44b47f717ac429e22633723b7f82fa20901cf1ff3eb67fac4565a59c9"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/03_no_checkpoint/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/globals.py",
+      "bytes": 674,
+      "sha256": "65a08aec3aaa0879a47a86801d6a058bcf59eef817c9526c19b5d5c6f657ce8f"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/noise_utils_nowind.py",
+      "bytes": 12419,
+      "sha256": "acf2a1658d56c8ecc6db90f8b024b1fdad9c52cacb2c58ca44d0c25721190de2"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/README.md",
+      "bytes": 483,
+      "sha256": "21e3f0776a1a42b8283b8617349133e179fb9faac09e64c9bf3417b5bfce4e91"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/reward_env.py",
+      "bytes": 33385,
+      "sha256": "f1ae18eb77a8fd6377f3ca314d57aa9b66fc87ad4efd23ce61b0662592203b35"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/SAC_lstm.py",
+      "bytes": 19152,
+      "sha256": "0830ff09969f8a2760945b4b2c1e2db0babce88a80b477b987dd80a016e42659"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/test_eval_lstm.py",
+      "bytes": 14406,
+      "sha256": "dbf47a873432d0b9f5f99ca914a375e4feac620037d2dac134be435be43e3e5b"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/test_eval_lstm_5runs.py",
+      "bytes": 22053,
+      "sha256": "0d95afe33552f49d10ecabf3ffea736331a6737b74b2b54ab683b48f5774b5bb"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/train_lstm_reward_ablation.py",
+      "bytes": 21598,
+      "sha256": "1fb585c762c888953b5b5968b65231afcf1cb2a66bd2b2dee1c00c230b438e47"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/04_no_arrival/utils_lstm.py",
+      "bytes": 22521,
+      "sha256": "f9b87743900dedf063bc1b96c7b2b22e5a5b8bce60aa849f31c2912b04598f69"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/globals.py",
+      "bytes": 673,
+      "sha256": "a7a7fc9f70e6cc1d3a670214bcf975766617f1121a284eb541e9bc83f20e4998"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/README.md",
+      "bytes": 500,
+      "sha256": "a4eb93512b912b29e42e20dd7e2ea9a6d0a43b26d7593df62c103fdd1715cd52"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/reward_env.py",
+      "bytes": 33385,
+      "sha256": "4b3740b4d5cb34c374d6a61dd72c1d44a41295d634cc132c2d85f76c037c2c4d"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/SAC_lstm.py",
+      "bytes": 19151,
+      "sha256": "e06691dca33c8468973019f2ed0d46bbd51b5817731a0a0cbbf20501ad89ea19"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/test_eval_lstm.py",
+      "bytes": 14406,
+      "sha256": "d92deef190fbfec9ea29d44b724afd225d98206b67e7b53efea15501459d4232"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/test_eval_lstm_5runs.py",
+      "bytes": 22053,
+      "sha256": "507000a7f48dfa89306d5b968c960c5ca8241e6fe35bbf4a6738a12961ec5831"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/train_lstm_reward_ablation.py",
+      "bytes": 21598,
+      "sha256": "d0ca0e7ecd1606dc19bbba848f5260fa614bbca8db54d00cc1add3d5e8702341"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/05_no_penalty/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/reward_ablation_new/test_results_batch/20260521_163928/summary.md",
+      "bytes": 745,
+      "sha256": "1cbf3dbe86df842a3651bb3f6117d0773a82d2d5734567c7943c5a20bb4e1c03"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/batch_eval.py",
+      "bytes": 9130,
+      "sha256": "648893f896c69e9c6f9bdbeaee3e3877f374e83885a25dae2f698e00a1e8f9dd"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/batch_eval_lstm.py",
+      "bytes": 10548,
+      "sha256": "152dbfae20d548899ff7d74ce782a1bc02d00d9aa1c8df0146b50abdc919a521"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/noise_utils_wind.py",
+      "bytes": 13318,
+      "sha256": "fae1f1fe5f71f48884a6a715c78b49513de9384c2df891ae0d76643de3c8d411"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/parll_lstm_normal.py",
+      "bytes": 21407,
+      "sha256": "08422db9e38229677a24b44d6e4f098d2e59c808ec7417231f8d5956d24ce164"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/parll_SAC_normal.py",
+      "bytes": 17638,
+      "sha256": "6ffff363ac93d848fd67610b0385bc3a2ea21e2e94b5670c8f4e90c859956400"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/readnpy.py",
+      "bytes": 3935,
+      "sha256": "ba6f899df6a92f3f605423cd49dd08075bd61b0f77a479585234a578b626aa1d"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/requirements_sac_local.txt",
+      "bytes": 661,
+      "sha256": "5834227b6622ea9226db4c6f83998e0f33f5a67fef238c942274ee5ffdf2b6b1"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/SAC_fc.py",
+      "bytes": 11239,
+      "sha256": "e1924e3480ffffb5a04aee5f92e000e1d0c96a0a97fe8d46affe11c9b3cf8c39"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/SAC_lstm.py",
+      "bytes": 19033,
+      "sha256": "7f09ef4c1400df5cdba724d9de7358941e59b252ea9f3de0939714c79cfdbe94"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/sailboat_s14.py",
+      "bytes": 32953,
+      "sha256": "0a32fad1b16d77aefc251fd6ef222e8cb33364db540903181253076cf1255981"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/sailboat_s14_wind.py",
+      "bytes": 34237,
+      "sha256": "edf3ef09e872daf606b3e464619279b666d7b79245663943540283f5c2948bc3"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/sensitivity_analysis.py",
+      "bytes": 14136,
+      "sha256": "346391e0ff6e2f9fffa446dfc7887323aae850d44894d559376d326070dc9a81"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/sensitivity_saclstm_s14nowind_final_9000.npy",
+      "bytes": 1903,
+      "sha256": "d43b59483cc0394846a0aa6cf26137dd80d2084e0470a65201d71ad7d6717e35"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/sensitivity_saclstm_s14nowind_final_9000.png",
+      "bytes": 129871,
+      "sha256": "2d9b0395884f76e37cab8bd6ef4fa82d903f4b29f1b1ab4a4a5e6cc2f737893f"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_eval.py",
+      "bytes": 15497,
+      "sha256": "7a470324090f3b6610088923c4246cf627e864d08dfab07a0a6372daaf4d3af5"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_eval_lstm.py",
+      "bytes": 14280,
+      "sha256": "2684be680e050e36e20f9d684cf3821b6b8ea895a30a9315a916058a9572d80d"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_eval_lstm_5runs.py",
+      "bytes": 21953,
+      "sha256": "9096499760a680e73625bbe03512fd16ca60edb2769491af609dfe136e66d808"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/utils_fc.py",
+      "bytes": 6875,
+      "sha256": "cfd4c2b9a14d477cc8e68f32f070a2323992b23d6be870b00254bee26d9dbf39"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/weighted_sensitivity_nature.pdf",
+      "bytes": 32138,
+      "sha256": "151c1772402ef5e950632fdf42df8a26915a9ed7f50bb47227339f714f9a24f3"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/weighted_sensitivity_nature.png",
+      "bytes": 85348,
+      "sha256": "b77a0c73f5f7d8a1eb01d5e19b10031ae5ce2968f2b462b7d7e776d0fea58f3e"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep1/SAC_lstm_ablated.py",
+      "bytes": 12485,
+      "sha256": "141334942bd0d2b95b669cd13ff4ad0a21c98f327635a223e759fae66b33b948"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep1/train_ablated.py",
+      "bytes": 22022,
+      "sha256": "7ff3ef30443f13f4a8fa765abe7600a6c052fab29fe58c6801861fa3b1bf9cfa"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep1/utils_lstm_ablated.py",
+      "bytes": 12718,
+      "sha256": "e3e437874b913efc5a37ed6032bb617db91331bded6fbf62e3015eee8e7cc8be"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep2/SAC_lstm_state_only.py",
+      "bytes": 18895,
+      "sha256": "23fe1afcb76f294bd68a7050f2025ae97a9679d0931f95e0a75072c3152803e5"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep2/test_state_only_5runs.py",
+      "bytes": 13161,
+      "sha256": "64c1ad0ebf31908ba8e036434058e7a9f66c9a8bca0089f6e46e26570f0ae0ff"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep2/train_state_only.py",
+      "bytes": 21566,
+      "sha256": "2ca4784f2d5e4fbfe3124011bb37547e4b00c18ab7f414e995cb7bfc4f082d92"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/code_fake/ep2/utils_lstm_state_only.py",
+      "bytes": 21189,
+      "sha256": "b4db1933c944c67ff96d18e62dd449b1f1040f202478a5d634b9de15930cf9c1"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/totalplot.py",
+      "bytes": 6288,
+      "sha256": "94095ff46b9bdd48e5adb3518dfe44121506a113a7e00db794e5e10231425e81"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/actions_agent.txt",
+      "bytes": 50766,
+      "sha256": "b653cd1ad8784be66a800f7bfa30b9db3f093c1c0b775a96addd50c5de9cfc75"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/actions_env.txt",
+      "bytes": 50756,
+      "sha256": "7daa92fd491795ac9c632feb4d661f80b93ded8c593adadb064f2791646943db"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/action_commands.png",
+      "bytes": 185534,
+      "sha256": "cd43eb2a1f8255e7b52217f673d24857220fc5ce254a7cac2e63fcbb315c2249"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/observations_noisy.txt",
+      "bytes": 408802,
+      "sha256": "e51bdf7bedeaef9b44158201e295b428503aa1922ed8f5b596e99fc4b17110ce"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/observations_raw.txt",
+      "bytes": 408810,
+      "sha256": "f2dc58a2e407ca18bf5bdf68ad5ac618905717f4d2854d58d683c469cee0d222"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/rewards.png",
+      "bytes": 84307,
+      "sha256": "18cb5693586b67856507dd96b1fef241c4c3855479cb8d420251dfeb9106e23e"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/rewards.txt",
+      "bytes": 50988,
+      "sha256": "e8a4bc5d330157aa6cffbe928e55aed5532eaf49364cc7a80d1960ecfdc0b651"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/sail_rudder_angles.png",
+      "bytes": 107993,
+      "sha256": "74569fe6c73271e85c1395e0faa555803d6a2db0f4d4d049b27d7b033837d9c4"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/speed_heading.png",
+      "bytes": 126082,
+      "sha256": "efece8d1dd65db253a8f76ee3ae1d2a7b5cbeeb67ea6e9372394a8313e2e3957"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/summary.txt",
+      "bytes": 341,
+      "sha256": "dbb029d25f9c693eb6ed029944965b9ceee8c0955e858a7ed49229ac7815d745"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/trajectory.png",
+      "bytes": 76330,
+      "sha256": "5b026964142095e3a8c99aab3e8b8b86603c9c35692769e332d7ce31212ddaab"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/wind_info.png",
+      "bytes": 233518,
+      "sha256": "571099ca910252206afc2bbfe104f95546128bfc3f8b0b154467595a07277828"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134548/wind_info.txt",
+      "bytes": 75248,
+      "sha256": "1adc892f5fb38caf16924ad2e07dced8754051234e54fc1cf8dc1ddb93d6e639"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/actions_agent.txt",
+      "bytes": 11085,
+      "sha256": "59b302ac7b520013c99509dde31573d7566e505ff138e871b7cbbef2d29d33e6"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/actions_env.txt",
+      "bytes": 10951,
+      "sha256": "22aa5b46b35ceb1067d56b7ca532829c3edd8d53388488afd0e55dccb95a5266"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/action_commands.png",
+      "bytes": 119207,
+      "sha256": "453c879b3f4b05b454cd67d7d87d1880184b61f50ceae5584e6a276e18923565"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/observations_noisy.txt",
+      "bytes": 88008,
+      "sha256": "2634b35c053d36b2493fbb17affa3fe08c59ed0c71589da8772b274c2f2a1546"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/observations_raw.txt",
+      "bytes": 87986,
+      "sha256": "7c7c71162686b5c20e97a49612c2fbffe0368cc8cce2a1a6132ce8ebc7feee50"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/rewards.png",
+      "bytes": 78570,
+      "sha256": "c1ac9def84ca5ba4fed19ef335534d5f0b3e9674af6ef139d17802ef6c24d061"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/rewards.txt",
+      "bytes": 10879,
+      "sha256": "70898dfa632dc10cd9133100eeb03fe514c0a7ffe347676cac1e745a11205e80"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/sail_rudder_angles.png",
+      "bytes": 94128,
+      "sha256": "802c46b91b4a4b5f94e439090abd61c7dc9b6a92dcf70326482e2ea00170ae03"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/speed_heading.png",
+      "bytes": 106118,
+      "sha256": "5a6f34443b7ec8033fc644bf319389709a29315be11bb801f2d5dce4b1e4c50f"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/summary.txt",
+      "bytes": 331,
+      "sha256": "fe09dacd25c5761e8e9f9dc8106188c7aa57a377bc74bb0666d638e21661d2eb"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/trajectory.png",
+      "bytes": 79385,
+      "sha256": "f12a94e406d8f5d4d351d41d3852827cc291adf64ed917053d361bad8696a05a"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/wind_info.png",
+      "bytes": 175223,
+      "sha256": "9f499d67d88676755b2f3479ad1fa510ab281e349235c46b7531190a04390df4"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_134831/wind_info.txt",
+      "bytes": 16306,
+      "sha256": "b437c6db0965aa518ac6c63f6204847749429c8eeac3140503a7d8fdbcf52ab9"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/actions_agent.txt",
+      "bytes": 17030,
+      "sha256": "c1ca090cea54c65516e535439bbb010848f8ffa41561ee2dd8a033281c890a41"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/actions_env.txt",
+      "bytes": 16909,
+      "sha256": "fb37775f90754e9dabd463d4f63572096bc3b4a593ab488ef790132df454ac37"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/action_commands.png",
+      "bytes": 156679,
+      "sha256": "cf8ce28dbb2d292c46cae4938ca3b7aa5c75bc864a3e0d6507a019d50355a407"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/observations_noisy.txt",
+      "bytes": 136164,
+      "sha256": "c39f03279888a4e84ad55a0a780f88bf933268d41329c6b6fe9bbe7f7e70a686"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/observations_raw.txt",
+      "bytes": 136291,
+      "sha256": "b8f355d501fc8d40cf60cacd52008e12ceab9a143f59e85d3fc5eb00121b00dd"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/rewards.png",
+      "bytes": 84259,
+      "sha256": "7976bbf3dd474c8d3c8b6db412d8593feccfb8356c2a830d3bcca8b4911b143d"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/rewards.txt",
+      "bytes": 16813,
+      "sha256": "617e9b31fdbf9b02d69f328d8e9d1f594c52588893baeb572f38d5b1a88b8f19"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/sail_rudder_angles.png",
+      "bytes": 110292,
+      "sha256": "edfc1971c1b8c506f0746f4906d37317c251a1c78c4e9780570a2120d4b6ec7f"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/speed_heading.png",
+      "bytes": 121418,
+      "sha256": "592e6ff958bd89ab7021535a1c1b29c22e3387dac1f5250778277d1ae3398629"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/summary.txt",
+      "bytes": 332,
+      "sha256": "db60f930bee7f93c32683235d19f12ae44680ea45299e8de32f49159c803b5c7"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC/test_results/sac_s14wind_final_20260308_135030/trajectory.png",
+      "bytes": 89057,
+      "sha256": "00a53fb4125203255f38ad0a098291f5b5f4cde56545bf01e3b443bced4ef48e"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/batch_eval_lstm.py",
+      "bytes": 10684,
+      "sha256": "23cab3a7260fc4f37dd95f696edc5509d7b8c76b69ef15fabfaf16a980eb2836"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/globals.py",
+      "bytes": 921,
+      "sha256": "b0a40b9009c8ec46c95d3312c9a9852fe37fbd24127d513fe626d8592648da6d"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/noise_utils_nowind.py",
+      "bytes": 12594,
+      "sha256": "a6b3e3d5167467f4659bfc6c73d2459ce5ad735040a7bddcd7e3996cdca10c77"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/parll_lstm_normal.py",
+      "bytes": 21838,
+      "sha256": "de6f76c84210c2140a570ca3f51702258c6162d8ecea38306de348ca56a8c8a1"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/README.md",
+      "bytes": 9198,
+      "sha256": "9f8e048609fa7f1aeceb60b1c7d8f3791769baed67e329d274adc3503a75e5c1"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/SAC_lstm.py",
+      "bytes": 19602,
+      "sha256": "0c479479ae4ae1b3747f992ace5957e993b853df59d63485b8d66e46ec3749de"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/sailboat_s14.py",
+      "bytes": 33210,
+      "sha256": "d0c5c5ad2703a1ad21ac5cf192a10de383e6ba21d118700ac8a3aa65f369d266"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/sailboat_s14_wind.py",
+      "bytes": 34494,
+      "sha256": "2ffc85e00c49a5e7b14324dbfee5300aac8a9f9bc08bfa5d1023157b440aa1a0"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/sensitivity_analysis.py",
+      "bytes": 14308,
+      "sha256": "c271514a038348b096e5b8ce3a1aec4a978afce0150539e2e44956cc3a5275b7"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/test_eval_lstm.py",
+      "bytes": 14348,
+      "sha256": "ce9415ace3fe7844fb795ab1cf81a912b33d657750218d24c3038a6f1c1085ce"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/test_eval_lstm_5runs.py",
+      "bytes": 22132,
+      "sha256": "6ea4393205428f7f8b343a0e62340670cde58b3982248984793f56487eef981c"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_singlelink/utils_lstm.py",
+      "bytes": 23367,
+      "sha256": "6586fbef0bdda13bf616dcca77ab1ba279e909d620606cb25871c8ec7fcb72c8"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/batch_eval_lstm.py",
+      "bytes": 10684,
+      "sha256": "ccd4e10201b411d22706da5e602f3d2b32230d5b3924b38a0dc8903aeeb2dac7"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/globals.py",
+      "bytes": 921,
+      "sha256": "c01836b79b3740d3790727b541a6ad4a7d11fd71ea682d1980121d025f3415f4"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/noise_utils_nowind.py",
+      "bytes": 12594,
+      "sha256": "f00551b2da40941892317cdbbb36aea97dea30e318295a519ab185ef742a8c63"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/parll_lstm_normal.py",
+      "bytes": 21834,
+      "sha256": "9c67d5c18dbea5a319520198b504e58a64314961061aa5589dd322db1efc7f35"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/README.md",
+      "bytes": 7589,
+      "sha256": "cbb84674958153f600ddfb4d28bc0ce957cd1cc52c7baa749a80ebb04d471f81"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/SAC_lstm.py",
+      "bytes": 19618,
+      "sha256": "4fc9d1a6dc5ab33be1b5d18cb96ca4f4bd1959ca2bac88734f88aa87715f0d76"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/sailboat_s14.py",
+      "bytes": 33210,
+      "sha256": "1f2c71b6a69bf6248e68a11b51a5de62008c7198e5fbcb2ff20a0a3c22f39f04"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/sailboat_s14_wind.py",
+      "bytes": 34494,
+      "sha256": "d70c0e32fd7ed33f02cae6aa7794b2a2b4e3956fc2e160835ef8c358c7082e5c"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/sensitivity_analysis.py",
+      "bytes": 14308,
+      "sha256": "7b549629ceff462d89f16468dbdd3f405165bb4262401494a994a11a9101d258"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/test_eval_lstm.py",
+      "bytes": 14348,
+      "sha256": "cc2da7aab4e3d210651bd56787512012e648cdbb2d49deecd8b52417204613ae"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/test_eval_lstm_5runs.py",
+      "bytes": 22132,
+      "sha256": "4733987f17c2aa1ee53e92ed7074574aa33f9b34a29924dd8eb5215c39183fad"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_actor_zeroaction/utils_lstm.py",
+      "bytes": 23430,
+      "sha256": "1d668df1e4062b2590f0b1c85e245a1f2bd0151171b91f7240f494eda96750fa"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/batch_eval_lstm.py",
+      "bytes": 10693,
+      "sha256": "2b9516b19246ffc835565661f1d0af808c69315afc04d6874610ed61be06f918"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/globals.py",
+      "bytes": 922,
+      "sha256": "4574256e7e212e7a60a426a288a83d5b6394f85b9b8c4b9930f2e398e30a83ee"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/noise_utils_nowind.py",
+      "bytes": 12595,
+      "sha256": "d66f35f5962f013acc311bc3b7f723924f3a8080df2f77b5b0dd16ef4417f2e5"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/parll_lstm_normal.py",
+      "bytes": 21849,
+      "sha256": "f0cb391be542f5f4bdad556fe5eb38375a6697016d46e4c62d610d38d48bfcd1"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/README.md",
+      "bytes": 7132,
+      "sha256": "839626c42a4690c9bdf77a2e3dc9931cf29a7e8cfee2a3446e0c8467baa7aaf4"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/SAC_lstm.py",
+      "bytes": 19581,
+      "sha256": "a9e9a8ab3327eb392b43cc71756ec55dd8f8c3ea117f954701192d998881c3ed"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/sailboat_s14.py",
+      "bytes": 33212,
+      "sha256": "dc9cea7ad1b0650a3d5ac0c534f36ea2d9fb669f24b6ec62287ed1972c30001d"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/sailboat_s14_wind.py",
+      "bytes": 34496,
+      "sha256": "3906ea2c165ca29adab721d7ae516db168980b840265cd8bfcf68da2ec81a361"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/sensitivity_analysis.py",
+      "bytes": 14324,
+      "sha256": "d26712ab068ce158f708859da9d663502c157ec10af8836c2be221b13f5f3a4e"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/test_eval_lstm.py",
+      "bytes": 14365,
+      "sha256": "04b23a2482bfbd7d8f3f12ed1dcc331456630c540742e5ba061339cb3d1e6d46"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/test_eval_lstm_5runs.py",
+      "bytes": 22148,
+      "sha256": "f304e1c8dd2be12ab4d0ac5aa0cea012bfefd372613240fa2e5d4a6d51972c4f"
+    },
+    {
+      "path": "sailboat_RL/PART4/SAC_lstm_stateonly_history/utils_lstm.py",
+      "bytes": 22986,
+      "sha256": "79ac34946d3ec10d5e4bab7d1db7cb6b0341af7a3fb93eb0e2db46ba70ef5082"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/noise_utils_nowind.py",
+      "bytes": 12418,
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/noise_utils_wind.py",
+      "bytes": 13318,
+      "sha256": "fae1f1fe5f71f48884a6a715c78b49513de9384c2df891ae0d76643de3c8d411"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/README.md",
+      "bytes": 2954,
+      "sha256": "8bf918f5da05e65039da5def6fafdec5c1ba433671c5aafa1f9e90e2e4734b1a"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/SAC_fc.py",
+      "bytes": 11896,
+      "sha256": "9200986ed84e10d8e53be521b4c753c28d529116cf2793b934164a17591471de"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/SAC_lstm.py",
+      "bytes": 19034,
+      "sha256": "b2a7c07f7e12a5dc8cab70751a166f48ddec375d6fde5213334acbd8bba1a305"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_5runs_common.py",
+      "bytes": 21084,
+      "sha256": "46ae8abbedab671319cd10e685d56c3b34f53fa8642813a86a3c1f907372943d"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_eval.py",
+      "bytes": 15575,
+      "sha256": "6a3651c7093d5d0bb04306e414fe829f4b39c213c2230e2d46af2875bc71a61b"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_eval_lstm.py",
+      "bytes": 14358,
+      "sha256": "4ca59ec7ca9c9718b00d49661da5616142b45a2882b46c2d8ee3a3fde8ab12e5"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_eval_lstm_5runs.py",
+      "bytes": 22020,
+      "sha256": "d35e23d1456ec940f908e6ba33e2d8943ab261a52b721c4a6f0def945a5651a9"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_saclstm_s14_nowind_5runs.py",
+      "bytes": 928,
+      "sha256": "fc8e4591efbc1613dff09fe074bb0449ebe9ccadefae7f0d38dcc1813f21572b"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_sac_s14_nowind_5runs.py",
+      "bytes": 894,
+      "sha256": "19bf6ba8223dce78efb3adcb6abfcbb3b514cfa0301d7082b8c6d7c173780b9d"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/test_sac_s14_wind_5runs.py",
+      "bytes": 880,
+      "sha256": "ea8bfec95d89178780fccc2c4b43dc530dac360831f542a5d6b50397fb41cb53"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/train_saclstm_s14_nowind.py",
+      "bytes": 21463,
+      "sha256": "12dd5f327ac8eb460b20a1351192bb2601614d9b797d08eaf6cb6bebcaf160d8"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/train_sac_s14_nowind.py",
+      "bytes": 19392,
+      "sha256": "2b04b899209dc915b23059e918412a4ef6b083b0aafd4d832dabc2b0232a7317"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/train_sac_s14_wind.py",
+      "bytes": 19386,
+      "sha256": "6de1f33bd6861b1dec4a8951e0784d0f127878d981e753c82b11129181c7d179"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/utils_fc.py",
+      "bytes": 7283,
+      "sha256": "dd5a91d85e6fcad199f78618a1c8f78b4dd904b131d2cbfab64b3d56ba210fa3"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/utils_lstm.py",
+      "bytes": 22520,
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/seed_eval_suite/analyze_seed_eval_results.py",
+      "bytes": 22703,
+      "sha256": "381b278b143e6d559073d42bde6bbf6fa399b1c155f52790f12a3b6af944fb73"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/seed_eval_suite/batch_eval_seed_ablation.py",
+      "bytes": 32751,
+      "sha256": "a48f10b1e9ae242cbb78482f468657965e725368d40c52025b3e582f344e0361"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/seed_eval_suite/README.md",
+      "bytes": 992,
+      "sha256": "573a43d336464e413693edbe979a187c1f0f57b00e0393f27b922fe8950e6a80"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/seed_eval_suite/seed_eval_results/seed_eval_20260518_002624/简单分析/seed_ablation_analysis.md",
+      "bytes": 4560,
+      "sha256": "31189b4dd225e18a6ada37f4df0558ab7ddf94d5d5a5fdff9c6eeb31c8984551"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/batch_eval_lstm.py",
+      "bytes": 10502,
+      "sha256": "5145de127d3976f70878d1e76aa40441dfb0b587be699ec413c6e0d8ad8144d7"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/noise_utils.py",
+      "bytes": 13165,
+      "sha256": "cdeba6550b2339572ca3e3c9519e0867c9e99a435bff66dd8fd7e7e36c9f1bad"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/noise_utils_nowind.py",
+      "bytes": 12348,
+      "sha256": "cc4878135c684c0fb2934de44542582cddf19b8ebb72030f42a0e10815f23a6a"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/TD3_lstm_normal.py",
+      "bytes": 19240,
+      "sha256": "5df57b7dd0cc0ba01afb877bae4a01853192fe019ce5a84b96e07505f3344212"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/train_td3.py",
+      "bytes": 16694,
+      "sha256": "580c5469f7961152c2a0a823178dbdeb8fa7fc28e54d041e21111c0a43c6dcf8"
+    },
+    {
+      "path": "sailboat_RL/PART4/TD3/utils_lstm_normal.py",
+      "bytes": 20936,
+      "sha256": "ba77a3669f6db132f767a175c079611428c73665e5772d8799260563f82f5462"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/attention_analy.py",
+      "bytes": 35776,
+      "sha256": "4b704be17097ffb3e3ceb5baf1c6907639eb12bdad1d0549c3b7ef9df4f13b59"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/attention_test.py",
+      "bytes": 8292,
+      "sha256": "17629f4385a339394345db998cda54f8711df4485e5f70a89e9620d2ebe5cb55"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/batchtest.py",
+      "bytes": 9653,
+      "sha256": "8af71a63ff4066e9c99cfc187737d143c68d2027e350cd04633fe8f1499cc26f"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/modeltest_noise.py",
+      "bytes": 26630,
+      "sha256": "337e08ea53b219bf4ebfc2dc8713874e63851d22c45238fb488a0f4dfd3d85a0"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py",
+      "bytes": 13163,
+      "sha256": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/parll_lstm_att_normal.py",
+      "bytes": 21377,
+      "sha256": "7625d3331a7b655e21b38a96227ec86e7cbf2e5f083c62b47c762351a4d050e7"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py",
+      "bytes": 17983,
+      "sha256": "e2a7d72d094aa9c47294fd8d4da66129b7ab3b0f6fd96f5a206b40924acc67e3"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/totalplot.py",
+      "bytes": 6293,
+      "sha256": "baa21c187cf5ebb3133fb61afc599d5e642cd2888fd4dfe6219d6f50d1aaaec3"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py",
+      "bytes": 28238,
+      "sha256": "ff2e43e2ea40030b2c3eff44649fd9b59306dd0d042d9b0093e6584f8c0fd513"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-deep/batchtest.py",
+      "bytes": 7948,
+      "sha256": "5b842455db88e90ce3876e346de6da0f7644c76b0e0f50a2ade503bc83b61d73"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-deep/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-deep/parll_lstm_normal_deep.py",
+      "bytes": 18719,
+      "sha256": "fba4217d6d7a5243a6b3cce9a33760990782e8dec9034dee437280cabe16a8f0"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-deep/SAC_lstm_normal_deep.py",
+      "bytes": 19160,
+      "sha256": "a5f706870862e8c9fdb62ab5764352d4b7ba699ca92d49406fc7bcf9b774dc3d"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-deep/utils_lstm_normal_deep.py",
+      "bytes": 18096,
+      "sha256": "1523763f42a6991cd062033a4e1dc489945e8765494f29bb60c8a8f8e73afa7f"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/batchtest.py",
+      "bytes": 8115,
+      "sha256": "4fdda39fcb2caf3f06aeb871eb1add6cc50433f38ef1b7bf235d3300a3e524ee"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/globals.py",
+      "bytes": 653,
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/parll_lstm_meanpool.py",
+      "bytes": 18714,
+      "sha256": "076af4b39d8c64d73cec170af5e07c59ebcd73bc8da9f0b5f63ab406f05781f0"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/path_test.py",
+      "bytes": 17957,
+      "sha256": "9518868960da00a7205472532009d0fa8cb7a3915a5679559abb32de7b306344"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/SAC_lstm_meanpool.py",
+      "bytes": 17980,
+      "sha256": "7604ca2339afed4262ae00502ecfe5d1fb58987278e7bf20788996fd07187584"
+    },
+    {
+      "path": "sailboat_RL/PART5/SAC-LSTM-meanpool/utils_lstm_meanpool.py",
+      "bytes": 27098,
+      "sha256": "0516dece0a0b3a43a7953e01d343f0411544f33f17bf4122ce745413df7e9226"
+    }
+  ]
+}

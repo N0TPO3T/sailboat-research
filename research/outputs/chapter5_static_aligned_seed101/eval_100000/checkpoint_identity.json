@@ -1,0 +1,7 @@
+{
+  "sha256": {
+    "/home/ot/Students/hs/sailboat-research/research/outputs/chapter5_static_aligned_seed101/step_100000.pt": "20fa658b77667a12907cba90f75aebd45629944bf789d7adfaa3a7eaa72ebbfa"
+  },
+  "training_seed": 101,
+  "kind": "full_training_bundle"
+}

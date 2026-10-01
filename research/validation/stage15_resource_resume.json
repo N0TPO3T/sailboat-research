@@ -1,0 +1,9 @@
+{
+  "status": "RESUMED_SAME_PROCESS",
+  "pid": 2939240,
+  "start_ticks": "190975871",
+  "resumed_unix": 1789479723.8053455,
+  "paused_seconds": 15251.597067832947,
+  "gpu_snapshot": "GPU-fbd4af4c-f018-7c7f-4009-54173af18259, 2939240, 560 MiB\nGPU-53d5d44d-7c50-5088-0bb6-1c820ef24765, 3046155, 30686 MiB\n",
+  "stage_limit": 100000
+}

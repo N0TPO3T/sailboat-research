@@ -1,0 +1,13 @@
+Model: ppolstm_s14nowind_final @ step 7800
+Environment: sailboat-s14-nowind
+Seed: 42
+Total Steps: 612
+Total Reward: -417.7120
+Terminated: True
+Truncated: False
+Sensor Noise: True (3.0%)
+Actuator Noise: True (3.0%)
+Start Position: (0.13, 0.07)
+Final Position: (509.71, -2.20)
+Target Position: (500.00, 0.00)
+Final Distance to Target: 9.96 m
