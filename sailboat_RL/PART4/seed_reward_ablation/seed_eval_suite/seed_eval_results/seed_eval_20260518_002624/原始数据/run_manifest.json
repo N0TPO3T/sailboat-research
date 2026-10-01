@@ -1,0 +1,236 @@
+{
+  "created_at": "2026-05-18T01:42:21",
+  "script": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\seed_eval_suite\\batch_eval_seed_ablation.py",
+  "config_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\seed_eval_suite\\seed_eval_models.csv",
+  "model_dir": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model",
+  "output_dir": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\seed_eval_suite\\seed_eval_results\\seed_eval_20260518_002624",
+  "args": {
+    "config": "seed_eval_models.csv",
+    "model_dir": "../model",
+    "output_dir": "seed_eval_results",
+    "run_name": null,
+    "models": "all",
+    "random_episodes": 1000,
+    "fixed_wind_degs": "0,90,150,180",
+    "fixed_episodes": 200,
+    "max_steps": 1000,
+    "num_workers": 8,
+    "dvc": "cpu",
+    "enable_sensor_noise": true,
+    "enable_actuator_noise": true,
+    "sensor_noise_ratio": 0.03,
+    "actuator_noise_ratio": 0.03,
+    "dry_run": false
+  },
+  "models": [
+    {
+      "enabled": true,
+      "model_id": "saclstm_nowind_seed100",
+      "model_family": "SAC-LSTM",
+      "algo_type": "lstm",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 256,
+      "noise_type": "nowind",
+      "eval_seed": 100
+    },
+    {
+      "enabled": true,
+      "model_id": "saclstm_nowind_seed200",
+      "model_family": "SAC-LSTM",
+      "algo_type": "lstm",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed200",
+      "model_step": 7200,
+      "net_width": 256,
+      "noise_type": "nowind",
+      "eval_seed": 200
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_nowind_seed100",
+      "model_family": "SAC-nowind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "sac_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "nowind",
+      "eval_seed": 100
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_nowind_seed200",
+      "model_family": "SAC-nowind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "sac_s14nowind_buf1e6_seed200",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "nowind",
+      "eval_seed": 200
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_wind_seed100",
+      "model_family": "SAC-wind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-wind",
+      "model_prefix": "sac_s14wind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "wind",
+      "eval_seed": 100
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_wind_seed200",
+      "model_family": "SAC-wind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-wind",
+      "model_prefix": "sac_s14wind_buf1e6_seed200",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "wind",
+      "eval_seed": 200
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "random_wind",
+      "scenario_group": "random_wind",
+      "target_wind_deg": null,
+      "num_episodes": 1000,
+      "seed_offset": 0
+    },
+    {
+      "scenario": "fixed_wind_0",
+      "scenario_group": "fixed_wind",
+      "target_wind_deg": 0.0,
+      "num_episodes": 200,
+      "seed_offset": 1000000
+    },
+    {
+      "scenario": "fixed_wind_90",
+      "scenario_group": "fixed_wind",
+      "target_wind_deg": 90.0,
+      "num_episodes": 200,
+      "seed_offset": 2000000
+    },
+    {
+      "scenario": "fixed_wind_150",
+      "scenario_group": "fixed_wind",
+      "target_wind_deg": 150.0,
+      "num_episodes": 200,
+      "seed_offset": 3000000
+    },
+    {
+      "scenario": "fixed_wind_180",
+      "scenario_group": "fixed_wind",
+      "target_wind_deg": 180.0,
+      "num_episodes": 200,
+      "seed_offset": 4000000
+    }
+  ],
+  "checkpoints": [
+    {
+      "model_id": "saclstm_nowind_seed100",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2675522,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5083760,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1928
+    },
+    {
+      "model_id": "saclstm_nowind_seed200",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed200",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed200_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed200_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\saclstm_s14nowind_buf1e6_seed200_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2675522,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5083760,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1928
+    },
+    {
+      "model_id": "sac_nowind_seed100",
+      "model_prefix": "sac_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2694506,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5133710,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1904
+    },
+    {
+      "model_id": "sac_nowind_seed200",
+      "model_prefix": "sac_s14nowind_buf1e6_seed200",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed200_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed200_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14nowind_buf1e6_seed200_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2694506,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5133710,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1904
+    },
+    {
+      "model_id": "sac_wind_seed100",
+      "model_prefix": "sac_s14wind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2702670,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5150054,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1892
+    },
+    {
+      "model_id": "sac_wind_seed200",
+      "model_prefix": "sac_s14wind_buf1e6_seed200",
+      "model_step": 7200,
+      "actor_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed200_actor7200.pth",
+      "q_critic_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed200_q_critic7200.pth",
+      "normalizer_path": "D:\\Project\\26_4\\sailboat_RL\\PART4\\seed_reward_ablation\\model\\sac_s14wind_buf1e6_seed200_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2702670,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5150054,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1892
+    }
+  ],
+  "environment": {
+    "python": "3.11.15 | packaged by Anaconda, Inc. | (main, Mar 11 2026, 17:12:15) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.11.0+cu128",
+    "numpy": "2.4.4",
+    "gymnasium": "0.29.1"
+  },
+  "output_files": [
+    "episodes.csv",
+    "summary_by_checkpoint_scenario.csv",
+    "summary_by_model_family_scenario.csv",
+    "boxplot_values.csv",
+    "run_manifest.json"
+  ]
+}

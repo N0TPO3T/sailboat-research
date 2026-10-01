@@ -6,30 +6,29 @@
 
 | 路径 | 来源与职责 |
 | --- | --- |
-| `sailboat_RL/` | 师兄参考仓库的固定子模块，提交 `19422525cb337831ca68f53a45661d34f3683ee1`；不以新代码覆盖 |
+| `sailboat_RL/` | 主仓库直接跟踪的原版参考目录，677 个文件来自提交 `19422525cb337831ca68f53a45661d34f3683ee1`，逐字节保留；不是子模块或第二个工作仓库 |
 | `engineering/sailboat_rl/` | 海南工程分支 `143a508c422f746adb7af3577818060053f2620b` 的第四章环境、SAC/SAC-LSTM、续训与评估实现 |
-| `engineering/tests/` | 海南工程回归测试；参考环境路径适配到固定子模块 |
+| `engineering/tests/` | 海南工程回归测试；参考环境路径指向同仓库的 `sailboat_RL/` |
 | `research/` | 主服务器保存的第五章静态基线恢复、诊断与独立研究工具 |
 | `configs/`、`docs/` | 主服务器对应配置与研究说明；历史文档中的旧状态不覆盖根目录当前事实 |
 | `model/` | 原研究仓库已跟踪的三套第四章参考检查点 |
 
-`engineering/` 是独立源码根。Windows 默认不区分大小写，不能把 `sailboat_rl/` 和 `sailboat_RL/` 同时放在根目录。不得通过改大小写、混入子模块或修改已安装 Gymnasium 来解决导入问题。
+`engineering/` 是独立源码根。Windows 默认不区分大小写，不能把 `sailboat_rl/` 和 `sailboat_RL/` 同时放在根目录。参考实现和工程实现职责不同，不能只因名称相似就相互覆盖或删除。
 
-保留的原始海南历史位于 `archive/hainan-learner-sync-v2`；另一个恢复出的历史提交位于 `archive/hainan-recovered-extra`。整合分支保留研究仓库和海南工程分支两条父历史。原始主服务器资料与资产见本次整合的来源清单和 GitHub Release，而非仅依赖工作区时间戳。
+保留的原始海南历史位于 `archive/hainan-learner-sync-v2`；另一个恢复出的历史提交位于 `archive/hainan-recovered-extra`。主仓库历史保留研究与海南工程两条来源。旧 `N0TPO3T/sailboat_RL` 仓库仅归档留证，不再用于开发或克隆依赖；原始服务器资料与资产保存在来源清单和 GitHub Release 中。
 
 ## 克隆与日常 Git
 
 ```bash
-git clone --branch integration/local-consolidation-20261001 --recurse-submodules https://github.com/N0TPO3T/sailboat-research.git
+git clone https://github.com/N0TPO3T/sailboat-research.git
 ```
 
-整合版位于上述分支，原 `main` 未改动。两个仓库均为私有仓库，需要有访问权限的 GitHub 认证。不要将令牌写进远程 URL、脚本或仓库文件。
+唯一日常开发入口是本仓库的 `main`。一次普通克隆即可得到完整源码，不需要 `--recurse-submodules`、`git submodule update` 或旧仓库的访问权限。本仓库是私有仓库，需要 GitHub 认证；不要将令牌写进远程 URL、脚本或仓库文件。
 
 已有工作区先检查本地修改；工作区干净时才执行：
 
 ```bash
 git pull --ff-only
-git submodule update --init --recursive
 ```
 
 新修改使用工作分支、显式选择提交路径；不强推，不对来源副本执行 `reset --hard` 或 `clean`。不要同时在两台机器修改同一工作分支。
@@ -60,9 +59,9 @@ python -B -m sailboat_rl.evaluation.batch_eval \
 python -B -m unittest discover -s engineering/tests -p 'test_*.py'
 ```
 
-依赖包括 PyTorch、NumPy、SciPy、Gymnasium、Pandas、Matplotlib、Pygame、stable-baselines3 和 tqdm；原环境版本与运行证据见来源清单及 `PROJECT_STATE.md`。子模块中的 requirements 是原版记录，不代表已经验证过的跨平台锁文件。
+依赖包括 PyTorch、NumPy、SciPy、Gymnasium、Pandas、Matplotlib、Pygame、stable-baselines3 和 tqdm；原环境版本与运行证据见来源清单及 `PROJECT_STATE.md`。`sailboat_RL/requirements.txt` 是原版记录，不代表已经验证过的跨平台锁文件。
 
-第五章研究工具仍显式复用固定子模块，不自动替换为海南工程实现。部分第五章工具有 Linux/hs 路径约束；本机负责编辑与版本管理，完整运行验证放主服务器的独立目录。
+第五章研究工具仍显式复用同仓库中的原版参考目录，不自动替换为海南工程实现。部分第五章工具有 Linux/hs 路径约束；本机负责编辑与版本管理，完整运行验证放主服务器的独立目录。
 
 训练、续训、正式评估、资源调度与检查点选择必须依据当前计划单独执行；本次版本整理不代表训练获准，也不代表旧检查点通过论文复现。
 
@@ -93,4 +92,4 @@ with Path(manifest["archive"]).open("rb") as archive:
     assert hashlib.file_digest(archive, "sha256").hexdigest() == manifest["sha256"]
 ```
 
-整体 SHA256 还必须与 Git 中 `research/validation/consolidation_20261001.json` 核对。然后解压到新的来源目录，不直接覆盖正式工作区。归档根目录中的 `sailboat-research/` 是主服务器原样快照，不含后来整合的 `engineering/`；最终代码应始终从上述 Git 分支克隆。只需要原始代码与文字证据时，可改下载 `primary-source.tar.gz.part*` 并使用对应清单。
+整体 SHA256 还必须与 Git 中 `research/validation/consolidation_20261001.json` 核对。然后解压到新的来源目录，不直接覆盖正式工作区。归档根目录中的 `sailboat-research/` 是主服务器原样快照，不含后来整合的 `engineering/`；最终代码应始终从唯一主仓库的 `main` 克隆。只需要原始代码与文字证据时，可改下载 `primary-source.tar.gz.part*` 并使用对应清单。

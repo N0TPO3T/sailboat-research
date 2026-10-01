@@ -8,21 +8,21 @@
 
 ## 唯一开发入口与来源
 - Windows 正式目录：`C:\Users\74095\hs\SailBoat\sailboat-research`；GitHub：私有仓库 `N0TPO3T/sailboat-research`。
-- 原研究主仓库基点：`ce83544e8dfd6a6833da03d626025b4e0a2ba000`，原 main 保持不动；本次在 `integration/local-consolidation-20261001` 整合。
-- `sailboat_RL/` 是固定子模块，来源 `N0TPO3T/sailboat_RL`，提交 `19422525cb337831ca68f53a45661d34f3683ee1`；师兄原版不修改。
+- 唯一日常开发分支为 `main`；原研究基点 `ce83544e8dfd6a6833da03d626025b4e0a2ba000` 和后续整合提交保留在历史中，不再要求使用临时整合分支。
+- `sailboat_RL/` 是主仓库直接跟踪的普通参考目录，677 个文件及文件模式来自 `19422525cb337831ca68f53a45661d34f3683ee1`，内容逐字节保留。已移除子模块依赖；旧 `N0TPO3T/sailboat_RL` 只归档留证，不作为开发入口。
 - 海南工程提交：`143a508c422f746adb7af3577818060053f2620b`，比师兄基点多 8 个提交。它没有改动原 PART4/PART5、Gymnasium 参考目录和 requirements，而是增加独立工程包、回归测试及工程上下文。
 - 海南下载工作区不完整，原 pack/index 不匹配；123 个有效 loose objects 经 SHA1 校验后与 GitHub 基础历史合并，完整 Git 对象校验通过。原下载保持不动，不能用其零字节工作文件覆盖有效源码。
 - 海南完整原始历史保存于 `archive/hainan-learner-sync-v2`；另一个可恢复历史提交 `8837440c9eec84fd68cd757845b89f3981103279` 保存于 `archive/hainan-recovered-extra`，不是当前工程版本。
 - `engineering/sailboat_rl/` 和 `engineering/tests/` 保存海南工程实现；仅测试参考路径按整合目录适配。独立源码根避免 Windows 上 `sailboat_rl` 与 `sailboat_RL` 的大小写冲突。
 - `research/`、`configs/`、`docs/` 导入自主服务器 `/home/ot/Students/hs/sailboat-research`，该目录是部署副本而非 Git 仓库。它包含原 GitHub 没有的后续研究工作。
-- 主服务器源快照中 489 个参考仓库文件逐项与固定提交 blob 哈希一致；未把部署目录冒充完整参考仓库，缺失文件由固定子模块提供。
+- 主服务器源快照中 489 个参考文件与原版提交 blob 哈希一致；完整原版的 677 个文件已纳入本仓库，不依赖旧仓库补齐。
 - 原始主服务器上下文、部署前/后 TAR 与运行产物保存在来源归档中；根目录只维护协调后的当前事实。来源清单见 `research/validation/consolidation_20261001.json`。
 
 ## 目录与运行职责
 - `research/chapter5_static.py`：第五章静态 bank/evaluate/plot/train/freeze 工具，明确区分 Legacy 与 Aligned 协议；配套 `chapter5_baseline.py`、`chapter5_artifacts.py`、`pretrain_static_sanity.py`、`static_training_report.py`、`v2_v3_static_parity.py` 和 `test_chapter5_static.py`。
 - `configs/chapter5_static_aligned.json`：当前 corrected-V3、Aligned、seed101 配置；固定开发 bank 位于 `research/validation/static_eval_bank.json`。
 - `engineering/sailboat_rl/`：第四章 14/16 维环境、SAC-FC/SAC-LSTM、优先回放、续训状态与评估实现。它不是第五章 18 维注意力研究入口，不能自动替代后者。
-- `research/smoke_baseline.py`：使用未修改子模块与根目录 `model/` 的第四章 CPU 闭环验证；不代表海南工程代码已验证。
+- `research/smoke_baseline.py`：使用同仓库内未改动的原版参考文件与根目录 `model/` 的第四章 CPU 闭环验证；不代表海南工程代码已验证。
 - `model/`：原 Git 已跟踪的三套第四章检查点，共 12 个文件；`师兄大论文.pdf`、`yara.pdf` 是原研究资料。
 - 安装、克隆和有界 CPU 命令见根 `README.md`。工程命令须设置 `PYTHONPATH` 指向 `engineering/`。
 - `.venv`、缓存、凭据不迁移；部分第五章工具依赖 Linux、fcntl 和 hs 路径约束。Windows 负责编辑/Git，主服务器负责实际运行。

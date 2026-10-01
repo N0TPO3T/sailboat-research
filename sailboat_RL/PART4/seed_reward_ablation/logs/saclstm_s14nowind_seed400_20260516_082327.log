@@ -1,0 +1,7 @@
+Namespace(dvc=device(type='cpu'), EnvIdex=0, write=True, render=False, Loadmodel=False, ModelIdex=0, seed=400, Max_train_steps=45, save_interval=600000, eval_interval=60000, update_every=8, gamma=0.98, net_width=256, a_lr=5e-05, c_lr=5e-05, batch_size=256, alpha=0.2, adaptive_alpha=True, num_envs=15, enable_sensor_noise=True, enable_actuator_noise=True, sensor_noise_ratio=0.03, actuator_noise_ratio=0.03)
+Env:sailboat-s14-nowind  state_dim:14  action_dim:2  max_a_s:0.1745329201221466  max_a_r:0.1745329201221466 min_a_s:(np.float32(-0.17453292), np.float32(-0.17453292))  max_e_steps:1000
+Noise Config: sensor_noise=True(3.0%), actuator_noise=True(3.0%)
+Random Seed: 400
+
+Training:   0%|          | 0/45 [00:00<?, ?it/s]
+Training: 100%|��������������������| 45/45 [00:00<00:00, 720.10it/s]

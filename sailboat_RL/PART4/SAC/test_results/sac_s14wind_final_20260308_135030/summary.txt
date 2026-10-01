@@ -1,0 +1,13 @@
+Model: sac_s14wind_final @ step 9000
+Environment: sailboat-s14-wind
+Seed: 42
+Total Steps: 335
+Total Reward: 326.0562
+Terminated: True
+Truncated: False
+Sensor Noise: True (3.0%)
+Actuator Noise: True (3.0%)
+Start Position: (-0.12, -0.08)
+Final Position: (508.98, 4.18)
+Target Position: (500.00, 0.00)
+Final Distance to Target: 9.91 m

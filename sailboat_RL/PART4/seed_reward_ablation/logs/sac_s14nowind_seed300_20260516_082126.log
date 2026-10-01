@@ -1,0 +1,20 @@
+Namespace(dvc=device(type='cpu'), EnvIdex=0, write=True, render=False, Loadmodel=False, ModelIdex=9000, seed=300, Max_train_steps=45, save_interval=600000, eval_interval=60000, update_every=8, gamma=0.98, net_width=1024, a_lr=5e-05, c_lr=5e-05, batch_size=256, alpha=0.2, adaptive_alpha=True, num_envs=15, enable_sensor_noise=True, enable_actuator_noise=True, sensor_noise_ratio=0.03, actuator_noise_ratio=0.03)
+Traceback (most recent call last):
+  File "D:\Project\26_4\sailboat_RL\PART4\seed_reward_ablation\train_sac_s14_nowind.py", line 316, in <module>
+    main()
+  File "D:\Project\26_4\sailboat_RL\PART4\seed_reward_ablation\train_sac_s14_nowind.py", line 75, in main
+    env = SubprocVecEnv(env_fns)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anadonda3\envs\sailboat\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 116, in __init__
+    self.remotes, self.work_remotes = zip(*[ctx.Pipe() for _ in range(n_envs)], strict=True)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\anadonda3\envs\sailboat\Lib\site-packages\stable_baselines3\common\vec_env\subproc_vec_env.py", line 116, in <listcomp>
+    self.remotes, self.work_remotes = zip(*[ctx.Pipe() for _ in range(n_envs)], strict=True)
+                                            ^^^^^^^^^^
+  File "D:\anadonda3\envs\sailboat\Lib\multiprocessing\context.py", line 63, in Pipe
+    return Pipe(duplex)
+           ^^^^^^^^^^^^
+  File "D:\anadonda3\envs\sailboat\Lib\multiprocessing\connection.py", line 575, in Pipe
+    h2 = _winapi.CreateFile(
+         ^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] �ܾ����ʡ�
