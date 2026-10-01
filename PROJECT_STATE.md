@@ -53,6 +53,8 @@
 - 同步必须先核对远程改动，不能把原部署目录当作可删除的镜像。默认本地修改提交，再部署到独立版本目录验证，不覆盖正在使用的实验工作区。
 - 模型库、完整运行 checkpoint 与大体积输出不加入普通 Git；小型源码、配置、清单及必要收据进 Git，完整归档放私有 GitHub Release。恢复时按清单校验 SHA256。
 - 原始两个 hs TAR 的成员已检查，包含静态恢复代码/配置/部署收据，没有补齐此前文档提及的动态研究文件。
+- 完整主服务器归档已下载并核对整体 SHA256，大小 1,020,662,564 字节、包含 1,115 个文件；原始归档与解压快照保存在 `C:\Users\74095\hs\SailBoat\source-backups\20261001`。
+- 正式本地项目已补齐 439 个此前未复制的资产，没有覆盖冲突。`step_100000.pt` 与历史收据的 SHA256 `20fa658b77667a12907cba90f75aebd45629944bf789d7adfaa3a7eaa72ebbfa` 一致，五项关联运行证据哈希也一致；不改写旧收据当时的 `checkpoint_local_copy=false`。
 
 ## 尚未恢复的资料
 - 主服务器/本次 TAR 中未发现 `research/idea-stage/IDEA_REPORT.md`、`research/navigation_trace.py`、`research/dynamic_observation.py`、`docs/DYNAMIC_OBSTACLE_CODE_AUDIT.md`、`docs/CHAPTER5_ARTIFACT_SEARCH.md` 等旧文档引用目标。
@@ -60,8 +62,9 @@
 - 第五章最终论文模型身份、原训练环境与实际统计仍未完全绑定；本次归档与代码整理不解决这些研究未知。
 
 ## 本次整合验证
-- 在主服务器新建独立验证目录 `integration-check-20261001-ce83544-143a508/source`，不覆盖原项目；禁用 CUDA，CPU 线程限制为 1。仅把缺失的 stable-baselines3 2.8.0 安装到独立验证 deps，不修改原 `.venv` 或共享 base。
+- 验证在主服务器独立临时目录 `integration-check-20261001-ce83544-143a508/source` 完成，不覆盖原项目；禁用 CUDA，CPU 线程限制为 1。缺失的 stable-baselines3 2.8.0 只安装到临时 deps；验证收据已保存，临时目录已清理，原 `.venv` 与共享 base 未修改。
 - 海南工程回归：31 项运行，30 项通过、1 项跳过；第五章静态回归：10 项全部通过。
 - 原版三套第四章模型分别完成 50 步有限 CPU 闭环，障碍环境额外完成至多 5 步零动作检查；见 `research/validation/consolidation_reference_smoke_20261001.json`。
 - 海南工程 CLI 使用三套 seed100 模型各完成 1 个场景、5 步评估，生成 3 行 episodes 与汇总；见 `research/validation/consolidation_engine_smoke_20261001/`。
+- 本机六个 Actor/normalizer 文件与实际 CPU 冒烟使用的服务器文件 SHA256 一致；9 卷源码归档的本地重组与整体 SHA256 验证通过。
 - 本次验证不证明策略成功率、GPU 性能或论文复现；未启动正式训练、续训、500k 或 CPA。源代码自带历史空白/格式问题保持原样，不借整理任务批量格式化。
