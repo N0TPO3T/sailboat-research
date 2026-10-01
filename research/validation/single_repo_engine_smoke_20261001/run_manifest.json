@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-10-01T19:48:18",
+  "script": "/home/ot/Students/hs/single-repo-check-2096eb8/source/engineering/sailboat_rl/evaluation/batch_eval.py",
+  "config_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/engineering/sailboat_rl/evaluation/seed_eval_models.csv",
+  "model_dir": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model",
+  "output_dir": "/home/ot/Students/hs/single-repo-check-2096eb8/source/engineering/research/outputs/single_repo_engine_smoke/seed_eval_20261001_194818",
+  "args": {
+    "config": "/home/ot/Students/hs/single-repo-check-2096eb8/source/engineering/sailboat_rl/evaluation/seed_eval_models.csv",
+    "model_dir": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model",
+    "output_dir": "research/outputs/single_repo_engine_smoke",
+    "run_name": null,
+    "models": "saclstm_nowind_seed100,sac_nowind_seed100,sac_wind_seed100",
+    "random_episodes": 1,
+    "fixed_wind_degs": "0,90,150,180",
+    "fixed_episodes": 0,
+    "max_steps": 5,
+    "num_workers": 1,
+    "dvc": "cpu",
+    "enable_sensor_noise": true,
+    "enable_actuator_noise": true,
+    "sensor_noise_ratio": 0.03,
+    "actuator_noise_ratio": 0.03,
+    "dry_run": false
+  },
+  "models": [
+    {
+      "enabled": true,
+      "model_id": "saclstm_nowind_seed100",
+      "model_family": "SAC-LSTM",
+      "algo_type": "lstm",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 256,
+      "noise_type": "nowind",
+      "eval_seed": 100
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_nowind_seed100",
+      "model_family": "SAC-nowind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-nowind",
+      "model_prefix": "sac_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "nowind",
+      "eval_seed": 100
+    },
+    {
+      "enabled": true,
+      "model_id": "sac_wind_seed100",
+      "model_family": "SAC-wind",
+      "algo_type": "fc",
+      "env_name": "sailboat-s14-wind",
+      "model_prefix": "sac_s14wind_buf1e6_seed100",
+      "model_step": 7200,
+      "net_width": 1024,
+      "noise_type": "wind",
+      "eval_seed": 100
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": "random_wind",
+      "scenario_group": "random_wind",
+      "target_wind_deg": null,
+      "num_episodes": 1,
+      "seed_offset": 0
+    }
+  ],
+  "checkpoints": [
+    {
+      "model_id": "saclstm_nowind_seed100",
+      "model_prefix": "saclstm_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/saclstm_s14nowind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/saclstm_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/saclstm_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2675522,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5083760,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1928
+    },
+    {
+      "model_id": "sac_nowind_seed100",
+      "model_prefix": "sac_s14nowind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14nowind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2694506,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5133710,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1904
+    },
+    {
+      "model_id": "sac_wind_seed100",
+      "model_prefix": "sac_s14wind_buf1e6_seed100",
+      "model_step": 7200,
+      "actor_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14wind_buf1e6_seed100_actor7200.pth",
+      "q_critic_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14wind_buf1e6_seed100_q_critic7200.pth",
+      "normalizer_path": "/home/ot/Students/hs/single-repo-check-2096eb8/source/model/sac_s14wind_buf1e6_seed100_normalizer7200.pth",
+      "actor_exists": true,
+      "actor_bytes": 2702670,
+      "q_critic_exists": true,
+      "q_critic_bytes": 5150054,
+      "normalizer_exists": true,
+      "normalizer_bytes": 1892
+    }
+  ],
+  "environment": {
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+    "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "gymnasium": "1.3.0"
+  },
+  "output_files": [
+    "episodes.csv",
+    "summary_by_checkpoint_scenario.csv",
+    "summary_by_model_family_scenario.csv",
+    "boxplot_values.csv",
+    "run_manifest.json"
+  ]
+}

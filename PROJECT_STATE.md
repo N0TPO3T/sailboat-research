@@ -61,10 +61,11 @@
 - 这些引用可能来自原 Mac 工作区；不创建空文件冒充恢复，不据文字声明动态代码已整合。保留来源原文供后续核对。
 - 第五章最终论文模型身份、原训练环境与实际统计仍未完全绑定；本次归档与代码整理不解决这些研究未知。
 
-## 本次整合验证
-- 验证在主服务器独立临时目录 `integration-check-20261001-ce83544-143a508/source` 完成，不覆盖原项目；禁用 CUDA，CPU 线程限制为 1。缺失的 stable-baselines3 2.8.0 只安装到临时 deps；验证收据已保存，临时目录已清理，原 `.venv` 与共享 base 未修改。
+## 当前验证边界
+- 已从 GitHub 进行不带递归子模块的全新普通克隆：零 gitlink、零嵌套仓库，677 个参考文件逐字节及目录树哈希与原提交一致。证据见 `research/validation/single_repository_20261001.json`。
+- 将这份克隆中的运行源码部署到主服务器独立临时目录验证，禁用 CUDA，CPU 线程为 1；缺失依赖只安装在临时 deps，验证后已清理。原服务器项目、`.venv` 与共享 base 未修改。
 - 海南工程回归：31 项运行，30 项通过、1 项跳过；第五章静态回归：10 项全部通过。
-- 原版三套第四章模型分别完成 50 步有限 CPU 闭环，障碍环境额外完成至多 5 步零动作检查；见 `research/validation/consolidation_reference_smoke_20261001.json`。
-- 海南工程 CLI 使用三套 seed100 模型各完成 1 个场景、5 步评估，生成 3 行 episodes 与汇总；见 `research/validation/consolidation_engine_smoke_20261001/`。
+- 原版三套第四章模型分别完成 50 步有限 CPU 闭环，障碍环境额外完成至多 5 步零动作检查；最新证据见 `research/validation/single_repo_reference_smoke_20261001.json`。
+- 海南工程 CLI 使用三套 seed100 模型各完成 1 个场景、5 步评估，生成 3 行 episodes 与汇总；最新证据见 `research/validation/single_repo_engine_smoke_20261001/`。
 - 本机六个 Actor/normalizer 文件与实际 CPU 冒烟使用的服务器文件 SHA256 一致；9 卷源码归档的本地重组与整体 SHA256 验证通过。
 - 本次验证不证明策略成功率、GPU 性能或论文复现；未启动正式训练、续训、500k 或 CPA。源代码自带历史空白/格式问题保持原样，不借整理任务批量格式化。

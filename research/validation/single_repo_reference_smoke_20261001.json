@@ -1,0 +1,58 @@
+{
+  "purpose": "CPU engineering smoke; not a benchmark or paper reproduction",
+  "steps_limit": 50,
+  "noise": "no additional sensor/actuator wrapper; environment wind retained",
+  "versions": {
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "gymnasium": "1.3.0"
+  },
+  "cases": [
+    {
+      "model": "sac_s14nowind_buf1e6_seed100",
+      "steps": 50,
+      "finite": true,
+      "terminated": false,
+      "truncated": false,
+      "reward": 120.74949504435062,
+      "final_distance": 336.4263916015625,
+      "seconds": 1.4469270850531757
+    },
+    {
+      "model": "sac_s14wind_buf1e6_seed100",
+      "steps": 50,
+      "finite": true,
+      "terminated": false,
+      "truncated": false,
+      "reward": -42.4937442317605,
+      "final_distance": 479.39703369140625,
+      "seconds": 1.4421027251519263
+    },
+    {
+      "model": "saclstm_s14nowind_buf1e6_seed100",
+      "steps": 50,
+      "finite": true,
+      "terminated": false,
+      "truncated": false,
+      "reward": 139.8872508108616,
+      "final_distance": 318.6406555175781,
+      "seconds": 1.4552089031785727
+    }
+  ],
+  "obstacle_environment": "reset + up to 5 zero-action steps passed; no policy tested",
+  "source_sha256": {
+    "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14.py": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313",
+    "model/sac_s14nowind_buf1e6_seed100_actor7200.pth": "7ce53df5a0800e26521b96b7f3cd1bf605c940f091832d6449602838e9977a82",
+    "model/sac_s14nowind_buf1e6_seed100_normalizer7200.pth": "2722c9645cbd257e295ea92569cd07c4262092d652574bea20accf0ce1557f46",
+    "sailboat_RL/PART4/SAC/utils_fc.py": "cfd4c2b9a14d477cc8e68f32f070a2323992b23d6be870b00254bee26d9dbf39",
+    "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_wind.py": "2e589db34922b4cad671dacc43fed8ce64b4fc825de1e2ecb8e1426ae135f75d",
+    "model/sac_s14wind_buf1e6_seed100_actor7200.pth": "4705c877dd12d29b5fd3a340e85b15ca4117e4a496d6d425f336b78c678510c6",
+    "model/sac_s14wind_buf1e6_seed100_normalizer7200.pth": "8dd7d2a06e04931294ea61e3af6ab8ea27d73cea8853010a8f212068da04e518",
+    "model/saclstm_s14nowind_buf1e6_seed100_actor7200.pth": "c8cc1bc335c5bd4bfeed9100f5903e6d2849e35db9da3ea1a035fbbbe6f9e739",
+    "model/saclstm_s14nowind_buf1e6_seed100_normalizer7200.pth": "1de337a2b66452554f691d23d9a2fc4d622970c9b94426349543b0f8f22d3097",
+    "sailboat_RL/PART4/SAC/utils_lstm.py": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4",
+    "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+  }
+}
