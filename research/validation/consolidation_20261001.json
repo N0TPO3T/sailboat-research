@@ -12,7 +12,9 @@
   "primary_reference_differences": [],
   "release_tag": "consolidated-20261001",
   "full_archive": {
-    "asset": "primary-project-complete.tar.gz",
+    "archive": "primary-project-complete.tar.gz",
+    "asset_pattern": "primary-project-complete.tar.gz.part*",
+    "parts_manifest": "primary-project-complete.tar.gz.parts.json",
     "sha256": "548c800ccb287b2f64eb83f6a651495a5809f5d8e397bbd0edc5e7e077d619a9",
     "exclusions": [
       ".venv",
@@ -22,7 +24,9 @@
     ]
   },
   "source_archive": {
-    "asset": "primary-source.tar.gz",
+    "archive": "primary-source.tar.gz",
+    "asset_pattern": "primary-source.tar.gz.part*",
+    "parts_manifest": "primary-source.tar.gz.parts.json",
     "sha256": "bd4b0c9c335546db284cd2f4edb4b5311de7c122be72355267a29568cb91d7b5",
     "additional_exclusions": [
       "*.pth",

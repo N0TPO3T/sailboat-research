@@ -69,3 +69,28 @@ python -B -m unittest discover -s engineering/tests -p 'test_*.py'
 ## 大文件与证据
 
 模型库、完整训练 checkpoint、输出与原始备份不直接加入普通 Git。代码、配置、来源清单和必要的小型验证收据由 Git 跟踪；完整源资料归档作为同一私有仓库的 Release 附件保存，下载后先核对 SHA256，再按原路径恢复。历史模型的文件名、能加载或一次有限前向都不证明训练身份、语义兼容或策略性能。
+
+归档按 4 MiB 分卷上传，避免当前网络的大文件上传中断。使用已认证的 GitHub CLI 下载到**新目录**（`GH_TOKEN` 可由环境提供）：
+
+```bash
+gh release download consolidated-20261001 --repo N0TPO3T/sailboat-research --pattern "primary-project-complete.tar.gz.part*" --dir restored-assets
+```
+
+下载模式同时包含 `.parts.json` 清单和 `.part000` 等分卷。在 `restored-assets` 内用 Python 3.11+ 按清单顺序拼接并核对每卷与整体哈希：
+
+```python
+import hashlib, json
+from pathlib import Path
+
+manifest = json.loads(Path("primary-project-complete.tar.gz.parts.json").read_text())
+with Path(manifest["archive"]).open("xb") as output:
+    for part in manifest["parts"]:
+        data = Path(part["name"]).read_bytes()
+        assert len(data) == part["bytes"]
+        assert hashlib.sha256(data).hexdigest() == part["sha256"]
+        output.write(data)
+with Path(manifest["archive"]).open("rb") as archive:
+    assert hashlib.file_digest(archive, "sha256").hexdigest() == manifest["sha256"]
+```
+
+整体 SHA256 还必须与 Git 中 `research/validation/consolidation_20261001.json` 核对。然后解压到新的来源目录，不直接覆盖正式工作区。归档根目录中的 `sailboat-research/` 是主服务器原样快照，不含后来整合的 `engineering/`；最终代码应始终从上述 Git 分支克隆。只需要原始代码与文字证据时，可改下载 `primary-source.tar.gz.part*` 并使用对应清单。
