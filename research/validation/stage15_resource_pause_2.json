@@ -1,0 +1,34 @@
+{
+  "status": "PAUSED_WAITING_FOR_IDLE_GPU0",
+  "pause_number": 2,
+  "pid": 2939240,
+  "start_ticks": "190975871",
+  "paused_unix": 1789480461.2442794,
+  "gpu_snapshot": "GPU-fbd4af4c-f018-7c7f-4009-54173af18259, 2939240, 758 MiB\nGPU-fbd4af4c-f018-7c7f-4009-54173af18259, 3135486, 43888 MiB\nGPU-53d5d44d-7c50-5088-0bb6-1c820ef24765, 3046155, 30564 MiB\n",
+  "last_flushed_training_event": {
+    "type": "update",
+    "step": 22000,
+    "q_loss": 3.2062184810638428,
+    "a_loss": 3.993523597717285,
+    "alpha_loss": -5.341945648193359,
+    "alpha": 0.19959640776969104,
+    "warmup": false,
+    "policy_updated": true,
+    "critic_update_count": 808,
+    "should_update_policy": true,
+    "action_saturation_fraction": 0.013671875,
+    "sample_entropy_estimate": 1.3149974346160889,
+    "q_abs_max": 108.83025360107422
+  },
+  "last_progress": {
+    "training_step": 22000,
+    "episodes": 24,
+    "wall_seconds": 16563.08907705522,
+    "action_saturation_fraction": 0.013671875,
+    "sample_entropy_estimate": 1.3149974346160889,
+    "q_abs_max": 108.83025360107422,
+    "gpu_snapshot": "0, 93, 44687\n1, 80, 30599"
+  },
+  "preservation": "RAM retained by SIGSTOP, no new durable checkpoint",
+  "resume_receipt": "research/validation/stage15_resource_resume_2.json"
+}

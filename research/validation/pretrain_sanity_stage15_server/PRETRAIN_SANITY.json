@@ -1,0 +1,44 @@
+{
+  "PRETRAIN_SANITY": "PASSED",
+  "checks": {
+    "reset": true,
+    "observation_finite": true,
+    "padding": true,
+    "pairing": true,
+    "normalization_finite": true,
+    "actor_finite": true,
+    "critic_finite": true,
+    "reward_decomposition": true,
+    "zero_hidden_window": true,
+    "attention_finite": true,
+    "safety_termination": true,
+    "strict_checkpoint_load": true,
+    "exact_resume": true,
+    "evaluation_rng_isolation": true,
+    "bank_unchanged": true
+  },
+  "regression_tests": 10,
+  "config_sha256": "1e26c257e1ab31da26f82fad8acb402b28361684d5e4da0d0e44b9c60e6cac3f",
+  "bank_file_sha256": "37b2b12057dbf4c84c21aa81da9a3fd4a57cccfacfe27bfbb0b659d274c33cb3",
+  "provenance": {
+    "config_sha256": "1e26c257e1ab31da26f82fad8acb402b28361684d5e4da0d0e44b9c60e6cac3f",
+    "bank_sha256": "0719885cc70a25d0a943380726880805e36c2a1bbf8337b2ab0db724798897fc",
+    "source_sha256": {
+      "research/chapter5_static.py": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+      "research/chapter5_baseline.py": "70f4359d7a4b183c834860765bc40aa55331b6972bb84791e6456b2391a18a72",
+      "sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py": "ff2e43e2ea40030b2c3eff44649fd9b59306dd0d042d9b0093e6584f8c0fd513",
+      "sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py": "e2a7d72d094aa9c47294fd8d4da66129b7ab3b0f6fd96f5a206b40924acc67e3",
+      "sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c",
+      "sailboat_RL/PART5/SAC-LSTM-att/globals.py": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f",
+      "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+    },
+    "git_revision": "ce83544e8dfd6a6833da03d626025b4e0a2ba000",
+    "git_tracked_diff_sha256": "ae6e2b67a928dfebd94eddac989d7768cfe28b8db78174c2b714e97ee666abd8",
+    "runtime": {
+      "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+      "torch": "2.13.0+cu130",
+      "numpy": "2.4.6"
+    }
+  },
+  "formal_training_steps": 0
+}

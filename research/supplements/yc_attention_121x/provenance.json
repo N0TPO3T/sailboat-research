@@ -1,0 +1,92 @@
+[
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1211_actor3600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_actor3600.pth",
+    "sha256": "e98280cd4641082ab2b97edf18c1094f1550926f78ce6989325671958e65e5da"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1211_q_critic3600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_q_critic3600.pth",
+    "sha256": "9d8c6e29802fb252dfb8e517f1107066390e7be839a2a47edffa717c92e86797"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1211_normalizer3600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_normalizer3600.pth",
+    "sha256": "fdc0a23b63b877b29157a8b97ab23acbf1b17134ebeb2a20bac4749dd067b944"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1213_actor15600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_actor15600.pth",
+    "sha256": "c6eec5e5887e129b0bd054694c53b406bd5a80e7a57db40978273ddc8a7af145"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1213_q_critic15600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_q_critic15600.pth",
+    "sha256": "9b0e5b8202b0cd1db861112320fb228c0e87ded007a081f24fcf43fe3a4682b9"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1213_normalizer15600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_normalizer15600.pth",
+    "sha256": "1ff2e8ca359a46916ae5e9b5e25eb45bab258452a473239c4efd34770ee52fd8"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1216_actor12600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_actor12600.pth",
+    "sha256": "0ab0c311b028183263465d2773d4346b73fa1c3bd993896d68c0ee80ce513a71"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1216_q_critic12600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_q_critic12600.pth",
+    "sha256": "58a1b986c4911c95d8e0822e50b1785a4ab29a0e9d1fcb5b3b423c39eae809ce"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/model/saclstm_s14obst_1216_normalizer12600.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_normalizer12600.pth",
+    "sha256": "2b337d355fbfcc0ebd891c5c30f14a3d72d1c43d67dc48f0887a48fec6908f32"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/utils_lstm_att_normal.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/utils_lstm_att_normal.py",
+    "sha256": "a63e5087c30ddf8108691107bbb298520400a53ee020f51275e4bbaff4f6a346"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/SAC_lstm_att_normal.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/SAC_lstm_att_normal.py",
+    "sha256": "f97e3f7fa4ca4f06d09708270fe95d3c770a50d84a3c564744a2dd68107f6844"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/parll_lstm_att_normal.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/parll_lstm_att_normal.py",
+    "sha256": "c0632d2f06ecec7150edccf0bac41f23c2de2810853916cb01e81e881507bdb8"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/parll_lstm_att_normal_awgn.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/parll_lstm_att_normal_awgn.py",
+    "sha256": "70be3be2c8db8b7d5319300e391c641c47372433f154b76c223827ad321d048e"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/modeltest_lstm_att.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/modeltest_lstm_att.py",
+    "sha256": "3cf531f2dc9311418c5b1fe9eeae05318a46ec6ac49a48c75d05b5b3e76f360b"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/globals.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/globals.py",
+    "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/lstm_att/attention_test.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/attention_test.py",
+    "sha256": "9b7969e4518bc87e2ab7f7caf87ec78ffebb42646659dfd616e4d1114123b57e"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/batch_test_lstm_att.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/parent_batch_test_lstm_att.py",
+    "sha256": "61f6c2cf110867f8b7d52c49682d5b7bc1dda5525bfaef7b2891e2af999bddca"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/modeltest_lstm_att.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_attention_121x/parent_modeltest_lstm_att.py",
+    "sha256": "7f731bd65cd33eec060ce46e6a4fd010fd5479475648eb47484b983fb6cc9ee9"
+  }
+]

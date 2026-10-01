@@ -1,0 +1,213 @@
+{
+  "schema": 1,
+  "baseline_definition": "Reimplemented Chapter-5-style Attention-SAC-LSTM baseline under corrected V3 observation and aligned temporal protocol",
+  "history_protocol": "aligned",
+  "environment": "v3",
+  "observation": [
+    "x",
+    "y",
+    "roll",
+    "heading",
+    "u",
+    "v",
+    "p",
+    "r",
+    "sail",
+    "rudder",
+    "distance_progress",
+    "x_progress",
+    "goal_x",
+    "goal_y",
+    "obs1_distance",
+    "obs1_bearing",
+    "obs2_distance",
+    "obs2_bearing"
+  ],
+  "action": {
+    "definition": [
+      "delta_sail",
+      "delta_rudder"
+    ],
+    "limit_rad": 0.17453292519943295,
+    "quantization": "reference signed floor to one degree",
+    "history": "normalized commanded action"
+  },
+  "wind": {
+    "mean_speed_m_s": 8.0,
+    "mean_direction_degrees": [
+      0,
+      90,
+      135,
+      180
+    ],
+    "model": "reference_v3_Dryden_AR",
+    "seed_stream": "isolated per-scenario NumPy RandomState"
+  },
+  "noise": {
+    "sensor_enabled": true,
+    "actuator_enabled": true,
+    "sensor_ratio": 0.03,
+    "actuator_ratio": 0.03,
+    "actuator_units": "physical radians before environment step",
+    "definition": "original noise_utils classes including clipping, deadzone, resolution and response errors"
+  },
+  "control_frequency_hz": 1,
+  "episode_limit": 1000,
+  "initial_heading_degrees": [
+    -180,
+    180
+  ],
+  "obstacles": {
+    "no_obstacle_probability": 0.3,
+    "training_static_layout": "random",
+    "count": [
+      5,
+      8
+    ],
+    "x_range_m": [
+      0,
+      500
+    ],
+    "y_range_m": [
+      -250,
+      250
+    ],
+    "minimum_spacing_m": 140,
+    "fov_degrees": 120,
+    "sensing_range_m": 150,
+    "selection": "nearest_two_from_reference_observed_cache",
+    "fixed_layout": [
+      [
+        190,
+        10
+      ],
+      [
+        90,
+        -90
+      ],
+      [
+        300,
+        -76
+      ],
+      [
+        330,
+        57
+      ],
+      [
+        197,
+        150
+      ],
+      [
+        160,
+        -220
+      ],
+      [
+        350,
+        -205
+      ]
+    ]
+  },
+  "safety": {
+    "distance_m": 40,
+    "detector": "accepted_integration_nodes_linear_segments",
+    "max_integration_step_s": 0.05,
+    "goal_distance_m": 10,
+    "boundary_radius_m": 750
+  },
+  "reward": {
+    "implementation": "unmodified V3 calculate_reward",
+    "progress_distance": 2,
+    "progress_x": 1,
+    "velocity_shaping": 0.5,
+    "base_scale": 0.2,
+    "small_action_scale_increment": 0.02,
+    "large_action_penalty_per_degree": 0.5,
+    "obstacle_coefficient": 1,
+    "obstacle_decay_m": 20,
+    "obstacle_alert_m": 150,
+    "checkpoint_rewards": [
+      3,
+      5,
+      12
+    ],
+    "arrival": 40,
+    "truncated": -100,
+    "fixed": -0.2
+  },
+  "sac": {
+    "gamma": 0.98,
+    "tau": 0.002,
+    "alpha": 0.2,
+    "adaptive_alpha": true,
+    "actor_lr": 5e-05,
+    "critic_lr": 5e-05,
+    "alpha_lr": 1e-05,
+    "weight_decay": 1e-05,
+    "grad_clip": 1.0,
+    "batch_size": 256,
+    "warmup_steps": 20000,
+    "update_period": 20,
+    "updates_per_period": 8,
+    "actor_update_period": 4
+  },
+  "network": {
+    "actor_width": [
+      256,
+      256
+    ],
+    "critic_q1_width": [
+      256,
+      256
+    ],
+    "critic_q2_width": [
+      256,
+      128
+    ],
+    "lstm_layers": 1,
+    "hidden_size": 256,
+    "history_length": 10,
+    "attention_k": 10,
+    "dropout": 0.1,
+    "inference_dropout": false,
+    "padding": "left repeat episode initial observation with zero action; no mask, all 10 tokens attended"
+  },
+  "replay": {
+    "capacity": 2000,
+    "alpha": 0.6,
+    "initial_beta": 0.4,
+    "beta_schedule": "reference 0.6 + progress*0.4, progress=min(steps/2000000,1)",
+    "terminal_bootstrap": false
+  },
+  "normalization": {
+    "type": "original ZScoreNormalizer",
+    "epsilon": 1e-06,
+    "updates": "original four replay-sampled state batches",
+    "evaluation_frozen": true
+  },
+  "seed": 101,
+  "training_stages": [
+    100000,
+    500000,
+    1000000,
+    2000000
+  ],
+  "checkpoint_interval": 100000,
+  "static_eval_bank": "research/validation/static_eval_bank.json",
+  "evaluation": {
+    "count": 200,
+    "no_obstacle_count": 100,
+    "fixed_static_count": 50,
+    "random_static_count": 50,
+    "bank_seed": 260915,
+    "gate_no_obstacle": 0.95,
+    "gate_static_safe": 0.85,
+    "review_trajectories_required": true
+  },
+  "legacy": {
+    "attention_k": 5,
+    "inference_dropout": true,
+    "source": "research/supplements/yc_attention_121x/utils_lstm_att_normal.py",
+    "training_environment_identity": "not verified; neighboring scripts select obst-v2"
+  },
+  "dynamic_enabled": false
+}

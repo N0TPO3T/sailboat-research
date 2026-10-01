@@ -1,0 +1,18 @@
+{
+  "V3_STATIC_ENV_STATUS": "CORRECTED_BUT_INTENTIONAL",
+  "aligned_formal_training_steps": 0,
+  "training_started": false,
+  "report": "docs/V2_V3_STATIC_PARITY_AUDIT.md",
+  "bank_sha256": "0719885cc70a25d0a943380726880805e36c2a1bbf8337b2ab0db724798897fc",
+  "prior_readiness_is_historical": true,
+  "remote_sync_this_audit": false,
+  "tests": {
+    "existing_passed": 9,
+    "new_noise_guard_passed": 1
+  },
+  "limitations": [
+    "Historical checkpoint environment and noise binding not verified",
+    "No per-factor closed-loop causal attribution",
+    "Grid connectivity is not sailing reachability"
+  ]
+}

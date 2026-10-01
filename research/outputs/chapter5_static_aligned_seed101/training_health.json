@@ -1,0 +1,204 @@
+{
+  "TRAIN_HEALTH": "HEALTHY",
+  "STATIC_BASELINE_STATUS": "IN_PROGRESS",
+  "step": 100000,
+  "latest": {
+    "checkpoint": "step_100000.pt",
+    "sha256": "20fa658b77667a12907cba90f75aebd45629944bf789d7adfaa3a7eaa72ebbfa",
+    "step": 100000,
+    "status": "STAGE_COMPLETE_REVIEW_REQUIRED",
+    "STATIC_BASELINE_STATUS": "IN_PROGRESS"
+  },
+  "progress": {
+    "training_step": 100000,
+    "episodes": 122,
+    "wall_seconds": 25362.15949888504,
+    "action_saturation_fraction": 0.0,
+    "sample_entropy_estimate": 0.19722330570220947,
+    "q_abs_max": 136.64804077148438,
+    "gpu_snapshot": "0, 100, 44275\n1, 100, 43889"
+  },
+  "health_reasons": [],
+  "metrics_last1000_updates": {
+    "q_loss": {
+      "last": 14.57938289642334,
+      "mean": 10.54731589603424
+    },
+    "a_loss": {
+      "last": 48.766929626464844,
+      "mean": 12.411019046783448
+    },
+    "alpha_loss": {
+      "last": -3.712094306945801,
+      "mean": -0.9105762238502503
+    },
+    "alpha": {
+      "last": 0.1846195772323181,
+      "mean": 0.184851006258256
+    },
+    "q_abs_max": {
+      "last": 136.64804077148438,
+      "mean": 131.69833696746826
+    },
+    "sample_entropy_estimate": {
+      "last": 0.19722330570220947,
+      "mean": 0.16364494350692257
+    },
+    "action_saturation_fraction": {
+      "last": 0.0,
+      "mean": 8.59375e-05
+    }
+  },
+  "actor_updates": 8002,
+  "critic_updates": 32008,
+  "return_first20_mean": -725.4481051143259,
+  "return_last20_mean": -572.1935373198241,
+  "completed_evaluations": [
+    {
+      "step": 0,
+      "metrics": {
+        "no_obstacle_success_rate": 0.0,
+        "static_safe_success_rate": 0.0,
+        "static_safety_violation_rate": 0.21,
+        "timeout_rate": 0.895,
+        "minimum_separation_mean_m": 119.61152370529369,
+        "minimum_separation_median_m": 127.27922061357856,
+        "successful_navigation_time_s": null,
+        "successful_trajectory_length_m": null,
+        "sail_variation_rad_s": 0.0025545914011336226,
+        "rudder_variation_rad_s": 0.000539686545112749
+      },
+      "strata": {
+        "no_obstacle": {
+          "count": 100,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.0,
+          "timeout_rate": 1.0,
+          "minimum_separation_m": null,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0023886576795578004,
+          "rudder_variation_rad_s": 0.0005235987901687622
+        },
+        "static": {
+          "count": 100,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.21,
+          "timeout_rate": 0.79,
+          "minimum_separation_m": 119.61152370529369,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.002720525122709444,
+          "rudder_variation_rad_s": 0.0005557743000567357
+        },
+        "easy": {
+          "count": 5,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.0,
+          "timeout_rate": 1.0,
+          "minimum_separation_m": 160.24636110344363,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0015707963705062868,
+          "rudder_variation_rad_s": 0.0005235987901687622
+        },
+        "medium": {
+          "count": 20,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.1,
+          "timeout_rate": 0.9,
+          "minimum_separation_m": 160.82884734691964,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0021955626079945005,
+          "rudder_variation_rad_s": 0.0005406573819839098
+        },
+        "hard": {
+          "count": 75,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.25333333333333335,
+          "timeout_rate": 0.7466666666666667,
+          "minimum_separation_m": 105.91124824098345,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0029371637101136406,
+          "rudder_variation_rad_s": 0.0005619505122020209
+        }
+      }
+    },
+    {
+      "step": 100000,
+      "metrics": {
+        "no_obstacle_success_rate": 0.01,
+        "static_safe_success_rate": 0.0,
+        "static_safety_violation_rate": 0.34,
+        "timeout_rate": 0.79,
+        "minimum_separation_mean_m": 84.59033478994647,
+        "minimum_separation_median_m": 74.56751090959078,
+        "successful_navigation_time_s": 718.0,
+        "successful_trajectory_length_m": 1421.3762566505757,
+        "sail_variation_rad_s": 0.0009093423273214115,
+        "rudder_variation_rad_s": 0.0016519095567113905
+      },
+      "strata": {
+        "no_obstacle": {
+          "count": 100,
+          "success_rate": 0.01,
+          "safety_violation_rate": 0.0,
+          "timeout_rate": 0.97,
+          "minimum_separation_m": null,
+          "navigation_time_s": 718.0,
+          "trajectory_length_m": 1421.3762566505757,
+          "sail_variation_rad_s": 0.0010084095429122731,
+          "rudder_variation_rad_s": 0.001623026394368062
+        },
+        "static": {
+          "count": 100,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.34,
+          "timeout_rate": 0.61,
+          "minimum_separation_m": 84.59033478994647,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0008102751117305497,
+          "rudder_variation_rad_s": 0.001680792719054719
+        },
+        "easy": {
+          "count": 5,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.4,
+          "timeout_rate": 0.6,
+          "minimum_separation_m": 88.39276072576088,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0013103059701621532,
+          "rudder_variation_rad_s": 0.0026307851044205972
+        },
+        "medium": {
+          "count": 20,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.25,
+          "timeout_rate": 0.65,
+          "minimum_separation_m": 102.35625806871931,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0007641461092417253,
+          "rudder_variation_rad_s": 0.001537741907356007
+        },
+        "hard": {
+          "count": 75,
+          "success_rate": 0.0,
+          "safety_violation_rate": 0.36,
+          "timeout_rate": 0.6,
+          "minimum_separation_m": 79.59926018655275,
+          "navigation_time_s": null,
+          "trajectory_length_m": null,
+          "sail_variation_rad_s": 0.0007892407884987959,
+          "rudder_variation_rad_s": 0.0016556067764833173
+        }
+      }
+    }
+  ],
+  "continuation": "Requires trajectory and health review; this script never launches 500k",
+  "thresholds": "Nonfinite=BROKEN; |Q|>1e5,alpha outside(1e-6,100),saturation>.95=SUSPICIOUS; provisional engineering flags, not performance gates"
+}

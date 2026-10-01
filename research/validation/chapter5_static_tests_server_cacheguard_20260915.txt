@@ -1,0 +1,46 @@
+test_bank_frozen_and_balanced (test_chapter5_static.StaticRecoveryTests.test_bank_frozen_and_balanced) ... ok
+test_checkpoint_evaluation_preserves_training (test_chapter5_static.StaticRecoveryTests.test_checkpoint_evaluation_preserves_training) ... /home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/pygame/pkgdata.py:25: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_stream, resource_exists
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+{"evaluation": "/home/ot/Students/hs/sailboat-research/work/tmpj3eep5vi/evaluated/eval_20", "done": 1, "total": 1, "last": {"scenario": "no_obstacle_0000", "kind": "no_obstacle", "mean_wind_degrees": 0.0, "steps": 5, "task_success": false, "safe_success": false, "safety_violation": false, "timeout": true, "out_of_bounds": false, "minimum_separation_m": null, "navigation_time_s_if_success": null, "trajectory_length_m": 2.0610841269080993, "sail_variation_rad_s": 0.0, "rudder_variation_rad_s": 0.0, "reward": -99.4465689882636, "hidden_before_reset": 0.0, "hidden_after_reset": 0.0}}
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+{"evaluation": "/home/ot/Students/hs/sailboat-research/work/tmpj3eep5vi/evaluated/eval_40", "done": 1, "total": 1, "last": {"scenario": "no_obstacle_0000", "kind": "no_obstacle", "mean_wind_degrees": 0.0, "steps": 5, "task_success": false, "safe_success": false, "safety_violation": false, "timeout": true, "out_of_bounds": false, "minimum_separation_m": null, "navigation_time_s_if_success": null, "trajectory_length_m": 2.0610841269080993, "sail_variation_rad_s": 0.0, "rudder_variation_rad_s": 0.0, "reward": -99.4465689882636, "hidden_before_reset": 0.0, "hidden_after_reset": 0.0}}
+ok
+test_exact_resume_and_config_guard (test_chapter5_static.StaticRecoveryTests.test_exact_resume_and_config_guard) ... /home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+ok
+test_freeze_refuses_failed_metrics (test_chapter5_static.StaticRecoveryTests.test_freeze_refuses_failed_metrics) ... ok
+test_hidden_reset_legacy (test_chapter5_static.StaticRecoveryTests.test_hidden_reset_legacy) ... ok
+test_legacy_and_aligned_pairing (test_chapter5_static.StaticRecoveryTests.test_legacy_and_aligned_pairing) ... ok
+test_static_safety_segment_and_termination (test_chapter5_static.StaticRecoveryTests.test_static_safety_segment_and_termination) ... /home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+ok
+test_trace_instrumentation_preserves_legacy_dynamics (test_chapter5_static.StaticRecoveryTests.test_trace_instrumentation_preserves_legacy_dynamics) ... ok
+test_wind_and_noise_not_replay_rng (test_chapter5_static.StaticRecoveryTests.test_wind_and_noise_not_replay_rng) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 22.681s
+
+OK

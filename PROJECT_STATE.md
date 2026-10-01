@@ -1,94 +1,67 @@
 # Project State
 
-## 项目目标
-- 基于师兄的无人帆船强化学习工作，完成一篇有独立增量的小论文；仅纯仿真。
-- 优先可实现、可复现与投稿可行性；候选CCDC / ICAUS / ICCA / DDCLS，期望约2027-09-14前录用，不保证录用。
-- 具体届次、学校认定要求、计算资源和训练预算未确认；ICCA具体全称待确认。
-- 已授权资料审计、hs范围部署、最小CPU运行验证和上下文维护；训练、正式实验、投稿尚未启动。
+## 项目目标与事实边界
+- 基于师兄的无人帆船强化学习工作完成有独立增量的小论文，仅纯仿真；优先可实现、可复现与投稿可行性。
+- 候选 CCDC / ICAUS / ICCA / DDCLS，期望约 2027-09-14 前录用，不保证录用；具体届次、学校认定、ICCA 全称和训练预算仍需确认。
+- 静态避障与注意力属于继承基础，不得标成新增贡献。当前研究主线是第五章静态基线恢复与失败诊断，CPA/动态任务暂停。
+- 本次任务是跨设备版本整理，不授权重新启动训练、续训或正式评估。历史文档中的运行状态、PID、资源占用与启动许可不是当前状态。
 
-## 项目根目录与职责边界
-- 项目根目录是本文件所在目录；本机路径`/Users/poet/Documents/研究生/小论文`，其他机器可使用不同克隆路径。四个核心文件只在根目录维护。
-- `research/`：用户自己的独立研究工作目录，已有smoke_baseline.py工程验证入口，尚无新方法实现。后续新代码、配置与实验产物在此按实际需要创建。
-- `sailboat_RL/`：师兄的参考源码仓库，保留原状，不作为用户新增工作的默认修改入口。
-- 参考仓库origin：`https://github.com/N0TPO3T/sailboat_RL.git`；参考main提交 `19422525cb337831ca68f53a45661d34f3683ee1`。
-- `model/`：已收到的师兄检查点；`师兄大论文.pdf`、`yara.pdf`：参考论文。
-- 复用遵循最小必要原则：先明确需用的动力学、网络或评估接口，再选取必要文件，记录源路径和版本；不整仓复制师兄实现。
-- 新研究与参考基线的改动、配置、结果应可区分；不得将师兄的已有贡献或结果标成新研究成果。
-- 根目录为独立私有Git项目`N0TPO3T/sailboat-research`；`research/`属于该项目。师兄仓库以固定提交的Git子模块引用，禁止自动追踪其最新main。
-- 本文以项目根目录为路径基准；段落内“同目录”和简写文件名相对其明确引用的参考模块。
+## 唯一开发入口与来源
+- Windows 正式目录：`C:\Users\74095\hs\SailBoat\sailboat-research`；GitHub：私有仓库 `N0TPO3T/sailboat-research`。
+- 原研究主仓库基点：`ce83544e8dfd6a6833da03d626025b4e0a2ba000`，原 main 保持不动；本次在 `integration/local-consolidation-20261001` 整合。
+- `sailboat_RL/` 是固定子模块，来源 `N0TPO3T/sailboat_RL`，提交 `19422525cb337831ca68f53a45661d34f3683ee1`；师兄原版不修改。
+- 海南工程提交：`143a508c422f746adb7af3577818060053f2620b`，比师兄基点多 8 个提交。它没有改动原 PART4/PART5、Gymnasium 参考目录和 requirements，而是增加独立工程包、回归测试及工程上下文。
+- 海南下载工作区不完整，原 pack/index 不匹配；123 个有效 loose objects 经 SHA1 校验后与 GitHub 基础历史合并，完整 Git 对象校验通过。原下载保持不动，不能用其零字节工作文件覆盖有效源码。
+- 海南完整原始历史保存于 `archive/hainan-learner-sync-v2`；另一个可恢复历史提交 `8837440c9eec84fd68cd757845b89f3981103279` 保存于 `archive/hainan-recovered-extra`，不是当前工程版本。
+- `engineering/sailboat_rl/` 和 `engineering/tests/` 保存海南工程实现；仅测试参考路径按整合目录适配。独立源码根避免 Windows 上 `sailboat_rl` 与 `sailboat_RL` 的大小写冲突。
+- `research/`、`configs/`、`docs/` 导入自主服务器 `/home/ot/Students/hs/sailboat-research`，该目录是部署副本而非 Git 仓库。它包含原 GitHub 没有的后续研究工作。
+- 主服务器源快照中 489 个参考仓库文件逐项与固定提交 blob 哈希一致；未把部署目录冒充完整参考仓库，缺失文件由固定子模块提供。
+- 原始主服务器上下文、部署前/后 TAR 与运行产物保存在来源归档中；根目录只维护协调后的当前事实。来源清单见 `research/validation/consolidation_20261001.json`。
 
-## 研究基础与目录
-- 大论文：《基于强化学习的无人帆船控制模型研究》；正式提交/发表情况未核实。
-- 第四章：无显式风场输入的SAC-LSTM控制；`sailboat_RL/PART4/SAC/`为基础实现，另有PPO、TD3和MPC对比。
-- `sailboat_RL/PART4/seed_reward_ablation/`包含三类基线的seed/奖励消融入口，生成前缀与已收到检查点一致；是否为原始训练源码尚未完全核实。
-- 第五章：静态避障和历史状态注意力；`sailboat_RL/PART5/SAC-LSTM-att/`为注意力实现，`SAC-LSTM-deep/`和`SAC-LSTM-meanpool/`为对照。
-- `sailboat_RL/gymnasium/envs/sailboat/`存多版本自定义环境；根目录 `sailboat_RL/sailboat_s14_obst_V3.py`与其中同名文件正文相同。
-- `sailboat_RL/docs/refs/`为参考论文；Yara是仿真平台参考文献，不表示本项目采用Gazebo/ROS。
-- 数据由仿真交互生成；代码使用四自由度帆船动力学、风扰动以及传感器/执行器噪声模块。
-- 各实验README及已有分析报告承担实验说明职责，保留；它们不是当前研究计划。
+## 目录与运行职责
+- `research/chapter5_static.py`：第五章静态 bank/evaluate/plot/train/freeze 工具，明确区分 Legacy 与 Aligned 协议；配套 `chapter5_baseline.py`、`chapter5_artifacts.py`、`pretrain_static_sanity.py`、`static_training_report.py`、`v2_v3_static_parity.py` 和 `test_chapter5_static.py`。
+- `configs/chapter5_static_aligned.json`：当前 corrected-V3、Aligned、seed101 配置；固定开发 bank 位于 `research/validation/static_eval_bank.json`。
+- `engineering/sailboat_rl/`：第四章 14/16 维环境、SAC-FC/SAC-LSTM、优先回放、续训状态与评估实现。它不是第五章 18 维注意力研究入口，不能自动替代后者。
+- `research/smoke_baseline.py`：使用未修改子模块与根目录 `model/` 的第四章 CPU 闭环验证；不代表海南工程代码已验证。
+- `model/`：原 Git 已跟踪的三套第四章检查点，共 12 个文件；`师兄大论文.pdf`、`yara.pdf` 是原研究资料。
+- 安装、克隆和有界 CPU 命令见根 `README.md`。工程命令须设置 `PYTHONPATH` 指向 `engineering/`。
+- `.venv`、缓存、凭据不迁移；部分第五章工具依赖 Linux、fcntl 和 hs 路径约束。Windows 负责编辑/Git，主服务器负责实际运行。
 
-## 训练与评估路径（仅短闭环冒烟通过）
-- 第四章入口：`sailboat_RL/PART4/SAC/parll_lstm_normal.py`、`parll_SAC_normal.py`；模型为`SAC_lstm.py`/`SAC_fc.py`，网络为`utils_lstm.py`/`utils_fc.py`。
-- 第四章评估：`sailboat_RL/PART4/SAC/test_eval_lstm.py`；三类seed实验另见 `sailboat_RL/PART4/seed_reward_ablation/README.md`。
-- 第五章入口：`sailboat_RL/PART5/SAC-LSTM-att/parll_lstm_att_normal.py` → `gym.make('sailboat-s14-obst-v3')` → `SAC_lstm_att_normal.py`/`utils_lstm_att_normal.py`；评估为同目录`batchtest.py`。
-- 第五章观测18维：船体状态、目标、最近两个已观测障碍的距离/相对角；动作两维帆/舵增量，界限±π/18。
-- 环境dt=0.05s，每动作20次积分；到达阈值10m、障碍距离阈值40m。
-- 第五章训练默认9e6步、2个子进程环境、序列长度10，均为代码默认值而非已验证训练记录。
-- 配置来自argparse和硬编码环境参数；`model/`存权重/normalizer，`runs/`存TensorBoard，评估输出文本、CSV、JSON、NumPy数组和图像。
-- 路径依赖脚本工作目录及`globals`裸导入；不能把根目录启动命令视为已验证canonical command。
-- 参考仓库的`sailboat_RL/requirements.txt`固定依赖版本；README要求复制环境到Gymnasium并手动注册，尚未在隔离环境验证安装或第五章注册参数。
+## 当前研究结果：尚无合格冻结基线
+- 主服务器历史收据记录 seed101 corrected V3 + Aligned run 完成 100,000 环境步及 200 场景评估，2026-09-16 正常退出（returncode=0）。没有据此启动 500k 或 CPA。
+- `TRAIN_HEALTH=SUSPICIOUS`，`STATIC_BASELINE_STATUS=IN_PROGRESS`。自动数值检查为 HEALTHY，但行为检查 `COMPLETED_NOT_PASSED`；不能把数值有限等同于策略有效。
+- 无障碍：1/100 到达、97 超时、2 出界。静态：0/100 安全到达、34 违规、61 超时、5 出界。证据是 run 内 `stage100k_review.json`、训练健康与逐场景结果，不是本次重新训练得到的结果。
+- 五条预定轨迹显示偏航与长时间恒定帆舵；学习不足、执行器死区、训练/评估不一致等仍是待区分假设，根因未确定。
+- 冻结门：至少 95% 无障碍成功、85% 静态安全成功，并通过轨迹/执行器/安全/重复性检查。当前 200 场景 bank 是开发与选择集合，不是未触碰的论文最终测试集。
+- 现有 run 路径 `research/outputs/chapter5_static_aligned_seed101/`；原始 checkpoint、source_snapshot、配置、bank、评估、日志、暂停/退出回执须整体保存，不改写历史收据中的当时本地复制状态。
+- `docs/CHAPTER5_STATIC_RECOVERY.md` 的末尾 Stage A 100k 节是该报告最新阶段；前部零步/准备启动段落是历史记录，不能用于判断当前阶段。
 
-## 检查点与验证边界
-- `model/`共12个pth文件，三组前缀：
-  - `sac_s14nowind_buf1e6_seed100`：14维FC。
-  - `sac_s14wind_buf1e6_seed100`：16维FC。
-  - `saclstm_s14nowind_buf1e6_seed100`：14维LSTM，历史状态+动作合计16维。
-- 每组有actor7200、q_critic7200、normalizer7200、training_stats_7200；统计记录7200000步，seed100仍需独立运行配置佐证。
-- 已用CPU PyTorch2.10.0、weights_only=True读取；张量有限，normalizer维度匹配且方差非负。
-- 三组actor/critic均strict=True加载到第四章对应网络通过；eval模式合成输入actor前向通过。
-- 以上仅证明参数结构/最小前向兼容；已完成服务器50步冒烟闭环，未复现整回合成功率。没有完整optimizer/replay buffer/RNG状态，不能精确续训。
-- 本批不含第五章18维注意力检查点；用户表示可向师兄索取，尚待交付匹配权重、normalizer及运行配置。
+## 环境与旧模型的语义边界
+- 第四章根模型是 14 维无风观测 FC、16 维显式风 FC、14 维 LSTM。已保存的 2026-09-14 收据证明严格加载与有界 CPU 闭环，不证明总体成功率，也没有完整 optimizer/replay/RNG 续训状态。
+- 第五章参考 V3 观测 18 维、动作 2 维；每动作约 1 秒，Dormand–Prince 自适应积分，0.05 秒是初始步长而非固定 20 步。
+- V2 障碍槽是全局坐标，V3 是距离/相对角；当前 Aligned 层另有积分步长上限、线段近似安全检查、时序配对与噪声约束。它不是 V2 等价复现，安全检查也不是精确连续曲线证明。
+- 原论文表 5.1 的 95.3%/93.3%/80.8% 是论文报告，不是本项目复现结果。固定风向、障碍布局、窗口 5/10、streaming/sequence、normalizer 和旧配置绑定均需区分。
+- yc 的 selfatt 0113 与当前第五章注意力实现不同；历史日志异常、代理环境下少量失败都不足以确认师兄最终模型身份或唯一失败原因。
+- `research/supplements/` 保存历史源码与兼容性证据；`research/weights_library/20260928_import/` 保存 9 月模型目录、来源清单及 source_evidence。
+- 9 月目录文档记录 416 个 yc 权重/统计文件、109 组模型及 81 个来源代码文件；此处是来源目录说明，不把文件名编号自动解释为真实训练步数或 seed。
+- 新增 `user_0204_10800` 三件套的来源检查记录严格加载与有限合成前向；原始训练协议、V2/V3 语义和实际性能仍未知，不能称合格障碍策略。
 
-## 实验结果与限制
-- 大论文表5.1（PDF80页/印刷68页）报告注意力/深层对照/平均池化综合成功率95.3%/93.3%/80.8%；已渲染核对，属于论文报告，非本地复现结果。
-- 仓库有第四章运行文本、第五章注意力/轨迹和摘要，不能据部分产物外推全部seed或论文统计。
-- 第五章outputs中model_id14400摘要记录367步、attention_shape=[367,20]；文件名K10不能单独确定实际窗口。
-- 当前obst_V3 reset固定风向0°和7个障碍，随机混合生成代码被注释；参数间距100m与论文140m不一致。训练/评估原版本待核实。
-- reset虽调用Gym seed，但Python random和全局np.random未在该reset中同步设种子。
-- 碰撞/超时/出界合并到truncated且info为空；batchtest按距目标≤10m回退判断成功，失败分类与终止语义需核查。
-- 对照入口有obst-v2，主模型为v3；不能默认环境公平一致。这些是当前快照问题，不推断师兄原实验无效。
-- 参考仓库267个Python文件AST解析通过；这不等于依赖、环境或实验运行通过。
+## 服务器与资产管理
+- 主服务器：`ot@172.16.2.249`；所有写入限定真实路径 `/home/ot/Students/hs/`。不改共享 base、系统环境、其他学生目录或进程。详细边界见 `AGENTS.md`。
+- 海南 `hainan`（`user@172.16.1.59`）只是历史工程来源，后续不是默认运行端。连接曾中断；源码通过已校验 Git 对象恢复，不依赖连接恢复来猜测代码。
+- 主服务器既有 `.venv` 借用共享 Python/PyTorch；已观察版本 Python 3.13.11、PyTorch 2.13.0、Gymnasium 1.3.0。它不是完全锁定的跨平台复现环境。
+- 同步必须先核对远程改动，不能把原部署目录当作可删除的镜像。默认本地修改提交，再部署到独立版本目录验证，不覆盖正在使用的实验工作区。
+- 模型库、完整运行 checkpoint 与大体积输出不加入普通 Git；小型源码、配置、清单及必要收据进 Git，完整归档放私有 GitHub Release。恢复时按清单校验 SHA256。
+- 原始两个 hs TAR 的成员已检查，包含静态恢复代码/配置/部署收据，没有补齐此前文档提及的动态研究文件。
 
-## 研究恢复
-- 主要线程、候选假设、下一步及Go/Kill见 `CURRENT_PLAN.md`；历史陷阱按关键词查 `PROJECT_MEMORY.md`。
-- ARIS采用research-pipeline分阶段推进，当前仅Stage1审计/选题；未完成pilot或深入查新。
-- 用户选择Codex执行、DeepSeek审查。此前会话未暴露llm-chat工具，未完成独立复核；新会话应重新发现工具，不把旧的不可用状态当永久事实。
+## 尚未恢复的资料
+- 主服务器/本次 TAR 中未发现 `research/idea-stage/IDEA_REPORT.md`、`research/navigation_trace.py`、`research/dynamic_observation.py`、`docs/DYNAMIC_OBSTACLE_CODE_AUDIT.md`、`docs/CHAPTER5_ARTIFACT_SEARCH.md` 等旧文档引用目标。
+- 这些引用可能来自原 Mac 工作区；不创建空文件冒充恢复，不据文字声明动态代码已整合。保留来源原文供后续核对。
+- 第五章最终论文模型身份、原训练环境与实际统计仍未完全绑定；本次归档与代码整理不解决这些研究未知。
 
-## 组内服务器
-- SSH：`ot@172.16.2.249`；密码不写入项目文档、配置、脚本、命令行或Git。
-- 共享学生根目录：`/home/ot/Students`；用户自己的工作范围：`/home/ot/Students/hs`。
-- Conda入口：`/home/ot/miniconda3/condabin/conda`。仅为本项目创建独立环境，先核对已有环境归属，避免名称冲突；不修改base或他人环境。
-- `/home/ot/Students/yc`可能有师兄早期代码；用户明确提醒后期开发不在该服务器，故其版本未经完整审查不能作为最终实现或论文基线。
-- 即使同用ot账号，也不能按Unix用户名认定进程/文件属于本任务；需要工作目录、命令、日志、启动记录等精确归属证据。
-- 实际操作前只读核查目录权限、磁盘、CPU/GPU占用及课题组调度规则；资源空闲不等于可独占，算力额度/时长未确认前不启动训练。
-- 默认只向hs下已确认的项目路径写入；不修改/删除yc或其他学生目录，不停止他人进程，不清理共享缓存、不全局升级依赖、不改系统配置。
-- 停止本任务作业前核对精确PID/作业与授权并保全产物；SSH失联先恢复状态和日志，不据此重启、重复启动或结束作业。
-- yc仅作为待审查参考；使用前比对Git版本、代码、配置、模型和实验产物，不覆盖当前GitHub参考子模块。
-- SSH与hs路径已现场核验；所有服务器写入硬边界见AGENTS。yc只读审计发现历史代码和检查点，但关键注意力入口为obst-v2/序列5，与GitHub不同；不是最终版本。
-
-## 多机同步
-- 远程：`https://github.com/N0TPO3T/sailboat-research`（私有）。克隆：`git clone --recurse-submodules https://github.com/N0TPO3T/sailboat-research.git`。
-- 已有克隆仅在工作区干净且没有正在运行的实验时执行`git pull --ff-only`，然后`git submodule update --init --recursive`。有分叉或本地修改时先检查，不自动reset/rebase。
-- 同步四个上下文文件、research源码/配置、固定参考子模块、两份参考PDF及本次12个基线检查点；该批pth已显式跟踪，未来新权重和日志默认忽略。
-- 需要使用GitHub账号访问两个私有仓库；本机Python环境、API密钥、Codex/ARIS安装不随Git同步。
-- 未来提交显式选择路径，推送前检查凭据和大文件，推送后核对远端SHA。避免两台电脑同时修改同一分支；不强制推送。
-
-## 服务器工程验证（2026-09-14）
-- 部署目录：`/home/ot/Students/hs/sailboat-research`；按显式清单同步318个源码/文档/依赖/检查点文件并通过rsync校验。排除Git内部数据；不是服务器Git克隆。部分历史图像已随首轮传输到达，不作为完整资产同步保证。
-- 环境：项目`.venv`，由共享Python3.13.11创建，system-site-packages只读借用base的torch2.13.0+cu130/numpy2.4.6；scipy1.18.1、gymnasium1.3.0、pygame2.6.1安装于hs。不是完整锁定的论文复现环境。
-- TMPDIR=`/home/ot/Students/hs/tmp`，XDG_CACHE_HOME=`/home/ot/Students/hs/cache`；单CPU线程，禁用CUDA，无训练。
-- `research/smoke_baseline.py`直接从参考文件加载环境类，不修改已安装Gym的注册文件；复用第四章Actor和normalizer，正常传递LSTM历史状态。
-- 三套检查点分别完成50步：观测/动作/奖励有限，无提前终止；均未到达目标，不能统计整回合成功率。obst_V3完成reset和5步零动作检查，不代表避障策略成功。
-- 证据：`research/validation/smoke_cpu_20260914.json`，包含实际版本、结果和所用源码/权重SHA256。
-- 复跑：在服务器项目目录设置上述TMPDIR/XDG_CACHE_HOME及`MPLCONFIGDIR=/home/ot/Students/hs/cache/matplotlib OPENBLAS_NUM_THREADS=1`，执行`.venv/bin/python -B research/smoke_baseline.py --steps 50 --output /home/ot/Students/hs/sailboat-research/research/outputs/smoke_cpu.json`。
-- 本次本地源码已足够完成冒烟，未从yc复制文件；参考源码未修改。后续需单独固定环境依赖、完整终止语义与评估协议，再做正式基线。
+## 本次整合验证
+- 在主服务器新建独立验证目录 `integration-check-20261001-ce83544-143a508/source`，不覆盖原项目；禁用 CUDA，CPU 线程限制为 1。仅把缺失的 stable-baselines3 2.8.0 安装到独立验证 deps，不修改原 `.venv` 或共享 base。
+- 海南工程回归：31 项运行，30 项通过、1 项跳过；第五章静态回归：10 项全部通过。
+- 原版三套第四章模型分别完成 50 步有限 CPU 闭环，障碍环境额外完成至多 5 步零动作检查；见 `research/validation/consolidation_reference_smoke_20261001.json`。
+- 海南工程 CLI 使用三套 seed100 模型各完成 1 个场景、5 步评估，生成 3 行 episodes 与汇总；见 `research/validation/consolidation_engine_smoke_20261001/`。
+- 本次验证不证明策略成功率、GPU 性能或论文复现；未启动正式训练、续训、500k 或 CPA。源代码自带历史空白/格式问题保持原样，不借整理任务批量格式化。

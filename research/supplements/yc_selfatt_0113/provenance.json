@@ -1,0 +1,52 @@
+[
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/SAC_lstm_selfatt.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/SAC_lstm_selfatt.py",
+    "sha256": "f9eca322a2d2b59155974f836c15d549fe1817c31086494962793dc8694c8fcc"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/utils_lstm_selfatt.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/utils_lstm_selfatt.py",
+    "sha256": "73e622321fd979a3099eb484a3f8b382f563aa2b67962fce1e958bcd4c5b7ecf"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/globals.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/globals.py",
+    "sha256": "50e830f29b8951054395f87f7f60233357ed935d76b57c927b7e307224d649a1"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/parll_lstm_selfatt.py",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/parll_lstm_selfatt.py",
+    "sha256": "02861d6ba96098bc1edf3577e0f4d2c1a7ca8058fc02dbf5c1a75a015412bef2"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor9000.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor9000.pth",
+    "sha256": "32a13f2e23bace1a43d4da04a498f5e091a72439ce17f294b7329b3894ee6bd3"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth",
+    "sha256": "8356eca483034c586888e74bd5102944b65d865e3cb71f06a4bd160ef35f3ad3"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth",
+    "sha256": "08cb92bf2b0c3f39e05aeece1210b6e4dea3bb8267a0216ec50fc84958ae75a3"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor14400.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor14400.pth",
+    "sha256": "d41f37f4c8e2afc0b81c5cf3cf55e013c35365258f9a0195550d6e0de3c0dfd6"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth",
+    "sha256": "200be8f3e89187371d3cdefb3dcf0638963ca63c531f53b19240d619f132f00d"
+  },
+  {
+    "source": "/home/ot/Students/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth",
+    "copy": "/home/ot/Students/hs/sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth",
+    "sha256": "a85bc0115d8d345d6c6907ebbf5361c6fbeeb1688055ab9a55b3e07586885628"
+  }
+]

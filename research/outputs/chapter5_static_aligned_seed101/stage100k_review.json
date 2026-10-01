@@ -1,0 +1,26 @@
+{
+  "TRAIN_HEALTH": "SUSPICIOUS",
+  "numerical_health": "HEALTHY",
+  "STATIC_BASELINE_STATUS": "IN_PROGRESS",
+  "training_step": 100000,
+  "trajectory_review": "COMPLETED_NOT_PASSED",
+  "recommendation": "Diagnose deterministic command to physical actuation and navigation before deciding 500k; no new training authorized by this review.",
+  "evidence_sha256": {
+    "log_from_0_1789450769952278328.jsonl": "752b5f505f4331b7e80f2a1b9bc80c12dca5112739fcf5fd40ccdbc64808311f",
+    "eval_100000/episodes.jsonl": "d813b5af0cf1f0deee0ce27f60722d08a0a5f87ddb980d2eef5e3bbf40812d85",
+    "eval_100000/representative_trajectories.json": "94e7f1b1c828378e1f6e51bcb376c7a37bb523b0ed71972f1782562b0a0c2f26",
+    "eval_100000/summary.json": "abb5173f0fb9ae377a98cc1b57e325cacddc3f328d0c5bcf6f0cb9848840a7be",
+    "eval_0/summary.json": "f0eaa57eced2b534f18a12310614181852d89598d074351a4856b872ca87f197"
+  },
+  "checkpoint_remote_sha256": "20fa658b77667a12907cba90f75aebd45629944bf789d7adfaa3a7eaa72ebbfa",
+  "checkpoint_local_copy": false,
+  "reasons": [
+    "No-obstacle success 1/100; 97 timeouts and 2 out-of-bounds",
+    "Static safe 0/100; 34 violations,61 timeouts,5 out-of-bounds",
+    "Predetermined trajectories show wrong-direction navigation and prolonged constant actuator angles; cause unresolved"
+  ],
+  "wall_seconds_total": 50690.45608949661,
+  "pause_seconds": 16024.630267620087,
+  "wall_seconds_excluding_pauses": 34665.82582187652,
+  "training_seconds_excluding_pauses_and_evaluations": 9337.529231264953
+}

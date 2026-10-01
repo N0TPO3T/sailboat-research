@@ -1,0 +1,19 @@
+{
+  "status": "PAUSED_WAITING_FOR_IDLE_GPU0",
+  "pid": 2939240,
+  "start_ticks": "190975871",
+  "command": ".venv/bin/python -B research/chapter5_static.py train --config configs/chapter5_static_aligned.json --history-protocol aligned --through-stage 100000 --output research/outputs/chapter5_static_aligned_seed101 ",
+  "paused_unix": 1789464472.2082777,
+  "gpu_uuid": "GPU-fbd4af4c-f018-7c7f-4009-54173af18259",
+  "gpu_snapshot": "GPU-fbd4af4c-f018-7c7f-4009-54173af18259, 2939240, 560 MiB\nGPU-fbd4af4c-f018-7c7f-4009-54173af18259, 2959209, 30564 MiB\nGPU-53d5d44d-7c50-5088-0bb6-1c820ef24765, 3046155, 30564 MiB\n",
+  "last_progress": {
+    "training_step": 10000,
+    "episodes": 12,
+    "wall_seconds": 561.9300013470929,
+    "action_saturation_fraction": 0.5,
+    "gpu_snapshot": "0, 0, 31165\n1, 100, 30599"
+  },
+  "reason": "User requires pause when no idle GPU; peer job joined after original launch",
+  "preservation": "SIGSTOP retains process/RNG/replay in RAM; not a durable checkpoint; retains about560MiB CUDA allocation",
+  "resume": "Only SIGCONT same verified PID/start_ticks when no other compute PID on GPU0; never relaunch"
+}

@@ -1,0 +1,2 @@
+"""Canonical training entry points."""
+

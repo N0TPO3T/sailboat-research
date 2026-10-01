@@ -1,0 +1,434 @@
+{
+  "source_archive": "/Users/poet/Downloads/saclstm_s14obst_noise_0204_actor10800.zip",
+  "archive_sha256": "f3d8f7c0c715fc6e2c312f8ba7656c9f8e0b726a598279bb071e03c8d561c73f",
+  "user_description": "师兄提供的有避障版本；历史运行身份尚待核验",
+  "files": [
+    {
+      "path": "/Users/poet/Documents/研究生/小论文/research/supplements/user_obstacle_0204_10800/saclstm_s14obst_noise_0204_actor10800.pth",
+      "bytes": 3475215,
+      "mtime_utc": "2026-09-28T03:54:35.572935+00:00",
+      "birthtime_utc": "2026-09-28T03:54:35.557217+00:00",
+      "creation_time_limit": "mtime is not training time; birthtime unavailable on many Linux filesystems",
+      "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+      "attention_window": "not encoded in plain state_dict",
+      "protocol_compatibility": "unknown until associated training code/config is bound",
+      "top_keys": [
+        "fc_input.0.weight",
+        "fc_input.0.bias",
+        "lstm.weight_ih_l0",
+        "lstm.weight_hh_l0",
+        "lstm.bias_ih_l0",
+        "lstm.bias_hh_l0",
+        "lstm_ln.weight",
+        "lstm_ln.bias",
+        "attention.query_proj.weight",
+        "attention.query_proj.bias",
+        "attention.key_proj.weight",
+        "attention.key_proj.bias",
+        "attention.value_proj.weight",
+        "attention.value_proj.bias",
+        "current_state_fc.0.weight",
+        "current_state_fc.0.bias",
+        "final_fc.0.weight",
+        "final_fc.0.bias",
+        "mu_layer.weight",
+        "mu_layer.bias",
+        "log_std_layer.weight",
+        "log_std_layer.bias"
+      ],
+      "tensor_shapes": {
+        "fc_input.0.weight": [
+          256,
+          20
+        ],
+        "fc_input.0.bias": [
+          256
+        ],
+        "lstm.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm.bias_ih_l0": [
+          1024
+        ],
+        "lstm.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln.weight": [
+          256
+        ],
+        "lstm_ln.bias": [
+          256
+        ],
+        "attention.query_proj.weight": [
+          256,
+          256
+        ],
+        "attention.query_proj.bias": [
+          256
+        ],
+        "attention.key_proj.weight": [
+          256,
+          256
+        ],
+        "attention.key_proj.bias": [
+          256
+        ],
+        "attention.value_proj.weight": [
+          256,
+          256
+        ],
+        "attention.value_proj.bias": [
+          256
+        ],
+        "current_state_fc.0.weight": [
+          256,
+          18
+        ],
+        "current_state_fc.0.bias": [
+          256
+        ],
+        "final_fc.0.weight": [
+          256,
+          512
+        ],
+        "final_fc.0.bias": [
+          256
+        ],
+        "mu_layer.weight": [
+          2,
+          256
+        ],
+        "mu_layer.bias": [
+          2
+        ],
+        "log_std_layer.weight": [
+          2,
+          256
+        ],
+        "log_std_layer.bias": [
+          2
+        ]
+      },
+      "all_tensor_values_finite": true,
+      "kind": "actor",
+      "action_dim": 2,
+      "obs_dim": 18,
+      "attention_keys": [
+        "attention.query_proj.weight",
+        "attention.query_proj.bias",
+        "attention.key_proj.weight",
+        "attention.key_proj.bias",
+        "attention.value_proj.weight",
+        "attention.value_proj.bias"
+      ],
+      "lstm_shapes": {
+        "lstm.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_ln.weight": [
+          256
+        ]
+      },
+      "load_status": "STRICT_CURRENT_CHAPTER5_PASS"
+    },
+    {
+      "path": "/Users/poet/Documents/研究生/小论文/research/supplements/user_obstacle_0204_10800/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "bytes": 1898,
+      "mtime_utc": "2026-09-28T03:54:35.573510+00:00",
+      "birthtime_utc": "2026-09-28T03:54:35.573426+00:00",
+      "creation_time_limit": "mtime is not training time; birthtime unavailable on many Linux filesystems",
+      "sha256": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6",
+      "attention_window": "not encoded in plain state_dict",
+      "protocol_compatibility": "unknown until associated training code/config is bound",
+      "top_keys": [
+        "mean",
+        "var",
+        "count"
+      ],
+      "tensor_shapes": {
+        "mean": [
+          18
+        ],
+        "var": [
+          18
+        ]
+      },
+      "all_tensor_values_finite": true,
+      "kind": "normalizer",
+      "obs_dim": 18,
+      "count": 8095076352.0,
+      "variance_nonnegative": true,
+      "load_status": "NORMALIZER_INSPECTED"
+    },
+    {
+      "path": "/Users/poet/Documents/研究生/小论文/research/supplements/user_obstacle_0204_10800/saclstm_s14obst_noise_0204_q_critic10800.pth",
+      "bytes": 6683670,
+      "mtime_utc": "2026-09-28T03:54:35.607209+00:00",
+      "birthtime_utc": "2026-09-28T03:54:35.573568+00:00",
+      "creation_time_limit": "mtime is not training time; birthtime unavailable on many Linux filesystems",
+      "sha256": "577a6abd82ba4c7cb2408fae51f00f92c7df8e7ceab70ba716051da5f542ab0d",
+      "attention_window": "not encoded in plain state_dict",
+      "protocol_compatibility": "unknown until associated training code/config is bound",
+      "top_keys": [
+        "fc_input_q1.0.weight",
+        "fc_input_q1.0.bias",
+        "lstm_q1.weight_ih_l0",
+        "lstm_q1.weight_hh_l0",
+        "lstm_q1.bias_ih_l0",
+        "lstm_q1.bias_hh_l0",
+        "lstm_ln_q1.weight",
+        "lstm_ln_q1.bias",
+        "attention_q1.query_proj.weight",
+        "attention_q1.query_proj.bias",
+        "attention_q1.key_proj.weight",
+        "attention_q1.key_proj.bias",
+        "attention_q1.value_proj.weight",
+        "attention_q1.value_proj.bias",
+        "current_sa_fc_q1.0.weight",
+        "current_sa_fc_q1.0.bias",
+        "final_fc_q1.0.weight",
+        "final_fc_q1.0.bias",
+        "Q_1.weight",
+        "Q_1.bias",
+        "fc_input_q2.0.weight",
+        "fc_input_q2.0.bias",
+        "lstm_q2.weight_ih_l0",
+        "lstm_q2.weight_hh_l0",
+        "lstm_q2.bias_ih_l0",
+        "lstm_q2.bias_hh_l0",
+        "lstm_ln_q2.weight",
+        "lstm_ln_q2.bias",
+        "attention_q2.query_proj.weight",
+        "attention_q2.query_proj.bias",
+        "attention_q2.key_proj.weight",
+        "attention_q2.key_proj.bias",
+        "attention_q2.value_proj.weight",
+        "attention_q2.value_proj.bias",
+        "current_sa_fc_q2.0.weight",
+        "current_sa_fc_q2.0.bias",
+        "final_fc_q2.0.weight",
+        "final_fc_q2.0.bias",
+        "Q_2.weight",
+        "Q_2.bias"
+      ],
+      "tensor_shapes": {
+        "fc_input_q1.0.weight": [
+          256,
+          20
+        ],
+        "fc_input_q1.0.bias": [
+          256
+        ],
+        "lstm_q1.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q1.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_q1.bias_ih_l0": [
+          1024
+        ],
+        "lstm_q1.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln_q1.weight": [
+          256
+        ],
+        "lstm_ln_q1.bias": [
+          256
+        ],
+        "attention_q1.query_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q1.query_proj.bias": [
+          256
+        ],
+        "attention_q1.key_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q1.key_proj.bias": [
+          256
+        ],
+        "attention_q1.value_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q1.value_proj.bias": [
+          256
+        ],
+        "current_sa_fc_q1.0.weight": [
+          256,
+          20
+        ],
+        "current_sa_fc_q1.0.bias": [
+          256
+        ],
+        "final_fc_q1.0.weight": [
+          256,
+          512
+        ],
+        "final_fc_q1.0.bias": [
+          256
+        ],
+        "Q_1.weight": [
+          1,
+          256
+        ],
+        "Q_1.bias": [
+          1
+        ],
+        "fc_input_q2.0.weight": [
+          256,
+          20
+        ],
+        "fc_input_q2.0.bias": [
+          256
+        ],
+        "lstm_q2.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q2.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_q2.bias_ih_l0": [
+          1024
+        ],
+        "lstm_q2.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln_q2.weight": [
+          256
+        ],
+        "lstm_ln_q2.bias": [
+          256
+        ],
+        "attention_q2.query_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q2.query_proj.bias": [
+          256
+        ],
+        "attention_q2.key_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q2.key_proj.bias": [
+          256
+        ],
+        "attention_q2.value_proj.weight": [
+          256,
+          256
+        ],
+        "attention_q2.value_proj.bias": [
+          256
+        ],
+        "current_sa_fc_q2.0.weight": [
+          256,
+          20
+        ],
+        "current_sa_fc_q2.0.bias": [
+          256
+        ],
+        "final_fc_q2.0.weight": [
+          128,
+          512
+        ],
+        "final_fc_q2.0.bias": [
+          128
+        ],
+        "Q_2.weight": [
+          1,
+          128
+        ],
+        "Q_2.bias": [
+          1
+        ]
+      },
+      "all_tensor_values_finite": true,
+      "kind": "critic",
+      "action_dim": 2,
+      "obs_dim": 18,
+      "attention_keys": [
+        "attention_q1.query_proj.weight",
+        "attention_q1.query_proj.bias",
+        "attention_q1.key_proj.weight",
+        "attention_q1.key_proj.bias",
+        "attention_q1.value_proj.weight",
+        "attention_q1.value_proj.bias",
+        "attention_q2.query_proj.weight",
+        "attention_q2.query_proj.bias",
+        "attention_q2.key_proj.weight",
+        "attention_q2.key_proj.bias",
+        "attention_q2.value_proj.weight",
+        "attention_q2.value_proj.bias"
+      ],
+      "lstm_shapes": {
+        "lstm_q1.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q1.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_ln_q1.weight": [
+          256
+        ],
+        "lstm_q2.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q2.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_ln_q2.weight": [
+          256
+        ]
+      },
+      "load_status": "STRICT_CURRENT_CHAPTER5_PASS"
+    }
+  ],
+  "behavior_test": "not run",
+  "original_environment": "unknown",
+  "original_history_window": "unknown",
+  "synthetic_actor_forward": {
+    "shape": [
+      1,
+      2
+    ],
+    "finite": true,
+    "scope": "synthetic zero inputs; not navigation or avoidance validation"
+  },
+  "previous_attention_actor_comparison": [
+    {
+      "comparison": "research/supplements/yc_attention_121x/saclstm_s14obst_1213_actor15600.pth",
+      "identical_tensors": false
+    },
+    {
+      "comparison": "research/supplements/yc_attention_121x/saclstm_s14obst_1211_actor3600.pth",
+      "identical_tensors": false
+    },
+    {
+      "comparison": "research/supplements/yc_attention_121x/saclstm_s14obst_1216_actor12600.pth",
+      "identical_tensors": false
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "PASSED",
+  "gpu": "0",
+  "synthetic_only": true,
+  "formal_steps": 0,
+  "updates": 4,
+  "batch_size": 8,
+  "actor_parameters_changed": true,
+  "wall_seconds": 5.451924971072003,
+  "losses": [
+    {
+      "q_loss": 2.9323179721832275,
+      "a_loss": 0.0,
+      "alpha_loss": 0.0,
+      "alpha": 0.2,
+      "warmup": false,
+      "policy_updated": false,
+      "critic_update_count": 1,
+      "should_update_policy": false
+    },
+    {
+      "q_loss": 2.508207321166992,
+      "a_loss": 0.0,
+      "alpha_loss": 0.0,
+      "alpha": 0.2,
+      "warmup": false,
+      "policy_updated": false,
+      "critic_update_count": 2,
+      "should_update_policy": false
+    },
+    {
+      "q_loss": 2.4051599502563477,
+      "a_loss": 0.0,
+      "alpha_loss": 0.0,
+      "alpha": 0.2,
+      "warmup": false,
+      "policy_updated": false,
+      "critic_update_count": 3,
+      "should_update_policy": false
+    },
+    {
+      "q_loss": 2.3088536262512207,
+      "a_loss": -0.4999442398548126,
+      "alpha_loss": -5.261534690856934,
+      "alpha": 0.19999800001002,
+      "warmup": false,
+      "policy_updated": true,
+      "critic_update_count": 4,
+      "should_update_policy": true
+    }
+  ]
+}

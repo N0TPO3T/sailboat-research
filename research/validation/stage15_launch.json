@@ -1,0 +1,7 @@
+{
+  "supervisor_pid": 2939239,
+  "run": "/home/ot/Students/hs/sailboat-research/research/outputs/chapter5_static_aligned_seed101",
+  "stage": 100000,
+  "seed": 101,
+  "log": "/home/ot/Students/hs/sailboat-research/research/validation/stage15_launch.log"
+}

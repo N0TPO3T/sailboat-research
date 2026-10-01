@@ -2,3 +2,6 @@
 *.py text eol=lf
 *.pth binary
 *.pdf binary
+.gitignore text eol=lf
+research/supplements/** -text
+research/weights_library/** -text

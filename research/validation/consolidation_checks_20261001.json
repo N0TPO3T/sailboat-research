@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-01",
+  "purpose": "Cross-device source integration verification; not training or paper reproduction",
+  "host": "ot@172.16.2.249",
+  "isolated_source_directory": "/home/ot/Students/hs/integration-check-20261001-ce83544-143a508/source",
+  "python": "/home/ot/Students/hs/sailboat-research/.venv/bin/python",
+  "cuda_visible_devices": "",
+  "cpu_threads": 1,
+  "additional_dependency": {
+    "package": "stable-baselines3",
+    "version": "2.8.0",
+    "isolated_target": "/home/ot/Students/hs/integration-check-20261001-ce83544-143a508/deps",
+    "shared_environment_modified": false
+  },
+  "regression_results": [
+    {
+      "command": "python -B -m unittest discover -s engineering/tests -p 'test_*.py'",
+      "tests_run": 31,
+      "passed": 30,
+      "skipped": 1,
+      "skip_reason": "CUDA is required for optimizer device placement",
+      "seconds": 2.722,
+      "result": "OK"
+    },
+    {
+      "command": "python -B -m unittest discover -s research -p test_chapter5_static.py",
+      "tests_run": 10,
+      "passed": 10,
+      "skipped": 0,
+      "seconds": 17.945,
+      "result": "OK"
+    }
+  ],
+  "runtime_smokes": [
+    {
+      "entrypoint": "research/smoke_baseline.py",
+      "models": 3,
+      "steps_per_model": 50,
+      "finite": true,
+      "obstacle_environment": "up to 5 zero-action steps",
+      "evidence": "consolidation_reference_smoke_20261001.json"
+    },
+    {
+      "entrypoint": "sailboat_rl.evaluation.batch_eval",
+      "models": 3,
+      "episodes": 3,
+      "steps_per_episode": 5,
+      "device": "cpu",
+      "workers": 1,
+      "evidence": "consolidation_engine_smoke_20261001/episodes.csv"
+    }
+  ],
+  "limits": [
+    "No formal training or resume launched",
+    "No GPU regression coverage",
+    "No Windows Python runtime claim; code and Git management are local, execution is on Ubuntu",
+    "No policy performance or paper reproduction claim",
+    "Historical source whitespace retained; full diff whitespace check reports inherited issues"
+  ]
+}
