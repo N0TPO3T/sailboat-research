@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-02",
+  "server_repository": "/home/ot/Students/hs/sailboat-routing-v0",
+  "local_source_mirror": "C:/Users/74095/hs/SailBoat/sailboat-routing-v0",
+  "local_archive": "C:/Users/74095/hs/SailBoat/source-backups/v0-20261002/v0-delivery.tar.gz",
+  "local_extracted": "C:/Users/74095/hs/SailBoat/source-backups/v0-20261002/extracted",
+  "local_verification_receipt": "C:/Users/74095/hs/SailBoat/source-backups/v0-20261002/local_verification.json",
+  "archive_sha256": "e04768d5cb9c8ab28755400727cd28eeb8f6549b92192f100aedc3aaaedebd11",
+  "archive_bytes": 37350958,
+  "verified_files": 197,
+  "verification": "Local archive SHA256 matches server; all 197 extracted manifest files verified; full-history Git bundle verified; trajectory plot visually checked. SCP second receipt request failed, but archive transfer and all content verified independently.",
+  "bundle_commit": "6ff1ad2ccbef83b0e424b712ca9d5c163aaea993",
+  "scope": [
+    "source.bundle (complete Git history through report commit)",
+    "runs (all existing and new results, failures, model and raw datasets)",
+    "checkpoints (matched inference assets)",
+    "assets_manifest.json (file sizes and SHA256)"
+  ],
+  "excluded": [
+    ".venv",
+    "caches",
+    "credentials"
+  ],
+  "recovery": [
+    "Verify archive SHA256; inspect member paths; extract into an empty directory.",
+    "Check every assets_manifest.json entry before use.",
+    "Clone source.bundle to a new development directory inside /home/ot/Students/hs; copy verified runs and checkpoints there without replacing any existing workspace.",
+    "Recreate the dedicated Python environment following README; never copy or alter shared environments.",
+    "Read AGENTS.md, PROJECT_STATE.md, CURRENT_PLAN.md and docs/V0_RESULTS.md. Validate source/model/admission identity before another experiment."
+  ],
+  "limits": "Bundle contains the completed research/report commit. This receipt and subsequent documentation-only Git commit are synchronized separately to the local source mirror. No hosted remote or cloud copy configured; two-machine backup is not an offsite backup."
+}
