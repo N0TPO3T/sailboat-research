@@ -25,3 +25,9 @@
 **Conclusion** 固定V0的同状态诊断表明：风项在候选排序不变时仍可通过改点收益阈值触发执行差异。该单例真风航段在决策/下发时几何合法，实际跟踪随后侵入缓冲区；几何连线安全不保证冻结低层的实际航迹安全。
 **Evidence** docs/ep_result/V0_1_DIAGNOSIS.md及runs/v0_1_diagnosis_20261002/中的同状态评分、补跑一致性与安全时间线；原结果见runs/v0_comparison_20261002/fast_single_obstacle__*.json。
 **Implication** 先诊断评分机制与实际跟踪约束，再扩大读出数据或训练；不能把oracle当上界，也不能由此推断所有局部风信息无用。
+
+## 同状态候选过滤通过不代表整回合可完成
+**Tags:** tracking-margin, candidate-feasibility, closed-loop, stopping-gate
+**Conclusion** 固定裕量从初态启用会提前改变航迹；挡住旧状态的危险候选，不足以推出完整导航成功。有限候选清空时即使尚未侵入安全域，也必须记任务失败。
+**Evidence** docs/V0_2_RESULTS.md及runs/v0_2_margin_20261002T142441Z/main_gate.json、same_state_t70.json、main/。
+**Implication** 将同状态机制核验和闭环结果分开；不把失败截断时间/航程当效率收益，不因负结果降低预设回归门槛。

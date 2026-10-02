@@ -7,7 +7,7 @@
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
 - 同步方向：服务器开发/验证/提交 → 本机SSH拉取 → 本机获准后push到托管远端。服务器不承担外网推送或保存托管凭据。
 - 本机origin用于从服务器拉取，向服务器push已禁用；V0托管远端尚未配置，地址未确定。源码镜像不等于完整实验备份。
-- 研发基点4e86b74；完整运行实现已提交为857ff57。源码镜像与大产物分开恢复，资产回执见docs/DELIVERY.json。
+- 研发基点4e86b74；V0运行实现857ff57；V0.2候选裕量实现500618a，参数默认0。源码镜像与大产物分开恢复，旧归档回执见docs/DELIVERY.json；新结果不在该历史归档中。
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
 
 ## 实现与协议
@@ -34,4 +34,6 @@
 - 代码/协议/权重改变后重新验收；源码身份和特征schema不匹配时拒绝使用既有读出器。
 - 单CPU数值线程、首轮累计计算预算3600秒，实际消费见runs/computation.jsonl；不启动低层/高层RL、长搜索或后台无人看管任务。
 - 3/5km只有configs/distance_demos.json配置，未运行；动态/COLREGs、天气预报、完整风场重建不在本轮范围。
-- V0.1原因诊断已完成，相关代码与V0实验版本一致；证据、采样范围及唯一未实施建议见docs/ep_result/V0_1_DIAGNOSIS.md。仅补跑一个估计风回合且逐值复现，未改变算法。当前没有已启动的新研究线程。
+- V0.1诊断为当时未改算法的同状态分析，见docs/ep_result/V0_1_DIAGNOSIS.md。
+- V0.2已完成6回合固定0/25m对照：0m逐值复现，25m三方法均未安全到达，预设门槛未通过，18回归未运行。数字、代价与证据统一见docs/V0_2_RESULTS.md；产物runs/v0_2_margin_20261002T142441Z。
+- 原navigation_admission.json仍绑定旧planner；通用旧入口对当前代码会拒绝准入。本轮run_v0_2.py单独验证冻结特征/模型身份和唯一planner变化，不篡改原收据。一次限定同家族review已完成（provisional）；本轮已停止，不自动开展下一实验。
