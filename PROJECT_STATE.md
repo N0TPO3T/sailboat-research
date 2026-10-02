@@ -38,6 +38,8 @@
 
 ## 当前限制与恢复材料
 - 当前51项测试覆盖模块/接口，不覆盖新navigation全链路验收。原始测试日志与收据留在runs。
+- 按V0原任务核查：现有tests没有导入navigation或调用run_episode；新链路不能据51项通过判为已验收。
+- 静态确认采集完整性缺陷：navigation.py的max_steps短程退出仅改reason、不清complete，capture=True仍可写正式episode NPZ；元数据无完成原因，加载端无法识别短程截断。尚未发现真实采集数据受影响，须在采集前修复并验证。
 - admission.py已实现证据哈希验证；runs/navigation_admission.json缺失。生产拟合前还缺真实episode、可部署读出模型及专用批量采集/三方法对比入口。
 - configs/development_suite.json预定义20个采集episode（train/validation/test=12/4/4）及12个配对场景；尚无真实MAE/P90或三方法闭环性能。
 - docs/validation_summary.json是4e86b74阶段历史收据，保留原数值与旧阻塞原因，不代表当前准入条件。
