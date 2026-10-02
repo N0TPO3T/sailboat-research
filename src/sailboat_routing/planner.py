@@ -6,6 +6,8 @@ from dataclasses import dataclass
 import heapq
 import math
 
+from .metrics import segment_circle_clearance
+
 Point = tuple[float, float]
 
 
@@ -156,6 +158,7 @@ class PlannerInput:
 
 @dataclass(frozen=True, slots=True)
 class PlannerConfig:
+    tracking_margin_m: float = 0.0  # candidate segments only; evaluation map unchanged
     nominal_distance: float = 500.0
     maximum_distance: float = 550.0
     lateral_angles_rad: tuple[float, ...] = (-0.25, 0.25)
@@ -170,7 +173,7 @@ class PlannerConfig:
     change_weight: float = 0.1
 
     def __post_init__(self):
-        numeric = (self.nominal_distance, self.maximum_distance, self.arrival_radius,
+        numeric = (self.tracking_margin_m, self.nominal_distance, self.maximum_distance, self.arrival_radius,
                    self.replan_period, self.minimum_hold_time, self.improvement_threshold,
                    self.smoothing, self.map_distance_weight, self.wind_weight,
                    self.turn_weight, self.change_weight, *self.lateral_angles_rad)
@@ -180,7 +183,7 @@ class PlannerConfig:
             raise ValueError("Local target range must stay within nominal 500 m envelope")
         if self.nominal_distance < 450 or not 0 <= self.smoothing <= 1:
             raise ValueError("Invalid nominal distance or smoothing")
-        if min(self.arrival_radius, self.replan_period, self.minimum_hold_time,
+        if min(self.tracking_margin_m, self.arrival_radius, self.replan_period, self.minimum_hold_time,
                self.improvement_threshold, self.map_distance_weight, self.wind_weight,
                self.turn_weight, self.change_weight) < 0:
             raise ValueError("Planner thresholds and weights must be nonnegative")
@@ -279,6 +282,9 @@ class LocalWaypointPlanner:
             if any(distance(target, s.target_xy) < 1e-8 for s in scores):
                 continue
             if not self.static_map.segment_clear(p, target):
+                continue
+            if (cfg.tracking_margin_m > 0 and segment_circle_clearance(
+                    p, target, self.static_map.obstacles)["safety_m"] < cfg.tracking_margin_m):
                 continue
             try:
                 tail = self.static_map.route(target, final)

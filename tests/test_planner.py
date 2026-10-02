@@ -141,5 +141,37 @@ class LocalPlannerTests(unittest.TestCase):
         self.assertEqual(before_np, pickle.dumps(np.random.get_state()))
 
 
+class TrackingMarginTests(unittest.TestCase):
+    def test_default_zero_preserves_explicit_zero_decision(self):
+        chart = StaticMap((-1000, 2000, -500, 500), (CircleObstacle((500, 150), 55, 70),))
+        v = PlannerInput((0, 0), 0, None, ((0, 0), (1000, 0)), 0)
+        self.assertEqual(LocalWaypointPlanner(chart).plan(v),
+                         LocalWaypointPlanner(chart, PlannerConfig(tracking_margin_m=0)).plan(v))
+
+    def test_margin_filters_candidates_without_changing_evaluation_map(self):
+        from sailboat_routing.metrics import segment_circle_clearance
+        chart = StaticMap((-1000, 2000, -500, 500), (CircleObstacle((500, 149), 55, 70),))
+        v = PlannerInput((0, 0), 0, None, ((0, 0), (1000, 0)), 0)
+        zero = LocalWaypointPlanner(chart).plan(v)
+        margin = LocalWaypointPlanner(chart, PlannerConfig(tracking_margin_m=25)).plan(v)
+        self.assertIn((500, 0), [s.target_xy for s in zero.candidates])
+        self.assertNotIn((500, 0), [s.target_xy for s in margin.candidates])
+        self.assertTrue(all(segment_circle_clearance(v.position_xy, c.target_xy, chart.obstacles)['safety_m'] >= 25 for c in margin.candidates))
+        self.assertEqual(chart.obstacles[0].exclusion_radius, 125)
+        self.assertEqual(segment_circle_clearance((0, 0), (500, 0), chart.obstacles)['safety_m'], 24)
+        self.assertTrue(chart.segment_clear((0, 0), (500, 0)))
+        boundary = replace(chart, obstacles=(CircleObstacle((500, 150), 55, 70),))
+        self.assertIn((500, 0), [s.target_xy for s in LocalWaypointPlanner(boundary, PlannerConfig(tracking_margin_m=25)).plan(v).candidates])
+
+    def test_margin_empty_set_uses_existing_failure_not_relaxation(self):
+        chart = StaticMap((-1000, 2000, -500, 500), (CircleObstacle((0, 149), 55, 70),))
+        v = PlannerInput((0, 0), 0, None, ((0, 0), (1000, 0)), 0)
+        LocalWaypointPlanner(chart).plan(v)
+        with self.assertRaises(NoLocalTargetError):
+            LocalWaypointPlanner(chart, PlannerConfig(tracking_margin_m=25)).plan(v)
+        for value in (-1, math.nan, math.inf):
+            with self.assertRaises(ValueError): PlannerConfig(tracking_margin_m=value)
+
+
 if __name__ == "__main__":
     unittest.main()
