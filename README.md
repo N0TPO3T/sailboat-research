@@ -57,7 +57,7 @@ A/B和18D入口分别为scripts/run_stage_a.py、run_stage_b.py、evaluate_obsta
 
 ## V0 全链路入口
 
-正式结果及适用边界见 [docs/V0_RESULTS.md](docs/V0_RESULTS.md)。以下为本轮实际运行命令（在 NEW_ROOT 执行）：
+正式结果及适用边界见 [docs/ep_result/V0_RESULTS.md](docs/ep_result/V0_RESULTS.md)。以下为本轮实际运行命令（在 NEW_ROOT 执行）：
 
 ```bash
 .venv/bin/python -B scripts/run_v0.py admit --run-name v0_admission_final_20261002

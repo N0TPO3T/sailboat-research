@@ -4,7 +4,7 @@
 
 ## 版本与范围
 
-先读 `docs/V0_RESULTS.md`。读取服务器 HEAD `654f15c7af772d0403c47a3935a1989db936e118`，开始时工作区干净；实验运行提交为 `857ff57d52eafe2ca462f3d6f529785daa7ffdd4`。相关 planner/navigation/metrics 和实际配置无差异；模型通过原准入身份校验。数据来自 `runs/v0_comparison_20261002/` 的 suite.json、逐方法 JSON 及 provenance.json。
+先读 `docs/ep_result/V0_RESULTS.md`。读取服务器 HEAD `654f15c7af772d0403c47a3935a1989db936e118`，开始时工作区干净；实验运行提交为 `857ff57d52eafe2ca462f3d6f529785daa7ffdd4`。相关 planner/navigation/metrics 和实际配置无差异；模型通过原准入身份校验。数据来自 `runs/v0_comparison_20261002/` 的 suite.json、逐方法 JSON 及 provenance.json。
 
 仅增加 `scripts/diagnose_v0_1.py`。原日志缺 estimated 在 t=70 的风输入，按授权只补跑 fast_single_obstacle 的 estimated 一回合：307步，约11.64秒；完整轨迹、动作和全部原有决策日志逐值一致。评分复算调用原 `plan`，使用**同一决策前状态和目标管理器的独立副本**；不推进物理环境，断言原管理器未变。未补跑另外两种方法，未修改算法/参数/模型。
 
@@ -12,7 +12,7 @@
 
 三方法此前一致。t=70 位置 `(120.2026,-33.1661)` m、航向 −0.758994 rad，旧目标 A；上一改点 t=33、上一重规划 t=60，故30秒保持期和10秒周期均已满足。oracle t=70 选 B，t=71 下发；首个不同动作在原 trajectory 的 **time=72** 行（对应71→72秒控制步），并非到t=90才分歧。
 
-按 [planner.py](../src/sailboat_routing/planner.py) 287–311行，分项沿用代码：`remaining_map_distance`=当前位置至候选距离+候选至终点的几何路径长（权重1）；`local_wind_penalty`=0.3×min(候选距离,500)×max(0,cos(候选方位−吹向风角−π))²；`turn_penalty`=20×航向圆周角差绝对值；`change_penalty`=0.1×候选至旧目标距离。总分越小越好。下表分项均已乘实际权重；三元组顺序为**几何 / 真风 / 估计风**。
+按 [planner.py](../../src/sailboat_routing/planner.py) 287–311行，分项沿用代码：`remaining_map_distance`=当前位置至候选距离+候选至终点的几何路径长（权重1）；`local_wind_penalty`=0.3×min(候选距离,500)×max(0,cos(候选方位−吹向风角−π))²；`turn_penalty`=20×航向圆周角差绝对值；`change_penalty`=0.1×候选至旧目标距离。总分越小越好。下表分项均已乘实际权重；三元组顺序为**几何 / 真风 / 估计风**。
 
 | 候选坐标(m) | 地图项×1 | 转向项×20 | 改点项×0.1 | 风项×0.3（三种） | 总分（三种） | 筛选 |
 |---|---:|---:|---:|---|---|---|
@@ -31,7 +31,7 @@
 
 t=149起点已在缓冲区内；原 `StaticMap.route` 对该记录重算得到 `NoRouteError: Start or final goal violates map constraints`，对应 planner.py 255–256行调用以及82–83行起终点检查；navigation.py在物理步之前捕获，未再执行149→150秒。**NoRouteError是侵入后的几何前置条件失败，不是先无路才撞入缓冲区。** 本例支持“目标直线可行不保证真实跟踪安全”；未发现判交放行一条穿缓冲区直线的证据。切换后的低层反应、风变化及记忆重编码各贡献多少，尚未确认，不能只由时序归因。
 
-![局部分歧；虚线为t=70建议下发的航段，星号为目标，实线为实际轨迹](../runs/v0_1_diagnosis_20261002/local_divergence.png)
+![局部分歧；虚线为t=70建议下发的航段，星号为目标，实线为实际轨迹](../../runs/v0_1_diagnosis_20261002/local_divergence.png)
 
 ## 3. 为什么估计风在12场都没改变执行
 

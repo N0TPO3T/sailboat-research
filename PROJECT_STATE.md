@@ -24,7 +24,7 @@
 - A/B原协议：迁移及新旧解释器比较误差0，500m为12/12，约1km为5/6；失败前1000步与原500m一致。证据：runs/stage_a、stage_b、stage_b_failure_diagnostic及audit/cross_environment_parity.json。
 - 18D独立候选原协议8/8，尚未连续适配，不替换14D；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
 - 新导航准入54项测试通过，完整274步旁路开/关轨迹及动作一致，2次目标切换连续；140步变风标签检查通过。证据runs/v0_admission_final_20261002、runs/navigation_admission.json。
-- 20个完整采集episode按12/4/4划分，2个训练超时保留；已冻结读出器并完成一次test评估。离线误差、36次闭环结果及全部失败统一见docs/V0_RESULTS.md及其原始证据链接。
+- 20个完整采集episode按12/4/4划分，2个训练超时保留；已冻结读出器并完成一次test评估。离线误差、36次闭环结果及全部失败统一见docs/ep_result/V0_RESULTS.md及其原始证据链接。
 - 本轮上游1351文件与Git状态无变化：runs/audit/upstream_integrity_v0_final_20261002.json。
 - V0规定的最小工程/开发诊断已完成；未证实估计风优于几何基线，不等于论文方法已成立。几何路径安全未保证真实闭环安全。
 
@@ -34,4 +34,4 @@
 - 代码/协议/权重改变后重新验收；源码身份和特征schema不匹配时拒绝使用既有读出器。
 - 单CPU数值线程、首轮累计计算预算3600秒，实际消费见runs/computation.jsonl；不启动低层/高层RL、长搜索或后台无人看管任务。
 - 3/5km只有configs/distance_demos.json配置，未运行；动态/COLREGs、天气预报、完整风场重建不在本轮范围。
-- V0.1原因诊断已完成，相关代码与V0实验版本一致；证据、采样范围及唯一未实施建议见docs/V0_1_DIAGNOSIS.md。仅补跑一个估计风回合且逐值复现，未改变算法。当前没有已启动的新研究线程。
+- V0.1原因诊断已完成，相关代码与V0实验版本一致；证据、采样范围及唯一未实施建议见docs/ep_result/V0_1_DIAGNOSIS.md。仅补跑一个估计风回合且逐值复现，未改变算法。当前没有已启动的新研究线程。
