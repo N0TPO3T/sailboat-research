@@ -1,6 +1,6 @@
 # Sailboat Routing V0
 
-冻结局部SAC-LSTM的连续多航迹点与局部风向旁路研究。服务器、路径、当前能力和未提交工作见[PROJECT_STATE](PROJECT_STATE.md)；下一步见[CURRENT_PLAN](CURRENT_PLAN.md)，Agent首先遵循[AGENTS](AGENTS.md)。本页只维护操作方法。
+冻结局部SAC-LSTM的连续多航迹点与局部风向旁路研究。服务器、路径、当前能力与证据见[PROJECT_STATE](PROJECT_STATE.md)；下一步见[CURRENT_PLAN](CURRENT_PLAN.md)，Agent首先遵循[AGENTS](AGENTS.md)。本页只维护操作方法。
 
 ## 项目结构
 - third_party：原样继承的最小运行快照；来源见docs/UPSTREAM_MANIFEST.md。
@@ -54,3 +54,19 @@ A/B和18D入口分别为scripts/run_stage_a.py、run_stage_b.py、evaluate_obsta
 - 长任务断线先检查明确归属的进程和退出收据；不要仅因SSH中断重跑实验。
 - 新run记录实际源码版本（未提交时附差异及必要源码快照）、配置、资产哈希、命令、日志与退出结果。大产物只向获准目的地备份，保存位置和SHA256并验证恢复。
 - 不同步.venv、缓存、凭据；异机恢复按requirements.lock独立建环境，再按来源清单取回模型及必要输出。
+
+## V0 全链路入口
+
+正式结果及适用边界见 [docs/V0_RESULTS.md](docs/V0_RESULTS.md)。以下为本轮实际运行命令（在 NEW_ROOT 执行）：
+
+```bash
+.venv/bin/python -B scripts/run_v0.py admit --run-name v0_admission_final_20261002
+.venv/bin/python -B scripts/run_v0.py capture --run-name v0_capture_20261002
+.venv/bin/python -B scripts/fit_wind_readout.py --episodes runs/v0_capture_20261002/episodes --manifest runs/v0_capture_20261002/splits.json --output runs/v0_fit_20261002 --alphas 0.1 1 10
+.venv/bin/python -B scripts/run_v0.py compare --run-name v0_comparison_20261002 --model runs/v0_fit_20261002/model.npz
+.venv/bin/python -B scripts/report_v0.py --comparison runs/v0_comparison_20261002 --fit runs/v0_fit_20261002
+```
+
+前四条创建独占输出，不能在已有结果上原地重跑。重现实验需在独立恢复副本中，保留旧证据、使用新 run 名称；admit 只在该副本不存在 runs/navigation_admission.json 时生成收据。现有未改变的代码/资产可沿用通过哈希核验的收据。源码或协议改变后须重新验收，不能手改收据。账本累计预算为3600秒，复制旧账本不等于获得额外计算授权。
+
+report_v0 只读取已保存结果并重绘图，不重新评估测试集。3/5km目标序列见 configs/distance_demos.json，仅配置、未运行；使用前需显式选定任务限制与预算。

@@ -19,3 +19,9 @@
 **Conclusion** 曾自行增加B的6/6门槛而阻塞全部下游。失败发生在首次换目标前，同条件原入口亦失败且前1000步物理轨迹相同；这不支持把失败归因于连续换目标，也不证明新导航协议已通过。
 **Evidence** runs/stage_b/result.json、runs/stage_b_failure_diagnostic/result.json；configs/navigation_contract.json的admission_policy。
 **Implication** 接口/信息边界作为硬门，策略能力按全部场景如实报告；保留失败与旧passed，不增设全成功要求，不以新规则跳过真实验收。
+
+## 局部真风不保证闭环收益
+**Tags:** planner, oracle, safety, evaluation
+**Conclusion** 固定V0配对中，快速变风单障碍的几何与估计风方法成功，真风方法改变选点后进入安全缓冲区失败；几何连线可行不代表冻结低层实际跟踪安全。
+**Evidence** runs/v0_comparison_20261002/fast_single_obstacle__*.json、diagnostic.json及docs/V0_RESULTS.md。
+**Implication** 先诊断评分机制与实际跟踪约束，再扩大读出数据或训练；不能把oracle当上界，也不能由此推断所有局部风信息无用。

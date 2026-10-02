@@ -7,44 +7,31 @@
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
 - 同步方向：服务器开发/验证/提交 → 本机SSH拉取 → 本机获准后push到托管远端。服务器不承担外网推送或保存托管凭据。
 - 本机origin用于从服务器拉取，向服务器push已禁用；V0托管远端尚未配置，地址未确定。源码镜像不等于完整实验备份。
-- 研发基点为4e86b74；其后导航、准入、风场、指标、18D候选及读出变更仍在服务器未提交工作区。文档提交不代表这些代码已入Git，克隆不能恢复未提交代码。
+- 研发基点4e86b74；完整运行实现已提交为857ff57。源码镜像与大产物分开恢复，资产回执见docs/DELIVERY.json。
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
 
 ## 实现与协议
 - 当前连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。
 - 新集成协议：configs/navigation_contract.json；无额外sensor/actuator噪声，关闭dropout；原A/B用Dryden，新navigation改用私有SyntheticWindField，须单独验证。
 - third_party/senior保存原样最小继承快照；runtime.py加载资产，continuous.py维护物理连续，frames.py负责刚性坐标与因果记忆重编码。
-- navigation.py已写真实运行链：每控制步一次Actor决策，同前向旁路270维特征，高层t选点在t+1应用。实现存在不等于端到端通过。
+- navigation.py已写真实运行链：每控制步一次Actor决策，同前向旁路270维特征，高层t选点在t+1应用。已由真实闭环与旁路非干扰准入验证。
 - wind_readout.py/fit_wind_readout.py实现sin/cos岭回归、整episode/scenario划分、train-only标准化、validation选alpha、test一次评估。
 - planner.py提供静态地图A*和有限候选；wind_fields.py/metrics.py提供私有时空风场与安全/换舷/配对统计。正式planner输入无环境或风场查询器。
 - 三方法geometry_only/oracle_local/estimated_local共享低层与选点参数；oracle只提供当前本船局部真风方向，是诊断参照，不是全局最优上界。
 - 18D 0204@10800为独立避障候选；原尺度通过，不具备已验证连续多目标接口，未替换14D。
 
-## 已验证能力（2026-10-02核对）
-| 项目 | 结果 | 相对 NEW_ROOT 的证据 |
-|---|---|---|
-| 14D迁移 | 32步固定输入、两组25步闭环误差0 | `runs/stage_a/parity/result.json` |
-| 新旧解释器 | 25步动作/状态/记忆误差0 | `runs/audit/cross_environment_parity.json` |
-| 原尺度500m | 四风况各3seed，12/12到达 | `runs/stage_a/capability/result.json` |
-| 连续约1km | 5/6到达，5次切换物理/time/wind/RNG不变 | `runs/stage_b/result.json` |
-| 已知失败 | 正逆风seed11原500m也超时，前1000步物理轨迹与B相同 | `runs/stage_b_failure_diagnostic/result.json` |
-| 18D迁移 | legacy_training和eval各16固定输入/32闭环，动作/h/c/attention/state误差0 | `runs/obstacle_parity_legacy/results.json`、`runs/obstacle_parity_eval/results.json` |
-| 18D原尺度 | legacy_training+原双噪声，四风况×无障碍/单障碍，8/8到达 | `runs/obstacle_capability_legacy/results.json` |
-| 当前工作树回归 | 本次51项全部通过；不是C/D端到端验收 | `runs/audit/codex_takeover_unittest_20261002.json`及同名log |
-| 上游完整性 | 既有检查1351文件无变化，Git状态一致；本次未重算全部上游 | `runs/audit/upstream_integrity.json` |
+## 已验证能力与证据
+- A/B原协议：迁移及新旧解释器比较误差0，500m为12/12，约1km为5/6；失败前1000步与原500m一致。证据：runs/stage_a、stage_b、stage_b_failure_diagnostic及audit/cross_environment_parity.json。
+- 18D独立候选原协议8/8，尚未连续适配，不替换14D；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
+- 新导航准入54项测试通过，完整274步旁路开/关轨迹及动作一致，2次目标切换连续；140步变风标签检查通过。证据runs/v0_admission_final_20261002、runs/navigation_admission.json。
+- 20个完整采集episode按12/4/4划分，2个训练超时保留；已冻结读出器并完成一次test评估。离线误差、36次闭环结果及全部失败统一见docs/V0_RESULTS.md及其原始证据链接。
+- 本轮上游1351文件与Git状态无变化：runs/audit/upstream_integrity_v0_final_20261002.json。
+- V0规定的最小工程/开发诊断已完成；未证实估计风优于几何基线，不等于论文方法已成立。几何路径安全未保证真实闭环安全。
 
-18D四个障碍场景最小安全余量约5.59/5.36/99.84/10.06m，采用原40m阈值和控制步采样线段近似，不能宣称连续曲线或船体安全保证。8场均seed0，不代表统计泛化。
-旧B的6/6成功门是实现时额外设置，非用户要求；旧 `passed=false` 和全部失败结果保留，不改历史。今后的硬门检查资产匹配、接口连续性、因果记忆和可用航行，成功率另行报告。
-
-## 当前限制与恢复材料
-- 当前51项测试覆盖模块/接口，不覆盖新navigation全链路验收。原始测试日志与收据留在runs。
-- 按V0原任务核查：现有tests没有导入navigation或调用run_episode；新链路不能据51项通过判为已验收。
-- 静态确认采集完整性缺陷：navigation.py的max_steps短程退出仅改reason、不清complete，capture=True仍可写正式episode NPZ；元数据无完成原因，加载端无法识别短程截断。尚未发现真实采集数据受影响，须在采集前修复并验证。
-- admission.py已实现证据哈希验证；runs/navigation_admission.json缺失。生产拟合前还缺真实episode、可部署读出模型及专用批量采集/三方法对比入口。
-- configs/development_suite.json预定义20个采集episode（train/validation/test=12/4/4）及12个配对场景；尚无真实MAE/P90或三方法闭环性能。
-- docs/validation_summary.json是4e86b74阶段历史收据，保留原数值与旧阻塞原因，不代表当前准入条件。
-- 来源与哈希见docs/UPSTREAM_MANIFEST.md、docs/migration_identity.json、docs/OBSTACLE_PROTOCOL.md；模型在checkpoints，运行输出在runs，均被Git忽略。
-- V0完整模型/输出的异机备份尚未核实；恢复必须保留这些资产及清单，不能只克隆源码。
-- 单CPU进程/单数值线程，首轮累计实验预算3600秒；运行前读取runs/computation.jsonl重新计算，账本不含安装/编辑等全部耗时。
-- 不启动低层重训、高层RL、长搜索、后台无人看管任务；动态/COLREGs、外部天气、完整风场重建及3/5km扩展不在当前执行范围。
-- 论文贡献是待验证的因果读出与连续选点作用；继承控制器、注意力及静态避障不能算新增贡献。下一步只在CURRENT_PLAN维护。
+## 限制与恢复
+- 模型在checkpoints、运行产物在runs，Git忽略；已提交来源清单见docs/UPSTREAM_MANIFEST.md、migration_identity.json。完整本地资产位置与校验见docs/DELIVERY.json。
+- docs/validation_summary.json和旧B passed=false保留历史含义，不代表当前准入；本轮未篡改旧结果。
+- 代码/协议/权重改变后重新验收；源码身份和特征schema不匹配时拒绝使用既有读出器。
+- 单CPU数值线程、首轮累计计算预算3600秒，实际消费见runs/computation.jsonl；不启动低层/高层RL、长搜索或后台无人看管任务。
+- 3/5km只有configs/distance_demos.json配置，未运行；动态/COLREGs、天气预报、完整风场重建不在本轮范围。
+- 后续最小实验建议见结果报告；当前没有已启动的新研究线程。

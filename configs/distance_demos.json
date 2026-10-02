@@ -1,0 +1,87 @@
+{
+  "status": "configuration_only_not_run",
+  "purpose": "Optional later 3km and 5km demonstrations after V0; no automatic execution",
+  "local_goal_spacing_m": 500,
+  "frame": "rigid; frozen target [500,0]",
+  "scenarios": [
+    {
+      "id": "straight_3km",
+      "seed": 11,
+      "wind_degrees": 0,
+      "goals": [
+        [
+          500,
+          0
+        ],
+        [
+          1000,
+          0
+        ],
+        [
+          1500,
+          0
+        ],
+        [
+          2000,
+          0
+        ],
+        [
+          2500,
+          0
+        ],
+        [
+          3000,
+          0
+        ]
+      ]
+    },
+    {
+      "id": "straight_5km",
+      "seed": 11,
+      "wind_degrees": 0,
+      "goals": [
+        [
+          500,
+          0
+        ],
+        [
+          1000,
+          0
+        ],
+        [
+          1500,
+          0
+        ],
+        [
+          2000,
+          0
+        ],
+        [
+          2500,
+          0
+        ],
+        [
+          3000,
+          0
+        ],
+        [
+          3500,
+          0
+        ],
+        [
+          4000,
+          0
+        ],
+        [
+          4500,
+          0
+        ],
+        [
+          5000,
+          0
+        ]
+      ]
+    }
+  ],
+  "limits": "These are target schedules, not validated capabilities or admitted D comparison scenes. Select explicit task time/radius limits and budget before use."
+}
