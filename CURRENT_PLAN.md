@@ -2,4 +2,4 @@
 
 No active research thread.
 
-V0 A→B→C→D 已完成并交付开发诊断。当前能力与证据见 PROJECT_STATE.md；结论、限制及尚未启动的下一项最小实验建议见 docs/V0_RESULTS.md。不把负结果视为必须追加调参或训练的授权。
+V0.1限定原因诊断已完成；证据与边界见docs/V0_1_DIAGNOSIS.md。本轮明确停止，不实施报告中的下一轮建议，不自动修复、训练或扩大实验。

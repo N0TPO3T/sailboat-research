@@ -22,6 +22,6 @@
 
 ## 局部真风不保证闭环收益
 **Tags:** planner, oracle, safety, evaluation
-**Conclusion** 固定V0配对中，快速变风单障碍的几何与估计风方法成功，真风方法改变选点后进入安全缓冲区失败；几何连线可行不代表冻结低层实际跟踪安全。
-**Evidence** runs/v0_comparison_20261002/fast_single_obstacle__*.json、diagnostic.json及docs/V0_RESULTS.md。
+**Conclusion** 固定V0的同状态诊断表明：风项在候选排序不变时仍可通过改点收益阈值触发执行差异。该单例真风航段在决策/下发时几何合法，实际跟踪随后侵入缓冲区；几何连线安全不保证冻结低层的实际航迹安全。
+**Evidence** docs/V0_1_DIAGNOSIS.md及runs/v0_1_diagnosis_20261002/中的同状态评分、补跑一致性与安全时间线；原结果见runs/v0_comparison_20261002/fast_single_obstacle__*.json。
 **Implication** 先诊断评分机制与实际跟踪约束，再扩大读出数据或训练；不能把oracle当上界，也不能由此推断所有局部风信息无用。
