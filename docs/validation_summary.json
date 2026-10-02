@@ -138,5 +138,11 @@
     "avoidance_performance_evaluated": false
   },
   "experiment_ledger_seconds": 211.25318693136796,
-  "compute_note": "Serial single-thread CPU. Ledger excludes dependency installation, startup/imports and the first 13-test interface run; all measured bounded runs remain far below the 3600s budget. No training or push."
+  "compute_note": "Serial single-thread CPU. Ledger excludes dependency installation, startup/imports and the first 13-test interface run; all measured bounded runs remain far below the 3600s budget. No training or push.",
+  "_record_scope": {
+    "kind": "historical_snapshot",
+    "baseline_commit": "4e86b74",
+    "current_state": "../PROJECT_STATE.md",
+    "note": "Original values and old gate decisions retained; not current admission or latest validation."
+  }
 }

@@ -2,7 +2,7 @@
 
 ## Status and gate
 
-This is an independently implemented geometric module, not evidence of closed-loop performance. Stage B's predeclared 6/6 gate failed (5/6 real approximately 1 km scenarios; headwind seed 11 timed out on the first segment). Consequently **the geometry_only / oracle_local / estimated_local paired closed-loop experiments have not been run**, and no wind readout has been fitted for these comparisons. The frozen Actor and 14-dimensional low-level protocol are unchanged. Unit cases and the standalone API do not substitute for the failed B gate. This module adds no simulator runner, collector, training, or performance report.
+This document specifies the geometric planner interface; current implementation and experiment status live in [PROJECT_STATE](../PROJECT_STATE.md). Module tests do not establish closed-loop performance. The historical 6/6 success gate is not the current navigation admission policy; actual integration must verify continuous physics, causal memory and information isolation before downstream experiments.
 
 ## Map and routes
 

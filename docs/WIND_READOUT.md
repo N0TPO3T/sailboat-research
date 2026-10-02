@@ -2,9 +2,9 @@
 
 ## Status and information boundary
 
-This is an independently usable mathematical module, not a claim of real-wind accuracy. Stage B currently reports `passed: false` (5/6). No new capture, fitting, Actor training, or readout performance experiment was run. The production fitting CLI always checks `runs/stage_b/result.json` and refuses to fit unless its `passed` field is exactly JSON `true`; there is no bypass flag. Synthetic Python API checks are only numerical checks, never real wind evaluation.
+This document specifies the readout interface, not current experimental status; see [PROJECT_STATE](../PROJECT_STATE.md). The production CLI validates an evidence-bound admission record using `admission.load_admission`; the historical Stage B `passed` field is not the new admission rule. Synthetic API checks do not establish real-wind accuracy.
 
-The Actor and its normalization remain frozen. Production features are **270** entries in this order: current frozen-normalized 14-dimensional observation, followed by the **256-dimensional `lstm_ln` output from the same current Actor forward**. Features must be captured before applying the current action and cannot include the observation after it. Wind labels are only available to the offline fitter/evaluator. Online prediction takes only features, frame angle and history count: no environment, info dictionary, wind query, seed, oracle angle or wind speed. No capture implementation is included here.
+The Actor and its normalization remain frozen. Production features are **270** entries in this order: current frozen-normalized 14-dimensional observation, followed by the **256-dimensional `lstm_ln` output from the same current Actor forward**. Features must be captured before applying the current action and cannot include the observation after it. Wind labels are only available to the offline fitter/evaluator. Online prediction takes only features, frame angle and history count: no environment, info dictionary, wind query, seed, oracle angle or wind speed. The producer is navigation.py; its end-to-end verification status is maintained in PROJECT_STATE.md.
 
 All directions are **blow-toward radians**, not meteorological blow-from bearings. Frame angle is the world orientation of the local x axis. World = wrap(local + frame angle); local = wrap(world - frame angle). The functions `local_to_world`, `world_to_local`, and `wrap_angle` operate on scalars or arrays.
 
@@ -29,13 +29,14 @@ Metadata uses **exactly** these keys:
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "episode_id": "train_episode_001",
   "scenario_id": "train_scenario_001",
   "feature_timing": "decision_pre_action",
   "source_identity": {
     "actor_sha256": "<64 lowercase hex characters of the actual frozen Actor file>",
     "normalizer_sha256": "<64 lowercase hex characters of the actual frozen normalizer file>",
+    "protocol_sha256": "<64 lowercase hex characters of the admitted protocol definition>",
     "feature_schema": "frozen_obs14+lstm_ln256_pre_action_v1"
   }
 }
@@ -66,11 +67,11 @@ Each split must be nonempty, every supplied episode must occur exactly once, and
 
 Insufficient history or tiny predicted vector norm returns `valid=False` and NaN directions. The vector norm is only a degeneracy detector, **not confidence or probability**. Valid raw predictions are normalized to unit vectors, rotated to world coordinates, and combined in a causal world-frame sin/cos EMA. Only then is the result converted into the *current* local frame. Opposite-vector cancellation also returns invalid, retaining the prior filter state. Invalid inputs do not update the EMA or expose a stale estimate as current. The EMA uses no future window. The low-level stateful API requires the caller to preserve chronological order; `load_episode` checks timestamps and `predict_episode(model, episode, **filter_options)` visits the stored episode in order. The latter reads no labels and verifies frozen source identity.
 
-Models use exclusive-create `save(path)` and strict `RidgeWindReadout.load(path, *, expected_source_identity=None, expected_dimension=None)`. NPZ fields are exactly `version`, `dimension`, `mean`, `scale`, `coefficients`, `intercept`, `alpha`, `source_identity_json`. Version is 1; output coefficients are D-by-2. Production deployment should supply both expected identity and expected dimension 270; wrong dimensions/identities, nonpositive scales, malformed arrays and unknown versions are rejected. Save cannot overwrite an existing model.
+Models use exclusive-create `save(path)` and strict `RidgeWindReadout.load(path, *, expected_source_identity=None, expected_dimension=None)`. NPZ fields are exactly `version`, `dimension`, `mean`, `scale`, `coefficients`, `intercept`, `alpha`, `source_identity_json`. Version is 2; output coefficients are D-by-2. Production deployment should supply both expected identity and expected dimension 270; wrong dimensions/identities, nonpositive scales, malformed arrays and unknown versions are rejected. Save cannot overwrite an existing model.
 
 ## CLI and metrics
 
-After the real Stage B gate passes and audited complete episode captures exist:
+After evidence-bound navigation admission and audited complete episode captures exist:
 
 ```sh
 cd /home/ot/Students/hs/sailboat-routing-v0
@@ -80,9 +81,9 @@ cd /home/ot/Students/hs/sailboat-routing-v0
   --alphas 0.1 1 10
 ```
 
-Optional arguments are `--output`, `--warmup`, `--min-norm`, `--ema-weight`, `--window-steps`. The parameter whitelist is argparse's explicit options; there are no capture/env/oracle/gate-bypass parameters. At most 8 distinct positive alphas are accepted. Validation MAE chooses alpha (ties keep declared candidate order), never test performance. Each candidate uses the same train-only normalization. No train+validation refit occurs. **Test is evaluated only once**, after selection. Empty validation prevents selection. Test/event empty sets remain explicitly empty, not fabricated numbers.
+Optional arguments are `--admission`, `--output`, `--warmup`, `--min-norm`, `--ema-weight`, `--window-steps`. The parameter whitelist is argparse's explicit options; there are no capture/env/oracle/gate-bypass parameters. At most 8 distinct positive alphas are accepted. Validation MAE chooses alpha (ties keep declared candidate order), never test performance. Each candidate uses the same train-only normalization. No train+validation refit occurs. **Test is evaluated only once**, after selection. Empty validation prevents selection. Test/event empty sets remain explicitly empty, not fabricated numbers.
 
-All output paths resolve inside NEW_ROOT/runs; input paths must resolve inside NEW_ROOT too. Default output is a unique `runs/wind_readout/<UTC timestamp>_<suffix>` directory, containing `model.npz` and `result.json`. Existing output directories are refused. The result preserves source identity, all input episode file hashes, manifest hash and content, Stage B result hash, alpha candidates/validation metrics, selected alpha, test metrics and inference options. Missing data or a failed/missing Stage B gate returns exit status 2 and creates no fake metrics. The current default is intentionally **blocked by the failed Stage B gate**.
+All output paths resolve inside NEW_ROOT/runs; input paths must resolve inside NEW_ROOT too. Default output is a unique `runs/wind_readout/<UTC timestamp>_<suffix>` directory, containing `model.npz` and `result.json`. Existing output directories are refused. The result preserves source identity, all input episode file hashes, manifest hash and content, admission record hash, alpha candidates/validation metrics, selected alpha, test metrics and inference options. Missing data or invalid/missing admission returns exit status 2 without fabricated metrics. The default admission path is runs/navigation_admission.json; see PROJECT_STATE.md for its current availability.
 
 `circular_metrics(predicted_rad, labels_rad, valid=None)` reports shortest absolute circular error in degrees, frame-weighted MAE and P90, valid count and total count. Empty sets use `status: "empty"`, count 0 and null metrics. `evaluate_episodes` returns overall errors, goal-switch errors, and wind-change response errors. Each event window includes the flagged decision and the next W-1 decisions (default W=10), is truncated at episode end, and overlapping windows count each frame once. Invalid predictions are excluded from errors but retained in total-count coverage. These are post-event response **errors**, not claimed settling time or confidence calibration. There is no event inference from future values or fabricated wind-change marking.
 
