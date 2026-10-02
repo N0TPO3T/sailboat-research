@@ -5,7 +5,8 @@
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
-- 服务器尚无Git远端；未建立获准推送的托管地址。当前跨设备主要通过SSH接入，不能宣称已完成异机备份。
+- 同步方向：服务器开发/验证/提交 → 本机SSH拉取 → 本机获准后push到托管远端。服务器不承担外网推送或保存托管凭据。
+- 本机origin用于从服务器拉取，向服务器push已禁用；V0托管远端尚未配置，地址未确定。源码镜像不等于完整实验备份。
 - 研发基点为4e86b74；其后导航、准入、风场、指标、18D候选及读出变更仍在服务器未提交工作区。文档提交不代表这些代码已入Git，克隆不能恢复未提交代码。
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
 
