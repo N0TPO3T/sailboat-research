@@ -1,0 +1,33 @@
+{
+  "user_description": "用户本次确认这是最终带避障功能的权重；运行身份与性能分别核验",
+  "local_archive": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-research\\saclstm_s14obst_noise_0204_actor10800.zip",
+  "archive_sha256": "f3d8f7c0c715fc6e2c312f8ba7656c9f8e0b726a598279bb071e03c8d561c73f",
+  "same_archive_as_existing_library": true,
+  "members": [
+    {
+      "name": "saclstm_s14obst_noise_0204_actor10800.pth",
+      "bytes": 3475215,
+      "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+      "matches_archived_inspection": true
+    },
+    {
+      "name": "saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "bytes": 1898,
+      "sha256": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6",
+      "matches_archived_inspection": true
+    },
+    {
+      "name": "saclstm_s14obst_noise_0204_q_critic10800.pth",
+      "bytes": 6683670,
+      "sha256": "577a6abd82ba4c7cb2408fae51f00f92c7df8e7ceab70ba716051da5f542ab0d",
+      "matches_archived_inspection": true
+    }
+  ],
+  "server_probe": "runs/asset_0204_review/inspection.json",
+  "decision": "Useful 18D obstacle-controller candidate; do not silently replace the existing 14D V0 controller",
+  "matching_source_entries": [
+    "sailboat_RL/PART5/SAC-LSTM-att/modeltest_noise.py",
+    "sailboat_RL/PART5/SAC-LSTM-att/batchtest.py"
+  ],
+  "performance_evaluated": false
+}

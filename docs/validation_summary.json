@@ -1,0 +1,142 @@
+{
+  "source_root": "/home/ot/Students/hs/sailboat-research",
+  "new_root": "/home/ot/Students/hs/sailboat-routing-v0",
+  "stage_a": {
+    "parity_passed": true,
+    "fixed_input_max_errors": {
+      "action": 0.0,
+      "hidden": 0.0,
+      "feature_sidepath_action": 0.0
+    },
+    "successes": 12,
+    "total": 12,
+    "scope": "Fixed small development set; not a reproduction of paper success rates",
+    "cross_environment_parity": {
+      "passed": true,
+      "steps": 25,
+      "maximum_absolute_errors": {
+        "action": 0.0,
+        "physical": 0.0,
+        "raw": 0.0,
+        "reward": 0.0,
+        "h": 0.0,
+        "c": 0.0,
+        "time": 0.0
+      },
+      "reference_code": "runs/audit/reference",
+      "scope": "Same untouched snapshot and selected assets, original read-only interpreter environment versus dedicated CPU environment",
+      "wall_seconds": 5.461498911026865
+    }
+  },
+  "stage_b": {
+    "gate_passed": false,
+    "successes": 5,
+    "total": 6,
+    "continuity_checks": 5,
+    "episodes": [
+      {
+        "scene": "straight_w0",
+        "success": true,
+        "reason": "arrived",
+        "time_s": 285.0,
+        "path_length_m": 1054.5142394900322
+      },
+      {
+        "scene": "straight_w90",
+        "success": true,
+        "reason": "arrived",
+        "time_s": 257.0,
+        "path_length_m": 1082.8252943754196
+      },
+      {
+        "scene": "straight_w150",
+        "success": true,
+        "reason": "arrived",
+        "time_s": 444.0,
+        "path_length_m": 1289.903655409813
+      },
+      {
+        "scene": "straight_w180",
+        "success": false,
+        "reason": "segment_time_limit",
+        "time_s": 1200.0,
+        "path_length_m": 611.7909495988861
+      },
+      {
+        "scene": "rotated_45",
+        "success": true,
+        "reason": "arrived",
+        "time_s": 241.0,
+        "path_length_m": 1038.8324570655823
+      },
+      {
+        "scene": "turn_15",
+        "success": true,
+        "reason": "arrived",
+        "time_s": 264.0,
+        "path_length_m": 1075.35789000988
+      }
+    ]
+  },
+  "failure_diagnostic": {
+    "seed": 11,
+    "wind_degrees": 180,
+    "original_protocol": "same frozen 14D original-scale no-extra-noise path as A",
+    "original_success": false,
+    "original_steps": 1000,
+    "original_distance_to_target_m": 696.689208984375,
+    "original_terminated": false,
+    "original_truncated": true,
+    "continuous_first_leg_success": false,
+    "first_action_difference": {
+      "decision_index": 1,
+      "max_action_difference": 3.2782554626464844e-07
+    },
+    "maximum_raw_difference_over_overlap": 0.0,
+    "maximum_identity_frame_progress_difference": 6.747245788574219e-05,
+    "limits": "One discriminating original-entry comparison; no threshold relaxation, controller change or downstream performance experiment"
+  },
+  "stage_c": {
+    "code_implemented": true,
+    "real_data_collected": false,
+    "production_model_fitted": false,
+    "real_accuracy_metrics": null,
+    "blocked_by": "Stage B predeclared capability gate"
+  },
+  "stage_d": {
+    "planner_and_current_local_oracle_implemented": true,
+    "paired_closed_loop_run": false,
+    "performance_metrics": null,
+    "blocked_by": "Stage B and production wind readout"
+  },
+  "independent_api_smoke_passed": true,
+  "smoke_limits": "No real feature collection, no production readout fit, no C/D closed-loop comparison; fixture model must not be deployed",
+  "unittest": {
+    "tests": 35,
+    "returncode": 0,
+    "evidence": "runs/audit/full_unittest.log"
+  },
+  "upstream_integrity": {
+    "source_root": "/home/ot/Students/hs/sailboat-research",
+    "files": 1351,
+    "changed": [],
+    "added": [],
+    "removed": [],
+    "git_status_unchanged": true,
+    "excluded_trees": [
+      ".git",
+      ".venv",
+      "__pycache__"
+    ],
+    "passed": true
+  },
+  "obstacle_candidate": {
+    "same_archive_as_existing_library": true,
+    "sha256": "f3d8f7c0c715fc6e2c312f8ba7656c9f8e0b726a598279bb071e03c8d561c73f",
+    "obs_dim": 18,
+    "actor_and_critic_strict_load": true,
+    "avoidance_performance_evaluated": false
+  },
+  "experiment_ledger_seconds": 211.25318693136796,
+  "compute_note": "Serial single-thread CPU. Ledger excludes dependency installation, startup/imports and the first 13-test interface run; all measured bounded runs remain far below the 3600s budget. No training or push."
+}

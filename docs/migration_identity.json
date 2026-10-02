@@ -1,0 +1,123 @@
+{
+  "source_root": "/home/ot/Students/hs/sailboat-research",
+  "new_root": "/home/ot/Students/hs/sailboat-routing-v0",
+  "selected_identity": "saclstm_s14nowind_buf1e6_seed100@7200",
+  "final9000_identity_verified": false,
+  "migration_files": [
+    {
+      "source": "sailboat_RL/PART4/SAC/globals.py",
+      "target": "third_party/senior/globals.py",
+      "sha256": "8bd1556d65ff15614341105b9479cdbbb259a3d0239e795ae598699ca86bd41f",
+      "bytes": 653,
+      "purpose": "unmodified runtime snapshot"
+    },
+    {
+      "source": "sailboat_RL/PART4/SAC/utils_lstm.py",
+      "target": "third_party/senior/utils_lstm.py",
+      "sha256": "311b0343582cd873922cedf2db23cc0d786a7062646657326ad0bbde90a05ab4",
+      "bytes": 22520,
+      "purpose": "unmodified runtime snapshot"
+    },
+    {
+      "source": "sailboat_RL/PART4/SAC/noise_utils_nowind.py",
+      "target": "third_party/senior/noise_utils_nowind.py",
+      "sha256": "0c69bb7ef1aa50aa43df90c176d95bf140c5c5d3d500b1f8c4f84c83ceee8514",
+      "bytes": 12418,
+      "purpose": "unmodified runtime snapshot"
+    },
+    {
+      "source": "sailboat_RL/gymnasium/envs/sailboat/sailboat_s14.py",
+      "target": "third_party/senior/sailboat_s14.py",
+      "sha256": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313",
+      "bytes": 34833,
+      "purpose": "unmodified runtime snapshot"
+    },
+    {
+      "source": "model/saclstm_s14nowind_buf1e6_seed100_actor7200.pth",
+      "target": "checkpoints/actor.pth",
+      "sha256": "c8cc1bc335c5bd4bfeed9100f5903e6d2849e35db9da3ea1a035fbbbe6f9e739",
+      "bytes": 2675522,
+      "purpose": "selected frozen checkpoint asset; ignored by Git"
+    },
+    {
+      "source": "model/saclstm_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "target": "checkpoints/normalizer.pth",
+      "sha256": "1de337a2b66452554f691d23d9a2fc4d622970c9b94426349543b0f8f22d3097",
+      "bytes": 1928,
+      "purpose": "selected frozen checkpoint asset; ignored by Git"
+    },
+    {
+      "source": "sailboat_RL/PART4/SAC/SAC_lstm.py",
+      "target": "runs/audit/reference/SAC_lstm.py",
+      "sha256": "7f09ef4c1400df5cdba724d9de7358941e59b252ea9f3de0939714c79cfdbe94",
+      "bytes": 19033,
+      "purpose": "read-only isolated comparison source; not a runtime dependency"
+    },
+    {
+      "source": "sailboat_RL/PART4/SAC/test_eval_lstm.py",
+      "target": "runs/audit/reference/test_eval_lstm.py",
+      "sha256": "2684be680e050e36e20f9d684cf3821b6b8ea895a30a9315a916058a9572d80d",
+      "bytes": 14280,
+      "purpose": "read-only isolated comparison source; not a runtime dependency"
+    },
+    {
+      "source": "research/smoke_baseline.py",
+      "target": "runs/audit/reference/smoke_baseline.py",
+      "sha256": "1897dbb23714c40add4e9cd5139102af52a8203a52efeb16a6e2333841632930",
+      "bytes": 4430,
+      "purpose": "read-only isolated comparison source; not a runtime dependency"
+    }
+  ],
+  "source_environment": {
+    "executable": "/home/ot/Students/hs/sailboat-research/.venv/bin/python",
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+    "base_prefix": "/home/ot/miniconda3",
+    "packages": {
+      "torch": {
+        "version": "2.13.0",
+        "location": "/home/ot/miniconda3/lib/python3.13/site-packages"
+      },
+      "numpy": {
+        "version": "2.4.6",
+        "location": "/home/ot/miniconda3/lib/python3.13/site-packages"
+      },
+      "scipy": {
+        "version": "1.18.1",
+        "location": "/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages"
+      },
+      "gymnasium": {
+        "version": "1.3.0",
+        "location": "/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages"
+      },
+      "pygame": {
+        "version": "2.6.1",
+        "location": "/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages"
+      },
+      "matplotlib": {
+        "version": "3.11.1",
+        "location": "/home/ot/miniconda3/lib/python3.13/site-packages"
+      },
+      "pip": {
+        "version": "25.3",
+        "location": "/home/ot/Students/hs/sailboat-research/.venv/lib/python3.13/site-packages"
+      },
+      "setuptools": {
+        "version": "80.9.0",
+        "location": "/home/ot/miniconda3/lib/python3.13/site-packages"
+      },
+      "stable-baselines3": null
+    }
+  },
+  "isolated_environment": {
+    "lock": "cloudpickle==3.1.2\ncontourpy==1.4.0\ncycler==0.12.1\nFarama-Notifications==0.0.6\nfilelock==3.32.3\nfonttools==4.66.1\nfsspec==2026.7.0\ngymnasium==1.3.0\nJinja2==3.1.6\nkiwisolver==1.5.1\nMarkupSafe==3.0.3\nmatplotlib==3.11.1\nmpmath==1.3.0\nnetworkx==3.6.1\nnumpy==2.4.6\npackaging==26.3\npillow==12.3.0\npygame==2.6.1\npyparsing==3.3.3\npython-dateutil==2.9.0.post0\nscipy==1.18.1\nsetuptools==78.1.0\nsix==1.17.0\nsympy==1.14.0\ntorch==2.13.0+cpu\ntyping_extensions==4.16.0\n",
+    "pip_check": {
+      "exit": 0,
+      "stdout": "No broken requirements found.\n",
+      "stderr": ""
+    },
+    "executable": "/home/ot/Students/hs/sailboat-routing-v0/.venv/bin/python",
+    "base_prefix": "/home/ot/miniconda3",
+    "prefix": "/home/ot/Students/hs/sailboat-routing-v0/.venv",
+    "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]"
+  }
+}
