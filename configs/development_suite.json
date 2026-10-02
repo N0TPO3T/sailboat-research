@@ -1,0 +1,501 @@
+{
+  "schema": 1,
+  "purpose": "Predeclared bounded V0 development set; not final paper test set",
+  "task_time_limit_s": 1800,
+  "world_radius_limit_m": 3000,
+  "goal_radius_m": 10,
+  "world_bounds": [
+    -1500,
+    2000,
+    -1500,
+    1500
+  ],
+  "safety_note": "Point-trajectory control-step polyline clearance; circles have separate entity and buffer radii",
+  "maps": {
+    "open": [],
+    "single_obstacle": [
+      {
+        "center_xy": [
+          500,
+          0
+        ],
+        "entity_radius": 55,
+        "safety_buffer": 70
+      }
+    ],
+    "wide_channel": [
+      {
+        "center_xy": [
+          350,
+          -260
+        ],
+        "entity_radius": 80,
+        "safety_buffer": 60
+      },
+      {
+        "center_xy": [
+          350,
+          260
+        ],
+        "entity_radius": 80,
+        "safety_buffer": 60
+      },
+      {
+        "center_xy": [
+          750,
+          -260
+        ],
+        "entity_radius": 80,
+        "safety_buffer": 60
+      },
+      {
+        "center_xy": [
+          750,
+          260
+        ],
+        "entity_radius": 80,
+        "safety_buffer": 60
+      }
+    ],
+    "open_turn": []
+  },
+  "capture_scenarios": [
+    {
+      "id": "train_00",
+      "seed": 1000,
+      "profile": "stable",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000.0,
+        0.0
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_01",
+      "seed": 1001,
+      "profile": "slow",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_02",
+      "seed": 1002,
+      "profile": "fast",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        -499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_03",
+      "seed": 1003,
+      "profile": "stable",
+      "base_direction_degrees": 240,
+      "goal": [
+        500.0000000000001,
+        866.0254037844386
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_04",
+      "seed": 1004,
+      "profile": "slow",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000.0,
+        0.0
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_05",
+      "seed": 1005,
+      "profile": "fast",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_06",
+      "seed": 1006,
+      "profile": "stable",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        -499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_07",
+      "seed": 1007,
+      "profile": "slow",
+      "base_direction_degrees": 240,
+      "goal": [
+        500.0000000000001,
+        866.0254037844386
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_08",
+      "seed": 1008,
+      "profile": "fast",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000.0,
+        0.0
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_09",
+      "seed": 1009,
+      "profile": "stable",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_10",
+      "seed": 1010,
+      "profile": "slow",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        -499.99999999999994
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "train_11",
+      "seed": 1011,
+      "profile": "fast",
+      "base_direction_degrees": 240,
+      "goal": [
+        500.0000000000001,
+        866.0254037844386
+      ],
+      "map": "open",
+      "split": "train"
+    },
+    {
+      "id": "validation_00",
+      "seed": 2000,
+      "profile": "stable",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000.0,
+        0.0
+      ],
+      "map": "open",
+      "split": "validation"
+    },
+    {
+      "id": "validation_01",
+      "seed": 2001,
+      "profile": "slow",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        499.99999999999994
+      ],
+      "map": "open",
+      "split": "validation"
+    },
+    {
+      "id": "validation_02",
+      "seed": 2002,
+      "profile": "fast",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        -499.99999999999994
+      ],
+      "map": "open",
+      "split": "validation"
+    },
+    {
+      "id": "validation_03",
+      "seed": 2003,
+      "profile": "stable",
+      "base_direction_degrees": 240,
+      "goal": [
+        500.0000000000001,
+        866.0254037844386
+      ],
+      "map": "open",
+      "split": "validation"
+    },
+    {
+      "id": "test_00",
+      "seed": 3000,
+      "profile": "stable",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000.0,
+        0.0
+      ],
+      "map": "open",
+      "split": "test"
+    },
+    {
+      "id": "test_01",
+      "seed": 3001,
+      "profile": "slow",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        499.99999999999994
+      ],
+      "map": "open",
+      "split": "test"
+    },
+    {
+      "id": "test_02",
+      "seed": 3002,
+      "profile": "fast",
+      "base_direction_degrees": 120,
+      "goal": [
+        866.0254037844387,
+        -499.99999999999994
+      ],
+      "map": "open",
+      "split": "test"
+    },
+    {
+      "id": "test_03",
+      "seed": 3003,
+      "profile": "stable",
+      "base_direction_degrees": 240,
+      "goal": [
+        500.0000000000001,
+        866.0254037844386
+      ],
+      "map": "open",
+      "split": "test"
+    }
+  ],
+  "splits": {
+    "schema_version": 1,
+    "splits": {
+      "train": [
+        "train_00",
+        "train_01",
+        "train_02",
+        "train_03",
+        "train_04",
+        "train_05",
+        "train_06",
+        "train_07",
+        "train_08",
+        "train_09",
+        "train_10",
+        "train_11"
+      ],
+      "validation": [
+        "validation_00",
+        "validation_01",
+        "validation_02",
+        "validation_03"
+      ],
+      "test": [
+        "test_00",
+        "test_01",
+        "test_02",
+        "test_03"
+      ]
+    }
+  },
+  "comparison_scenarios": [
+    {
+      "id": "stable_open",
+      "seed": 4000,
+      "profile": "stable",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "open"
+    },
+    {
+      "id": "stable_single_obstacle",
+      "seed": 4001,
+      "profile": "stable",
+      "base_direction_degrees": 90,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "single_obstacle"
+    },
+    {
+      "id": "stable_wide_channel",
+      "seed": 4002,
+      "profile": "stable",
+      "base_direction_degrees": 150,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "wide_channel"
+    },
+    {
+      "id": "stable_open_turn",
+      "seed": 4003,
+      "profile": "stable",
+      "base_direction_degrees": 180,
+      "goal": [
+        982.962913145,
+        129.409522551
+      ],
+      "map": "open_turn"
+    },
+    {
+      "id": "slow_open",
+      "seed": 4004,
+      "profile": "slow",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "open"
+    },
+    {
+      "id": "slow_single_obstacle",
+      "seed": 4005,
+      "profile": "slow",
+      "base_direction_degrees": 90,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "single_obstacle"
+    },
+    {
+      "id": "slow_wide_channel",
+      "seed": 4006,
+      "profile": "slow",
+      "base_direction_degrees": 150,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "wide_channel"
+    },
+    {
+      "id": "slow_open_turn",
+      "seed": 4007,
+      "profile": "slow",
+      "base_direction_degrees": 180,
+      "goal": [
+        982.962913145,
+        129.409522551
+      ],
+      "map": "open_turn"
+    },
+    {
+      "id": "fast_open",
+      "seed": 4008,
+      "profile": "fast",
+      "base_direction_degrees": 0,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "open"
+    },
+    {
+      "id": "fast_single_obstacle",
+      "seed": 4009,
+      "profile": "fast",
+      "base_direction_degrees": 90,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "single_obstacle"
+    },
+    {
+      "id": "fast_wide_channel",
+      "seed": 4010,
+      "profile": "fast",
+      "base_direction_degrees": 150,
+      "goal": [
+        1000,
+        0
+      ],
+      "map": "wide_channel"
+    },
+    {
+      "id": "fast_open_turn",
+      "seed": 4011,
+      "profile": "fast",
+      "base_direction_degrees": 180,
+      "goal": [
+        982.962913145,
+        129.409522551
+      ],
+      "map": "open_turn"
+    }
+  ],
+  "methods": [
+    "geometry_only",
+    "oracle_local",
+    "estimated_local"
+  ],
+  "planner_schedule": "Read features from one Actor decision; apply new high-level target at next physical decision boundary for all methods",
+  "success_definition": "Final goal reached without entity collision or safety-buffer violation",
+  "readout_alphas": [
+    0.1,
+    1,
+    10
+  ],
+  "readout_warmup": 10,
+  "readout_ema_weight": 0.25,
+  "limits": "Do not adjust these scenes or parameters based on test/comparison results; retain all failures",
+  "planner_config": {
+    "nominal_distance": 500.0,
+    "maximum_distance": 550.0,
+    "lateral_angles_rad": [
+      -0.25,
+      0.25
+    ],
+    "arrival_radius": 30.0,
+    "replan_period": 10.0,
+    "minimum_hold_time": 30.0,
+    "improvement_threshold": 25.0,
+    "smoothing": 0.75,
+    "map_distance_weight": 1.0,
+    "wind_weight": 0.3,
+    "turn_weight": 20.0,
+    "change_weight": 0.1
+  }
+}

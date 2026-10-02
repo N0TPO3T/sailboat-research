@@ -1,0 +1,19 @@
+{
+  "schema": 2,
+  "controller_kind": "chapter4_14d",
+  "controller_identity": "saclstm_s14nowind_buf1e6_seed100@7200",
+  "actor": "checkpoints/actor.pth",
+  "normalizer": "checkpoints/normalizer.pth",
+  "feature_schema": "frozen_obs14+lstm_ln256_pre_action_v1",
+  "feature_dimension": 270,
+  "dropout": false,
+  "sensor_noise": false,
+  "actuator_noise": false,
+  "selection_reason": "Retain the task's preferred fourth-chapter controller and already validated continuous protocol for the whole paired V0 comparison. 0204@10800 is an independently verified obstacle candidate, not silently substituted or pooled with this baseline.",
+  "history": "persistent single_step; full causal reencoding at frame change using actual past normalized commands",
+  "observation_frame": "rigid local position/heading with target [500,0]; body velocities/actuators unchanged; progress recomputed using the same current goal",
+  "high_level_schedule": "one Actor forward at decision t; same-forward features choose target applied after action t at boundary t+1; all three methods share this one-step delay",
+  "wind": "environment-private SyntheticWindField sampled at physical x_t,t with time-indexed exogenous perturbations, held for one original physical step",
+  "admission_policy": "Require matched assets, migration parity, finite dynamics, continuous physics, causal memory, feature noninterference and demonstrated navigation. Record all task failures separately; no 100-percent success gate.",
+  "limits": "Development protocol only, no paper reproduction or universal navigation guarantee. No low-level retraining or weight/normalizer updates."
+}

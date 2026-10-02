@@ -9,9 +9,10 @@ from typing import Mapping, Sequence
 
 import numpy as np
 
-MODEL_VERSION = 1
-SOURCE_KEYS = {"actor_sha256", "normalizer_sha256", "feature_schema"}
+MODEL_VERSION = 2
+SOURCE_KEYS = {"actor_sha256", "normalizer_sha256", "protocol_sha256", "feature_schema"}
 FEATURE_SCHEMA = "frozen_obs14+lstm_ln256_pre_action_v1"
+FEATURE_DIMENSIONS = {FEATURE_SCHEMA: 270, "frozen_obs18+lstm_ln256_pre_action_v1": 274}
 EPISODE_KEYS = {"metadata_json", "features", "labels_local_rad", "decision_time",
                 "labels_time", "observed_through_time", "frame_angle", "history_count",
                 "goal_switch", "wind_change"}
@@ -32,11 +33,11 @@ def world_to_local(direction, frame_angle):
 
 def _source(identity: Mapping) -> dict:
     if not isinstance(identity, dict) or set(identity) != SOURCE_KEYS:
-        raise ValueError("source_identity must contain exactly actor_sha256, normalizer_sha256, feature_schema")
-    for key in ("actor_sha256", "normalizer_sha256"):
+        raise ValueError("source_identity must bind actor, normalizer, protocol SHA256 and feature_schema")
+    for key in ("actor_sha256", "normalizer_sha256", "protocol_sha256"):
         if not isinstance(identity[key], str) or not re.fullmatch(r"[0-9a-f]{64}", identity[key]):
             raise ValueError(f"{key} must be a lowercase SHA256 digest")
-    if identity["feature_schema"] != FEATURE_SCHEMA:
+    if identity["feature_schema"] not in FEATURE_DIMENSIONS:
         raise ValueError("unsupported frozen feature schema")
     return dict(identity)
 
@@ -66,13 +67,13 @@ class Episode:
     wind_change: np.ndarray
 
 
-def load_episode(path, *, dimension=270) -> Episode:
+def load_episode(path, *, dimension=None) -> Episode:
     """Load an explicitly attested pre-action capture; never infer causality from names."""
     with np.load(path, allow_pickle=False) as data:
         if set(data.files) != EPISODE_KEYS:
             raise ValueError(f"episode fields must be exactly {sorted(EPISODE_KEYS)}")
         metadata = json.loads(str(data["metadata_json"].item()))
-        if set(metadata) != METADATA_KEYS or metadata["schema_version"] != 1:
+        if set(metadata) != METADATA_KEYS or metadata["schema_version"] != 2:
             raise ValueError("unsupported episode metadata schema")
         if metadata["feature_timing"] != "decision_pre_action":
             raise ValueError("feature provenance must explicitly attest decision_pre_action")
@@ -80,7 +81,7 @@ def load_episode(path, *, dimension=270) -> Episode:
             if not isinstance(metadata[key], str) or not metadata[key]:
                 raise ValueError(f"{key} must be a nonempty string")
         source = _source(metadata["source_identity"])
-        x = _features(data["features"], dimension)
+        x = _features(data["features"], FEATURE_DIMENSIONS[source["feature_schema"]] if dimension is None else dimension)
         arrays = {}
         for key in EPISODE_KEYS - {"metadata_json", "features"}:
             value = np.array(data[key], copy=True)

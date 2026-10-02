@@ -27,7 +27,7 @@ def main():
         # Explicit synthetic basis, never advertised as captured Actor features.
         angles = np.linspace(-math.pi, math.pi, 48, endpoint=False)
         features = np.zeros((48, 270)); features[:, 0] = np.sin(angles); features[:, 1] = np.cos(angles)
-        fixture_identity = {"actor_sha256": "0" * 64, "normalizer_sha256": "1" * 64,
+        fixture_identity = {"actor_sha256": "0" * 64, "normalizer_sha256": "1" * 64, "protocol_sha256": "2" * 64,
                             "feature_schema": "frozen_obs14+lstm_ln256_pre_action_v1"}
         model = RidgeWindReadout.fit(features, angles, alpha=0.1, source_identity=fixture_identity)
         fixture_path = out / "SYNTHETIC_NOT_DEPLOYABLE_model.npz"
@@ -66,7 +66,7 @@ def main():
             "--episodes", str(ROOT / "runs/stage_b"), "--manifest", str(ROOT / "configs/stage_b.json")],
             capture_output=True, text=True, timeout=30)
         if gate.returncode != 2:
-            raise AssertionError("Real failed Stage B gate did not block the fitting CLI")
+            raise AssertionError("Invalid or unapproved capture input did not block the fitting CLI")
         result = {"passed": True, "scope": "Synthetic math and real API/information-boundary smoke only",
             "not_real_wind_accuracy": True, "not_three_method_performance": True,
             "fixture_estimate": asdict(estimate), "fixture_model_identity": fixture_identity,

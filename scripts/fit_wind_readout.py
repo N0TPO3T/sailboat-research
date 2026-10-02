@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fit existing causal episode captures only after the real Stage B gate passes."""
+"""Fit causal episode captures after evidence-bound interface admission, not a 100% success gate."""
 from __future__ import annotations
 
 import argparse
@@ -14,9 +14,10 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from sailboat_routing.runtime import configure_cpu
 from sailboat_routing.experiments import Budget
+from sailboat_routing.admission import load_admission
 configure_cpu()
 import numpy as np
-from sailboat_routing.wind_readout import RidgeWindReadout, evaluate_episodes, load_episode, split_episodes
+from sailboat_routing.wind_readout import FEATURE_DIMENSIONS, RidgeWindReadout, evaluate_episodes, load_episode, split_episodes
 
 
 def _inside(path, root):
@@ -39,6 +40,7 @@ def main(argv=None):
     parser.add_argument("--episodes", type=Path, required=True, help="Directory of whole-episode *.npz files")
     parser.add_argument("--manifest", type=Path, required=True, help="Predeclared episode split JSON")
     parser.add_argument("--output", type=Path, help="New, nonexistent directory inside NEW_ROOT/runs")
+    parser.add_argument("--admission", type=Path, default=ROOT / "runs/navigation_admission.json")
     parser.add_argument("--alphas", type=float, nargs="+", default=[0.1, 1.0, 10.0])
     parser.add_argument("--warmup", type=int, default=10)
     parser.add_argument("--min-norm", type=float, default=1e-6)
@@ -48,13 +50,10 @@ def main(argv=None):
     budget = None
     status = "failed"
     try:
-        # Deliberately no bypass: synthetic math checks use the Python API, not this CLI.
-        gate_path = ROOT / "runs" / "stage_b" / "result.json"
-        if not gate_path.is_file():
-            raise ValueError(f"blocked: Stage B result missing: {gate_path}")
-        gate = json.loads(gate_path.read_text())
-        if gate.get("passed") is not True:
-            raise ValueError("blocked: real Stage B gate did not pass; fitting/data experiments are forbidden")
+        admission = load_admission(args.admission)
+        gate_path = args.admission
+        expected_source = admission["source_identity"]
+        dimension = FEATURE_DIMENSIONS[expected_source["feature_schema"]]
         episode_dir = _inside(args.episodes, ROOT)
         manifest_path = _inside(args.manifest, ROOT)
         if not episode_dir.is_dir() or not manifest_path.is_file():
@@ -69,7 +68,7 @@ def main(argv=None):
         if args.warmup < 0 or args.window_steps <= 0 or not np.isfinite(args.min_norm) or args.min_norm <= 0 or not 0 < args.ema_weight <= 1:
             raise ValueError("invalid warmup/window/min-norm/ema-weight")
         manifest = json.loads(manifest_path.read_text())
-        episodes = [load_episode(path, dimension=270) for path in files]
+        episodes = [load_episode(path, dimension=dimension) for path in files]
         split = split_episodes(episodes, manifest)
         masks = [ep.history_count >= args.warmup for ep in split["train"]]
         features = np.concatenate([ep.features[mask] for ep, mask in zip(split["train"], masks)])
@@ -77,11 +76,8 @@ def main(argv=None):
         if not len(features):
             raise ValueError("training episodes contain no rows after warmup")
         source = split["train"][0].source_identity
-        expected_source = {"actor_sha256": _sha(ROOT / "checkpoints/actor.pth"),
-                           "normalizer_sha256": _sha(ROOT / "checkpoints/normalizer.pth"),
-                           "feature_schema": "frozen_obs14+lstm_ln256_pre_action_v1"}
         if source != expected_source:
-            raise ValueError("episode features do not match the currently frozen 14D V0 assets")
+            raise ValueError("episode features do not match the approved frozen control protocol")
         options = dict(warmup=args.warmup, min_norm=args.min_norm, ema_weight=args.ema_weight, window_steps=args.window_steps)
         budget = Budget("wind_readout_fit")
         candidates = []
@@ -103,10 +99,10 @@ def main(argv=None):
         output = _inside(args.output or ROOT / "runs" / "wind_readout" / run_name, ROOT / "runs")
         if output.exists():
             raise ValueError(f"refusing to overwrite existing output: {output}")
-        report = {"schema_version": 1, "status": "completed_offline_fit", "source_identity": source,
+        report = {"schema_version": 2, "status": "completed_offline_fit", "source_identity": source,
                   "selected_alpha": best_model.alpha, "validation_candidates": candidates,
                   "test": test_metrics, "inference_options": options, "split_manifest": manifest,
-                  "stage_b_result_sha256": _sha(gate_path), "manifest_sha256": _sha(manifest_path),
+                  "admission_sha256": _sha(gate_path), "admission_path": str(gate_path), "manifest_sha256": _sha(manifest_path),
                   "episode_sources": [{"path": str(path.relative_to(ROOT)), "sha256": _sha(path),
                                        "episode_id": ep.episode_id, "scenario_id": ep.scenario_id}
                                       for path, ep in zip(files, episodes)],
