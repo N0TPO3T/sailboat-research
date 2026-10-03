@@ -13,6 +13,8 @@ from .r1_planner import R1Config
 
 class Radial500Planner:
     offsets_override=None
+    turn_weight=15.0
+    change_weight=0.04
     def __init__(self, chart, config=None, mode="geometry_only"):
         self.static_map=chart; self.config=config or R1Config(); self.mode=mode
         self.previous=deque(maxlen=21); self.last_plan=-math.inf; self.last_switch=-math.inf
@@ -69,8 +71,8 @@ class Radial500Planner:
             if not connections:continue
             d=distance(p,q); a=math.atan2(q[1]-p[1],q[0]-p[0])
             remaining=d+min(connections)
-            turn=15*abs(angle_difference(a,v.heading_rad))
-            change=.04*distance(q,current) if valid else 0.
+            turn=self.turn_weight*abs(angle_difference(a,v.heading_rad))
+            change=self.change_weight*distance(q,current) if valid else 0.
             wind=cfg.wind_weight*min(d,500)*max(0.,math.cos(a-v.wind.angle_world_rad-math.pi))**2 if use_wind else 0.
             # Directional compensation is a cost, so the geometric controls use identical candidates.
             history=100.*(abs(angle_difference(a,desired-bias))-abs(angle_difference(a,desired))) if cfg.history_gain else 0.
@@ -89,6 +91,11 @@ class Radial500Planner:
 class ForwardPlanner(Radial500Planner):
     """Route vertices, incumbent and one forward 500m radial candidate."""
     offsets_override=(0,)
+
+class RouteCostPlanner(ForwardPlanner):
+    """Forward candidates and inherited switching, with route cost alone."""
+    turn_weight=0.0
+    change_weight=0.0
 
 @dataclass(frozen=True)
 class RelayConfig:

@@ -7,7 +7,7 @@ class R2AnalysisTests(unittest.TestCase):
   rows=[]
   for i,(a,b,sa,sb) in enumerate([(10,20,True,True),(20,15,True,True),(100,90,True,True),(1,600,False,True)]):
    for v,t,s in [('a',a,sa),('b',b,sb)]:
-    rows.append(dict(scene_id=str(i),variant=v,success=s,time_s=t,path_length_m=t*2,tack_count=1,target_changes=2,planning_seconds=1))
+    rows.append(dict(scene_id=str(i),variant=v,success=s,time_s=t,path_length_m=t*2,tack_count=1,target_changes=2,planning_seconds=1,reencoding_seconds=2,cpu_seconds=3,wall_seconds=3))
   d=paired_detail(rows,'a','b')
   self.assertEqual(d['n'],4);self.assertEqual(d['wins'],1);self.assertEqual(d['common_success_n'],3)
   self.assertEqual(d['common_success_scene_ids'],['0','1','2'])

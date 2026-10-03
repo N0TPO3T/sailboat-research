@@ -19,8 +19,8 @@ def generate(folder,main,simple,out=None,stage="development"):
     folder=Path(folder).resolve();out=Path(out).resolve() if out else folder.parent/'figures';out.mkdir(parents=True,exist_ok=True)
     rows=json.loads((folder/'analysis_rows.json').read_text());lookup={(r['scene_id'],r['variant']):r for r in rows}
     variants=list(dict.fromkeys(['geom80',simple,main]));allvars=variants+sorted({r['variant'] for r in rows}-set(variants))
-    labels={'geom80':'R1 geom80',simple:'Simple relay ('+simple+')',main:('R2 main (' if stage=='frozen' else 'Candidate (')+main+')'}
-    if main==simple:labels[main]='Simple relay / R2 main ('+main+')'
+    labels={'geom80':'R1 geom80',simple:'Simple baseline ('+simple+')',main:('R2 main (' if stage=='frozen' else 'Candidate (')+main+')'}
+    if main==simple:labels[main]='Simple baseline / R2 main ('+main+')'
     colors={v:PALETTE[i%len(PALETTE)] for i,v in enumerate(allvars)}
     names=sorted({r['scene_id'] for r in rows});cache={}
     def data(name,v):
@@ -72,6 +72,16 @@ def generate(folder,main,simple,out=None,stage="development"):
         fig.text(.5,.005,'Solid: raw executed paths. Ticks: sparse actual target applications. Gray disks: entities; dashed circles: true safety boundary. No smoothing.',ha='center',fontsize=8)
         save(fig,'trajectory_'+str(dist//1000)+'km')
     available=[n for n in names if all((n,v) in lookup for v in variants)]
+    gains=[n for n in available if lookup[n,main]['success'] and lookup[n,'geom80']['success'] and lookup[n,main]['time_s']<lookup[n,'geom80']['time_s']]
+    if gains:
+        pool=[n for n in gains if lookup[n,main]['distance_m']==5000] or gains
+        benefit=min(pool,key=lambda n:(lookup[n,main]['time_s']-lookup[n,'geom80']['time_s'],n))
+        selections.append({'figure':'efficiency_example','scene_id':benefit,'reason':'Largest main/R1 common-success time reduction; third displayed method may fail; prefer 5km, then scene ID. Deliberately extreme mechanism illustration, not typical benefit.'})
+        dd,jj=data(benefit,main);fig,ax=plt.subplots(figsize=(9,6));geography(ax,jj)
+        for v in variants:track(ax,benefit,v)
+        ax.set_title('Largest observed efficiency gain (not a typical case)\n'+benefit);ax.legend(fontsize=8,loc='best')
+        fig.text(.5,.005,'Complete raw paths. An extreme selected example; use paired statistics for overall inference.',ha='center',fontsize=8)
+        save(fig,'efficiency_example')
     regression=[n for n in available if not lookup[n,main]['success'] and lookup[n,'geom80']['success']]
     failures=[n for n in available if not lookup[n,main]['success']]
     if regression:chosen=sorted(regression)[0];reason='First scene ID with main failure and R1 safe arrival'
@@ -152,7 +162,21 @@ def generate(folder,main,simple,out=None,stage="development"):
     fig.suptitle('Common safe arrivals only; dots = scenes, black bar = median; negative is faster')
     fig.tight_layout();save(fig,'paired_efficiency')
     (out/'figure_selection.json').write_text(json.dumps({'stage':stage,'rule':'predeclared family/median rule plus first regression or minimum clearance; no smoothing; no rollouts','main':main,'simple':simple,'display_variants':variants,'labels':labels,'cases':selections},indent=2))
+    # A small offline evidence slice: exact plotted positions and actual target events.
+    plotted=[];events=[]
+    for n in sorted({x['scene_id'] for x in selections}):
+        for v in variants:
+            dd,jj=data(n,v)
+            for x in dd['trajectory']:
+                plotted.append(dict(scene_id=n,variant=v,time_s=x['time'],x_m=x['raw'][0],y_m=x['raw'][1],safety_clearance_m=x.get('safety_clearance_m')))
+            for x in dd['target_changes']:
+                events.append(dict(scene_id=n,variant=v,selected_at=x['selected_at'],applied_at=x['applied_at'],target_x_m=x['target'][0],target_y_m=x['target'][1]))
+    for filename,items in [('plotted_trajectories.csv',plotted),('plotted_target_events.csv',events)]:
+        if items:
+            with (out/filename).open('w',newline='') as ff:
+                writer=csv.DictWriter(ff,fieldnames=list(items[0]));writer.writeheader();writer.writerows(items)
     figures=['trajectory_1km','trajectory_3km','trajectory_5km','failure_local','safety_clearance','goal_distance','target_timing','success_by_distance','paired_efficiency']
+    if gains:figures.insert(3,'efficiency_example')
     sections=''.join('<section><h2>'+html.escape(n)+'</h2><a href="'+n+'.svg">SVG</a><img loading="lazy" src="'+n+'.png" alt="'+n+'"></section>' for n in figures)
     (out/'index.html').write_text('<!doctype html><html><meta charset="utf-8"><title>R2 actual trajectories and results</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;padding:0 20px;background:#fafafa;color:#222}img{width:100%;height:auto}section{background:white;padding:18px;margin:24px 0}h1,h2{font-weight:600}</style><h1>R2 actual trajectories and results</h1><p>Saved simulation logs only. No path smoothing or extension beyond termination. Dashed obstacle circles show the true safety boundary; no fixed tracking guarantee is implied. See figure_selection.json and the report for selection rules and limitations.</p>'+sections+'</html>',encoding='utf-8')
     print(json.dumps(selections,indent=2))
