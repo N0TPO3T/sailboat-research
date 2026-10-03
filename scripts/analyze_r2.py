@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """R2 paired summaries; reuse R1 definitions, retain each raw evidence pointer."""
 from pathlib import Path
-import sys,json,csv,statistics,itertools,math,argparse
+import sys,json,csv,statistics,itertools,math,argparse,random
 from analyze_r1 import summary,pairs,validate_coverage,outcome
 ROOT=Path(__file__).resolve().parents[1]
 METRICS=['time_s','path_length_m','tack_count','target_changes','planning_seconds','reencoding_seconds','cpu_seconds','wall_seconds']
@@ -23,6 +23,11 @@ def paired_detail(rows,a,b):
             control_p90=quantile(av,.9),treatment_p90=quantile(bv,.9),
             paired_median_difference=statistics.median(diff),paired_difference_p10=quantile(diff,.1),
             paired_difference_p90=quantile(diff,.9))
+        if metric in ['time_s','path_length_m'] and len(diff)>=2:
+            rng=random.Random(9022)
+            boot=sorted(statistics.mean(rng.choices(diff,k=len(diff))) for _ in range(3000))
+            result[metric]['paired_mean_bootstrap95']=[quantile(boot,.025),quantile(boot,.975)]
+    result['conditional_interval_note']='Exploratory scene bootstrap on this common-success set only; not overall mission efficiency, not safety equivalence.'
     return result
 def enrich(rows):
     for r in rows:

@@ -2,7 +2,7 @@ import unittest, math
 from dataclasses import replace
 from sailboat_routing.planner import StaticMap,CircleObstacle,PlannerInput,LocalWindEstimate
 from sailboat_routing.r1_planner import RouteWaypointPlanner,R1Config
-from sailboat_routing.r2_planner import Radial500Planner,ForwardPlanner,RouteCostPlanner,RelayPlanner,RelayConfig
+from sailboat_routing.r2_planner import Radial500Planner,ForwardPlanner,RouteCostPlanner,NoChangePlanner,EarlyHandoffPlanner,RelayPlanner,RelayConfig
 from sailboat_routing.metrics import segment_circle_clearance
 
 class R2Tests(unittest.TestCase):
@@ -60,3 +60,21 @@ class R2Tests(unittest.TestCase):
    self.assertEqual(x.total,x.remaining_map_distance)
    self.assertEqual(x.turn_penalty,0.)
    self.assertEqual(x.change_penalty,0.)
+
+ def test_no_change_retains_heading_and_candidate_geometry(self):
+  chart=StaticMap((-1500,2500,-1500,1500),(CircleObstacle((500,0),55,70),),25)
+  v=PlannerInput((0,0),1.,(250,-200),((0,0),(1500,0)),30,None)
+  a=ForwardPlanner(chart).plan(v);b=NoChangePlanner(chart).plan(v)
+  self.assertEqual([x.target_xy for x in a.candidates],[x.target_xy for x in b.candidates])
+  for x,y in zip(a.candidates,b.candidates):
+   self.assertEqual(x.turn_penalty,y.turn_penalty)
+   self.assertEqual(y.change_penalty,0.)
+   self.assertAlmostEqual(y.total,x.total-x.change_penalty)
+
+ def test_early_handoff_retires_only_nonfinal_near_incumbent(self):
+  chart=StaticMap((-1000,2500,-1000,1000))
+  v=PlannerInput((450,0),0,(500,0),((0,0),(1500,0)),100,None)
+  self.assertEqual(ForwardPlanner(chart).plan(v).target_xy,(500,0))
+  self.assertEqual(EarlyHandoffPlanner(chart).plan(v).target_xy,(950,0))
+  final=PlannerInput((1486,0),0,(1500,0),((0,0),(1500,0)),100,None)
+  self.assertEqual(EarlyHandoffPlanner(chart).plan(final).target_xy,(1500,0))

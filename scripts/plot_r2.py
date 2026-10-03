@@ -9,11 +9,11 @@ import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.patches import Circle
+from matplotlib.patches import Circle,Rectangle
 from matplotlib.lines import Line2D
 from analyze_r1 import outcome,interval
 from analyze_r2 import quantile
-plt.rcParams.update({'font.size':10,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
+plt.rcParams.update({'font.size':10,'svg.fonttype':'none','path.simplify':False,'axes.spines.top':False,'axes.spines.right':False})
 PALETTE=['#0072B2','#D55E00','#009E73','#CC79A7','#555555']
 def generate(folder,main,simple,out=None,stage="development"):
     folder=Path(folder).resolve();out=Path(out).resolve() if out else folder.parent/'figures';out.mkdir(parents=True,exist_ok=True)
@@ -38,7 +38,7 @@ def generate(folder,main,simple,out=None,stage="development"):
             ax.add_patch(Circle(o['center_xy'],o['entity_radius'],facecolor='#777777',edgecolor='#333333',alpha=.5,zorder=1))
             ax.add_patch(Circle(o['center_xy'],o['entity_radius']+o['safety_buffer'],fill=False,edgecolor='#777777',linestyle='--',linewidth=1,zorder=1))
         ax.add_patch(Circle(goal,job['suite']['goal_radius_m'],fill=False,edgecolor='black',linewidth=1.5))
-        ax.scatter(*goal,marker='*',s=150,c='black',zorder=6,label='Goal (10 m arrival radius)')
+        ax.scatter(*goal,marker='*',s=150,facecolors='none',edgecolors='black',linewidths=1.2,zorder=6,label='Goal (10 m arrival radius)')
         ax.scatter(0,0,marker='o',s=45,facecolor='white',edgecolor='black',zorder=6,label='Start')
         ax.set_aspect('equal',adjustable='datalim');ax.set_xlabel('World x (m)');ax.set_ylabel('World y (m)');ax.grid(alpha=.18)
     def track(ax,name,v,mark=True):
@@ -79,7 +79,7 @@ def generate(folder,main,simple,out=None,stage="development"):
         selections.append({'figure':'efficiency_example','scene_id':benefit,'reason':'Largest main/R1 common-success time reduction; third displayed method may fail; prefer 5km, then scene ID. Deliberately extreme mechanism illustration, not typical benefit.'})
         dd,jj=data(benefit,main);fig,ax=plt.subplots(figsize=(9,6));geography(ax,jj)
         for v in variants:track(ax,benefit,v)
-        ax.set_title('Largest observed efficiency gain (not a typical case)\n'+benefit);ax.legend(fontsize=8,loc='best')
+        ax.set_title(str(lookup[benefit,main]['distance_m']//1000)+' km: largest paired gain vs R1 (not typical)\n'+benefit);ax.legend(fontsize=8,loc='best')
         fig.text(.5,.005,'Complete raw paths. An extreme selected example; use paired statistics for overall inference.',ha='center',fontsize=8)
         save(fig,'efficiency_example')
     regression=[n for n in available if not lookup[n,main]['success'] and lookup[n,'geom80']['success']]
@@ -95,7 +95,7 @@ def generate(folder,main,simple,out=None,stage="development"):
     focus=dangerous[0] if dangerous else min(finite,key=lambda x:x['safety_clearance_m']) if finite else trace[-1]
     ft=focus['time'];pos=np.array(focus['raw'][:2])
     selections.append({'figure':'failure_local','scene_id':chosen,'reason':reason,'focus_time_s':ft,'focus':'end of first violating 1 s segment' if dangerous else 'minimum clearance or terminal state'})
-    fig,ax=plt.subplots(figsize=(8,7));geography(ax,job)
+    fig=plt.figure(figsize=(10,7));ax=fig.add_axes([.08,.13,.62,.75]);geography(ax,job)
     for v in variants:track(ax,chosen,v,mark=False)
     ax.scatter(*pos,marker='X',s=100,color=colors[main],edgecolor='black',zorder=8,label=('First unsafe step ends at t=' if dangerous else 'Focus at t=')+str(int(ft))+' s')
     # Issued target at decision time is reconstructed from *applied* changes,
@@ -109,6 +109,12 @@ def generate(folder,main,simple,out=None,stage="development"):
         ax.plot([a[0],b[0]],[a[1],b[1]],':',c=colors[main],lw=1.7,label='Issued-target chord at t='+str(pre)+' (not predicted path)')
         ax.scatter(*b,marker='D',s=30,c=colors[main])
     ax.set_xlim(pos[0]-170,pos[0]+170);ax.set_ylim(pos[1]-170,pos[1]+170)
+    context=fig.add_axes([.74,.57,.25,.30]);geography(context,job)
+    for v in variants:track(context,chosen,v,mark=False)
+    context.add_patch(Rectangle((pos[0]-170,pos[1]-170),340,340,fill=False,edgecolor='black',lw=1.2))
+    context.set_xlabel('');context.set_ylabel('');context.tick_params(labelsize=6)
+    context.set_title('Whole episode; box = zoom',fontsize=8)
+    fig.text(.75,.48,'Start: open circle\nGoal: black star (10 m)\nDashed circles: true safety\nSolid lines: actual paths',fontsize=8,va='top')
     ax.set_aspect('equal',adjustable='box');ax.legend(fontsize=8,loc='best')
     ax.set_title('Local failure / minimum-clearance case\n'+chosen)
     fig.text(.5,.005,'Local window; complete paths remain in raw logs. Safety uses 1 s step segments, not continuous integration curves.',ha='center',fontsize=8)

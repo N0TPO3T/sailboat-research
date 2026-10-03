@@ -15,6 +15,7 @@ class Radial500Planner:
     offsets_override=None
     turn_weight=15.0
     change_weight=0.04
+    handoff_distance=40.0
     def __init__(self, chart, config=None, mode="geometry_only"):
         self.static_map=chart; self.config=config or R1Config(); self.mode=mode
         self.previous=deque(maxlen=21); self.last_plan=-math.inf; self.last_switch=-math.inf
@@ -31,7 +32,7 @@ class Radial500Planner:
         if not chart.point_clear(p): raise NoRouteError("Current position outside original safe map")
         own_clear=segment_circle_clearance(p,p,chart.obstacles)["safety_m"]
         cur_clear=segment_circle_clearance(p,current,chart.obstacles)["safety_m"] if current else -math.inf
-        valid=current is not None and (distance(p,current)>40 or current==goal) and distance(p,current)<=550 and chart.segment_clear(p,current)
+        valid=current is not None and (distance(p,current)>self.handoff_distance or current==goal) and distance(p,current)<=550 and chart.segment_clear(p,current)
         urgent=not valid or cur_clear<min(20.,max(0.,own_clear-5.))
         if not urgent and t-self.last_plan<cfg.period:
             return PlannerDecision(current,self.last_scores,"replan_period",False)
@@ -96,6 +97,14 @@ class RouteCostPlanner(ForwardPlanner):
     """Forward candidates and inherited switching, with route cost alone."""
     turn_weight=0.0
     change_weight=0.0
+
+class NoChangePlanner(ForwardPlanner):
+    """Keep heading cost; remove only the displacement cost of switching."""
+    change_weight=0.0
+
+class EarlyHandoffPlanner(ForwardPlanner):
+    """Retire non-final incumbent within 100m; keep necessary route corners."""
+    handoff_distance=100.0
 
 @dataclass(frozen=True)
 class RelayConfig:
