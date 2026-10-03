@@ -30,6 +30,22 @@ def risk_evidence(folder):
         total[v].update(episodes=len(rr),episodes_with_actual_risk_change=sum(x['actual_risk_changes']>0 for x in rr))
     (folder/'risk_summary.json').write_text(json.dumps(total,indent=2))
     return total
+def open_map_invariance(folder):
+    """Prespecified no-obstacle negative control; raw states/actions, no simulation."""
+    rows=json.loads((folder/'analysis_rows.json').read_text())
+    lookup={(r['scene_id'],r['variant']):r for r in rows if r['layout']=='open'}
+    records=[]
+    for a,b in [('relay_m120','relay_m160'),('relay_m0','relay_m160'),('geom80','r1_replan60')]:
+        names=sorted(n for n,v in lookup if v==a and (n,b) in lookup)
+        for name in names:
+            aa=json.loads((ROOT/lookup[name,a]['evidence']).read_text())
+            bb=json.loads((ROOT/lookup[name,b]['evidence']).read_text())
+            targets=lambda d:[{k:v for k,v in x.items() if k!='wall_seconds'} for x in d['target_changes']]
+            records.append(dict(scene_id=name,control=a,treatment=b,physical_action_trace_equal=aa['trajectory']==bb['trajectory'],target_events_equal=targets(aa)==targets(bb),control_evidence=lookup[name,a]['evidence'],treatment_evidence=lookup[name,b]['evidence']))
+    result=dict(note='Margin-only Relay and inactive fixed-clearance R1 wrapper must leave no-obstacle execution unchanged. Exact raw states/actions/wind and target-event comparison, excluding reencoding wall time only.',comparisons=len(records),all_equal=all(x['physical_action_trace_equal'] and x['target_events_equal'] for x in records),records=records)
+    (folder/'open_map_invariance.json').write_text(json.dumps(result,indent=2))
+    return {k:v for k,v in result.items() if k!='records'}
+
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('folder');ap.add_argument('--reference');a=ap.parse_args()
-    folder=Path(a.folder).resolve();analyze(folder,a.reference);print(json.dumps(risk_evidence(folder),indent=2))
+    folder=Path(a.folder).resolve();analyze(folder,a.reference);print(json.dumps(risk_evidence(folder),indent=2));print(json.dumps(open_map_invariance(folder),indent=2))

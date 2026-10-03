@@ -33,3 +33,9 @@ R2新授权启动：r2_autoresearch_20261003T063153Z；12小时/8轮/4 CPU/GPU0�
 R2交付完成（2026-10-03）：四轮开发后冻结forward500，完成72新实例×4方法；研究结论、真实航迹、消融及失败证据见[R2研究报告](R2_RESEARCH_REPORT.md)。主要长程提效假设未获支持，不替换R1默认方案。
 全部939新回合结束；冻结科学源码3003228，288回合原始指标复算通过，最终result-to-claim=no（same-family/provisional，正式审计不可用）。原始产物runs/r2_autoresearch_20261003T063153Z/；figures/index.html与R2_results_preview.zip供本地查看。
 seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fetch、冻结快照及Git bundle恢复，本地旧工作树与原未提交修改保留。下一轮建议仅在报告中，尚未实施。
+
+## R3 交付完成（2026-10-04）
+
+结论、完整收益/代价与失败边界见 [R3研究报告](R3_RESEARCH_REPORT.md)；英文完整内容稿 [paper/ccdc/draft.md](../paper/ccdc/draft.md)。冻结主方法 Relay160，合理 Relay120 与原 R1 仍保留，不能宣称稳定提效或安全保证。
+证据 `runs/r3_ccdc_20261003T121146Z/`；配置 `configs/r3_methods.json`，冻结评估提交 `037fe1a`；720 回合原始复算与一次最终 same-family/provisional 审查完成。研究停止，seed2271/3271 也已见。
+本地 `R3_CCDC_preview.zip` 与 run/figures/index.html 包含真实图、作图数据、索引和源码快照；全量控制日志仍在服务器。保留旧本地修改，只 fetch，不 push。作者须处理资产署名/发表许可和官方模板/PDF，尚未投稿。

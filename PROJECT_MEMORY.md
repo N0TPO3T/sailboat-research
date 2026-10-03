@@ -42,3 +42,9 @@
 **Conclusion** R2将非终点有效距离门从40m改100m，同时改变urgent、旧目标注入、改点代价和保持/改善门；同坐标路线顶点仍可再次选中。它不保证100m内切换，也不能仅解释为“提前换点”。
 **Evidence** src/sailboat_routing/r2_planner.py:35–86；runs/r2_autoresearch_20261003T063153Z/round4_interpretation_note.json、round4_case009_divergence.json；docs/R2_RESEARCH_REPORT.md。
 **Implication** 做时机消融前拆清valid变量的全部使用点；同状态评分改善不推出整回合获救。R2具体参数结果只保留于报告。
+
+## 额外规划调用可能推迟普通改点
+**Tags:** waypoint, scheduling, hold, intervention, ablation
+**Conclusion** R1 在一次完整规划调用结束时更新 last_plan，即使接受门槛保持原目标。R3 的 replan_only 风险请求因此不等于“只提前干预”：一次保持目标的额外调用可重置周期，推迟下一次普通目标应用。
+**Evidence** src/sailboat_routing/r1_planner.py:85–89、src/sailboat_routing/r3_planner.py:49–70；runs/r3_ccdc_20261003T121146Z/round1/case_r1_replan60_rescue034.json：364 s 请求后保持，普通应用由 372 s 移至 375 s；分歧前完整原始前缀相等见 development_case_prefixes.json。
+**Implication** 分开记录检测、请求、建议变化与实际应用；时机研究必须检查规划时钟副作用。回合获救不能直接归因于更早实际干预。

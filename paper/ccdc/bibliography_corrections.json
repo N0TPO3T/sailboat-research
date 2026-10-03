@@ -8,5 +8,10 @@
     "corroboration": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7146235/",
     "access": "2026-10-03 official indexed page; direct publisher open returned429",
     "note": "Original DOI response preserved in bibliography_fetch.json"
+  },
+  {
+    "type": "BibTeX formatting only",
+    "changes": "Literal month names braced; page-range en dashes converted to BibTeX double hyphens; publisher titles brace-protected to preserve acronyms. DOI metadata, authors, years, venues and identifiers unchanged. Original raw responses retained in bibliography_fetch.json.",
+    "compilation_status": "Not compiled; no compatible project TeX toolchain available"
   }
 ]

@@ -61,13 +61,14 @@ def additions(folder,main,simple,out,case=None,stage="frozen",case_name="interve
     else:
         visible='Known static map\nPosition / heading / clock\nCurrent and final targets'
         rule=f"Margin cap {cfg.get('margin',80):g} m; A* 25 m\nFeasible route / radial targets\nPeriod {cfg.get('period',10):g} s; hold {cfg.get('hold',20):g} s"
-    fig,ax=plt.subplots(figsize=(12,3.5));ax.axis('off')
+    fig,ax=plt.subplots(figsize=(12,3.5));ax.axis('off');ax.set_xlim(0,1);ax.set_ylim(0,1)
     boxes=[(.01,.42,.20,.38,visible),(.27,.42,.26,.38,rule),(.59,.42,.18,.38,'Rigid target frame\nFrozen SAC-LSTM\nReal-history re-encoding'),(.83,.42,.16,.38,'Sail / rudder action\nUnchanged physics\nOne-second step')]
     for x,y,w,h,txt in boxes:
         ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=.008',fc='#eef3f8',ec='#3b5268'));ax.text(x+w/2,y+h/2,txt,ha='center',va='center',fontsize=9)
     for left,right in [(.22,.26),(.54,.58),(.78,.82)]:ax.annotate('',xy=(right,.61),xytext=(left,.61),arrowprops=dict(arrowstyle='->'))
     ax.text(.555,.85,'waypoint',ha='center',fontsize=8)
-    ax.annotate('',xy=(.1,.4),xytext=(.91,.4),arrowprops=dict(arrowstyle='->',connectionstyle='bar,fraction=.16'))
+    ax.plot([.91,.91,.1],[.4,.23,.23],c='#3b5268',lw=.9)
+    ax.annotate('',xy=(.1,.4),xytext=(.1,.23),arrowprops=dict(arrowstyle='->',color='#3b5268'))
     ax.plot([.91,.91,.68],[.4,.33,.33],c='#3b5268',lw=.9)
     ax.annotate('',xy=(.68,.4),xytext=(.68,.33),arrowprops=dict(arrowstyle='->',color='#3b5268'))
     ax.text(.8,.35,'Physical observation',ha='center',fontsize=8)
@@ -77,7 +78,7 @@ def additions(folder,main,simple,out,case=None,stage="frozen",case_name="interve
     if case:
         c=json.loads(Path(case).read_text())
         if c:
-            fig,axes=plt.subplots(2,2,figsize=(12,9));st=c['selected_at'];ap=c['applied_at'];p=np.array(c['common_input']['position_xy']);cs=[method_colors.get(r['variant'],'#CC79A7') for r in c['episode_rows']];details=[];window_clear=[];trace_rows=[]
+            fig,axes=plt.subplots(2,2,figsize=(12,9));st=c['selected_at'];ap=c['applied_at'];p=np.array(c['common_input']['position_xy']);cs=[method_colors.get(r['variant'],'#882255') for r in c['episode_rows']];details=[];window_clear=[];trace_rows=[]
             for k,row in enumerate(c['episode_rows']):
                 raw=ROOT/row['evidence'];d=json.loads(raw.read_text());j=json.loads(raw.with_name('job.json').read_text());tr=d['trajectory'];xy=np.array([x['raw'][:2] for x in tr]);tt=np.array([x['time'] for x in tr]);label=row['variant']+' | '+outcome(row)+', '+str(int(row['time_s']))+' s'
                 axes[0,0].plot(xy[:,0],xy[:,1],c=cs[k],lw=1.4,label=label)

@@ -128,7 +128,7 @@ def generate(folder,main,simple,out=None,stage="development",research_round="R2"
     context.set_xlabel('');context.set_ylabel('');context.tick_params(labelsize=6)
     context.set_title('Whole episode; box = zoom',fontsize=8)
     fig.text(.75,.48,'Start: open circle\nGoal: black star (10 m)\nDashed circles: true safety\nSolid lines: actual paths',fontsize=8,va='top')
-    ax.set_aspect('equal',adjustable='box');ax.legend(fontsize=8,loc='best')
+    ax.set_aspect('equal',adjustable='box');fig.legend(*ax.get_legend_handles_labels(),fontsize=7,loc='upper left',bbox_to_anchor=(.73,.40))
     ax.set_title('Local failure / minimum-clearance case\n'+chosen)
     fig.text(.5,.005,'Local window; complete paths remain in raw logs. Safety uses 1 s step segments, not continuous integration curves.',ha='center',fontsize=8)
     save(fig,'failure_local')
@@ -161,7 +161,7 @@ def generate(folder,main,simple,out=None,stage="development",research_round="R2"
         ax.set_yticks(range(len(near[-12:])),[str(tuple(round(z,1) for z in c['target'])) for c in near[-12:]])
     else:ax.text(.5,.5,'No actual target change in this episode',ha='center',transform=ax.transAxes)
     applied_times={c['selected_at'] for c in changes}
-    pending=[a for a in d['planner_decisions'] if a['decision']['target_xy']!=a['input']['current_goal_xy'] and a['decision_time'] not in applied_times]
+    pending=[a for a in d['planner_decisions'] if (a['input']['current_goal_xy'] is None or math.dist(a['decision']['target_xy'],a['input']['current_goal_xy'])>1e-6) and a['decision_time'] not in applied_times]
     ax.set_title(timing_selection+': '+chosen+'\nOpen circle: selected; tick: applied. Unapplied proposals in full episode: '+str(len(pending)))
     ax.set_xlabel('Physical time (s)');ax.set_ylabel('Applied target (world m)');ax.grid(alpha=.2);save(fig,'target_timing')
     fig,axes=plt.subplots(1,3,figsize=(13,4.5))
