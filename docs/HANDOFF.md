@@ -29,3 +29,7 @@ R1交付完成：4轮开发228回合 + 冻结72场336回合，共564回合；主
 本地保留原有未提交改动；新源码通过fetch进入origin/main，新增报告及完整R1产物单独同步。CURRENT_PLAN已关闭本轮，下一轮建议尚未实施。
 
 R2新授权启动：r2_autoresearch_20261003T063153Z；12小时/8轮/4 CPU/GPU0，目标与开发/冻结划分见docs/R2_PLAN.md。R1旧72场本轮仅作开发，历史结果不覆盖。
+
+R2交付完成（2026-10-03）：四轮开发后冻结forward500，完成72新实例×4方法；研究结论、真实航迹、消融及失败证据见[R2研究报告](R2_RESEARCH_REPORT.md)。主要长程提效假设未获支持，不替换R1默认方案。
+全部939新回合结束；冻结科学源码3003228，288回合原始指标复算通过，最终result-to-claim=no（same-family/provisional，正式审计不可用）。原始产物runs/r2_autoresearch_20261003T063153Z/；figures/index.html与R2_results_preview.zip供本地查看。
+seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fetch、冻结快照及Git bundle恢复，本地旧工作树与原未提交修改保留。下一轮建议仅在报告中，尚未实施。

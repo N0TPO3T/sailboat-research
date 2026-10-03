@@ -36,3 +36,9 @@
 **Conclusion** V0.2 t=165的有限候选全被25m过滤；R1在同一旧状态扩展候选后存在36条至少25m余量的候选航段。原失败至少包含候选覆盖限制；该快照不证明这些候选可被低层安全执行。
 **Evidence** docs/R1_RESEARCH_REPORT.md，runs/r1_autoresearch_20261003T021913Z/old_t165_coverage.json；闭环对照独立保存在各round与final。
 **Implication** 区分候选集合为空、几何路径不可行与真实闭环不可达。放宽或扩展候选后仍需完整回合验证，不能用几何存在性替代安全成功。
+
+## 目标有效性阈值不是单一切换时机干预
+**Tags:** waypoint, validity, hysteresis, ablation
+**Conclusion** R2将非终点有效距离门从40m改100m，同时改变urgent、旧目标注入、改点代价和保持/改善门；同坐标路线顶点仍可再次选中。它不保证100m内切换，也不能仅解释为“提前换点”。
+**Evidence** src/sailboat_routing/r2_planner.py:35–86；runs/r2_autoresearch_20261003T063153Z/round4_interpretation_note.json、round4_case009_divergence.json；docs/R2_RESEARCH_REPORT.md。
+**Implication** 做时机消融前拆清valid变量的全部使用点；同状态评分改善不推出整回合获救。R2具体参数结果只保留于报告。

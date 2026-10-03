@@ -125,12 +125,20 @@ def generate(folder,main,simple,out=None,stage="development"):
             dd,jj=data(chosen,v);tt=np.array([z['time'] for z in dd['trajectory']])
             yy=np.linalg.norm(xy(dd)-np.array(jj['scene']['goal']),axis=1) if key=='progress' else np.array([z.get('safety_clearance_m') if z.get('safety_clearance_m') is not None else np.nan for z in dd['trajectory']])
             ax.plot(tt,yy,color=colors[v],label=labels.get(v,v),lw=1)
-        if key=='clearance':ax.axhline(0,color='black',ls='--',label='True safety boundary')
+        if key=='clearance':
+            ax.axhline(0,color='black',ls='--',label='True safety boundary')
+            if not job['suite']['maps'][job['scene']['map']]:
+                ax.text(.5,.5,'Open map: no obstacles. Clearance is +infinity; finite safety curve not applicable.',ha='center',wrap=True,transform=ax.transAxes)
         ax.axvline(ft,color='gray',ls=':',lw=1);ax.set_xlabel('Physical time (s)');ax.set_ylabel(ylabel)
         ax.set_title(chosen+'\nRaw time series; each method stops at its own actual end')
-        ax.legend(fontsize=8);ax.grid(alpha=.2);save(fig,name)
-    changes=d['target_changes'];near=[c for c in changes if ft-120<=c['applied_at']<=ft+15]
-    if not near and changes:near=[min(changes,key=lambda c:abs(c['applied_at']-ft))]
+        ax.legend(fontsize=8);ax.grid(alpha=.2)
+        if key=='clearance' and not job['suite']['maps'][job['scene']['map']]:
+            ax.clear();ax.set_axis_off();ax.set_title(chosen)
+            ax.text(.5,.55,'Open map: no obstacles.\nSafety clearance is +infinity.\nA finite safety-clearance curve is not applicable.',ha='center',va='center',transform=ax.transAxes,fontsize=13)
+        save(fig,name)
+    changes=d['target_changes'];timing_selection='Up to 12 changes near focus';near=[c for c in changes if ft-120<=c['applied_at']<=ft+15]
+    if not near and changes:
+        near=[min(changes,key=lambda c:abs(c['applied_at']-ft))];timing_selection='No change within focus window; nearest actual change'
     fig,ax=plt.subplots(figsize=(9,3.5))
     if near:
         for i,c in enumerate(near[-12:]):
@@ -141,7 +149,7 @@ def generate(folder,main,simple,out=None,stage="development"):
     else:ax.text(.5,.5,'No actual target change in this episode',ha='center',transform=ax.transAxes)
     applied_times={c['selected_at'] for c in changes}
     pending=[a for a in d['planner_decisions'] if a['decision']['target_xy']!=a['input']['current_goal_xy'] and a['decision_time'] not in applied_times]
-    ax.set_title('Up to 12 actual changes near focus: '+chosen+'\nOpen circle: selected; tick: applied. Unapplied proposals in full episode: '+str(len(pending)))
+    ax.set_title(timing_selection+': '+chosen+'\nOpen circle: selected; tick: applied. Unapplied proposals in full episode: '+str(len(pending)))
     ax.set_xlabel('Physical time (s)');ax.set_ylabel('Applied target (world m)');ax.grid(alpha=.2);save(fig,'target_timing')
     fig,axes=plt.subplots(1,3,figsize=(13,4.5))
     for ax,dist in zip(axes,[1000,3000,5000]):
@@ -167,6 +175,49 @@ def generate(folder,main,simple,out=None,stage="development"):
         ax.set_ylabel('Paired travel-time difference (s)');ax.grid(axis='y',alpha=.2)
     fig.suptitle('Common safe arrivals only; dots = scenes, black bar = median; negative is faster')
     fig.tight_layout();save(fig,'paired_efficiency')
+    # Post-freeze presentation supplements; original case-selection rules remain unchanged.
+    supplements=[]
+    slow=[n for n in available if lookup[n,main]['success'] and lookup[n,'geom80']['success']]
+    worst=max(slow,key=lambda n:(lookup[n,main]['time_s']-lookup[n,'geom80']['time_s'],n))
+    rec={'figure':'efficiency_regression','scene_id':worst,'reason':'Posthoc diagnostic: maximum main-minus-R1 common-success travel-time difference; not a typical case.'}
+    selections.append(rec);supplements.append(rec)
+    dd,jj=data(worst,main);fig,ax=plt.subplots(figsize=(9,6));geography(ax,jj)
+    for v in variants:track(ax,worst,v)
+    ax.set_title('Largest paired travel-time regression (posthoc extreme)\n'+worst);ax.legend(fontsize=8)
+    fig.text(.5,.005,'Complete raw trajectories; no smoothing. This example explains the tail, not typical performance.',ha='center',fontsize=8)
+    save(fig,'efficiency_regression')
+    obstacle_cases=[n for n in regression if lookup[n,main]['min_safety_clearance_m'] is not None and lookup[n,main]['min_safety_clearance_m']<=0]
+    if obstacle_cases:
+        n=sorted(obstacle_cases)[0];dd,jj=data(n,main);tr=dd['trajectory']
+        focus=next(x for x in tr if x.get('safety_clearance_m') is not None and x['safety_clearance_m']<=0)
+        tf=focus['time'];pos=np.array(focus['raw'][:2]);pre=int(tf)-1
+        state=next(x for x in tr if x['time']==pre);target=tr[1]['target']
+        for c in dd['target_changes']:
+            if c['applied_at']<=pre:target=c['target']
+        rec={'figure':'obstacle_safety_local','scene_id':n,'focus_time_s':tf,'reason':'Posthoc diagnostic supplement: first main buffer failure with R1 safe arrival; primary adverse case is open-water timeout.'}
+        selections.append(rec);supplements.append(rec)
+        fig,axes=plt.subplots(1,2,figsize=(13,5.5));geography(axes[0],jj);geography(axes[1],jj)
+        for v in variants:
+            track(axes[0],n,v,False);track(axes[1],n,v,False)
+        axes[0].add_patch(Rectangle((pos[0]-170,pos[1]-170),340,340,fill=False,edgecolor='black'))
+        axes[0].set_title('Whole episode (different stopping times)');axes[0].legend(fontsize=7)
+        a=np.array(state['raw'][:2]);b=np.array(target)
+        axes[1].plot([a[0],b[0]],[a[1],b[1]],':',color=colors[main],label='Issued-target chord at t='+str(pre)+' (not prediction)')
+        axes[1].scatter(*b,marker='D',s=35,c=colors[main])
+        axes[1].scatter(*pos,marker='X',s=85,c=colors[main],edgecolors='black',zorder=8,label='First unsafe step ends at '+str(int(tf))+' s')
+        axes[1].set_xlim(pos[0]-170,pos[0]+170);axes[1].set_ylim(pos[1]-170,pos[1]+170);axes[1].set_aspect('equal',adjustable='box')
+        axes[1].set_title('Local actual paths and true safety boundary');axes[1].legend(fontsize=7)
+        fig.suptitle('Posthoc obstacle regression: '+n);fig.tight_layout();save(fig,'obstacle_safety_local')
+        fig,axes=plt.subplots(1,2,figsize=(12,4.5))
+        for ax in axes:
+            for v in variants:
+                ddd,_=data(n,v);tt=[x['time'] for x in ddd['trajectory']];yy=[x.get('safety_clearance_m',np.nan) for x in ddd['trajectory']]
+                ax.plot(tt,yy,color=colors[v],label=labels[v],lw=1)
+            ax.axhline(0,c='black',ls='--');ax.axvline(tf,c='gray',ls=':');ax.set_xlabel('Physical time (s)');ax.set_ylabel('Per-step true safety clearance (m)');ax.grid(alpha=.2)
+        axes[0].set_title('Whole episodes; no extension after termination');axes[0].legend(fontsize=8)
+        axes[1].set_xlim(tf-120,tf+30);axes[1].set_ylim(-2,45);axes[1].set_title('Main first intrusion: '+str(round(focus['safety_clearance_m'],3))+' m at '+str(int(tf))+' s')
+        fig.suptitle(n+' | posthoc obstacle diagnostic');fig.tight_layout();save(fig,'obstacle_safety_clearance')
+    (out/'figure_supplement_note.json').write_text(json.dumps({'type':'presentation-only postfreeze additions','reason':'Show adverse travel-time tail and obstacle safety; the predeclared primary adverse case has no obstacles. No new rollouts or method changes.','cases':supplements},indent=2))
     (out/'figure_selection.json').write_text(json.dumps({'stage':stage,'rule':'predeclared family/median rule plus first regression or minimum clearance; no smoothing; no rollouts','main':main,'simple':simple,'display_variants':variants,'labels':labels,'cases':selections},indent=2))
     # A small offline evidence slice: exact plotted positions and actual target events.
     plotted=[];events=[]
@@ -190,6 +241,8 @@ def generate(folder,main,simple,out=None,stage="development"):
     (out/'plotted_scenes.json').write_text(json.dumps(scene_evidence,indent=2))
     figures=['trajectory_1km','trajectory_3km','trajectory_5km','failure_local','safety_clearance','goal_distance','target_timing','success_by_distance','paired_efficiency']
     if gains:figures.insert(3,'efficiency_example')
+    figures.append('efficiency_regression')
+    if obstacle_cases:figures.extend(['obstacle_safety_local','obstacle_safety_clearance'])
     sections=''.join('<section><h2>'+html.escape(n)+'</h2><a href="'+n+'.svg">SVG</a><img loading="lazy" src="'+n+'.png" alt="'+n+'"></section>' for n in figures)
     (out/'index.html').write_text('<!doctype html><html><meta charset="utf-8"><title>R2 actual trajectories and results</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;padding:0 20px;background:#fafafa;color:#222}img{width:100%;height:auto}section{background:white;padding:18px;margin:24px 0}h1,h2{font-weight:600}</style><h1>R2 actual trajectories and results</h1><p>Saved simulation logs only. No path smoothing or extension beyond termination. Dashed obstacle circles show the true safety boundary; no fixed tracking guarantee is implied. See figure_selection.json and the report for selection rules and limitations.</p>'+sections+'</html>',encoding='utf-8')
     print(json.dumps(selections,indent=2))
