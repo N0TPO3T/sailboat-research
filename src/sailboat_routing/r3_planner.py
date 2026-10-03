@@ -19,6 +19,7 @@ class RiskConfig:
     response: str = "bypass"
     relay_handoff: float = 100.
     relay_trigger: float = 80.
+    risk_lookahead: float = 500.
 
 class RiskManagedPlanner:
     def __init__(self, chart, config=None, mode="geometry_only"):
@@ -26,6 +27,7 @@ class RiskManagedPlanner:
         cfg=self.config
         if mode!="geometry_only":raise ValueError("R3 has no wind input branch")
         if cfg.base not in ("r1","relay") or cfg.response not in ("bypass","replan_only","none"):raise ValueError("Unknown R3 mechanism")
+        if not 0<cfg.risk_lookahead<=500:raise ValueError("Risk lookahead must be within (0,500]")
         self.base=(RouteWaypointPlanner(chart,R1Config(margin=cfg.margin)) if cfg.base=="r1" else
                    RelayPlanner(chart,RelayConfig(margin=cfg.margin,handoff=cfg.relay_handoff,trigger_clearance=cfg.relay_trigger)))
         self.motion=deque(maxlen=11);self.last_attempt=-math.inf;self.log=[]
@@ -55,15 +57,22 @@ class RiskManagedPlanner:
                 elif cfg.response=="bypass":
                     # Relay selection depends on current only through its hold gate.
                     # None forces route recomputation; actual controller target/history stay unchanged.
+                    self.base.config=replace(old_cfg,lookahead=cfg.risk_lookahead)
                     decision=self.base.plan(replace(v,current_goal_xy=None))
                 else:decision=self.base.plan(v)
             else:decision=self.base.plan(v)
+        except Exception as error:
+            self.log.append(dict(time=t,position=p,own_clearance=None if math.isinf(own) else own,
+                nearest_obstacle=closest,closing_speed=closing,risk_obstacles=risk_obstacles,
+                risk_detected=trigger,attempt=attempt,old_target=v.current_goal_xy,target=None,
+                proposed_change=False,base_reason=None,error=type(error).__name__,response=cfg.response,base=cfg.base))
+            raise
         finally:self.base.config=old_cfg
-        changed=decision.target_xy!=v.current_goal_xy
+        changed=v.current_goal_xy is None or math.dist(decision.target_xy,v.current_goal_xy)>1e-6
         if trigger or attempt or changed or t%10==0:
             self.log.append(dict(time=t,position=p,own_clearance=None if math.isinf(own) else own,nearest_obstacle=closest,
                 closing_speed=closing,risk_obstacles=risk_obstacles,risk_detected=trigger,attempt=attempt,old_target=v.current_goal_xy,
-                target=decision.target_xy,changed=changed,base_reason=decision.reason,
+                target=decision.target_xy,proposed_change=changed,base_reason=decision.reason,
                 response=cfg.response,base=cfg.base))
         reason=("risk_"+cfg.response+":"+decision.reason) if attempt else decision.reason
         return PlannerDecision(decision.target_xy,decision.candidates,reason,False)

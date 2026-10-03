@@ -36,6 +36,7 @@ def worker(job):
         row.update(variant=job['variant'],round=job['round'],config=job['config'],distance_m=job['scene'].get('distance_m',1000),cpu_seconds=time.process_time()-cpu_start)
         nav._write_json(out/'row.json',row)
         if made:nav._write_json(out/('r1_decisions.json' if job.get('planner_kind','r1')=='r1' else 'r3_decisions.json' if job.get('planner_kind')=='risk' else 'r2_decisions.json'),made[0].log)
+        if made and hasattr(made[0],'base'):nav._write_json(out/'base_decisions.json',made[0].base.log)
         nav._write_json(out/'exit.json',{'status':'completed','wall_seconds':time.time()-start,'pid':os.getpid()})
         return row
     except Exception as e:

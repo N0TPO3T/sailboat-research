@@ -15,12 +15,12 @@ from analyze_r1 import outcome,interval
 from analyze_r2 import quantile
 plt.rcParams.update({'font.size':10,'svg.fonttype':'none','path.simplify':False,'axes.spines.top':False,'axes.spines.right':False})
 PALETTE=['#0072B2','#D55E00','#009E73','#CC79A7','#555555']
-def generate(folder,main,simple,out=None,stage="development"):
+def generate(folder,main,simple,out=None,stage="development",research_round="R2",reference_margin=None):
     folder=Path(folder).resolve();out=Path(out).resolve() if out else folder.parent/'figures';out.mkdir(parents=True,exist_ok=True)
     rows=json.loads((folder/'analysis_rows.json').read_text());lookup={(r['scene_id'],r['variant']):r for r in rows}
     variants=list(dict.fromkeys(['geom80',simple,main]));allvars=variants+sorted({r['variant'] for r in rows}-set(variants))
-    labels={'geom80':'R1 geom80',simple:'Simple baseline ('+simple+')',main:('R2 main (' if stage=='frozen' else 'Candidate (')+main+')'}
-    if main==simple:labels[main]='Simple baseline / R2 main ('+main+')'
+    labels={'geom80':'R1 geom80',simple:'Simple baseline ('+simple+')',main:(research_round+' main (' if stage=='frozen' else 'Candidate (')+main+')'}
+    if main==simple:labels[main]='Simple baseline / '+research_round+' main ('+main+')'
     colors={v:PALETTE[i%len(PALETTE)] for i,v in enumerate(allvars)}
     names=sorted({r['scene_id'] for r in rows});cache={}
     def data(name,v):
@@ -40,6 +40,19 @@ def generate(folder,main,simple,out=None,stage="development"):
         ax.add_patch(Circle(goal,job['suite']['goal_radius_m'],fill=False,edgecolor='black',linewidth=1.5))
         ax.scatter(*goal,marker='*',s=150,facecolors='none',edgecolors='black',linewidths=1.2,zorder=6,label='Goal (10 m arrival radius)')
         ax.scatter(0,0,marker='o',s=45,facecolor='white',edgecolor='black',zorder=6,label='Start')
+        if reference_margin is not None:
+            import sys
+            from dataclasses import replace
+            sys.path.insert(0,str(ROOT/'src'))
+            from sailboat_routing.navigation import chart_for
+            from sailboat_routing.metrics import segment_circle_clearance
+            chart=chart_for(job['scene'],job['suite'])
+            cap=min(segment_circle_clearance((0.,0.),(0.,0.),chart.obstacles)['safety_m'],segment_circle_clearance(goal,goal,chart.obstacles)['safety_m'])
+            margin=min(reference_margin,max(0.,cap-5.))
+            planned=replace(chart,obstacles=tuple(replace(o,safety_buffer=o.safety_buffer+margin) for o in chart.obstacles))
+            try:route=planned.route((0.,0.),tuple(goal))
+            except ValueError:route=chart.route((0.,0.),tuple(goal))
+            a=np.array(route);ax.plot(a[:,0],a[:,1],ls=':',c='#999999',lw=.8,label='Initial A* reference (not executed)',zorder=1)
         ax.set_aspect('equal',adjustable='datalim');ax.set_xlabel('World x (m)');ax.set_ylabel('World y (m)');ax.grid(alpha=.18)
     def track(ax,name,v,mark=True):
         d,job=data(name,v);a=xy(d);r=lookup[name,v]
@@ -244,7 +257,7 @@ def generate(folder,main,simple,out=None,stage="development"):
     figures.append('efficiency_regression')
     if obstacle_cases:figures.extend(['obstacle_safety_local','obstacle_safety_clearance'])
     sections=''.join('<section><h2>'+html.escape(n)+'</h2><a href="'+n+'.svg">SVG</a><img loading="lazy" src="'+n+'.png" alt="'+n+'"></section>' for n in figures)
-    (out/'index.html').write_text('<!doctype html><html><meta charset="utf-8"><title>R2 actual trajectories and results</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;padding:0 20px;background:#fafafa;color:#222}img{width:100%;height:auto}section{background:white;padding:18px;margin:24px 0}h1,h2{font-weight:600}</style><h1>R2 actual trajectories and results</h1><p>Saved simulation logs only. No path smoothing or extension beyond termination. Dashed obstacle circles show the true safety boundary; no fixed tracking guarantee is implied. See figure_selection.json and the report for selection rules and limitations.</p>'+sections+'</html>',encoding='utf-8')
+    (out/'index.html').write_text('<!doctype html><html><meta charset="utf-8"><title>'+research_round+' actual trajectories and results</title><style>body{font:16px system-ui;max-width:1200px;margin:30px auto;padding:0 20px;background:#fafafa;color:#222}img{width:100%;height:auto}section{background:white;padding:18px;margin:24px 0}h1,h2{font-weight:600}</style><h1>'+research_round+' actual trajectories and results</h1><p>Saved simulation logs only. No path smoothing or extension beyond termination. Dashed obstacle circles show the true safety boundary; no fixed tracking guarantee is implied. See figure_selection.json and the report for selection rules and limitations.</p>'+sections+'</html>',encoding='utf-8')
     print(json.dumps(selections,indent=2))
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('folder');ap.add_argument('--main',required=True);ap.add_argument('--simple',required=True);ap.add_argument('--out');ap.add_argument('--stage',choices=['development','frozen'],default='development');a=ap.parse_args();generate(a.folder,a.main,a.simple,a.out,a.stage)
