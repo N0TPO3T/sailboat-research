@@ -13,3 +13,4 @@ dist/
 *.npz
 *.npy
 .env
+.aris/

@@ -31,3 +31,8 @@
 **Conclusion** 固定裕量从初态启用会提前改变航迹；挡住旧状态的危险候选，不足以推出完整导航成功。有限候选清空时即使尚未侵入安全域，也必须记任务失败。
 **Evidence** docs/V0_2_RESULTS.md及runs/v0_2_margin_20261002T142441Z/main_gate.json、same_state_t70.json、main/。
 **Implication** 将同状态机制核验和闭环结果分开；不把失败截断时间/航程当效率收益，不因负结果降低预设回归门槛。
+## 有限候选耗尽不等于地图或物理无解
+**Tags:** candidate-coverage, planning-margin, feasibility, closed-loop
+**Conclusion** V0.2 t=165的有限候选全被25m过滤；R1在同一旧状态扩展候选后存在36条至少25m余量的候选航段。原失败至少包含候选覆盖限制；该快照不证明这些候选可被低层安全执行。
+**Evidence** docs/R1_RESEARCH_REPORT.md，runs/r1_autoresearch_20261003T021913Z/old_t165_coverage.json；闭环对照独立保存在各round与final。
+**Implication** 区分候选集合为空、几何路径不可行与真实闭环不可达。放宽或扩展候选后仍需完整回合验证，不能用几何存在性替代安全成功。

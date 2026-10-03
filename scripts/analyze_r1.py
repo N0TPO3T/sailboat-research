@@ -51,6 +51,7 @@ def analyze(folder):
     variants=sorted({r['variant'] for r in rows})
     result={'overall':summary(rows),'pairs':[x for a in variants for b in variants if a<b and (x:=pairs(rows,a,b))],
       'by_distance':{str(d):summary([r for r in rows if int(r.get('distance_m',1000))==d]) for d in sorted({int(r.get('distance_m',1000)) for r in rows})},
+      'pairs_by_distance':{str(d):[x for a in variants for b in variants if a<b and (x:=pairs([r for r in rows if int(r['distance_m'])==d],a,b))] for d in sorted({int(r['distance_m']) for r in rows})},
       'by_layout':{v:summary([r for r in rows if r['layout']==v]) for v in sorted({r['layout'] for r in rows})},
       'by_profile':{v:summary([r for r in rows if r['profile']==v]) for v in sorted({r['profile'] for r in rows})}}
     (folder/'analysis.json').write_text(json.dumps(result,indent=2))
@@ -74,14 +75,14 @@ def figures(folder):
     colors=dict(zip(variants,['#666666','#0072B2','#009E73','#D55E00','#CC79A7','#E69F00']))
     ds=sorted(stats['by_distance'],key=int);fig,axes=plt.subplots(1,len(ds),figsize=(5*len(ds),4),squeeze=False)
     for ax,d in zip(axes[0],ds):
-        a=stats['by_distance'][d]
-        for i,v in enumerate(variants):
+        a=stats['by_distance'][d];shown=[v for v in variants if v in a]
+        for i,v in enumerate(shown):
             if v not in a:continue
             q=a[v];rate=q['safe_arrivals']/q['n'];lo,hi=q['wilson95']
             ax.bar(i,rate,color=colors[v]);ax.errorbar(i,rate,yerr=[[rate-lo],[hi-rate]],fmt='none',ecolor='black',capsize=3)
-            ax.text(i,rate+.04,f"{q['safe_arrivals']}/{q['n']}",ha='center',fontsize=8)
-        ax.set_xticks(range(len(variants)),variants,rotation=35,ha='right');ax.set_ylim(0,1.15);ax.set_title(f'{int(d)//1000} km');ax.set_ylabel('Safe-arrival fraction');ax.grid(axis='y',alpha=.2)
-    fig.suptitle('Frozen evaluation: episode-level Wilson 95% intervals');fig.tight_layout();fig.savefig(folder/'success_by_distance.png',dpi=170);plt.close(fig)
+            ax.text(i,hi+.035,f"{q['safe_arrivals']}/{q['n']}",ha='center',fontsize=8)
+        ax.set_xticks(range(len(shown)),shown,rotation=35,ha='right');ax.set_ylim(0,1.15);ax.set_title(f'{int(d)//1000} km');ax.set_ylabel('Safe-arrival fraction');ax.grid(axis='y',alpha=.2)
+    fig.suptitle('Frozen evaluation: Wilson 95% intervals; wind modes evaluated at 1 km only');fig.tight_layout();fig.savefig(folder/'success_by_distance.png',dpi=170);plt.close(fig)
     selected=[]
     for d in ds:
         lookup={(r['scene_id'],r['variant']):r for r in rows if r.get('distance_m',1000)==int(d)}

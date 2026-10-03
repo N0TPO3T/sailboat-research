@@ -22,3 +22,8 @@ V0.2主实验6回合完成；继续门槛=False，详见runs/v0_2_margin_2026100
 V0.2交付完成：57测试、同状态核验、6正式回合、一次同家族review（provisional）；运行进程54.76秒，含核验/分析账本62.27秒，截至review总历时11.40分钟。25m三方法均无候选失败，18回归按门槛跳过；完整报告 [V0_2_RESULTS.md](V0_2_RESULTS.md)。唯一下一步建议是离线检查t=165候选覆盖，不在本轮实施。
 
 R1新授权已启动：r1_autoresearch_20261003T021913Z；恢复见CURRENT_PLAN.md及run/plan.json，历史V0.2停止状态不限制R1。
+
+R1完成4轮开发，冻结版本fa6fecd；67测试通过，72场/336回合新评估即将运行，详见runs/r1_autoresearch_20261003T021913Z/final_protocol.json。不得用测试结果调参；恢复检查final/completion.json及本任务进程。
+R1交付完成：4轮开发228回合 + 冻结72场336回合，共564回合；主方法65/72，锚点/去留量39/72，窄候选63/72。详见[R1研究报告](R1_RESEARCH_REPORT.md)，数值与适用边界以报告为准。
+冻结代码fa6fecd，67项实现测试和3项分析测试通过；336原始轨迹复算与最终同家族result-to-claim review完成（限定claim=yes，provisional，正式审计不可用）。预算与证据在runs/r1_autoresearch_20261003T021913Z/；所有实验已结束，未push。后续不能复用seed271作为未见测试。
+本地保留原有未提交改动；新源码通过fetch进入origin/main，新增报告及完整R1产物单独同步。CURRENT_PLAN已关闭本轮，下一轮建议尚未实施。
