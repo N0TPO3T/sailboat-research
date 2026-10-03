@@ -20,3 +20,5 @@
 V0.2主实验6回合完成；继续门槛=False，详见runs/v0_2_margin_20261002T142441Z/main_gate.json；本轮进程累计约60.5秒。
 
 V0.2交付完成：57测试、同状态核验、6正式回合、一次同家族review（provisional）；运行进程54.76秒，含核验/分析账本62.27秒，截至review总历时11.40分钟。25m三方法均无候选失败，18回归按门槛跳过；完整报告 [V0_2_RESULTS.md](V0_2_RESULTS.md)。唯一下一步建议是离线检查t=165候选覆盖，不在本轮实施。
+
+R1新授权已启动：r1_autoresearch_20261003T021913Z；恢复见CURRENT_PLAN.md及run/plan.json，历史V0.2停止状态不限制R1。
