@@ -103,7 +103,9 @@ class NoChangePlanner(ForwardPlanner):
     change_weight=0.0
 
 class EarlyHandoffPlanner(ForwardPlanner):
-    """Retire non-final incumbent within 100m; keep necessary route corners."""
+    """Treat a near non-final incumbent as invalid for holding/cost purposes.
+    A route vertex at the same coordinate may still be selected again.
+    """
     handoff_distance=100.0
 
 @dataclass(frozen=True)

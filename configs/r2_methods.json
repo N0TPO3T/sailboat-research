@@ -1,0 +1,79 @@
+{
+  "schema": 1,
+  "main": "forward500",
+  "simple_baseline": "relay100_clear80",
+  "methods": {
+    "geom80": {
+      "planner_kind": "r1",
+      "config": {
+        "margin": 80.0,
+        "period": 10.0,
+        "hold": 20.0,
+        "improvement": 15.0,
+        "history_gain": 0.0,
+        "wind_weight": 0.0,
+        "wide_candidates": true
+      },
+      "mode": "geometry_only"
+    },
+    "forward500": {
+      "planner_kind": "forward",
+      "config": {
+        "margin": 80.0,
+        "period": 10.0,
+        "hold": 20.0,
+        "improvement": 15.0,
+        "history_gain": 0.0,
+        "wind_weight": 0.0,
+        "wide_candidates": true
+      },
+      "mode": "geometry_only"
+    },
+    "route_cost": {
+      "planner_kind": "route_cost",
+      "config": {
+        "margin": 80.0,
+        "period": 10.0,
+        "hold": 20.0,
+        "improvement": 15.0,
+        "history_gain": 0.0,
+        "wind_weight": 0.0,
+        "wide_candidates": true
+      },
+      "mode": "geometry_only"
+    },
+    "relay100_clear80": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 80.0,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "mode": "geometry_only"
+    }
+  },
+  "implementation": "src/sailboat_routing/r2_planner.py and inherited r1_planner.py; use scripts/run_r1.py manifest factory",
+  "effective_main_constants": {
+    "radial_lengths_m": [
+      500
+    ],
+    "radial_offsets_rad": [
+      0
+    ],
+    "retain_visible_route_vertices_and_valid_incumbent": true,
+    "incumbent_distance_gate_m": 40,
+    "maximum_target_distance_m": 550,
+    "turn_weight": 15,
+    "change_weight": 0.04,
+    "urgent_chord_guard_m": 20,
+    "margin_cap_m": 80,
+    "hold_s": 20,
+    "period_s": 10,
+    "strict_score_improvement_required": 15
+  },
+  "limits": "No wind/prediction branch in main. Original t to t+1 timing, safety and low-level unchanged. 80m is a cap, not a guarantee."
+}

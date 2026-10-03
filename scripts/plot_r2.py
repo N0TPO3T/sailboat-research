@@ -181,6 +181,13 @@ def generate(folder,main,simple,out=None,stage="development"):
         if items:
             with (out/filename).open('w',newline='') as ff:
                 writer=csv.DictWriter(ff,fieldnames=list(items[0]));writer.writeheader();writer.writerows(items)
+    selected_names=sorted({x['scene_id'] for x in selections})
+    scene_evidence=[]
+    for n in selected_names:
+        dd,jj=data(n,main)
+        scene_evidence.append({'scene':jj['scene'],'suite':jj['suite'],
+            'rows':[lookup[n,v] for v in variants]})
+    (out/'plotted_scenes.json').write_text(json.dumps(scene_evidence,indent=2))
     figures=['trajectory_1km','trajectory_3km','trajectory_5km','failure_local','safety_clearance','goal_distance','target_timing','success_by_distance','paired_efficiency']
     if gains:figures.insert(3,'efficiency_example')
     sections=''.join('<section><h2>'+html.escape(n)+'</h2><a href="'+n+'.svg">SVG</a><img loading="lazy" src="'+n+'.png" alt="'+n+'"></section>' for n in figures)
