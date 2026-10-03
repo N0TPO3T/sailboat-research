@@ -52,7 +52,7 @@ def generate(folder,main,simple,out=None,stage="development",research_round="R2"
             planned=replace(chart,obstacles=tuple(replace(o,safety_buffer=o.safety_buffer+margin) for o in chart.obstacles))
             try:route=planned.route((0.,0.),tuple(goal))
             except ValueError:route=chart.route((0.,0.),tuple(goal))
-            a=np.array(route);ax.plot(a[:,0],a[:,1],ls=':',c='#999999',lw=.8,label='Initial A* reference (not executed)',zorder=1)
+            a=np.array(route);ax.plot(a[:,0],a[:,1],ls=':',c='#999999',lw=.8,label=f'Initial A* reference ({reference_margin:g} m margin cap; not executed)',zorder=1)
         ax.set_aspect('equal',adjustable='datalim');ax.set_xlabel('World x (m)');ax.set_ylabel('World y (m)');ax.grid(alpha=.18)
     def track(ax,name,v,mark=True):
         d,job=data(name,v);a=xy(d);r=lookup[name,v]
@@ -207,7 +207,7 @@ def generate(folder,main,simple,out=None,stage="development",research_round="R2"
         state=next(x for x in tr if x['time']==pre);target=tr[1]['target']
         for c in dd['target_changes']:
             if c['applied_at']<=pre:target=c['target']
-        rec={'figure':'obstacle_safety_local','scene_id':n,'focus_time_s':tf,'reason':'Posthoc diagnostic supplement: first main buffer failure with R1 safe arrival; primary adverse case is open-water timeout.'}
+        rec={'figure':'obstacle_safety_local','scene_id':n,'focus_time_s':tf,'reason':'Posthoc diagnostic supplement: first main buffer failure with R1 safe arrival; additional obstacle case, independent of the primary adverse-case outcome.'}
         selections.append(rec);supplements.append(rec)
         fig,axes=plt.subplots(1,2,figsize=(13,5.5));geography(axes[0],jj);geography(axes[1],jj)
         for v in variants:
@@ -230,7 +230,7 @@ def generate(folder,main,simple,out=None,stage="development",research_round="R2"
         axes[0].set_title('Whole episodes; no extension after termination');axes[0].legend(fontsize=8)
         axes[1].set_xlim(tf-120,tf+30);axes[1].set_ylim(-2,45);axes[1].set_title('Main first intrusion: '+str(round(focus['safety_clearance_m'],3))+' m at '+str(int(tf))+' s')
         fig.suptitle(n+' | posthoc obstacle diagnostic');fig.tight_layout();save(fig,'obstacle_safety_clearance')
-    (out/'figure_supplement_note.json').write_text(json.dumps({'type':'presentation-only postfreeze additions','reason':'Show adverse travel-time tail and obstacle safety; the predeclared primary adverse case has no obstacles. No new rollouts or method changes.','cases':supplements},indent=2))
+    (out/'figure_supplement_note.json').write_text(json.dumps({'type':'presentation-only postfreeze additions','reason':'Show adverse travel-time tail and obstacle safety; retaining the predeclared primary adverse case. No new rollouts or method changes.','cases':supplements},indent=2))
     (out/'figure_selection.json').write_text(json.dumps({'stage':stage,'rule':'predeclared family/median rule plus first regression or minimum clearance; no smoothing; no rollouts','main':main,'simple':simple,'display_variants':variants,'labels':labels,'cases':selections},indent=2))
     # A small offline evidence slice: exact plotted positions and actual target events.
     plotted=[];events=[]

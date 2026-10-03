@@ -24,9 +24,9 @@ c_i(t) = ||p_t - c_i|| - R_i.
 
 On an obstacle-free map the minimum clearance is positive infinity. Safety evaluation uses the minimum circle clearance along each straight segment between consecutive one-second recorded positions. This is a discrete control-step polyline test, not a certificate over the adaptive integrator's continuous curve. A mission succeeds only if it reaches within 10 m of G before its time limit, with no entity collision or safety-buffer intrusion during the entire episode. The limits are 1800, 5400, and 9000 s for 1, 3, and 5 km missions.
 
-The inherited controller is the fourth-chapter 14-dimensional no-wind SAC-LSTM actor at checkpoint 7200, with its matching fixed normalizer. It is not the separate final checkpoint at 9000. The actor uses deterministic tanh(mu) actions in evaluation mode. The simulator maps its normalized commands to incremental sail and rudder actions with the inherited quantization, saturation, and rate limits. The inherited dynamics, weights, and observation normalization remain unchanged.
+The inherited controller is the fourth-chapter 14-dimensional no-wind SAC-LSTM actor at checkpoint 7200, with its matching fixed normalizer. It is not the separate final checkpoint at 9000. The actor uses deterministic tanh(mu) actions in evaluation mode. The simulator maps its normalized commands to incremental sail and rudder actions with the inherited quantization, saturation, and rate limits. The inherited dynamics, weights, and observation normalization remain unchanged. The comparison uses the existing continuous-navigation adapter with no additional sensor or actuator noise; environmental variation comes from the declared synthetic wind field.
 
-The observation contains position, roll and heading, body velocities, angular rates, actual sail and rudder angles, progress variables, and the position target. Its recurrent state follows the actual sequence of observations and previous normalized commands. When a target changes, the existing adapter re-encodes the recorded real history for the new target; it does not invent a counterfactual physical trajectory or reset the mission. Exact asset hashes and inherited source locations are recorded in the project upstream manifest. Original training provenance, formal asset authorship, and the associated publication have not yet been established; author confirmation is necessary before submission and distribution.
+The observation contains position, roll and heading, body velocities, angular rates, actual sail and rudder angles, progress variables, and the position target. The shared adapter uses a rigid local frame chosen when a target is issued: the target becomes (500, 0) m, heading is rotated by the leg bearing, and the frame origin is 500 m behind the target. Distances are not rescaled; a physically shorter leg therefore starts closer to that local target. The frame stays fixed until the next target change. Progress fields are recomputed from consecutive real positions in this frame. Its recurrent state follows the actual sequence of observations and previous normalized commands. When a target changes, the existing adapter re-encodes the recorded real history for the new target; it does not invent a counterfactual physical trajectory or reset the mission. Exact asset hashes and inherited source locations are recorded in the project upstream manifest. Original training provenance, formal asset authorship, and the associated publication have not yet been established; author confirmation is necessary before submission and distribution.
 
 The high-level interface exposes the known map, current position and heading, current waypoint, final route goal, simulation clock, and permitted causal history. The geometry-only methods receive no wind estimate. The simulator evaluates a private spatial and temporal wind field. Different trajectories may encounter different local wind values even within the same paired scenario. All paired methods share the field function, initial conditions, and random-disturbance protocol.
 
@@ -50,7 +50,7 @@ J(q) = ||p_t-q|| + min_j (||q-v_j|| + L_j)
 
 where v_j is a visible route vertex and L_j is its remaining route length. The final term applies only when the incumbent is valid. Distances are in metres and angles in radians; the numerical coefficients are empirical score conversions. No wind or motion-bias term is active in these experiments.
 
-Ordinary planning is considered every 10 s. A valid incumbent within 550 m is normally held for at least 20 s, and subsequently changes only if the score improves by more than 15. A nonfinal target within 40 m, an invalid chord, or the existing chord-clearance urgency rule bypasses parts of this logic. We retain these exact baseline semantics instead of describing the controller as a strict straight-line tracker.
+Ordinary planning is considered every 10 s. A valid incumbent within 550 m is normally held for at least 20 s, and subsequently changes only if the score improves by more than 15. A nonfinal target within 40 m, an invalid chord, or the existing chord-clearance urgency rule bypasses parts of this logic. The hold and improvement checks also require that the incumbent survives the inflated-map candidate filter; validity on the original safety map alone is insufficient. We retain these exact baseline semantics instead of describing the controller as a strict straight-line tracker.
 
 ### 3.2 Simple geometric relay
 
@@ -65,6 +65,8 @@ v_i(t) = (||p_(t-10)-c_i|| - ||p_t-c_i||) / 10 s > 0.05 m/s.
 This is a recent net approach measurement, not an instantaneous velocity or a predicted collision probability. The causal variant waits until eleven distinct one-second positions are available. Repeated calls at the same physical time do not add history. A 20 s cooldown limits intervention attempts.
 
 A risk attempt asks the unchanged base planner to reconsider the reference. For R1 it temporarily removes the ordinary planning-period, minimum-hold, and 15-point improvement gates while retaining candidate generation and the candidate cost, including its target-change penalty. For the relay it bypasses only the hold decision and recomputes its usual route target. The original settings are restored immediately after that call. A replan-only R1 ablation removes the planning-period gate while retaining the hold and score-improvement gates. These variants isolate additional computation from actually relaxing target commitment. They do not force a new waypoint when the original selection remains best.
+
+Every completed R1 planning call updates its planning timestamp even when it retains the current target. An unscheduled risk call can therefore postpone the next periodic call. This timer effect is part of the implemented variant and must not be described as uniformly earlier target intervention. A simple20s planning-period control tests whether a less frequent ordinary schedule is sufficient. A separate Relay variant uses200m lookahead only during a risk attempt; a constant200m relay controls for the use of shorter targets. The risk wrapper restores its ordinary500m configuration after the call; the constant200m comparator keeps200m throughout. Actual target application remains governed by the common navigation interface.
 
 The final method and its numerical settings will be selected on development data. All final evaluation configurations will then be immutable.
 
@@ -82,7 +84,35 @@ Only four single-thread CPU workers are permitted. There is no low-level trainin
 
 ## 5. Results
 
-Experiments are in progress. This section will be replaced with the frozen numerical comparison, direct ablation, paired efficiency results, raw-trajectory cases, and negative outcomes before delivery.
+### 5.1 Development evidence and discarded hypotheses
+
+The first complete36-scene paired screen provides a reason to preserve target acceptance rather than bypass it indiscriminately. These scenes were already inspected in prior work and are development data.
+
+| Variant | Safe arrival /36 | Buffer intrusion | Timeout |
+|---|---:|---:|---:|
+| geom80 | 32 | 2 | 2 |
+| r1_replan60 | 33 | 1 | 2 |
+| r1_fixed60 | 31 | 3 | 2 |
+| r1_closing60 | 31 | 3 | 2 |
+| relay100_clear80 | 32 | 3 | 1 |
+| relay_fixed60 | 29 | 6 | 1 |
+| relay_closing60 | 29 | 6 | 1 |
+
+The replan-only variant gains one safe completion and loses none relative to R1 in this screen. On their32common safe arrivals, mean travel time changes by-90.5s and the median by0s. This is concentrated evidence rather than a uniform speedup. The closing gate reduces R1 bypass attempts from86to61and actual risk-associated target changes from50to44, but both variants complete31/36safely. Attempt counts in this first implementation exclude failed terminal planning calls; complete-task outcomes include every episode. The later logger records these exceptions. The policies can have different trajectories and exposure durations, so attempt totals are not a causal estimate of false-alarm reduction.
+
+The adverse development case s1271_032 shows why a risk trigger should not automatically discard acceptance rules. At323s, both policies have the same physical/action history. The fresh incumbent score is4497.14098; the best alternative is4496.42062, only0.72036better. Risk bypass applies the new target at324s and its full episode later violates the buffer at1447s; original R1 safely arrives at3945s. This sequence does not establish that the first replacement alone accounts for all subsequent failure dynamics.
+
+The apparent rescue in s1271_034 has a different timing mechanism. At364s, an extra planning call retains the target because the20s hold has not expired. Updating the planner timestamp postpones the next periodic call: original R1 selects a replacement at371s and applies it at372s, whereas the variant selects its replacement at374s and applies it at375s. Their issued targets first differ at372s while physical state and command prefixes are still identical. The variant safely finishes at1831s; R1 violates the buffer much later at7708s. This is evidence that additional planning can delay a target change, not evidence of a uniformly earlier risk intervention. A simple20s nominal-period control is therefore included in the next development round.
+
+In s1271_028, forcing Relay to recompute at3201s replaces a225.603m target by a500m target. The modified episode later fails at3271s, while ordinary Relay safely finishes at3763s. The conditional200m lookahead experiment tests whether a near-obstacle response should retain a shorter target scale. Constant200m Relay is its simple control.
+
+The completed second screen tests simpler alternatives on the same 36 scenes. A 120 m margin cap in Relay reaches 34/36 safely, with two intrusions and no timeout. Against the 80 m Relay it gains two safe arrivals and loses none, but on their 32 common safe arrivals its mean travel time is 158.59 s longer (median 0 s; descriptive bootstrap 95% interval [-119.41, 462.47] s). Against R1 it wins three and loses one, with a conditional mean increase of 75.48 s on 31 common successes. More safe arrivals therefore do not establish a speed improvement.
+
+Increasing the R1 margin cap to 120 m leaves its aggregate at 32/36. A 20 s nominal R1 planning period also reaches 32/36, with one win and one loss relative to original R1. A 100 m risk-replanning threshold yields 32/36, with one fewer intrusion and one additional timeout than original R1. Constant 200 m Relay is poor (26/36, eight timeouts); using 200 m only during a 60 m risk request reaches 30/36. These short-target branches are not retained. The last development round validates Relay caps 120/160 m and risk thresholds 60/100 m on a second already-seen seed block; 160 m is also evaluated on the original block for a matched small margin-sensitivity comparison.
+
+### 5.2 Frozen evaluation
+
+The final method has not yet been selected. New evaluation scenes remain ungenerated. The complete frozen comparison and actual trajectory figures will be inserted here before delivery.
 
 ## 6. Discussion and conclusion
 
@@ -96,7 +126,7 @@ Author identities, affiliations, funding, and the formal acknowledgment/citation
 
 ## References
 
-1. Andouglas Gonçalves da Silva Silva Junior, Davi Henrique dos Santos, Alvaro Pinto Fernandes de Negreiros, João Moreno Vilas Boas de Souza Silva, Luiz Marcos Garcia Gonçalves. "High-Level Path Planning for an Autonomous Sailboat Robot Using Q-Learning." Sensors 20(6), 1550, 2020. DOI: [10.3390/s20061550](https://doi.org/10.3390/s20061550).
+1. Andouglas Gonçalves da Silva Junior, Davi Henrique dos Santos, Alvaro Pinto Fernandes de Negreiros, João Moreno Vilas Boas de Souza Silva, Luiz Marcos Garcia Gonçalves. "High-Level Path Planning for an Autonomous Sailboat Robot Using Q-Learning." Sensors 20(6), 1550, 2020. DOI: [10.3390/s20061550](https://doi.org/10.3390/s20061550).
 
 2. Takumi Suda, Daniel Nikovski. "Deep Reinforcement Learning for Optimal Sailing Upwind." 2022 International Joint Conference on Neural Networks (IJCNN), 1–8, 2022. DOI: [10.1109/ijcnn55064.2022.9892369](https://doi.org/10.1109/ijcnn55064.2022.9892369).
 

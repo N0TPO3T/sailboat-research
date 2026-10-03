@@ -8,7 +8,7 @@ Sources:
 - https://www.ccdc.neu.edu.cn/
 - https://www.ccdc.neu.edu.cn/firstSubmit/list.htm
 - https://www.ccdc.neu.edu.cn/finalSubmit/list.htm (older edition; conflicting version)
-- https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/guidelines-and-policies/submission-and-peer-review-policies/
+- https://conferences.ieeeauthorcenter.ieee.org/author-ethics/guidelines-and-policies/submission-policies/
 
 IEEE's inspected policy requires disclosure of generated text, images, figures, and code, identifying the AI system, affected sections, and extent of use. This project uses substantive AI assistance, so the draft includes an explicit disclosure. A separate CCDC-specific AI rule was not verified.
 
