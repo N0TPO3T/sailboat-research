@@ -8,6 +8,7 @@ configure_cpu()
 from sailboat_routing import navigation as nav
 from sailboat_routing.r1_planner import RouteWaypointPlanner,R1Config
 from sailboat_routing.planner import LocalWaypointPlanner
+from sailboat_routing.r2_planner import Radial500Planner,RelayPlanner,RelayConfig
 from sailboat_routing.wind_readout import RidgeWindReadout
 from sailboat_routing.admission import file_hash
 
@@ -15,7 +16,7 @@ def read(p):return json.loads(Path(p).read_text())
 class Budget:
     def __init__(self,deadline):self.deadline=deadline
     def check(self):
-        if time.time()>self.deadline:raise TimeoutError('R1 shared 12h deadline reached')
+        if time.time()>self.deadline:raise TimeoutError('Shared research deadline reached')
 
 def worker(job):
     start=time.time();cpu_start=time.process_time();out=Path(job['out']);out.mkdir(parents=True,exist_ok=False)
@@ -25,13 +26,15 @@ def worker(job):
     if method=='estimated_local':model=RidgeWindReadout.load(ROOT/'runs/v0_fit_20261002/model.npz',expected_source_identity=admission['source_identity'],expected_dimension=270)
     made=[]
     def factory(chart,unused,mode):
-        planner=RouteWaypointPlanner(chart,R1Config(**job['config']),mode);made.append(planner);return planner
+        kind=job.get('planner_kind','r1')
+        cls,cfg_type={'r1':(RouteWaypointPlanner,R1Config),'radial500':(Radial500Planner,R1Config),'relay':(RelayPlanner,RelayConfig)}[kind]
+        planner=cls(chart,cfg_type(**job['config']),mode);made.append(planner);return planner
     nav.LocalWaypointPlanner=LocalWaypointPlanner if job['variant']=='anchor' else factory
     try:
         row=nav.run_episode(job['scene'],job['suite'],admission,out,Budget(job['deadline']),method=method,model=model)
         row.update(variant=job['variant'],round=job['round'],config=job['config'],distance_m=job['scene'].get('distance_m',1000),cpu_seconds=time.process_time()-cpu_start)
         nav._write_json(out/'row.json',row)
-        if made:nav._write_json(out/'r1_decisions.json',made[0].log)
+        if made:nav._write_json(out/('r1_decisions.json' if job.get('planner_kind','r1')=='r1' else 'r2_decisions.json'),made[0].log)
         nav._write_json(out/'exit.json',{'status':'completed','wall_seconds':time.time()-start,'pid':os.getpid()})
         return row
     except Exception as e:
@@ -46,6 +49,7 @@ def main():
     folder=batch.with_suffix('');folder.mkdir(exist_ok=False)
     sources={str(f.relative_to(ROOT)):file_hash(f) for f in (ROOT/'src/sailboat_routing').glob('*.py')}
     # Preserve exact scientific implementation for each development batch.
+    (folder/'r2_planner.py').write_bytes((ROOT/'src/sailboat_routing/r2_planner.py').read_bytes())
     (folder/'r1_planner.py').write_bytes((ROOT/'src/sailboat_routing/r1_planner.py').read_bytes())
     (folder/'run_r1.py').write_bytes(Path(__file__).read_bytes())
     nav._write_json(folder/'provenance.json',{'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'sources':sources,'command':sys.argv,'parent_pid':os.getpid(),'cpu_workers':args.workers,'threads_per_worker':1,'gpu_hours':0})
