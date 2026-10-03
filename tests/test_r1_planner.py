@@ -29,3 +29,17 @@ class R1Tests(unittest.TestCase):
   chart=StaticMap((-1000,2000,-1000,1000));v=PlannerInput((0,0),0,None,((0,0),(1000,0)),0,None)
   a=RouteWaypointPlanner(chart).plan(v);b=RouteWaypointPlanner(chart,R1Config(history_gain=.5)).plan(v)
   self.assertEqual(a,b)
+
+ def test_active_history_changes_scores_not_candidates(self):
+  chart=StaticMap((-1000,2000,-1000,1000));v=PlannerInput((20,4),0,(500,0),((0,0),(1000,0)),20,None)
+  geom=RouteWaypointPlanner(chart);hist=RouteWaypointPlanner(chart,R1Config(history_gain=.5))
+  for planner in [geom,hist]:
+   planner.history_target=(500,0);planner.previous.extend((float(t),(float(t),.2*t)) for t in range(20))
+  a,b=geom.plan(v),hist.plan(v)
+  self.assertEqual([x.target_xy for x in a.candidates],[x.target_xy for x in b.candidates])
+  self.assertTrue(any(abs(x.total-y.total)>1e-6 for x,y in zip(a.candidates,b.candidates)))
+ def test_history_estimator_resets_without_touching_controller(self):
+  chart=StaticMap((-1000,2000,-1000,1000));planner=RouteWaypointPlanner(chart,R1Config(history_gain=.5))
+  planner.history_target=(500,0);planner.previous.extend((float(t),(float(t),.2*t)) for t in range(20))
+  planner.plan(PlannerInput((20,4),0,(500,100),((0,0),(1000,0)),20,None))
+  self.assertEqual(len(planner.previous),1);self.assertEqual(planner.log[-1]['bias'],0)

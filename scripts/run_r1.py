@@ -18,7 +18,7 @@ class Budget:
         if time.time()>self.deadline:raise TimeoutError('R1 shared 12h deadline reached')
 
 def worker(job):
-    start=time.time();out=Path(job['out']);out.mkdir(parents=True,exist_ok=False)
+    start=time.time();cpu_start=time.process_time();out=Path(job['out']);out.mkdir(parents=True,exist_ok=False)
     nav._write_json(out/'job.json',job)
     admission=read(ROOT/'runs/navigation_admission.json')
     method=job.get('mode','geometry_only');model=None
@@ -29,7 +29,7 @@ def worker(job):
     nav.LocalWaypointPlanner=LocalWaypointPlanner if job['variant']=='anchor' else factory
     try:
         row=nav.run_episode(job['scene'],job['suite'],admission,out,Budget(job['deadline']),method=method,model=model)
-        row.update(variant=job['variant'],round=job['round'],config=job['config'])
+        row.update(variant=job['variant'],round=job['round'],config=job['config'],distance_m=job['scene'].get('distance_m',1000),cpu_seconds=time.process_time()-cpu_start)
         nav._write_json(out/'row.json',row)
         if made:nav._write_json(out/'r1_decisions.json',made[0].log)
         nav._write_json(out/'exit.json',{'status':'completed','wall_seconds':time.time()-start,'pid':os.getpid()})
@@ -48,7 +48,7 @@ def main():
     # Preserve exact scientific implementation for each development batch.
     (folder/'r1_planner.py').write_bytes((ROOT/'src/sailboat_routing/r1_planner.py').read_bytes())
     (folder/'run_r1.py').write_bytes(Path(__file__).read_bytes())
-    nav._write_json(folder/'provenance.json',{'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'sources':sources,'command':sys.argv,'cpu_workers':args.workers,'threads_per_worker':1,'gpu_hours':0})
+    nav._write_json(folder/'provenance.json',{'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),'sources':sources,'command':sys.argv,'parent_pid':os.getpid(),'cpu_workers':args.workers,'threads_per_worker':1,'gpu_hours':0})
     jobs=[]
     for j in manifest['jobs']:
         j=copy.deepcopy(j);j.update(round=manifest['round'],deadline=plan['deadline_epoch'],out=str(folder/(j['scene']['id']+'__'+j['variant'])))

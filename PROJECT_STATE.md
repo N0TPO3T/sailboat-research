@@ -32,8 +32,8 @@
 - 模型在checkpoints、运行产物在runs，Git忽略；已提交来源清单见docs/UPSTREAM_MANIFEST.md、migration_identity.json。完整本地资产位置与校验见docs/DELIVERY.json。
 - docs/validation_summary.json和旧B passed=false保留历史含义，不代表当前准入；本轮未篡改旧结果。
 - 代码/协议/权重改变后重新验收；源码身份和特征schema不匹配时拒绝使用既有读出器。
-- 单CPU数值线程、首轮累计计算预算3600秒，实际消费见runs/computation.jsonl；不启动低层/高层RL、长搜索或后台无人看管任务。
-- 3/5km只有configs/distance_demos.json配置，未运行；动态/COLREGs、天气预报、完整风场重建不在本轮范围。
+- 历史V0预算见runs/computation.jsonl。当前R1授权：12小时/最多8科学轮，至多4个CPU工作进程各单线程、GPU0；普通方法修改/开发调参与连续3/5km已授权，低层仍冻结。预算入口见CURRENT_PLAN.md。
+- R1开始前3/5km仅有配置，尚无连续长程实验证据；当前阶段结果见CURRENT_PLAN.md。动态/COLREGs、外部天气预报不在R1范围。
 - V0.1诊断为当时未改算法的同状态分析，见docs/ep_result/V0_1_DIAGNOSIS.md。
 - V0.2已完成6回合固定0/25m对照：0m逐值复现，25m三方法均未安全到达，预设门槛未通过，18回归未运行。数字、代价与证据统一见docs/V0_2_RESULTS.md；产物runs/v0_2_margin_20261002T142441Z。
 - 原navigation_admission.json仍绑定旧planner；通用旧入口对当前代码会拒绝准入。本轮run_v0_2.py单独验证冻结特征/模型身份和唯一planner变化，不篡改原收据。一次限定同家族review已完成（provisional）；本轮已停止，不自动开展下一实验。
