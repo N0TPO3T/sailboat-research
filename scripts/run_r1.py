@@ -8,7 +8,7 @@ configure_cpu()
 from sailboat_routing import navigation as nav
 from sailboat_routing.r1_planner import RouteWaypointPlanner,R1Config
 from sailboat_routing.planner import LocalWaypointPlanner
-from sailboat_routing.r2_planner import Radial500Planner,RelayPlanner,RelayConfig
+from sailboat_routing.r2_planner import Radial500Planner,ForwardPlanner,RelayPlanner,RelayConfig
 from sailboat_routing.wind_readout import RidgeWindReadout
 from sailboat_routing.admission import file_hash
 
@@ -27,7 +27,7 @@ def worker(job):
     made=[]
     def factory(chart,unused,mode):
         kind=job.get('planner_kind','r1')
-        cls,cfg_type={'r1':(RouteWaypointPlanner,R1Config),'radial500':(Radial500Planner,R1Config),'relay':(RelayPlanner,RelayConfig)}[kind]
+        cls,cfg_type={'r1':(RouteWaypointPlanner,R1Config),'radial500':(Radial500Planner,R1Config),'forward':(ForwardPlanner,R1Config),'relay':(RelayPlanner,RelayConfig)}[kind]
         planner=cls(chart,cfg_type(**job['config']),mode);made.append(planner);return planner
     nav.LocalWaypointPlanner=LocalWaypointPlanner if job['variant']=='anchor' else factory
     try:

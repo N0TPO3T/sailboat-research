@@ -12,6 +12,7 @@ from .metrics import segment_circle_clearance
 from .r1_planner import R1Config
 
 class Radial500Planner:
+    offsets_override=None
     def __init__(self, chart, config=None, mode="geometry_only"):
         self.static_map=chart; self.config=config or R1Config(); self.mode=mode
         self.previous=deque(maxlen=21); self.last_plan=-math.inf; self.last_switch=-math.inf
@@ -55,7 +56,7 @@ class Radial500Planner:
         if valid: targets.append(current)
         for q in route[1:]:
             if (q==goal or distance(p,q)>15) and 0<distance(p,q)<=500 and planned.segment_clear(p,q): targets.append(q)
-        offsets=range(-12,13) if cfg.wide_candidates else (-1,0,1)
+        offsets=self.offsets_override if self.offsets_override is not None else (range(-12,13) if cfg.wide_candidates else (-1,0,1))
         for length in (500.,):
             for k in offsets:
                 angle=desired+k*math.pi/12
@@ -85,6 +86,10 @@ class Radial500Planner:
         self.log.append({"time":t,"margin":margin,"bias":bias,"candidate_count":len(scores),"reason":reason,"target":best.target_xy})
         return PlannerDecision(best.target_xy,tuple(scores),reason,bool(use_wind))
 
+class ForwardPlanner(Radial500Planner):
+    """Route vertices, incumbent and one forward 500m radial candidate."""
+    offsets_override=(0,)
+
 @dataclass(frozen=True)
 class RelayConfig:
     margin: float = 80.0
@@ -92,6 +97,8 @@ class RelayConfig:
     handoff: float = 40.0
     trigger_clearance: float = 20.0
     maximum_distance: float = 550.0
+    prediction_horizon: float = 0.0
+    prediction_guard: float = 40.0
 
 class RelayPlanner:
     """One visible route target, held until handoff or geometric risk.
@@ -99,7 +106,7 @@ class RelayPlanner:
     """
     def __init__(self, chart, config=None, mode="geometry_only"):
         self.static_map=chart; self.config=config or RelayConfig(); self.log=[]
-        self.last_time=-math.inf; self.last_scores=()
+        self.last_time=-math.inf; self.last_scores=(); self.motion=deque(maxlen=11)
         if mode!="geometry_only": raise ValueError("Relay has no wind branch")
 
     def plan(self, v):
@@ -108,15 +115,23 @@ class RelayPlanner:
         self.last_time=v.simulation_time
         p=tuple(map(float,v.position_xy)); goal=v.route[-1]; current=v.current_goal_xy
         chart=self.static_map;cfg=self.config
+        if not self.motion or v.simulation_time>self.motion[-1][0]: self.motion.append((v.simulation_time,p))
         if not chart.point_clear(p): raise NoRouteError("Current position outside original safe map")
         own=segment_circle_clearance(p,p,chart.obstacles)["safety_m"]
         chord=segment_circle_clearance(p,current,chart.obstacles)["safety_m"] if current else -math.inf
         valid=current is not None and distance(p,current)<=cfg.maximum_distance and chart.segment_clear(p,current)
         near=valid and current!=goal and distance(p,current)<=cfg.handoff
         risk=chord<min(cfg.trigger_clearance,max(0.,own-5.))
-        if valid and not near and not risk:
+        predicted_clearance=None;velocity=None;forecast=None
+        if cfg.prediction_horizon>0 and len(self.motion)==11:
+            old_t,old_p=self.motion[0];dt=v.simulation_time-old_t
+            velocity=((p[0]-old_p[0])/dt,(p[1]-old_p[1])/dt)
+            forecast=(p[0]+cfg.prediction_horizon*velocity[0],p[1]+cfg.prediction_horizon*velocity[1])
+            predicted_clearance=segment_circle_clearance(p,forecast,chart.obstacles)["safety_m"]
+        predictive_risk=predicted_clearance is not None and predicted_clearance<cfg.prediction_guard
+        if valid and not near and not risk and not predictive_risk:
             return PlannerDecision(current,self.last_scores,"relay_hold",False)
-        reason="initial" if current is None else "invalid" if not valid else "risk" if risk else "handoff"
+        reason="initial" if current is None else "invalid" if not valid else "risk" if risk else "prediction" if predictive_risk else "handoff"
         endpoint=min(own,segment_circle_clearance(goal,goal,chart.obstacles)["safety_m"])
         margin=min(cfg.margin,max(0.,endpoint-5.))
         planned=replace(chart,obstacles=tuple(replace(o,safety_buffer=o.safety_buffer+margin) for o in chart.obstacles))
@@ -138,5 +153,7 @@ class RelayPlanner:
         self.last_scores=(CandidateScore(target,remaining,0.,0.,0.,remaining),)
         self.log.append({"time":v.simulation_time,"position":p,"old_target":current,
             "target":target,"reason":reason,"margin":margin,"fallback":fallback,
-            "route":route,"own_clearance":own,"old_chord_clearance":chord})
+            "route":route,"own_clearance":own,"old_chord_clearance":chord,
+            "geometric_risk":risk,"predictive_risk":predictive_risk,
+            "prediction_clearance":predicted_clearance,"velocity":velocity,"forecast":forecast})
         return PlannerDecision(target,self.last_scores,reason,False)
