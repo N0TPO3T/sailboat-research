@@ -1,0 +1,69 @@
+{
+  "main": "relay_m160",
+  "methods": {
+    "geom80": {
+      "planner_kind": "r1",
+      "config": {
+        "margin": 80.0,
+        "period": 10.0,
+        "hold": 20.0,
+        "improvement": 15.0,
+        "history_gain": 0.0,
+        "wind_weight": 0.0,
+        "wide_candidates": true
+      }
+    },
+    "relay_m120": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 120.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "relay_m160": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "relay_m0": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 0.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "r1_replan60": {
+      "planner_kind": "risk",
+      "config": {
+        "base": "r1",
+        "margin": 80.0,
+        "threshold": 60.0,
+        "closing_gate": false,
+        "closing_speed": 0.05,
+        "cooldown": 20.0,
+        "response": "replan_only",
+        "relay_handoff": 100.0,
+        "relay_trigger": 80.0,
+        "risk_lookahead": 500.0
+      }
+    }
+  },
+  "freeze_evidence": "runs/r3_ccdc_20261003T121146Z/method_freeze.json"
+}

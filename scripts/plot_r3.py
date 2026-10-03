@@ -13,6 +13,7 @@ def save(fig,out,name):
 def additions(folder,main,simple,out,case=None,stage="frozen",case_name="intervention_case"):
     out.mkdir(parents=True,exist_ok=True)
     rows=json.loads((folder/'analysis_rows.json').read_text());variants=list(dict.fromkeys(['geom80',simple,main]+sorted({r['variant'] for r in rows})))
+    method_colors={v:base.PALETTE[i%len(base.PALETTE)] for i,v in enumerate(variants)}
     fig,axes=plt.subplots(1,2,figsize=(12,4.6));cats=['safe_arrival','buffer_violation','entity_collision','timeout','other']
     colors=['#009E73','#D55E00','#882255','#E69F00','#777777']
     mapping={}
@@ -76,7 +77,7 @@ def additions(folder,main,simple,out,case=None,stage="frozen",case_name="interve
     if case:
         c=json.loads(Path(case).read_text())
         if c:
-            fig,axes=plt.subplots(2,2,figsize=(12,9));st=c['selected_at'];ap=c['applied_at'];p=np.array(c['common_input']['position_xy']);cs=['#0072B2','#D55E00'];details=[];window_clear=[];trace_rows=[]
+            fig,axes=plt.subplots(2,2,figsize=(12,9));st=c['selected_at'];ap=c['applied_at'];p=np.array(c['common_input']['position_xy']);cs=[method_colors.get(r['variant'],'#CC79A7') for r in c['episode_rows']];details=[];window_clear=[];trace_rows=[]
             for k,row in enumerate(c['episode_rows']):
                 raw=ROOT/row['evidence'];d=json.loads(raw.read_text());j=json.loads(raw.with_name('job.json').read_text());tr=d['trajectory'];xy=np.array([x['raw'][:2] for x in tr]);tt=np.array([x['time'] for x in tr]);label=row['variant']+' | '+outcome(row)+', '+str(int(row['time_s']))+' s'
                 axes[0,0].plot(xy[:,0],xy[:,1],c=cs[k],lw=1.4,label=label)
@@ -101,7 +102,7 @@ def additions(folder,main,simple,out,case=None,stage="frozen",case_name="interve
             axes[1,0].set_ylabel('Distance to final goal (m)');axes[1,0].set_title('Complete episode; each curve ends at actual termination')
             axes[1,1].axvline(st,c='gray',ls=':');axes[1,1].set_yticks([0,1],[r['variant'] for r in c['episode_rows']]);axes[1,1].set_xlim(max(0,st-25),st+35);axes[1,1].set_ylim(-.5,1.5);axes[1,1].set_title('Actual target applications (selected t to applied t+1)')
             for a in [axes[0,1],axes[1,0],axes[1,1]]:a.set_xlabel('Physical time (s)');a.grid(alpha=.2)
-            axes[0,1].legend(fontsize=8);axes[1,0].legend(fontsize=8);fig.suptitle(c['scene_id']+' | First target divergence; full outcomes retained');fig.tight_layout();save(fig,out,case_name)
+            axes[0,1].legend(fontsize=8);axes[1,0].legend(fontsize=8);case_scope='Frozen-set posthoc' if stage=='frozen' and c['scene_id'] in {r['scene_id'] for r in rows} else 'Seen-development diagnostic';fig.suptitle(case_scope+' | '+c['scene_id']+'\nFirst target divergence; full outcomes retained');fig.tight_layout();save(fig,out,case_name)
             (out/(case_name+'_evidence.json')).write_text(json.dumps(dict(case=c,plot_details=details),indent=2))
             with (out/(case_name+'_trajectories.csv')).open('w',newline='') as f:
                 w=csv.DictWriter(f,fieldnames=list(trace_rows[0]));w.writeheader();w.writerows(trace_rows)
