@@ -1,6 +1,6 @@
 """R5 uses existing complete-outcome and paired common-success definitions."""
 from pathlib import Path
-import json,sys,argparse,itertools
+import json,sys,argparse,itertools,math
 from analyze_r1 import summary,validate_coverage
 from analyze_r2 import enrich,paired_detail,write_csv
 ROOT=Path(__file__).resolve().parents[1]
@@ -27,7 +27,10 @@ def analyze(folder,audit=False):
             exits=sum(x['event']=='exit' for x in logs),
             no_candidate=sum(x['event']=='no_candidate' for x in logs),
             proposed_targets=len(targets),applied_recovery_targets=len(actual),
+            circle_interior_proposals=sum(math.isclose(abs(x['candidates'][1]['angle_rad']-x['candidates'][0]['angle_rad']),math.pi,abs_tol=1e-10) for x in targets),
+            circle_interior_applied=sum(math.isclose(abs(x['candidates'][1]['angle_rad']-x['candidates'][0]['angle_rad']),math.pi,abs_tol=1e-10) for x in actual),
             first_applied=actual[0]['time']+1 if actual else None,
+            initial_circle_interior=sum(x['time']==0 and math.isclose(abs(x['candidates'][1]['angle_rad']-x['candidates'][0]['angle_rad']),math.pi,abs_tol=1e-10) for x in targets),
             initial_recovery=any(x['time']==0 for x in targets),
             success=row['success'],evidence=row['evidence']))
     report={}
@@ -92,19 +95,39 @@ def frozen_details(folder,main):
         for v in variants:
             if v=='relay_m160':continue
             d=read(ROOT/lookup[sid,v]['evidence']);tr=d['trajectory'];same=tr==bd
+            path_equal=[(x['time'],x['raw'][:2]) for x in tr]==[(x['time'],x['raw'][:2]) for x in bd]
+            action_equal=[(x['time'],x.get('physical_action')) for x in tr]==[(x['time'],x.get('physical_action')) for x in bd]
             first=next((i for i,(a,b) in enumerate(zip(tr,bd)) if a!=b),None)
-            behavior.append(dict(scene_id=sid,variant=v,full_trajectory_equal=same,first_trace_difference_time=tr[first]['time'] if first is not None else None,layout=lookup[sid,v]['layout'],family=lookup[sid,v]['evaluation_family']))
+            behavior.append(dict(scene_id=sid,variant=v,full_trajectory_equal=same,physical_path_equal=path_equal,physical_action_equal=action_equal,first_trace_difference_time=tr[first]['time'] if first is not None else None,layout=lookup[sid,v]['layout'],family=lookup[sid,v]['evaluation_family']))
     for family in ['routine','risk']:
         rr=[r for r in rows if r['evaluation_family']==family]
         fields=['distance_m','layout','profile'] if family=='routine' else ['initial_clearance_stratum_m','obstacle_bearing_stratum_deg','profile']
         strata[family]={field:{str(value):summary([r for r in rr if r.get(field)==value]) for value in sorted({r.get(field) for r in rr})} for field in fields}
         effects[family]=dict(summary=summary(rr),comparisons={v:paired_detail(rr,v,main) for v in variants if v!=main})
+    distance_pairs={str(d):{v:paired_detail([r for r in rows if r['evaluation_family']=='routine' and r['distance_m']==d],v,main) for v in variants if v!=main} for d in sorted({r['distance_m'] for r in rows if r['evaluation_family']=='routine'})}
+    (folder/'distance_comparisons.json').write_text(json.dumps(distance_pairs,indent=2))
+    behavior_map={(x['scene_id'],x['variant']):x for x in behavior}
+    intervention_effects=[]
+    for family in ['routine','risk']:
+        recs=[x for x in mm if x['variant']==main and x['family']==family]
+        counts=dict(episodes=len(recs),entered=0,physical_path_changed=0,physical_action_changed=0,safe_gain=0,safe_loss=0,common_safe_slower=0,common_safe_faster=0,common_safe_equal_time=0,both_failed=0)
+        for m in recs:
+            sid=m['scene_id'];a=lookup[sid,'relay_m160'];b=lookup[sid,main];v=behavior_map[sid,main]
+            counts['entered']+=m['entries']>0
+            counts['physical_path_changed']+=not v['physical_path_equal'];counts['physical_action_changed']+=not v['physical_action_equal']
+            if b['success'] and not a['success']:counts['safe_gain']+=1
+            elif a['success'] and not b['success']:counts['safe_loss']+=1
+            elif a['success'] and b['success']:
+                key='common_safe_slower' if b['time_s']>a['time_s'] else 'common_safe_faster' if b['time_s']<a['time_s'] else 'common_safe_equal_time';counts[key]+=1
+            else:counts['both_failed']+=1
+        intervention_effects.append(dict(family=family,**counts))
+    (folder/'intervention_effects.json').write_text(json.dumps(dict(reference='relay_m160',main=main,counts=intervention_effects,note='Complete paired episodes; not counterfactual labels of necessary or false alarms. Entry and physical-change counts overlap outcome classes.'),indent=2))
     mechanics={}
     for v in [x for x in variants if x.startswith('tangent')]:
         mechanics[v]={}
         for family in ['routine','risk']:
             recs=[x for x in mm if x['variant']==v and x['family']==family]
-            mechanics[v][family]=dict(episodes=len(recs),entered_episodes=sum(x['entries']>0 for x in recs),initial_recovery_episodes=sum(x['initial_recovery'] for x in recs),in_mission_recovery_target_episodes=sum(x['applied_recovery_targets']>0 for x in recs),recovery_targets_applied=sum(x['applied_recovery_targets'] for x in recs),entries=sum(x['entries'] for x in recs),exits=sum(x['exits'] for x in recs),no_candidate=sum(x['no_candidate'] for x in recs),identical_to_relay160=sum(x['variant']==v and x['family']==family and x['full_trajectory_equal'] for x in behavior))
+            mechanics[v][family]=dict(episodes=len(recs),proposed_recovery_targets=sum(x['proposed_targets'] for x in recs),circle_interior_proposals=sum(x['circle_interior_proposals'] for x in recs),initial_circle_interior=sum(x['initial_circle_interior'] for x in recs),entered_episodes=sum(x['entries']>0 for x in recs),initial_recovery_episodes=sum(x['initial_recovery'] for x in recs),in_mission_recovery_target_episodes=sum(x['applied_recovery_targets']>0 for x in recs),recovery_targets_applied=sum(x['applied_recovery_targets'] for x in recs),entries=sum(x['entries'] for x in recs),exits=sum(x['exits'] for x in recs),no_candidate=sum(x['no_candidate'] for x in recs),circle_interior_applied=sum(x['circle_interior_applied'] for x in recs),identical_to_relay160=sum(x['variant']==v and x['family']==family and x['full_trajectory_equal'] for x in behavior))
     write_csv(folder/'behavior_comparisons.csv',behavior)
     (folder/'behavior_comparisons.json').write_text(json.dumps(behavior,indent=2))
     (folder/'stratified_results.json').write_text(json.dumps(strata,indent=2))

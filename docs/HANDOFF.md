@@ -45,3 +45,9 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 科学冻结 3c5e44f3bd4186b4f5a3ec012b1a8d9fd728d617；configs/r4_methods.json；全部证据 runs/r4_method_20261004T034532Z/，其中 raw_index.csv 索引626回合，final/raw_index.csv 索引冻结360回合。
 - 五张关键真实图、两张补充图和离线图集见 run/figures/；R4_METHOD_preview.zip 为含选中作图原始日志的轻量包。完整物理复跑依赖服务器现有资产；新运行另用输出目录及预算。
 - 一次有限审查完成，same-family/provisional；报告记录负结果与冻结前方案变更。4271/5271现为已见种子，无运行中实验；R3英文稿未改，不自动push或追加实验。
+
+## R5 完成（2026-10-04）
+- 先读 [R5中文方法说明](R5_METHOD_NOTE.md)，再读 [R5研究报告](R5_RESEARCH_REPORT.md)。保留文献恢复方向的位置接口候选tangent_exit90；风险工况有条件性收益，默认参考仍Relay160，不能忽略Relay120的优势与新方法代价。
+- 科学冻结822817495ac9ddae06a2743a021b8aa0d160f2d7；configs/r5_methods.json；run为runs/r5_literature_20261004T080700Z。796新回合已结束，432冻结回合复算完成，有限审查为same-family/provisional，无追加实验。
+- 五张关键图＋开发补充图、逐点数据、可运行配置/源码及原始索引在R5_METHOD_preview.zip与run/preview/gallery.html；包外同步校验见R5_DELIVERY.json。本机无需模型即可重绘，完整物理复跑仍依赖原服务器资产及新预算。
+- 6271/7371和risk6101均已见；R3初稿与旧结果保留。本地旧修改保留，只fetch、不push；本轮关闭，未来建议未启动。

@@ -54,3 +54,9 @@ Tags: waypoint, commitment, timing, paired-evidence
 Conclusion: 目标提出、生效、后续普通管理与新增保持规则应分别归因；保持窗口不等于目标实际寿命，完整策略获益也不等于保持有独立收益。
 Evidence: docs/R4_RESEARCH_REPORT.md；runs/r4_method_20261004T034532Z/final/behavior_equivalence.json、final/adverse_case001.json及confirmation原始记录。开发局部保持有效，但新实例主方法和无保持全轨迹一致；一个误干预案例中普通基线随后还自行改点6次。
 Implication: 研究保持机制必须统计真正被保持规则改变的执行，区分规划调用、提案、下一步应用和后续管理；不能把少量新增干预之外的基线成功归因于新模块。
+
+## 航向监督迁移为位置目标必须重定义执行协议
+Tags: literature-adaptation, heading-reference, clipping, timing
+Conclusion: 原文的绕行侧承诺不等于世界坐标目标保持。R5的目标更新周期同时阻止退出检查；原切线公式在规划圆内截断为径向垂直方向，多数实际提案落在此分支。不能只按模块名称归因或移植其他控制器的安全性质。
+Evidence: docs/R5_METHOD_NOTE.md；runs/r5_literature_20261004T080700Z/literature/R5_WFRS_SOURCE_READOUT.md、final/mechanism_summary.json、frozen_exit_ablation_cases.json；src/sailboat_routing/r5_planner.py。
+Implication: 文献接入时先明确参考量、实际生效时序、公式分支和管理器所有状态更新点，再做等接口比较；整体收益不自动识别方向、长度或保持的独立贡献。

@@ -46,7 +46,7 @@ def trace(ax,d,color,label,ls='-'):
 def make(run,which,main_override=None):
     out=run/'figures';out.mkdir(exist_ok=True);main=main_override or read(run/'freeze.json')['main_variant']
     rows=read(run/('development' if which=='development' else 'final')/'analysis_rows.json');lookup={(r['scene_id'],r['variant']):r for r in rows}
-    variants=['relay_m120','relay_m160',main];labels={'relay_m120':'Relay120','relay_m160':'Relay160','tangent_minimal':'Source-scale / 10 s','tangent_scaled':'90 m / 10 s','tangent_period60':'60 s / exit135','tangent_exit90':'60 s / exit90','tangent_fixed90':'Fixed target / 90 m',main:'Selected tangent'}
+    variants=['relay_m120','relay_m160',main];labels={'relay_m120':'Relay120','relay_m160':'Relay160','tangent_minimal':'Source-scale / 10 s','tangent_scaled':'90 m / 10 s','tangent_period60':'60 s / exit135','tangent_exit90':'60 s / exit90','tangent_fixed90':'Fixed target / 90 m',main:'Selected recovery'}
     selpath=out/'selection.json';selection=read(selpath) if selpath.exists() else {}
     def get(s,v):return compact(run,lookup[s,v])
     def family(s):return lookup[s,main]['evaluation_family']
@@ -81,7 +81,7 @@ def make(run,which,main_override=None):
             chart(ax,get(s,main))
             for j,v in enumerate(variants):trace(ax,get(s,v),COL[j],labels[v],ls='--' if j==2 else '-')
             ax.set_title(s,fontsize=9);ax.legend(fontsize=7,loc='best')
-        fig.text(.5,-.025,'Complete actual tracks. Grey: obstacle body; dashed circles: body + 60 m; cross: first measured intrusion; star: goal.',ha='center',fontsize=9);save(fig,out,'complete_1_3_5km')
+        fig.text(.5,-.025,'Complete actual tracks. Grey: obstacle body; dashed circles: body + 60 m; cross: endpoint of first violating 1 s segment; star: goal.',ha='center',fontsize=9);save(fig,out,'complete_1_3_5km')
     elif which=='intervention':
         mm=read(run/'final/mechanisms.json');changed={r['scene_id'] for r in mm if r['variant']==main and (r['applied_recovery_targets'] or r['initial_recovery'])}
         gains=[s for s in risk if lookup[s,main]['success'] and not lookup[s,'relay_m160']['success']]
@@ -118,9 +118,24 @@ def make(run,which,main_override=None):
                 axes[k,1].plot([x['time'] for x in d['points']],[x['goal_distance'] for x in d['points']],c=COL[j],label=labels[v])
             axes[k,0].legend(fontsize=7);axes[k,0].set_title(s,fontsize=9);axes[k,1].set_title(f'{family(s)}; main minus Relay160: {delta(s):+.0f} s');axes[k,1].set_xlabel('Physical time (s)');axes[k,1].set_ylabel('Distance to final goal (m)');axes[k,1].legend(fontsize=8)
         save(fig,out,'gain_and_cost')
+    elif which=='failure':
+        bad=[s for s in ids if lookup[s,main]['min_safety_clearance_m'] is not None and lookup[s,main]['min_safety_clearance_m']<=0 and lookup[s,'relay_m160']['min_safety_clearance_m'] is not None and lookup[s,'relay_m160']['min_safety_clearance_m']<=0]
+        if not bad:raise ValueError('No shared buffer-failure case; do not fabricate a failure plot')
+        sid=bad[0];selection['failure']=dict(scene_id=sid,rule='Additional negative-case illustration after frozen outcomes: first sorted shared buffer failure of primary and Relay160. Does not change evaluation or original figure selections.')
+        fig,axes=plt.subplots(1,2,figsize=(12,5.2));dm=get(sid,main);chart(axes[0],dm)
+        hit=next(x for x in dm['points'] if x['clearance'] is not None and x['clearance']<=0)
+        horizon=max(lookup[sid,main]['time_s'],lookup[sid,'relay_m160']['time_s'])+120
+        for j,v in enumerate(variants):
+            d=get(sid,v);trace(axes[0],d,COL[j],labels[v],ls='--' if j==2 else '-')
+            pts=[x for x in d['points'] if x['time']<=horizon];axes[1].plot([x['time'] for x in pts],[x['clearance'] for x in pts],c=COL[j],label=labels[v])
+        axes[0].set_aspect('equal',adjustable='box');axes[0].set_xlim(hit['x']-450,hit['x']+450);axes[0].set_ylim(hit['y']-450,hit['y']+450);axes[0].legend(fontsize=7)
+        axes[1].axhline(0,c='black',ls='--');axes[1].set_xlim(0,horizon);axes[1].set_xlabel('Physical time (s)');axes[1].set_ylabel('Measured step safety clearance (m)');axes[1].legend(fontsize=8)
+        fig.suptitle(sid+' — recovery did not prevent the buffer breach',fontsize=11)
+        fig.text(.5,-.025,'Local actual-track crop; clearance shown through primary/reference failure + 120 s. Legends give full mission outcomes; no forecast.',ha='center',fontsize=8);save(fig,out,'shared_failure')
     elif which=='development':
         dev=read(run/'development/analysis_rows.json');ll={(r['scene_id'],r['variant']):r for r in dev};vv=['relay_m160','tangent_scaled','tangent_fixed90',main];vv=list(dict.fromkeys(vv));nn={'relay_m160':'Relay160','tangent_scaled':'Moving reference / 10 s','tangent_fixed90':'Fixed position',main:'Candidate: '+main.replace('tangent_','')}
         fig,axes=plt.subplots(2,2,figsize=(12,10));chosen=['s2271_046_staggered_fast_1000','s3271_037_channel_stable_1000']
+        selection['development']=dict(scene_ids=chosen,variants=vv,rule='Seen cases chosen after round2 for opposite effects of moving/fixed references; not frozen-test prevalence.')
         for k,s in enumerate(chosen):
             chart(axes[k,0],compact(run,ll[s,vv[0]]))
             for j,v in enumerate(vv):
@@ -133,4 +148,4 @@ def make(run,which,main_override=None):
     (run/'gallery.html').write_text('<!doctype html><html><meta charset="utf-8"><title>R5 real trajectory atlas</title><style>body{max-width:1500px;margin:auto;font:17px sans-serif;padding:24px}img{width:100%}section{margin:35px 0}</style><h1>R5 actual closed-loop evidence</h1><p>Frozen routine/risk tasks reported separately. Illustrative cases selected by the recorded rule; not population frequencies. Grey bodies and original +60 m safety boundaries. No simulated forecast is drawn as actual motion.</p>'+cards+'</html>',encoding='utf-8')
 
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('run');ap.add_argument('--main');ap.add_argument('--figure',required=True,choices=['statistics','trajectories','intervention','tradeoff','development']);a=ap.parse_args();make(Path(a.run).resolve(),a.figure,a.main)
+    ap=argparse.ArgumentParser();ap.add_argument('run');ap.add_argument('--main');ap.add_argument('--figure',required=True,choices=['statistics','trajectories','intervention','tradeoff','development','failure']);a=ap.parse_args();make(Path(a.run).resolve(),a.figure,a.main)

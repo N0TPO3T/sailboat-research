@@ -70,3 +70,12 @@
 - 一次有限 ARIS 主张—证据审查完成，yes仅针对收窄结论，same-family/provisional；正式独立完整性审计不可用。原始评语及边界见 run/review-stage/CLAIMS_FROM_RESULTS.md。
 - seed4271/5271 已见，不能复用为未见测试。原 final_protocol 的旧方法段保留，冻结前方案变更说明见 run/protocol_reconciliation.md；没有根据新实例重调参数。
 - R3英文稿和旧结果保留；轻量预览含作图样本与源码，不含全量控制日志、权重或环境。本地旧工作树和未提交修改保留，使用预览内冻结源码或服务器入口；不自动 push。
+
+## R5 文献接入与应用验证（2026-10-04）
+- 首要入口 docs/R5_METHOD_NOTE.md，完整对照/退化/原始索引见 docs/R5_RESEARCH_REPORT.md；运行 runs/r5_literature_20261004T080700Z/。采用Jambak等2026恢复方向与侧承诺的部分位置接口适配，不是完整WF-RS复现或安全理论。
+- 科学冻结822817495ac9ddae06a2743a021b8aa0d160f2d7；配置configs/r5_methods.json，主研究候选tangent_exit90；默认参考仍Relay160，Relay120与固定位置强对照保留。低层、真实安全判据、无直接风输入及t→t+1时序未变。
+- 六轮、796新回合全部结束，432冻结回合原始复算/配对/时序/源码核对通过；4单线程CPU进程上限、GPU0。资源及原12小时预算见run/resources.json、plan.json；无运行中实验，不自动扩展。
+- 证据支持本批预定义风险工况中的条件性应用价值；常规没有相对160新增安全完成，相对120仍有安全损失和效率代价。多数恢复提案使用圆内截断的径向垂直方向；不能称真实切线或各组件普遍有效。数值分母由正式报告维护。
+- 一次有限ARIS审查已完成，yes只针对收窄描述性结论；same-family/provisional，独立完整性审计不可用。原始评语和统计单位修正见run/review-stage/，不代表投稿充分性认证。
+- seed6271/7371及开发risk6101现已见。五张关键真实图、一张开发补充图、逐点数据、离线gallery.html、冻结源码归档和索引在R5_METHOD_preview.zip；传输与校验以docs/R5_DELIVERY.json包外收据为准，不是全量日志/资产备份。
+- R3初稿不变，仅paper/ccdc/R5_METHOD_UPDATE.md提供更新建议。本地旧工作树/修改保留，只fetch及新增产物，不push。下一轮机制隔离建议未实施。
