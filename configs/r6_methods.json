@@ -1,0 +1,175 @@
+{
+  "status": "development_not_final",
+  "scope": "R6 unrestricted controller/interface research within current information/physics/evaluation",
+  "methods": {
+    "legacy": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "legacy"
+      },
+      "mode": "geometry_only"
+    },
+    "window_train10": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "window",
+        "alignment": "training",
+        "window": 10
+      },
+      "mode": "geometry_only"
+    },
+    "window_past10": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "window",
+        "alignment": "past",
+        "window": 10
+      },
+      "mode": "geometry_only"
+    },
+    "reset_switch": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "reset"
+      },
+      "mode": "geometry_only"
+    },
+    "fc14": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "fc"
+      },
+      "mode": "geometry_only"
+    },
+    "obstacle18": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "obstacle"
+      },
+      "mode": "geometry_only"
+    },
+    "obstacle18_none160": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "obstacle",
+        "obstacle_input": "none"
+      },
+      "mode": "geometry_only"
+    },
+    "obstacle18_boundary160": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "obstacle",
+        "obstacle_input": "boundary40"
+      },
+      "mode": "geometry_only"
+    },
+    "obstacle18_boundary120": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 120,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "obstacle",
+        "obstacle_input": "boundary40"
+      },
+      "mode": "geometry_only"
+    },
+    "window_train10_m120": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 120,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      },
+      "controller": {
+        "kind": "window",
+        "alignment": "training",
+        "window": 10
+      },
+      "mode": "geometry_only"
+    }
+  }
+}

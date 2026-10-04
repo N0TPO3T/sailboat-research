@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- 目标：已知完整静态海图、无外部天气预报或直接风传感器，以冻结局部SAC-LSTM验证未知风场下可执行的连续航迹点选择。R1已完成合成1/3/5km评估，结论不外推至实船或其他控制器。
+- 当前目标（R6新授权）：完整静态地图、无直接风观测的连续帆船航行；允许研究低层、模型输入、记忆、目标时序及高层。V0—R5冻结低层是历史阶段条件，不再限制R6。历史结果保持其原条件与结论。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
@@ -11,7 +11,7 @@
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
 
 ## 实现与协议
-- 当前连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。
+- V0—R5参考连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。
 - 新集成协议：configs/navigation_contract.json；无额外sensor/actuator噪声，关闭dropout；原A/B用Dryden，新navigation改用私有SyntheticWindField，须单独验证。
 - third_party/senior保存原样最小继承快照；runtime.py加载资产，continuous.py维护物理连续，frames.py负责刚性坐标与因果记忆重编码。
 - navigation.py已写真实运行链：每控制步一次Actor决策，同前向旁路270维特征，高层t选点在t+1应用。已由真实闭环与旁路非干扰准入验证。
@@ -79,3 +79,7 @@
 - 一次有限ARIS审查已完成，yes只针对收窄描述性结论；same-family/provisional，独立完整性审计不可用。原始评语和统计单位修正见run/review-stage/，不代表投稿充分性认证。
 - seed6271/7371及开发risk6101现已见。五张关键真实图、一张开发补充图、逐点数据、离线gallery.html、冻结源码归档和索引在R5_METHOD_preview.zip；传输与校验以docs/R5_DELIVERY.json包外收据为准，不是全量日志/资产备份。
 - R3初稿不变，仅paper/ccdc/R5_METHOD_UPDATE.md提供更新建议。本地旧工作树/修改保留，只fetch及新增产物，不push。下一轮机制隔离建议未实施。
+
+## R6 active authority
+- R6 supersedes V0-R5 stage restrictions: low-level weights/architecture/checkpoints (including 18D), normalization, causal memory and goal application timing are research variables. Preserve original assets/results, upstream read-only, causal deployment information, physical constraints and original evaluation. No device access inferred from idle GPU. Current authority: docs/prompt/SailBoatRL_R6_ARIS_Research_Reset.md and CURRENT_PLAN.md.
+- Recovery: runs/r6_reset_20261004T115808Z/plan.json；24h/4CPU，GPU需明确分配，至多1张/12GPUh。

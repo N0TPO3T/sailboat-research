@@ -51,3 +51,6 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 科学冻结822817495ac9ddae06a2743a021b8aa0d160f2d7；configs/r5_methods.json；run为runs/r5_literature_20261004T080700Z。796新回合已结束，432冻结回合复算完成，有限审查为same-family/provisional，无追加实验。
 - 五张关键图＋开发补充图、逐点数据、可运行配置/源码及原始索引在R5_METHOD_preview.zip与run/preview/gallery.html；包外同步校验见R5_DELIVERY.json。本机无需模型即可重绘，完整物理复跑仍依赖原服务器资产及新预算。
 - 6271/7371和risk6101均已见；R3初稿与旧结果保留。本地旧修改保留，只fetch、不push；本轮关闭，未来建议未启动。
+
+## R6 新研究授权
+旧冻结低层、只改高层、排除18D及固定记忆/时序的阶段条件已撤销。当前有效范围、预算及恢复入口仅见 CURRENT_PLAN.md 和 runs/r6_reset_20261004T115808Z/plan.json；历史结论不改写。GPU分配待确认，CPU核验继续。

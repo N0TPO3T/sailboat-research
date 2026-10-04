@@ -4,9 +4,9 @@
 
 ## 固定目标统计不能直接接世界坐标远目标
 **Tags:** normalization, waypoint, frame, recurrent-memory
-**Conclusion** 已核查14D和18D资产的目标坐标统计均固定于[500,0]且方差为0；直接输入世界系长距离目标会破坏输入语义。刚性局部坐标变更还需一致重算进度及因果历史，不能只改终点或清空记忆。
+**Conclusion** 已核查14D和18D资产的目标坐标统计均固定于[500,0]且方差为0；直接输入世界系长距离目标会破坏输入语义。在原冻结接口中，刚性局部坐标变更需一致重算进度及因果历史，不能只改终点就宣称等价。R6允许把有限窗口、重置或持续状态作为显式算法变量检验；该历史经验不构成禁止。
 **Evidence** docs/migration_identity.json、docs/obstacle_candidate_identity.json、src/sailboat_routing/frames.py、tests/test_frames.py；具体迁移契约见docs/FRAME_PROTOCOL.md。
-**Implication** 冻结统计并验证目标/记忆适配；换新资产时重新检查，不把该结论泛化到所有模型。
+**Implication** 使用旧资产时验证统计与接口语义；R6可配套改变或训练归一化/记忆协议，不宣称新协议与旧协议等价。
 
 ## deterministic动作不等于关闭dropout
 **Tags:** obstacle-candidate, dropout, inference, reproducibility

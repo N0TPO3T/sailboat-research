@@ -1,0 +1,212 @@
+{
+  "assets": [
+    {
+      "source": "/home/ot/Students/hs/sailboat-research/model/sac_s14nowind_buf1e6_seed100_actor7200.pth",
+      "target": "checkpoints/r6_original/sac_s14nowind_buf1e6_seed100_actor7200.pth",
+      "sha256": "7ce53df5a0800e26521b96b7f3cd1bf605c940f091832d6449602838e9977a82",
+      "keys": {
+        "fc.0.weight": [
+          1024,
+          14
+        ],
+        "fc.0.bias": [
+          1024
+        ],
+        "fc.3.weight": [
+          512,
+          1024
+        ],
+        "fc.3.bias": [
+          512
+        ],
+        "fc.6.weight": [
+          256,
+          512
+        ],
+        "fc.6.bias": [
+          256
+        ],
+        "mu_layer.weight": [
+          2,
+          256
+        ],
+        "mu_layer.bias": [
+          2
+        ],
+        "log_std_layer.weight": [
+          2,
+          256
+        ],
+        "log_std_layer.bias": [
+          2
+        ]
+      }
+    },
+    {
+      "source": "/home/ot/Students/hs/sailboat-research/model/sac_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "target": "checkpoints/r6_original/sac_s14nowind_buf1e6_seed100_normalizer7200.pth",
+      "sha256": "2722c9645cbd257e295ea92569cd07c4262092d652574bea20accf0ce1557f46",
+      "keys": {
+        "mean": [
+          14
+        ],
+        "var": [
+          14
+        ],
+        "count": "int"
+      }
+    },
+    {
+      "source": "/home/ot/Students/hs/sailboat-research/model/saclstm_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "target": "checkpoints/r6_original/saclstm_s14nowind_buf1e6_seed100_q_critic7200.pth",
+      "sha256": "5ea605820e97b6e87f408b11b17a4cdb8d038b0abf937e4183298f0e277f9a61",
+      "keys": {
+        "fc_input_q1.0.weight": [
+          256,
+          16
+        ],
+        "fc_input_q1.0.bias": [
+          256
+        ],
+        "lstm_q1.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q1.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_q1.bias_ih_l0": [
+          1024
+        ],
+        "lstm_q1.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln_q1.weight": [
+          256
+        ],
+        "lstm_ln_q1.bias": [
+          256
+        ],
+        "current_sa_fc_q1.0.weight": [
+          256,
+          16
+        ],
+        "current_sa_fc_q1.0.bias": [
+          256
+        ],
+        "final_fc_q1.0.weight": [
+          256,
+          512
+        ],
+        "final_fc_q1.0.bias": [
+          256
+        ],
+        "Q_1.weight": [
+          1,
+          256
+        ],
+        "Q_1.bias": [
+          1
+        ],
+        "fc_input_q2.0.weight": [
+          256,
+          16
+        ],
+        "fc_input_q2.0.bias": [
+          256
+        ],
+        "lstm_q2.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm_q2.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm_q2.bias_ih_l0": [
+          1024
+        ],
+        "lstm_q2.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln_q2.weight": [
+          256
+        ],
+        "lstm_ln_q2.bias": [
+          256
+        ],
+        "current_sa_fc_q2.0.weight": [
+          256,
+          16
+        ],
+        "current_sa_fc_q2.0.bias": [
+          256
+        ],
+        "final_fc_q2.0.weight": [
+          128,
+          512
+        ],
+        "final_fc_q2.0.bias": [
+          128
+        ],
+        "Q_2.weight": [
+          1,
+          128
+        ],
+        "Q_2.bias": [
+          1
+        ]
+      }
+    },
+    {
+      "source": "/home/ot/Students/hs/sailboat-research/model/saclstm_s14nowind_buf1e6_seed100_training_stats_7200.pth",
+      "target": "checkpoints/r6_original/saclstm_s14nowind_buf1e6_seed100_training_stats_7200.pth",
+      "sha256": "1bffc8c28f52c5cc907c1ff11946ac45814bee4e0c689cc6e0dcd2690e06f75b",
+      "keys": {
+        "q_loss_history": "list",
+        "a_loss_history": "list",
+        "alpha_loss_history": "list",
+        "total_steps": "int",
+        "current_alpha": "float"
+      }
+    },
+    {
+      "source": "/home/ot/Students/hs/sailboat-research/sailboat_RL/PART4/SAC/utils_fc.py",
+      "target": "third_party/r6_reference/utils_fc.py",
+      "sha256": "cfd4c2b9a14d477cc8e68f32f070a2323992b23d6be870b00254bee26d9dbf39"
+    },
+    {
+      "target": "checkpoints/actor.pth",
+      "sha256": "c8cc1bc335c5bd4bfeed9100f5903e6d2849e35db9da3ea1a035fbbbe6f9e739",
+      "bytes": 2675522,
+      "source": "Existing inherited project asset; historical identities in docs/migration_identity.json or docs/obstacle_candidate_identity.json"
+    },
+    {
+      "target": "checkpoints/normalizer.pth",
+      "sha256": "1de337a2b66452554f691d23d9a2fc4d622970c9b94426349543b0f8f22d3097",
+      "bytes": 1928,
+      "source": "Existing inherited project asset; historical identities in docs/migration_identity.json or docs/obstacle_candidate_identity.json"
+    },
+    {
+      "target": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+      "bytes": 3475215,
+      "source": "Existing inherited project asset; historical identities in docs/migration_identity.json or docs/obstacle_candidate_identity.json"
+    },
+    {
+      "target": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "sha256": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6",
+      "bytes": 1898,
+      "source": "Existing inherited project asset; historical identities in docs/migration_identity.json or docs/obstacle_candidate_identity.json"
+    }
+  ],
+  "new_training_steps": 0,
+  "train_state_status": "Original Actor/Critic/normalizer/statistics available; original optimizer,target-network,replay,RNG state absent. Any future adaptation is warm-start, not exact resume.",
+  "obstacle_input_modes": {
+    "center": "full-map nearest2 physical center distances<=150; no original FOV discovery gate",
+    "boundary40": "distance=max(0,center_distance-entity_radius-60+40), nearest2<=150, heading-relative bearing; maps current true safety boundary onto original40m critical scale; not a guarantee",
+    "none": "zero obstacle slots; same18D weights and all other interfaces"
+  },
+  "reencoding_metadata": "Inherited reencoded_decisions counts elapsed physical decisions for nonlegacy variants, not actual replay forwards."
+}
