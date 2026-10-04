@@ -27,6 +27,23 @@ class R6Interfaces(unittest.TestCase):
         commands=[np.array([.1*i,-.1],dtype=np.float32) for i in range(13)];saved=raw.copy()
         p.reset(raw[0]);frame=LocalFrame.for_leg(raw[-1,:2],(450,180));obs,_=change_reference(p,frame,raw,commands)
         np.testing.assert_array_equal(raw,saved);np.testing.assert_array_equal(p.previous_action,commands[-1]);np.testing.assert_array_equal(p.actions[-1],commands[-1]);np.testing.assert_array_equal(obs[12:14],[500,0]);self.assertEqual(len(p.observations),10);p.close()
+    def test_first_post_switch_sequence_pairs(self):
+        # Capture the actual first forward after re-expression, including the
+        # predecessor outside the retained window used for progress features.
+        for alignment in ("training", "past"):
+            m=SeniorModules();p=WindowController(m,ROOT/"checkpoints/actor.pth",ROOT/"checkpoints/normalizer.pth",alignment=alignment)
+            raw=np.zeros((14,14),dtype=np.float32);raw[:,0]=np.arange(14)*2;raw[:,1]=np.arange(14)**2*.1;raw[:,12]=500
+            commands=[np.array([.01*i,-.1],dtype=np.float32) for i in range(13)]
+            p.reset(raw[0]);frame=LocalFrame.for_leg(raw[-1,:2],(450,180));current,_=change_reference(p,frame,raw,commands)
+            captured={}
+            def capture(module,args,kwargs):captured.update({k:v.detach().clone() for k,v in kwargs.items() if isinstance(v,torch.Tensor)})
+            hook=p.actor.register_forward_pre_hook(capture,with_kwargs=True)
+            p.act(current);hook.remove()
+            state_indices=range(4,14) if alignment=="training" else range(3,13)
+            expected=np.array([frame.encode(raw[i],raw[i-1]) for i in state_indices])
+            np.testing.assert_allclose(captured['state_sequence'].numpy(),p.normalizer.normalize(torch.tensor(expected[None])).numpy(),atol=1e-7,rtol=0)
+            np.testing.assert_array_equal(captured['action_sequence'].numpy(),np.array(commands[3:13])[None])
+            np.testing.assert_array_equal(captured['current_state'].numpy(),p.normalizer.normalize(torch.tensor(current[None])).numpy());p.close()
     def test_obstacle_inputs_distance_heading_and_no_future(self):
         f=ObstacleFrame(LocalFrame.for_leg((0,0),(500,0)),(CircleObstacle((100,0),30,60),CircleObstacle((0,140),30,60),CircleObstacle((0,160),30,60)))
         raw=np.zeros(14);raw[3]=np.pi/2;got=f.encode(raw)

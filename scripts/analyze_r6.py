@@ -39,8 +39,80 @@ def audit(folder):
     (folder/'raw_audit.json').write_text(json.dumps(result,indent=2));assert result['all_passed'],[x for x in receipts if not all(x['checks'].values())]
     print('Raw audit passed:',len(rows))
 
+def merge_development(run):
+    """Merge seen R6 episodes with explicitly cached, physically matched R5 controls."""
+    import itertools,copy
+    from analyze_r1 import summary
+    from analyze_r2 import enrich,paired_detail,write_csv
+    rows=[];seen=set();sources=[]
+    for phase in ['screen','adaptation','validation']:
+        folder=run/phase
+        assert read(folder/'completion.json')['complete'] and read(folder/'raw_audit.json')['all_passed']
+        for original in read(folder/'rows.json'):
+            row=copy.deepcopy(original);row['cached_reference']=False
+            if row['variant']=='legacy':row['variant']='relay_m160'
+            key=(row['scene_id'],row['variant']);assert key not in seen;seen.add(key);rows.append(row)
+        sources.append(str(folder/'rows.json'))
+    cache=ROOT/'runs/r5_literature_20261004T080700Z/final/rows.json'
+    for original in read(cache):
+        if original['variant'] not in ['relay_m120','relay_m160','tangent_exit90']:continue
+        row=copy.deepcopy(original);key=(row['scene_id'],row['variant'])
+        if key in seen:continue
+        row['cached_reference']=True;rows.append(row);seen.add(key)
+    rows=enrich(rows);contracts={};checks=[]
+    for row in rows:
+        job=read((ROOT/row['evidence']).with_name('job.json'));scene=job['scene'];suite=job['suite']
+        contract=dict(scene={k:scene[k] for k in ['id','seed','profile','base_direction_degrees','goal','map','distance_m','layout']},
+            suite={k:suite[k] for k in ['maps','world_bounds','world_radius_limit_m','task_time_limit_s','goal_radius_m']})
+        sid=row['scene_id']
+        if sid in contracts:assert contracts[sid]==contract,('Physical contract mismatch',sid)
+        else:contracts[sid]=contract
+        row['evaluation_family']='risk' if scene.get('evaluation_family')=='risk' else 'routine'
+        checks.append(dict(scene_id=sid,variant=row['variant'],cached_reference=row['cached_reference'],evidence=row['evidence']))
+    out=run/'development';out.mkdir(exist_ok=True);report={}
+    for family in ['all','routine','risk']:
+        rr=rows if family=='all' else [x for x in rows if x['evaluation_family']==family]
+        methods=sorted({x['variant'] for x in rr})
+        report[family]=dict(summary=summary(rr),paired={a+'__to__'+b:paired_detail(rr,a,b) for a,b in itertools.combinations(methods,2)})
+    (out/'analysis_rows.json').write_text(json.dumps(rows,indent=2));(out/'analysis.json').write_text(json.dumps(report,indent=2));write_csv(out/'episodes.csv',rows);write_csv(out/'raw_index.csv',checks)
+    (out/'identity_checks.json').write_text(json.dumps(dict(paired_physical_inputs_equal=True,scenes=len(contracts),sources=sources,cached_source=str(cache),note='All scenes are seen development; method denominators differ. Pairwise results use actual intersection. Cached wall times are not controlled runtime benchmarks.'),indent=2))
+    for family,v in report.items():print(family,{k:(x['safe_arrivals'],x['n']) for k,x in v['summary'].items()})
+
+def details(folder,main):
+    import statistics
+    from analyze_r1 import summary,outcome
+    from analyze_r2 import paired_detail,write_csv
+    rows=read(folder/'analysis_rows.json');methods=sorted({r['variant'] for r in rows});lookup={(r['scene_id'],r['variant']):r for r in rows};report={};pair_rows=[]
+    groups={'all':rows,'routine':[r for r in rows if r['evaluation_family']=='routine'],'risk':[r for r in rows if r['evaluation_family']=='risk']}
+    for d in [1000,3000,5000]:groups[f'routine_{d}']=[r for r in rows if r['evaluation_family']=='routine' and r['distance_m']==d]
+    for group,rr in groups.items():
+        comparisons={};ids=sorted({r['scene_id'] for r in rr})
+        for v in methods:
+            if v==main:continue
+            common=[sid for sid in ids if (sid,v) in lookup and (sid,main) in lookup]
+            gain=[sid for sid in common if lookup[sid,main]['success'] and not lookup[sid,v]['success']]
+            loss=[sid for sid in common if not lookup[sid,main]['success'] and lookup[sid,v]['success']]
+            safe=[sid for sid in common if lookup[sid,main]['success'] and lookup[sid,v]['success']]
+            ratios=[lookup[sid,main]['time_s']/lookup[sid,v]['time_s'] for sid in safe]
+            comparisons[v]=dict(paired_scenes=len(common),safe_gains=gain,safe_losses=loss,common_safe=len(safe),median_time_ratio=statistics.median(ratios) if ratios else None,paired=paired_detail(rr,v,main))
+            if group=='all':
+                for sid in common:
+                    a=lookup[sid,v];b=lookup[sid,main];pair_rows.append(dict(scene_id=sid,control=v,main=main,control_outcome=outcome(a),main_outcome=outcome(b),control_time_s=a['time_s'],main_time_s=b['time_s'],common_safe=a['success'] and b['success'],time_ratio=b['time_s']/a['time_s'] if a['success'] and b['success'] else None))
+        timeliness={v:{str(fraction):sum(r['success'] and r['time_s']<=fraction*1.8*r['distance_m'] for r in rr if r['variant']==v)/sum(r['variant']==v for r in rr) for fraction in [.25,.5,.75,1.]} for v in methods if any(r['variant']==v for r in rr)}
+        report[group]=dict(summary=summary(rr),comparisons=comparisons,safe_completion_fraction=timeliness)
+    (folder/'main_comparisons.json').write_text(json.dumps(report,indent=2));write_csv(folder/'paired_episodes.csv',pair_rows)
+    costs=[]
+    for row in rows:
+        changes=read(ROOT/row['evidence'])['target_changes']
+        costs.append(dict(scene_id=row['scene_id'],variant=row['variant'],steps=row['steps'],cpu_seconds=row['cpu_seconds'],wall_seconds=row['wall_seconds'],reencoding_seconds=row['reencoding_seconds'],max_single_reencoding_seconds=max([x['wall_seconds'] for x in changes],default=0)))
+    (folder/'compute_costs.json').write_text(json.dumps(costs,indent=2));write_csv(folder/'compute_costs.csv',costs)
+    print('Main details',main)
+
 if __name__=="__main__":
-    ap=argparse.ArgumentParser();ap.add_argument("folder");ap.add_argument("--audit",action="store_true");args=ap.parse_args();folder=Path(args.folder).resolve()
+    ap=argparse.ArgumentParser();ap.add_argument("folder");ap.add_argument("--audit",action="store_true");ap.add_argument("--merge-development",action="store_true");ap.add_argument("--main");args=ap.parse_args();folder=Path(args.folder).resolve()
+    if args.merge_development:
+        merge_development(folder);sys.exit(0)
     assert read(folder/"completion.json")["complete"]
     analyze(folder,False)
     if args.audit:audit(folder)
+    if args.main:details(folder,args.main)
