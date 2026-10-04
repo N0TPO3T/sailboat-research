@@ -1,0 +1,85 @@
+{
+  "schema": 1,
+  "main_variant": "commit_away",
+  "scope": "R4 causal outward intervention with conditional commitment; fixed low-level, actual safety and original t-to-t+1 timing",
+  "methods": {
+    "relay_m120": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 120.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "relay_m160": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "commit_away": {
+      "planner_kind": "execution",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "response_horizon": 60.0,
+        "risk_guard": 80.0,
+        "response_hold": 60.0,
+        "progress_gate": true,
+        "intervention": "away",
+        "target_grace": 0.0
+      }
+    },
+    "no_commit": {
+      "planner_kind": "execution",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "response_horizon": 60.0,
+        "risk_guard": 80.0,
+        "response_hold": 0.0,
+        "progress_gate": true,
+        "intervention": "away",
+        "target_grace": 0.0
+      }
+    },
+    "commit_route": {
+      "planner_kind": "execution",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "response_horizon": 60.0,
+        "risk_guard": 80.0,
+        "response_hold": 60.0,
+        "progress_gate": true,
+        "intervention": "route",
+        "target_grace": 0.0
+      }
+    }
+  }
+}

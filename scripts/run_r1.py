@@ -10,6 +10,7 @@ from sailboat_routing.r1_planner import RouteWaypointPlanner,R1Config
 from sailboat_routing.planner import LocalWaypointPlanner
 from sailboat_routing.r2_planner import Radial500Planner,ForwardPlanner,RouteCostPlanner,NoChangePlanner,EarlyHandoffPlanner,RelayPlanner,RelayConfig
 from sailboat_routing.r3_planner import RiskManagedPlanner,RiskConfig
+from sailboat_routing.r4_planner import ExecutionPlanner,ExecutionConfig
 from sailboat_routing.wind_readout import RidgeWindReadout
 from sailboat_routing.admission import file_hash
 
@@ -28,7 +29,7 @@ def worker(job):
     made=[]
     def factory(chart,unused,mode):
         kind=job.get('planner_kind','r1')
-        cls,cfg_type={'risk':(RiskManagedPlanner,RiskConfig),'r1':(RouteWaypointPlanner,R1Config),'radial500':(Radial500Planner,R1Config),'forward':(ForwardPlanner,R1Config),'route_cost':(RouteCostPlanner,R1Config),'no_change':(NoChangePlanner,R1Config),'early_handoff':(EarlyHandoffPlanner,R1Config),'relay':(RelayPlanner,RelayConfig)}[kind]
+        cls,cfg_type={'execution':(ExecutionPlanner,ExecutionConfig),'risk':(RiskManagedPlanner,RiskConfig),'r1':(RouteWaypointPlanner,R1Config),'radial500':(Radial500Planner,R1Config),'forward':(ForwardPlanner,R1Config),'route_cost':(RouteCostPlanner,R1Config),'no_change':(NoChangePlanner,R1Config),'early_handoff':(EarlyHandoffPlanner,R1Config),'relay':(RelayPlanner,RelayConfig)}[kind]
         planner=cls(chart,cfg_type(**job['config']),mode);made.append(planner);return planner
     nav.LocalWaypointPlanner=LocalWaypointPlanner if job['variant']=='anchor' else factory
     try:
@@ -51,6 +52,7 @@ def main():
     folder=batch.with_suffix('');folder.mkdir(exist_ok=False)
     sources={str(f.relative_to(ROOT)):file_hash(f) for f in (ROOT/'src/sailboat_routing').glob('*.py')}
     # Preserve exact scientific implementation for each development batch.
+    (folder/'r4_planner.py').write_bytes((ROOT/'src/sailboat_routing/r4_planner.py').read_bytes())
     (folder/'r3_planner.py').write_bytes((ROOT/'src/sailboat_routing/r3_planner.py').read_bytes())
     (folder/'r2_planner.py').write_bytes((ROOT/'src/sailboat_routing/r2_planner.py').read_bytes())
     (folder/'r1_planner.py').write_bytes((ROOT/'src/sailboat_routing/r1_planner.py').read_bytes())

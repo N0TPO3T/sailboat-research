@@ -60,7 +60,8 @@ def _write_json(path, value):
 
 
 def run_episode(scene, suite, admission, out, budget, *, method="geometry_only",
-                model=None, capture=False, record_features=True, max_steps=None):
+                model=None, capture=False, record_features=True, max_steps=None,
+                decision_observer=None):
     if method == "estimated_local" and model is None:
         raise ValueError("estimated_local requires a fitted matching readout, never an oracle fallback")
     if model is not None and model.source_identity != admission["source_identity"]:
@@ -140,6 +141,10 @@ def run_episode(scene, suite, admission, out, budget, *, method="geometry_only",
                 wind_input = LocalWindEstimate(estimate.world_rad, estimate.valid)
             # No raw/info/env/field/seed reaches this explicit whitelist.
             visible = PlannerInput(tuple(raw[:2]), float(raw[3]), target, route, decision_time, wind_input)
+            # Optional offline experiment observer; never provided to a planner.
+            if decision_observer is not None:
+                decision_observer(dict(visible=visible,physics=physics,policy=policy,planner=planner,
+                    frame=frame,raw=raw,observation=observation,decision=decision,history=history,commands=commands))
             if capture:
                 features.append(decision.features.copy())
                 labels.append(frame.wind_to_local(current_truth)); times.append(decision_time)
