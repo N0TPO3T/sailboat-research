@@ -2,4 +2,4 @@
 
 No active research thread.
 
-R3 已完成开发、冻结评估、真实轨迹分析、一次最终证据审查和英文内容稿；最终方法、代价与恢复入口见 PROJECT_STATE.md 和 docs/R3_RESEARCH_REPORT.md。作者署名/资产许可、官方模板与 PDF 检查是投稿准备事项，不自动启动新实验或 push。
+R4 已完成方法开发、同状态闭环分支、冻结评估和有限证据核对。新增机制仅获局部支持，保留 Relay160 默认方案；入口见 docs/R4_METHOD_NOTE.md、docs/R4_RESEARCH_REPORT.md 与 PROJECT_STATE.md。预览包已在本地验证，本地原工作树保留；不自动启动新实验、论文润色或 push。

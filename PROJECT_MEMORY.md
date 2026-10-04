@@ -48,3 +48,9 @@
 **Conclusion** R1 在一次完整规划调用结束时更新 last_plan，即使接受门槛保持原目标。R3 的 replan_only 风险请求因此不等于“只提前干预”：一次保持目标的额外调用可重置周期，推迟下一次普通目标应用。
 **Evidence** src/sailboat_routing/r1_planner.py:85–89、src/sailboat_routing/r3_planner.py:49–70；runs/r3_ccdc_20261003T121146Z/round1/case_r1_replan60_rescue034.json：364 s 请求后保持，普通应用由 372 s 移至 375 s；分歧前完整原始前缀相等见 development_case_prefixes.json。
 **Implication** 分开记录检测、请求、建议变化与实际应用；时机研究必须检查规划时钟副作用。回合获救不能直接归因于更早实际干预。
+
+## 目标保持的归因与覆盖窗口
+Tags: waypoint, commitment, timing, paired-evidence
+Conclusion: 目标提出、生效、后续普通管理与新增保持规则应分别归因；保持窗口不等于目标实际寿命，完整策略获益也不等于保持有独立收益。
+Evidence: docs/R4_RESEARCH_REPORT.md；runs/r4_method_20261004T034532Z/final/behavior_equivalence.json、final/adverse_case001.json及confirmation原始记录。开发局部保持有效，但新实例主方法和无保持全轨迹一致；一个误干预案例中普通基线随后还自行改点6次。
+Implication: 研究保持机制必须统计真正被保持规则改变的执行，区分规划调用、提案、下一步应用和后续管理；不能把少量新增干预之外的基线成功归因于新模块。

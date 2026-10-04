@@ -39,3 +39,9 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 结论、完整收益/代价与失败边界见 [R3研究报告](R3_RESEARCH_REPORT.md)；英文完整内容稿 [paper/ccdc/draft.md](../paper/ccdc/draft.md)。冻结主方法 Relay160，合理 Relay120 与原 R1 仍保留，不能宣称稳定提效或安全保证。
 证据 `runs/r3_ccdc_20261003T121146Z/`；配置 `configs/r3_methods.json`，冻结评估提交 `037fe1a`；720 回合原始复算与一次最终 same-family/provisional 审查完成。研究停止，seed2271/3271 也已见。
 本地 `R3_CCDC_preview.zip` 与 run/figures/index.html 包含真实图、作图数据、索引和源码快照；全量控制日志仍在服务器。保留旧本地修改，只 fetch，不 push。作者须处理资产署名/发表许可和官方模板/PDF，尚未投稿。
+
+## R4 完成（2026-10-04）
+- 先读 R4_METHOD_NOTE.md，再读 R4_RESEARCH_REPORT.md。方法候选为因果运动触发的径向退让+条件保持，默认仍推荐 Relay160；新实例未证实新增安全或保持收益，正反例均保留。
+- 科学冻结 3c5e44f3bd4186b4f5a3ec012b1a8d9fd728d617；configs/r4_methods.json；全部证据 runs/r4_method_20261004T034532Z/，其中 raw_index.csv 索引626回合，final/raw_index.csv 索引冻结360回合。
+- 五张关键真实图、两张补充图和离线图集见 run/figures/；R4_METHOD_preview.zip 为含选中作图原始日志的轻量包。完整物理复跑依赖服务器现有资产；新运行另用输出目录及预算。
+- 一次有限审查完成，same-family/provisional；报告记录负结果与冻结前方案变更。4271/5271现为已见种子，无运行中实验；R3英文稿未改，不自动push或追加实验。
