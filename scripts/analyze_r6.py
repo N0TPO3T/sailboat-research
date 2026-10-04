@@ -37,6 +37,26 @@ def audit(folder):
         receipts.append(dict(scene_id=row['scene_id'],variant=row['variant'],checks=checks))
     result=dict(episodes=len(rows),all_passed=all(all(x['checks'].values()) for x in receipts),records=receipts)
     (folder/'raw_audit.json').write_text(json.dumps(result,indent=2));assert result['all_passed'],[x for x in receipts if not all(x['checks'].values())]
+    if folder.name=='final' and (folder.parent/'freeze.json').exists():
+        import hashlib
+        frozen=read(folder.parent/'freeze.json');assert manifest['generated_epoch']>frozen['frozen_epoch']
+        assert manifest['freeze_sha256']==hashlib.sha256((folder.parent/'freeze.json').read_bytes()).hexdigest()
+        for rel,digest in {**frozen['sources'],**frozen['assets']}.items():assert hashlib.sha256((ROOT/rel).read_bytes()).hexdigest()==digest,rel
+        for job in manifest['jobs']:
+            assert {k:job[k] for k in ['planner_kind','config','mode','controller']}==frozen['methods'][job['variant']]
+            assert job['scene']['split']=='r6_frozen_confirmation'
+        from sailboat_routing.wind_fields import SyntheticWindField
+        initial={};wind_samples=0;max_wind_error=0.0
+        for row in rows:
+            path=ROOT/row['evidence'];tr=read(path)['trajectory'];job=read(path.with_name('job.json'));scene=job['scene'];sid=row['scene_id'];first=tr[0]['raw'][:10]
+            if sid in initial:assert first==initial[sid],('Initial physical state mismatch',sid)
+            else:initial[sid]=first
+            field=SyntheticWindField(scene['seed']+100000,math.radians(scene['base_direction_degrees']),scene['profile'],horizon=job['suite']['task_time_limit_s']+1)
+            for i,x in enumerate(tr):
+                error=abs(x['wind_direction_world']-field.sample(x['raw'][:2],x['time'])[1]);max_wind_error=max(max_wind_error,error);wind_samples+=1
+                assert error<1e-12,('Wind field/log mismatch',sid,row['variant'],i,error)
+                if i:assert x['wind_used_for_previous_action']==tr[i-1]['wind_direction_world']
+        (folder/'freeze_audit.json').write_text(json.dumps(dict(all_passed=True,freeze_before_generation=True,scientific_sources_and_assets_unchanged=True,all_jobs_match_frozen_methods=True,paired_initial_physics_equal=True,paired_spatiotemporal_field_parameters_equal=True,all_logged_winds_match_same_field_at_actual_positions=True,wind_samples=wind_samples,max_wind_direction_error=max_wind_error,scenes=len(initial),episodes=len(rows)),indent=2))
     print('Raw audit passed:',len(rows))
 
 def merge_development(run):
@@ -106,6 +126,20 @@ def details(folder,main):
         changes=read(ROOT/row['evidence'])['target_changes']
         costs.append(dict(scene_id=row['scene_id'],variant=row['variant'],steps=row['steps'],cpu_seconds=row['cpu_seconds'],wall_seconds=row['wall_seconds'],reencoding_seconds=row['reencoding_seconds'],max_single_reencoding_seconds=max([x['wall_seconds'] for x in changes],default=0)))
     (folder/'compute_costs.json').write_text(json.dumps(costs,indent=2));write_csv(folder/'compute_costs.csv',costs)
+    if folder.name=='final':
+        behavior=[]
+        for sid in sorted({r['scene_id'] for r in rows}):
+            main_row=lookup[sid,main];mt=read(ROOT/main_row['evidence'])['trajectory']
+            for v in ['obstacle18_center120','obstacle18_none120']:
+                if (sid,v) not in lookup:continue
+                ct=read(ROOT/lookup[sid,v]['evidence'])['trajectory']
+                paths_equal=[(x['time'],x['raw'][:10]) for x in mt]==[(x['time'],x['raw'][:10]) for x in ct]
+                commands_equal=[x.get('command') for x in mt]==[x.get('command') for x in ct]
+                first=next((i for i,(a,b) in enumerate(zip(mt[1:],ct[1:]),start=1) if a['command']!=b['command']),None)
+                rec=dict(scene_id=sid,control=v,physical_trace_equal=paths_equal,command_sequence_equal=commands_equal,first_command_difference_decision_time=mt[first]['time']-1 if first is not None else None,physical_history_equal_before_first_command=all(a['raw'][:10]==b['raw'][:10] and a.get('command')==b.get('command') for a,b in zip(mt[:first],ct[:first])) if first is not None else None,layout=main_row['layout'],family=main_row['evaluation_family'])
+                if main_row['layout']=='open':assert paths_equal and commands_equal,('Unexpected open-map input-ablation difference',sid,v)
+                behavior.append(rec)
+        (folder/'input_ablation_behavior.json').write_text(json.dumps(dict(records=behavior,note='Matched18Dweights/Relay120/eval/history/timing. Full-map input modes differ; whole trajectories and first-command prefix inspected. Open-map equality is an implementation check, not general benefit.'),indent=2));write_csv(folder/'input_ablation_behavior.csv',behavior)
     print('Main details',main)
 
 if __name__=="__main__":

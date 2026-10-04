@@ -15,7 +15,7 @@ def make(run):
     labels.update(freeze.get('labels',{}));allv=variants+[v for v in sorted({r['variant'] for r in rows}) if v not in variants]
     routine=[s for s in ids if lookup[s,main]['evaluation_family']=='routine'];risk=[s for s in ids if lookup[s,main]['evaluation_family']=='risk']
     def get(s,v):return compact(run,lookup[s,v])
-    def loss(s):return not lookup[s,main]['success'] and lookup[s,'relay_m160']['success']
+    def loss(s):return not lookup[s,main]['success'] and any(lookup[s,v]['success'] for v in ['relay_m120','relay_m160','tangent_exit90'])
     def gain(s):return lookup[s,main]['success'] and not lookup[s,'relay_m160']['success']
     def common(s):return lookup[s,main]['success'] and lookup[s,'relay_m160']['success']
     def ratio(s):return lookup[s,main]['time_s']/lookup[s,'relay_m160']['time_s']
@@ -39,13 +39,14 @@ def make(run):
     if bad is None:bad=max([s for s in ids if common(s)],key=lambda s:(ratio(s),s))
     good=next((s for s in ids if gain(s)),None)
     if good is None:good=min([s for s in ids if common(s)],key=lambda s:(ratio(s),s))
-    selected['gain_and_cost']=dict(scene_ids=[good,bad],rule='First sorted safety gain and first sorted safety loss vs original160; if absent use best/worst common-safe time ratio. Post-hoc, both directions retained.')
+    selected['gain_and_cost']=dict(scene_ids=[good,bad],rule='First sorted safety gain vs original160 and first safety loss vs any of original120/160 or R5; otherwise best/worst common-safe time ratio vs160. Post-hoc, both directions retained.')
+    case_variants=['relay_m120','relay_m160','tangent_exit90',main]
     fig,axes=plt.subplots(2,2,figsize=(12,10))
     for col,s in enumerate([good,bad]):
         chart(axes[0,col],get(s,main))
-        for j,v in enumerate(variants):
-            d=get(s,v);trace(axes[0,col],d,COL[j],labels[v],ls='--' if v==main else '-')
-            axes[1,col].plot([x['time'] for x in d['points']],[x['goal_distance'] for x in d['points']],c=COL[j],label=labels[v])
+        for v in case_variants:
+            color=COL[allv.index(v)];d=get(s,v);trace(axes[0,col],d,color,labels[v],ls='--' if v==main else '-')
+            axes[1,col].plot([x['time'] for x in d['points']],[x['goal_distance'] for x in d['points']],c=color,label=labels[v])
         axes[0,col].set_title(('Gain example: ' if col==0 else 'Adverse / cost example: ')+s,fontsize=8);axes[0,col].legend(fontsize=7)
         axes[1,col].axhline(10,c='black',ls=':',lw=1);axes[1,col].set_xlabel('Physical mission time (s)');axes[1,col].set_ylabel('Distance to final goal (m)');axes[1,col].grid(alpha=.2);axes[1,col].legend(fontsize=7)
     save(fig,out,'gain_and_cost')
@@ -73,23 +74,26 @@ def make(run):
         ax.set_title(f'{dist//1000} km, all {len(ss)} routine scenes');ax.set_xlabel('Fraction of task time limit');ax.set_ylabel('Fraction safely completed');ax.set_ylim(0,1.04);ax.grid(alpha=.2);ax.legend(fontsize=7)
     fig.suptitle('Whole-mission timeliness: failures remain in the denominator',fontsize=12);save(fig,out,'safe_completion_time')
     # A local safety view for the adverse case; straight targets are only annotations.
-    s=bad;fig,axes=plt.subplots(1,2,figsize=(12,4.8));dmain=get(s,main);chart(axes[0],dmain)
+    # Deliberately retain a real previously seen main failure even if all confirmation scenes succeed.
+    devrows=read(run/'development/analysis_rows.json');lookup={(r['scene_id'],r['variant']):r for r in devrows}
+    failed=sorted({r['scene_id'] for r in devrows if r['variant']==main and not r['success']})
+    s=failed[0];fig,axes=plt.subplots(1,2,figsize=(12,4.8));dmain=get(s,main);chart(axes[0],dmain)
     focus=None
-    for j,v in enumerate(variants):
-        d=get(s,v);trace(axes[0],d,COL[j],labels[v],ls='--' if v==main else '-')
+    for v in case_variants:
+        color=COL[allv.index(v)];d=get(s,v);trace(axes[0],d,color,labels[v],ls='--' if v==main else '-')
         points=[x for x in d['points'] if x['clearance'] is not None and np.isfinite(x['clearance'])]
-        if points:axes[1].plot([x['time'] for x in points],[x['clearance'] for x in points],c=COL[j],label=labels[v])
+        if points:axes[1].plot([x['time'] for x in points],[x['clearance'] for x in points],c=color,label=labels[v])
         if v==main and points:
             q=min(points,key=lambda x:x['clearance']);focus=(q['x'],q['y'])
     if focus and dmain['obstacles']:
         axes[0].set_xlim(focus[0]-400,focus[0]+400);axes[0].set_ylim(focus[1]-400,focus[1]+400);axes[0].set_aspect('equal',adjustable='box')
     axes[0].legend(fontsize=7);axes[0].set_title('Adverse-case local track (zoom if obstacles)',fontsize=10);axes[1].axhline(0,c='black',ls='--');axes[1].set_xlabel('Physical mission time (s)');axes[1].set_ylabel('Minimum clearance of each 1 s segment (m)');axes[1].legend(fontsize=7);axes[1].grid(alpha=.2)
-    fig.suptitle(s,fontsize=10);save(fig,out,'adverse_safety_detail')
-    selected['adverse_safety_detail']=dict(scene_id=s,rule='Same adverse case; zoom around main minimum-clearance endpoint. Segment metric, not swept hull.')
+    fig.suptitle('SEEN DEVELOPMENT FAILURE (not new confirmation): '+s,fontsize=10);save(fig,out,'adverse_safety_detail')
+    selected['adverse_safety_detail']=dict(scene_id=s,stage='seen_development',rule='First sorted failed main development scene, retained explicitly even though confirmation main is all-safe; zoom around minimum-clearance endpoint. Not included in new-instance statistics. Segment metric, not swept hull.')
     write(out/'selection.json',selected)
     names=['actual_1_3_5km','gain_and_cost','mission_outcomes','safe_completion_time','adverse_safety_detail']
     body=''.join(f'<section><h2>{html.escape(n)}</h2><img src="figures/{n}.png" style="max-width:100%"></section>' for n in names)
-    (run/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>R6 real-log results</title><h1>R6 research results</h1><p>Frozen new instances. All figures are derived from actual logs. Selection rules and source hashes: figures/selection.json and figure_data/*.json. This atlas includes adverse results.</p>'+body,encoding='utf-8')
+    (run/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>R6 real-log results</title><h1>R6 research results</h1><p>Four figures show frozen new instances; the last explicitly shows a seen-development failure and is excluded from confirmation statistics. All figures are derived from actual logs. Selection rules and source hashes: figures/selection.json and figure_data/*.json. This atlas includes adverse results.</p>'+body,encoding='utf-8')
     print('Saved',len(names),'figures and offline atlas',run)
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('run');a=ap.parse_args();make(Path(a.run).resolve())

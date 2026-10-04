@@ -18,11 +18,11 @@
 - wind_readout.py/fit_wind_readout.py实现sin/cos岭回归、整episode/scenario划分、train-only标准化、validation选alpha、test一次评估。
 - planner.py提供静态地图A*和有限候选；wind_fields.py/metrics.py提供私有时空风场与安全/换舷/配对统计。正式planner输入无环境或风场查询器。
 - 三方法geometry_only/oracle_local/estimated_local共享低层与选点参数；oracle只提供当前本船局部真风方向，是诊断参照，不是全局最优上界。
-- 18D 0204@10800为独立避障候选；原尺度通过，不具备已验证连续多目标接口，未替换14D。
+- V0阶段18D 0204@10800仅验证独立原尺度协议；R6连续接入与选择结果见本文件R6入口，不改写旧协议结果。
 
 ## 已验证能力与证据
 - A/B原协议：迁移及新旧解释器比较误差0，500m为12/12，约1km为5/6；失败前1000步与原500m一致。证据：runs/stage_a、stage_b、stage_b_failure_diagnostic及audit/cross_environment_parity.json。
-- 18D独立候选原协议8/8，尚未连续适配，不替换14D；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
+- V0阶段18D独立候选原协议8/8，当时尚未连续适配；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
 - 新导航准入54项测试通过，完整274步旁路开/关轨迹及动作一致，2次目标切换连续；140步变风标签检查通过。证据runs/v0_admission_final_20261002、runs/navigation_admission.json。
 - 20个完整采集episode按12/4/4划分，2个训练超时保留；已冻结读出器并完成一次test评估。离线误差、36次闭环结果及全部失败统一见docs/ep_result/V0_RESULTS.md及其原始证据链接。
 - V0交付时上游1351文件与Git状态无变化：runs/audit/upstream_integrity_v0_final_20261002.json。
@@ -80,6 +80,8 @@
 - seed6271/7371及开发risk6101现已见。五张关键真实图、一张开发补充图、逐点数据、离线gallery.html、冻结源码归档和索引在R5_METHOD_preview.zip；传输与校验以docs/R5_DELIVERY.json包外收据为准，不是全量日志/资产备份。
 - R3初稿不变，仅paper/ccdc/R5_METHOD_UPDATE.md提供更新建议。本地旧工作树/修改保留，只fetch及新增产物，不push。下一轮机制隔离建议未实施。
 
-## R6 active authority
-- R6 supersedes V0-R5 stage restrictions: low-level weights/architecture/checkpoints (including 18D), normalization, causal memory and goal application timing are research variables. Preserve original assets/results, upstream read-only, causal deployment information, physical constraints and original evaluation. No device access inferred from idle GPU. Current authority: docs/prompt/SailBoatRL_R6_ARIS_Research_Reset.md and CURRENT_PLAN.md.
-- Recovery: runs/r6_reset_20261004T115808Z/plan.json；24h/4CPU，GPU需明确分配，至多1张/12GPUh。
+## R6 完成（2026-10-04）
+- 首读 docs/R6_METHOD_NOTE.md 和 docs/R6_RESEARCH_REPORT.md。当前推荐研究主线为继承18D循环注意力资产＋边界距离输入适配＋Relay120，替换原14D资产但不训练新权重；旧冻结约束不再是研究前提。
+- 科学冻结 f572dac20e3e8a13bda57ebac0c6bf2343d384f2；configs/r6_methods.json；全部开发/确认/原始证据 runs/r6_reset_20261004T115808Z/。新确认及匹配输入消融支持当前合成协议中的条件性收益，具体分母、代价和开发侵入只在报告维护。不支持架构单因素、普遍安全或实时部署。
+- 实验和有限same-family/provisional审阅结束，原始指标/冻结/输入行为复算通过。未训练、未使用GPU，无运行中实验。资源见run/resources.json，完整预算与停止状态见run/plan.json。
+- seed8371/9471现已见。R3稿与原模型保留，论文定位另存paper/ccdc/R6_POSITIONING.md。源码bundle、继承权重、完整日志分别交付，轻量图集不冒充完整备份；同步核验以docs/R6_DELIVERY.json为准。本机旧工作树与修改保留，不push。

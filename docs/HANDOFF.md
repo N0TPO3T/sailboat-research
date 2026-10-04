@@ -53,4 +53,10 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 6271/7371和risk6101均已见；R3初稿与旧结果保留。本地旧修改保留，只fetch、不push；本轮关闭，未来建议未启动。
 
 ## R6 新研究授权
-旧冻结低层、只改高层、排除18D及固定记忆/时序的阶段条件已撤销。当前有效范围、预算及恢复入口仅见 CURRENT_PLAN.md 和 runs/r6_reset_20261004T115808Z/plan.json；历史结论不改写。GPU分配待确认，CPU核验继续。
+旧冻结低层、只改高层、排除18D及固定记忆/时序的阶段条件已撤销。当前有效范围、预算及恢复入口仅见 CURRENT_PLAN.md 和 runs/r6_reset_20261004T115808Z/plan.json；历史结论不改写。启动时GPU分配待确认；本轮最终未使用GPU，完成状态见下。
+
+## R6 完成（2026-10-04）
+- 首读 [R6中文方法](R6_METHOD_NOTE.md) 与 [R6研究报告](R6_RESEARCH_REPORT.md)。采用已有18D控制器＋安全边界输入＋Relay120；本轮更换控制器资产，未训练新权重。旧冻结规则不再生效，不能把未训练解释为禁止或无效。
+- 科学冻结f572dac20e3e8a13bda57ebac0c6bf2343d384f2；configs/r6_methods.json；runs/r6_reset_20261004T115808Z/保存开发、匹配消融、冻结新实例与有限审阅。资源/完整分母/失败边界见报告，不宣称普遍安全或实时部署。
+- 五张真实图与index.html；R6_RESEARCH_preview.zip为轻量包，source bundle、继承权重和完整原始日志另存run下，复现见run/REPRODUCE.md，传输校验以R6_DELIVERY.json为准。本机旧修改保留，无push。
+- seed8371/9471现已见。研究完成、无运行中实验；R3稿不变，仅paper/ccdc/R6_POSITIONING.md另存定位更新，未来训练/扩展建议未自动执行。

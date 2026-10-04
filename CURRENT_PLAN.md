@@ -1,13 +1,9 @@
-# Current Plan — R6 research reset
+# Current Plan
 
-R6 supersedes V0-R5 stage restrictions: low-level weights/architecture/checkpoints (including 18D), normalization, causal memory and goal application timing are research variables. Preserve original assets/results, upstream read-only, causal deployment information, physical constraints and original evaluation. No device access inferred from idle GPU. Current authority: docs/prompt/SailBoatRL_R6_ARIS_Research_Reset.md and CURRENT_PLAN.md.
+No active research thread.
 
-Objective: evidence-backed continuous sailboat navigation for CCDC; do not require a new network/theorem.
-Budget: 24 h total, 4 CPU experiment workers; at most one explicitly assigned GPU and 12 GPU h. GPU allocation confirmation pending; CPU work proceeds.
-Run: runs/r6_reset_20261004T115808Z/plan.json
+R6 research completed: selected inherited18D recurrent-attention controller + safety-boundary distance encoding + Relay120. Method/results: docs/R6_METHOD_NOTE.md and docs/R6_RESEARCH_REPORT.md. Scientific source f572dac20e3e8a13bda57ebac0c6bf2343d384f2; run runs/r6_reset_20261004T115808Z/.
 
-Routes to compare: (A) existing 14D/18D asset and causal interface suitability; (B) continuous-waypoint low-level adaptation if evidence and throughput justify it; (C) a simple causal reference/control alternative if better supported.
-Hypotheses: memory/history and target-coordinate distribution mismatch may contribute; low-level weights alone are not an established root cause.
-Next: freeze selected18D boundary40/Relay120, evaluate54 new instances with7 paired methods (378 episodes), analyze adverse outcomes and matched input ablations, figures/reports and one evidence review. No further tuning on confirmation.
+R6 superseded historical low-level/checkpoint/memory/timing restrictions; these must not reappear as future task prohibitions. No new training or GPU use was needed for the selected evidenced route. Training remains untested, not prohibited or rejected.
 
-Verified development:293 full episodes audited;72 seen-scene primary completion71/72 (routine36/36,risk35/36), originalRelay120/16067/72 each, R5recovery70/72. Main has one new risk buffer breach; no universal safety claim. Selection receipt: runs/r6_reset_20261004T115808Z/selection.md. No new training or GPU usage.
+No running experiments or automatic follow-up. Delivery verification is tracked in docs/R6_DELIVERY.json; separate inherited assets/full raw evidence/source bundle preserve the old local checkout. No push. New research requires a new objective; seen seeds8371/9471 cannot become unseen by renaming.

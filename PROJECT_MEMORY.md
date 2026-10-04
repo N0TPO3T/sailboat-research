@@ -60,3 +60,9 @@ Tags: literature-adaptation, heading-reference, clipping, timing
 Conclusion: 原文的绕行侧承诺不等于世界坐标目标保持。R5的目标更新周期同时阻止退出检查；原切线公式在规划圆内截断为径向垂直方向，多数实际提案落在此分支。不能只按模块名称归因或移植其他控制器的安全性质。
 Evidence: docs/R5_METHOD_NOTE.md；runs/r5_literature_20261004T080700Z/literature/R5_WFRS_SOURCE_READOUT.md、final/mechanism_summary.json、frozen_exit_ablation_cases.json；src/sailboat_routing/r5_planner.py。
 Implication: 文献接入时先明确参考量、实际生效时序、公式分支和管理器所有状态更新点，再做等接口比较；整体收益不自动识别方向、长度或保持的独立贡献。
+
+## 空间风场配对与执行差异核验
+**Tags:** spatial-wind, pairing, actuator-quantization, causal-interface
+**Conclusion:** 配对方法共享时空风场参数，分歧航迹同一时刻的局部风可以不同；按真实位置/时刻核对日志。网络命令变化不等于执行变化：R6实例中命令差异被共同1度增量量化完全消除，物理轨迹不变。
+**Evidence:** runs/r6_reset_20261004T115808Z/analysis_check_correction.md、final/freeze_audit.json、quantized_action_example.json；wind_fields.py与继承step量化代码。
+**Implication:** 分别核对环境参数、当地采样、命令、有效执行增量和真实航迹；离线真值核验不得进入部署输入。该具体量化解释仅对已核对实例成立。
