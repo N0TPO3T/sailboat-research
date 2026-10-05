@@ -60,3 +60,6 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 科学冻结f572dac20e3e8a13bda57ebac0c6bf2343d384f2；configs/r6_methods.json；runs/r6_reset_20261004T115808Z/保存开发、匹配消融、冻结新实例与有限审阅。资源/完整分母/失败边界见报告，不宣称普遍安全或实时部署。
 - 五张真实图与index.html；R6_RESEARCH_preview.zip为轻量包，source bundle、继承权重和完整原始日志另存run下，复现见run/REPRODUCE.md，传输校验以R6_DELIVERY.json为准。本机旧修改保留，无push。
 - seed8371/9471现已见。研究完成、无运行中实验；R3稿不变，仅paper/ccdc/R6_POSITIONING.md另存定位更新，未来训练/扩展建议未自动执行。
+
+## R7 启动（2026-10-05）
+动态低速目标、控制器/输入/记忆/时序及必要训练均可研究；旧静态或18D限定不再适用。唯一当前范围见CURRENT_PLAN.md，运行入口runs/r7_dynamic_20261005T033700Z/plan.json；R6为对照，保护旧资产。

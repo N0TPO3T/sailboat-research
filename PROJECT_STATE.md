@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- 当前目标（R6新授权）：完整静态地图、无直接风观测的连续帆船航行；允许研究低层、模型输入、记忆、目标时序及高层。V0—R5冻结低层是历史阶段条件，不再限制R6。历史结果保持其原条件与结论。
+- 当前目标与有效授权：R7低速移动船舶避碰及连续任务；唯一活跃范围/预算见CURRENT_PLAN.md。历史静态/冻结控制器等条款不限制R7；旧结果不改写。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。

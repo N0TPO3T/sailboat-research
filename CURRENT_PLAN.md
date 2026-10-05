@@ -1,9 +1,10 @@
-# Current Plan
+# Current Plan — R7 dynamic vessel avoidance
 
-No active research thread.
+R7: low-speed moving-vessel collision avoidance and continuous mission completion. Static-only, fixed low-level/18D, old memory and timing restrictions are superseded. Controller, representation, causal memory, reference timing and training may change; preserve old assets/results, shared-resource permissions, causal inputs and common evaluation. No automatic push.
 
-R6 research completed: selected inherited18D recurrent-attention controller + safety-boundary distance encoding + Relay120. Method/results: docs/R6_METHOD_NOTE.md and docs/R6_RESEARCH_REPORT.md. Scientific source f572dac20e3e8a13bda57ebac0c6bf2343d384f2; run runs/r6_reset_20261004T115808Z/.
+Budget: shared24h,4 single-thread CPU experiment workers; GPU requires actual assignment (max1/12GPUh). Existing CPU env warm-reused; do not build services.
+Run: runs/r7_dynamic_20261005T033700Z/plan.json
 
-R6 superseded historical low-level/checkpoint/memory/timing restrictions; these must not reappear as future task prohibitions. No new training or GPU use was needed for the selected evidenced route. Training remains untested, not prohibited or rejected.
-
-No running experiments or automatic follow-up. Delivery verification is tracked in docs/R6_DELIVERY.json; separate inherited assets/full raw evidence/source bundle preserve the old local checkout. No push. New research requires a new objective; seen seeds8371/9471 cannot become unseen by renaming.
+Objective: evidenced low-speed dynamic avoidance with mission resumption; decide main contribution versus extension versus defer.
+Next: verify synchronization/history/safety, source CPA/encounter supervision and short-horizon candidate mechanisms; measure existing response, implement current-position R6 and causal relative-motion alternative; develop then freeze/new-instance confirm, static and long-range checks; real synchronized tracks and reports.
+Unknown: controller response adequacy, prediction benefit and unnecessary-detour costs. Training is permitted, not required.
