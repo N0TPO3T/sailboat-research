@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- 当前目标与有效授权：R7低速移动船舶避碰及连续任务；唯一活跃范围/预算见CURRENT_PLAN.md。历史静态/冻结控制器等条款不限制R7；旧结果不改写。
+- R7研究已完成，科学结论及恢复入口见下方R7条目；当前无活跃实验。R7已替代历史静态/冻结控制器阶段限制，不改写旧结果。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
@@ -85,3 +85,8 @@
 - 科学冻结 f572dac20e3e8a13bda57ebac0c6bf2343d384f2；configs/r6_methods.json；全部开发/确认/原始证据 runs/r6_reset_20261004T115808Z/。新确认及匹配输入消融支持当前合成协议中的条件性收益，具体分母、代价和开发侵入只在报告维护。不支持架构单因素、普遍安全或实时部署。
 - 实验和有限same-family/provisional审阅结束，原始指标/冻结/输入行为复算通过。未训练、未使用GPU，无运行中实验。资源见run/resources.json，完整预算与停止状态见run/plan.json。
 - seed8371/9471现已见。R3稿与原模型保留，论文定位另存paper/ccdc/R6_POSITIONING.md。源码bundle、继承权重、完整日志分别交付，轻量图集不冒充完整备份；同步核验以docs/R6_DELIVERY.json为准。本机旧工作树与修改保留，不push。
+
+## R7 动态扩展（2026-10-05）
+- 科学冻结b29e459；方法、结果、适用边界统一见docs/R7_METHOD_NOTE.md与docs/R7_RESEARCH_REPORT.md。采用终点占用时间窗+临时目标接力，未训练。
+- 原始/失败/旧协议全部保留：runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json；复现见同目录REPRODUCE.md。推荐仅作有限动态扩展，不作为CCDC主贡献或必要条件。
+- 当前动态协议85m圆代理、理想单目标观测，不代表完整COLREGs、真实船体扫掠或硬实时；历史80m结果不得混入最终确认。

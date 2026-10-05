@@ -63,3 +63,9 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 
 ## R7 启动（2026-10-05）
 动态低速目标、控制器/输入/记忆/时序及必要训练均可研究；旧静态或18D限定不再适用。唯一当前范围见CURRENT_PLAN.md，运行入口runs/r7_dynamic_20261005T033700Z/plan.json；R6为对照，保护旧资产。
+
+## R7 completed — 2026-10-05
+- 科学实现b29e459：当前位置动态接入+终点占用时间窗接力；无新训练。
+- 方法/主张边界见R7_METHOD_NOTE.md、R7_RESEARCH_REPORT.md；全部证据runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json。
+- 新实例收益是两个临时终点无路恢复，保留740秒误干预反例；建议仅作有限扩展，非完整避碰/规则/实时保证。
+- 原始source/config/旧失败保留，离线图集与R7_DYNAMIC_preview.zip交付；没有自动push。当前实验已结束。

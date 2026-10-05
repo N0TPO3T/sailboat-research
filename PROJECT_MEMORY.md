@@ -66,3 +66,9 @@ Implication: 文献接入时先明确参考量、实际生效时序、公式分�
 **Conclusion:** 配对方法共享时空风场参数，分歧航迹同一时刻的局部风可以不同；按真实位置/时刻核对日志。网络命令变化不等于执行变化：R6实例中命令差异被共同1度增量量化完全消除，物理轨迹不变。
 **Evidence:** runs/r6_reset_20261004T115808Z/analysis_check_correction.md、final/freeze_audit.json、quantized_action_example.json；wind_fields.py与继承step量化代码。
 **Implication:** 分别核对环境参数、当地采样、命令、有效执行增量和真实航迹；离线真值核验不得进入部署输入。该具体量化解释仅对已核对实例成立。
+
+## 动态终点无路不等于物理不可达
+**Tags:** dynamic-vessel, endpoint, causal-history, NoRouteError
+**Conclusion:** 静态路线接口把当前终点占用判成无路；动态任务中这可能只是暂时状态。R7临时接力恢复两个新实例，但名义到达外推误差也造成740秒代价。
+**Evidence:** docs/R7_RESEARCH_REPORT.md；runs/r7_dynamic_20261005T033700Z/no_route_diagnosis.json、goal_confirmation/final_overtaking_1__current_goal/trace.json。
+**Implication:** 分开诊断终点可用性、即时本船安全和长期可达性；保留原目标和实际历史。激活后长期保持可能放大错误预测，不因无碰撞就宣称规则合规。
