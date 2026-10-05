@@ -20,10 +20,10 @@
     }
   },
   "geometry": {
-    "own_radius": 5,
+    "own_radius": 10,
     "target_radius": 15,
     "buffer": 60,
-    "combined_safe": 80,
+    "combined_safe": 85,
     "static_buffer": 60
   },
   "information": {
@@ -69,7 +69,9 @@
   ],
   "source_sha256": {
     "scripts/run_r7.py": "693cbd8020371634b7fff2a6ffb0724eca7bd34a9d966b2a2b2f466288e01169",
-    "src/sailboat_routing/r7_dynamic.py": "8061957c6244de8e16f0b03a67d80fb0b534124cbbe20c78105261f0e59ed989"
+    "src/sailboat_routing/r7_dynamic.py": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533"
   },
-  "analysis": "All tasks retained, safe complete arrival primary; gains/losses vs current; time/path only common safe;families separate;min synchronous dynamic and static margin;computation non-real-time."
+  "analysis": "All tasks retained, safe complete arrival primary; gains/losses vs current; time/path only common safe;families separate;min synchronous dynamic and static margin;computation non-real-time.",
+  "corrected_at": 1791173272.4767869,
+  "correction": "Strengthened common occupied-circle proxy after source dimension check;ALL mixed static x850 to avoid target-land overlap;unchanged method params and frozen seeds;85m is corrected repeated confirmation,not second independent test."
 }

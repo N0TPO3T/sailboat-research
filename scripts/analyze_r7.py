@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """R7 saved-log summary and figures, no environment execution."""
-import sys,json,csv,math
+from pathlib import Path
+import sys,json,csv,math,os
+os.environ["MPLCONFIGDIR"]=str(Path(__file__).resolve().parents[1]/".cache/matplotlib")
 from pathlib import Path
 import numpy as np
 import matplotlib
@@ -11,7 +13,7 @@ ROOT=Path(__file__).resolve().parents[1]
 R=Path(sys.argv[1]);F=R/'figures';F.mkdir(exist_ok=True)
 colors={'current':'#1769aa','commit':'#df6819','no_commit':'#42944a','compact':'#8d52a2'}
 labels={'current':'Current-position R6','commit':'CPA + commitment','no_commit':'CPA without commitment','compact':'CPA offset180'}
-batches=['pilot','development','refinement','confirmation','stationary','regression','long','sensitivity']
+batches=['pilot','development','refinement','confirmation','stationary','regression','long','sensitivity','latency']
 allrows=[];summary={}
 for name in batches:
  f=R/name/'rows.json'

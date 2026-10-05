@@ -10,7 +10,7 @@ from .r2_planner import RelayPlanner, RelayConfig
 from .r6_controller import ObstacleFrame
 from .frames import LocalFrame, reencode_controller
 
-ENTITY=20.0 # own circumscribed radius5 + target radius15; counted ONCE
+ENTITY=25.0 # own10m circular proxy + target15m; counted ONCE; no swept-hull guarantee
 BUFFER=60.0
 SAFE=ENTITY+BUFFER
 
