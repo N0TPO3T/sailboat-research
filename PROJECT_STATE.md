@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- R7研究已完成，科学结论及恢复入口见下方R7条目；当前无活跃实验。R7已替代历史静态/冻结控制器阶段限制，不改写旧结果。
+- 当前任务R8可执行动态避碰；范围/预算见CURRENT_PLAN.md。R7结果保持历史身份，旧冻结控制器/静态限制不适用。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。

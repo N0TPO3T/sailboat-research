@@ -69,3 +69,7 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 方法/主张边界见R7_METHOD_NOTE.md、R7_RESEARCH_REPORT.md；全部证据runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json。
 - 新实例收益是两个临时终点无路恢复，保留740秒误干预反例；建议仅作有限扩展，非完整避碰/规则/实时保证。
 - 原始source/config/旧失败保留，离线图集与R7_DYNAMIC_preview.zip交付；没有自动push。当前实验已结束。
+
+## R8启动
+R8: executable underway dynamic avoidance with candidate-conditioned prediction and rolling feedback. R6/R7 are baselines, not frozen constraints. High/low-level, causal memory, interface and training may change; no future truth online, no unassigned GPU, no automatic push.
+当前入口CURRENT_PLAN.md；runs/r8_closedloop_20261005T062543Z/plan.json。R7 confirmation85真实侵入、最终终点恢复与740秒代价分别验证，全部R7数据现为开发材料。
