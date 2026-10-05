@@ -78,3 +78,9 @@ Implication: 文献接入时先明确参考量、实际生效时序、公式分�
 **Conclusion:** 相同位置参考在固定保持与普通反馈下可诱导不同航迹；预测必须复制已算动作、交付队列、历史重编码与恢复时序。匹配某个候选的低误差不能推广全部候选或实时性。
 **Evidence:** R8_METHOD_NOTE；runs/r8_closedloop_20261005T062543Z/branch_validation.json（115秒四分支前缀匹配，普通续跑复现；同参考不同保持的余量不同）、protocol_prediction_diagnostics.json（普通15s最大误差30.506m）与final_validation.json。
 **Implication:** 先验证无干预续跑及同协议执行段，再解释风估计/预测误差；保持周期也改变估计更新历史。计算冻结时钟不能当硬实时验证。
+
+## 数值等价不保证有计算时钟时的闭环等价
+**Tags:** timing, causality, computation, prediction, deployment
+**Conclusion:** 六个同状态候选和四个理想交付整回合可逐值等价，但优化后的实测交付时刻会改变真实闭环分支；不能从加速推导安全收益。预测必须包含等待期间实际执行的参考和应用后的保持钟；匹配协议仍不能保证预测准确。
+**Evidence:** runs/r9_timing_20261005T085308Z/profile_summary.json、full_replay_equivalence.json、mechanism_case.json、sensitivity/confirm_mixed_3__slot30/trace.json；docs/R9_METHOD_NOTE.md。
+**Implication:** 分开验证同输入数值等价与带时钟的实际闭环；记录ready/apply与真实等待动作。明确区分调度效应、候选选择效应和模型误差，不用理想交付或一个低误差分支代替时延/安全验证。

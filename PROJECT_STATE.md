@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- R8研究完成，无运行中实验；当前无活跃研究线程。R8文档为最新入口，R7结果保持历史身份。
+- R9研究已完成；当前无活跃研究线程。先读docs/R9_METHOD_NOTE.md和docs/R9_RESEARCH_REPORT.md，R6/R8历史证据保留。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
@@ -9,6 +9,14 @@
 - 本机origin用于从服务器拉取，向服务器push已禁用；V0托管远端尚未配置，地址未确定。源码镜像不等于完整实验备份。
 - 研发基点4e86b74；V0运行实现857ff57；V0.2候选裕量实现500618a，参数默认0。源码镜像与大产物分开恢复，旧归档回执见docs/DELIVERY.json；新结果不在该历史归档中。
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
+
+## R9 当前结果入口
+- 主方案为GVO思想的候选闭环评价＋25秒计算时隙／26秒参考生效；等待期真实低层反馈继续，预测同样等待；普通接力保留，仅避让保持60秒。无训练，18D旧资产不变。
+- 新短12例主方案与reactive均安全，无新增安全收益，主方案平均多57.42s；新3km保留一例避让收益，5km共同安全多32s。不是普遍优于reactive。
+- 旧mixed7同状态消融支持等待预测改变选择；mixed3收益仅为协议效应。30秒等待反例预测+82.692m但实际−0.949m，不能宣称延迟鲁棒或安全保证。
+- 新短5次guard退化仍用尽力分支。观测到控制tick最大0.645s不构成硬实时保证；独立规划/反馈执行资源为声明条件。
+- 运行根runs/r9_timing_20261005T085308Z，EVIDENCE_INDEX.md/冻结配置/原始trace/审查/资源收据可恢复；R9论文定位仅有边界扩展，paper/ccdc/R9_POSITIONING.md，R3底稿保留。
+- R9全部实验结束，GPU0，无自动push；本机原有未提交上下文修改保持不变，交付包包含服务器状态快照。
 
 ## 实现与协议
 - V0—R5参考连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。

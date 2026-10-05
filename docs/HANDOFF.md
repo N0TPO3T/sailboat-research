@@ -79,3 +79,12 @@ R8: executable underway dynamic avoidance with candidate-conditioned prediction 
 - 新集28/30→30/30为两例途中缓冲侵入避免；长程3/4→4/4。保留新集最大+267s、规划43.46s和3次guard退化分支，动态建议有限扩展。
 - runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md列全部源码/配置/分支/原始结果；R8_DYNAMIC_preview.zip、R8_raw_results.tar.gz、R8_source.zip及R8_DELIVERY.json用于恢复。
 - 全部实验结束，无自动push或新训练；旧资产和本机未提交上下文修改保留。服务器HANDOFF/STATE快照随预览包交付。
+
+## R9启动
+R9: retain useful candidate-conditioned closed-loop prediction under explicit computation/delivery timing. High/low-level, memory, interface, horizon, guard and training may change; no future truth, no unassigned GPU, max4 single-thread CPU experiment workers shared.
+当前入口CURRENT_PLAN.md；runs/r9_timing_20261005T085308Z/plan.json。先profile再选路线，计算期间实际低层闭环与双方/风时钟继续推进，不把旧配置或旧论文定位当硬限制。
+
+## R9 completed — 2026-10-05
+- 入口R9_METHOD_NOTE.md、R9_RESEARCH_REPORT.md；冻结及原始索引runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md，当前无活跃实验/研究线程。
+- 主方案25秒时隙、26秒生效，等待期间实际反馈继续；新短无安全gain且平均+57.42s，新3km保留一例收益。30秒等待有预测安全/实际侵入反例，动态仅建议有限扩展。
+- R9_TIMING_preview.zip、R9_raw_results.tar.gz和R9_source.zip用于恢复；原始资产/R3稿/历史结果保持，无新训练、无自动push。本机未提交上下文不覆盖，包内给服务器快照。

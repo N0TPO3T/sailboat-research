@@ -2,4 +2,5 @@
 
 No active research thread.
 
-R8研究完成，科学冻结29124b8。事实和证据入口见PROJECT_STATE.md及docs/R8_RESEARCH_REPORT.md；未来改进未自动启动。保留R8对模型/接口/训练开放的研究授权历史，但不把建议当成新的活跃任务。
+R9 scientific work completed. Results, limits and recovery pointers: docs/R9_METHOD_NOTE.md, docs/R9_RESEARCH_REPORT.md, paper/ccdc/R9_POSITIONING.md and runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md.
+No experiments remain active. Do not automatically tune, expand tests or push. New research requires the next user task; previous rounds remain historical evidence.
