@@ -23,7 +23,8 @@ def worker(job):
     static=tuple(CircleObstacle(tuple(o['center_xy']),o['entity_radius'],60.) for o in s.get('static',[]))
     chart=StaticMap((-2500,s['distance_m']+2500,-3000,3000),static,grid_resolution=25.)
     modules=SeniorModules();policy=ObstacleController(mode='eval');physics=ContinuousPhysics(modules,total_time_limit=limit,world_radius_limit=s['distance_m']+3000)
-    planner=EncounterSupervisor(chart,cfg);field=SyntheticWindField(s['seed']+100000,math.radians(s['base_direction_degrees']),s['profile'],horizon=limit+1)
+    from sailboat_routing.r7_goal import GoalRelaySupervisor
+    planner=(GoalRelaySupervisor if cfg.get('goal_relay',False) else EncounterSupervisor)(chart,cfg);field=SyntheticWindField(s['seed']+100000,math.radians(s['base_direction_degrees']),s['profile'],horizon=limit+1)
     raw=physics.reset(s['seed'],s['base_direction_degrees']);bind_time_indexed_wind(physics,field)
     observed=observe(specs,0,raw[:2]);target=planner.plan(raw[:2],raw[3],np.zeros(2),None,goal,0,observed)
     physics.set_goal(target);raw=physics.raw.copy();frame=LocalFrame.for_leg(raw[:2],target);observation=encode(frame,static,observed,raw);policy.reset(observation)
@@ -71,13 +72,13 @@ def worker(job):
         reason=type(e).__name__+':'+str(e);complete=False
     finally:policy.close();physics.close()
     row=dict(scene_id=s['id'],variant=job['variant'],family=s['family'],distance_m=s['distance_m'],success=bool(arrived and minstatic>0 and mindynamic>0),arrived=arrived,complete=complete,reason=reason,time_s=len(commands),path_length_m=length,min_dynamic_margin=mindynamic,min_static_margin=minstatic,min_entity_margin=minentity,target_changes=len(changes),interventions=sum(e['event']=='enter' for e in planner.events),releases=sum(e['event']=='release' for e in planner.events),reencoding_seconds=sum(c['reencode_seconds'] for c in changes),max_reencoding_seconds=max([c['reencode_seconds'] for c in changes],default=0),planning_seconds=sum(plans),max_planning_seconds=max(plans,default=0),wall_seconds=time.time()-begin,cpu_seconds=time.process_time()-cpu)
-    _write_json(out/'trace.json',dict(scene=s,config=cfg,row=row,trajectory=trace,changes=changes,decisions=planner.log,events=planner.events,wind=field.diagnostics()))
+    _write_json(out/'trace.json',dict(scene=s,config=cfg,row=row,trajectory=trace,changes=changes,decisions=planner.log,events=planner.events,goal_events=getattr(planner,'goal_events',[]),wind=field.diagnostics()))
     _write_json(out/'row.json',row);return row
 
 def main():
-    manifest=Path(sys.argv[1]);batch=json.loads(manifest.read_text());run=Path(batch['run']).resolve();assert run.is_relative_to((ROOT/'runs').resolve())
+    manifest=Path(sys.argv[1]).resolve();assert manifest.is_relative_to((ROOT/'runs').resolve());batch=json.loads(manifest.read_text());run=Path(batch['run']).resolve();assert run.is_relative_to((ROOT/'runs').resolve())
     plan=json.loads((run/'plan.json').read_text());assert time.time()<plan['deadline_epoch']
-    folder=manifest.with_suffix('');folder.mkdir(exist_ok=False);source=folder/'source';source.mkdir();files=[ROOT/'src/sailboat_routing/r7_dynamic.py',Path(__file__)]
+    folder=manifest.with_suffix('');folder.mkdir(exist_ok=False);source=folder/'source';source.mkdir();files=[ROOT/'src/sailboat_routing/r7_dynamic.py',ROOT/'src/sailboat_routing/r7_goal.py',Path(__file__)]
     for f in files:(source/f.name).write_bytes(f.read_bytes())
     _write_json(folder/'provenance.json',dict(commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),sources={str(f.relative_to(ROOT)):hashlib.sha256(f.read_bytes()).hexdigest() for f in files},workers=4,threads=1,gpu_hours=0,parent_pid=os.getpid(),started=time.time()))
     jobs=[]
