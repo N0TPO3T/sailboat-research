@@ -72,3 +72,9 @@ Implication: 文献接入时先明确参考量、实际生效时序、公式分�
 **Conclusion:** 静态路线接口把当前终点占用判成无路；动态任务中这可能只是暂时状态。R7临时接力恢复两个新实例，但名义到达外推误差也造成740秒代价。
 **Evidence:** docs/R7_RESEARCH_REPORT.md；runs/r7_dynamic_20261005T033700Z/no_route_diagnosis.json、goal_confirmation/final_overtaking_1__current_goal/trace.json。
 **Implication:** 分开诊断终点可用性、即时本船安全和长期可达性；保留原目标和实际历史。激活后长期保持可能放大错误预测，不因无碰撞就宣称规则合规。
+
+## 预测应包含参考的后续管理协议
+**Tags:** dynamic-prediction, causal-history, feedback, latency
+**Conclusion:** 相同位置参考在固定保持与普通反馈下可诱导不同航迹；预测必须复制已算动作、交付队列、历史重编码与恢复时序。匹配某个候选的低误差不能推广全部候选或实时性。
+**Evidence:** R8_METHOD_NOTE；runs/r8_closedloop_20261005T062543Z/branch_validation.json（115秒四分支前缀匹配，普通续跑复现；同参考不同保持的余量不同）、protocol_prediction_diagnostics.json（普通15s最大误差30.506m）与final_validation.json。
+**Implication:** 先验证无干预续跑及同协议执行段，再解释风估计/预测误差；保持周期也改变估计更新历史。计算冻结时钟不能当硬实时验证。

@@ -1,7 +1,7 @@
 # Project State
 
 ## 项目与唯一入口
-- 当前任务R8可执行动态避碰；范围/预算见CURRENT_PLAN.md。R7结果保持历史身份，旧冻结控制器/静态限制不适用。
+- R8研究完成，无运行中实验；当前无活跃研究线程。R8文档为最新入口，R7结果保持历史身份。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
@@ -90,3 +90,10 @@
 - 科学冻结b29e459；方法、结果、适用边界统一见docs/R7_METHOD_NOTE.md与docs/R7_RESEARCH_REPORT.md。采用终点占用时间窗+临时目标接力，未训练。
 - 原始/失败/旧协议全部保留：runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json；复现见同目录REPRODUCE.md。推荐仅作有限动态扩展，不作为CCDC主贡献或必要条件。
 - 当前动态协议85m圆代理、理想单目标观测，不代表完整COLREGs、真实船体扫掠或硬实时；历史80m结果不得混入最终确认。
+
+## R8 已验证结果与入口
+- 方法：GVO控制条件运动思想适配，独立因果风辨识＋同一低层闭环预测，采样位置参考保持/恢复协议；未训练网络。科学冻结29124b8，configs/r8_methods.json。
+- 冻结30新实例：reactive28/30，sampled15与hold60均30/30；新增2例为途中85m缓冲侵入避免，非终点恢复或已观测实体碰撞减少。长程3/5km四例为3/4对4/4；静态六例均安全。
+- sampled共同安全新集航时均值+15.29s、最大+267s；全轮单次规划43.46s，尚非硬实时。3次全候选低于规划guard的退化选择保留，不作安全保证。
+- docs/R8_METHOD_NOTE.md、docs/R8_RESEARCH_REPORT.md；runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md及final_validation.json；真实图集figures/index.html。源码/原始/预览包与本地校验见docs/R8_DELIVERY.json。
+- 建议动态作为有限扩展，R3原稿保留，仅paper/ccdc/R8_POSITIONING.md另存主张衔接；本轮未push。

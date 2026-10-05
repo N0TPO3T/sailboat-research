@@ -1,0 +1,40 @@
+"""Generate evidence-grounded R8 report after fixed batches finish."""
+import json,sys,time
+from pathlib import Path
+import numpy as np
+R=Path(sys.argv[1]).resolve();ROOT=R.parents[1]
+A=json.loads((R/'analysis.json').read_text());S=json.loads((R/'strata.json').read_text())
+assert all(A[x]['complete'] for x in ['confirmation','long','static_regression'])
+lines=['# R8 研究报告：候选执行预测的动态避碰适配','', '科学冻结 `29124b8`；方法与新实例规则先冻结，随后一次性完成新实例比较。原始证据根为`runs/r8_closedloop_20261005T062543Z/`。本报告只据实际物理闭环日志，不以审查意见作为收益证据。','', '## 问题、方法与开发取舍','', '主来源是Wilkie等人的GVO：评价控制所诱导的真实可执行运动。本轮把控制参数适配为位置参考及保持／恢复协议，用独立动力学、因果估计风和同一SAC-LSTM预测。本轮无训练，GPU使用0小时。完整公式、来源映射和真实决策见`R8_METHOD_NOTE.md`。','', '旧R7确认85集仍是已见开发材料。R7最终32/32的两个终点NoRoute恢复不覆盖其中动态侵入。本轮六个有区分力的开发任务，共享终点处理的反应式基线4/6安全到达，sampled15为6/6，新增来自mixed3、mixed7途中缓冲侵入；两者不是实体碰撞减少的证据。mixed6相对本来安全的反应基线多43秒、118.229m，余量由20.052m增至33.310m。740秒误干预旧例两组均382秒、实际航迹相同。','', '初版发现候选内部NoRoute错误外溢到真实任务，以及从滞后历史取当前参考的问题，已最小修正；中断批次保留且不纳入收益。后续全部冻结任务使用相同修正。早期固定参考预测与真实参考反馈不一致的误差留作诊断，不当成风估计失效。','', '## 固定新实例结果','', '30个新实例各运行reactive、sampled15、hold60。每个分层6场：普通横穿、普通追越、非冲突、终点附近及人工高压力横穿。生成器种子20261025/20261026；高压力分布由已知风险形态启发，在查看新结果前固定，不能解释为自然交通碰撞率。所有实例都保留，未按胜负筛选。目标轨迹外生、各方法同一时刻相同；风与初态按同一场景种子配对。','', '| 方法 | 安全到达 | 到达 | 动态侵入 | 静态侵入 | 实体碰撞 | 失败原因 |','|---|---:|---:|---:|---:|---:|---|']
+for v,d in A['confirmation']['methods'].items():lines.append(f"| {v} | {d['safe']}/{d['n']} | {d['arrived']} | {d['dynamic']} | {d['static']} | {d['collision']} | {d['reasons']} |")
+lines+=['','| 新实例分层 | reactive安全 | sampled安全 | hold60安全 | sampled激活场数 |','|---|---:|---:|---:|---:|']
+for f in sorted({k.split('/')[1] for k in S if k.startswith('confirmation/')}):
+ q=[S['confirmation/'+f+'/'+v] for v in ['reactive','sampled','hold60']];lines.append(f"| {f} | {q[0]['safe']}/6 | {q[1]['safe']}/6 | {q[2]['safe']}/6 | {q[1]['active']} |")
+lines+=['','| 相对reactive | 配对新增／损失 | 共同安全对数 | 航时差均值 | 中位数 | P90 | 最大 |','|---|---:|---:|---:|---:|---:|---:|']
+for v,q in A['confirmation']['comparisons'].items():lines.append(f"| {v} | +{q['gains']}/−{q['losses']} | {q['common_safe']} | {q['dt_mean']:.2f}s | {q['dt_median']:.2f}s | {q['dt_p90']:.2f}s | {q['dt_max']}s |")
+lines+=['','失败回合提前停止不能被解读为更快。另用任务时限给未安全完成的回合赋罚时（每公里1800秒），仅作为明确约定的全任务时效摘要，不替代原始完成时间：','', '| 方法 | 平均罚时s | 最大罚时s |','|---|---:|---:|']
+for v in ['reactive','sampled','hold60']:
+ q=[x for k,x in S.items() if k.startswith('confirmation/') and k.endswith('/'+v)];lines.append(f"| {v} | {np.mean([x['penalized_time_mean'] for x in q]):.2f} | {max(x['penalized_time_max'] for x in q):.0f} |")
+lines+=['','上述样本单位是场景，不是每秒状态或候选数。各分层只有6场，不给普遍安全概率或显著优势承诺。条件航时只在同一对均安全完成时比较；新增完成和损失单独列出。','', '## 简单协议、激活检验与连续任务','', 'hold60使用同一候选执行预测，但同时放大保持时间和重评估间隔；它是更粗的控制协议，不是单一因素的纯消融。开发mixed7中hold60为483秒，sampled为540秒；共同激活时目标在195秒转向−30°的开发检验中，hold60为453秒、sampled为396秒，两者安全，reactive侵入。不能从一个成功方向断言15秒反馈普遍更好。','', '已知mixed3在122秒转向15°时，sampled已于115秒进入、116秒交付，130秒再评估，433秒安全到达；reactive侵入。共享3秒参考交付实验中，sampled145秒进入、148秒交付、190秒解除，407秒安全到达，reactive侵入。这些是真正激活检验，但都是开发实例，不是大范围鲁棒性或计算超时安全证明。','', '| 批次 | 方法 | 安全到达 | 动态／静态／实体违规 | 激活回合 |','|---|---|---:|---:|---:|']
+for batch in ['long','static_regression','timing_controls']:
+ if batch not in A:continue
+ for v,d in A[batch]['methods'].items():lines.append(f"| {batch} | {v} | {d['safe']}/{d['n']} | {d['dynamic']}/{d['static']}/{d['collision']} | {d['active_episodes']} |")
+lines+=['','长程3公里横穿：reactive512秒侵入后终止，sampled929秒安全到达，hold60为877秒；5公里横穿三组均安全，reactive1306秒、sampled1332秒、hold60 1516秒。两个追越场景均未激活，三组航迹相同。长程为3/5km各横穿与追越，无中途重置；图05记录双方同步时间。静态六例为已见回归，不能称新静态泛化。错时控制保持已知mixed3目标船的直线路径和速度，将通过时刻偏移±150秒，身份为开发对照。','', '实际追越单列一个可核验的几何代理：起点本船位于目标地速方向后方，安全完成时在该方向至少领先85m。它不是COLREGs“最终驶过让清”的完整法律或操作判定，未建成完整规则监督器：','', '| 批次/分层/方法 | 几何追越代理完成数/场数 |','|---|---:|']
+for k,q in S.items():
+ if ('overtak' in k) and (k.startswith('confirmation/') or k.startswith('long/')):lines.append(f"| {k} | {q['passed_and_clear_proxy']}/{q['n']} |")
+lines+=['','没有把机动船互遇右转规则机械施加给纯帆船。本轮采用单个非合作低速目标、理想当前观测；规则责任、实际安全和任务到达不同。','', '## 预测机制与代价','', '115秒四分支完整前缀和第一个已算动作均相同；普通分支完整记录复现到175秒。选定+90°参考预测/实际60秒最小余量52.940/52.956m，15秒位置误差0.0245m；普通余量预测11.482m、实际12.438m，均为正但低于30m规划guard。继续当前参考的60秒误差10.350m，保留这个不利结果。四分支来自同一源回合，不能算四个独立验证。','', '在线预测的15秒执行段可与实际比较；之后尾部假定恢复普通反馈，而在线可能再次避让，60秒尾误差混合模型误差与后续决策差异。`protocol_prediction_diagnostics.json`按真实保持周期保存名义／进入／保持／退出窗口，窗口重叠相关。未出现的错误类型只写未观察，不视为被排除。','', '| 批次 | sampled单次规划最大秒 | hold60单次最大秒 |','|---|---:|---:|']
+for batch in ['development2','confirmation','long']:
+ m=A[batch]['methods'];lines.append(f"| {batch} | {m.get('sampled',{}).get('max_planning',0):.3f} | {m.get('hold60',{}).get('max_planning',0):.3f} |")
+lines+=['','规划时冻结物理时钟，因此超过15秒的计算不能被解释为实际15秒可交付。本轮是非实时闭环仿真结果。模型依赖已知动力学、局部恒定风拟合和目标匀速假设；观测延迟未验证；有限候选全部不可行时仅尽力选最大余量，不保证可恢复。圆代理和逐秒相对线段安全检查沿用评价协议。','', '## 图表、复现与论文定位','', '图01为已知真实侵入的闭环恢复；图02为同前缀候选预测／实际；图03自动选择新集的安全损失优先、否则最大航时代价案例；图04包含所有新实例分层和共同安全航时尾部；图05为完整3/5km连续航迹。图的选择规则不删除任何结果。全部PNG、SVG、数据在运行根`figures/`，`index.html`可离线打开。','', '可运行配置`configs/r8_methods.json`，各完整批次配置和源码快照在运行根。参见`EVIDENCE_INDEX.md`的独立复跑命令；不覆盖有截止时间的旧运行。原始日志另打包，权重继承已有R6资产，R3英文初稿保持不变。','', '建议动态部分作为有闭环机制证据的有限扩展，暂不作为本篇投稿必须成熟的主方法。已知动力学下候选执行预测有实证作用，但计算延迟、保守干预成本、理想观测和小样本限制仍在。不能宣称实时系统、普遍安全或完整COLREGs合规。']
+
+lines+=['','## 新集机制核查补充','','人工高压力层reactive为4/6，sampled和hold60均6/6；其余24个场景三组均安全到达。新增例mixed_pressure_2：reactive219秒侵入−1.225m后NoRoute，sampled444秒到达、余量43.589m；mixed_pressure_4：reactive300秒侵入−0.872m后NoRoute，sampled477秒到达、余量38.455m。反应基线在侵入后因NoRoute终止，没有观测后续实体碰撞，也不推断强制继续会怎样。准确结论是减少缓冲侵入并恢复任务完成。','','保守干预最坏例endpoint_5：reactive317秒、余量12.522m；sampled584秒、余量44.394m，增加267秒；hold60为582秒。sampled先避让，随后在322–510秒记录终点占用；这包含机动与后续终点可用性的交互，不能单独归因于15秒保持。普通18场（横穿、追越、非冲突）三组均无高层干预。sampled总计22/30场完整trajectory与reactive逐值一致。新增成功和未改变执行均保留，不能把未激活成功归因于模块。','','新集sampled进入／重评估／释放执行窗口最大位置误差分别1.039/0.228/0.626m；普通窗口最大30.506m。hold60普通窗口最大134.947m，发生endpoint_1的341秒窗口，其预测/实际动态余量138.240/146.171m，尚有较大间距。sampled同状态15秒误差30.506m，预测/实际余量169.561/178.971m。这个反例说明30m规划guard不是经证明的模型误差上界。未在这些选中窗口观察到预测安全而实际侵入，不能证明此类错误不存在；未运行的候选和未来未见交通不在结论内。','','新集完整30回合累计CPU时间：reactive403.882秒、sampled2640.783秒、hold60 1047.182秒；这是各进程CPU时间之和，不是并行墙钟。简单hold60以较少计算得到相同安全完成数，但共同安全航时P90代价更大（94.4对43.6秒），最大代价近似（265对267秒）。15秒配置保持冻结主方案身份，不据测试结果重新调参；没有证据称它全面优于60秒。']
+
+
+res=json.loads((R/'resource_receipt.json').read_text())
+lines.insert(2,'本轮形成了可运行的GVO思想适配方案，改的是高层候选执行预测与滚动参考管理，未训练网络。冻结新集从28/30提高到30/30，新增两例为途中缓冲侵入避免；独立长程从3/4提高到4/4。代价包括新集共同安全航时平均+15.29秒、最大+267秒，以及长程单次规划43.46秒。建议作为有限动态扩展，不宣称实时或普遍安全。')
+lines+=['','## 资源与交付状态','',f"从R8启动至最后科学回合完成的墙钟为{res['wall_to_science_completion_s']/3600:.3f}小时，在24小时上限内；最多4个单数值线程CPU实验进程，GPU0小时、训练0步。已保存回合CPU累计{res['recorded_cpu_seconds']/3600:.3f}小时，不含中断缺陷批次未写出的CPU时间，因此不是精确总CPU账单。全部实验已结束。",'', '原始R1–R7资产与R3稿保留；本轮不push。R8_DYNAMIC_preview.zip包含报告、图集、数据、配置和交接快照；R8_raw_results.tar.gz保存全量原始证据，R8_source.zip保存源码及必要继承权重。传输SHA256与本地文件位置见docs/R8_DELIVERY.json。']
+
+
+lines+=['','## 退化分支与预测比较的限制','','冻结批次中有3次all_predicted_infeasible，均完整预测但低于额外30m guard：新集hold60 mixed_pressure_3 t310选择−90°，预测/实际60s余量28.169/28.197m；长程hold60 5km t799为28.264/28.552m；长程sampled 3km t551选择普通反馈，预测60s余量28.617m，实际前15s为84.415m（时域不同，不直接作余量误差）。这是预设尽力退化分支，实际未侵入不等于约束永远满足。三例、源哈希核查和错时轨迹相等记录见final_validation.json。','','新集922个选中预测窗口的复算不是922个独立任务。其中728个sampled、194个hold60；比较长度取协议周期、预测到达和实际终止的最短共同前缀，53个窗口不足名义周期（sampled24、hold6029）。hold60有3个预测提前到达而实际未到，其中underway_crossing_2 t310只覆盖28/60秒、实际剩余55秒；不把截断窗口称作完整60秒验证。全回合安全另由真实轨迹独立评价。未观察到预测安全但真实动态或静态侵入。ordinary最大误差对比也不是纯时域消融：更新周期改变了风拟合warm-start历史，两组341秒的估计风不同；该例两组始终nominal且实际轨迹一致，因此其误差不能归因于之后发生避让。复核详情见review-stage/final_evidence_checks.md。同家族审查仅用于发现错误，不是科学认证。']
+
+(ROOT/'docs/R8_RESEARCH_REPORT.md').write_text('\n'.join(lines)+'\n')

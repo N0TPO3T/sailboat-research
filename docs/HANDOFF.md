@@ -73,3 +73,9 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 ## R8启动
 R8: executable underway dynamic avoidance with candidate-conditioned prediction and rolling feedback. R6/R7 are baselines, not frozen constraints. High/low-level, causal memory, interface and training may change; no future truth online, no unassigned GPU, no automatic push.
 当前入口CURRENT_PLAN.md；runs/r8_closedloop_20261005T062543Z/plan.json。R7 confirmation85真实侵入、最终终点恢复与740秒代价分别验证，全部R7数据现为开发材料。
+
+## R8 completed — 2026-10-05
+- 先读R8_METHOD_NOTE.md、R8_RESEARCH_REPORT.md。科学冻结29124b8；GVO思想的控制条件轨迹采样适配，无新训练。
+- 新集28/30→30/30为两例途中缓冲侵入避免；长程3/4→4/4。保留新集最大+267s、规划43.46s和3次guard退化分支，动态建议有限扩展。
+- runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md列全部源码/配置/分支/原始结果；R8_DYNAMIC_preview.zip、R8_raw_results.tar.gz、R8_source.zip及R8_DELIVERY.json用于恢复。
+- 全部实验结束，无自动push或新训练；旧资产和本机未提交上下文修改保留。服务器HANDOFF/STATE快照随预览包交付。
