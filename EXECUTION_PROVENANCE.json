@@ -1,0 +1,24 @@
+{
+  "scope": "No migration commit existed during initial runs; immutable inherited sources and assets were hashed before execution.",
+  "baseline": "source_identity.json",
+  "config_sha256": "a6c9149c7eb1227e5f5f4cc53f244de31a4d32fa8db9123a762aa7e7e5659aaf",
+  "post_navigation_fixes": [
+    "source-exact progress/reward extraction; all recorded policy inputs verified bitwise unchanged",
+    "Gym action/observation space attributes",
+    "camera following; no effective freeze assumption; hidden water visual for underwater inspection",
+    "cooperative run lock and archive-on-full-verification"
+  ],
+  "raw_records": "preserved without rewrite",
+  "exact_reward_recalculation": "output/reward_recomputed_*.json",
+  "final_smoke_physics_max_difference": 0.0,
+  "commands": [
+    "run.sh --stage response",
+    "run.sh --stage policy",
+    "run.sh --stage policy --resume",
+    "run.sh --stage capture",
+    "python edge_checks.py",
+    "python audit.py",
+    "python plots.py"
+  ],
+  "logs": "logs/; failures preserved"
+}

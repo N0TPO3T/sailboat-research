@@ -1,0 +1,142 @@
+diff --git a/CURRENT_PLAN.md b/CURRENT_PLAN.md
+index b928b81..d7bbb11 100644
+--- a/CURRENT_PLAN.md
++++ b/CURRENT_PLAN.md
+@@ -2,5 +2,7 @@
+ 
+ No active research thread.
+ 
+-R9 scientific work completed. Results, limits and recovery pointers: docs/R9_METHOD_NOTE.md, docs/R9_RESEARCH_REPORT.md, paper/ccdc/R9_POSITIONING.md and runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md.
+-No experiments remain active. Do not automatically tune, expand tests or push. New research requires the next user task; previous rounds remain historical evidence.
++A方案公平对照及新任务验证已完成；投稿保持暂停。
++预设继续门槛未通过，停止当前详细预测安全收益路线，不追加调参、样本或模块。
++证据与全部结果：runs/a_fair_20261105/RESULTS_ZH.md、RESULTS.json、AUDIT.json、completion.json。
++保留原稿、所有旧/新结果、汇总报错及分析恢复记录；B线不变。无运行中的本轮实验，不push、不投稿。
+diff --git a/PROJECT_MEMORY.md b/PROJECT_MEMORY.md
+index 1628f22..3cc49c6 100644
+--- a/PROJECT_MEMORY.md
++++ b/PROJECT_MEMORY.md
+@@ -84,3 +84,21 @@ Implication: 文献接入时先明确参考量、实际生效时序、公式分
+ **Conclusion:** 六个同状态候选和四个理想交付整回合可逐值等价，但优化后的实测交付时刻会改变真实闭环分支；不能从加速推导安全收益。预测必须包含等待期间实际执行的参考和应用后的保持钟；匹配协议仍不能保证预测准确。
+ **Evidence:** runs/r9_timing_20261005T085308Z/profile_summary.json、full_replay_equivalence.json、mechanism_case.json、sensitivity/confirm_mixed_3__slot30/trace.json；docs/R9_METHOD_NOTE.md。
+ **Implication:** 分开验证同输入数值等价与带时钟的实际闭环；记录ready/apply与真实等待动作。明确区分调度效应、候选选择效应和模型误差，不用理想交付或一个低误差分支代替时延/安全验证。
++
++## 障碍输入归因需要匹配候选集合
++**Tags:** obstacle-encoding, attribution, matched-control, R10
++**Conclusion:** R6边界输入同时改变可见集合、排序和数值。R10匹配集合/顺序的原始中心数值复制四个历史救回；54/54不能单独证明边界公式必要。
++**Evidence:** runs/r10_decision_20261005/static_development、actual_state_interface_check.json、comparisons.json；docs/R10_RESEARCH_REPORT.md。
++**Implication:** 数值变换主张先匹配信息集合/排序；截断数值又是不同干预。不能将整项适配收益归给单公式。
++
++## 避让选择与干预触发的价值不同
++**Tags:** dynamic-reference, trigger, counterfactual, R10
++**Conclusion:** 相同nominal预测下候选搜索可优于触发后保持，但不证明应该触发。R10冻结新pressure0中保持侵入，搜索与reactive都安全；搜索更慢。
++**Evidence:** runs/r10_decision_20261005/dynamic_same_state.json、confirmation、comparisons.json；docs/R10_METHOD_DECISION.md。
++**Implication:** 同时保留不干预/反应式对照，分别报告选择价值、触发代价和交付时序。不能用较弱保持规则失败宣称普遍避碰收益。
++
++## 详细预测优势应先经执行协议匹配的简单对照检验
++Tags: calibration, strong-baseline, prediction, A-route, stop-rule
++Conclusion: 原低阶模型按短时不变参考校准；保持结构/网格/guard不变，仅用开发数据匹配60秒保持/恢复协议校准，就消除了本项目详细模型在旧任务上的额外安全完成。冻结的新配对任务也未保留额外安全完成；不能再沿用旧单例优势论证详细模型必要。
++Evidence: runs/a_fair_20261105/EXPERIMENT_PLAN.md、calibration.json、RESULTS.json、AUDIT.json。
++Implication: 比较模型复杂度前匹配校准覆盖与实际执行；本路线停止，不围绕旧/新测试结果重调直到获胜。新任务仍有局部航时收益，保留并限定，不推导普遍等价或所有详细预测无效。
+diff --git a/PROJECT_STATE.md b/PROJECT_STATE.md
+index 299bf7f..a57059b 100644
+--- a/PROJECT_STATE.md
++++ b/PROJECT_STATE.md
+@@ -1,7 +1,20 @@
+ # Project State
+ 
++## 当前 A 线（2026-11-05）
++- 投稿保持暂停；公平低阶对照和新任务配对验证已完成，按预设门槛停止当前详细预测安全收益路线。权威结果与原始证据：runs/a_fair_20261105/RESULTS_ZH.md、RESULTS.json、AUDIT.json、completion.json。
++- 原科学实现与权重复制隔离；已核对四个核心文件与原R12冻结哈希相同。本轮最多4单线程CPU，无GPU/训练，所有工作进程已退出。72次新航行指标复算通过；原汇总器null格式报错保留并以只读分析修复，无导航重跑。B线不变。
++
++- AB工作包已完成：A在paper/ccdc/track_A_submit；B在/home/ot/Students/hs/sailboat-track-b，完成低速迎风恢复有限验证、三位独立首审与复核和实际交付。无运行实验；最新事实与入口见docs/AB_STATUS.md。
++
+ ## 项目与唯一入口
+-- R9研究已完成；当前无活跃研究线程。先读docs/R9_METHOD_NOTE.md和docs/R9_RESEARCH_REPORT.md，R6/R8历史证据保留。
++- 当前工作切换为AB独立并行：A在paper/ccdc/track_A_submit完成有限仿真应用稿，B在/home/ot/Students/hs/sailboat-track-b验证新任务与方法。共享24h/最多4单线程实验进程，预算见docs/ab_20261007/SHARED_BUDGET.json；旧资产只读，GPU权限确需时核实，不继承旧研究限制。
++- 当前论文的中文问题—方法—证据导读：deliverables/SailBoatRL_asset_digest_20261007/00_START_HERE.html；完整本地资产包和覆盖范围见docs/HANDOFF.md。
++- R13中文全文阅读入口：paper/ccdc/r13_revision/manuscript_zh.md；对应round04英文正文，仅翻译，不改变英文审查身份或实验。
++- R13完成4轮模拟审查（12份原始意见）；原A/B/C对round04同版均Accept，非CCDC正式录用。用户确认Chao Yang来源及研究使用/评审提供同意已落实；14D期刊与18D资产区别保留。当前入口paper/ccdc/r13_revision/FINAL_REVIEW_STATUS.md及AUTHOR_NOTES_ZH.md；无新增实验/训练/图表重画，无在跑任务。
++- R12 LaTeX可编辑版：paper/ccdc/r12_revision/latex/main.tex与R12_LaTeX.zip；复用用户IEEEtran模板及原图。已检查源码结构，内置编译器平台目录错误、无外部TeX，尚未成功编译；旧7页Word导出PDF保持原身份。
++- R12定向补证与第二稿已完成：docs/R12_REVISION_REPORT.md及paper/ccdc/r12_revision/（可编辑Word、实际7页PDF、真实图表与分离复核记录）。原S15与R11保持，新增有限低阶对照/guard/固定协议核验；结果和限制只在报告维护。原始run为runs/r12_revision_20261006；无运行中实验、训练、GPU或自动push。
++- R11完整第一版论文已交付：paper/ccdc/r11_draft/manuscript.md、manuscript.docx及实际6页PDF；作者说明与一次模拟评审回应同目录，无新实验。
++- R10方法与论文范围选型完成。最终本篇中心见docs/R10_METHOD_DECISION.md及paper/ccdc/METHOD_SCOPE.md；历史R6/R8/R9建议已由该决策替代，不改旧结果。
+ - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
+ - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
+ - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
+@@ -10,7 +23,13 @@
+ - 研发基点4e86b74；V0运行实现857ff57；V0.2候选裕量实现500618a，参数默认0。源码镜像与大产物分开恢复，旧归档回执见docs/DELIVERY.json；新结果不在该历史归档中。
+ - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
+ 
+-## R9 当前结果入口
++## R10 当前选型入口
++- 选择GVO思想的候选条件化位置参考执行预测，限定理想计算闭环仿真；不是更优导航、实时部署或安全保证。R6输入/控制器为继承设置，R9时延为单列边界。
++- 两项判别、一次冻结确认和实际分离作者/模拟审稿交锋结束。核心证据与代价只在docs/R10_RESEARCH_REPORT.md维护；完整run为runs/r10_decision_20261005。
++- 篇内未解是何时干预值得代价；hold60竞争保留。下一阶段为证据整理与写作，未授权自动重训、调参、扩场景或push。所有R10实例现已见。
++- 新源码/原始证据/本地预览独立交付，保留本地旧工作树修改；恢复索引run/REPRODUCE.md。GPU0，无运行中实验。
++
++## R9 历史结果入口
+ - 主方案为GVO思想的候选闭环评价＋25秒计算时隙／26秒参考生效；等待期真实低层反馈继续，预测同样等待；普通接力保留，仅避让保持60秒。无训练，18D旧资产不变。
+ - 新短12例主方案与reactive均安全，无新增安全收益，主方案平均多57.42s；新3km保留一例避让收益，5km共同安全多32s。不是普遍优于reactive。
+ - 旧mixed7同状态消融支持等待预测改变选择；mixed3收益仅为协议效应。30秒等待反例预测+82.692m但实际−0.949m，不能宣称延迟鲁棒或安全保证。
+diff --git a/docs/HANDOFF.md b/docs/HANDOFF.md
+index 1f28b03..78e9afc 100644
+--- a/docs/HANDOFF.md
++++ b/docs/HANDOFF.md
+@@ -88,3 +88,56 @@ R9: retain useful candidate-conditioned closed-loop prediction under explicit co
+ - 入口R9_METHOD_NOTE.md、R9_RESEARCH_REPORT.md；冻结及原始索引runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md，当前无活跃实验/研究线程。
+ - 主方案25秒时隙、26秒生效，等待期间实际反馈继续；新短无安全gain且平均+57.42s，新3km保留一例收益。30秒等待有预测安全/实际侵入反例，动态仅建议有限扩展。
+ - R9_TIMING_preview.zip、R9_raw_results.tar.gz和R9_source.zip用于恢复；原始资产/R3稿/历史结果保持，无新训练、无自动push。本机未提交上下文不覆盖，包内给服务器快照。
++
++## R10启动 — 2026-10-05
++R10 active: final method and paper scope selection. Static adaptation, dynamic prediction and justified limited combination compete; prior recommendations are hypotheses, not constraints. Model/interface changes allowed but not required. No future truth, relaxed evaluation, weakened baselines, automatic push or submission. Max24h, max4 single-thread CPU workers shared; GPU unassigned and unused. Two separated author/reviewer sessions, same-family provisional simulation, no review score endpoint. All R1-R9 viewed data are development for R10. Historical assets and local dirty files preserved. Canonical user specification: docs/prompt/SailBoatRL_R10_ARIS_CCDC_Method_Decision.md. Run: runs/r10_decision_20261005.
++
++## R10 完成 — 2026-10-05
++- 首读[R10方法决策](R10_METHOD_DECISION.md)及[R10研究报告](R10_RESEARCH_REPORT.md)。本篇选择候选执行预测的位置参考适配，限定理想计算仿真；不宣称更优导航、实时或安全保证。范围见paper/ccdc/METHOD_SCOPE.md，R3底稿保留。
++- 静态匹配中心编码复制关键救回，不能把边界公式作为独立必要贡献；动态简单保持对照和同状态分歧支持有限参考选择作用。新确认对reactive无安全增益且有271秒代价，篇内未解为何时值得干预；hold60与R9延迟反例必须保留。
++- 原始证据、两轮实际模拟评审和复现索引：runs/r10_decision_20261005/REPRODUCE.md；R10_CCDC_DECISION_preview.zip、R10_raw_results.tar.gz、R10_source.zip及R10_DELIVERY.json用于取回。87新回合均结束，GPU0，无训练。
++- 下一阶段为证据整理与写作，不自动继续方法搜索；R10实例现已见。服务器状态快照随包提供，本地旧修改不覆盖，不自动push或投稿。
++
++## R11 第一版论文完成 — 2026-10-05
++- 入口paper/ccdc/r11_draft/：完整英文manuscript.md、用户官方Word模板manuscript.docx、实际导出6页manuscript.pdf；AUTHOR_NOTES_ZH.md说明问题—假设—方法—效果及待确认项。
++- 三张真实来源图／接口示意、evidence_check.md、一次分离模拟REVIEW.md和AUTHOR_RESPONSE.md、场景及源码/权重哈希索引随R11_CCDC_DRAFT_preview.zip交付。
++- R8历史／R10重叠机制／R10新确认分别报告；新确认无reactive安全完成增益且最大多271秒。无目标转向、理想计算边界明确；R9未合入主方法。
++- 无新增实验、训练或push；R3底稿与科学资产保持。下一阶段为作者修改及许可／政策确认，不自动研究扩张。
++
++## R12 定向补证完成 — 2026-10-06
++- 首读docs/R12_REVISION_REPORT.md与paper/ccdc/r12_revision/manuscript.md；已交付用户Word模板的可编辑DOCX和实际7页PDF，R11不覆盖。
++- 新冻结24场R/S15/L安全19/24/23；详细预测相对L多救回1场但共同安全均值+7秒、最大+308秒。完整限定、guard敏感性、106m误差与子步核验见报告，不宣称普遍更优、30m保证或实时安全。
++- 原始证据runs/r12_revision_20261006；本地R12_REVISION_preview.zip与R12_raw_results.tar.gz保留代码/配置/原始轨迹和必要旧输入；一次分离模拟复核及作者回应在稿件目录。
++- 所有预定任务结束，原科学代码、权重、历史结果保持；无训练、GPU、push或自动研究扩张。资产归属/许可与作者项集中待确认。
++
++- R12 LaTeX可编辑版：paper/ccdc/r12_revision/latex/main.tex与R12_LaTeX.zip；复用用户IEEEtran模板及原图。已检查源码结构，内置编译器平台目录错误、无外部TeX，尚未成功编译；旧7页Word导出PDF保持原身份。
++
++## R13 正文修订与模拟三审交付 — 2026-10-07
++- 首读paper/ccdc/r13_revision/AUTHOR_NOTES_ZH.md与FINAL_REVIEW_STATUS.md；完整8页Word PDF、可编辑Word和LaTeX、补充材料及真实图表已交付。
++- 两轮完整独立审查＋一轮最终校样，9份原始意见；A/B/C最终均Major Revision，未三审通过。剩余人工来源归属及访问确认，技术问题已关闭；无新证据不重复审查。
++- 原24场比较保持R19/L23/S15 24安全；相对L多1场、共同安全平均+7秒/最坏+308秒，不支持普遍优势。仅增加3次原任务同指令子步核验（42.956秒、1CPU、0GPU），无新独立任务。
++- R13_CCDC_REVIEW_preview.zip与独立R13_REPRODUCTION_internal.zip含交付/内部恢复证据；183文件身份和72轨迹恢复已验证，不代表公开发布授权。科学旧资产不改，无训练/push/在跑实验。
++
++## R13 资产确认续办与第四轮复核完成 — 2026-10-07
++- 用户明确确认Chao Yang提供的继承动力学、18D Actor及normalizer可用于本研究并可完整提供给编辑/审稿人；此前来源/许可待确认状态已过期，不重复要求授权。
++- 正式引用Yang et al., Applied Ocean Research 175 (2026)105246，DOI10.1016/j.apor.2026.105246；期刊14D与实际18D注意力资产独立说明，代码/检查点/归一化身份保持，不转移期刊成绩，不称已公开发布。
++- 原A/B/C在第4轮对同一稿件均实际Accept；累计12份意见，FINAL_REVIEW_STATUS.md及review/round_04记录身份、集中回应和真实判定。内部模拟不等于CCDC录用。
++- 更新后的8页PDF、Word、LaTeX、Supplement及预览包位于paper/ccdc/r13_revision。183成员/72轨迹原包重新核验；本续办无新实验、训练、模型/方法改动或图表重画。
++- 本稿作者/单位/通讯/资助仍需人工填写；不照抄来源论文。无活动研究线程、后台实验、push或投稿。
++
++- 中文阅读稿已另存paper/ccdc/r13_revision/manuscript_zh.md，对应round04英文正文，保留6组公式、6图、2表及9条原参考文献；仅为翻译阅读版，未另行模拟审查，英文定稿及实验不变。
++
++- 当前论文资产导读已生成：deliverables/SailBoatRL_asset_digest_20261007/00_START_HERE.html（离线中文导读）；约49MB完整资料包位于Windows同步目录deliverables/SailBoatRL_assets_and_paper_guide_20261007.zip。包含当前方法/论文/结果/分析、183成员复现包与72主轨迹、R12原始归档及历史报告；不声称覆盖全部旧运行。仅整理，无新实验或正式稿变更。
++
++## AB独立并行工作包 — 2026-10-07
++- 两个实际子agent：ab_track_a与ab_track_b；A只写track_A_submit，B独立sailboat-track-b；旧方法/权重/结果只读。共享截止2026-10-08T15:13:40Z，4个单线程实验进程全部先分配B，A默认0。
++- 本机滞后R6状态已纠正并保留同步前原文；服务器原状态同样保存于docs/ab_20261007/reconciliation。不reset/clean/pull覆盖，不改其他学生或共享环境。
++
++## AB：A独立交付
++A已完成paper/ccdc/track_A_submit；8页PDF SHA256 bf702658243506e24f4088c66e16b8cf3a91532828850d71d939f121a25a3057。本机/服务器一致，无新实验。B仍在独立驻留任务筛选，100m首批未发现强简单基线缺口；不得将其写成方法成功。当前状态见AB_STATUS.md。
++
++## AB最终交付（2026-10-08，Asia/Shanghai）
++A已独立交付paper/ccdc/track_A_submit（Word、实际8页PDF、LaTeX源、补充与ZIP），原R13科学资产未改。
++B在/home/ot/Students/hs/sailboat-track-b完成低速迎风恢复有限研究：风险release98.24%、center11.47%、匹配luff97.74%；强对照差异小且有成本/反例。三位独立首审和原身份复核完成，必需项关闭，适用边界保留。
++B ZIP仅本地C:/Users/74095/hs/SailBoat/sailboat-track-b/B_RESEARCH_preview.zip；服务器保留展开材料与PACKAGE_RECEIPT.json。资源调度疏漏/并发证据边界见B/docs/RESOURCE_SCHEDULING_INCIDENT.json。
++一页状态docs/AB_STATUS.md。建议保留A、B独立组织由人类决定；无新活跃线程、无剩余作业、无push或投稿。

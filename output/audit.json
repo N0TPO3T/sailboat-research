@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "scene": "clear",
+      "backend": "original",
+      "steps": 123,
+      "observations_exact": true,
+      "source_progress_max_error": 0.0,
+      "source_reward_max_error": 0.0,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    },
+    {
+      "scene": "clear",
+      "backend": "yara",
+      "steps": 171,
+      "observations_exact": true,
+      "source_progress_max_error": 2.6464462280273438e-05,
+      "source_reward_max_error": 1.2755393981933594e-05,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    },
+    {
+      "scene": "single",
+      "backend": "original",
+      "steps": 139,
+      "observations_exact": true,
+      "source_progress_max_error": 0.0,
+      "source_reward_max_error": 0.0,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    },
+    {
+      "scene": "single",
+      "backend": "yara",
+      "steps": 900,
+      "observations_exact": true,
+      "source_progress_max_error": 2.9027462005615234e-05,
+      "source_reward_max_error": 1.2755393981933594e-05,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    },
+    {
+      "scene": "switch",
+      "backend": "original",
+      "steps": 147,
+      "observations_exact": true,
+      "source_progress_max_error": 0.0,
+      "source_reward_max_error": 0.0,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    },
+    {
+      "scene": "switch",
+      "backend": "yara",
+      "steps": 900,
+      "observations_exact": true,
+      "source_progress_max_error": 2.8371810913085938e-05,
+      "source_reward_max_error": 1.2588500976296046e-05,
+      "safety_recomputed": true,
+      "outcome_recomputed": true
+    }
+  ],
+  "all_policy_inputs_exact": true,
+  "warning": "Original Yara run rewards used float32 norm before source-exact progress extraction was fixed. Raw logs preserved; exact corrected rewards are separate. Policies and safety do not consume rewards, and every actual policy observation is bitwise unchanged."
+}

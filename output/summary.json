@@ -1,0 +1,80 @@
+[
+  {
+    "scene": "clear",
+    "backend": "original",
+    "success": true,
+    "reason": "arrived",
+    "steps": 123,
+    "final_distance_m": 7.378934870754299,
+    "path_length_m": 496.8472361653252,
+    "switches": 0,
+    "wall_s": 4.294998008059338,
+    "min_safety": null
+  },
+  {
+    "scene": "clear",
+    "backend": "yara",
+    "success": true,
+    "reason": "arrived",
+    "steps": 171,
+    "final_distance_m": 9.613215655366924,
+    "path_length_m": 500.1665765753354,
+    "switches": 0,
+    "wall_s": 35.28204061114229,
+    "min_safety": null,
+    "max_clock_error": 0,
+    "motor_zero": true
+  },
+  {
+    "scene": "single",
+    "backend": "original",
+    "success": false,
+    "reason": "arrived_with_buffer_violation",
+    "steps": 139,
+    "final_distance_m": 8.93779289099103,
+    "path_length_m": 550.6017220499227,
+    "switches": 0,
+    "wall_s": 5.0929905460216105,
+    "min_safety": -14.907946457744103
+  },
+  {
+    "scene": "single",
+    "backend": "yara",
+    "success": false,
+    "reason": "time_limit",
+    "steps": 900,
+    "final_distance_m": 397.32537295499264,
+    "path_length_m": 885.8059650824864,
+    "switches": 0,
+    "wall_s": 195.22399894101545,
+    "min_safety": 17.932632511502106,
+    "max_clock_error": 0,
+    "motor_zero": true
+  },
+  {
+    "scene": "switch",
+    "backend": "original",
+    "success": true,
+    "reason": "arrived",
+    "steps": 147,
+    "final_distance_m": 9.634380397940989,
+    "path_length_m": 556.005809252538,
+    "switches": 1,
+    "wall_s": 5.660995762096718,
+    "min_safety": null
+  },
+  {
+    "scene": "switch",
+    "backend": "yara",
+    "success": false,
+    "reason": "time_limit",
+    "steps": 900,
+    "final_distance_m": 77.32464894755516,
+    "path_length_m": 600.2655693320934,
+    "switches": 1,
+    "wall_s": 236.015843128087,
+    "min_safety": null,
+    "max_clock_error": 1.1368683772161603e-13,
+    "motor_zero": true
+  }
+]

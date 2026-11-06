@@ -1,0 +1,18 @@
+[
+  {
+    "filename": "libMissionControlPlugin.so",
+    "name": "mission_control_eboat4"
+  },
+  {
+    "filename": "libSailControllerPlugin.so",
+    "name": "sail_control_interface_eboat4"
+  },
+  {
+    "filename": "libRudderControllerPlugin.so",
+    "name": "rudder_control_interface_eboat4"
+  },
+  {
+    "filename": "libPropulsorControllerPlugin.so",
+    "name": "propulsor_control_interface_eboat4"
+  }
+]

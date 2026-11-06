@@ -1,0 +1,44 @@
+[
+  {
+    "scene": "clear",
+    "backend": "original",
+    "opposite_sail_steps": 0,
+    "steps": 123,
+    "mean_sail_target_actual_gap_deg": 3.901066628665378e-07
+  },
+  {
+    "scene": "clear",
+    "backend": "yara",
+    "opposite_sail_steps": 6,
+    "steps": 171,
+    "mean_sail_target_actual_gap_deg": 1.7940220333490198
+  },
+  {
+    "scene": "single",
+    "backend": "original",
+    "opposite_sail_steps": 0,
+    "steps": 139,
+    "mean_sail_target_actual_gap_deg": 5.016182074366069e-07
+  },
+  {
+    "scene": "single",
+    "backend": "yara",
+    "opposite_sail_steps": 845,
+    "steps": 900,
+    "mean_sail_target_actual_gap_deg": 165.37963804309234
+  },
+  {
+    "scene": "switch",
+    "backend": "original",
+    "opposite_sail_steps": 0,
+    "steps": 147,
+    "mean_sail_target_actual_gap_deg": 2.4978847917845846e-07
+  },
+  {
+    "scene": "switch",
+    "backend": "yara",
+    "opposite_sail_steps": 865,
+    "steps": 900,
+    "mean_sail_target_actual_gap_deg": 159.91245731012293
+  }
+]

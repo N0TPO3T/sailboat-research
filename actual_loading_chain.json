@@ -1,0 +1,38 @@
+{
+  "src/sailboat_routing/runtime.py": {
+    "current": "3096914a39e9cd33bba44caaff7dbd617263ca93f7d84f75cf64327845b234e1",
+    "last_executed": "3096914a39e9cd33bba44caaff7dbd617263ca93f7d84f75cf64327845b234e1"
+  },
+  "src/sailboat_routing/continuous.py": {
+    "current": "2971ab5efe3e70757418e1d8140782f5cd6b29a0f6291c360eadc0871f67a3ce",
+    "last_executed": "2971ab5efe3e70757418e1d8140782f5cd6b29a0f6291c360eadc0871f67a3ce"
+  },
+  "src/sailboat_routing/r6_controller.py": {
+    "current": "5d15a6975b990d19fa8bb5255930b132904dc84409cbb48bd01d6f23bc5b034d",
+    "last_executed": "5d15a6975b990d19fa8bb5255930b132904dc84409cbb48bd01d6f23bc5b034d"
+  },
+  "src/sailboat_routing/r7_dynamic.py": {
+    "current": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533",
+    "last_executed": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533"
+  },
+  "src/sailboat_routing/obstacle_candidate.py": {
+    "current": "eeffcae0f5e7bbd16119eb95ab5f6daaac56089a1c9c71686e5912a104d17694",
+    "last_executed": "eeffcae0f5e7bbd16119eb95ab5f6daaac56089a1c9c71686e5912a104d17694"
+  },
+  "src/sailboat_routing/metrics.py": {
+    "current": "4f18a58bf5f9399952c9aad730a985d37430e9f817fedfe3c6c0997eb5595235",
+    "last_executed": "4f18a58bf5f9399952c9aad730a985d37430e9f817fedfe3c6c0997eb5595235"
+  },
+  "third_party/senior/sailboat_s14.py": {
+    "current": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313",
+    "last_executed": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313"
+  },
+  "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth": {
+    "current": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6",
+    "last_executed": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6"
+  },
+  "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth": {
+    "current": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+    "last_executed": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6"
+  }
+}

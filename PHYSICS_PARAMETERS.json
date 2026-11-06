@@ -1,0 +1,427 @@
+{
+  "legacy_parameters": {
+    "m": 25900,
+    "Ixx": 133690,
+    "Izz": 24760,
+    "Ixz": 2180,
+    "a11": 970,
+    "a22": 17430,
+    "a44": 106500,
+    "a66": 101650,
+    "a24": -13160,
+    "a26": -6190,
+    "a46": 4730,
+    "rho_a": 1.2,
+    "As": 170,
+    "h0": 0.0005,
+    "h1": 11.58,
+    "z_s": -11.58,
+    "xs": 0,
+    "ys": 0,
+    "zs": -11.58,
+    "Xce": 0.6,
+    "Xm": 0.3,
+    "rho_w": 1025,
+    "Ar": 1.17,
+    "d_r": 1.9,
+    "zeta_r": 0.8,
+    "x_r": -8.2,
+    "z_r": -0.78,
+    "xr": -8.2,
+    "yr": 0,
+    "zr": -0.78,
+    "Ak": 8.7,
+    "d_k": 2.49,
+    "zeta_k": 0.7,
+    "x_k": 0,
+    "z_k": -0.58,
+    "xk": 0,
+    "yk": 0,
+    "zk": -0.58,
+    "x_h": 0,
+    "z_h": -1.18,
+    "xh": 0,
+    "yh": 0,
+    "zh": -1.18,
+    "w_c": 60000,
+    "x_c": -8,
+    "y_bm": 3.6,
+    "a": -5.89,
+    "b": 8160,
+    "c": 120000,
+    "d": 50000
+  },
+  "yara_links": [
+    {
+      "name": "hull_link",
+      "mass": 87.6741,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.186398 3.25865e-05 -0.0426582"
+      },
+      "inertia": {
+        "ixx": "8.07275",
+        "ixy": "-0.000700071",
+        "ixz": "1.41913",
+        "iyy": "47.1122",
+        "iyz": "-0.000393928",
+        "izz": "51.3333"
+      }
+    },
+    {
+      "name": "mast_link",
+      "mass": 12.5051,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.000187579 2.65619e-06 1.95789"
+      },
+      "inertia": {
+        "ixx": "15.8929",
+        "ixy": "-1.88499e-06",
+        "ixz": "-0.0063914",
+        "iyy": "15.8933",
+        "iyz": "-5.77577e-05",
+        "izz": "0.0187623"
+      }
+    },
+    {
+      "name": "boom_link",
+      "mass": 2.41221,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.919334 1.93244e-09 -2.13818e-05"
+      },
+      "inertia": {
+        "ixx": "0.000428164",
+        "ixy": "-8.9867e-10",
+        "ixz": "7.73411e-05",
+        "iyy": "0.664587",
+        "iyz": "-1.08464e-11",
+        "izz": "0.664584"
+      }
+    },
+    {
+      "name": "sail_link",
+      "mass": 2.216,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "1.10322 1.09346 -1.24505e-20"
+      },
+      "inertia": {
+        "ixx": "1.15797",
+        "ixy": "0.243689",
+        "ixz": "0",
+        "iyy": "0.386027",
+        "iyz": "0",
+        "izz": "1.544"
+      }
+    },
+    {
+      "name": "keel_link",
+      "mass": 40.0429,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.00547163 2.63588e-07 -0.725086"
+      },
+      "inertia": {
+        "ixx": "5.03511",
+        "ixy": "7.80906e-07",
+        "ixz": "-0.0285151",
+        "iyy": "5.27158",
+        "iyz": "-2.96682e-06",
+        "izz": "0.268882"
+      }
+    },
+    {
+      "name": "rudder_link",
+      "mass": 1.60411,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.00643978 -6.54895e-06 -0.519314"
+      },
+      "inertia": {
+        "ixx": "0.0520097",
+        "ixy": "-3.11339e-06",
+        "ixz": "-0.00205504",
+        "iyy": "0.0547543",
+        "iyz": "-6.35686e-07",
+        "izz": "0.00276576"
+      }
+    },
+    {
+      "name": "eletric_engine_link",
+      "mass": 3.62539,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.00825704 -3.56246e-09 -0.761657"
+      },
+      "inertia": {
+        "ixx": "0.396803",
+        "ixy": "-7.66434e-09",
+        "ixz": "-0.00560877",
+        "iyy": "0.401013",
+        "iyz": "-5.77582e-09",
+        "izz": "0.00711339"
+      }
+    },
+    {
+      "name": "propeller_link",
+      "mass": 0.0667546,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.0280716 2.41471e-06 2.58598e-06"
+      },
+      "inertia": {
+        "ixx": "0.000104539",
+        "ixy": "2.96574e-10",
+        "ixz": "-1.53341e-09",
+        "iyy": "6.3824e-05",
+        "iyz": "-2.26066e-09",
+        "izz": "6.38236e-05"
+      }
+    },
+    {
+      "name": "deck_link",
+      "mass": 8.12081,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "1.17098 0.0029352 0.08114"
+      },
+      "inertia": {
+        "ixx": "0.940446",
+        "ixy": "0.0228946",
+        "ixz": "-0.0360182",
+        "iyy": "3.85004",
+        "iyz": "0.00158452",
+        "izz": "4.72607"
+      }
+    },
+    {
+      "name": "camera_bow_link",
+      "mass": 2.06829,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0.0526688 -2.92253e-05 0.2517"
+      },
+      "inertia": {
+        "ixx": "0.199288",
+        "ixy": "-1.12989e-05",
+        "ixz": "-0.0471625",
+        "iyy": "0.19841",
+        "iyz": "-1.44209e-05",
+        "izz": "0.0538996"
+      }
+    }
+  ],
+  "yara_total_mass": 160.3356646,
+  "yara_plugins": [
+    {
+      "name": {
+        "filename": "libusv_gazebo_dynamics_plugin.so",
+        "name": "usv_dynamics_eboat4_dynamics_plugin"
+      },
+      "parameters": {
+        "bodyName": "base_link",
+        "waterLevel": "0",
+        "waterDensity": "997.0",
+        "xDotU": "0",
+        "yDotV": "124",
+        "zDotW": "148",
+        "kDotP": "0.0",
+        "mDotQ": "0.0",
+        "nDotR": "0.0",
+        "xU": "5.13",
+        "xUU": "7.240000000000001",
+        "yV": "24.0",
+        "yVV": "480.0",
+        "zW": "250.0",
+        "zWW": "0.0",
+        "kP": "25.0",
+        "mQ": "25.0",
+        "nR": "120.0",
+        "nRR": "0.0",
+        "hullRadius": "0.4",
+        "boatWidth": "0.9",
+        "boatLength": "2.4",
+        "length_n": "2",
+        "wave_model": "ocean_waves"
+      }
+    },
+    {
+      "name": {
+        "filename": "libLiftDragForces.so",
+        "name": "liftdrag_eboat4_sail"
+      },
+      "parameters": {
+        "air_density": "1.201",
+        "sail_area": "3.18776",
+        "sail_forward": "1 0 0",
+        "sail_upward": "0 0 1",
+        "boom_link_name": "boom_link",
+        "base_link_name": "base_link",
+        "boom_joint_name": "boom_joint",
+        "sail_cp": "-0.012 0 1.5",
+        "rudder_link_name": "rudder_link",
+        "rudder_forward": "1 0 0",
+        "rudder_upward": "0 0 1",
+        "rudder_area": "0.10064",
+        "rudder_cp": "0 0 0",
+        "keel_area": "0.23779",
+        "keel_cp": "0 0 0",
+        "water_density": "997.0"
+      }
+    }
+  ],
+  "yara_joints": [
+    {
+      "name": {
+        "name": "dummy_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "0 0 0.210586"
+      },
+      "limit": null
+    },
+    {
+      "name": {
+        "name": "sail_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "1.5708 -0 0",
+        "xyz": "-1.78373 0 0.0664151"
+      },
+      "limit": null
+    },
+    {
+      "name": {
+        "name": "boom_joint",
+        "type": "revolute"
+      },
+      "axis": {
+        "xyz": "0 0 1"
+      },
+      "origin": {
+        "rpy": "0 -0 0",
+        "xyz": "-0.049 -2.14313e-18 0.933"
+      },
+      "limit": {
+        "effort": "1000",
+        "lower": "-1.5708",
+        "upper": "1.5708",
+        "velocity": "5"
+      }
+    },
+    {
+      "name": {
+        "name": "mast_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "0 -0 0",
+        "xyz": "0.59529 6.68277e-16 -0.153011"
+      },
+      "limit": null
+    },
+    {
+      "name": {
+        "name": "keel_joint",
+        "type": "revolute"
+      },
+      "axis": {
+        "xyz": "0 0 1"
+      },
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.13971 0 0.00405924"
+      },
+      "limit": {
+        "effort": "1",
+        "lower": "0",
+        "upper": "0",
+        "velocity": "20"
+      }
+    },
+    {
+      "name": {
+        "name": "rudder_joint",
+        "type": "revolute"
+      },
+      "axis": {
+        "xyz": "0 0 1"
+      },
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-1.08641 0 0.0764342"
+      },
+      "limit": {
+        "effort": "50",
+        "lower": "-1.0472",
+        "upper": "1.0472",
+        "velocity": "0.4188666666666667"
+      }
+    },
+    {
+      "name": {
+        "name": "electric_engine_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "0 -0 0",
+        "xyz": "-1.3297 5.55877e-16 0.389059"
+      },
+      "limit": null
+    },
+    {
+      "name": {
+        "name": "propeller_joint",
+        "type": "continuous"
+      },
+      "axis": {
+        "xyz": "1 0 0"
+      },
+      "origin": {
+        "rpy": "0 0 0",
+        "xyz": "-0.089683 0 -0.949"
+      },
+      "limit": {
+        "effort": "1000",
+        "velocity": "20"
+      }
+    },
+    {
+      "name": {
+        "name": "deck_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "0 -0 0",
+        "xyz": "-1.23971 5.55112e-16 0.214059"
+      },
+      "limit": null
+    },
+    {
+      "name": {
+        "name": "camera_bow_joint",
+        "type": "fixed"
+      },
+      "axis": null,
+      "origin": {
+        "rpy": "-5.66659e-17 9.06655e-16 -5.13764e-32",
+        "xyz": "0.791272 5.41378e-16 0.339059"
+      },
+      "limit": null
+    }
+  ],
+  "legacy_sail_rate": 0.17453292519943295,
+  "legacy_rudder_rate": 0.17453292519943295,
+  "native_yara_cable_rate": 0.5,
+  "native_yara_rudder_rate": 0.4
+}
