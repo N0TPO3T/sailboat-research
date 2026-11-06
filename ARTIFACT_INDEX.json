@@ -332,6 +332,10 @@
       "bytes": 768,
       "sha256": "0457952a914248667a1c332075df096cb72e0395cb571ec72308286ea057998a"
     },
+    "logs/plots-final.log": {
+      "bytes": 1906,
+      "sha256": "57b05df606c84c4abe25f974d36350a2ac0f9b46c4d3d5f31cc903c046dd623f"
+    },
     "logs/policy-capture-fixed.log": {
       "bytes": 1559,
       "sha256": "649619cebba304e720a1ca46241ee6b828d885f2693e153ad0d2e64daee5ed3f"
@@ -557,8 +561,8 @@
       "sha256": "f67291af38a0fa281b64e98725c741a83f8ced09adb08f0d04d33e41df8a91aa"
     },
     "output/paired_trajectories.png": {
-      "bytes": 228440,
-      "sha256": "18f8642cd68d9da2ee5a039812fac2440405d3aa66fba06de4c368bc302b4402"
+      "bytes": 218322,
+      "sha256": "5cf2eae4b691e75368d1174cd79c5ddb81288f80f246ea9e81d5c62ba1937204"
     },
     "output/policy_clear_original.json": {
       "bytes": 221949,
@@ -769,8 +773,8 @@
       "sha256": "d0a01407c74e17d0bcc78d492f9a7337e47e2afa021305a889436f2a31bcebf8"
     },
     "plots.py": {
-      "bytes": 4109,
-      "sha256": "5d4dec4011b91a1e88ec8a3028f42e28b8aa70d40bc3236e3e21a8760f134b13"
+      "bytes": 4854,
+      "sha256": "bace28ae9a291c59930855e892e3569a02d4ffb01490eb1c843bd01158ec01a2"
     },
     "removed_plugins.json": {
       "bytes": 405,

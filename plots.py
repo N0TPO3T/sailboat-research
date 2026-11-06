@@ -25,7 +25,18 @@ for j,scene in enumerate(cfg['scenes']):
    ax.scatter(s[-1,0],s[-1,1],marker='x',color=colors[b])
    ax.set_title(scene['name']+' / '+b+'\n'+d['reason']+'; '+str(len(s)-1)+' s')
   ax.legend(fontsize=7)
-fig.suptitle('Actual paired trajectories | fixed tasks, unchanged checkpoint');fig.tight_layout();fig.savefig(O/'paired_trajectories.png');plt.close(fig)
+# Share world-coordinate limits within each task column; circles keep the same visual size.
+for j,scene in enumerate(cfg['scenes']):
+ points=[np.array(scene['goals']),np.array([[0,0]])]
+ for b in colors:
+  p=O/('policy_'+scene['name']+'_'+b+'.json')
+  if p.exists():points.append(np.array([x['raw'][:2] for x in json.loads(p.read_text())['rows']]))
+ for obstacle in scene['obstacles']:
+  c=np.array(obstacle['center_xy']);radius=obstacle['entity_radius']+obstacle['safety_buffer'];points.append(np.array([c-radius,c+radius]))
+ points=np.concatenate(points);lo=points.min(axis=0)-30;hi=points.max(axis=0)+30
+ for i in range(2):
+  axs[i,j].set_xlim(lo[0],hi[0]);axs[i,j].set_ylim(lo[1],hi[1]);axs[i,j].set_aspect('equal',adjustable='box')
+fig.suptitle('Actual paired trajectories | same coordinate limits within each column');fig.tight_layout();fig.savefig(O/'paired_trajectories.png');plt.close(fig)
 fig,axs=plt.subplots(2,3,figsize=(14,8))
 for name,style in [('hold','-'),('rudder_pos','--'),('rudder_neg',':'),('sail','-.')]:
  for b,c in colors.items():
