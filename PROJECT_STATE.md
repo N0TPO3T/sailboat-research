@@ -1,5 +1,10 @@
 # Project State
 
+## GitHub 分支管理（2026-11-07）
+- 本方向版本分支：`codex/yara-migration18`；同仓库的其他思路使用独立分支，入口为 `codex/project-index`。`main` 保留原历史基点。
+- 模型与原始结果的位置由 `migration/ASSETS.json` 维护；原服务器工作区和原有产物未修改。此次仅整理并发布版本，未重新运行实验。
+
+
 - 独立18D→Yara迁移环境与有限配对验证已完成；没有训练、GPU或自动push。当前无本任务容器。
 - 实际加载链、模型及继承源码身份见actual_loading_chain.json、source_identity.json、ASSET_HASHES.json；所有继承文件与原工作区哈希一致。
 - 共享18D观测/归一化、奖励、安全判分、因果历史；精确1秒控制/0.01秒积分。原Yara入口保留。

@@ -926,6 +926,286 @@
       "storage": "project-assets-20261107",
       "asset": "yara-assets-000.tar.gz",
       "archive_member": "support/yara-comparison-html/YARA_COMPARISON_DRAFT.zip"
+    },
+    {
+      "path": "logs/audit.log",
+      "size": 2033,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/audit.log"
+    },
+    {
+      "path": "logs/bridge.log",
+      "size": 111,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/bridge.log"
+    },
+    {
+      "path": "logs/build-camera-follow.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-camera-follow.log"
+    },
+    {
+      "path": "logs/build-corrected.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-corrected.log"
+    },
+    {
+      "path": "logs/build-delivery.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-delivery.log"
+    },
+    {
+      "path": "logs/build-final.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-final.log"
+    },
+    {
+      "path": "logs/build-render-final.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-render-final.log"
+    },
+    {
+      "path": "logs/build-render.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build-render.log"
+    },
+    {
+      "path": "logs/build.log",
+      "size": 5917,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/build.log"
+    },
+    {
+      "path": "logs/camera-follow.log",
+      "size": 488,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/camera-follow.log"
+    },
+    {
+      "path": "logs/capture-debug.log",
+      "size": 488,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/capture-debug.log"
+    },
+    {
+      "path": "logs/capture-visibility.log",
+      "size": 488,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/capture-visibility.log"
+    },
+    {
+      "path": "logs/edge-checks.log",
+      "size": 695,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/edge-checks.log"
+    },
+    {
+      "path": "logs/final-edges.log",
+      "size": 695,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/final-edges.log"
+    },
+    {
+      "path": "logs/final-regression.log",
+      "size": 488,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/final-regression.log"
+    },
+    {
+      "path": "logs/gazebo.log",
+      "size": 1259,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/gazebo.log"
+    },
+    {
+      "path": "logs/inventory.log",
+      "size": 768,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/inventory.log"
+    },
+    {
+      "path": "logs/plots-final.log",
+      "size": 1906,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/plots-final.log"
+    },
+    {
+      "path": "logs/policy-capture-fixed.log",
+      "size": 1559,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/policy-capture-fixed.log"
+    },
+    {
+      "path": "logs/policy-remaining.log",
+      "size": 1245,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/policy-remaining.log"
+    },
+    {
+      "path": "logs/policy.log",
+      "size": 1964,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/policy.log"
+    },
+    {
+      "path": "logs/response-corrected.log",
+      "size": 1508,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/response-corrected.log"
+    },
+    {
+      "path": "logs/response-final.log",
+      "size": 1511,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/response-final.log"
+    },
+    {
+      "path": "logs/response.log",
+      "size": 2463,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/response.log"
+    },
+    {
+      "path": "logs/smoke.log",
+      "size": 488,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/smoke.log"
+    },
+    {
+      "path": "logs/xvfb.log",
+      "size": 81,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "logs/xvfb.log"
+    },
+    {
+      "path": "output/capture_failure_run/policy.log",
+      "size": 1964,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "output/capture_failure_run/policy.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/analysis.log",
+      "size": 1513,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/analysis.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/build.log",
+      "size": 4309,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/build.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/native_bridge.log",
+      "size": 111,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/native_bridge.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/native_gazebo.log",
+      "size": 1259,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/native_gazebo.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/native_xvfb.log",
+      "size": 81,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/native_xvfb.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/policy.log",
+      "size": 1606,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/policy.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/response.log",
+      "size": 756,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/response.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/response_bridge.log",
+      "size": 111,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/response_bridge.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/response_gazebo.log",
+      "size": 1259,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/response_gazebo.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/response_xvfb.log",
+      "size": 81,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/response_xvfb.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/signed_bridge.log",
+      "size": 111,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/signed_bridge.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/signed_gazebo.log",
+      "size": 1259,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/signed_gazebo.log"
+    },
+    {
+      "path": "signed_20261107_delivery/signed_20261107/logs/signed_xvfb.log",
+      "size": 81,
+      "storage": "project-assets-20261107",
+      "asset": "yara-logs.tar.gz",
+      "archive_member": "signed_20261107_delivery/signed_20261107/logs/signed_xvfb.log"
     }
   ],
   "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."

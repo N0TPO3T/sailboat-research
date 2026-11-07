@@ -1,5 +1,8 @@
 # 独立18D迁移运行包
 
+本方向 GitHub 分支：`codex/yara-migration18`。其他思路见 `codex/project-index`；资产恢复见 `migration/ASSETS.json`。本次发布保留原研究结论与限制，不代表重新运行验证。
+
+
 运行端：/home/ot/Students/hs/yara-env/migration18。依赖已安装的父目录Yara容器镜像与原项目.venv，不安装系统包，不使用GPU。原版Yara的run-yara.sh及原任务保持不变。
 
 启动（真实Gazebo、4个控制步）：
