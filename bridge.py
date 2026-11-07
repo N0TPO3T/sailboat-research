@@ -74,8 +74,6 @@ while not rospy.is_shutdown():
    if boat_name:delete(boat_name)
    boat_name='migration_boat_'+str(last)
    rospy.set_param('/migration/model',boat_name)
-   rospy.set_param('/migration/actuator_mode',q.get('actuator_mode','native'))
-   rospy.set_param('/migration/sail_target',0.)
    raw=q['raw'];p=Pose();p.position.x=raw[0];p.position.y=raw[1];p.position.z=0.
    quat=quaternion_from_euler(raw[2],0,raw[3]);p.orientation.x,p.orientation.y,p.orientation.z,p.orientation.w=quat
    ans=spawn(boat_name,(r/'boat.urdf').read_text(),'',p,'world');assert ans.success,ans.status_message
@@ -92,7 +90,6 @@ while not rospy.is_shutdown():
    result=call(0,True)
   elif op=='step':
    rospy.set_param('/migration/cable',float(q['cable']));rospy.set_param('/migration/rudder',float(q['rudder']))
-   rospy.set_param('/migration/sail_target',float(q.get('sail_target',0.)))
    result=call(100)
   elif op=='capture':
    for i,xy in enumerate(q['trace'][::max(1,len(q['trace'])//60)]):mark('track_%s_%d'%(last,i),xy,.7,'0.95 0.8 0.1 1',False,.4)

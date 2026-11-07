@@ -1,0 +1,12 @@
+{
+  "source_commit": "c9ab7a5fa31b2229de082b6ad46de9a8ac96f607",
+  "archive": "migration18-delivery-c9ab7a5.tar.gz",
+  "archive_sha256": "6a2901c90c928e3f630d242f26feed4fbc6cdc080f036e888da4ed8ddba590fb",
+  "archive_bytes": 11872000,
+  "git_bundle": "migration18-source-c9ab7a5.bundle",
+  "git_bundle_sha256": "0f08d79a3c1d286d93be7193cd292a75bf84dd2cc5993ef4c4af3b2c3d310664",
+  "indexed_files": 201,
+  "git_clean": true,
+  "no_push": true,
+  "source_originals_preserved": true
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "model": "esailor_PPO_53_A3232_C3232.zip",
+    "sha256": "1aba6a5572680709e4c05375b1a88ef6dc55e2984699e4ac03722cbbfa642df7",
+    "saved_sb3": "2.0.0",
+    "observation_shape": [
+      5
+    ],
+    "action_shape": [
+      3
+    ],
+    "num_timesteps": 501760,
+    "policy_kwargs": "{'activation_fn': <class 'torch.nn.modules.activation.ReLU'>, 'net_arch': {'pi': [32, 32], 'vf': [32, 32]}}",
+    "gamma": 0.99,
+    "batch_size": 64,
+    "learning_rate": "0.0003",
+    "ent_coef": "0.001",
+    "seed": null,
+    "saved_fields": {
+      "n_steps": 2048,
+      "n_epochs": 10,
+      "buffer_size": null,
+      "learning_starts": null,
+      "train_freq": null,
+      "gradient_steps": null,
+      "tau": null
+    }
+  },
+  {
+    "model": "esailor_SAC_53_A3232_C3232.zip",
+    "sha256": "0cd16b81f96052ca356c01d653e8b02bcd5b1465a2d03e603d315526747cf744",
+    "saved_sb3": "2.0.0",
+    "observation_shape": [
+      5
+    ],
+    "action_shape": [
+      3
+    ],
+    "num_timesteps": 501760,
+    "policy_kwargs": "{'activation_fn': <class 'torch.nn.modules.activation.ReLU'>, 'net_arch': {'pi': [32, 32], 'qf': [32, 32]}, 'use_sde': False}",
+    "gamma": 0.99,
+    "batch_size": 64,
+    "learning_rate": "0.0003",
+    "ent_coef": "0.001",
+    "seed": null,
+    "saved_fields": {
+      "n_steps": null,
+      "n_epochs": null,
+      "buffer_size": 1000000,
+      "learning_starts": 100,
+      "train_freq": {
+        ":type:": "<class 'stable_baselines3.common.type_aliases.TrainFreq'>",
+        ":serialized:": "gASVYQAAAAAAAACMJXN0YWJsZV9iYXNlbGluZXMzLmNvbW1vbi50eXBlX2FsaWFzZXOUjAlUcmFpbkZyZXGUk5RLAWgAjBJUcmFpbkZyZXF1ZW5jeVVuaXSUk5SMBHN0ZXCUhZRSlIaUgZQu"
+      },
+      "gradient_steps": 1,
+      "tau": 0.005
+    }
+  }
+]

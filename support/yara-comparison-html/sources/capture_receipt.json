@@ -1,0 +1,43 @@
+{
+  "source": "Gazebo ROS camera sensor, actual Yara world; not generated illustration",
+  "checkpoint": "PPO_53",
+  "camera_time": {
+    "boat_close": 52.71,
+    "boat_side": 52.71,
+    "ocean_overview": 52.71
+  },
+  "views": [
+    [
+      "boat_close",
+      [
+        -7,
+        -8,
+        5
+      ],
+      1.4
+    ],
+    [
+      "boat_side",
+      [
+        0,
+        -10,
+        2.8
+      ],
+      1.2
+    ],
+    [
+      "ocean_overview",
+      [
+        -20,
+        -25,
+        23
+      ],
+      0
+    ]
+  ],
+  "boat_position_before_capture": [
+    98.70511215534724,
+    1.2319364701363904
+  ],
+  "gpu": false
+}

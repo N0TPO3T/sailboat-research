@@ -3,7 +3,6 @@
 - 独立18D→Yara迁移环境与有限配对验证已完成；没有训练、GPU或自动push。当前无本任务容器。
 - 实际加载链、模型及继承源码身份见actual_loading_chain.json、source_identity.json、ASSET_HASHES.json；所有继承文件与原工作区哈希一致。
 - 共享18D观测/归一化、奖励、安全判分、因果历史；精确1秒控制/0.01秒积分。原Yara入口保留。
-- 新增独立signed理想角度执行器，帆舵10°/s且保留原累计/限幅；native仍为默认。响应及原三个固定任务的六回合对照已完成，见signed_20261107/REPORT_ZH.md、summary.json。未训练。
 - 原生帆缆无法完整实现原有符号帆角。物理差异与未知项见REPORT_ZH.md、MAPPING_ZH.md；不称动力学等效迁移。
 - 三个固定任务结果仅在output/summary.json及REPORT_ZH.md维护；原环境的安全违规与Yara超时均保留。
 - 初始Yara奖励浮点路径差已修复；原日志不改写，精确复算另存。所有计分策略输入逐位一致，安全与结局复算通过。

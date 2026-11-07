@@ -1,0 +1,28 @@
+name: esailor
+
+channels:
+  - defaults
+  - conda-forge
+  - nvidia
+  - pytorch
+  
+dependencies:
+  - python=3.7
+  - pip
+  - numpy
+  - pytorch::pytorch=1.13.1
+  - pytorch::pytorch-cuda=11.7
+  - pytorch::torchvision
+  - pytorch::torchaudio
+  - conda-forge::rospkg
+  - conda-forge::defusedxml
+  - conda-forge::netifaces
+  - conda-forge::tensorflow-gpu
+  - conda-forge::opencv
+  - pip:
+    - rich
+    - tqdm
+    - gymnasium
+    - stable-baselines3
+    - stable-baselines3[extra]
+    - simple-pid

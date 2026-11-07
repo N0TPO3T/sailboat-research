@@ -1,0 +1,932 @@
+{
+  "branch": "codex/yara-migration18",
+  "release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/project-assets-20261107",
+  "existing_release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/consolidated-20261001",
+  "files": [
+    {
+      "path": "migration18-delivery-c9ab7a5.tar.gz",
+      "size": 11872000,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "migration18-delivery-c9ab7a5.tar.gz"
+    },
+    {
+      "path": "migration18-delivery.tar.gz",
+      "size": 11882228,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "migration18-delivery.tar.gz"
+    },
+    {
+      "path": "migration18-signed-20261107.tar.gz",
+      "size": 1642617,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "migration18-signed-20261107.tar.gz"
+    },
+    {
+      "path": "migration18-source-c9ab7a5.bundle",
+      "size": 167109,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "migration18-source-c9ab7a5.bundle"
+    },
+    {
+      "path": "frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "size": 3475215,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth"
+    },
+    {
+      "path": "frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "size": 1898,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth"
+    },
+    {
+      "path": "output/actual_single_boat.png",
+      "size": 556660,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_single_boat.png"
+    },
+    {
+      "path": "output/actual_single_rudder.png",
+      "size": 227899,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_single_rudder.png"
+    },
+    {
+      "path": "output/actual_single_scene.png",
+      "size": 1118223,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_single_scene.png"
+    },
+    {
+      "path": "output/actual_smoke.png",
+      "size": 561315,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_smoke.png"
+    },
+    {
+      "path": "output/actual_switch_boat.png",
+      "size": 522647,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_switch_boat.png"
+    },
+    {
+      "path": "output/actual_switch_rudder.png",
+      "size": 232400,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_switch_rudder.png"
+    },
+    {
+      "path": "output/actual_switch_scene.png",
+      "size": 1124129,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_switch_scene.png"
+    },
+    {
+      "path": "output/actual_underwater.png",
+      "size": 145468,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actual_underwater.png"
+    },
+    {
+      "path": "output/actuator_diagnostics.json",
+      "size": 992,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actuator_diagnostics.json"
+    },
+    {
+      "path": "output/actuator_diagnostics_partial.json",
+      "size": 1093,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/actuator_diagnostics_partial.json"
+    },
+    {
+      "path": "output/audit.json",
+      "size": 2032,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/audit.json"
+    },
+    {
+      "path": "output/capture_audit.json",
+      "size": 2585,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_audit.json"
+    },
+    {
+      "path": "output/capture_single_boat.json",
+      "size": 1314,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_single_boat.json"
+    },
+    {
+      "path": "output/capture_single_rudder.json",
+      "size": 1319,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_single_rudder.json"
+    },
+    {
+      "path": "output/capture_single_scene.json",
+      "size": 1314,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_single_scene.json"
+    },
+    {
+      "path": "output/capture_smoke.json",
+      "size": 1354,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_smoke.json"
+    },
+    {
+      "path": "output/capture_switch_boat.json",
+      "size": 1334,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_switch_boat.json"
+    },
+    {
+      "path": "output/capture_switch_rudder.json",
+      "size": 1336,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_switch_rudder.json"
+    },
+    {
+      "path": "output/capture_switch_scene.json",
+      "size": 1336,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_switch_scene.json"
+    },
+    {
+      "path": "output/capture_underwater.json",
+      "size": 1365,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_underwater.json"
+    },
+    {
+      "path": "output/completion.json",
+      "size": 533,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/completion.json"
+    },
+    {
+      "path": "output/direction_gate.json",
+      "size": 324,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_gate.json"
+    },
+    {
+      "path": "output/direction_original_-1.json",
+      "size": 9987,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_original_-1.json"
+    },
+    {
+      "path": "output/direction_original_0.json",
+      "size": 9777,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_original_0.json"
+    },
+    {
+      "path": "output/direction_original_1.json",
+      "size": 9966,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_original_1.json"
+    },
+    {
+      "path": "output/direction_yara_-1.json",
+      "size": 11853,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_yara_-1.json"
+    },
+    {
+      "path": "output/direction_yara_0.json",
+      "size": 11589,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_yara_0.json"
+    },
+    {
+      "path": "output/direction_yara_1.json",
+      "size": 11796,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/direction_yara_1.json"
+    },
+    {
+      "path": "output/edge_checks.json",
+      "size": 457,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/edge_checks.json"
+    },
+    {
+      "path": "output/error_policy.json",
+      "size": 955,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/error_policy.json"
+    },
+    {
+      "path": "output/fixed_response.png",
+      "size": 269552,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/fixed_response.png"
+    },
+    {
+      "path": "output/paired_trajectories.png",
+      "size": 218322,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/paired_trajectories.png"
+    },
+    {
+      "path": "output/policy_clear_original.json",
+      "size": 221949,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_clear_original.json"
+    },
+    {
+      "path": "output/policy_clear_yara.json",
+      "size": 355140,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_clear_yara.json"
+    },
+    {
+      "path": "output/policy_single_original.json",
+      "size": 259140,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_single_original.json"
+    },
+    {
+      "path": "output/policy_single_yara.json",
+      "size": 1907844,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_single_yara.json"
+    },
+    {
+      "path": "output/policy_switch_original.json",
+      "size": 265241,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_switch_original.json"
+    },
+    {
+      "path": "output/policy_switch_yara.json",
+      "size": 1879330,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/policy_switch_yara.json"
+    },
+    {
+      "path": "output/repeat_audit.json",
+      "size": 552,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/repeat_audit.json"
+    },
+    {
+      "path": "output/response_hold_original.json",
+      "size": 48938,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_hold_original.json"
+    },
+    {
+      "path": "output/response_hold_yara.json",
+      "size": 57818,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_hold_yara.json"
+    },
+    {
+      "path": "output/response_rudder_neg_original.json",
+      "size": 50331,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_rudder_neg_original.json"
+    },
+    {
+      "path": "output/response_rudder_neg_yara.json",
+      "size": 59520,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_rudder_neg_yara.json"
+    },
+    {
+      "path": "output/response_rudder_pos_original.json",
+      "size": 50319,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_rudder_pos_original.json"
+    },
+    {
+      "path": "output/response_rudder_pos_yara.json",
+      "size": 59385,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_rudder_pos_yara.json"
+    },
+    {
+      "path": "output/response_sail_original.json",
+      "size": 50317,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_sail_original.json"
+    },
+    {
+      "path": "output/response_sail_yara.json",
+      "size": 60209,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/response_sail_yara.json"
+    },
+    {
+      "path": "output/reward_recomputed_clear_original.json",
+      "size": 25233,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_clear_original.json"
+    },
+    {
+      "path": "output/reward_recomputed_clear_yara.json",
+      "size": 35073,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_clear_yara.json"
+    },
+    {
+      "path": "output/reward_recomputed_single_original.json",
+      "size": 28499,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_single_original.json"
+    },
+    {
+      "path": "output/reward_recomputed_single_yara.json",
+      "size": 187664,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_single_yara.json"
+    },
+    {
+      "path": "output/reward_recomputed_switch_original.json",
+      "size": 30346,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_switch_original.json"
+    },
+    {
+      "path": "output/reward_recomputed_switch_yara.json",
+      "size": 187833,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/reward_recomputed_switch_yara.json"
+    },
+    {
+      "path": "output/scene_comparison.png",
+      "size": 533882,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/scene_comparison.png"
+    },
+    {
+      "path": "output/semantic.json",
+      "size": 546,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/semantic.json"
+    },
+    {
+      "path": "output/smoke.json",
+      "size": 6310,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/smoke.json"
+    },
+    {
+      "path": "output/summary.json",
+      "size": 1905,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/summary.json"
+    },
+    {
+      "path": "output/capture_failure_run/policy_clear_original.json",
+      "size": 221949,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_failure_run/policy_clear_original.json"
+    },
+    {
+      "path": "output/capture_failure_run/policy_clear_yara.json",
+      "size": 355141,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/capture_failure_run/policy_clear_yara.json"
+    },
+    {
+      "path": "output/early_capture/actual_smoke.png",
+      "size": 554124,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/actual_smoke.png"
+    },
+    {
+      "path": "output/early_capture/before_camera_follow_actual_smoke.png",
+      "size": 555855,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_camera_follow_actual_smoke.png"
+    },
+    {
+      "path": "output/early_capture/before_camera_follow_actual_underwater.png",
+      "size": 106647,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_camera_follow_actual_underwater.png"
+    },
+    {
+      "path": "output/early_capture/before_camera_follow_capture_smoke.json",
+      "size": 1320,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_camera_follow_capture_smoke.json"
+    },
+    {
+      "path": "output/early_capture/before_camera_follow_capture_underwater.json",
+      "size": 1329,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_camera_follow_capture_underwater.json"
+    },
+    {
+      "path": "output/early_capture/before_camera_follow_smoke.json",
+      "size": 6310,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_camera_follow_smoke.json"
+    },
+    {
+      "path": "output/early_capture/before_water_hide_actual_smoke.png",
+      "size": 552430,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_water_hide_actual_smoke.png"
+    },
+    {
+      "path": "output/early_capture/before_water_hide_actual_underwater.png",
+      "size": 100267,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_water_hide_actual_underwater.png"
+    },
+    {
+      "path": "output/early_capture/before_water_hide_capture_smoke.json",
+      "size": 1288,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_water_hide_capture_smoke.json"
+    },
+    {
+      "path": "output/early_capture/before_water_hide_capture_underwater.json",
+      "size": 1295,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_water_hide_capture_underwater.json"
+    },
+    {
+      "path": "output/early_capture/before_water_hide_smoke.json",
+      "size": 6310,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/before_water_hide_smoke.json"
+    },
+    {
+      "path": "output/early_capture/capture_smoke.json",
+      "size": 1245,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/capture_smoke.json"
+    },
+    {
+      "path": "output/early_capture/smoke.json",
+      "size": 6297,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/early_capture/smoke.json"
+    },
+    {
+      "path": "output/pre_correction/bridge.py",
+      "size": 5254,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/bridge.py"
+    },
+    {
+      "path": "output/pre_correction/config_before_task_audit.json",
+      "size": 1018,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/config_before_task_audit.json"
+    },
+    {
+      "path": "output/pre_correction/environment.py",
+      "size": 6939,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/environment.py"
+    },
+    {
+      "path": "output/pre_correction/error_response.json",
+      "size": 1275,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/error_response.json"
+    },
+    {
+      "path": "output/pre_correction/response_hold_original.json",
+      "size": 48938,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_hold_original.json"
+    },
+    {
+      "path": "output/pre_correction/response_hold_yara.json",
+      "size": 57200,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_hold_yara.json"
+    },
+    {
+      "path": "output/pre_correction/response_rudder_neg_original.json",
+      "size": 50331,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_rudder_neg_original.json"
+    },
+    {
+      "path": "output/pre_correction/response_rudder_neg_yara.json",
+      "size": 59526,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_rudder_neg_yara.json"
+    },
+    {
+      "path": "output/pre_correction/response_rudder_pos_original.json",
+      "size": 50319,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_rudder_pos_original.json"
+    },
+    {
+      "path": "output/pre_correction/response_rudder_pos_yara.json",
+      "size": 59414,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_rudder_pos_yara.json"
+    },
+    {
+      "path": "output/pre_correction/response_sail_original.json",
+      "size": 50317,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/response_sail_original.json"
+    },
+    {
+      "path": "output/pre_correction/step.cc",
+      "size": 3329,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_correction/step.cc"
+    },
+    {
+      "path": "output/pre_flat_water/direction_gate.json",
+      "size": 324,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_gate.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_original_-1.json",
+      "size": 9987,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_original_-1.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_original_0.json",
+      "size": 9777,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_original_0.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_original_1.json",
+      "size": 9966,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_original_1.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_yara_-1.json",
+      "size": 11842,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_yara_-1.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_yara_0.json",
+      "size": 11494,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_yara_0.json"
+    },
+    {
+      "path": "output/pre_flat_water/direction_yara_1.json",
+      "size": 11785,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/direction_yara_1.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_hold_original.json",
+      "size": 48938,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_hold_original.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_hold_yara.json",
+      "size": 57263,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_hold_yara.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_rudder_neg_original.json",
+      "size": 50331,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_rudder_neg_original.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_rudder_neg_yara.json",
+      "size": 59556,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_rudder_neg_yara.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_rudder_pos_original.json",
+      "size": 50319,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_rudder_pos_original.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_rudder_pos_yara.json",
+      "size": 59352,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_rudder_pos_yara.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_sail_original.json",
+      "size": 50317,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_sail_original.json"
+    },
+    {
+      "path": "output/pre_flat_water/response_sail_yara.json",
+      "size": 60107,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "output/pre_flat_water/response_sail_yara.json"
+    },
+    {
+      "path": "support/yara-env-install/yara-source.tar.gz",
+      "size": 38791939,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-env-install/yara-source.tar.gz"
+    },
+    {
+      "path": "support/yara-transfer-audit/YARA_TRANSFER_PREVIEW.zip",
+      "size": 1312514,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/YARA_TRANSFER_PREVIEW.zip"
+    },
+    {
+      "path": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_PPO_103_A3232_C3232.zip",
+      "size": 65554,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_PPO_103_A3232_C3232.zip"
+    },
+    {
+      "path": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_PPO_53_A3232_C3232.zip",
+      "size": 61524,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_PPO_53_A3232_C3232.zip"
+    },
+    {
+      "path": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_SAC_53_A3232_C3232.zip",
+      "size": 105135,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/esailor/policy/esailor_SAC_53_A3232_C3232.zip"
+    },
+    {
+      "path": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/yara_description/models/cargo_ship/meshes/cargoship.dae",
+      "size": 22981517,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/yara_description/models/cargo_ship/meshes/cargoship.dae"
+    },
+    {
+      "path": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/yara_description/models/sailyacht/meshes/cargoship.dae",
+      "size": 34846058,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/Yara_OVE-e708703e7367993f56ff2187a06e05b09d19e696/yara_description/models/sailyacht/meshes/cargoship.dae"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/SAC_probe.json",
+      "size": 3339,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/SAC_probe.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/TRANSFER_AND_BASELINE_ZH.md",
+      "size": 11310,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/TRANSFER_AND_BASELINE_ZH.md"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/asset_tensor_audit.json",
+      "size": 3363,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/asset_tensor_audit.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/audit_assets.py",
+      "size": 1208,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/audit_assets.py"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/baseline_entry.py",
+      "size": 2633,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/baseline_entry.py"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/boat_close.png",
+      "size": 603238,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/boat_close.png"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/boat_side.png",
+      "size": 360889,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/boat_side.png"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/capture_receipt.json",
+      "size": 624,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/capture_receipt.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/checkpoint_audit.json",
+      "size": 1725,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/checkpoint_audit.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/demo_trajectory.json",
+      "size": 13148,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/demo_trajectory.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/demo_trajectory.png",
+      "size": 155009,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/demo_trajectory.png"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/gallery.html",
+      "size": 1420,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/gallery.html"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/ocean_overview.png",
+      "size": 549287,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/ocean_overview.png"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/parameter_counts.json",
+      "size": 833,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/parameter_counts.json"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/plot_demo.py",
+      "size": 1424,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/plot_demo.py"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/run_baseline.sh",
+      "size": 304,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/run_baseline.sh"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/visual_demo.py",
+      "size": 4654,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/visual_demo.py"
+    },
+    {
+      "path": "support/yara-transfer-audit/output/visual_demo.sh",
+      "size": 471,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-transfer-audit/output/visual_demo.sh"
+    },
+    {
+      "path": "support/yara-comparison-html/YARA_COMPARISON.zip",
+      "size": 6078756,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-comparison-html/YARA_COMPARISON.zip"
+    },
+    {
+      "path": "support/yara-comparison-html/YARA_COMPARISON_DRAFT.zip",
+      "size": 6078756,
+      "storage": "project-assets-20261107",
+      "asset": "yara-assets-000.tar.gz",
+      "archive_member": "support/yara-comparison-html/YARA_COMPARISON_DRAFT.zip"
+    }
+  ],
+  "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."
+}

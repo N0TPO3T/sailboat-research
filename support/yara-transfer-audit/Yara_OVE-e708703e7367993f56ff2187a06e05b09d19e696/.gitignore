@@ -1,0 +1,28 @@
+# ignore all npy files
+*.npy
+
+# ignore zip
+#*.zip
+
+fboat_data*.py
+
+# ignore logs
+logs/
+*.log
+
+# ignore RL models
+esailor/models/
+
+# others
+
+__pycache__/
+
+*.csv
+
+.vscode/
+
+.idea/
+.ipynb_checkpoints/
+
+esailor/.idea/
+esailor/*.urdf

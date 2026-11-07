@@ -1,0 +1,42 @@
+{
+  "source": "https://link.springer.com/content/pdf/10.1007/s10846-024-02212-1.pdf",
+  "pdf_sha256": "a64dc4d5d85f0e1de11aef92e685f610c24b3b46b781ec0f959f03d23bd81c1b",
+  "figures": [
+    {
+      "file": "yara_paper_fig27.png",
+      "pdf_page": 16,
+      "render_dpi": 300,
+      "clip_pixels": [
+        200,
+        2110,
+        950,
+        735
+      ]
+    },
+    {
+      "file": "yara_paper_fig28.png",
+      "pdf_page": 17,
+      "render_dpi": 300,
+      "clip_pixels": [
+        180,
+        210,
+        1800,
+        1230
+      ]
+    },
+    {
+      "file": "yara_paper_fig23.png",
+      "pdf_page": 13,
+      "render_dpi": 300,
+      "clip_pixels": [
+        200,
+        2430,
+        2100,
+        570
+      ]
+    }
+  ],
+  "operation": "Rendered original figure regions with labels and captions; no data redrawing.",
+  "credit": "Vasconcellos et al., 2025, DOI 10.1007/s10846-024-02212-1",
+  "license": "CC BY-NC-ND 4.0"
+}

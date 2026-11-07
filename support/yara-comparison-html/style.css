@@ -1,0 +1,43 @@
+/* Restrained document layout. Embedded by build.py for offline use. */
+:root{--bg:#fff;--panel:#fff;--line:#dce1e5;--ink:#242a30;--muted:#626b73;--cyan:#315970;--gold:#6e6654;--red:#864d49}
+html{scroll-behavior:auto}
+body{font-size:15px;line-height:1.8;background:#f6f7f8;color:var(--ink)}
+nav{width:216px;background:#f6f7f8;padding:32px 18px;border-right:1px solid #dce1e5}
+nav b{font-size:17px;font-weight:600}nav small{font-size:12px}
+nav a{border-radius:0;padding:8px 9px;font-size:13px;border-left:2px solid transparent}
+nav a:hover,nav a.active{background:#e9eef1;border-left-color:#446579;color:#223f51}
+main{margin-left:216px;max-width:1380px;background:white}
+section{padding:40px 44px 44px;min-height:0;border-bottom:1px solid #dce1e5}
+h1{font-size:30px;line-height:1.45;letter-spacing:0;margin:10px 0 14px;font-weight:600}
+h2{font-size:24px;font-weight:600;margin:8px 0 24px}
+h3{font-size:17px;font-weight:600;margin:0 0 12px}
+.eyebrow{font-size:12px;letter-spacing:0;color:#737e87}
+.lead{font-size:16px;line-height:1.9;color:#35414a;max-width:none}
+.scope{font-size:13px;color:#68737d;border-top:1px solid #e2e6e8;padding-top:12px}
+.grid{gap:26px}.card{border:0;border-radius:0;background:transparent;padding:0}
+.grid>.card{border-top:1px solid #cdd5db;padding:18px 0 4px}
+.badge{border:0;border-radius:0;margin:0 8px 5px 0;padding:2px 0;font-size:12px;color:#526875;background:none}
+.badge:after{content:' /';color:#c1c9ce;margin-left:8px}.badge:last-child:after{content:''}
+.proposal{color:#70685b}.caution{background:#f6f7f8;border-left:2px solid #aab5bd;padding:10px 15px;font-size:14px}
+.metric{font-size:25px;font-weight:500;line-height:1.6}.metric small{font-size:13px}
+.metric[style]{color:#315970!important}
+figure img{border-radius:0;border:1px solid #e0e5e9}
+.imagebox{padding:0}.imagebox h3{padding:0}.imagebox[style]{margin-top:26px!important}
+figcaption,.note{font-size:13px;line-height:1.8;color:#626b73}
+.node{background:#f5f7f8;border:1px solid #d6dee3;border-radius:0;padding:12px;font-size:14px}
+.arrow{font-size:12px;color:#647d8b}.flow .arrow{font-size:20px}.flow{gap:6px;grid-template-columns:1fr 22px 1fr 22px 1fr}
+.tablewrap{border:0;border-top:2px solid #788a96;border-bottom:1px solid #bfcbd3;border-radius:0}
+table{font-size:13px}th{background:#eef2f4;color:#354955;font-weight:600}
+td,th{padding:10px 12px;border-bottom:1px solid #e1e6e9}
+tbody tr:nth-child(even){background:#f8fafb}td:first-child{font-weight:500}
+.compact{min-width:0;font-size:14px}.compact td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+input,select{background:white;color:#333;border-radius:2px;padding:7px 9px;font-size:14px}
+button{background:white;color:#4f626f;border:1px solid #c5cfd6;border-radius:2px;padding:6px 10px;font-size:13px}
+.equation{background:#f4f6f7;color:#334550;border-radius:0;padding:13px;font-size:14px}
+.step{padding:14px 0 14px 36px;margin-left:0;border-left:0;border-bottom:1px solid #e7ebee}
+.step:before{background:none;color:#6b7f8d;left:0;top:13px;border-radius:0;width:20px;font-size:16px;font-weight:400}
+summary{font-size:14px}details p,details li{font-size:13px}
+.foot{color:#7b858d;font-size:12px}dialog{background:white;color:#333}.deckcontrols{background:#f7f9fa;padding:6px;border:1px solid #dce1e5}
+@media(min-width:1600px){main{max-width:1400px}}
+@media(max-width:900px){nav{width:auto;padding:18px;border-right:0;border-bottom:1px solid #dce1e5}main{margin:0}section{padding:28px 20px}.flow{grid-template-columns:1fr}h1{font-size:26px}}
+@media print{main{margin:0}section{padding:20px}.card{break-inside:avoid}}

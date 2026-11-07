@@ -1,0 +1,172 @@
+{
+  "senior": [
+    {
+      "file": "checkpoints/actor.pth",
+      "sha256": "c8cc1bc335c5bd4bfeed9100f5903e6d2849e35db9da3ea1a035fbbbe6f9e739",
+      "keys": {
+        "fc_input.0.weight": [
+          256,
+          16
+        ],
+        "fc_input.0.bias": [
+          256
+        ],
+        "lstm.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm.bias_ih_l0": [
+          1024
+        ],
+        "lstm.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln.weight": [
+          256
+        ],
+        "lstm_ln.bias": [
+          256
+        ],
+        "current_state_fc.0.weight": [
+          256,
+          14
+        ],
+        "current_state_fc.0.bias": [
+          256
+        ],
+        "final_fc.0.weight": [
+          256,
+          512
+        ],
+        "final_fc.0.bias": [
+          256
+        ],
+        "mu_layer.weight": [
+          2,
+          256
+        ],
+        "mu_layer.bias": [
+          2
+        ],
+        "log_std_layer.weight": [
+          2,
+          256
+        ],
+        "log_std_layer.bias": [
+          2
+        ]
+      }
+    },
+    {
+      "file": "checkpoints/normalizer.pth",
+      "sha256": "1de337a2b66452554f691d23d9a2fc4d622970c9b94426349543b0f8f22d3097",
+      "keys": {
+        "mean": [
+          14
+        ],
+        "var": [
+          14
+        ],
+        "count": "<class 'int'>"
+      }
+    },
+    {
+      "file": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+      "keys": {
+        "fc_input.0.weight": [
+          256,
+          20
+        ],
+        "fc_input.0.bias": [
+          256
+        ],
+        "lstm.weight_ih_l0": [
+          1024,
+          256
+        ],
+        "lstm.weight_hh_l0": [
+          1024,
+          256
+        ],
+        "lstm.bias_ih_l0": [
+          1024
+        ],
+        "lstm.bias_hh_l0": [
+          1024
+        ],
+        "lstm_ln.weight": [
+          256
+        ],
+        "lstm_ln.bias": [
+          256
+        ],
+        "attention.query_proj.weight": [
+          256,
+          256
+        ],
+        "attention.query_proj.bias": [
+          256
+        ],
+        "attention.key_proj.weight": [
+          256,
+          256
+        ],
+        "attention.key_proj.bias": [
+          256
+        ],
+        "attention.value_proj.weight": [
+          256,
+          256
+        ],
+        "attention.value_proj.bias": [
+          256
+        ],
+        "current_state_fc.0.weight": [
+          256,
+          18
+        ],
+        "current_state_fc.0.bias": [
+          256
+        ],
+        "final_fc.0.weight": [
+          256,
+          512
+        ],
+        "final_fc.0.bias": [
+          256
+        ],
+        "mu_layer.weight": [
+          2,
+          256
+        ],
+        "mu_layer.bias": [
+          2
+        ],
+        "log_std_layer.weight": [
+          2,
+          256
+        ],
+        "log_std_layer.bias": [
+          2
+        ]
+      }
+    }
+  ],
+  "yara": [
+    {
+      "model": "esailor_PPO_53_A3232_C3232.zip",
+      "all_saved_policy_tensors_equal": true,
+      "num_tensors": 13
+    },
+    {
+      "model": "esailor_SAC_53_A3232_C3232.zip",
+      "all_saved_policy_tensors_equal": true,
+      "num_tensors": 32
+    }
+  ]
+}

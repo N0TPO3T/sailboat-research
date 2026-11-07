@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>帆舵动作生成：改进方向</title>
+<style>
+:root{--ink:#172d3b;--muted:#62727b;--line:#dce4e8;--accent:#13766d;--soft:#edf5f3}
+*{box-sizing:border-box}body{margin:0;background:#f3f5f6;color:var(--ink);font:15px/1.65 "Segoe UI","Microsoft YaHei",sans-serif}main{max-width:1120px;margin:32px auto;padding:40px 46px;background:white;border:1px solid var(--line);border-radius:14px}.eyebrow{font-size:12px;letter-spacing:1.5px;color:var(--accent);font-weight:700}h1{font-size:32px;line-height:1.3;margin:10px 0}p{margin:0}.intro{color:var(--muted)}h2{font-size:18px;margin:28px 0 12px}.pipeline{display:flex;align-items:center;gap:14px}.box{flex:1;padding:13px 16px;border:1px solid var(--line);border-radius:8px}.box strong{display:block}.box span{font-size:13px;color:var(--muted)}.arrow{color:var(--accent);font-size:22px}.caption{font-size:13px;color:var(--muted);margin-top:9px}.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th{text-align:left;color:var(--muted);font-size:12px;font-weight:600;padding:10px 12px;background:#f5f7f8}td{padding:13px 12px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{width:18%;font-weight:700}td:nth-child(2){width:29%}td:nth-child(3){width:27%}small{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:3px}.tag{display:inline-block;font-size:11px;border-radius:4px;padding:1px 6px;background:var(--soft);color:var(--accent);margin-top:5px}.bottom{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}.note{background:var(--soft);padding:17px 19px;border-radius:8px;margin-top:24px}.note h2{margin:0 0 8px}.steps{font-weight:600}.note p+p{margin-top:8px}.checks{padding-top:2px}.checks p{font-size:14px;margin:7px 0}.checks b{color:var(--accent)}footer{border-top:1px solid var(--line);padding-top:12px;margin-top:23px;font-size:12px;color:var(--muted)}a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+@media(max-width:760px){main{margin:0;padding:26px 20px;border:0;border-radius:0}h1{font-size:26px}.pipeline{gap:8px}.box{padding:10px;font-size:13px}.box span{font-size:11px}.bottom{grid-template-columns:1fr;gap:0}table{min-width:760px}}@media print{body{background:white}main{margin:0;padding:15px;border:0;max-width:none}.note,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}a{color:inherit}@page{size:A4 landscape;margin:12mm}}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">18D · 动作生成</div>
+<h1>从逐步控制到动作序列</h1>
+<p class="intro">四条可尝试的路线。先验证低频控制的需求，再判断是否需要更复杂的生成方式。</p>
+
+<h2>当前模型</h2>
+<div class="pipeline" aria-label="当前模型的数据流">
+<div class="box"><strong>18D观测＋真实历史</strong><span>历史包含观测与已执行动作</span></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="box"><strong>LSTM＋Attention</strong><span>编码当前条件与历史信息</span></div>
+<div class="arrow" aria-hidden="true">→</div>
+<div class="box"><strong>高斯策略头 → 两维动作</strong><span>帆目标角增量、舵目标角增量</span></div>
+</div>
+<p class="caption">SAC负责训练；高斯头负责生成动作。单步／动作序列，与高斯／Diffusion／FM是两个独立选择。</p>
+
+<h2>可能的改进</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>路线</th><th>改什么 / 为何尝试</th><th>权重复用与训练</th><th>关键代价</th></tr></thead>
+<tbody>
+<tr><td>① 低频更新<small>保持已有目标</small><span class="tag">先做简单对照</span></td><td>减少策略调用；两次调用之间保持帆舵目标角。</td><td>原权重直接使用。<br><strong>无需训练。</strong></td><td>对新风扰动、障碍变化反应更慢。</td></tr>
+<tr><td>② 简单动作序列<small>Action chunk</small><span class="tag">最小模型改动</span></td><td>一次输出K步动作；在低频更新下表达“先转向、再回舵”等过程。</td><td>复用编码器，扩大动作头。<br><strong>需训练</strong>；可先模仿原策略。</td><td>后续动作缺少最新反馈；序列输出不自动带来平滑。</td></tr>
+<tr><td>③ Diffusion<small>迭代去噪生成</small></td><td>从噪声生成联合动作序列；尝试保留多种有效机动方案。</td><td>编码器可尝试复用。<br><strong>需新生成头与训练流程。</strong></td><td>通常多次网络求值；不能直接沿用现有SAC的概率计算。</td></tr>
+<tr><td>④ Flow Matching<small>学习向量场生成</small></td><td>沿学习的向量场将噪声变为动作序列；探索少步生成。</td><td>编码器可尝试复用。<br><strong>需新生成头与训练流程。</strong></td><td>速度取决于求解步数与质量；不保证比高斯头或Diffusion更快。</td></tr>
+</tbody></table></div>
+
+<div class="bottom">
+<section class="note"><h2>建议从这里开始</h2><p class="steps">原模型 → 低频保持 → 两步动作序列</p><p>在原18D环境中先比较，再迁移到Yara。生成方式的比较统一输入、数据、更新频率与序列长度。</p><p style="font-size:13px">保持目标 ≠ 重复增量：+5°后保持应追加0°，再次+5°会累计到+10°。</p></section>
+<section class="checks"><h2>用什么判断值得继续？</h2><p><b>计算：</b>实际推理耗时是否下降？调用次数少不等于总耗时少。</p><p><b>航行：</b>安全完成、最小安全余量和航时是否保留？</p><p><b>操纵：</b>是否减少反复调整，或完成保持目标做不到的机动？</p><p>简单保持若已达到同等效果，就不继续增加复杂度。</p></section>
+</div>
+<footer>本页为候选方向，尚未开展对应训练或对照实验。物理步进与真实历史记录保持连续。<br>方法来源：<a href="https://spinningup.openai.com/en/latest/algorithms/sac.html">SAC</a> · <a href="https://diffusion-policy.cs.columbia.edu/">Diffusion Policy</a> · <a href="https://arxiv.org/abs/2210.02747">Flow Matching</a></footer>
+</main></body></html>

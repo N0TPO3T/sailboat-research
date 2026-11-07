@@ -1,0 +1,9 @@
+{
+  "tag": "hs-yara:noetic-base",
+  "source": "osrf/ros:noetic-desktop-full",
+  "official_manifest_sha256": "7dbfb9576d8e6d226c31e06129a82aaab8702695f38eca2116918cb9b9308797",
+  "official_config_digest": "sha256:69a38b2c0905efd0578571ebe8d07a70d48a40b0bf1357c7f4fbfd1ea5503653",
+  "docker_image_id": "sha256:d214aca5a1413779e26939ae1560d5051723d4c48126681e35ee20837d390888",
+  "rootfs_and_config_equal": true,
+  "note": "Docker 29 containerd image identifier differs from config digest; verified actual config and all uncompressed rootfs digests against official config. Compressed blobs verified before load."
+}

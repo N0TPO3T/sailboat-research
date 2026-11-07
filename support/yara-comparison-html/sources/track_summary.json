@@ -1,0 +1,29 @@
+[
+  {
+    "scene_id": "s8371_005_channel_slow_1000",
+    "time_s": 381.0,
+    "path_length_m": 1181.8493303656578,
+    "min_safety_clearance_m": 98.28678625290803,
+    "obstacles": 4,
+    "source_sha256": "bd38b854e91b797366ae6b9c623a2f9059d99094519f4ee42f984d64af48d602",
+    "safe_arrival": true
+  },
+  {
+    "scene_id": "s8371_021_channel_fast_3000",
+    "time_s": 813.0,
+    "path_length_m": 3095.80151244998,
+    "min_safety_clearance_m": 72.41976231147797,
+    "obstacles": 10,
+    "source_sha256": "00d200a3fbe524640e9744a29fc7bbf29f973f7c309fe29c60d2bacfbc82c7f8",
+    "safe_arrival": true
+  },
+  {
+    "scene_id": "s8371_034_staggered_fast_5000",
+    "time_s": 2081.0,
+    "path_length_m": 6392.68834617734,
+    "min_safety_clearance_m": 57.07168846746555,
+    "obstacles": 8,
+    "source_sha256": "d27e833925ef3ebf539b641faed86a27a0938de55efc7ec3fee3776cea421f43",
+    "safe_arrival": true
+  }
+]

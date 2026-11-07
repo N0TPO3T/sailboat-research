@@ -1,0 +1,30 @@
+{
+  "PPO": {
+    "all_policy_parameters": 2631,
+    "actor_parameters": 1350,
+    "details": {
+      "gae_lambda": "0.95",
+      "clip_range": "<function get_schedule_fn.<locals>.<lambda> at 0x76723127e280>",
+      "normalize_advantage": "True",
+      "vf_coef": "0.5",
+      "max_grad_norm": "0.5",
+      "target_update_interval": "absent",
+      "train_freq": "absent",
+      "target_entropy": "absent"
+    }
+  },
+  "SAC": {
+    "all_policy_parameters": 6954,
+    "actor_parameters": 1446,
+    "details": {
+      "gae_lambda": "absent",
+      "clip_range": "absent",
+      "normalize_advantage": "absent",
+      "vf_coef": "absent",
+      "max_grad_norm": "absent",
+      "target_update_interval": "1",
+      "train_freq": "TrainFreq(frequency=1, unit=<TrainFrequencyUnit.STEP: 'step'>)",
+      "target_entropy": "-3.0"
+    }
+  }
+}

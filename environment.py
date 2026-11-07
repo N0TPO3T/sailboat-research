@@ -84,7 +84,7 @@ class MigrationEnv(gym.Env):
   self.target=np.zeros(2);self.t=0.;self.min_safety=math.inf;self.goal=np.array(scene['goals'][0],dtype=np.float32)
   if self.backend=='yara':
    reset_raw=raw.copy();reset_raw[[2,6,8,9]]*=-1
-   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'))
+   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'])
    measured=from_gazebo(self.diag);measured[12:14]=self.goal
    if not np.allclose(measured[:10],raw[:10],atol=2e-5,rtol=0):raise AssertionError(('reset mismatch',measured,raw))
    raw=measured;self.clock0=self.diag['clock']
@@ -108,7 +108,7 @@ class MigrationEnv(gym.Env):
    np.testing.assert_allclose(self.target,[self.env.target_sail_angle,self.env.target_rudder_angle],rtol=0,atol=1e-12)
    self.diag=dict(clock=self.t,dt=1.,motor_command=0,motor_applied_thrust=0,cable_actual=None)
   else:
-   self.diag=self.transport.request('step',cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))
+   self.diag=self.transport.request('step',cable=abs(float(self.target[0])),rudder=-float(self.target[1]))
    assert abs(self.diag['dt']-1)<1e-8,self.diag
    self.t+=1
    assert abs(self.diag['clock']-self.clock0-self.t)<1e-8
