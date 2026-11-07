@@ -1,5 +1,5 @@
 {
-  "branch": "codex/yara-migration18",
+  "branch": "idea/yara",
   "release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/project-assets-20261107",
   "existing_release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/consolidated-20261001",
   "files": [
