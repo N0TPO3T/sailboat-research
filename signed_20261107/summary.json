@@ -1,0 +1,68 @@
+[
+  {
+    "mode": "native",
+    "scene": "clear",
+    "reason": "arrived",
+    "success": true,
+    "time_s": 171.0,
+    "min_safety_m": null,
+    "final_distance_m": 9.613215655366924,
+    "target_changes": 0,
+    "opposite_sail_steps": 6
+  },
+  {
+    "mode": "signed",
+    "scene": "clear",
+    "reason": "arrived",
+    "success": true,
+    "time_s": 291.0,
+    "min_safety_m": null,
+    "final_distance_m": 9.44329779183451,
+    "target_changes": 0,
+    "opposite_sail_steps": 0
+  },
+  {
+    "mode": "native",
+    "scene": "single",
+    "reason": "time_limit",
+    "success": false,
+    "time_s": 900.0,
+    "min_safety_m": 17.932632511502106,
+    "final_distance_m": 397.32537295499264,
+    "target_changes": 0,
+    "opposite_sail_steps": 845
+  },
+  {
+    "mode": "signed",
+    "scene": "single",
+    "reason": "time_limit",
+    "success": false,
+    "time_s": 900.0,
+    "min_safety_m": 1.508215374182825,
+    "final_distance_m": 144.5288118840367,
+    "target_changes": 0,
+    "opposite_sail_steps": 0
+  },
+  {
+    "mode": "native",
+    "scene": "switch",
+    "reason": "time_limit",
+    "success": false,
+    "time_s": 900.0,
+    "min_safety_m": null,
+    "final_distance_m": 77.32464894755516,
+    "target_changes": 1,
+    "opposite_sail_steps": 865
+  },
+  {
+    "mode": "signed",
+    "scene": "switch",
+    "reason": "time_limit",
+    "success": false,
+    "time_s": 900.0,
+    "min_safety_m": null,
+    "final_distance_m": 189.67365091793795,
+    "target_changes": 1,
+    "opposite_sail_steps": 0
+  }
+]

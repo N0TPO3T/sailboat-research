@@ -1,0 +1,17 @@
+[
+  {
+    "mode": "original",
+    "max_sail_angle_error_deg": 0.0,
+    "max_rudder_angle_error_deg": 0.0
+  },
+  {
+    "mode": "native",
+    "max_sail_angle_error_deg": 160.2158429836375,
+    "max_rudder_angle_error_deg": 0.12617920717952305
+  },
+  {
+    "mode": "signed",
+    "max_sail_angle_error_deg": 6.830189170012751e-06,
+    "max_rudder_angle_error_deg": 1.7075472925031877e-06
+  }
+]

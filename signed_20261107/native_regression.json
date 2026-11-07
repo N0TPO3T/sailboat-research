@@ -1,0 +1,20 @@
+[
+  {
+    "scene": "clear",
+    "steps": 171,
+    "max_physical_state_difference": 0.0,
+    "outcome_same": true
+  },
+  {
+    "scene": "single",
+    "steps": 900,
+    "max_physical_state_difference": 0.0,
+    "outcome_same": true
+  },
+  {
+    "scene": "switch",
+    "steps": 900,
+    "max_physical_state_difference": 0.0,
+    "outcome_same": true
+  }
+]

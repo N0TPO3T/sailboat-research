@@ -1,0 +1,20 @@
+[
+  {
+    "scene": "clear",
+    "max_tracking_error_deg": 3.0028097265898337e-06,
+    "max_clock_error_s": 0.0,
+    "motor_zero": true
+  },
+  {
+    "scene": "single",
+    "max_tracking_error_deg": 3.3367401573733684e-06,
+    "max_clock_error_s": 0.0,
+    "motor_zero": true
+  },
+  {
+    "scene": "switch",
+    "max_tracking_error_deg": 3.3367401446511495e-06,
+    "max_clock_error_s": 0.0,
+    "motor_zero": true
+  }
+]

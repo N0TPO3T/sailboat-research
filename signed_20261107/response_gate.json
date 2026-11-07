@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "angle_tolerance_deg": 0.05,
+  "rate_tolerance_deg_s": 0.05,
+  "rows": [
+    {
+      "mode": "original",
+      "max_angle_error_deg": 0.0,
+      "max_rate_excess_deg_s": 0.0
+    },
+    {
+      "mode": "native",
+      "max_angle_error_deg": 0.0,
+      "max_rate_excess_deg_s": 0.0
+    },
+    {
+      "mode": "signed",
+      "max_angle_error_deg": 6.830189170012751e-06,
+      "max_rate_excess_deg_s": 4.831734798770244e-06
+    }
+  ]
+}
