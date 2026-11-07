@@ -1,5 +1,10 @@
 # Project State
 
+## GitHub 分支管理（2026-11-07）
+- 本方向版本分支：`codex/idea-a-routing`；同仓库的其他思路使用独立分支，入口为 `codex/project-index`。`main` 保留原历史基点。
+- 模型与原始结果的位置由 `migration/ASSETS.json` 维护；原服务器工作区和原有产物未修改。此次仅整理并发布版本，未重新运行实验。
+
+
 ## 避障研究交接（2026-11-05，本机）
 - A停止决策保持；用户要求重新从师兄避障方法找问题。交接：discovery_obstacle_20261105/SENIOR_OBSTACLE_HANDOFF_ZH.md、idea-stage/IDEA_REPORT.md。
 - 已读131页《大论文-Final.pdf》第五章；晚探测条件的模型排序反转是论文报告，原日志/checkpoint映射尚未闭合，不称已复现。优先诊断物理可行性、信息可辨识性与策略响应三者。

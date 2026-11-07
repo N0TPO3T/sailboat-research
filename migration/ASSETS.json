@@ -60370,6 +60370,559 @@
       "storage": "project-assets-20261107",
       "asset": "routing-assets-010.tar.gz",
       "archive_member": "runs/v0_2_margin_20261002T142441Z/review/run.meta.json"
+    },
+    {
+      "path": "deliverables/SailBoatRL_asset_digest_20261007/05_evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "deliverables/SailBoatRL_asset_digest_20261007/05_evidence/recovery_check.log"
+    },
+    {
+      "path": "docs/debug.log",
+      "size": 1620,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "docs/debug.log"
+    },
+    {
+      "path": "docs/experiment_manual_20261022/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "docs/experiment_manual_20261022/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/r12_revision/latex/compile.log",
+      "size": 216,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/r12_revision/latex/compile.log"
+    },
+    {
+      "path": "paper/ccdc/r13_revision/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/r13_revision/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/r13_revision/latex/compile.log",
+      "size": 108,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/r13_revision/latex/compile.log"
+    },
+    {
+      "path": "paper/ccdc/r13_revision/review_round_02_input/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/r13_revision/review_round_02_input/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_aris_20261008/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_aris_20261008/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_aris_20261008/latex/compile.log",
+      "size": 121,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_aris_20261008/latex/compile.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_closeout_20261009/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_closeout_20261009/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_closeout_20261009/latex/compile.log",
+      "size": 121,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_closeout_20261009/latex/compile.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_closeout_20261013/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_closeout_20261013/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_latex_20261030/main.log",
+      "size": 10088,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_latex_20261030/main.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_latex_20261030/supplement.log",
+      "size": 7761,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_latex_20261030/supplement.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_latex_20261030/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_latex_20261030/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_submit/evidence/recovery_check.log",
+      "size": 919,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_submit/evidence/recovery_check.log"
+    },
+    {
+      "path": "paper/ccdc/track_A_submit/latex/compile.log",
+      "size": 50,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "paper/ccdc/track_A_submit/latex/compile.log"
+    },
+    {
+      "path": "runs/a_fair_20261105/run.log",
+      "size": 67398,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/a_fair_20261105/run.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/analysis_tests.log",
+      "size": 534,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/analysis_tests.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/failure_details.log",
+      "size": 1015,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/failure_details.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/final.analysis.log",
+      "size": 2180,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/final.analysis.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/final.stdout.log",
+      "size": 302499,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/final.stdout.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/history_tests.log",
+      "size": 993,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/history_tests.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/resources.log",
+      "size": 2577,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/resources.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round1.analysis.log",
+      "size": 637,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round1.analysis.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round1.stdout.log",
+      "size": 21987,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round1.stdout.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round2.analysis.log",
+      "size": 1695,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round2.analysis.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round2.stdout.log",
+      "size": 122840,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round2.stdout.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round3.stdout.log",
+      "size": 33780,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round3.stdout.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round4.analysis.log",
+      "size": 341,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round4.analysis.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/round4.stdout.log",
+      "size": 27861,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/round4.stdout.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/tests_frozen.log",
+      "size": 13097,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/tests_frozen.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/tests_round2.log",
+      "size": 12377,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/tests_round2.log"
+    },
+    {
+      "path": "runs/r1_autoresearch_20261003T021913Z/wind_failure_details.log",
+      "size": 1697,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r1_autoresearch_20261003T021913Z/wind_failure_details.log"
+    },
+    {
+      "path": "runs/r2_autoresearch_20261003T063153Z/tests_initial.log",
+      "size": 13715,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r2_autoresearch_20261003T063153Z/tests_initial.log"
+    },
+    {
+      "path": "runs/r2_autoresearch_20261003T063153Z/tests_initial_missing_pythonpath.log",
+      "size": 8694,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r2_autoresearch_20261003T063153Z/tests_initial_missing_pythonpath.log"
+    },
+    {
+      "path": "runs/r2_autoresearch_20261003T063153Z/tests_round2.log",
+      "size": 14032,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r2_autoresearch_20261003T063153Z/tests_round2.log"
+    },
+    {
+      "path": "runs/r2_autoresearch_20261003T063153Z/tests_round3.log",
+      "size": 14397,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r2_autoresearch_20261003T063153Z/tests_round3.log"
+    },
+    {
+      "path": "runs/r2_autoresearch_20261003T063153Z/tests_round4.log",
+      "size": 2998,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r2_autoresearch_20261003T063153Z/tests_round4.log"
+    },
+    {
+      "path": "runs/r3_ccdc_20261003T121146Z/final_verify.log",
+      "size": 39,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r3_ccdc_20261003T121146Z/final_verify.log"
+    },
+    {
+      "path": "runs/r3_ccdc_20261003T121146Z/tests_round1.log",
+      "size": 2999,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r3_ccdc_20261003T121146Z/tests_round1.log"
+    },
+    {
+      "path": "runs/r3_ccdc_20261003T121146Z/tests_round2.log",
+      "size": 3007,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r3_ccdc_20261003T121146Z/tests_round2.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/analysis.log",
+      "size": 30776,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/analysis.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/confirmation.log",
+      "size": 8684,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/confirmation.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/confirmation85.log",
+      "size": 8678,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/confirmation85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/development.log",
+      "size": 5014,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/development.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/development85.log",
+      "size": 6733,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/development85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_confirmation.log",
+      "size": 11024,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_confirmation.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_development.log",
+      "size": 3456,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_development.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_early_probe.log",
+      "size": 2419,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_early_probe.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_latency.log",
+      "size": 2454,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_latency.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_long.log",
+      "size": 2771,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_long.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_probe.log",
+      "size": 2139,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_probe.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_regression.log",
+      "size": 2401,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_regression.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/goal_sensitivity.log",
+      "size": 3629,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/goal_sensitivity.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/latency85.log",
+      "size": 2681,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/latency85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/long85.log",
+      "size": 2680,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/long85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/pilot.log",
+      "size": 2430,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/pilot.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/refinement.log",
+      "size": 8325,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/refinement.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/regression85.log",
+      "size": 2647,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/regression85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/sensitivity85.log",
+      "size": 3654,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/sensitivity85.log"
+    },
+    {
+      "path": "runs/r7_dynamic_20261005T033700Z/stationary85.log",
+      "size": 1039,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r7_dynamic_20261005T033700Z/stationary85.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/active_sensitivity.log",
+      "size": 2117,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/active_sensitivity.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/analysis.log",
+      "size": 12590,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/analysis.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/branches.log",
+      "size": 2154,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/branches.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/development.log",
+      "size": 2398,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/development.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/development2.log",
+      "size": 2667,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/development2.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/hold_ablation_development.log",
+      "size": 2100,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/hold_ablation_development.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/joint_active_turn.log",
+      "size": 1608,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/joint_active_turn.log"
+    },
+    {
+      "path": "runs/r8_closedloop_20261005T062543Z/smoke.log",
+      "size": 1065,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r8_closedloop_20261005T062543Z/smoke.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/confirmation.log",
+      "size": 6103,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/confirmation.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/development.log",
+      "size": 3216,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/development.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/development2.log",
+      "size": 2681,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/development2.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/development3.log",
+      "size": 2384,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/development3.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/long_confirmation.log",
+      "size": 2499,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/long_confirmation.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/sensitivity.log",
+      "size": 2193,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/sensitivity.log"
+    },
+    {
+      "path": "runs/r9_timing_20261005T085308Z/static_regression.log",
+      "size": 2008,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/r9_timing_20261005T085308Z/static_regression.log"
+    },
+    {
+      "path": "runs/v0_2_margin_20261002T142441Z/run_stdout.log",
+      "size": 5488,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/v0_2_margin_20261002T142441Z/run_stdout.log"
+    },
+    {
+      "path": "runs/v0_2_margin_20261002T142441Z/tests.log",
+      "size": 11767,
+      "storage": "project-assets-20261107",
+      "asset": "routing-logs.tar.gz",
+      "archive_member": "runs/v0_2_margin_20261002T142441Z/tests.log"
     }
   ],
   "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."
