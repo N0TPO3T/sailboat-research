@@ -1,0 +1,53 @@
+{
+  "purpose": "Isolated actuator-noise unit-contract probe for advisor briefing; no model loading, rollout, training, or code modification",
+  "source_commit": "b079399bfeb659c228156f767962374f95f56614",
+  "numpy_version": "1.24.3",
+  "seed": 0,
+  "noise_ratio": 0.03,
+  "normalized_command": [
+    0.20000000298023224,
+    0.20000000298023224
+  ],
+  "action_high_rad": [
+    0.1745329201221466,
+    0.1745329201221466
+  ],
+  "intended_increment_degrees": [
+    1.9999998807907104,
+    1.9999998807907104
+  ],
+  "normalized_contract_call_output_rad": [
+    0.035349342972040176,
+    0.03356964513659477
+  ],
+  "normalized_contract_call_output_degrees": [
+    2.0253679752349854,
+    1.9233988523483276
+  ],
+  "current_aligned_call_output_rad": [
+    0.0,
+    0.030986689031124115
+  ],
+  "current_aligned_call_output_degrees": [
+    0.0,
+    1.7754063606262207
+  ],
+  "source_identity": {
+    "research/chapter5_static.py": {
+      "current_sha256": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+      "snapshot_sha256": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+      "identical": true
+    },
+    "sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py": {
+      "current_sha256": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c",
+      "snapshot_sha256": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c",
+      "identical": true
+    }
+  },
+  "limits": [
+    "Probe ends before environment angle quantization and dynamics",
+    "Does not quantify contribution to 100k failure",
+    "Contract-consistent call is a comparison, not a committed fix",
+    "Historical checkpoints were not altered or reevaluated"
+  ]
+}

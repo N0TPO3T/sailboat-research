@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-02",
+  "source_commit": "b079399bfeb659c228156f767962374f95f56614",
+  "scope": "Local read-only code review and bounded NumPy actuator diagnostic; no training, rollout, formal evaluation, remote deployment or dependency installation",
+  "python": "3.11.4",
+  "numpy": "1.24.3",
+  "actuator_probe": {
+    "noise_ratio": 0.03,
+    "seed": 0,
+    "command": [0.2, 0.2],
+    "action_high": "float32 pi/18 per actuator",
+    "current_call": "ActuatorNoise(.03, seed=0).apply_action_noise(command * high, high)",
+    "contract_consistent_call": "ActuatorNoise(.03, seed=0).apply_action_noise(command, high) * high",
+    "current_output_degrees": [0.0, 1.7754063606262207],
+    "contract_consistent_output_degrees": [2.0253679752349854, 1.9233988523483276],
+    "matches_existing_advisor_probe": true,
+    "source_sha256": {
+      "research/chapter5_static.py": "c1a6f20a0ad23c6aeccc7f607e3369e1f3aeedcd1c7c5dd1c417d73b5582cab8",
+      "sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py": "f94dabc254a8eca8bb3b35d07943b8c644bcd73c21b389e796b600e26c1faf1c"
+    },
+    "both_files_identical_to_100k_source_snapshot": true,
+    "limits": "No environment quantization or dynamics exercised; contribution to training failure remains unquantified"
+  },
+  "engineering_wind_probe": {
+    "source": "engineering/sailboat_rl/noise_utils_wind.py",
+    "call": "SensorNoise(noise_ratio=0, seed=0).add_observation_noise(float32_state)",
+    "input_slots_14_15": [8.0, -1.0],
+    "output_slots_14_15": [1.716814637184143, 0.0],
+    "environment_contract": "slot 14 wind speed, slot 15 wind direction",
+    "limits": "Actual noise class only; no environment rollout or policy inference"
+  },
+  "historical_integrity": {
+    "run": "research/outputs/chapter5_static_aligned_seed101",
+    "expected_hash_source": "stage100k_review.json",
+    "all_five_evidence_sha256_matched": true,
+    "step_100000_checkpoint_sha256_matched": true,
+    "episode_rows": 200,
+    "recomputed_counts": {
+      "no_obstacle": {"task_success": 1, "safe_success": 1, "safety_violation": 0, "timeout": 97, "out_of_bounds": 2},
+      "fixed_static": {"task_success": 0, "safe_success": 0, "safety_violation": 18, "timeout": 31, "out_of_bounds": 1},
+      "random_static": {"task_success": 0, "safe_success": 0, "safety_violation": 16, "timeout": 30, "out_of_bounds": 4}
+    }
+  },
+  "verification_limits": {
+    "missing_local_dependencies": ["torch", "gymnasium", "pygame", "stable_baselines3"],
+    "full_regression_suite_run": false,
+    "policy_environment_closed_loop_run": false,
+    "remote_live_state_checked": false,
+    "runtime_source_modified": false
+  }
+}

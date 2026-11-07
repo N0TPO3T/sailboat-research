@@ -1,6 +1,6 @@
 # Sailboat research
 
-本机维护代码与 Git，Ubuntu 主服务器运行实验。研究事实与当前目标分别见 `PROJECT_STATE.md`、`CURRENT_PLAN.md`；操作边界见 `AGENTS.md`。
+本地仅作为 Git 同步仓库；实际开发、调试、测试和实验均在 `ssh donghai` 服务器上进行。研究事实与当前目标分别见 `PROJECT_STATE.md`、`CURRENT_PLAN.md`；操作边界见 `AGENTS.md`。
 
 ## 代码来源与目录
 
@@ -35,16 +35,18 @@ git pull --ff-only
 
 ## 本地与服务器
 
-- Windows 正式目录：`C:\Users\74095\hs\SailBoat\sailboat-research`。
-- 主服务器工作范围：`ot@172.16.2.249:/home/ot/Students/hs`。
-- 主服务器既有项目是部署副本，不是 Git 克隆。同步前比较改动；不可用本地旧版本覆盖未归档的服务器工作。
+- Windows Git 同步目录：`C:\Users\74095\hs\SailBoat\sailboat-research`；不在本地开发运行代码、安装研究依赖或执行实验。
+- 服务器入口：`ssh donghai`（`ot@172.16.2.249`）；开发与实验工作范围：`~/Students/hs`，真实路径 `/home/ot/Students/hs`。
+- 服务器项目 `/home/ot/Students/hs/sailboat-research` 已接入同一主仓库的 Git 历史，不再只是旧部署副本；两端同步状态与备份位置见 `PROJECT_STATE.md`。同步前仍须比较两端改动，不可用本地旧版本覆盖服务器未归档工作。
+- 日常方向：服务器开发 → 显式选择变更提交并推送 → 本机工作区干净时 `git pull --ff-only`。手工同步不等于已提交/推送，不做盲目双向覆盖；两端现有未提交改动须先保全处理。服务器的 GitHub 认证需单独配置，不复制本机凭据。
 - 海南下载目录与 `source-backups/` 是来源备份，不是正式开发入口。
 - 服务器的 `.venv`、系统依赖、缓存与 GPU 状态不随 Git 同步；Linux 虚拟环境不能复制到 Windows 使用。
 - 所有主服务器写入只能在真实路径 `/home/ot/Students/hs/` 内；不修改共享 base、其他学生目录或系统配置。
+- Miniconda 入口：`/home/ot/miniconda3/condabin/conda`。为项目创建独立环境前，按 `AGENTS.md` 将环境、包缓存及临时目录限定在 hs；命名环境使用 hs 内的 `CONDA_ENVS_PATH` 和 `CONDA_PKGS_DIRS`，不要写入共享 base 或修改共享配置。Python 版本按项目依赖兼容性确定。
 
 ## 有界 CPU 验证
 
-在独立验证副本中使用已有兼容环境，禁用 GPU、限制 CPU 线程。以下命令不进行训练，输出不得覆盖已有实验：
+通过 `ssh donghai` 在服务器的独立验证副本中使用兼容环境，禁用 GPU、限制 CPU 线程。以下命令不在本地执行，不进行训练，输出不得覆盖已有实验：
 
 ```bash
 export CUDA_VISIBLE_DEVICES=''
@@ -61,7 +63,7 @@ python -B -m unittest discover -s engineering/tests -p 'test_*.py'
 
 依赖包括 PyTorch、NumPy、SciPy、Gymnasium、Pandas、Matplotlib、Pygame、stable-baselines3 和 tqdm；原环境版本与运行证据见来源清单及 `PROJECT_STATE.md`。`sailboat_RL/requirements.txt` 是原版记录，不代表已经验证过的跨平台锁文件。
 
-第五章研究工具仍显式复用同仓库中的原版参考目录，不自动替换为海南工程实现。部分第五章工具有 Linux/hs 路径约束；本机负责编辑与版本管理，完整运行验证放主服务器的独立目录。
+第五章研究工具仍显式复用同仓库中的原版参考目录，不自动替换为海南工程实现。部分第五章工具有 Linux/hs 路径约束；代码修改与运行验证均在服务器进行，本地只同步 Git。
 
 训练、续训、正式评估、资源调度与检查点选择必须依据当前计划单独执行；本次版本整理不代表训练获准，也不代表旧检查点通过论文复现。
 

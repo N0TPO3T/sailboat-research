@@ -1,0 +1,2811 @@
+{
+  "branch": "codex/static-baseline",
+  "release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/project-assets-20261107",
+  "existing_release": "https://github.com/N0TPO3T/sailboat-research/releases/tag/consolidated-20261001",
+  "files": [
+    {
+      "path": "research/outputs/chapter5_cpu_components.json",
+      "size": 645,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_cpu_components.json"
+    },
+    {
+      "path": "research/outputs/navigation_cpu_1000.json",
+      "size": 2713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/navigation_cpu_1000.json"
+    },
+    {
+      "path": "research/outputs/smoke_cpu.json",
+      "size": 2712,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/smoke_cpu.json"
+    },
+    {
+      "path": "research/outputs/yc_selfatt_diagnostic.json",
+      "size": 4952,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/yc_selfatt_diagnostic.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best.json",
+      "size": 207,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/best.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best_reward.json",
+      "size": 88,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/best_reward.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best_reward.pt",
+      "size": 40760377,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/best_reward.pt"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/best_static_safe_success.pt",
+      "size": 40760377,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/best_static_safe_success.pt"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/latest.json",
+      "size": 223,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/latest.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/log_from_0_1789450769952278328.jsonl",
+      "size": 11335863,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/log_from_0_1789450769952278328.jsonl"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/progress.json",
+      "size": 257,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/progress.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/run.lock",
+      "size": 0,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/run.lock"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/static_eval_bank.json",
+      "size": 159824,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/static_eval_bank.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/step_0.pt",
+      "size": 20392665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/step_0.pt"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/step_100000.pt",
+      "size": 40760377,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/step_100000.pt"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/config_snapshot.json",
+      "size": 4610,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_0/config_snapshot.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/episodes.jsonl",
+      "size": 114368,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_0/episodes.jsonl"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/provenance.json",
+      "size": 1368,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_0/provenance.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/representative_trajectories.json",
+      "size": 5311544,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_0/representative_trajectories.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_0/summary.json",
+      "size": 2957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_0/summary.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/config_snapshot.json",
+      "size": 4610,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_100000/config_snapshot.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/episodes.jsonl",
+      "size": 113063,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_100000/episodes.jsonl"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/provenance.json",
+      "size": 1368,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_100000/provenance.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/eval_100000/representative_trajectories.json",
+      "size": 3855163,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/eval_100000/representative_trajectories.json"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_baseline.py",
+      "size": 28256,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_baseline.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_static.py",
+      "size": 46962,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/research/chapter5_static.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py",
+      "size": 17983,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/SAC_lstm_att_normal.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/globals.py",
+      "size": 653,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/globals.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py",
+      "size": 13163,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/noise_utils.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py",
+      "size": 28238,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/PART5/SAC-LSTM-att/utils_lstm_att_normal.py"
+    },
+    {
+      "path": "research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py",
+      "size": 42522,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/outputs/chapter5_static_aligned_seed101/source_snapshot/sailboat_RL/gymnasium/envs/sailboat/sailboat_s14_obst_V3.py"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1211_actor3600.pth",
+      "size": 3475054,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_actor3600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1211_normalizer3600.pth",
+      "size": 1856,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_normalizer3600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1211_q_critic3600.pth",
+      "size": 6683404,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1211_q_critic3600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1213_actor15600.pth",
+      "size": 3475077,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_actor15600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1213_normalizer15600.pth",
+      "size": 1862,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_normalizer15600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1213_q_critic15600.pth",
+      "size": 6683442,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1213_q_critic15600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1216_actor12600.pth",
+      "size": 3475077,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_actor12600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1216_normalizer12600.pth",
+      "size": 1862,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_normalizer12600.pth"
+    },
+    {
+      "path": "research/supplements/yc_attention_121x/saclstm_s14obst_1216_q_critic12600.pth",
+      "size": 6683442,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_attention_121x/saclstm_s14obst_1216_q_critic12600.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor14400.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor14400.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor9000.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_actor9000.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth"
+    },
+    {
+      "path": "research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/supplements/yc_selfatt_0113/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_actor3600.pth",
+      "size": 3475054,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_normalizer3600.pth",
+      "size": 1856,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_q_critic3600.pth",
+      "size": 6683404,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1211_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_actor15600.pth",
+      "size": 3475077,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_actor15600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_normalizer15600.pth",
+      "size": 1862,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_normalizer15600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_q_critic15600.pth",
+      "size": 6683442,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1213_q_critic15600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_actor12600.pth",
+      "size": 3475077,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_actor12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_normalizer12600.pth",
+      "size": 1862,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_normalizer12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_q_critic12600.pth",
+      "size": 6683442,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/chapter5_attention/yc/SAC/model/saclstm_s14obst_1216_q_critic12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor10800.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor11700.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor12600.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor13500.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor14400.pth",
+      "size": 3475786,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor1800.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor2700.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor3600.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor4500.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor5400.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor6300.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor7200.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor8100.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor900.pth",
+      "size": 3475736,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor9000.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor9900.pth",
+      "size": 3475761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_actor9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer10800.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer11700.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer12600.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer13500.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth",
+      "size": 2381,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer1800.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer2700.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer3600.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer4500.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer5400.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer6300.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer7200.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer8100.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer900.pth",
+      "size": 2365,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer9900.pth",
+      "size": 2373,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_normalizer9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic10800.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic11700.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic12600.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic13500.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth",
+      "size": 6684341,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic1800.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic2700.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic3600.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic4500.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic5400.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic6300.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic7200.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic8100.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic900.pth",
+      "size": 6684261,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic9900.pth",
+      "size": 6684301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_q_critic9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_10800.pth",
+      "size": 28713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_11700.pth",
+      "size": 28713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_12600.pth",
+      "size": 28713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_13500.pth",
+      "size": 28713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_14400.pth",
+      "size": 28713,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_1800.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_2700.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_3600.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_4500.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_5400.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_6300.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_7200.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_8100.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_900.pth",
+      "size": 28701,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_9000.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_9900.pth",
+      "size": 28707,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_attention/yc/SAC/sac-lstm-selfatt/model/saclstm_s14obst-selfatt_0113_training_stats_9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_actor1800.pth",
+      "size": 2683510,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_normalizer1800.pth",
+      "size": 1856,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_q_critic1800.pth",
+      "size": 5099832,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_training_stats_1800.pth",
+      "size": 28196,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/other_network/yc/SAC/model/saclstm_s14obst_1021_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_actor10800.pth",
+      "size": 3475215,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_actor10800.zip",
+      "size": 9454943,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_actor10800.zip"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "size": 1898,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_q_critic10800.pth",
+      "size": 6683670,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/01_obstacle_18d/user_0204_10800/saclstm_s14obst_noise_0204_q_critic10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_actor1800.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_normalizer1800.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_value1800.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0126_value1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor10800.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor11701.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor11701.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor12603.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor12603.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor13500.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor14401.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor14401.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor1801.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor1801.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor2702.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor2702.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor3600.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor4501.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor4501.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor5402.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor5402.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor6303.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor6303.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor7200.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor8101.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor8101.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor900.pth",
+      "size": 2675666,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor9002.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor9002.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor9903.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_actor9903.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer10800.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer11701.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer11701.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer12603.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer12603.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer13500.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer14401.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer14401.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer1801.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer1801.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer2702.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer2702.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer3600.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer4501.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer4501.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer5402.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer5402.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer6303.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer6303.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer7200.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer8101.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer8101.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer900.pth",
+      "size": 2269,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer9002.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer9002.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer9903.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_normalizer9903.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value10800.pth",
+      "size": 2669974,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value11701.pth",
+      "size": 2669974,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value11701.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value12603.pth",
+      "size": 2669974,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value12603.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value13500.pth",
+      "size": 2669974,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value14401.pth",
+      "size": 2669974,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value14401.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value1801.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value1801.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value2702.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value2702.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value3600.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value4501.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value4501.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value5402.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value5402.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value6303.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value6303.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value7200.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value8101.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value8101.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value900.pth",
+      "size": 2669940,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value9002.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value9002.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value9903.pth",
+      "size": 2669957,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/PPO/model/ppolstm_s14_0129_value9903.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor10800.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor11700.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor12600.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor13500.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor14400.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor15300.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor16200.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor17100.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor1800.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor18000.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor18900.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor19800.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor19800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor20700.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor20700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor21600.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor21600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor22500.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor22500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor23400.pth",
+      "size": 2675723,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor23400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor2700.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor3600.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor4500.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor5400.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor6300.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor7200.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor8100.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor900.pth",
+      "size": 2675685,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor9000.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor9900.pth",
+      "size": 2675704,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_actor9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer10800.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer11700.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer12600.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer13500.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer14400.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer15300.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer16200.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer17100.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer1800.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer18000.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer18900.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer19800.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer19800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer20700.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer20700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer21600.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer21600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer22500.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer22500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer23400.pth",
+      "size": 2293,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer23400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer2700.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer3600.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer4500.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer5400.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer6300.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer7200.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer8100.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer900.pth",
+      "size": 2277,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer9000.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer9900.pth",
+      "size": 2285,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_normalizer9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic10800.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic11700.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic12600.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic13500.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic14400.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic15300.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic16200.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic17100.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic1800.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic18000.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic18900.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic19800.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic19800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic20700.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic20700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic21600.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic21600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic22500.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic22500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic23400.pth",
+      "size": 5083841,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic23400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic2700.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic3600.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic4500.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic5400.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic6300.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic7200.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic8100.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic900.pth",
+      "size": 5083785,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic9000.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic9900.pth",
+      "size": 5083813,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_q_critic9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_10800.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_11700.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_12600.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_13500.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_14400.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_15300.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_16200.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_17100.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_1800.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_18000.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_18900.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_19800.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_19800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_20700.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_20700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_21600.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_21600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_22500.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_22500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_23400.pth",
+      "size": 28647,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_23400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_2700.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_3600.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_4500.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_5400.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_6300.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_7200.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_8100.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_900.pth",
+      "size": 28635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_9000.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_9900.pth",
+      "size": 28641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/SAC/sac-lstm/model/sac-lstm_s14_0126_training_stats_9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor10800.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor1800.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor2700.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor3600.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor4500.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor5400.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor6300.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor7200.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor8100.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor900.pth",
+      "size": 2673080,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor9000.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor9900.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_actor9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer10800.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer1800.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer2700.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer3600.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer4500.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer5400.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer6300.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer7200.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer8100.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer900.pth",
+      "size": 2301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer9000.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer9900.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_normalizer9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic10800.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic1800.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic2700.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic3600.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic4500.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic5400.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic6300.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic7200.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic8100.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic900.pth",
+      "size": 5083869,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic9000.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic9900.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_q_critic9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_10800.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_1800.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_2700.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_3600.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_4500.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_5400.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_6300.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_7200.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_8100.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_900.pth",
+      "size": 19629,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_9000.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_9900.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0122_td3_training_stats_9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor10800.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor11700.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor12600.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor13500.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor14400.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor15300.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor16200.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor17100.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor1800.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor18000.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor18900.pth",
+      "size": 2673114,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor2700.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor3600.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor4500.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor5400.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor6300.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor7200.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor8100.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor900.pth",
+      "size": 2673080,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor9000.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor9900.pth",
+      "size": 2673097,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_actor9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer10800.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer11700.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer12600.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer13500.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer14400.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer15300.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer16200.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer17100.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer1800.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer18000.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer18900.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer2700.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer3600.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer4500.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer5400.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer6300.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer7200.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer8100.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer900.pth",
+      "size": 2301,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer9000.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer9900.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_normalizer9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic10800.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic11700.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic12600.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic13500.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic14400.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic15300.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic16200.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic17100.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic1800.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic18000.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic18900.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic2700.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic3600.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic4500.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic5400.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic6300.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic7200.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic8100.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic900.pth",
+      "size": 5083869,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic9000.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic9900.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_q_critic9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_10800.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_10800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_11700.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_11700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_12600.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_12600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_13500.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_13500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_14400.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_14400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_15300.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_15300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_16200.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_16200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_17100.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_17100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_1800.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_18000.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_18000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_18900.pth",
+      "size": 19641,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_18900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_2700.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_2700.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_3600.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_4500.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_4500.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_5400.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_5400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_6300.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_6300.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_7200.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_7200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_8100.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_8100.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_900.pth",
+      "size": 19629,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_9000.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_9000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_9900.pth",
+      "size": 19635,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/TD3/model/td3lstm_s14_0126_td3_training_stats_9900.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor1200.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor1800.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor600.pth",
+      "size": 2675761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_actor600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer1200.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer1800.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer600.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_normalizer600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic1200.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic1800.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic600.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_q_critic600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_1200.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_1800.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_600.pth",
+      "size": 28659,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed400/model/saclstm_s14_final_400_training_stats_600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor1200.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor1800.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor2400.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor2400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor3000.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor3000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor3600.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor4200.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor4200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor600.pth",
+      "size": 2675761,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_actor600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer1200.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer1800.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer2400.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer2400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer3000.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer3000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer3600.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer4200.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer4200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer600.pth",
+      "size": 2309,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_normalizer600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic1200.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic1800.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic2400.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic2400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic3000.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic3000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic3600.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic4200.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic4200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic600.pth",
+      "size": 5083897,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_q_critic600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_1200.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_1800.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_2400.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_2400.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_3000.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_3000.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_3600.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_3600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_4200.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_4200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_600.pth",
+      "size": 28659,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/saclstmseed500/model/saclstm_s14_final_500_training_stats_600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor1200.pth",
+      "size": 2675799,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor1800.pth",
+      "size": 2675799,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor600.pth",
+      "size": 2675780,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_actor600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer1200.pth",
+      "size": 2325,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer1800.pth",
+      "size": 2325,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer600.pth",
+      "size": 2317,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_normalizer600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic1200.pth",
+      "size": 5083953,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic1800.pth",
+      "size": 5083953,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic600.pth",
+      "size": 5083925,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_q_critic600.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_1200.pth",
+      "size": 28671,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_1200.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_1800.pth",
+      "size": 28671,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_1800.pth"
+    },
+    {
+      "path": "research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_600.pth",
+      "size": 28665,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/weights_library/20260928_import/02_navigation_14d/yc/xiaolunwen/model/saclstm_s14_final_2026_training_stats_600.pth"
+    },
+    {
+      "path": "saclstm_s14obst_noise_0204_actor10800.zip",
+      "size": 9454943,
+      "storage": "project-assets-20261107",
+      "asset": "static-assets-000.tar.gz",
+      "archive_member": "saclstm_s14obst_noise_0204_actor10800.zip"
+    }
+  ],
+  "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."
+}
