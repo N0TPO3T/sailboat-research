@@ -5791,6 +5791,293 @@
       "storage": "project-assets-20261107",
       "asset": "track-b-assets-002.tar.gz",
       "archive_member": "runs/turn_admission/turn4_reverseTrue__heading.json"
+    },
+    {
+      "path": "discovery_b2/candidates/front_sampling/main_v1.log",
+      "size": 10008,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/front_sampling/main_v1.log"
+    },
+    {
+      "path": "discovery_b2/candidates/front_sampling/main_v2.log",
+      "size": 10607,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/front_sampling/main_v2.log"
+    },
+    {
+      "path": "discovery_b2/candidates/front_sampling/smoke_v1.log",
+      "size": 2749,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/front_sampling/smoke_v1.log"
+    },
+    {
+      "path": "discovery_b2/candidates/front_sampling/smoke_v2.log",
+      "size": 2877,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/front_sampling/smoke_v2.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/pilot.log",
+      "size": 4853,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/pilot.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/smoke.log",
+      "size": 1107,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/smoke.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/smoke_serialization_failure.log",
+      "size": 1396,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/smoke_serialization_failure.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/verify.log",
+      "size": 553,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/verify.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/archive_no_planning_latency/pilot.log",
+      "size": 4820,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/archive_no_planning_latency/pilot.log"
+    },
+    {
+      "path": "discovery_b2/candidates/return_sampling/archive_no_planning_latency/verify.log",
+      "size": 331,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b2/candidates/return_sampling/archive_no_planning_latency/verify.log"
+    },
+    {
+      "path": "discovery_b3/candidates/derated_return/main_v1_console.log",
+      "size": 29410,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/derated_return/main_v1_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/derated_return/verification_console.log",
+      "size": 7098,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/derated_return/verification_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/dev_v2_console.log",
+      "size": 2379,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/dev_v2_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/main_v1_console.log",
+      "size": 18762,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/main_v1_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/main_v2_console.log",
+      "size": 18929,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/main_v2_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/main_v3_console.log",
+      "size": 20133,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/main_v3_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/stability_dev2_console.log",
+      "size": 298,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/stability_dev2_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/stability_dev_console.log",
+      "size": 270,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/stability_dev_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/verification_console.log",
+      "size": 3883,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/verification_console.log"
+    },
+    {
+      "path": "discovery_b3/candidates/turn_handover/verification_v3_console.log",
+      "size": 3891,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "discovery_b3/candidates/turn_handover/verification_v3_console.log"
+    },
+    {
+      "path": "runs/ablation_development.log",
+      "size": 5633,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/ablation_development.log"
+    },
+    {
+      "path": "runs/calibration.log",
+      "size": 4819,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/calibration.log"
+    },
+    {
+      "path": "runs/calibration_signfix.log",
+      "size": 4835,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/calibration_signfix.log"
+    },
+    {
+      "path": "runs/confirmation.log",
+      "size": 142658,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/confirmation.log"
+    },
+    {
+      "path": "runs/fair_adaptation.log",
+      "size": 27011,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/fair_adaptation.log"
+    },
+    {
+      "path": "runs/fair_development.log",
+      "size": 19377,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/fair_development.log"
+    },
+    {
+      "path": "runs/phase_footprint.log",
+      "size": 18282,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/phase_footprint.log"
+    },
+    {
+      "path": "runs/pilot_corrected.log",
+      "size": 14772,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/pilot_corrected.log"
+    },
+    {
+      "path": "runs/pilot_scale.log",
+      "size": 14673,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/pilot_scale.log"
+    },
+    {
+      "path": "runs/pilot_station.log",
+      "size": 14017,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/pilot_station.log"
+    },
+    {
+      "path": "runs/recovery_confirmation.log",
+      "size": 147776,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_confirmation.log"
+    },
+    {
+      "path": "runs/recovery_development.log",
+      "size": 20157,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_development.log"
+    },
+    {
+      "path": "runs/recovery_diagnosis.log",
+      "size": 10955,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_diagnosis.log"
+    },
+    {
+      "path": "runs/recovery_luff_control.log",
+      "size": 31512,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_luff_control.log"
+    },
+    {
+      "path": "runs/recovery_luff_scale.log",
+      "size": 11635,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_luff_scale.log"
+    },
+    {
+      "path": "runs/recovery_minimal.log",
+      "size": 11082,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_minimal.log"
+    },
+    {
+      "path": "runs/recovery_sail_check.log",
+      "size": 6486,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_sail_check.log"
+    },
+    {
+      "path": "runs/recovery_scale.log",
+      "size": 30373,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_scale.log"
+    },
+    {
+      "path": "runs/recovery_simplification.log",
+      "size": 29027,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/recovery_simplification.log"
+    },
+    {
+      "path": "runs/scale_check.log",
+      "size": 29568,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/scale_check.log"
+    },
+    {
+      "path": "runs/turn_admission.log",
+      "size": 10721,
+      "storage": "project-assets-20261107",
+      "asset": "track-b-logs.tar.gz",
+      "archive_member": "runs/turn_admission.log"
     }
   ],
   "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."

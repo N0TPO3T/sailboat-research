@@ -1,5 +1,8 @@
 # B：区域观测中的低速迎风恢复
 
+本方向 GitHub 分支：`codex/idea-b-recovery`。其他思路见 `codex/project-index`；资产恢复见 `migration/ASSETS.json`。本次发布保留原研究结论与限制，不代表重新运行验证。
+
+
 先读 docs/B_METHOD_NOTE.md 和 docs/B_RESEARCH_REPORT.md。B使用理想当前局部风，不与A动态避碰结果混合。没有加载RL权重，没有训练或GPU。
 
 ## 主要材料
