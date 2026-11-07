@@ -2,6 +2,19 @@
 
 本机维护代码与 Git，Ubuntu 主服务器运行实验。研究事实与当前目标分别见 `PROJECT_STATE.md`、`CURRENT_PLAN.md`；操作边界见 `AGENTS.md`。
 
+## 四条研究线
+
+| 分支 | 内容 |
+| --- | --- |
+| [`main`](https://github.com/N0TPO3T/sailboat-research/tree/main) | 师兄 Sailboat 原历史基线 |
+| [`idea/A`](https://github.com/N0TPO3T/sailboat-research/tree/idea/A) | 想法 A：导航路由 |
+| [`idea/B`](https://github.com/N0TPO3T/sailboat-research/tree/idea/B) | 想法 B：低速迎风恢复 |
+| [`idea/yara`](https://github.com/N0TPO3T/sailboat-research/tree/idea/yara) | 18D → Yara 迁移 |
+
+各方向独立使用分支或 worktree，不混合研究结论。模型、日志与结果继续使用已有 Release；A、B、Yara 的索引见对应分支 `migration/ASSETS.json`。
+
+旧非主线分支已转为 `history/20261108/<原分支名>` 标签，保留来源历史；不再作为日常开发分支。本次仅整理分支、导航和索引，不改动基线实现，不运行实验。
+
 ## 代码来源与目录
 
 | 路径 | 来源与职责 |
@@ -15,7 +28,7 @@
 
 `engineering/` 是独立源码根。Windows 默认不区分大小写，不能把 `sailboat_rl/` 和 `sailboat_RL/` 同时放在根目录。参考实现和工程实现职责不同，不能只因名称相似就相互覆盖或删除。
 
-保留的原始海南历史位于 `archive/hainan-learner-sync-v2`；另一个恢复出的历史提交位于 `archive/hainan-recovered-extra`。主仓库历史保留研究与海南工程两条来源。旧 `N0TPO3T/sailboat_RL` 仓库仅归档留证，不再用于开发或克隆依赖；原始服务器资料与资产保存在来源清单和 GitHub Release 中。
+保留的原始海南历史位于标签 `history/20261108/archive/hainan-learner-sync-v2`；另一个恢复出的历史提交位于标签 `history/20261108/archive/hainan-recovered-extra`。主仓库历史保留研究与海南工程两条来源。旧 `N0TPO3T/sailboat_RL` 仓库仅归档留证，不再用于开发或克隆依赖；原始服务器资料与资产保存在来源清单和 GitHub Release 中。
 
 ## 克隆与日常 Git
 
@@ -23,7 +36,7 @@
 git clone https://github.com/N0TPO3T/sailboat-research.git
 ```
 
-唯一日常开发入口是本仓库的 `main`。一次普通克隆即可得到完整源码，不需要 `--recurse-submodules`、`git submodule update` 或旧仓库的访问权限。本仓库是私有仓库，需要 GitHub 认证；不要将令牌写进远程 URL、脚本或仓库文件。
+原版基线入口是本仓库的 `main`；A、B、Yara 分别在上方表格列出的分支中维护。一次普通克隆即可得到完整源码，不需要 `--recurse-submodules`、`git submodule update` 或旧仓库的访问权限。本仓库是私有仓库，需要 GitHub 认证；不要将令牌写进远程 URL、脚本或仓库文件。
 
 已有工作区先检查本地修改；工作区干净时才执行：
 
