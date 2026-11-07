@@ -1,0 +1,31 @@
+{
+  "archive_sha256": "d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640",
+  "indexed_members_verified": 183,
+  "primary_traces": 72,
+  "required_assets": [
+    {
+      "file": "third_party/senior/sailboat_s14.py",
+      "sha256": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313"
+    },
+    {
+      "file": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6"
+    },
+    {
+      "file": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "sha256": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6"
+    },
+    {
+      "file": "runs/r12_revision_20261006/freeze.json",
+      "sha256": "2ce44d1f98c923a2ab616df862ea436b866f23d14d9d13c37f6eccf12271897f"
+    },
+    {
+      "file": "runs/r12_revision_20261006/calibration.json",
+      "sha256": "7714dcc74a50c384e81386af70c04a236453a0071ff9d0dfebbc05ebbd7db263"
+    }
+  ],
+  "experiments_run": 0,
+  "weights_or_method_changed": false,
+  "permission_basis": "Explicit user report of provider agreement, 2026-10-07",
+  "paper_pdf_sha256": "9bc5165d59141e64c32cea5f4fbc2f4464c6fe0f88b40334de85703b92d356b9"
+}

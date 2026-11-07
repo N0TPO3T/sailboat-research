@@ -1,0 +1,77 @@
+{
+  "source_tasks": 46,
+  "windows": 1083,
+  "full15": 1048,
+  "truncated": 35,
+  "independence": "windows are clustered by source scene, not independent trials",
+  "protocol": "selected candidate only through next review; nominal feedback rules same, coordinates may diverge with state; later replanning tails excluded",
+  "by_event": {
+    "enter": {
+      "n_windows": 26,
+      "n_scenes": 12,
+      "full15": 26,
+      "max_error_m": 1.0389398986730787,
+      "median_max_error_m": 0.05791939049510879,
+      "p95_max_error_m": 0.40341477440721857,
+      "max_abs_margin_error_m": 0.9880224831035491,
+      "false_safe0": 0,
+      "false_safe30": 0,
+      "guard_shortfall": 0
+    },
+    "ordinary": {
+      "n_windows": 1017,
+      "n_scenes": 46,
+      "full15": 982,
+      "max_error_m": 30.505974776090454,
+      "median_max_error_m": 0.13812880895938123,
+      "p95_max_error_m": 3.894413678802389,
+      "max_abs_margin_error_m": 19.50755909747795,
+      "false_safe0": 0,
+      "false_safe30": 0,
+      "guard_shortfall": 0
+    },
+    "reevaluate": {
+      "n_windows": 14,
+      "n_scenes": 8,
+      "full15": 14,
+      "max_error_m": 2.089996265089144,
+      "median_max_error_m": 0.052446762481373366,
+      "p95_max_error_m": 1.0344427150253146,
+      "max_abs_margin_error_m": 0.13007569766077154,
+      "false_safe0": 0,
+      "false_safe30": 0,
+      "guard_shortfall": 0
+    },
+    "release": {
+      "n_windows": 26,
+      "n_scenes": 12,
+      "full15": 26,
+      "max_error_m": 0.6263159978686296,
+      "median_max_error_m": 0.05695285268652955,
+      "p95_max_error_m": 0.41473516929741866,
+      "max_abs_margin_error_m": 0.1751015582721891,
+      "false_safe0": 0,
+      "false_safe30": 0,
+      "guard_shortfall": 0
+    }
+  },
+  "largest_error": {
+    "source": "runs/r8_closedloop_20261005T062543Z/confirmation/r8new_endpoint_1__sampled/trace.json",
+    "scene": "r8new_endpoint_1",
+    "time": 341,
+    "event": "ordinary",
+    "selected": "nominal",
+    "steps": 15,
+    "full15": true,
+    "predicted_margin": 169.5605511197784,
+    "actual_margin": 178.97142685226441,
+    "margin_error": 9.410875732486005,
+    "max_position_error": 30.505974776090454,
+    "mean_position_error": 9.732481464693592,
+    "false_safe0": false,
+    "false_safe30": false,
+    "guard_shortfall": false,
+    "predicted_steps": 60,
+    "actual_remaining": 219
+  }
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "scene": "r9new_endpoint_8",
+    "time": 298,
+    "selected": "nominal",
+    "pred_margin": 5.953180255917744,
+    "status": "applied"
+  },
+  {
+    "scene": "r9new_mixed_pressure_2",
+    "time": 248,
+    "selected": "nominal",
+    "pred_margin": 18.673368795430576,
+    "status": "applied"
+  },
+  {
+    "scene": "r9new_mixed_pressure_0",
+    "time": 238,
+    "selected": "turn-90",
+    "pred_margin": 13.880884362007649,
+    "status": "applied"
+  },
+  {
+    "scene": "r9new_mixed_pressure_3",
+    "time": 268,
+    "selected": "turn90",
+    "pred_margin": 25.19002122278374,
+    "status": "applied"
+  },
+  {
+    "scene": "r9new_mixed_pressure_3",
+    "time": 354,
+    "selected": "nominal",
+    "pred_margin": 12.593581729872795,
+    "status": "applied"
+  }
+]

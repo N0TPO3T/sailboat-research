@@ -1,0 +1,50 @@
+[
+  {
+    "time": 10,
+    "history": 11,
+    "candidates": 1,
+    "old": 2.292811557184905,
+    "optimized": 2.2525771940127015,
+    "difference": 0.0
+  },
+  {
+    "time": 130,
+    "history": 131,
+    "candidates": 1,
+    "old": 4.29178499057889,
+    "optimized": 3.5173540003597736,
+    "difference": 0.0
+  },
+  {
+    "time": 267,
+    "history": 268,
+    "candidates": 6,
+    "old": 15.722363335080445,
+    "optimized": 13.772189676295966,
+    "difference": 0.0
+  },
+  {
+    "time": 115,
+    "history": 116,
+    "candidates": 6,
+    "old": 17.490980124101043,
+    "optimized": 15.17996666021645,
+    "difference": 0.0
+  },
+  {
+    "time": 551,
+    "history": 552,
+    "candidates": 6,
+    "old": 36.47103367280215,
+    "optimized": 26.745046903844923,
+    "difference": 0.0
+  },
+  {
+    "time": 724,
+    "history": 725,
+    "candidates": 6,
+    "old": 43.63858190085739,
+    "optimized": 30.77453267108649,
+    "difference": 0.0
+  }
+]

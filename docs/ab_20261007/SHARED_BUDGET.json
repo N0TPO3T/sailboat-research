@@ -1,0 +1,20 @@
+{
+  "start_utc": "2026-10-07T15:13:40Z",
+  "deadline_utc": "2026-10-08T15:13:40Z",
+  "max_wall_hours": 24,
+  "max_experiment_processes": 4,
+  "numerical_threads_per_process": 1,
+  "allocation": {
+    "A_experiment_workers": 0,
+    "B_experiment_workers": 4
+  },
+  "gpu": {
+    "maximum_devices": 1,
+    "maximum_gpu_hours": 12,
+    "device_authorization": "not yet verified; use only after actual authorization confirmed if training needed"
+  },
+  "A_directory": "paper/ccdc/track_A_submit",
+  "B_server_directory": "/home/ot/Students/hs/sailboat-track-b",
+  "old_assets_read_only": true,
+  "push_or_submission": false
+}

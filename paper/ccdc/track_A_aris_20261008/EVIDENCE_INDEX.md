@@ -1,0 +1,9 @@
+# Evidence and reproduction index
+
+- Current deterministic verification: REVISION_VERIFICATION.json and verify_revision.py. Recomputed all 72 primary trajectories (25,382 intervals) from the original recovery archive, including dynamic and static segment minima, safe-completion labels, family counts, paired time differences and CPU totals. Maximum margin discrepancy is approximately 0.000014 m; all labels agree. This is offline recomputation, not a new physical simulation.
+- Complete frozen recovery archive: ../r13_revision/R13_REPRODUCTION_internal.zip, SHA256 d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640. Its content and original receipts were not modified.
+- Supporting data: evidence/ copied from the named original draft. Raw scientific code was inspected inside the recovery ZIP; no code, configuration, weight or result was changed.
+- Main equations and table values are preserved. Five numerical figures were regenerated from the same frozen trace/data inputs with redundant method markers and line styles. Figure 1 is a revised schematic of the code-verified reconstruction and delivery contract.
+- Bibliographic metadata: REFERENCE_METADATA_CHECK.json contains publisher-deposited Crossref records for seven DOI references; the governor survey returned HTTP 429 there but was read on ScienceDirect. SAC was checked on the PMLR proceedings page. This is a metadata and citation-context check, not a full independent citation audit.
+- Primary edited source: manuscript.md. Word: build_docx.py and math_docx.py. PDF: export_pdf.ps1 using Microsoft Word. Optional synchronized LaTeX: convert_to_latex.py; it uses the supplied template. Native TeX compilation remains unverified.
+- Plot scripts use matplotlib from a task-local dependency directory. That dependency directory is not part of the lightweight delivery ZIP. Rebuilding the data plots additionally requires the frozen recovery archive.

@@ -1,0 +1,272 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r9_timing_20261005T085308Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "r9_active_turn_mixed7",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "activated_turn_development",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 183,
+                "velocity": [
+                  0.28767769428624523,
+                  -1.0736277712805342
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "r9_active_turn_mixed7",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "activated_turn_development",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 183,
+                "velocity": [
+                  0.28767769428624523,
+                  -1.0736277712805342
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "delayed15",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "period": 15,
+        "horizon": 60,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "r9_active_turn_mixed7",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "activated_turn_development",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 183,
+                "velocity": [
+                  0.28767769428624523,
+                  -1.0736277712805342
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "main",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "optimized": true,
+        "period": 60,
+        "horizon": 86,
+        "guard": 30,
+        "slot": 25,
+        "initial_wait": 25
+      }
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "slot30",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "optimized": true,
+        "period": 60,
+        "horizon": 91,
+        "guard": 30,
+        "slot": 30,
+        "initial_wait": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_7",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "slot30",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "optimized": true,
+        "period": 60,
+        "horizon": 91,
+        "guard": 30,
+        "slot": 30,
+        "initial_wait": 30
+      }
+    }
+  ]
+}

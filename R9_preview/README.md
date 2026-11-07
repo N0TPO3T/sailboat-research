@@ -1,0 +1,6 @@
+# R9 delivery
+先读docs/R9_METHOD_NOTE.md和docs/R9_RESEARCH_REPORT.md。双击gallery.html离线查看五张真实图。
+server_context是服务器交接快照，不覆盖本机已有未提交文件。
+原始数据另在R9_raw_results.tar.gz；源码与既有18D Actor/normalizer在R9_source.zip。R3稿和旧资产不改，GPU/新训练为0，无自动push。
+可在现有服务器仓库用scripts/reproduce_r9.py创建新输出复跑；命令和限制见报告。复制源码到新目录时不要覆盖已有未提交修改。硬件墙钟不同会改变实测延迟分支，不承诺逐位重现。
+科学提交65b3a7ae392e4401affa9c580438d4efdfcd683e；具体冻结哈希和原始证据见evidence。

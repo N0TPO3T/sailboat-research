@@ -1,5 +1,7 @@
 # 接力入口
 
+最新 A 线本地收口入口（2026-10-09）：[作者清单与真实同步状态](../paper/ccdc/track_A_closeout_20261009/AUTHOR_CHECKLIST_ZH.md)、[逐项回应与校核](../paper/ccdc/track_A_closeout_20261009/CLOSEOUT_RESPONSE.md)。旧稿保留；服务器未同步该编辑版。此入口更新不改变 B 线活跃计划。
+
 项目上下文已合并到根目录四文件，不在本页独立维护状态：
 
 1. [AGENTS.md](../AGENTS.md)：操作边界与跨设备协议。
@@ -52,8 +54,8 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 五张关键图＋开发补充图、逐点数据、可运行配置/源码及原始索引在R5_METHOD_preview.zip与run/preview/gallery.html；包外同步校验见R5_DELIVERY.json。本机无需模型即可重绘，完整物理复跑仍依赖原服务器资产及新预算。
 - 6271/7371和risk6101均已见；R3初稿与旧结果保留。本地旧修改保留，只fetch、不push；本轮关闭，未来建议未启动。
 
-## R6 新研究授权
-旧冻结低层、只改高层、排除18D及固定记忆/时序的阶段条件已撤销。当前有效范围、预算及恢复入口仅见 CURRENT_PLAN.md 和 runs/r6_reset_20261004T115808Z/plan.json；历史结论不改写。启动时GPU分配待确认；本轮最终未使用GPU，完成状态见下。
+## R6 active scope override
+R6 current authority: low-level models/checkpoints, inputs, normalization, causal memory and goal timing may change. V0-R5 frozen-interface rules are historical, not active restrictions. Preserve original assets/results, source permissions, causal information and evaluation. Recovery and shared budget: CURRENT_PLAN.md and runs/r6_reset_20261004T115808Z/plan.json. R6 completed without GPU use; see completion below.
 
 ## R6 完成（2026-10-04）
 - 首读 [R6中文方法](R6_METHOD_NOTE.md) 与 [R6研究报告](R6_RESEARCH_REPORT.md)。采用已有18D控制器＋安全边界输入＋Relay120；本轮更换控制器资产，未训练新权重。旧冻结规则不再生效，不能把未训练解释为禁止或无效。
@@ -61,30 +63,16 @@ seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fet
 - 五张真实图与index.html；R6_RESEARCH_preview.zip为轻量包，source bundle、继承权重和完整原始日志另存run下，复现见run/REPRODUCE.md，传输校验以R6_DELIVERY.json为准。本机旧修改保留，无push。
 - seed8371/9471现已见。研究完成、无运行中实验；R3稿不变，仅paper/ccdc/R6_POSITIONING.md另存定位更新，未来训练/扩展建议未自动执行。
 
-## R7 启动（2026-10-05）
-动态低速目标、控制器/输入/记忆/时序及必要训练均可研究；旧静态或18D限定不再适用。唯一当前范围见CURRENT_PLAN.md，运行入口runs/r7_dynamic_20261005T033700Z/plan.json；R6为对照，保护旧资产。
+## AB并行任务启动 — 2026-10-07
+- A独立稿件paper/ccdc/track_A_submit；B独立服务器/home/ot/Students/hs/sailboat-track-b。共享预算、截止与分工见ab_20261007/SHARED_BUDGET.json。
+- 本机滞后R6入口已纠正，原本机STATE/PLAN/MEMORY/HANDOFF保留在ab_20261007/reconciliation。未触碰现有未提交科学代码/日志。
 
-## R7 completed — 2026-10-05
-- 科学实现b29e459：当前位置动态接入+终点占用时间窗接力；无新训练。
-- 方法/主张边界见R7_METHOD_NOTE.md、R7_RESEARCH_REPORT.md；全部证据runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json。
-- 新实例收益是两个临时终点无路恢复，保留740秒误干预反例；建议仅作有限扩展，非完整避碰/规则/实时保证。
-- 原始source/config/旧失败保留，离线图集与R7_DYNAMIC_preview.zip交付；没有自动push。当前实验已结束。
+## AB：A独立交付
+A已完成paper/ccdc/track_A_submit；8页PDF SHA256 bf702658243506e24f4088c66e16b8cf3a91532828850d71d939f121a25a3057。本机/服务器一致，无新实验。B仍在独立驻留任务筛选，100m首批未发现强简单基线缺口；不得将其写成方法成功。当前状态见AB_STATUS.md。
 
-## R8启动
-R8: executable underway dynamic avoidance with candidate-conditioned prediction and rolling feedback. R6/R7 are baselines, not frozen constraints. High/low-level, causal memory, interface and training may change; no future truth online, no unassigned GPU, no automatic push.
-当前入口CURRENT_PLAN.md；runs/r8_closedloop_20261005T062543Z/plan.json。R7 confirmation85真实侵入、最终终点恢复与740秒代价分别验证，全部R7数据现为开发材料。
 
-## R8 completed — 2026-10-05
-- 先读R8_METHOD_NOTE.md、R8_RESEARCH_REPORT.md。科学冻结29124b8；GVO思想的控制条件轨迹采样适配，无新训练。
-- 新集28/30→30/30为两例途中缓冲侵入避免；长程3/4→4/4。保留新集最大+267s、规划43.46s和3次guard退化分支，动态建议有限扩展。
-- runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md列全部源码/配置/分支/原始结果；R8_DYNAMIC_preview.zip、R8_raw_results.tar.gz、R8_source.zip及R8_DELIVERY.json用于恢复。
-- 全部实验结束，无自动push或新训练；旧资产和本机未提交上下文修改保留。服务器HANDOFF/STATE快照随预览包交付。
-
-## R9启动
-R9: retain useful candidate-conditioned closed-loop prediction under explicit computation/delivery timing. High/low-level, memory, interface, horizon, guard and training may change; no future truth, no unassigned GPU, max4 single-thread CPU experiment workers shared.
-当前入口CURRENT_PLAN.md；runs/r9_timing_20261005T085308Z/plan.json。先profile再选路线，计算期间实际低层闭环与双方/风时钟继续推进，不把旧配置或旧论文定位当硬限制。
-
-## R9 completed — 2026-10-05
-- 入口R9_METHOD_NOTE.md、R9_RESEARCH_REPORT.md；冻结及原始索引runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md，当前无活跃实验/研究线程。
-- 主方案25秒时隙、26秒生效，等待期间实际反馈继续；新短无安全gain且平均+57.42s，新3km保留一例收益。30秒等待有预测安全/实际侵入反例，动态仅建议有限扩展。
-- R9_TIMING_preview.zip、R9_raw_results.tar.gz和R9_source.zip用于恢复；原始资产/R3稿/历史结果保持，无新训练、无自动push。本机未提交上下文不覆盖，包内给服务器快照。
+## AB最终交付（2026-10-08，本地时间）
+A已独立交付paper/ccdc/track_A_submit（Word、实际8页PDF、LaTeX源、补充与ZIP），原R13科学资产未改。
+B在../sailboat-track-b完成低速迎风恢复的有限仿真研究：风险release98.24%、center11.47%、匹配luff97.74%；强对照差异很小且有成本/反例，不作普遍最优宣称。三位真实独立首审和原身份复核已完成，必需项关闭，适用边界保留。
+B完整ZIP仅本地C:/Users/74095/hs/SailBoat/sailboat-track-b/B_RESEARCH_preview.zip，服务器保留完整展开材料与PACKAGE_RECEIPT.json；原始日志与源码均核验。资源调度疏漏及并发证据边界见B/docs/RESOURCE_SCHEDULING_INCIDENT.json。
+一页状态和全部入口见docs/AB_STATUS.md。建议保留A、B单独组织由人类决定；无新活跃线程、无剩余作业、无push或投稿。

@@ -1,0 +1,126 @@
+# 接力入口
+
+项目上下文已合并到根目录四文件，不在本页独立维护状态：
+
+1. [AGENTS.md](../AGENTS.md)：操作边界与跨设备协议。
+2. [PROJECT_STATE.md](../PROJECT_STATE.md)：当前事实、证据和恢复材料。
+3. [CURRENT_PLAN.md](../CURRENT_PLAN.md)：当前目标与下一步。
+4. [PROJECT_MEMORY.md](../PROJECT_MEMORY.md)：按需检索的长期经验。
+
+运行与同步命令见[README](../README.md)。服务器工作区为开发入口，本地镜像需先核对版本及服务器未提交工作。
+
+## V0.1 诊断完成（2026-10-02）
+
+已完成同状态评分与已有日志统计，详见 [V0_1_DIAGNOSIS.md](ep_result/V0_1_DIAGNOSIS.md)。仅一次估计风补日志且完整复现；新产物在 `runs/v0_1_diagnosis_20261002/`。本轮到此停止，未实施下一轮建议。
+
+## V0.2 计划冻结
+
+产物 runs/v0_2_margin_20261002T142441Z/；总预算2小时、实验30分钟、正式24/总启动26、review一次。先核验及6回合，通过门槛才18回归。计时起点和当前版本见plan.json；当前尚未启动实验。
+
+V0.2主实验6回合完成；继续门槛=False，详见runs/v0_2_margin_20261002T142441Z/main_gate.json；本轮进程累计约60.5秒。
+
+V0.2交付完成：57测试、同状态核验、6正式回合、一次同家族review（provisional）；运行进程54.76秒，含核验/分析账本62.27秒，截至review总历时11.40分钟。25m三方法均无候选失败，18回归按门槛跳过；完整报告 [V0_2_RESULTS.md](V0_2_RESULTS.md)。唯一下一步建议是离线检查t=165候选覆盖，不在本轮实施。
+
+R1新授权已启动：r1_autoresearch_20261003T021913Z；恢复见CURRENT_PLAN.md及run/plan.json，历史V0.2停止状态不限制R1。
+
+R1完成4轮开发，冻结版本fa6fecd；67测试通过，72场/336回合新评估即将运行，详见runs/r1_autoresearch_20261003T021913Z/final_protocol.json。不得用测试结果调参；恢复检查final/completion.json及本任务进程。
+R1交付完成：4轮开发228回合 + 冻结72场336回合，共564回合；主方法65/72，锚点/去留量39/72，窄候选63/72。详见[R1研究报告](R1_RESEARCH_REPORT.md)，数值与适用边界以报告为准。
+冻结代码fa6fecd，67项实现测试和3项分析测试通过；336原始轨迹复算与最终同家族result-to-claim review完成（限定claim=yes，provisional，正式审计不可用）。预算与证据在runs/r1_autoresearch_20261003T021913Z/；所有实验已结束，未push。后续不能复用seed271作为未见测试。
+本地保留原有未提交改动；新源码通过fetch进入origin/main，新增报告及完整R1产物单独同步。CURRENT_PLAN已关闭本轮，下一轮建议尚未实施。
+
+R2新授权启动：r2_autoresearch_20261003T063153Z；12小时/8轮/4 CPU/GPU0，目标与开发/冻结划分见docs/R2_PLAN.md。R1旧72场本轮仅作开发，历史结果不覆盖。
+
+R2交付完成（2026-10-03）：四轮开发后冻结forward500，完成72新实例×4方法；研究结论、真实航迹、消融及失败证据见[R2研究报告](R2_RESEARCH_REPORT.md)。主要长程提效假设未获支持，不替换R1默认方案。
+全部939新回合结束；冻结科学源码3003228，288回合原始指标复算通过，最终result-to-claim=no（same-family/provisional，正式审计不可用）。原始产物runs/r2_autoresearch_20261003T063153Z/；figures/index.html与R2_results_preview.zip供本地查看。
+seed271/371/1271均已见；不再自动调参、补跑或push。源码通过fetch、冻结快照及Git bundle恢复，本地旧工作树与原未提交修改保留。下一轮建议仅在报告中，尚未实施。
+
+## R3 交付完成（2026-10-04）
+
+结论、完整收益/代价与失败边界见 [R3研究报告](R3_RESEARCH_REPORT.md)；英文完整内容稿 [paper/ccdc/draft.md](../paper/ccdc/draft.md)。冻结主方法 Relay160，合理 Relay120 与原 R1 仍保留，不能宣称稳定提效或安全保证。
+证据 `runs/r3_ccdc_20261003T121146Z/`；配置 `configs/r3_methods.json`，冻结评估提交 `037fe1a`；720 回合原始复算与一次最终 same-family/provisional 审查完成。研究停止，seed2271/3271 也已见。
+本地 `R3_CCDC_preview.zip` 与 run/figures/index.html 包含真实图、作图数据、索引和源码快照；全量控制日志仍在服务器。保留旧本地修改，只 fetch，不 push。作者须处理资产署名/发表许可和官方模板/PDF，尚未投稿。
+
+## R4 完成（2026-10-04）
+- 先读 R4_METHOD_NOTE.md，再读 R4_RESEARCH_REPORT.md。方法候选为因果运动触发的径向退让+条件保持，默认仍推荐 Relay160；新实例未证实新增安全或保持收益，正反例均保留。
+- 科学冻结 3c5e44f3bd4186b4f5a3ec012b1a8d9fd728d617；configs/r4_methods.json；全部证据 runs/r4_method_20261004T034532Z/，其中 raw_index.csv 索引626回合，final/raw_index.csv 索引冻结360回合。
+- 五张关键真实图、两张补充图和离线图集见 run/figures/；R4_METHOD_preview.zip 为含选中作图原始日志的轻量包。完整物理复跑依赖服务器现有资产；新运行另用输出目录及预算。
+- 一次有限审查完成，same-family/provisional；报告记录负结果与冻结前方案变更。4271/5271现为已见种子，无运行中实验；R3英文稿未改，不自动push或追加实验。
+
+## R5 完成（2026-10-04）
+- 先读 [R5中文方法说明](R5_METHOD_NOTE.md)，再读 [R5研究报告](R5_RESEARCH_REPORT.md)。保留文献恢复方向的位置接口候选tangent_exit90；风险工况有条件性收益，默认参考仍Relay160，不能忽略Relay120的优势与新方法代价。
+- 科学冻结822817495ac9ddae06a2743a021b8aa0d160f2d7；configs/r5_methods.json；run为runs/r5_literature_20261004T080700Z。796新回合已结束，432冻结回合复算完成，有限审查为same-family/provisional，无追加实验。
+- 五张关键图＋开发补充图、逐点数据、可运行配置/源码及原始索引在R5_METHOD_preview.zip与run/preview/gallery.html；包外同步校验见R5_DELIVERY.json。本机无需模型即可重绘，完整物理复跑仍依赖原服务器资产及新预算。
+- 6271/7371和risk6101均已见；R3初稿与旧结果保留。本地旧修改保留，只fetch、不push；本轮关闭，未来建议未启动。
+
+## R6 新研究授权
+旧冻结低层、只改高层、排除18D及固定记忆/时序的阶段条件已撤销。当前有效范围、预算及恢复入口仅见 CURRENT_PLAN.md 和 runs/r6_reset_20261004T115808Z/plan.json；历史结论不改写。启动时GPU分配待确认；本轮最终未使用GPU，完成状态见下。
+
+## R6 完成（2026-10-04）
+- 首读 [R6中文方法](R6_METHOD_NOTE.md) 与 [R6研究报告](R6_RESEARCH_REPORT.md)。采用已有18D控制器＋安全边界输入＋Relay120；本轮更换控制器资产，未训练新权重。旧冻结规则不再生效，不能把未训练解释为禁止或无效。
+- 科学冻结f572dac20e3e8a13bda57ebac0c6bf2343d384f2；configs/r6_methods.json；runs/r6_reset_20261004T115808Z/保存开发、匹配消融、冻结新实例与有限审阅。资源/完整分母/失败边界见报告，不宣称普遍安全或实时部署。
+- 五张真实图与index.html；R6_RESEARCH_preview.zip为轻量包，source bundle、继承权重和完整原始日志另存run下，复现见run/REPRODUCE.md，传输校验以R6_DELIVERY.json为准。本机旧修改保留，无push。
+- seed8371/9471现已见。研究完成、无运行中实验；R3稿不变，仅paper/ccdc/R6_POSITIONING.md另存定位更新，未来训练/扩展建议未自动执行。
+
+## R7 启动（2026-10-05）
+动态低速目标、控制器/输入/记忆/时序及必要训练均可研究；旧静态或18D限定不再适用。唯一当前范围见CURRENT_PLAN.md，运行入口runs/r7_dynamic_20261005T033700Z/plan.json；R6为对照，保护旧资产。
+
+## R7 completed — 2026-10-05
+- 科学实现b29e459：当前位置动态接入+终点占用时间窗接力；无新训练。
+- 方法/主张边界见R7_METHOD_NOTE.md、R7_RESEARCH_REPORT.md；全部证据runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json。
+- 新实例收益是两个临时终点无路恢复，保留740秒误干预反例；建议仅作有限扩展，非完整避碰/规则/实时保证。
+- 原始source/config/旧失败保留，离线图集与R7_DYNAMIC_preview.zip交付；没有自动push。当前实验已结束。
+
+## R8启动
+R8: executable underway dynamic avoidance with candidate-conditioned prediction and rolling feedback. R6/R7 are baselines, not frozen constraints. High/low-level, causal memory, interface and training may change; no future truth online, no unassigned GPU, no automatic push.
+当前入口CURRENT_PLAN.md；runs/r8_closedloop_20261005T062543Z/plan.json。R7 confirmation85真实侵入、最终终点恢复与740秒代价分别验证，全部R7数据现为开发材料。
+
+## R8 completed — 2026-10-05
+- 先读R8_METHOD_NOTE.md、R8_RESEARCH_REPORT.md。科学冻结29124b8；GVO思想的控制条件轨迹采样适配，无新训练。
+- 新集28/30→30/30为两例途中缓冲侵入避免；长程3/4→4/4。保留新集最大+267s、规划43.46s和3次guard退化分支，动态建议有限扩展。
+- runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md列全部源码/配置/分支/原始结果；R8_DYNAMIC_preview.zip、R8_raw_results.tar.gz、R8_source.zip及R8_DELIVERY.json用于恢复。
+- 全部实验结束，无自动push或新训练；旧资产和本机未提交上下文修改保留。服务器HANDOFF/STATE快照随预览包交付。
+
+## R9启动
+R9: retain useful candidate-conditioned closed-loop prediction under explicit computation/delivery timing. High/low-level, memory, interface, horizon, guard and training may change; no future truth, no unassigned GPU, max4 single-thread CPU experiment workers shared.
+当前入口CURRENT_PLAN.md；runs/r9_timing_20261005T085308Z/plan.json。先profile再选路线，计算期间实际低层闭环与双方/风时钟继续推进，不把旧配置或旧论文定位当硬限制。
+
+## R9 completed — 2026-10-05
+- 入口R9_METHOD_NOTE.md、R9_RESEARCH_REPORT.md；冻结及原始索引runs/r9_timing_20261005T085308Z/EVIDENCE_INDEX.md，当前无活跃实验/研究线程。
+- 主方案25秒时隙、26秒生效，等待期间实际反馈继续；新短无安全gain且平均+57.42s，新3km保留一例收益。30秒等待有预测安全/实际侵入反例，动态仅建议有限扩展。
+- R9_TIMING_preview.zip、R9_raw_results.tar.gz和R9_source.zip用于恢复；原始资产/R3稿/历史结果保持，无新训练、无自动push。本机未提交上下文不覆盖，包内给服务器快照。
+
+## R10启动 — 2026-10-05
+R10 active: final method and paper scope selection. Static adaptation, dynamic prediction and justified limited combination compete; prior recommendations are hypotheses, not constraints. Model/interface changes allowed but not required. No future truth, relaxed evaluation, weakened baselines, automatic push or submission. Max24h, max4 single-thread CPU workers shared; GPU unassigned and unused. Two separated author/reviewer sessions, same-family provisional simulation, no review score endpoint. All R1-R9 viewed data are development for R10. Historical assets and local dirty files preserved. Canonical user specification: docs/prompt/SailBoatRL_R10_ARIS_CCDC_Method_Decision.md. Run: runs/r10_decision_20261005.
+
+## R10 完成 — 2026-10-05
+- 首读[R10方法决策](R10_METHOD_DECISION.md)及[R10研究报告](R10_RESEARCH_REPORT.md)。本篇选择候选执行预测的位置参考适配，限定理想计算仿真；不宣称更优导航、实时或安全保证。范围见paper/ccdc/METHOD_SCOPE.md，R3底稿保留。
+- 静态匹配中心编码复制关键救回，不能把边界公式作为独立必要贡献；动态简单保持对照和同状态分歧支持有限参考选择作用。新确认对reactive无安全增益且有271秒代价，篇内未解为何时值得干预；hold60与R9延迟反例必须保留。
+- 原始证据、两轮实际模拟评审和复现索引：runs/r10_decision_20261005/REPRODUCE.md；R10_CCDC_DECISION_preview.zip、R10_raw_results.tar.gz、R10_source.zip及R10_DELIVERY.json用于取回。87新回合均结束，GPU0，无训练。
+- 下一阶段为证据整理与写作，不自动继续方法搜索；R10实例现已见。服务器状态快照随包提供，本地旧修改不覆盖，不自动push或投稿。
+
+## R11 第一版论文完成 — 2026-10-05
+- 入口paper/ccdc/r11_draft/：完整英文manuscript.md、用户官方Word模板manuscript.docx、实际导出6页manuscript.pdf；AUTHOR_NOTES_ZH.md说明问题—假设—方法—效果及待确认项。
+- 三张真实来源图／接口示意、evidence_check.md、一次分离模拟REVIEW.md和AUTHOR_RESPONSE.md、场景及源码/权重哈希索引随R11_CCDC_DRAFT_preview.zip交付。
+- R8历史／R10重叠机制／R10新确认分别报告；新确认无reactive安全完成增益且最大多271秒。无目标转向、理想计算边界明确；R9未合入主方法。
+- 无新增实验、训练或push；R3底稿与科学资产保持。下一阶段为作者修改及许可／政策确认，不自动研究扩张。
+
+## R12 定向补证完成 — 2026-10-06
+- 首读docs/R12_REVISION_REPORT.md与paper/ccdc/r12_revision/manuscript.md；已交付用户Word模板的可编辑DOCX和实际7页PDF，R11不覆盖。
+- 新冻结24场R/S15/L安全19/24/23；详细预测相对L多救回1场但共同安全均值+7秒、最大+308秒。完整限定、guard敏感性、106m误差与子步核验见报告，不宣称普遍更优、30m保证或实时安全。
+- 原始证据runs/r12_revision_20261006；本地R12_REVISION_preview.zip与R12_raw_results.tar.gz保留代码/配置/原始轨迹和必要旧输入；一次分离模拟复核及作者回应在稿件目录。
+- 所有预定任务结束，原科学代码、权重、历史结果保持；无训练、GPU、push或自动研究扩张。资产归属/许可与作者项集中待确认。
+
+- R12 LaTeX可编辑版：paper/ccdc/r12_revision/latex/main.tex与R12_LaTeX.zip；复用用户IEEEtran模板及原图。已检查源码结构，内置编译器平台目录错误、无外部TeX，尚未成功编译；旧7页Word导出PDF保持原身份。
+
+## R13 正文修订与模拟三审交付 — 2026-10-07
+- 首读paper/ccdc/r13_revision/AUTHOR_NOTES_ZH.md与FINAL_REVIEW_STATUS.md；完整8页Word PDF、可编辑Word和LaTeX、补充材料及真实图表已交付。
+- 两轮完整独立审查＋一轮最终校样，9份原始意见；A/B/C最终均Major Revision，未三审通过。剩余人工来源归属及访问确认，技术问题已关闭；无新证据不重复审查。
+- 原24场比较保持R19/L23/S15 24安全；相对L多1场、共同安全平均+7秒/最坏+308秒，不支持普遍优势。仅增加3次原任务同指令子步核验（42.956秒、1CPU、0GPU），无新独立任务。
+- R13_CCDC_REVIEW_preview.zip与独立R13_REPRODUCTION_internal.zip含交付/内部恢复证据；183文件身份和72轨迹恢复已验证，不代表公开发布授权。科学旧资产不改，无训练/push/在跑实验。
+
+## R13 资产确认续办与第四轮复核完成 — 2026-10-07
+- 用户明确确认Chao Yang提供的继承动力学、18D Actor及normalizer可用于本研究并可完整提供给编辑/审稿人；此前来源/许可待确认状态已过期，不重复要求授权。
+- 正式引用Yang et al., Applied Ocean Research 175 (2026)105246，DOI10.1016/j.apor.2026.105246；期刊14D与实际18D注意力资产独立说明，代码/检查点/归一化身份保持，不转移期刊成绩，不称已公开发布。
+- 原A/B/C在第4轮对同一稿件均实际Accept；累计12份意见，FINAL_REVIEW_STATUS.md及review/round_04记录身份、集中回应和真实判定。内部模拟不等于CCDC录用。
+- 更新后的8页PDF、Word、LaTeX、Supplement及预览包位于paper/ccdc/r13_revision。183成员/72轨迹原包重新核验；本续办无新实验、训练、模型/方法改动或图表重画。
+- 本稿作者/单位/通讯/资助仍需人工填写；不照抄来源论文。无活动研究线程、后台实验、push或投稿。

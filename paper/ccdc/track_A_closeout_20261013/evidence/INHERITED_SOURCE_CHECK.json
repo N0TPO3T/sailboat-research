@@ -1,0 +1,62 @@
+{
+  "src/sailboat_routing/continuous.py": {
+    "expected": "2971ab5efe3e70757418e1d8140782f5cd6b29a0f6291c360eadc0871f67a3ce",
+    "actual": "2971ab5efe3e70757418e1d8140782f5cd6b29a0f6291c360eadc0871f67a3ce",
+    "match": true
+  },
+  "src/sailboat_routing/obstacle_candidate.py": {
+    "expected": "eeffcae0f5e7bbd16119eb95ab5f6daaac56089a1c9c71686e5912a104d17694",
+    "actual": "eeffcae0f5e7bbd16119eb95ab5f6daaac56089a1c9c71686e5912a104d17694",
+    "match": true
+  },
+  "src/sailboat_routing/frames.py": {
+    "expected": "f2b8712971f31c78ce1f40d52a6e1384eef74051680f8df37e5eeabb2602eef1",
+    "actual": "f2b8712971f31c78ce1f40d52a6e1384eef74051680f8df37e5eeabb2602eef1",
+    "match": true
+  },
+  "src/sailboat_routing/metrics.py": {
+    "expected": "4f18a58bf5f9399952c9aad730a985d37430e9f817fedfe3c6c0997eb5595235",
+    "actual": "4f18a58bf5f9399952c9aad730a985d37430e9f817fedfe3c6c0997eb5595235",
+    "match": true
+  },
+  "src/sailboat_routing/wind_fields.py": {
+    "expected": "0a1046d79b2f2c8fabbf56f6aff19b4fdaec78bb121737a7865e82bc43930c43",
+    "actual": "0a1046d79b2f2c8fabbf56f6aff19b4fdaec78bb121737a7865e82bc43930c43",
+    "match": true
+  },
+  "src/sailboat_routing/r7_dynamic.py": {
+    "expected": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533",
+    "actual": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533",
+    "match": true
+  },
+  "src/sailboat_routing/r7_goal.py": {
+    "expected": "138af281a5db41e4a3d1973d9ee907fc333554e4b775e624ff015a42d40b0b43",
+    "actual": "138af281a5db41e4a3d1973d9ee907fc333554e4b775e624ff015a42d40b0b43",
+    "match": true
+  },
+  "src/sailboat_routing/runtime.py": {
+    "expected": "3096914a39e9cd33bba44caaff7dbd617263ca93f7d84f75cf64327845b234e1",
+    "actual": "3096914a39e9cd33bba44caaff7dbd617263ca93f7d84f75cf64327845b234e1",
+    "match": true
+  },
+  "src/sailboat_routing/navigation.py": {
+    "expected": "81ebb682a2b4d89b89354a8561d2ebdbf0eabdf86075263ed9d87c6e8eb32568",
+    "actual": "81ebb682a2b4d89b89354a8561d2ebdbf0eabdf86075263ed9d87c6e8eb32568",
+    "match": true
+  },
+  "src/sailboat_routing/r8_model.py": {
+    "expected": "0fa89f4e3ac9fbee514c709baf59936e0bda3d3867105d18c2005231d41cb175",
+    "actual": "0fa89f4e3ac9fbee514c709baf59936e0bda3d3867105d18c2005231d41cb175",
+    "match": true
+  },
+  "src/sailboat_routing/r8_planner.py": {
+    "expected": "ec6313eb3d5329198b0af63867705385b9334a272a13dd174a40235ef4a4dbc8",
+    "actual": "ec6313eb3d5329198b0af63867705385b9334a272a13dd174a40235ef4a4dbc8",
+    "match": true
+  },
+  "third_party/senior/sailboat_s14.py": {
+    "expected": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313",
+    "actual": "8668f769194b65857667b255eeca6467e45d3e248131ea46af245bfbdc156313",
+    "match": true
+  }
+}

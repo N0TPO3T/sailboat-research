@@ -1,0 +1,50 @@
+{
+  "aris_trace/001-jury.meta.json": {
+    "bytes": 650,
+    "sha256": "9c15885bd0bc8d79abf6f509321c3404fb9ca02a742c16f12a3f47d89eea49c9"
+  },
+  "aris_trace/001-jury.request.json": {
+    "bytes": 1136,
+    "sha256": "25b66d2a78ac1207a8a393388aaffbc18b41bd93729729a517ade9e6d61b6fdf"
+  },
+  "aris_trace/001-jury.response.md": {
+    "bytes": 4864,
+    "sha256": "507c4f67f88d9caf00c850cc3b96445cabdb8aacc518cac6744c94f58ec68c5d"
+  },
+  "aris_trace/run.meta.json": {
+    "bytes": 368,
+    "sha256": "f9e00bed4d87dd992b0a4a72d42c6bf5c0732f261868c2ced40770dce4d82c83"
+  },
+  "check_existing_evidence.py": {
+    "bytes": 2454,
+    "sha256": "81a8f9d2d380a8b72d8255d464c6b23d2f13ab05b44462ce05f57e77c81a3e04"
+  },
+  "idea-stage/GENERATOR_CONTROL.md": {
+    "bytes": 8037,
+    "sha256": "8f90bc27c04c4bf475caa83cdb18e02cee91a8b7eddf3f99d28afcb4b8139a0c"
+  },
+  "idea-stage/GENERATOR_INFORMATION.md": {
+    "bytes": 11645,
+    "sha256": "6a389757c17abe5bea3cbee30f15b925d69f413c67f8dee7a5d2cf0801e5124e"
+  },
+  "idea-stage/IDEA_REPORT.md": {
+    "bytes": 15282,
+    "sha256": "c40a18f2bf2c9e9daeeb37192c7ebb60ef96d6ff88b12a437504f17d71714e80"
+  },
+  "idea-stage/REVIEW.md": {
+    "bytes": 4864,
+    "sha256": "507c4f67f88d9caf00c850cc3b96445cabdb8aacc518cac6744c94f58ec68c5d"
+  },
+  "README.md": {
+    "bytes": 1235,
+    "sha256": "0e291fc1450b041617d58efb7e215ddcf1ae46936fbc7c7a6ecfea580b38fdd7"
+  },
+  "SENIOR_OBSTACLE_HANDOFF_ZH.md": {
+    "bytes": 13016,
+    "sha256": "90af81ee00dfa114f26515d16fa8bae635adf57dc55d6cb9b7cbdd869bb91c4e"
+  },
+  "SOURCE_MANIFEST.json": {
+    "bytes": 4078,
+    "sha256": "8bdb99cbc165a5c4d407e5782de67e3e41fc9d1808eb3db6a229919448624b64"
+  }
+}

@@ -1,0 +1,1856 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r10_decision_20261005",
+  "stage": "single_frozen_new_confirmation",
+  "generated_epoch": 1791198730.809192,
+  "freeze_sha256": "5f42a4b1726e8fb127273dc99ebe3ecdca91e54d208e5ab9ef4e0d18420192d1",
+  "jobs": [
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_0",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105070,
+        "profile": "stable",
+        "base_direction_degrees": 117.91117855442428,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 213.89737753856917,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              685.1140969280796,
+              184.01781323634665
+            ],
+            "velocity": [
+              0,
+              -0.8603088796783647
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_0",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105070,
+        "profile": "stable",
+        "base_direction_degrees": 117.91117855442428,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 213.89737753856917,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              685.1140969280796,
+              184.01781323634665
+            ],
+            "velocity": [
+              0,
+              -0.8603088796783647
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_0",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105070,
+        "profile": "stable",
+        "base_direction_degrees": 117.91117855442428,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 213.89737753856917,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              685.1140969280796,
+              184.01781323634665
+            ],
+            "velocity": [
+              0,
+              -0.8603088796783647
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_0",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105070,
+        "profile": "stable",
+        "base_direction_degrees": 117.91117855442428,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 213.89737753856917,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              685.1140969280796,
+              184.01781323634665
+            ],
+            "velocity": [
+              0,
+              -0.8603088796783647
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_1",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105071,
+        "profile": "fast",
+        "base_direction_degrees": 120.55015570830722,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 204.86647797426141,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              627.983989073178,
+              152.2690669137629
+            ],
+            "velocity": [
+              0,
+              -0.7432600414641451
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_1",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105071,
+        "profile": "fast",
+        "base_direction_degrees": 120.55015570830722,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 204.86647797426141,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              627.983989073178,
+              152.2690669137629
+            ],
+            "velocity": [
+              0,
+              -0.7432600414641451
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_1",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105071,
+        "profile": "fast",
+        "base_direction_degrees": 120.55015570830722,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 204.86647797426141,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              627.983989073178,
+              152.2690669137629
+            ],
+            "velocity": [
+              0,
+              -0.7432600414641451
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_1",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105071,
+        "profile": "fast",
+        "base_direction_degrees": 120.55015570830722,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 204.86647797426141,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              627.983989073178,
+              152.2690669137629
+            ],
+            "velocity": [
+              0,
+              -0.7432600414641451
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_2",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105072,
+        "profile": "stable",
+        "base_direction_degrees": 131.9987317064561,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 208.05810576679517,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              658.0806521498207,
+              160.96085858526388
+            ],
+            "velocity": [
+              0,
+              -0.7736341633604946
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_2",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105072,
+        "profile": "stable",
+        "base_direction_degrees": 131.9987317064561,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 208.05810576679517,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              658.0806521498207,
+              160.96085858526388
+            ],
+            "velocity": [
+              0,
+              -0.7736341633604946
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_2",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105072,
+        "profile": "stable",
+        "base_direction_degrees": 131.9987317064561,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 208.05810576679517,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              658.0806521498207,
+              160.96085858526388
+            ],
+            "velocity": [
+              0,
+              -0.7736341633604946
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_2",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105072,
+        "profile": "stable",
+        "base_direction_degrees": 131.9987317064561,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 208.05810576679517,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              658.0806521498207,
+              160.96085858526388
+            ],
+            "velocity": [
+              0,
+              -0.7736341633604946
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_3",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105073,
+        "profile": "fast",
+        "base_direction_degrees": 122.65973097439583,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 220.0713953163787,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              636.9940657524633,
+              196.90272321231512
+            ],
+            "velocity": [
+              0,
+              -0.8947220193212486
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_3",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105073,
+        "profile": "fast",
+        "base_direction_degrees": 122.65973097439583,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 220.0713953163787,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              636.9940657524633,
+              196.90272321231512
+            ],
+            "velocity": [
+              0,
+              -0.8947220193212486
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_3",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105073,
+        "profile": "fast",
+        "base_direction_degrees": 122.65973097439583,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 220.0713953163787,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              636.9940657524633,
+              196.90272321231512
+            ],
+            "velocity": [
+              0,
+              -0.8947220193212486
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_mixed_pressure_3",
+        "family": "mixed_pressure",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105073,
+        "profile": "fast",
+        "base_direction_degrees": 122.65973097439583,
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 220.0713953163787,
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              636.9940657524633,
+              196.90272321231512
+            ],
+            "velocity": [
+              0,
+              -0.8947220193212486
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_0",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105074,
+        "profile": "stable",
+        "base_direction_degrees": 49.93129925155924,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              501.1466478821194,
+              -150.89280820785518
+            ],
+            "velocity": [
+              0,
+              0.7489351951057229
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_0",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105074,
+        "profile": "stable",
+        "base_direction_degrees": 49.93129925155924,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              501.1466478821194,
+              -150.89280820785518
+            ],
+            "velocity": [
+              0,
+              0.7489351951057229
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_0",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105074,
+        "profile": "stable",
+        "base_direction_degrees": 49.93129925155924,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              501.1466478821194,
+              -150.89280820785518
+            ],
+            "velocity": [
+              0,
+              0.7489351951057229
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_0",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105074,
+        "profile": "stable",
+        "base_direction_degrees": 49.93129925155924,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              501.1466478821194,
+              -150.89280820785518
+            ],
+            "velocity": [
+              0,
+              0.7489351951057229
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_1",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105075,
+        "profile": "fast",
+        "base_direction_degrees": 68.93164123056789,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              461.726292450766,
+              -130.47173697263815
+            ],
+            "velocity": [
+              0,
+              0.6571648698784607
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_1",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105075,
+        "profile": "fast",
+        "base_direction_degrees": 68.93164123056789,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              461.726292450766,
+              -130.47173697263815
+            ],
+            "velocity": [
+              0,
+              0.6571648698784607
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_1",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105075,
+        "profile": "fast",
+        "base_direction_degrees": 68.93164123056789,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              461.726292450766,
+              -130.47173697263815
+            ],
+            "velocity": [
+              0,
+              0.6571648698784607
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_crossing_1",
+        "family": "underway_crossing",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105075,
+        "profile": "fast",
+        "base_direction_degrees": 68.93164123056789,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              461.726292450766,
+              -130.47173697263815
+            ],
+            "velocity": [
+              0,
+              0.6571648698784607
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_0",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105076,
+        "profile": "stable",
+        "base_direction_degrees": 61.080614718634486,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              251.91364374112447,
+              -8.263527172544753
+            ],
+            "velocity": [
+              0.8156465652768085,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_0",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105076,
+        "profile": "stable",
+        "base_direction_degrees": 61.080614718634486,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              251.91364374112447,
+              -8.263527172544753
+            ],
+            "velocity": [
+              0.8156465652768085,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_0",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105076,
+        "profile": "stable",
+        "base_direction_degrees": 61.080614718634486,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              251.91364374112447,
+              -8.263527172544753
+            ],
+            "velocity": [
+              0.8156465652768085,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_0",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105076,
+        "profile": "stable",
+        "base_direction_degrees": 61.080614718634486,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              251.91364374112447,
+              -8.263527172544753
+            ],
+            "velocity": [
+              0.8156465652768085,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_1",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105077,
+        "profile": "fast",
+        "base_direction_degrees": 75.22054144306095,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              288.487817636109,
+              2.416229633954
+            ],
+            "velocity": [
+              0.7852414954324014,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_1",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105077,
+        "profile": "fast",
+        "base_direction_degrees": 75.22054144306095,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              288.487817636109,
+              2.416229633954
+            ],
+            "velocity": [
+              0.7852414954324014,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_1",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105077,
+        "profile": "fast",
+        "base_direction_degrees": 75.22054144306095,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              288.487817636109,
+              2.416229633954
+            ],
+            "velocity": [
+              0.7852414954324014,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_underway_overtaking_1",
+        "family": "underway_overtaking",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105077,
+        "profile": "fast",
+        "base_direction_degrees": 75.22054144306095,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              288.487817636109,
+              2.416229633954
+            ],
+            "velocity": [
+              0.7852414954324014,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_0",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105078,
+        "profile": "stable",
+        "base_direction_degrees": 61.316790691947126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              619.0545127632295,
+              7.917501930721926
+            ],
+            "velocity": [
+              0.9131051153686489,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_0",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105078,
+        "profile": "stable",
+        "base_direction_degrees": 61.316790691947126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              619.0545127632295,
+              7.917501930721926
+            ],
+            "velocity": [
+              0.9131051153686489,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_0",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105078,
+        "profile": "stable",
+        "base_direction_degrees": 61.316790691947126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              619.0545127632295,
+              7.917501930721926
+            ],
+            "velocity": [
+              0.9131051153686489,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_0",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105078,
+        "profile": "stable",
+        "base_direction_degrees": 61.316790691947126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              619.0545127632295,
+              7.917501930721926
+            ],
+            "velocity": [
+              0.9131051153686489,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_1",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105079,
+        "profile": "fast",
+        "base_direction_degrees": 45.159719232946316,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              628.2828618119447,
+              -8.373512451545437
+            ],
+            "velocity": [
+              0.8314842591762286,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_1",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105079,
+        "profile": "fast",
+        "base_direction_degrees": 45.159719232946316,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              628.2828618119447,
+              -8.373512451545437
+            ],
+            "velocity": [
+              0.8314842591762286,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_1",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105079,
+        "profile": "fast",
+        "base_direction_degrees": 45.159719232946316,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              628.2828618119447,
+              -8.373512451545437
+            ],
+            "velocity": [
+              0.8314842591762286,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_endpoint_1",
+        "family": "endpoint",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105079,
+        "profile": "fast",
+        "base_direction_degrees": 45.159719232946316,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              628.2828618119447,
+              -8.373512451545437
+            ],
+            "velocity": [
+              0.8314842591762286,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_0",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105080,
+        "profile": "stable",
+        "base_direction_degrees": 59.07876303599065,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              563.9432683754767,
+              -371.3816542141191
+            ],
+            "velocity": [
+              0.7587997280639307,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_0",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105080,
+        "profile": "stable",
+        "base_direction_degrees": 59.07876303599065,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              563.9432683754767,
+              -371.3816542141191
+            ],
+            "velocity": [
+              0.7587997280639307,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_0",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105080,
+        "profile": "stable",
+        "base_direction_degrees": 59.07876303599065,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              563.9432683754767,
+              -371.3816542141191
+            ],
+            "velocity": [
+              0.7587997280639307,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_0",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105080,
+        "profile": "stable",
+        "base_direction_degrees": 59.07876303599065,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              563.9432683754767,
+              -371.3816542141191
+            ],
+            "velocity": [
+              0.7587997280639307,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_1",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105081,
+        "profile": "fast",
+        "base_direction_degrees": 71.5924320440126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              594.0047167652457,
+              375.32483028079037
+            ],
+            "velocity": [
+              0.8405532559211417,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_1",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105081,
+        "profile": "fast",
+        "base_direction_degrees": 71.5924320440126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              594.0047167652457,
+              375.32483028079037
+            ],
+            "velocity": [
+              0.8405532559211417,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_1",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105081,
+        "profile": "fast",
+        "base_direction_degrees": 71.5924320440126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              594.0047167652457,
+              375.32483028079037
+            ],
+            "velocity": [
+              0.8405532559211417,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "domain": "dynamic",
+      "scene": {
+        "id": "r10new_nonconflict_1",
+        "family": "nonconflict",
+        "distance_m": 1000,
+        "goal": [
+          1000,
+          0
+        ],
+        "seed": 2026105081,
+        "profile": "fast",
+        "base_direction_degrees": 71.5924320440126,
+        "static": [],
+        "vessels": [
+          {
+            "id": "ship0",
+            "position": [
+              594.0047167652457,
+              375.32483028079037
+            ],
+            "velocity": [
+              0.8405532559211417,
+              0
+            ]
+          }
+        ]
+      },
+      "variant": "nominal_hold",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30,
+        "r10_nominal_hold": true
+      }
+    }
+  ]
+}

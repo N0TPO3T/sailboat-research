@@ -1,0 +1,9 @@
+# Bounded claim and layout check
+
+One author-side check, no acceptance vote. Read 72 original trace.row records from the preserved R13 recovery archive: R/L/S15 =19/23/24, pressure=3/7/8, remaining four families each4/4/4. Common-safe S15−L: n23, mean7 s, median0, maximum308 s. Episode CPU totals reconstructed. This reads original task summaries; it is not a new integration or a fresh raw-coordinate safety audit. The prior raw-coordinate check remains in R13 EDITORIAL_REVIEW_20261007.md.
+
+All six mathematical display expressions remain byte-identical to R13; nominal-first, conditional20m cancellation, fallback and next-step reference timing remain in the main manuscript. Main table numbering and figure order checked. Native Word math remains editable. Source styles.xml has identical canonical XML to the supplied template (only XML declaration serialization differs). Six plotted figures retain original bytes. Actual Word2019 PDF has8A4 pages; every final rendered page was inspected. No clipping, overlap, split figure/caption or unreadable math observed. Last page contains references and whitespace; no font shrink or unsupported6page requirement applied.
+
+Claim boundaries retained: gain concentrated in the jointly changed pressure family; no single-factor attribution; one additional completion over this particular L;15s unchanged-reference calibration does not validate every60s maneuver;106m adverse prediction;308s detour; ideal computation not real-time deployment. No universal necessity of detailed dynamics, static encoding novelty, certified guard, training novelty, or checkpoint identity with the14D journal baseline claimed.
+
+Residual author work: author list/order, affiliation, corresponding details and funding; actual venue submission/declarations. LaTeX source conversion is complete and statically checked, but the native compiler returns a platform-directory error. Delivered PDF is actual Word output, not a claimed LaTeX build.

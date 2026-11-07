@@ -1,0 +1,10 @@
+{
+  "started_epoch": 1791181543.5121374,
+  "deadline_epoch": 1791267943.5121396,
+  "max_cpu_workers": 4,
+  "numerical_threads": 1,
+  "gpu_assignment": null,
+  "max_gpu_hours": 12,
+  "scope": "R8: executable underway dynamic avoidance with candidate-conditioned prediction and rolling feedback. R6/R7 are baselines, not frozen constraints. High/low-level, causal memory, interface and training may change; no future truth online, no unassigned GPU, no automatic push.",
+  "base_commit": "db9336dab91284044908f829b9b23f53148db693"
+}

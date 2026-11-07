@@ -1,0 +1,865 @@
+{
+  "generator_seed": 20261025,
+  "status": "predefined before development outcomes; methods not frozen yet; no selection by outcomes",
+  "scenes": [
+    {
+      "id": "r8new_underway_crossing_0",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102500,
+      "base_direction_degrees": 44.000394163564195,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            415.2418975297189,
+            -93.43667909127412
+          ],
+          "velocity": [
+            0,
+            0.6496810547644207
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_crossing_1",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102501,
+      "base_direction_degrees": 105.4674806744511,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            500.4592443411364,
+            134.42779897217238
+          ],
+          "velocity": [
+            0,
+            -0.7744052447931071
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            800.0,
+            300.0
+          ],
+          "entity_radius": 45.0
+        }
+      ]
+    },
+    {
+      "id": "r8new_underway_crossing_2",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102502,
+      "base_direction_degrees": 81.67182081344998,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            572.321550609384,
+            -91.81249783480143
+          ],
+          "velocity": [
+            0,
+            0.5748662342651851
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_crossing_3",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102503,
+      "base_direction_degrees": 107.85307062097527,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            587.6856298303142,
+            -155.582422741126
+          ],
+          "velocity": [
+            0,
+            0.7757709872204821
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            800.0,
+            -300.0
+          ],
+          "entity_radius": 45.0
+        }
+      ]
+    },
+    {
+      "id": "r8new_underway_crossing_4",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102504,
+      "base_direction_degrees": 107.13682596093855,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            425.27448586664497,
+            -170.47474601697735
+          ],
+          "velocity": [
+            0,
+            1.230518998402271
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_crossing_5",
+      "family": "underway_crossing",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102505,
+      "base_direction_degrees": 137.5839505066458,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            486.96544959195575,
+            -161.84425218525482
+          ],
+          "velocity": [
+            0,
+            1.0097074647303552
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            800.0,
+            -300.0
+          ],
+          "entity_radius": 45.0
+        }
+      ]
+    },
+    {
+      "id": "r8new_underway_overtaking_0",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102506,
+      "base_direction_degrees": 104.46554970591637,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            329.7511770332129,
+            24.720710079167212
+          ],
+          "velocity": [
+            0.8608195261196245,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_overtaking_1",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102507,
+      "base_direction_degrees": 82.99127903445658,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            326.25029074595636,
+            21.298977038135277
+          ],
+          "velocity": [
+            1.1857542354233923,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_overtaking_2",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102508,
+      "base_direction_degrees": 83.25025063437388,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            300.7258702543943,
+            24.67265567299421
+          ],
+          "velocity": [
+            0.8684476838039608,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_overtaking_3",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102509,
+      "base_direction_degrees": 44.73308077709362,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            301.16078211628434,
+            29.39433850864677
+          ],
+          "velocity": [
+            1.1553419928225528,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_overtaking_4",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102510,
+      "base_direction_degrees": 88.56385930182556,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            380.7233468808828,
+            16.985149091800217
+          ],
+          "velocity": [
+            0.677818645350015,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_underway_overtaking_5",
+      "family": "underway_overtaking",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102511,
+      "base_direction_degrees": 118.98380781488179,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            260.0022193935781,
+            1.6504589809214423
+          ],
+          "velocity": [
+            0.8884939578530131,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_0",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102512,
+      "base_direction_degrees": 72.02031888769224,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            576.2021276890437,
+            -352.49240354973284
+          ],
+          "velocity": [
+            0.9082877040455286,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_1",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102513,
+      "base_direction_degrees": 133.43639678577844,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            507.07731344942107,
+            -399.4754537447675
+          ],
+          "velocity": [
+            1.0481345220502731,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_2",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102514,
+      "base_direction_degrees": 50.79684190212838,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            523.426983644194,
+            -472.4909358729284
+          ],
+          "velocity": [
+            0.9225925145677005,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_3",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102515,
+      "base_direction_degrees": 103.33588550812351,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            541.1129789916708,
+            395.79667193817806
+          ],
+          "velocity": [
+            0.6620745078068586,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_4",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102516,
+      "base_direction_degrees": 109.66863774020891,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            489.8129342955872,
+            -435.79931394637686
+          ],
+          "velocity": [
+            0.6345324399901195,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_nonconflict_5",
+      "family": "nonconflict",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102517,
+      "base_direction_degrees": 56.49478283446446,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            406.73359821922816,
+            481.8054654840528
+          ],
+          "velocity": [
+            0.6448273931355807,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_0",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102518,
+      "base_direction_degrees": 61.109298876639365,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            759.0885942029773,
+            3.3450267986393527
+          ],
+          "velocity": [
+            0.6417807438969899,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_1",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102519,
+      "base_direction_degrees": 38.4906528102296,
+      "profile": "fast",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            660.183031830807,
+            -13.177754622022178
+          ],
+          "velocity": [
+            1.0281506658895696,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_2",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102520,
+      "base_direction_degrees": 128.73112100830076,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            638.2559839896785,
+            -2.817990643418355
+          ],
+          "velocity": [
+            0.7571041616017467,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_3",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102521,
+      "base_direction_degrees": 71.9280307475936,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            672.9324976418038,
+            -26.314458780411154
+          ],
+          "velocity": [
+            1.083925112552498,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_4",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102522,
+      "base_direction_degrees": 38.14829834869081,
+      "profile": "slow",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            624.8969564751112,
+            -2.2088008649623774
+          ],
+          "velocity": [
+            1.1086803578768603,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_endpoint_5",
+      "family": "endpoint",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102523,
+      "base_direction_degrees": 71.25604524174288,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            626.0268609253916,
+            5.508178345796033
+          ],
+          "velocity": [
+            0.9007150687443359,
+            0
+          ]
+        }
+      ],
+      "static": []
+    },
+    {
+      "id": "r8new_mixed_pressure_0",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102600,
+      "base_direction_degrees": 121.6991574881762,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            679.6869936887839,
+            212.14102147975615
+          ],
+          "velocity": [
+            0,
+            -0.9777355016260452
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 216.9717895350534
+    },
+    {
+      "id": "r8new_mixed_pressure_1",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102601,
+      "base_direction_degrees": 134.2145390910074,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            426.572257696101,
+            132.45343254363857
+          ],
+          "velocity": [
+            0,
+            -0.9195026511808264
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 144.0489947185489
+    },
+    {
+      "id": "r8new_mixed_pressure_2",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102602,
+      "base_direction_degrees": 127.23452319616894,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            671.7473542081643,
+            164.53033405750065
+          ],
+          "velocity": [
+            0,
+            -0.8145050697473925
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 202.0003805605869
+    },
+    {
+      "id": "r8new_mixed_pressure_3",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102603,
+      "base_direction_degrees": 126.58204269412246,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            453.1184953862574,
+            157.19139981151432
+          ],
+          "velocity": [
+            0,
+            -1.0092702943696588
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 155.74757395360422
+    },
+    {
+      "id": "r8new_mixed_pressure_4",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102604,
+      "base_direction_degrees": 126.0881054721453,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            738.9727386090249,
+            267.98157369793194
+          ],
+          "velocity": [
+            0,
+            -1.1795986623083803
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 227.1802963675064
+    },
+    {
+      "id": "r8new_mixed_pressure_5",
+      "family": "mixed_pressure",
+      "distance_m": 1000,
+      "goal": [
+        1000,
+        0
+      ],
+      "seed": 2026102605,
+      "base_direction_degrees": 126.43969684939506,
+      "profile": "stable",
+      "vessels": [
+        {
+          "id": "ship0",
+          "position": [
+            637.2546627730674,
+            163.5511039916701
+          ],
+          "velocity": [
+            0,
+            -0.8328133631769147
+          ]
+        }
+      ],
+      "static": [
+        {
+          "center_xy": [
+            850,
+            300
+          ],
+          "entity_radius": 45
+        }
+      ],
+      "nominal_crossing_time": 196.3838612864896
+    }
+  ],
+  "pressure_stratum": "Added a priori before any fresh evaluation: generalize known R7 mixed crossing geometry with stable wind110\u2013135, not a natural frequency sample."
+}

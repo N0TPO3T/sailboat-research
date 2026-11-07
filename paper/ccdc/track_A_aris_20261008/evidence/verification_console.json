@@ -1,0 +1,90 @@
+{
+  "old_hashes_unchanged": {
+    "src/sailboat_routing/r8_model.py": true,
+    "src/sailboat_routing/r8_planner.py": true,
+    "scripts/run_r8.py": true,
+    "scripts/run_r10.py": true,
+    "paper/ccdc/r11_draft/manuscript.md": true
+  },
+  "freeze_hashes_match": {
+    "scripts/run_r12.py": true,
+    "src/sailboat_routing/r12_model.py": true,
+    "src/sailboat_routing/r8_model.py": true,
+    "src/sailboat_routing/r8_planner.py": true,
+    "scripts/run_r8.py": true
+  },
+  "coverage": {
+    "development": {
+      "expected": 13,
+      "actual": 13,
+      "safe": 13,
+      "failures_retained": []
+    },
+    "guard": {
+      "expected": 36,
+      "actual": 36,
+      "safe": 36,
+      "failures_retained": []
+    },
+    "confirmation": {
+      "expected": 72,
+      "actual": 72,
+      "safe": 66,
+      "failures_retained": [
+        {
+          "scene": "r12new_mixed_pressure_5",
+          "variant": "reactive",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": -1.412340768947999
+        },
+        {
+          "scene": "r12new_mixed_pressure_1",
+          "variant": "reactive",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": -0.162187293770657
+        },
+        {
+          "scene": "r12new_mixed_pressure_4",
+          "variant": "reactive",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": -0.5399918154422778
+        },
+        {
+          "scene": "r12new_mixed_pressure_2",
+          "variant": "reactive",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": -0.08300211313945738
+        },
+        {
+          "scene": "r12new_mixed_pressure_1",
+          "variant": "simple",
+          "reason": "arrived",
+          "min_dynamic_margin": -1.11532173504051
+        },
+        {
+          "scene": "r12new_mixed_pressure_7",
+          "variant": "reactive",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": -0.31173947746864883
+        }
+      ]
+    }
+  },
+  "assets_match": {
+    "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth": true,
+    "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth": true
+  },
+  "branches_completion": {
+    "complete": true,
+    "branches": 12,
+    "numeric_traces": 4
+  },
+  "execution": {
+    "guard_return": 0,
+    "branch_return": 1,
+    "confirmation_return": 0,
+    "finished": 1791263521.1752243
+  },
+  "branch_retry_explanation": "Initial nonconflict t=10 was not an eligible prediction state. No branch executed there. Documented retry uses first actual eligible t=56; branches_complete.json is authoritative.",
+  "source_head": "4c6a07878e7432da12dea50d42a3272dbce7a820"
+}

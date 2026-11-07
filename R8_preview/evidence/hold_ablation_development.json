@@ -1,0 +1,173 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r8_closedloop_20261005T062543Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_7",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "final_overtaking_1",
+        "seed": 2026101501,
+        "profile": "fast",
+        "base_direction_degrees": 122.74681942535699,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "overtaking",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              655.4319612843163,
+              29.953353499049257
+            ],
+            "velocity": [
+              0.5196290218109183,
+              0
+            ]
+          }
+        ],
+        "static": [],
+        "nominal_crossing_time": null,
+        "split": "fresh_goal_confirmation",
+        "geometry_protocol": "85m"
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "final_overtaking_2",
+        "seed": 2026101502,
+        "profile": "fast",
+        "base_direction_degrees": 84.59989502993969,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "overtaking",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              710.1377020400876,
+              13.057117882906873
+            ],
+            "velocity": [
+              1.0248072734514593,
+              0
+            ]
+          }
+        ],
+        "static": [],
+        "nominal_crossing_time": null,
+        "split": "fresh_goal_confirmation",
+        "geometry_protocol": "85m"
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    }
+  ]
+}

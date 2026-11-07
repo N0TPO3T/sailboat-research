@@ -1,0 +1,18 @@
+{
+  "reviewed_files": {
+    "manuscript.md": "5d104c82ab58c402ff09bbac34015a8c59052cd63f55bb87a58dc4828dc5cb0c",
+    "manuscript.docx": "c12f3cbf6bc3fda3025776af7d297c370f8380de39706ccc7373f76a78b174a5",
+    "manuscript.pdf": "859c8226cb0abe5e9048fdc11fd3eb4953448534e3b8519f06a81728e7caff43",
+    "SUPPLEMENT.md": "fd974d3ddec2adb58a257e3376215cf952e902f4e1b271c84bd2de0a351ae08c"
+  },
+  "verdicts": {
+    "A": "Accept",
+    "B": "Accept",
+    "C": "Accept"
+  },
+  "review_independence": "same-family",
+  "acceptance_status": "provisional internal simulation",
+  "new_experiments": 0,
+  "new_training": 0,
+  "source_paper_sha256": "9bc5165d59141e64c32cea5f4fbc2f4464c6fe0f88b40334de85703b92d356b9"
+}

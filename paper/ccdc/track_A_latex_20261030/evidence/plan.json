@@ -1,0 +1,16 @@
+{
+  "started_epoch": 1791261097.854696,
+  "deadline_epoch": 1791304297.8546977,
+  "workers": 4,
+  "gpu": 0,
+  "no_main_algorithm_changes": true,
+  "questions": [
+    "matched low-dimensional reference-conditioned predictor",
+    "guard0/15/30/60 tradeoff",
+    "protocol matched prediction errors and dense safety check"
+  ],
+  "confirmation": "24 prespecified instances:8 pressure,4 crossing,4 overtaking,4 endpoint,4 nonconflict; reactive,S15,simple; optional S60 only if cost permits",
+  "guard_scenes": "R8 pressure0,2,4; endpoint0,2,5; crossing0,1; overtaking0,1; nonconflict0,1 (12); guard0,15,30,60;30 reuse",
+  "branches": "6 snapshots x2 protocols, real prefix parity first",
+  "status": "development"
+}

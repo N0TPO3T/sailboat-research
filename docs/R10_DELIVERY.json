@@ -1,0 +1,30 @@
+{
+  "created_epoch": 1791200064.1028414,
+  "server_root": "/home/ot/Students/hs/sailboat-routing-v0",
+  "local_root": "C:/Users/74095/hs/SailBoat/sailboat-routing-v0",
+  "archives": {
+    "R10_source.zip": {
+      "bytes": 605075,
+      "sha256": "ca0b8eb77a0887830d9481cfd39da9d07fa70ad1ef9d0ab026d50624663ae76f"
+    },
+    "R10_raw_results.tar.gz": {
+      "bytes": 32833486,
+      "sha256": "51c28185ac94df801f8ac72a553064d50a2d2903146689589084a52ef5cd21f0"
+    },
+    "R10_CCDC_DECISION_preview.zip": {
+      "bytes": 3891431,
+      "sha256": "adf41b87b87c249e77b86c11b2eda8c0ce5e2d5c4164ba61ec2bd4d3bf6363db"
+    },
+    "R10_inherited_assets.zip": {
+      "bytes": 3224473,
+      "sha256": "83f613e34eefb399f21882d19c7fc0b68c670013140a5551221a4a5499afac1e"
+    }
+  },
+  "no_push": true,
+  "base_commit": "4c6a07878e7432da12dea50d42a3272dbce7a820",
+  "git_commit_created": false,
+  "reason": "repository identity unconfigured; exact source archive delivered instead",
+  "source_hashes": "runs/r10_decision_20261005/SOURCE_HASHES.json",
+  "raw_index": "runs/r10_decision_20261005/RAW_INDEX.json",
+  "local_asset_note": "Local checkout lacks inherited checkpoint pair; explicit inherited_assets.zip now delivered. Use latest preview reproduction index; raw scientific evidence unchanged."
+}

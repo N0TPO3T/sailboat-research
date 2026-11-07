@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "model_load": true,
+  "worker_import": true,
+  "safe_counts": {
+    "reactive": 19,
+    "simple": 23,
+    "sampled": 24
+  },
+  "episode_cpu": {
+    "reactive": 270.67713405100005,
+    "simple": 378.444522666,
+    "sampled": 2133.232056205
+  },
+  "common_safe_n": 23,
+  "mean_time_S15_minus_L": 7.0,
+  "max_time_S15_minus_L": 308,
+  "source_root": "/home/ot/Students/hs/sailboat-routing-v0/paper/ccdc/r13_revision/reproduction_check"
+}

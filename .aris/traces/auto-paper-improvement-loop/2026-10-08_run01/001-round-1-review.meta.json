@@ -1,0 +1,12 @@
+{
+  "call_number": 1,
+  "purpose": "round-1-review",
+  "recorded_at": "2026-10-08T11:24:27.625328+08:00",
+  "agent_id": "/root/paper_review_round1",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "xhigh",
+  "reviewer_family": "openai",
+  "review_independence": "same-family, fresh context",
+  "acceptance_status": "provisional",
+  "status": "ok"
+}

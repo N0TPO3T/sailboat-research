@@ -1,0 +1,199 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r8_closedloop_20261005T062543Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "branch_nominal",
+      "config": {
+        "availability": true
+      },
+      "max_steps": 175
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "branch_continue",
+      "config": {
+        "availability": true
+      },
+      "max_steps": 175,
+      "branch_at": 115,
+      "branch_hold": 15,
+      "branch_target": [
+        275.0,
+        -100.0
+      ]
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "branch_turn90",
+      "config": {
+        "availability": true
+      },
+      "max_steps": 175,
+      "branch_at": 115,
+      "branch_hold": 15,
+      "branch_target": [
+        521.8041914059975,
+        166.17411664679136
+      ]
+    },
+    {
+      "scene": {
+        "id": "confirm_mixed_3",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              98.5025330504809
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "branch_turn-90",
+      "config": {
+        "availability": true
+      },
+      "max_steps": 175,
+      "branch_at": 115,
+      "branch_hold": 15,
+      "branch_target": [
+        -73.1938093259194,
+        -202.57699063971134
+      ]
+    }
+  ]
+}

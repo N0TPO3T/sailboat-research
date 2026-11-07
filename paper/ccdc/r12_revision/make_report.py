@@ -1,0 +1,92 @@
+from pathlib import Path
+import json
+P=Path(__file__).resolve().parent
+S=json.loads((P/'evidence/analysis.json').read_text(encoding='utf8'))
+C=S['confirmation'];G=S['guard']
+assert all(C[v]['tasks']==24 for v in ['reactive','sampled','simple'])
+def tab(head,rows):return '\n'.join(['| '+' | '.join(head)+' |','| '+' | '.join(['---']*len(head))+' |']+['| '+' | '.join(map(str,r))+' |' for r in rows])
+def f(x):return f'{x:.3f}'
+ct=tab(['方法','安全/总数','相对R救回/损失','共同安全n','Δ航时均值/中位/最大(s)','CPU总秒','激活任务'],[[label,str(C[v]['safe'])+'/24',str(C[v]['rescues'])+'/'+str(C[v]['losses']),C[v]['common_safe_time_delta_vs_R']['n'],'/'.join(f(C[v]['common_safe_time_delta_vs_R'][k]) for k in ['mean','median','max']),f(C[v]['cpu_total']),C[v]['activated_tasks']] for v,label in [('reactive','R'),('sampled','S15'),('simple','L')]])
+gt=tab(['guard(m)','安全/12','最小动态余量(m)','救回/损失','共同安全Δ航时中位/p90/最大(s)','enter/非nominal选择/fallback','CPU秒'],[[g,G['guard'+str(g)]['safe'],f(G['guard'+str(g)]['min_dynamic_margin']),str(G['guard'+str(g)]['rescues'])+'/'+str(G['guard'+str(g)]['losses']),'/'.join(f(G['guard'+str(g)]['common_safe_time_delta_vs_R'][k]) for k in ['median','p90','max']),'/'.join(str(G['guard'+str(g)][k]) for k in ['interventions','non_nominal_selections','fallbacks']),f(G['guard'+str(g)]['cpu_total'])] for g in [0,15,30,60]])
+text=f'''# R12 定向补证与第二稿报告
+
+## 结论及证据边界
+
+{(P/'conclusion_zh.txt').read_text(encoding='utf8').strip()}
+
+本轮是原方法的补证与数学解释修订。R8模型、R8监督器、R8/R10执行器和R11原稿哈希保持不变；逐项验证见 `paper/ccdc/r12_revision/evidence/verification.json`。R8/S15仍是理想计算交付：规划时物理时钟暂停。R9延迟协议没有并入本篇，也没有以R8成绩替代它。本轮未训练、未使用GPU、未push或投稿。
+
+## 1. 公式、代码与恢复时序
+
+独立复核见 `CODE_FORMULA_AUDIT.md`（含准确代码行号）及 `REVIEW_EVIDENCE.md`。主要修正：
+
+- nominal预测有效、积分成功且达到guard时立即返回，不与其他候选比成本。其他有效可行候选按原J及枚举顺序排序。
+- J=终端距离+20·非nominal+10·side。20 m只在nominal已被排除且可行集非空时条件性抵消。全部不满足guard时，先最大预测余量，再最小原J，再枚举顺序；此时20 m对包含nominal的同余量比较仍可能有作用。
+- 当前旧目标动作先算好。t时选点，旧动作执行到t+1，再应用新目标；首次受影响区间是t+1→t+2。保持计时从t开始，到t+P允许复核，释放目标再过一步生效。H=P=60的分支没有释放后尾部。
+- 克隆的是真实nominal管理器本次调用**之后**的状态。执行器设定值从完整真实命令和零初始值恢复，策略记忆从当前坐标系下的真实历史重放恢复；检查当前动作逐元素一致，不把它夸大成所有隐状态形式等价证明。
+- 预测中的策略/relay观测保留1000 m可见范围，但评分持续保留初始有效目标；不添加未来才出现的目标。风拟合中点是观测端点平均，不是读取真实连续中点；缺历史时保留当前估计。
+- 条件误差不等式只在相同协议、时间域、目标身份和半径下解释预测误差。没有可用的统一E<30 m上界，不能写30 m安全保证。
+
+没有为消除解释问题而改原算法。唯一新在线预测器在 `src/sailboat_routing/r12_model.py`，通过新执行入口替换预测模型，真实物理和低层控制不变。
+
+## 2. E1：匹配简化预测对照
+
+L用位置、航迹角、航迹角速度和固定当前地速，按目标方位误差作有限转向响应。不同候选产生不同轨迹；不是把所有候选复制成CV直线。它保留候选、H/P/guard、nominal优先、成本、fallback、临时终点处理和真实执行协议。首次预测间隔独立于候选，但用当前运动外推而非真实待执行动作；同时省略策略记忆、执行器、风及变速响应。因此这是完整预测器替换，不能将差异单独归因于“动力学阶数”。
+
+48点预设标定网格，仅用旧任务中不换目标的15秒窗口。7训练/5验证源任务，136/87窗口，以每场均等权重的平均位置误差选得τ=8 s、κ=0.1 s⁻¹、rmax=0.16 rad/s，训练/验证2.749/2.694 m。rmax位于网格上边界，不能作为已辨识物理极限。这不是侧向新候选或60秒有效性的保证。
+
+新的24场在看结果前冻结：8高压力横穿，普通横穿/追越/终点/非冲突各4；12 stable/12 fast。生成seed202610612，物理seed2026106120+i；无胜负筛选。R/S15/L共72回合完整保留。旧开发L的12场和S15的1场444步逐值复现单独存放，不计入新确认。
+
+{ct}
+
+相对R的航时仅用共同安全对，不把失败剔除后称总任务效率。失败类型、航程、逐场最小余量、退出原因、激活与fallback见 `evidence/episodes.csv` 和 `analysis.json`。safe与arrived是不同字段；到达但曾侵入仍计失败。压力任务有更高设计占比，不代表自然交通分布。不同历史组与本轮确认不合并成功率。
+
+## 3. E2：有限guard敏感性
+
+事前选12旧任务：pressure0/2/4、endpoint0/2/5、crossing0/1、overtaking0/1、nonconflict0/1。原30 m数据复用并标记，另3个guard完整运行36回合。真实零余量边界未变化。R为10/12，两个失败均缓冲侵入；四组均12/12，救回2、损失0。共同安全分母都是10。
+
+{gt}
+
+这组数据中更大guard提高了跨任务最小动态余量，但额外航时尾部并不单调，且非nominal选择由7增加到32。不能把“所有场成功”解释为所有guard等价，也不能据此把0 m或60 m选成普遍最优。保持原30 m身份，未开展其他guard搜索。
+
+## 4. E3：预测质量与固定协议
+
+复用46个独立源任务（R8短30+长4、R10新12；不重复计R10已见13）。1083个窗口中1048完整15秒、35截断；窗口按任务聚类，不是1083个独立航行试验。enter/ordinary/reevaluate/release分别26/1017/14/26窗。最大位置误差1.039/30.506/2.090/0.626 m；共同短前缀没有预测正余量而实际非正、或预测≥30而实际<30的记录。此结论不覆盖未执行候选和后续重新搜索尾部。
+
+6个旧快照各2条实际固定协议分支。完整物理前缀及所选分支首15秒均逐值复现；记录的详细预测重新生成也逐值相同。详细—真实12条均有完整60秒；与L三方比较只有10条60秒、2条58秒，因为L提前预测到达而真实仍继续。共同区间最大位置误差中位数为详细1.104 m、L 53.818 m。L有3条nominal预测≥30而真实余量仅17.868/23.384/16.430 m，均仍大于0，不是3次安全侵入。
+
+保留不利反例：endpoint1 t=341的详细预测位置误差达到106.064 m。nominal与continue在该快照轨迹一致，不能算两个独立失败；预测/真实最小余量140.990/146.171 m，不能把位置大误差直接等同于碰撞。支撑结论的是这些实际执行的协议，不推测未执行候选的“真实误差”。
+
+一个真实决策：pressure2 t=149，详细nominal余量17.706 m被30 m guard拒绝，选择−90°侧向协议，其预测94.815 m；固定执行分别17.868/95.098 m。相同输入下L nominal预测75.748 m而提前接受nominal。该分支能解释局部决策差异；不能仅凭它归因整个后续任务。
+
+首次分支检查在非冲突t=10没有可用预测而停止（尚未执行该分支）。根据日志改为该任务首个真实合格预测t=56后续跑，已完成分支未覆盖。`branch_retry_note.json`、原失败日志与重试日志均保留；总预算仍12条真实分支。总管账本中的初次branch_return=1由 `branches_complete.json` 的成功重试解释，不掩盖失败。
+
+## 5. 安全数值与计算复核
+
+原自适应Dormand–Prince积分器接受子步的只读记录，保留原命令、容差与端点。所有1秒端点逐值一致。两条R侵入−1.225020/−0.872436 m在子步中保持；对应S15的1秒余量43.589225/38.454925 m在子步中为43.597334/38.424701 m。最大接受步长0.1 s，按同时刻目标位置及子步间相对线段求最小值。未改正式判分；不是精确船体或解析连续安全证明。
+
+AMD EPYC 7V12，最多4个单线程CPU实验进程，GPU=0。三真实状态、每模型各重复3次，共18次纯规划profile。详细median/p95/max=17.009/17.662/17.685 s；L=0.067/0.136/0.136 s。包括估计、分支重建和候选计算/选择，排除模型装载、当前nominal调用、候选构造和真实执行。nominal提前接受会产生不同候选数量，不是等工作量的逐候选加速比。共享机器上的经验耗时不是期限保证。完整回合CPU另列，不等于规划期限；本轮没有将其加在总航时上冒充延迟闭环。
+
+## 6. 修订交付、复现与作者事项
+
+完整正文 `paper/ccdc/r12_revision/manuscript.md`；用户Word模板生成的可编辑 `manuscript.docx` 与实际7页PDF，已逐页核查；正文样式与模板XML相同，公式为可编辑Office Math。原R11和R3底稿保留。详细推导在 `SUPPLEMENT.md`；一次分离作者/模拟审稿的原始意见、回应及最终核查留在同目录，不宣称真实CCDC审稿或录用。
+
+图2展示全部新确认；图3展示guard安全/代价；图4展示预测—实际；图5预设历史救回与按规则选取的新确认最大S15航时退化，含双方实际轨迹与同步时间。未选择只对S15有利的案例。
+
+服务器原始结果 `runs/r12_revision_20261006/`；本地预览含CSV/JSON、代码、配置、来源/资产哈希与 `EVIDENCE_INDEX.md`。完整本轮原始轨迹另归档，不要求读者仅靠不可访问服务器图路径。已有R8/R10历史资产索引继续有效。
+
+最小分析复现（复用现有环境，不重跑物理）：
+
+```sh
+cd /home/ot/Students/hs/sailboat-routing-v0
+.venv/bin/python scripts/analyze_r12.py
+.venv/bin/python scripts/plot_r12.py
+.venv/bin/python scripts/verify_r12.py
+```
+
+重跑必须使用新输出目录保留现有结果；配置和冻结代码已随包保存，不覆盖原运行目录。正式作者、单位、资助、SAC-LSTM训练出处、normalizer对应关系、仿真模型文献映射、许可/分发条件集中列在 `AUTHOR_ASSET_CHECKLIST_ZH.md`，未经确认不猜填。
+
+本轮完成后不自动开启调参、训练、R9时间协议开发或新场景搜索。下一步所需是作者确认资产与提交信息，以及在这些边界内修改正文；本报告不以此替代已经交付的真实第二稿。
+'''
+(P/'R12_REVISION_REPORT.md').write_text(text,encoding='utf8')
+print('Chinese report assembled')

@@ -1,0 +1,64 @@
+{
+  "raw_trace_rows": 72,
+  "safe": {
+    "reactive": 19,
+    "simple": 23,
+    "sampled": 24
+  },
+  "families": {
+    "endpoint": {
+      "reactive": 4,
+      "simple": 4,
+      "sampled": 4
+    },
+    "mixed_pressure": {
+      "reactive": 3,
+      "simple": 7,
+      "sampled": 8
+    },
+    "nonconflict": {
+      "reactive": 4,
+      "simple": 4,
+      "sampled": 4
+    },
+    "underway_crossing": {
+      "reactive": 4,
+      "simple": 4,
+      "sampled": 4
+    },
+    "underway_overtaking": {
+      "reactive": 4,
+      "simple": 4,
+      "sampled": 4
+    }
+  },
+  "S15_minus_L_common_safe": {
+    "n": 23,
+    "mean": 7,
+    "median": 0,
+    "max": 308
+  },
+  "episode_cpu_seconds": {
+    "reactive": 270.67713405100005,
+    "simple": 378.44452266599995,
+    "sampled": 2133.2320562050004
+  },
+  "equations_byte_identical_to_R13": true,
+  "figures_byte_identical_to_R13": true,
+  "template_styles_unchanged": true,
+  "PDF_pages": 8,
+  "all_8_pages_visually_inspected": true,
+  "new_navigation_runs": 0,
+  "training": false,
+  "review_type": "one bounded author claim/evidence/layout check, not simulated acceptance",
+  "latex_compile": {
+    "success": false,
+    "error": "Unable to find standard directories for platform"
+  },
+  "source_R13_hashes": {
+    "manuscript.md": "5d104c82ab58c402ff09bbac34015a8c59052cd63f55bb87a58dc4828dc5cb0c",
+    "manuscript.docx": "c12f3cbf6bc3fda3025776af7d297c370f8380de39706ccc7373f76a78b174a5",
+    "manuscript.pdf": "859c8226cb0abe5e9048fdc11fd3eb4953448534e3b8519f06a81728e7caff43",
+    "SUPPLEMENT.md": "fd974d3ddec2adb58a257e3376215cf952e902f4e1b271c84bd2de0a351ae08c"
+  }
+}

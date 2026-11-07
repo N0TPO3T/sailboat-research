@@ -1,0 +1,18 @@
+{
+  "current_round": 2,
+  "status": "completed",
+  "review_scores": [
+    6,
+    7
+  ],
+  "last_score": 7,
+  "score_scope": "round 2 review of round 1 artifact; no third review after final bounded fixes",
+  "primary_renderer": "Microsoft Word",
+  "scope": "local editorial revision; frozen research results preserved",
+  "pending_metadata": [
+    "corresponding author",
+    "email",
+    "funding"
+  ],
+  "latex_compile_verified": false
+}

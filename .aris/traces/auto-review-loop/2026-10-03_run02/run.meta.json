@@ -1,0 +1,10 @@
+{
+  "skill": "auto-review-loop",
+  "run_id": "r2_autoresearch_20261003T063153Z",
+  "started_at": "2026-10-03T06:34:44.979896+00:00",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "/home/ot/Students/hs/sailboat-routing-v0"
+}

@@ -1,0 +1,17 @@
+{
+  "source_sha256": "104290c9df4712a7208d8af6d1f9f6822d5db2b966874aa225ecbe79a5dc8e32",
+  "source_blocks": 95,
+  "processed_blocks": 95,
+  "equations": 5,
+  "tables": 3,
+  "figures": 5,
+  "references": 8,
+  "template_cls_sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+  "scientific_content_changed": false,
+  "all_cross_references_resolve": true,
+  "all_citations_resolve": true,
+  "all_figure_files_present": true,
+  "environments_and_braces_balanced": true,
+  "compile_status": "unavailable: native compiler reports Unable to find standard directories for platform",
+  "pdf_generated_from_latex": false
+}

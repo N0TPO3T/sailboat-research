@@ -1,0 +1,20 @@
+{
+  "pdf_pages": 7,
+  "export": "Microsoft Word 2019 ExportAsFixedFormat PDF",
+  "all_pages_visually_inspected": true,
+  "body_style_font_size_pt": null,
+  "template_body_style_font_size_pt": null,
+  "body_style_xml_unchanged": true,
+  "editable_math_nodes": 10,
+  "figures": 5,
+  "no_font_reduction_to_six_pages": true,
+  "initial_layout_probe_superseded": true,
+  "correction": "Trim Markdown blocks before style detection; correct discussion heading, figure5 synchronized-circle/square wording.",
+  "hashes": {
+    "manuscript.md": "104290c9df4712a7208d8af6d1f9f6822d5db2b966874aa225ecbe79a5dc8e32",
+    "manuscript.docx": "304a7fd99f9ed0caf1d465a691499c8995a99014b75d17e9710545b084b5cf1b",
+    "manuscript.pdf": "1a896cb0350035f90ce112c3b61f112d9943a7e01b7692b67150f7d4466cab70",
+    "official_template.docx": "8b9d63f2223b9e8ab547c9095ed80fad5b38cfe5f2146185effb7a7f3ea9257e",
+    "R12_raw_results.tar.gz": "a0d1be6102bccf99a01c947f58d47e1721630dff47bd0e910bb2ab9d3c7ad618"
+  }
+}

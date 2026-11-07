@@ -1,0 +1,30 @@
+{
+  "manuscript": {
+    "pdf_pages": 8,
+    "pdf_sha256": "8c827b77912aa2cac783c2bc45a40a8a84edaba81fd2247db954472203dd8428",
+    "markdown_sha256": "f9657860c3b2d8e1d5e68c60146152d1ca98e3bf53015c9d2e64b667c2306f01",
+    "docx_sha256": "816b90b3a4c1ef4f1f580553edebdac87bbba6ef85fab8189d28911b1c47cb7e",
+    "table_cells_match_markdown": 3,
+    "paragraphs_and_captions_match": true,
+    "all_fonts_embedded": true
+  },
+  "SUPPLEMENT": {
+    "pdf_pages": 6,
+    "pdf_sha256": "581e701385c62a69c694872a810c0ab70b0b67bc0da0047ba46181374f7761c5",
+    "markdown_sha256": "ab388c87719069f0afd616d29371056181aa2a18eaba056c9fc4ec7e1a321124",
+    "docx_sha256": "4b913b73c5b2530db751dfd62720a27840b09940bd46ff7faa4733e33ab4ef1f",
+    "table_cells_match_markdown": 4,
+    "paragraphs_and_captions_match": true,
+    "all_fonts_embedded": true
+  },
+  "prior_edition_check": {
+    "main_text_except_captions_unchanged": true,
+    "all_seven_table_contents_unchanged": true,
+    "all_six_equations_unchanged": true,
+    "frozen_evidence_files_unchanged": 44
+  },
+  "template_styles_unchanged": true,
+  "server_synced": false,
+  "new_experiments": 0,
+  "weights_included": false
+}

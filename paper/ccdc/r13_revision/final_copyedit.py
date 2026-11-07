@@ -1,0 +1,6 @@
+from pathlib import Path
+p=Path(__file__).parent
+f=p/'manuscript.md';s=f.read_text(encoding='utf8').replace('Supplement S9 separates verified local lineage','Supplement S9 and S11–S12 separate verified local lineage');f.write_text(s,encoding='utf8')
+f=p/'SUPPLEMENT.md';s=f.read_text(encoding='utf8').replace('version1.0.0.0,2014-10-02','the2014-10-02 release (displayed as version1.0.0 or1.0.0.0 in retrieved page variants)');f.write_text(s,encoding='utf8')
+f=p/'SOURCE_FOLLOWUP.md';s=f.read_text(encoding='utf8');s+='\nMetadata clarification: retrieved MathWorks page variants display both1.0.0 and1.0.0.0 for the2014-10-02 release. No new release or source equivalence is inferred from this display difference.\n';f.write_text(s,encoding='utf8')
+(p/'review/round_02/FINAL_COPYEDIT_RESPONSE.md').write_text('# Final copyedit response\n\nB cross-reference: II-A now points to S9 and S11–S12. C optional metadata: S12 identifies the2014-10-02 release and reports both version-string renderings observed on primary pages. No evidence, formula, method, data, scope or substantive access statement changed. A1/B1/C1 human attribution/access evidence remains absent; further experimental/rewording cycles cannot replace it. Final short proof check requested on this corrected identical-for-all version, not a request to change any verdict.\n',encoding='utf8')

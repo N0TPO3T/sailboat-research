@@ -1,0 +1,38 @@
+[
+  {
+    "scene": "r8new_underway_crossing_1",
+    "target_land_entity_clearance": 282.25548652122785
+  },
+  {
+    "scene": "r8new_underway_crossing_3",
+    "target_land_entity_clearance": 196.77583297863765
+  },
+  {
+    "scene": "r8new_underway_crossing_5",
+    "target_land_entity_clearance": 282.1661006052731
+  },
+  {
+    "scene": "r8new_mixed_pressure_0",
+    "target_land_entity_clearance": 131.63955809118588
+  },
+  {
+    "scene": "r8new_mixed_pressure_1",
+    "target_land_entity_clearance": 395.3711730215102
+  },
+  {
+    "scene": "r8new_mixed_pressure_2",
+    "target_land_entity_clearance": 163.88844570982667
+  },
+  {
+    "scene": "r8new_mixed_pressure_3",
+    "target_land_entity_clearance": 361.79286977409055
+  },
+  {
+    "scene": "r8new_mixed_pressure_4",
+    "target_land_entity_clearance": 55.551860196367585
+  },
+  {
+    "scene": "r8new_mixed_pressure_5",
+    "target_land_entity_clearance": 192.74271450171085
+  }
+]

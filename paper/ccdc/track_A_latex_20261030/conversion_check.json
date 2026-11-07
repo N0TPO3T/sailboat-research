@@ -1,0 +1,11 @@
+{
+  "source_sha256": "0544b56788c8d3b0d76744f904976918f4888b4e103a397d9899bf8c6f94cbb9",
+  "source_blocks": 110,
+  "processed_blocks": 110,
+  "equations": 6,
+  "tables": 3,
+  "figures": 6,
+  "references": 10,
+  "template_cls_sha256": "c972aca108fda004c3514d63658e02816da2e54d9a1451e870b9bd970e003f55",
+  "scientific_content_changed": false
+}

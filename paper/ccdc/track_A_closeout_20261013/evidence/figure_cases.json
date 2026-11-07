@@ -1,0 +1,7 @@
+{
+  "cases": [
+    "r8new_mixed_pressure_2",
+    "r12new_endpoint_3"
+  ],
+  "selection": "historical prespecified pressure2 plus largest new common-safe S15 time cost vs reactive"
+}

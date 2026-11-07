@@ -1,0 +1,43 @@
+{
+  "archive_sha256": "fd5a71039eb8a736016a8028cd25909cd686f901d7e57cfe6bc9459e92dbbb9b",
+  "bytes": 10110361,
+  "manifest_verified_files": 196,
+  "exact_file_set": true,
+  "context_preservation": {
+    "PROJECT_STATE.md": {
+      "before_sha256": "fb9d0f1da2656716b829ff00bee48b625e433165c50bff2cdb57d13aedc6a072",
+      "after_sha256": "30d74eb33c818cebf42444141f94adb32338b7f1927c78eae1627fe83ad426aa",
+      "original_bytes_preserved": true
+    },
+    "PROJECT_MEMORY.md": {
+      "before_sha256": "3a6eed96b14b227c71cb6a7ffe2781461bf30c1ac54f9deb643f7bc18e009ba9",
+      "after_sha256": "b129debed4c6708e0c8455bbf8b943ec1b97a3d85f26679d93fe0e8b2947ec84",
+      "original_bytes_preserved": true
+    },
+    "docs/HANDOFF.md": {
+      "before_sha256": "fa9beb82ae6f917a8707bb1a7bf1743aa4a57a8ad6c2a8377460b55321598bee",
+      "after_sha256": "010b5128086a37d3caab854077d2166dd4591861f6ce058e340489f7022fffcf",
+      "original_bytes_preserved": true
+    }
+  },
+  "draft_preserved": true,
+  "final_image_links_verified": 18,
+  "verified_at": "2026-10-04T11:09:29.046790+00:00",
+  "science_commit": "822817495ac9ddae06a2743a021b8aa0d160f2d7",
+  "archive_local_path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\R5_METHOD_preview.zip",
+  "preview_local_path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\r5_literature_20261004T080700Z\\preview",
+  "raw_index": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\r5_literature_20261004T080700Z\\raw_index.csv",
+  "offline_redraw_receipt": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\r5_literature_20261004T080700Z\\offline_redraw_receipt.json",
+  "server_jobs_observed_absent": [
+    730161,
+    735315,
+    726618
+  ],
+  "no_push": true,
+  "local_source_checkout_unchanged": true,
+  "budget_started_at": "2026-10-04T08:07:00Z",
+  "deadline_at": "2026-10-04T20:07:00Z",
+  "new_episodes": 796,
+  "scientific_rounds": 6,
+  "gpu_hours": 0
+}

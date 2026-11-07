@@ -1,0 +1,170 @@
+{
+  "csv_sha256": "b41dcb4e1fc416749e17f68566748ce9240cbd6d68b8052cdd1971e3fb407568",
+  "filter": "stage == confirmation; paired by scene_id; BOTH success == True",
+  "precision": "Decimal from original time_s strings; exact equality; no tolerance",
+  "confirmation_rows": 72,
+  "confirmation_scenes": 24,
+  "safe_completions": {
+    "reactive": 19,
+    "simple": 23,
+    "sampled": 24
+  },
+  "common_safe_pairs": 23,
+  "S15_faster": 5,
+  "equal_time": 13,
+  "S15_slower": 5,
+  "min_delta_s": "-136",
+  "max_delta_s": "308",
+  "mean_delta_s": "7",
+  "median_delta_s": "0",
+  "interpretation": "Equal travel time does not establish equal trajectories. Failed arrivals and early stops excluded.",
+  "pairs": [
+    {
+      "scene_id": "r12new_endpoint_0",
+      "S15_time_s": "300",
+      "L_time_s": "300",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_endpoint_1",
+      "S15_time_s": "523",
+      "L_time_s": "611",
+      "delta_s": "-88"
+    },
+    {
+      "scene_id": "r12new_endpoint_2",
+      "S15_time_s": "303",
+      "L_time_s": "303",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_endpoint_3",
+      "S15_time_s": "587",
+      "L_time_s": "279",
+      "delta_s": "308"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_0",
+      "S15_time_s": "418",
+      "L_time_s": "353",
+      "delta_s": "65"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_2",
+      "S15_time_s": "409",
+      "L_time_s": "444",
+      "delta_s": "-35"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_3",
+      "S15_time_s": "457",
+      "L_time_s": "413",
+      "delta_s": "44"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_4",
+      "S15_time_s": "389",
+      "L_time_s": "407",
+      "delta_s": "-18"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_5",
+      "S15_time_s": "572",
+      "L_time_s": "574",
+      "delta_s": "-2"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_6",
+      "S15_time_s": "518",
+      "L_time_s": "503",
+      "delta_s": "15"
+    },
+    {
+      "scene_id": "r12new_mixed_pressure_7",
+      "S15_time_s": "470",
+      "L_time_s": "606",
+      "delta_s": "-136"
+    },
+    {
+      "scene_id": "r12new_nonconflict_0",
+      "S15_time_s": "306",
+      "L_time_s": "306",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_nonconflict_1",
+      "S15_time_s": "273",
+      "L_time_s": "273",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_nonconflict_2",
+      "S15_time_s": "259",
+      "L_time_s": "259",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_nonconflict_3",
+      "S15_time_s": "253",
+      "L_time_s": "253",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_crossing_0",
+      "S15_time_s": "267",
+      "L_time_s": "267",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_crossing_1",
+      "S15_time_s": "274",
+      "L_time_s": "266",
+      "delta_s": "8"
+    },
+    {
+      "scene_id": "r12new_underway_crossing_2",
+      "S15_time_s": "301",
+      "L_time_s": "301",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_crossing_3",
+      "S15_time_s": "285",
+      "L_time_s": "285",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_overtaking_0",
+      "S15_time_s": "339",
+      "L_time_s": "339",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_overtaking_1",
+      "S15_time_s": "350",
+      "L_time_s": "350",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_overtaking_2",
+      "S15_time_s": "316",
+      "L_time_s": "316",
+      "delta_s": "0"
+    },
+    {
+      "scene_id": "r12new_underway_overtaking_3",
+      "S15_time_s": "291",
+      "L_time_s": "291",
+      "delta_s": "0"
+    }
+  ],
+  "excluded": [
+    {
+      "scene_id": "r12new_mixed_pressure_1",
+      "S15_success": "True",
+      "L_success": "False",
+      "L_arrived": "True"
+    }
+  ],
+  "new_navigation_experiments": 0
+}

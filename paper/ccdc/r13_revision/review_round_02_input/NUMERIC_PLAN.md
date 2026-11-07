@@ -1,0 +1,3 @@
+# R13 finite numeric evidence plan
+Question: are the unique new-confirmation L incursion (-1.115m), R incursion (-.162m), and S15 safe sign artifacts of one-second segment approximation?
+Reuse R12 physics_prefix observation-only accepted-substep hook. Replay all original commands in exactly those three complete traces, same seeds/config/dynamics; assert exact endpoint parity. Compare finer synchronized-segment minima with original metrics. No method/threshold change, no new task samples. Expected <2min one CPU worker. Stop on parity mismatch, preserve discrepancy. A preserved sign supports this numerical label only, not continuous hull safety or causality.

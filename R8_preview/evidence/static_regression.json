@@ -1,0 +1,371 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r8_closedloop_20261005T062543Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "static_0",
+        "seed": 2026100700,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_0",
+        "seed": 2026100700,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "static_1",
+        "seed": 2026100701,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_1",
+        "seed": 2026100701,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "static_2",
+        "seed": 2026100702,
+        "profile": "fast",
+        "base_direction_degrees": 130,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_2",
+        "seed": 2026100702,
+        "profile": "fast",
+        "base_direction_degrees": 130,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "static_3",
+        "seed": 2026100703,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_3",
+        "seed": 2026100703,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "static_4",
+        "seed": 2026100704,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_4",
+        "seed": 2026100704,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "static_5",
+        "seed": 2026100705,
+        "profile": "fast",
+        "base_direction_degrees": 130,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_5",
+        "seed": 2026100705,
+        "profile": "fast",
+        "base_direction_degrees": 130,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    }
+  ]
+}

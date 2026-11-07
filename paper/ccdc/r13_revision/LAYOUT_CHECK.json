@@ -1,0 +1,10 @@
+{
+  "actual_pdf": "manuscript.pdf",
+  "engine": "Microsoft Word 2019",
+  "pages": 8,
+  "all_pages_visually_inspected": true,
+  "template_font_not_reduced": true,
+  "math_fix": "native OMML accents and minimum lower limits; restricted M/Mhat domain",
+  "pdf_sha256": "859c8226cb0abe5e9048fdc11fd3eb4953448534e3b8519f06a81728e7caff43",
+  "latex_compile_success": false
+}

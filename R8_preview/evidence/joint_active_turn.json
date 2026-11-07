@@ -1,0 +1,167 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r8_closedloop_20261005T062543Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "dev_joint_active_turn195",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 195,
+                "velocity": [
+                  -0.5557506291167508,
+                  -0.96258832596858
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "dev_joint_active_turn195",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 195,
+                "velocity": [
+                  -0.5557506291167508,
+                  -0.96258832596858
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "dev_joint_active_turn195",
+        "seed": 2026100531,
+        "profile": "stable",
+        "base_direction_degrees": 126.43579202944578,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              736.2085026622399,
+              249.53465767335945
+            ],
+            "velocity": [
+              0,
+              -1.1115012582335018
+            ],
+            "turns": [
+              {
+                "time": 195,
+                "velocity": [
+                  -0.5557506291167508,
+                  -0.96258832596858
+                ]
+              }
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 224.50236185062218,
+        "split": "frozen_confirmation",
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "hold60",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 60,
+        "guard": 30
+      }
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "reactive": {
+    "availability": true
+  },
+  "ideal15": {
+    "sampled": true,
+    "period": 15,
+    "horizon": 60,
+    "guard": 30
+  },
+  "delayed15": {
+    "sampled": true,
+    "timed": true,
+    "period": 15,
+    "horizon": 60,
+    "guard": 30
+  },
+  "fast60": {
+    "sampled": true,
+    "timed": true,
+    "optimized": true,
+    "period": 60,
+    "horizon": 60,
+    "guard": 30
+  },
+  "main": {
+    "sampled": true,
+    "timed": true,
+    "optimized": true,
+    "period": 60,
+    "horizon": 86,
+    "guard": 30,
+    "slot": 25,
+    "initial_wait": 25
+  }
+}

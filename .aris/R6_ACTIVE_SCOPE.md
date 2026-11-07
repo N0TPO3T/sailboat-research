@@ -1,0 +1,1 @@
+R6 superseded earlier low-level/checkpoint/memory/timing restrictions. Training remained permitted but was not needed for the selected evidence-backed route. R6 research is complete; no running experiments or automatic follow-up. Read docs/R6_METHOD_NOTE.md, docs/R6_RESEARCH_REPORT.md and docs/R6_DELIVERY.json. No GPU used, no push, preserve upstream assets and old local changes.

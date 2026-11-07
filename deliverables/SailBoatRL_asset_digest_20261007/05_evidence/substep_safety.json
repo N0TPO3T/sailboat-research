@@ -1,0 +1,54 @@
+[
+  {
+    "scene": "r8new_mixed_pressure_2",
+    "variant": "reactive",
+    "endpoint_max_error": 0.0,
+    "original_margin": -1.2250195657901486,
+    "substep_min": {
+      "time": 218.95,
+      "end_time": 219.0,
+      "margin": -1.2250195657901486
+    },
+    "n_accepted_segments": 2409,
+    "max_substep": 0.10000000000002274
+  },
+  {
+    "scene": "r8new_mixed_pressure_2",
+    "variant": "sampled",
+    "endpoint_max_error": 0.0,
+    "original_margin": 43.589225351722575,
+    "substep_min": {
+      "time": 366.65,
+      "end_time": 366.75,
+      "margin": 43.59733362773437
+    },
+    "n_accepted_segments": 4884,
+    "max_substep": 0.10000000000002274
+  },
+  {
+    "scene": "r8new_mixed_pressure_4",
+    "variant": "reactive",
+    "endpoint_max_error": 0.0,
+    "original_margin": -0.8724355028340085,
+    "substep_min": {
+      "time": 299.95,
+      "end_time": 300.0,
+      "margin": -0.8724355028340085
+    },
+    "n_accepted_segments": 3300,
+    "max_substep": 0.10000000000002274
+  },
+  {
+    "scene": "r8new_mixed_pressure_4",
+    "variant": "sampled",
+    "endpoint_max_error": 0.0,
+    "original_margin": 38.454924907780764,
+    "substep_min": {
+      "time": 358.35,
+      "end_time": 358.45,
+      "margin": 38.424701026775466
+    },
+    "n_accepted_segments": 5247,
+    "max_substep": 0.10000000000002274
+  }
+]

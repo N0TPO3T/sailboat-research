@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>R3：固定帆舵控制器的路线留量与航迹点保持</title>
+
+<meta name="generator" content="ARIS render-html (academic, v1)">
+<meta name="aris:source-path" content="docs\R3_RESEARCH_REPORT.md">
+<meta name="aris:source-sha256" content="79a6c6a945b8623878f4ff52dd743e3ff09cc23b2c0f1a702436fcee06b1b715">
+<meta name="aris:generated-at" content="2026-10-03 19:37 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  font-size: 13px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-soft);
+  padding-right: 16px;
+}
+nav.toc h3 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+nav.toc ol li { margin: 5px 0; counter-increment: toc; }
+nav.toc ol li::before { content: counter(toc) ". "; color: var(--ink-muted); margin-right: 4px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+nav.toc a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+nav.toc ul { list-style: none; padding-left: 14px; margin: 3px 0; font-size: 12px; }
+nav.toc ul li::before { content: "→ "; color: var(--border); }
+
+main { min-width: 0; }
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+header.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+header.hero .byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+header.hero .meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h2 .num { color: var(--primary); font-weight: 600; margin-right: 8px; }
+h3 { font-size: 19px; margin: 28px 0 10px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 16px; margin: 20px 0 8px; color: var(--ink); font-weight: 600; }
+
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+ul li, ol li { margin: 4px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 14px 18px !important;
+  font-size: 13px;
+  line-height: 1.55;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+pre.diagram {
+  background: #f9f6ed;
+  border-left: 4px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 15px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+details.qa, details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 10px 14px; }
+details p:first-of-type { margin-top: 8px; }
+
+mjx-container[display="true"] { margin: 12px 0 !important; }
+
+footer.aris-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px; }
+  nav.toc {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-soft);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+  header.hero h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  nav.toc { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  header.hero { border-bottom-color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+<li><a href="#1-研究定位与选择">1. 研究定位与选择</a>
+</li>
+<li><a href="#2-开发证据与淘汰">2. 开发证据与淘汰</a>
+</li>
+<li><a href="#3-冻结评估协议">3. 冻结评估协议</a>
+</li>
+<li><a href="#4-新场景结果与图表">4. 新场景结果与图表</a>
+</li>
+<li><a href="#5-收敛判断证据对应与交付">5. 收敛判断、证据对应与交付</a>
+</li>
+</ol>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="eyebrow">R3 research report</div>
+  <h1>R3：固定帆舵控制器的路线留量与航迹点保持</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>docs\R3_RESEARCH_REPORT.md</code></span>
+    <span><strong>SHA256:</strong> <code>79a6c6a945b8</code></span>
+    <span><strong>Rendered:</strong> 2026-10-03 19:37 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="r3固定帆舵控制器的路线留量与航迹点保持">R3：固定帆舵控制器的路线留量与航迹点保持</h1>
+<blockquote><p>已完成冻结评估。运行目录：<code>runs/r3_ccdc_20261003T121146Z/</code>（原始证据路径相对此目录；src、configs、paper、docs 开头的代码/文档路径相对项目根）。结论收敛为“经验路线留量 + 简单接力的受控应用研究”，未证实新的风险干预机制或普遍长程提效。</p></blockquote>
+<p>本轮采用冻结的 <strong>Relay160</strong>：额外留量上限 160 m、500 m 路线接力、常态保持目标。新场景安全到达 135/144，R1 为 129/144，合理 Relay120 为 133/144；相对 Relay120 仅 7 得 5 失，共同成功平均慢 52.89 s、多走 240.98 m。证据支持留量的经验价值，未证明 160 m 稳定胜过 120 m，新增风险监督器未保留。建议进入作者修改和投稿准备，定位为有明确代价与边界的应用研究；资产署名、官方排版与 PDF 检查仍待作者完成。</p>
+<h2 id="1-研究定位与选择">1. 研究定位与选择</h2>
+<p>本轮将问题收敛为：在完整静态地图已知、无直接风观测、低层控制器固定时，简单路线接力配合经验规划留量能否提高完整安全到达；额外近障干预是否值得保留。研究不声称提出新的 A*、强化学习算法或形式安全保证。路线直线段可行不代表控制器会沿直线执行，低层仍自行转向、迎风航行。</p>
+<p>主方法在查看新场景结果前冻结为 <strong>Relay160</strong>。它按加留量地图的路线弧长向前查看 500 m，选其中最远可见路线点；目标有效且未进入 100 m 接力区、未触发原有弦段风险条件时保持目标。额外规划留量为 <code>min(160, max(0, min(当前位置余量, 终点余量) - 5))</code> m；无加留量路线时回退到原安全地图。真实评测安全半径不变。主方法没有径向候选库、加权选点评分、显式风估计、在线动力学推演或新增风险监督器。</p>
+<p>保留的弦段风险条件为 <code>弦段安全余量 &lt; min(80, max(0, 当前点安全余量 - 5))</code> m。这一门槛会随当前余量缩小，不应包装为预测安全机制。160 m 是经验上限，不是最低维持距离，也不是跟踪误差界。代码见 <code>src/sailboat_routing/r2_planner.py:130–177</code>。</p>
+<p>相关工作支持分层规划和参考整形的研究定位，但不能替代本实验：已有帆船规划多使用风观测；参考调节器和预测安全滤波器的保证需要本方法没有提供的模型与可行性条件。英文稿包含 8 篇已核对的一手文献；访问范围与元数据修正见 <code>literature_sources.json</code> 和 <code>paper/ccdc/bibliography_corrections.json</code>。本轮定位为固定控制器接口的应用研究，不以模块数量主张创新。</p>
+<h2 id="2-开发证据与淘汰">2. 开发证据与淘汰</h2>
+<p>所有 seed271/371/1271 均为已见数据。初筛使用 seed1271 的前 36 场；最终开发选择使用同一组 72 场（上述 36 场加 seed371 的 36 场）。缓存基线经源码、配置与场景核验；另有两次完整基线回放与旧轨迹、动作、目标完全一致。缓存耗时不作为新运行的算力速度对比。</p>
+<table><thead><tr><th>方法</th><th style="text-align:right">安全到达 / 72</th><th style="text-align:right">缓冲区侵入</th><th style="text-align:right">超时</th></tr></thead><tbody><tr><td>原 R1，80 m 留量</td><td style="text-align:right">64</td><td style="text-align:right">5</td><td style="text-align:right">3</td></tr><tr><td>R1 + Risk60，保留接受门槛</td><td style="text-align:right">65</td><td style="text-align:right">4</td><td style="text-align:right">3</td></tr><tr><td>R1 + Risk100</td><td style="text-align:right">64</td><td style="text-align:right">4</td><td style="text-align:right">4</td></tr><tr><td>原合理 Relay80</td><td style="text-align:right">65</td><td style="text-align:right">6</td><td style="text-align:right">1</td></tr><tr><td>Relay120</td><td style="text-align:right">67</td><td style="text-align:right">5</td><td style="text-align:right">0</td></tr><tr><td>Relay160</td><td style="text-align:right">69</td><td style="text-align:right">2</td><td style="text-align:right">1</td></tr></tbody></table>
+<p>Relay160 相对 R1 新增 7 场安全到达、丢失 2 场；62 场共同安全到达中平均慢 93.47 s，中位差 +21.5 s，描述性配对 bootstrap 区间为 [-23.29, 211.60] s。seed371 为 36/36，seed1271 为 33/36，后者低于 Relay120 的 34/36。选择依据是优先安全及实现简单，不能据此声称留量越大越好、160 m 最优或已经提效。</p>
+<p>初筛中，60 m 风险下绕过 R1 保持/改点门槛只完成 31/36，原 R1 为 32/36；增加过去 10 s 净径向接近速度大于 0.05 m/s 的门槛仍为 31/36。恒定 200 m 短目标完成 26/36（8 次超时），只在风险时缩至 200 m 为 30/36。延长普通规划周期至 20 s 为 32/36，出现 1 得 1 失。这些机制均被淘汰。详见 <code>iteration_ledger.md</code>、各轮 <code>analysis.json</code>。</p>
+<p>两项同状态诊断限制了因果表述：</p>
+<ul><li>已见 <code>s1271_032</code>：323 s 分歧前物理状态和动作历史相同。原目标复算分数 4497.14098，替代目标 4496.42062，仅改善 0.72036，低于原 15 分门槛。同状态原目标弦段余量 58.52 m，替代目标为 57.76 m，评分改善并不等于此处几何余量增加。绕过门槛后在 324 s 应用替代目标，整段执行于 1447 s 侵入安全区；R1 于 3945 s 安全到达。仅凭先后关系不能断言首次替换单独导致后续失败。</li><li>已见 <code>s1271_034</code>：Risk60 在 364 s 请求规划但保持目标，仍重置 <code>last_plan</code>；R1 的下一次目标应用在 372 s，变体在 375 s。变体后来成功不能解释为更早实际干预。代码见 <code>src/sailboat_routing/r1_planner.py:85–89</code>、<code>src/sailboat_routing/r3_planner.py:49–70</code>。</li></ul>
+<p>诊断复算只重建规划器并输入已有状态，不推进物理环境。风险检测、请求、建议变化、实际应用分别计数；第一轮漏记终止异常调用，但任务结果完整，后续仅修正日志。原始同状态证据在 <code>round1/case_r1_fixed60_regression032.json</code>、<code>round1/case_r1_replan60_rescue034.json</code>。离线包另附 <code>development_case_prefixes.json</code>，可直接核查两组逐值相同的分歧前原始记录。</p>
+<h2 id="3-冻结评估协议">3. 冻结评估协议</h2>
+<p>在总预算第 3.116 小时冻结主方法、参数、分析和选图规则，然后才生成 seed2271/3271，每批 72 场，共 144 场配对。包含四种布局、三种风型、1/3/5 km、每组合两个实例。五组为原 R1、Relay120、主方法 Relay160、仅去除额外留量的 Relay0、保留接受门槛的 Risk60。两批均完整执行，不按结果调参或替换主方法。冻结及生成收据见 <code>method_freeze.json</code>、<code>generation_receipt.json</code>；评估源码提交为 <code>037fe1a</code>。</p>
+<p>所有组使用同一第四章 14D SAC-LSTM @7200 与归一化器、动作约束、动力学、真实历史重编码，以及 t 选动作、t+1 应用新目标的时序。无新增观测噪声或执行器噪声。地图实体外原安全缓冲为 60 m；目标半径 10 m；任务上限 1800/5400/9000 s 不变。安全判据使用相邻一秒记录位置连线的最小安全余量，不等于连续积分轨迹的形式证明。曾侵入后再到达仍判失败。</p>
+<p>主指标为完整安全到达，分别保留侵入、碰撞、超时和原程序停止原因。效率只在明确列出分母的共同安全到达集合上比较；失败早停不能计为更快。区间是有限合成场景的描述统计，不证明安全等价或真实海况可靠性。Relay 不同留量在无障碍地图应产生完全相同轨迹和动作，作为预设负对照。</p>
+<h2 id="4-新场景结果与图表">4. 新场景结果与图表</h2>
+<p>全部 720 回合完成，原始轨迹复算、配置/源码身份、配对输入和目标应用时序核验通过（<code>final_integrity.json</code>）。没有实体碰撞或其他失败类型；缓冲侵入均以原始 <code>NoRouteError</code> 终止，超时以 <code>task_limit</code> 终止。没有删去失败或将失败早停算成提速。</p>
+<table><thead><tr><th>方法</th><th style="text-align:right">安全 / 144</th><th style="text-align:right">侵入</th><th style="text-align:right">超时</th><th>1 / 3 / 5 km 安全数，各 /48</th><th>seed2271 / 3271，各 /72</th></tr></thead><tbody><tr><td>R1</td><td style="text-align:right">129</td><td style="text-align:right">6</td><td style="text-align:right">9</td><td>46 / 41 / 42</td><td>66 / 63</td></tr><tr><td>Risk60</td><td style="text-align:right">131</td><td style="text-align:right">4</td><td style="text-align:right">9</td><td>46 / 42 / 43</td><td>67 / 64</td></tr><tr><td>Relay0</td><td style="text-align:right">88</td><td style="text-align:right">55</td><td style="text-align:right">1</td><td>36 / 28 / 24</td><td>44 / 44</td></tr><tr><td>Relay120</td><td style="text-align:right">133</td><td style="text-align:right">9</td><td style="text-align:right">2</td><td>46 / 45 / 42</td><td>66 / 67</td></tr><tr><td>Relay160</td><td style="text-align:right"><strong>135</strong></td><td style="text-align:right">4</td><td style="text-align:right">5</td><td>44 / 47 / 44</td><td>68 / 67</td></tr></tbody></table>
+<p>直接消融支持留量的经验价值：Relay160 相对 Relay0 为 <strong>50 得、3 失</strong>，安全率差 +32.64 个百分点，描述性配对区间 [24.31, 40.97]。但合理 Relay120 已具竞争力：主方法仅 <strong>7 得、5 失</strong>，差 +1.39 点，区间 [−3.47, 6.25]；侵入由 9 降至 4，同时超时由 2 增至 5。不能据此声称 160 m 稳定更优或最优。相对 R1 为 10 得、4 失，差 +4.17 点，区间 [−0.69, 9.03]；尤其 1 km 从 46/48 退化为 44/48。</p>
+<p>下表差值均为 <strong>Relay160 减对照</strong>。时间与路程只在每对方法共同安全到达的集合比较，不能跨行当作无条件排名。</p>
+<table><thead><tr><th>对照</th><th style="text-align:right">共同成功分母</th><th>平均 / 中位时间差 s</th><th>平均差 95% 描述区间 s</th><th style="text-align:right">平均路程差 m</th></tr></thead><tbody><tr><td>R1</td><td style="text-align:right">125</td><td>−129.33 / +20</td><td>[−347.70, +54.97]</td><td style="text-align:right">+200.50</td></tr><tr><td>Risk60</td><td style="text-align:right">127</td><td>−145.60 / +20</td><td>[−373.64, +54.02]</td><td style="text-align:right">+183.19</td></tr><tr><td>Relay0</td><td style="text-align:right">85</td><td>+55.48 / 0</td><td>[−141.37, +224.39]</td><td style="text-align:right">+250.29</td></tr><tr><td>Relay120</td><td style="text-align:right">128</td><td>+52.89 / +2.5</td><td>[−37.84, +135.14]</td><td style="text-align:right">+240.98</td></tr></tbody></table>
+<p>相对 R1，1/3/5 km 共同成功集合分母为 43/41/41，平均时间差 +59.26/+30.85/−487.29 s，中位差却为 +42/+17/+7 s。5 km 的平均改善受长尾案例影响，区间 [−1110.00, +50.67] s；时间 P90 从 5269 降为 2488 s，仍不能推出普遍提效。相对 Relay120，平均多走 240.98 m，区间 [88.19, 457.38] m，时间 P90 从 1983.7 增至 2158.9 s。完整配对清单、尾部与分组数字见 <code>final/analysis.json</code>、<code>final/paired_episode_differences.csv</code> 和 <code>final/writing_details.json</code>。</p>
+<p>Risk60 相对 R1 为 4 得 2 失；127 场共同成功平均 −9.88 s，中位 0，区间 [−80.90, 48.95]。144 回合的 4399 个风险阳性决策步产生 276 次请求、43 次建议变化和 43 次实际应用，涉及 21 回合。80 次请求中，所有触发障碍在过去 10 s 的净径向趋势均为远离；这不是已证明的误报，过去净趋势不等于瞬时趋势或未来安全。主方法不保留新增监督器。无障碍负对照中，36 个独立场景上的 108 对比较均逐值一致；不是 108 个独立场景（<code>final/risk_summary.json</code>、<code>final/open_map_invariance.json</code>）。</p>
+<p><img src="../runs/r3_ccdc_20261003T121146Z/figures/outcomes_and_efficiency.png" alt="全部结果与条件效率" /></p>
+<p>真实轨迹图来自原始日志，未平滑。常规 1/3/5 km 对照按冻结规则选出，三个实例中包含明显代价：3 km 通道主方法 994 s，对照 R1/Relay120 为 785/791 s；5 km 交错场景为 1689 对 1677/1670 s，最小安全余量为 84.87 对 0.89/11.35 m。图中虚线 A* 是初始 80 m 留量离线参照，<strong>不是实际航迹或主方法路线</strong>。</p>
+<p>有利极端 <code>s2271_066</code>：主方法 1773 s，R1 8703 s；Relay120 在 682 s 失败，不计为更快。不利极端 <code>s2271_065</code>：主方法 4370 s、实际航程 15343.46 m，R1/Relay120 为 1824/1522 s。按冻结首个退化规则选出的 <code>s2271_040</code> 是主方法 1800 s 超时，对照 416/372 s 成功，不能误标为侵入。离线图集同时展示这些案例。</p>
+<p>补充近障失败 <code>s2271_046</code> 提供具体机制缺口：主方法全程没有改点。733 s 目标仍距 192.93 m，未进入接力区；点及目标弦段余量均 +0.3935 m，但风险门槛已经降为 0，因此保持原目标。实际 733→734 s 位移余量 −0.2408 m，随后 <code>NoRouteError</code>。这确认了该保持条件可在余量耗尽前仍不触发；<strong>尚未证明同状态换另一个目标可以救回</strong>。没有在新场景上继续调参或补跑反事实。证据 <code>final/failure046_geometry.json</code>。</p>
+<p><img src="../runs/r3_ccdc_20261003T121146Z/figures/obstacle_safety_local.png" alt="真实近障失败" /></p>
+<h2 id="5-收敛判断证据对应与交付">5. 收敛判断、证据对应与交付</h2>
+<p><strong>建议进入作者修改和投稿准备，但不直接以“新安全算法”或“长程提效方法”提交。</strong> 题目收敛为固定学习控制器的经验路线留量与简单目标保持：直接消融支持保留留量；合理简单基线竞争、1 km 退化及效率代价必须进入摘要和结论。冻结主方法保持 Relay160，不依据测试结果换名。R1 对比同时改变留量与选点逻辑，不能隔离删去候选库的收益；留量消融估计路线及目标序列的组合闭环效果，不是跟踪误差界。结论不外推海试、未知地图、动态避碰或其他控制器。</p>
+<table><thead><tr><th>有限贡献 / 不能声称</th><th>对应实验与证据</th></tr></thead><tbody><tr><td>固定接口下额外留量有经验价值；不是安全保证</td><td>160 对 0 消融，50 得 3 失；统计图、完整配对表</td></tr><tr><td>简单接力是有竞争力的可运行方案；不能说 160 最优</td><td>R1、120、160 全矩阵；1/3/5 km 航迹与退化图</td></tr><tr><td>干预必须区分请求与应用；不是新触发器有效性证明</td><td>同状态 032/034 开发诊断、Risk60 冻结对照、046 失败</td></tr></tbody></table>
+<p>本轮在共享 12 h / 最多 8 轮预算内完成三轮开发及一轮冻结评估，至多四个单数值线程 CPU 实验进程，GPU 与训练均为 0。完整资源消耗单列 <code>resources.json</code>；所有旧结果保留。一次最终主张—证据—引用审查结论为可进入作者修改、尚不能直接投稿；已修正审查指出的证据路径前缀。完整意见与处理见 <code>review-stage/AUTO_REVIEW.md</code>；同家族 provisional 审查不替代真实结果或接收判断。</p>
+<p>交付入口：</p>
+<ul><li>英文完整内容稿：<a href="../paper/ccdc/draft.md">draft.md</a>，8 篇真实引用、BibTeX、<a href="../paper/ccdc/SUBMISSION_NOTES.md">投稿核查</a>、<a href="../paper/ccdc/REPRODUCIBILITY.md">复现命令</a>。未核验多文件 TeX 工具链及官方模板，不声称 PDF 已编译或页数合规。作者须确认继承资产署名/发表许可、作者名单、资助及 AI 披露。</li><li><a href="../runs/r3_ccdc_20261003T121146Z/figures/index.html">离线真实图集</a>：PNG/SVG、轨迹/目标 CSV、干预与退化证据。主张不依靠示意图证明。</li><li><a href="../configs/r3_methods.json">可运行方法配置</a>、<a href="../runs/r3_ccdc_20261003T121146Z/final.json">冻结完整清单</a>、<a href="../runs/r3_ccdc_20261003T121146Z/final/raw_index.csv">原始记录索引</a>、<a href="../runs/r3_ccdc_20261003T121146Z/final/analysis.json">汇总</a>。服务器现有环境是实际运行入口，本地旧工作树未被重置。</li><li><code>R3_CCDC_preview.zip</code> 保留文档相对路径、全部作图数据及可恢复源码快照；全量控制日志按索引保留服务器，预览包不是全量实验备份。</li></ul>
+<p>seed2271/3271 自本轮结束起也属于已见数据。研究执行结束，不自动继续实验或 push。</p>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source path <code>docs\R3_RESEARCH_REPORT.md</code> ·
+  SHA256 <code>79a6c6a945b8</code> ·
+  generated at 2026-10-03 19:37 UTC.
+  This is a generated view — edit the source Markdown, then re-render.
+</footer>
+</main>
+
+</div>
+</body>
+</html>

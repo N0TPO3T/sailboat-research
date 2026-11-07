@@ -1,0 +1,30 @@
+{
+  "scientific_commit": "29124b8",
+  "delivery_commit": "f75130d",
+  "server_root": "/home/ot/Students/hs/sailboat-routing-v0",
+  "local_root": "C:/Users/74095/hs/SailBoat/sailboat-routing-v0",
+  "files": [
+    {
+      "name": "R8_DYNAMIC_preview.zip",
+      "bytes": 1498560,
+      "sha256": "ce24b731c96863cb7fb1056ec53da18d6b3cc0964242ef641c3a41268ef2c099",
+      "local_verified": true
+    },
+    {
+      "name": "R8_raw_results.tar.gz",
+      "bytes": 20751312,
+      "sha256": "25c09d421d0bb4ef8df4d70ab650501134a106a058e6275c067f1e8ef53e3088",
+      "local_verified": true
+    },
+    {
+      "name": "R8_source.zip",
+      "bytes": 3739013,
+      "sha256": "7f500b49db037d5d5ecd3cdd76d277b3bb6ad8807d7321453f7c8ee7e22666e0",
+      "local_verified": true
+    }
+  ],
+  "local_verification": "all three archives SHA256 matched; raw evidence extracted without overwriting existing run",
+  "preserved_local_dirty_context": true,
+  "push": false,
+  "verified_at": "2026-10-05T07:33:06.241289+00:00"
+}

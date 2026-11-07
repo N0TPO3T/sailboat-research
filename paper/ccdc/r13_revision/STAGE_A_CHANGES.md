@@ -1,0 +1,3 @@
+# Stage A: actual changes versus R12
+
+Primary matched24 table moved before history; means, tails, denominators and CPU exposed. Added predicted minimum, effective horizon, empty-set/sentinel/failed-forecast definitions and static D_j; retained nominal-first, conditional20m and real timing. Replotted all24 with separate status strip and near-zero margin expansion. Added unique L failure with same-history260s decision table; retained+308s full-track counterexample. Grouped12 branches by6 snapshots. Source attribution/public reproducibility gap explicitly distinguished from administrative author metadata. No algorithm modification or new full voyage.

@@ -1,0 +1,4 @@
+# For Word source and optional Fig. 1 regeneration; no simulator dependencies.
+python-docx==1.2.0
+lxml==6.1.1
+matplotlib==3.11.2

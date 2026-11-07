@@ -1,0 +1,189 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r8_closedloop_20261005T062543Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "dev_same_path_time_-150",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              -4.252676722369841
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "development timing control",
+        "geometry_protocol": "R7_85m_corrected",
+        "timing_offset_s": -150
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "dev_same_path_time_-150",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              -4.252676722369841
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "development timing control",
+        "geometry_protocol": "R7_85m_corrected",
+        "timing_offset_s": -150
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    },
+    {
+      "scene": {
+        "id": "dev_same_path_time_150",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              201.25774282333165
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "development timing control",
+        "geometry_protocol": "R7_85m_corrected",
+        "timing_offset_s": 150
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "dev_same_path_time_150",
+        "seed": 2026100527,
+        "profile": "stable",
+        "base_direction_degrees": 118.88216938371339,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "mixed",
+        "vessels": [
+          {
+            "id": "v1",
+            "position": [
+              445.6512992853968,
+              201.25774282333165
+            ],
+            "velocity": [
+              0,
+              -0.685034731819005
+            ]
+          }
+        ],
+        "static": [
+          {
+            "center_xy": [
+              850,
+              300
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "nominal_crossing_time": 143.7920275792769,
+        "split": "development timing control",
+        "geometry_protocol": "R7_85m_corrected",
+        "timing_offset_s": 150
+      },
+      "variant": "sampled",
+      "config": {
+        "sampled": true,
+        "horizon": 60,
+        "period": 15,
+        "guard": 30
+      }
+    }
+  ],
+  "declared_epoch": 1791183632.548868,
+  "purpose": "Known mixed3 identical target line/speed, crossing shifted +/-150s; no outcome selection"
+}

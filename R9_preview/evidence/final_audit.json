@@ -1,0 +1,3912 @@
+{
+  "errors": [],
+  "checks": [
+    {
+      "source": "development2/confirm_mixed_3/reactive",
+      "steps": 184,
+      "ticks": 185,
+      "waits": [],
+      "max_tick": 0.10455179680138826,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_7/reactive",
+      "steps": 262,
+      "ticks": 263,
+      "waits": [],
+      "max_tick": 0.13496323116123676,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_3/fast60",
+      "steps": 461,
+      "ticks": 461,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 74,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 138,
+          "steps": 12,
+          "distinct_actual_actions": 12
+        },
+        {
+          "time": 211,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 275,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 340,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 403,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.1986187295988202,
+      "over1": 0,
+      "accepted": 7,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "development2/confirm_mixed_3/slot_feedback60",
+      "steps": 399,
+      "ticks": 399,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 96,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 182,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 268,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 354,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.17981430562213063,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_6/reactive",
+      "steps": 293,
+      "ticks": 293,
+      "waits": [],
+      "max_tick": 0.09805230982601643,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_7/slot_feedback60",
+      "steps": 524,
+      "ticks": 524,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 150,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 236,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 322,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 408,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 494,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.20478803012520075,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "development2/r8new_endpoint_5/reactive",
+      "steps": 317,
+      "ticks": 317,
+      "waits": [],
+      "max_tick": 0.13549756770953536,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_7/fast60",
+      "steps": 591,
+      "ticks": 591,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 128,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 192,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 256,
+          "steps": 14,
+          "distinct_actual_actions": 14
+        },
+        {
+          "time": 331,
+          "steps": 15,
+          "distinct_actual_actions": 15
+        },
+        {
+          "time": 407,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 473,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 537,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.27696434082463384,
+      "over1": 0,
+      "accepted": 8,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "development2/confirm_mixed_6/slot_feedback60",
+      "steps": 298,
+      "ticks": 298,
+      "waits": [
+        {
+          "time": 41,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 127,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 213,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.10365399392321706,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development2/confirm_mixed_6/fast60",
+      "steps": 381,
+      "ticks": 381,
+      "waits": [
+        {
+          "time": 41,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 105,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 169,
+          "steps": 12,
+          "distinct_actual_actions": 12
+        },
+        {
+          "time": 242,
+          "steps": 11,
+          "distinct_actual_actions": 11
+        },
+        {
+          "time": 314,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 378,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.15044072829186916,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "development2/r8new_endpoint_5/slot_feedback60",
+      "steps": 777,
+      "ticks": 777,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 143,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 229,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 315,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 401,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 487,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 573,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 659,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 745,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.3370385840535164,
+      "over1": 0,
+      "accepted": 9,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "development2/r8new_endpoint_5/fast60",
+      "steps": 663,
+      "ticks": 663,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 121,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 184,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 248,
+          "steps": 13,
+          "distinct_actual_actions": 13
+        },
+        {
+          "time": 322,
+          "steps": 13,
+          "distinct_actual_actions": 13
+        },
+        {
+          "time": 396,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 460,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 525,
+          "steps": 17,
+          "distinct_actual_actions": 17
+        },
+        {
+          "time": 603,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.2823134548962116,
+      "over1": 0,
+      "accepted": 9,
+      "accepted_nonnominal": 3
+    },
+    {
+      "source": "development3/confirm_mixed_7/ignore_wait",
+      "steps": 219,
+      "ticks": 220,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 150,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.11238588020205498,
+      "over1": 0,
+      "accepted": 2,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development3/confirm_mixed_3/ignore_wait",
+      "steps": 399,
+      "ticks": 399,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 96,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 182,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 268,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 354,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.1816567867062986,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development3/confirm_mixed_3/fast15",
+      "steps": 183,
+      "ticks": 184,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 29,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 47,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 65,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 83,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 101,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 120,
+          "steps": 16,
+          "distinct_actual_actions": 16
+        },
+        {
+          "time": 152,
+          "steps": 15,
+          "distinct_actual_actions": 15
+        }
+      ],
+      "max_tick": 0.08047672966495156,
+      "over1": 0,
+      "accepted": 8,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "development3/confirm_mixed_6/ignore_wait",
+      "steps": 298,
+      "ticks": 298,
+      "waits": [
+        {
+          "time": 41,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 127,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 213,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.10767489764839411,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "development3/confirm_mixed_6/fast15",
+      "steps": 403,
+      "ticks": 403,
+      "waits": [
+        {
+          "time": 41,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 60,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 78,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 96,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 115,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 134,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 153,
+          "steps": 15,
+          "distinct_actual_actions": 15
+        },
+        {
+          "time": 184,
+          "steps": 18,
+          "distinct_actual_actions": 18
+        },
+        {
+          "time": 218,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 237,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 256,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 275,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 294,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 313,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 332,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 351,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 369,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 387,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.17296748608350754,
+      "over1": 0,
+      "accepted": 18,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "development3/confirm_mixed_7/fast15",
+      "steps": 486,
+      "ticks": 486,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 83,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 101,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 119,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 138,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 157,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 176,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 195,
+          "steps": 17,
+          "distinct_actual_actions": 17
+        },
+        {
+          "time": 228,
+          "steps": 14,
+          "distinct_actual_actions": 14
+        },
+        {
+          "time": 258,
+          "steps": 20,
+          "distinct_actual_actions": 20
+        },
+        {
+          "time": 294,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 313,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 333,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 353,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 372,
+          "steps": 14,
+          "distinct_actual_actions": 14
+        },
+        {
+          "time": 402,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 421,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 440,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 458,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 476,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.1912715914659202,
+      "over1": 0,
+      "accepted": 20,
+      "accepted_nonnominal": 4
+    },
+    {
+      "source": "development3/r8new_endpoint_5/ignore_wait",
+      "steps": 644,
+      "ticks": 644,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 143,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 229,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 315,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 401,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 487,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 573,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.24012509128078818,
+      "over1": 0,
+      "accepted": 7,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "development3/r8new_endpoint_5/fast15",
+      "steps": 698,
+      "ticks": 698,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 76,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 94,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 112,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 130,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 148,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 166,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 185,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 204,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 223,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 242,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 261,
+          "steps": 16,
+          "distinct_actual_actions": 16
+        },
+        {
+          "time": 293,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 312,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 331,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 350,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 369,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 388,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 407,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 426,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 445,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 464,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 484,
+          "steps": 26,
+          "distinct_actual_actions": 26
+        },
+        {
+          "time": 526,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 547,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 566,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 586,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 606,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 627,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 648,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 667,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 685,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.3055872954428196,
+      "over1": 0,
+      "accepted": 32,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_0/reactive",
+      "steps": 326,
+      "ticks": 326,
+      "waits": [],
+      "max_tick": 0.11905357893556356,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_0/fast60",
+      "steps": 445,
+      "ticks": 445,
+      "waits": [
+        {
+          "time": 66,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 130,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 194,
+          "steps": 13,
+          "distinct_actual_actions": 13
+        },
+        {
+          "time": 268,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 332,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 396,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.18660097755491734,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_1/reactive",
+      "steps": 297,
+      "ticks": 297,
+      "waits": [],
+      "max_tick": 0.12792513146996498,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_0/main",
+      "steps": 575,
+      "ticks": 575,
+      "waits": [
+        {
+          "time": 66,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 152,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 238,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 324,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 410,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 496,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.22105672163888812,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_1/ideal15",
+      "steps": 297,
+      "ticks": 297,
+      "waits": [],
+      "max_tick": 0.12780491868034005,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_1/fast60",
+      "steps": 298,
+      "ticks": 298,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 121,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 184,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 248,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.12920807488262653,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_1/delayed15",
+      "steps": 299,
+      "ticks": 299,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 76,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 94,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 112,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 130,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 149,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 168,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 188,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 207,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 226,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 245,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 264,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 282,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.13314824225381017,
+      "over1": 0,
+      "accepted": 13,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_2/reactive",
+      "steps": 323,
+      "ticks": 323,
+      "waits": [],
+      "max_tick": 0.1324947807006538,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_0/ideal15",
+      "steps": 405,
+      "ticks": 405,
+      "waits": [],
+      "max_tick": 0.17446377268061042,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_1/main",
+      "steps": 297,
+      "ticks": 297,
+      "waits": [
+        {
+          "time": 57,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 143,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 229,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.12939972151070833,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_0/delayed15",
+      "steps": 498,
+      "ticks": 498,
+      "waits": [
+        {
+          "time": 66,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 85,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 103,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 122,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 141,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 160,
+          "steps": 18,
+          "distinct_actual_actions": 18
+        },
+        {
+          "time": 194,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 214,
+          "steps": 23,
+          "distinct_actual_actions": 23
+        },
+        {
+          "time": 253,
+          "steps": 18,
+          "distinct_actual_actions": 18
+        },
+        {
+          "time": 287,
+          "steps": 23,
+          "distinct_actual_actions": 23
+        },
+        {
+          "time": 326,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 346,
+          "steps": 6,
+          "distinct_actual_actions": 6
+        },
+        {
+          "time": 368,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 388,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 407,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 426,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 445,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 463,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 481,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.19623463647440076,
+      "over1": 0,
+      "accepted": 19,
+      "accepted_nonnominal": 4
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_2/fast60",
+      "steps": 437,
+      "ticks": 437,
+      "waits": [
+        {
+          "time": 76,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 140,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 203,
+          "steps": 13,
+          "distinct_actual_actions": 13
+        },
+        {
+          "time": 277,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 341,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 405,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.19073596503585577,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_3/reactive",
+      "steps": 465,
+      "ticks": 465,
+      "waits": [],
+      "max_tick": 0.20848277397453785,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_2/main",
+      "steps": 380,
+      "ticks": 380,
+      "waits": [
+        {
+          "time": 76,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 162,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 248,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 334,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.16667708195745945,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_2/ideal15",
+      "steps": 363,
+      "ticks": 363,
+      "waits": [],
+      "max_tick": 0.16431950265541673,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_2/delayed15",
+      "steps": 414,
+      "ticks": 414,
+      "waits": [
+        {
+          "time": 76,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 95,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 113,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 132,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 151,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 169,
+          "steps": 20,
+          "distinct_actual_actions": 20
+        },
+        {
+          "time": 205,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 225,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 245,
+          "steps": 19,
+          "distinct_actual_actions": 19
+        },
+        {
+          "time": 280,
+          "steps": 7,
+          "distinct_actual_actions": 7
+        },
+        {
+          "time": 303,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 324,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 344,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 363,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 381,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 399,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.16867118515074253,
+      "over1": 0,
+      "accepted": 16,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_3/fast60",
+      "steps": 472,
+      "ticks": 472,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 74,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 137,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 202,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 266,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 331,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 396,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 460,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.1905609853565693,
+      "over1": 0,
+      "accepted": 8,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_4/reactive",
+      "steps": 293,
+      "ticks": 293,
+      "waits": [],
+      "max_tick": 0.11084039276465774,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_3/delayed15",
+      "steps": 469,
+      "ticks": 469,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 29,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 47,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 65,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 83,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 101,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 120,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 139,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 159,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 178,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 197,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 216,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 235,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 256,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 277,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 298,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 319,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 339,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 359,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 378,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 397,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 416,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 434,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 452,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.18127762619405985,
+      "over1": 0,
+      "accepted": 24,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_3/ideal15",
+      "steps": 465,
+      "ticks": 465,
+      "waits": [],
+      "max_tick": 0.20923838717862964,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_4/ideal15",
+      "steps": 293,
+      "ticks": 293,
+      "waits": [],
+      "max_tick": 0.10024599265307188,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mixed_pressure_3/main",
+      "steps": 481,
+      "ticks": 481,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 96,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 182,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 268,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 354,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 440,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.18230257462710142,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_4/fast60",
+      "steps": 293,
+      "ticks": 293,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 74,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 138,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 202,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 266,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.11174332490190864,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_5/reactive",
+      "steps": 258,
+      "ticks": 258,
+      "waits": [],
+      "max_tick": 0.10885298019275069,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_4/delayed15",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 29,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 47,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 65,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 84,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 103,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 122,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 141,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 160,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 179,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 198,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 217,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 235,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 253,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 271,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        },
+        {
+          "time": 288,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.10025046207010746,
+      "over1": 0,
+      "accepted": 16,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_4/main",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 96,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 182,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 268,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.08186290273442864,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_5/main",
+      "steps": 271,
+      "ticks": 271,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 96,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 182,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 268,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.09912597388029099,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_6/reactive",
+      "steps": 248,
+      "ticks": 248,
+      "waits": [],
+      "max_tick": 0.09659322910010815,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_5/delayed15",
+      "steps": 275,
+      "ticks": 275,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 29,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 47,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 66,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 85,
+          "steps": 14,
+          "distinct_actual_actions": 14
+        },
+        {
+          "time": 115,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 134,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 153,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 172,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 190,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 208,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 226,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 244,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 262,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.08036712603643537,
+      "over1": 0,
+      "accepted": 14,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_5/fast60",
+      "steps": 325,
+      "ticks": 325,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 74,
+          "steps": 12,
+          "distinct_actual_actions": 12
+        },
+        {
+          "time": 147,
+          "steps": 13,
+          "distinct_actual_actions": 13
+        },
+        {
+          "time": 221,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 285,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.11429142905399203,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_ordinary_crossing_5/ideal15",
+      "steps": 270,
+      "ticks": 270,
+      "waits": [],
+      "max_tick": 0.0775296539068222,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_6/fast60",
+      "steps": 248,
+      "ticks": 248,
+      "waits": [
+        {
+          "time": 17,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 81,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 144,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 207,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.10571454232558608,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_6/main",
+      "steps": 248,
+      "ticks": 248,
+      "waits": [
+        {
+          "time": 17,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 103,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 189,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.1069182283245027,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_6/ideal15",
+      "steps": 248,
+      "ticks": 248,
+      "waits": [],
+      "max_tick": 0.1001379368826747,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_7/reactive",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [],
+      "max_tick": 0.12979338876903057,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_6/delayed15",
+      "steps": 248,
+      "ticks": 248,
+      "waits": [
+        {
+          "time": 17,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 36,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 54,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 72,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 90,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 109,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 127,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 145,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 164,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 183,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 202,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 220,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 238,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.10826467769220471,
+      "over1": 0,
+      "accepted": 13,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_7/fast60",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [
+        {
+          "time": 47,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 111,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 174,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 237,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.13228059140965343,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_7/main",
+      "steps": 296,
+      "ticks": 296,
+      "waits": [
+        {
+          "time": 47,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 133,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 219,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.1351439068093896,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_8/reactive",
+      "steps": 284,
+      "ticks": 284,
+      "waits": [],
+      "max_tick": 0.11913292109966278,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_7/delayed15",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [
+        {
+          "time": 47,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 66,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 84,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 102,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 120,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 139,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 158,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 176,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 194,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 213,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 232,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 251,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 269,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        },
+        {
+          "time": 286,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.11935795843601227,
+      "over1": 0,
+      "accepted": 14,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_nonconflict_7/ideal15",
+      "steps": 294,
+      "ticks": 294,
+      "waits": [],
+      "max_tick": 0.1294530350714922,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_8/fast60",
+      "steps": 641,
+      "ticks": 641,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 104,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 167,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 231,
+          "steps": 12,
+          "distinct_actual_actions": 12
+        },
+        {
+          "time": 304,
+          "steps": 12,
+          "distinct_actual_actions": 12
+        },
+        {
+          "time": 377,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 441,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 505,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 570,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 634,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.2622744804248214,
+      "over1": 0,
+      "accepted": 10,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_endpoint_8/main",
+      "steps": 600,
+      "ticks": 600,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 126,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 212,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 298,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 384,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 470,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 556,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.2774387439712882,
+      "over1": 0,
+      "accepted": 7,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "confirmation/r9new_endpoint_9/reactive",
+      "steps": 302,
+      "ticks": 302,
+      "waits": [],
+      "max_tick": 0.12811014195904136,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_9/delayed15",
+      "steps": 303,
+      "ticks": 303,
+      "waits": [
+        {
+          "time": 29,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 48,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 66,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 84,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 102,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 120,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 139,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 158,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 177,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 196,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 215,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 234,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 253,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 272,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 290,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.12603500764817,
+      "over1": 0,
+      "accepted": 15,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_9/ideal15",
+      "steps": 302,
+      "ticks": 302,
+      "waits": [],
+      "max_tick": 0.13923498755320907,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_8/delayed15",
+      "steps": 638,
+      "ticks": 638,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 59,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 77,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 96,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 115,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 134,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 153,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 172,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 191,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 210,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 229,
+          "steps": 15,
+          "distinct_actual_actions": 15
+        },
+        {
+          "time": 260,
+          "steps": 16,
+          "distinct_actual_actions": 16
+        },
+        {
+          "time": 292,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 311,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 330,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 349,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 368,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 387,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 406,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 425,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 444,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 463,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 483,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 504,
+          "steps": 6,
+          "distinct_actual_actions": 6
+        },
+        {
+          "time": 526,
+          "steps": 6,
+          "distinct_actual_actions": 6
+        },
+        {
+          "time": 548,
+          "steps": 7,
+          "distinct_actual_actions": 7
+        },
+        {
+          "time": 571,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 591,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 609,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 627,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.2759861764498055,
+      "over1": 0,
+      "accepted": 30,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "confirmation/r9new_endpoint_9/fast60",
+      "steps": 302,
+      "ticks": 302,
+      "waits": [
+        {
+          "time": 29,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 93,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 156,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 220,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 284,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.12732139183208346,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_8/ideal15",
+      "steps": 581,
+      "ticks": 581,
+      "waits": [],
+      "max_tick": 0.23916170001029968,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_endpoint_9/main",
+      "steps": 304,
+      "ticks": 304,
+      "waits": [
+        {
+          "time": 29,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 115,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 201,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 287,
+          "steps": 17,
+          "distinct_actual_actions": 17
+        }
+      ],
+      "max_tick": 0.1273724096827209,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_10/reactive",
+      "steps": 369,
+      "ticks": 369,
+      "waits": [],
+      "max_tick": 0.13274653442203999,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_10/fast60",
+      "steps": 375,
+      "ticks": 375,
+      "waits": [
+        {
+          "time": 37,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 101,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 164,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 228,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 292,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 355,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.14233845612034202,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_10/main",
+      "steps": 402,
+      "ticks": 402,
+      "waits": [
+        {
+          "time": 37,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 123,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 209,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 295,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 381,
+          "steps": 21,
+          "distinct_actual_actions": 21
+        }
+      ],
+      "max_tick": 0.1295945718884468,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_11/reactive",
+      "steps": 269,
+      "ticks": 269,
+      "waits": [],
+      "max_tick": 0.11291854036971927,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_10/delayed15",
+      "steps": 381,
+      "ticks": 381,
+      "waits": [
+        {
+          "time": 37,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 56,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 74,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 92,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 110,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 128,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 147,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 166,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 185,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 205,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 226,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 246,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 266,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 285,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 304,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 323,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 342,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 360,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        },
+        {
+          "time": 377,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.1358678792603314,
+      "over1": 0,
+      "accepted": 19,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_10/ideal15",
+      "steps": 369,
+      "ticks": 369,
+      "waits": [],
+      "max_tick": 0.13855784106999636,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_11/ideal15",
+      "steps": 269,
+      "ticks": 269,
+      "waits": [],
+      "max_tick": 0.10674246679991484,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_11/delayed15",
+      "steps": 269,
+      "ticks": 269,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 59,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 77,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 95,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 113,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 131,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 149,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 167,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 186,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 205,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 224,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 242,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 260,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.10814189026132226,
+      "over1": 0,
+      "accepted": 13,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_11/fast60",
+      "steps": 269,
+      "ticks": 269,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 104,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 167,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 230,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        }
+      ],
+      "max_tick": 0.10789342923089862,
+      "over1": 0,
+      "accepted": 4,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "confirmation/r9new_mistimed_11/main",
+      "steps": 269,
+      "ticks": 269,
+      "waits": [
+        {
+          "time": 40,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 126,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 212,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.118439638055861,
+      "over1": 0,
+      "accepted": 3,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "long_confirmation/r9new_long_3000/reactive",
+      "steps": 485,
+      "ticks": 486,
+      "waits": [],
+      "max_tick": 0.2290310156531632,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "long_confirmation/r9new_long_3000/fast60",
+      "steps": 902,
+      "ticks": 902,
+      "waits": [
+        {
+          "time": 327,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 391,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 456,
+          "steps": 15,
+          "distinct_actual_actions": 15
+        },
+        {
+          "time": 532,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 597,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 661,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 725,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.3929470884613693,
+      "over1": 0,
+      "accepted": 7,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "long_confirmation/r9new_long_3000/main",
+      "steps": 909,
+      "ticks": 909,
+      "waits": [
+        {
+          "time": 327,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 413,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 499,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 585,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 671,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.38097389321774244,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "long_confirmation/r9new_long_5000/reactive",
+      "steps": 1313,
+      "ticks": 1313,
+      "waits": [],
+      "max_tick": 0.577540076803416,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "long_confirmation/r9new_long_3000/delayed15",
+      "steps": 870,
+      "ticks": 870,
+      "waits": [
+        {
+          "time": 327,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 346,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 365,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 384,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 404,
+          "steps": 28,
+          "distinct_actual_actions": 28
+        },
+        {
+          "time": 448,
+          "steps": 28,
+          "distinct_actual_actions": 28
+        },
+        {
+          "time": 492,
+          "steps": 26,
+          "distinct_actual_actions": 26
+        },
+        {
+          "time": 534,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 554,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 573,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 592,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 611,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 630,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 649,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 668,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 687,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 706,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 725,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.36794265918433666,
+      "over1": 0,
+      "accepted": 18,
+      "accepted_nonnominal": 3
+    },
+    {
+      "source": "long_confirmation/r9new_long_3000/ideal15",
+      "steps": 837,
+      "ticks": 837,
+      "waits": [],
+      "max_tick": 0.3430161299183965,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "long_confirmation/r9new_long_5000/fast60",
+      "steps": 1420,
+      "ticks": 1420,
+      "waits": [
+        {
+          "time": 603,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 668,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 733,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 798,
+          "steps": 17,
+          "distinct_actual_actions": 17
+        },
+        {
+          "time": 876,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 940,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 1004,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 1068,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.6446128427051008,
+      "over1": 0,
+      "accepted": 8,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "long_confirmation/r9new_long_5000/delayed15",
+      "steps": 1390,
+      "ticks": 1390,
+      "waits": [
+        {
+          "time": 603,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 623,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 642,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 662,
+          "steps": 6,
+          "distinct_actual_actions": 6
+        },
+        {
+          "time": 684,
+          "steps": 8,
+          "distinct_actual_actions": 8
+        },
+        {
+          "time": 708,
+          "steps": 41,
+          "distinct_actual_actions": 41
+        },
+        {
+          "time": 765,
+          "steps": 46,
+          "distinct_actual_actions": 46
+        },
+        {
+          "time": 827,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 847,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 867,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 888,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 909,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 929,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 949,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 968,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 987,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 1007,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 1027,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 1047,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        }
+      ],
+      "max_tick": 0.6241048122756183,
+      "over1": 0,
+      "accepted": 19,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "long_confirmation/r9new_long_5000/main",
+      "steps": 1345,
+      "ticks": 1345,
+      "waits": [
+        {
+          "time": 603,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 689,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 775,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 861,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 947,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.5917488397099078,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 2
+    },
+    {
+      "source": "long_confirmation/r9new_long_5000/ideal15",
+      "steps": 1315,
+      "ticks": 1315,
+      "waits": [],
+      "max_tick": 0.5637653339654207,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "sensitivity/r9_active_turn_mixed7/reactive",
+      "steps": 326,
+      "ticks": 327,
+      "waits": [],
+      "max_tick": 0.16748256608843803,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "sensitivity/confirm_mixed_3/slot30",
+      "steps": 184,
+      "ticks": 185,
+      "waits": [
+        {
+          "time": 10,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        },
+        {
+          "time": 101,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        }
+      ],
+      "max_tick": 0.10665786825120449,
+      "over1": 0,
+      "accepted": 2,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "sensitivity/r9_active_turn_mixed7/main",
+      "steps": 530,
+      "ticks": 530,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 150,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 236,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 322,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 408,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        },
+        {
+          "time": 494,
+          "steps": 25,
+          "distinct_actual_actions": 25
+        }
+      ],
+      "max_tick": 0.2255614143796265,
+      "over1": 0,
+      "accepted": 6,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "sensitivity/confirm_mixed_7/slot30",
+      "steps": 463,
+      "ticks": 463,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        },
+        {
+          "time": 155,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        },
+        {
+          "time": 246,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        },
+        {
+          "time": 337,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        },
+        {
+          "time": 428,
+          "steps": 30,
+          "distinct_actual_actions": 30
+        }
+      ],
+      "max_tick": 0.18547937786206603,
+      "over1": 0,
+      "accepted": 5,
+      "accepted_nonnominal": 1
+    },
+    {
+      "source": "sensitivity/r9_active_turn_mixed7/delayed15",
+      "steps": 607,
+      "ticks": 607,
+      "waits": [
+        {
+          "time": 64,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 83,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 101,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 120,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 139,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 158,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 178,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 198,
+          "steps": 20,
+          "distinct_actual_actions": 20
+        },
+        {
+          "time": 234,
+          "steps": 20,
+          "distinct_actual_actions": 20
+        },
+        {
+          "time": 270,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 290,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 310,
+          "steps": 26,
+          "distinct_actual_actions": 26
+        },
+        {
+          "time": 352,
+          "steps": 21,
+          "distinct_actual_actions": 21
+        },
+        {
+          "time": 389,
+          "steps": 28,
+          "distinct_actual_actions": 28
+        },
+        {
+          "time": 433,
+          "steps": 6,
+          "distinct_actual_actions": 6
+        },
+        {
+          "time": 455,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 476,
+          "steps": 5,
+          "distinct_actual_actions": 5
+        },
+        {
+          "time": 497,
+          "steps": 4,
+          "distinct_actual_actions": 4
+        },
+        {
+          "time": 517,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 536,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 555,
+          "steps": 3,
+          "distinct_actual_actions": 3
+        },
+        {
+          "time": 574,
+          "steps": 2,
+          "distinct_actual_actions": 2
+        },
+        {
+          "time": 592,
+          "steps": 1,
+          "distinct_actual_actions": 1
+        }
+      ],
+      "max_tick": 0.25084231700748205,
+      "over1": 0,
+      "accepted": 23,
+      "accepted_nonnominal": 5
+    },
+    {
+      "source": "static_regression/static_1/reactive",
+      "steps": 298,
+      "ticks": 298,
+      "waits": [],
+      "max_tick": 0.1202709716744721,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "static_regression/static_1/main",
+      "steps": 298,
+      "ticks": 298,
+      "waits": [],
+      "max_tick": 0.12302794167771935,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "static_regression/static_0/reactive",
+      "steps": 340,
+      "ticks": 340,
+      "waits": [],
+      "max_tick": 0.1421913718804717,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    },
+    {
+      "source": "static_regression/static_0/main",
+      "steps": 340,
+      "ticks": 340,
+      "waits": [],
+      "max_tick": 0.15221775090321898,
+      "over1": 0,
+      "accepted": 0,
+      "accepted_nonnominal": 0
+    }
+  ]
+}

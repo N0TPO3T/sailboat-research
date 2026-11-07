@@ -1,0 +1,14 @@
+{
+  "claim_supported": "no",
+  "confidence": "high",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "integrity_status": "unavailable",
+  "what_results_support": "Candidate simplification and exact bounded negative comparisons, including63/72 and3wins3losses againstR1.",
+  "what_results_dont_support": "Safety equivalence,3/5km efficiency improvement, overall speedup, universal mechanism claims.",
+  "missing_evidence": "Prespecified safety noninferiority, stable fresh-instance benefit, full counterfactual mechanism evidence; no extra evidence needed to report negative result.",
+  "suggested_claim_revision": "Report candidate simplification,3wins3losses,and adverse3/5km conditional time; do not claim undefined trajectory similarity.",
+  "next_experiments_needed": "None this round. Future authorized isolated own-clearance trigger test only.",
+  "routing_action": "close negative study; no new experiments",
+  "raw_review_sha256": "5c05aaa3c3ed7df8a7e805b8156479aafd4c0c6ef29244bd2c58e3b342511382"
+}

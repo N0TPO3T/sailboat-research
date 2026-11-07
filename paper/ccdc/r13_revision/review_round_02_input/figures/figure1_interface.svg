@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="244.8pt" height="205.2pt" viewBox="0 0 244.8 205.2" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-05T20:44:07.389669</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 205.2 
+L 244.8 205.2 
+L 244.8 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 25.253 45.165784 
+L 217.5018 45.165784 
+Q 219.13796 45.165784 219.13796 43.621303 
+L 219.13796 20.454088 
+Q 219.13796 18.909607 217.5018 18.909607 
+L 25.253 18.909607 
+Q 23.61684 18.909607 23.61684 20.454088 
+L 23.61684 43.621303 
+Q 23.61684 45.165784 25.253 45.165784 
+z
+" clip-path="url(#p1e11714d01)" style="fill: #f4f7fb; stroke: #34495e; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 25.253 97.292016 
+L 111.1514 97.292016 
+Q 112.78756 97.292016 112.78756 95.747535 
+L 112.78756 63.892615 
+Q 112.78756 62.348134 111.1514 62.348134 
+L 25.253 62.348134 
+Q 23.61684 62.348134 23.61684 63.892615 
+L 23.61684 95.747535 
+Q 23.61684 97.292016 25.253 97.292016 
+z
+" clip-path="url(#p1e11714d01)" style="fill: #f4f7fb; stroke: #34495e; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 127.513 97.292016 
+L 217.5018 97.292016 
+Q 219.13796 97.292016 219.13796 95.747535 
+L 219.13796 63.892615 
+Q 219.13796 62.348134 217.5018 62.348134 
+L 127.513 62.348134 
+Q 125.87684 62.348134 125.87684 63.892615 
+L 125.87684 95.747535 
+Q 125.87684 97.292016 127.513 97.292016 
+z
+" clip-path="url(#p1e11714d01)" style="fill: #f4f7fb; stroke: #34495e; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 25.253 146.522347 
+L 217.5018 146.522347 
+Q 219.13796 146.522347 219.13796 144.977866 
+L 219.13796 117.949449 
+Q 219.13796 116.404968 217.5018 116.404968 
+L 25.253 116.404968 
+Q 23.61684 116.404968 23.61684 117.949449 
+L 23.61684 144.977866 
+Q 23.61684 146.522347 25.253 146.522347 
+z
+" clip-path="url(#p1e11714d01)" style="fill: #f4f7fb; stroke: #34495e; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 25.253 195.752677 
+L 217.5018 195.752677 
+Q 219.13796 195.752677 219.13796 194.208196 
+L 219.13796 168.14508 
+Q 219.13796 166.600599 217.5018 166.600599 
+L 25.253 166.600599 
+Q 23.61684 166.600599 23.61684 168.14508 
+L 23.61684 194.208196 
+Q 23.61684 195.752677 25.253 195.752677 
+z
+" clip-path="url(#p1e11714d01)" style="fill: #eef7ee; stroke: #34495e; stroke-width: 0.65; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="121.3774" y="34.116133" transform="rotate(-0 121.3774 34.116133)">Actual state, issued commands, vessel history</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(37.805325 72.296638)">Causal wind fit</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(34.670325 81.8982)">Restore memory</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(40.8972 91.500388)">and setpoints</text>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(145.7749 72.296325)">Nominal first</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(130.6174 81.898513)">Then each reference</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(128.921775 91.5007)">with physical rollouts</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 69.2248 45.625668 
+Q 69.2248 53.757938 69.2248 60.995781 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 70.8248 57.795781 
+L 69.2248 60.995781 
+L 67.6248 57.795781 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 173.53 45.625668 
+Q 173.53 53.757938 173.53 60.995781 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 175.13 57.795781 
+L 173.53 60.995781 
+L 171.93 57.795781 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 113.15266 80.302726 
+Q 119.331884 80.302726 124.61668 80.302726 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 121.41668 78.702726 
+L 124.61668 80.302726 
+L 121.41668 81.902726 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(27.666775 128.741001)">Synchronous clearance and terminal progress</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(32.413025 138.343189)">Select reference and hold / restore protocol</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 173.53 97.744949 
+Q 173.53 106.848319 173.53 115.057262 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 175.13 111.857262 
+L 173.53 115.057262 
+L 171.93 111.857262 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(63.2874 173.652888)">Next-step reference delivery</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(70.01615 183.255076)">Actual policy and physics</text>
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(84.945525 192.857263)">New observations</text>
+   </g>
+   <g id="patch_11">
+    <path d="M 122.4 146.977282 
+Q 122.4 156.559897 122.4 165.248084 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 124 162.048084 
+L 122.4 165.248084 
+L 120.8 162.048084 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 7px; font-family: 'Times New Roman', 'DejaVu Serif', serif; text-anchor: start" x="124.03616" y="156.561473" transform="rotate(-0 124.03616 156.561473)">reference</text>
+   </g>
+   <g id="patch_12">
+    <path d="M 21.203894 181.659289 
+L 15.2078 181.659289 
+Q 23.2078 181.659289 23.2078 173.659289 
+L 23.2078 34.933185 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+    <path d="M 21.6078 38.133185 
+L 23.2078 34.933185 
+L 24.8078 38.133185 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7px; font-family: 'Times New Roman', 'DejaVu Serif', serif" transform="translate(18.458359 135.444892) rotate(-90)">actual feedback</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'Times New Roman', 'DejaVu Serif', serif; text-anchor: middle" x="122.4" y="12.731684" transform="rotate(-0 122.4 12.731684)">Internal simulation is separate from actual execution</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1e11714d01">
+   <rect x="20.14" y="6.93988" width="204.52" height="193.06012"/>
+  </clipPath>
+ </defs>
+</svg>

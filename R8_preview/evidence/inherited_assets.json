@@ -1,0 +1,14 @@
+[
+  {
+    "path": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+    "sha256": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+    "bytes": 3475215,
+    "trained_in_R8": false
+  },
+  {
+    "path": "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+    "sha256": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6",
+    "bytes": 1898,
+    "trained_in_R8": false
+  }
+]

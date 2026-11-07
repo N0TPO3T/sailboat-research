@@ -1,0 +1,25 @@
+{
+  "scientific_commit": "b29e45945706b1006f98ea7079c88f38d9f48772",
+  "delivery_commit": "db9336d",
+  "files": {
+    "R7_DYNAMIC_preview.zip": {
+      "bytes": 2755182,
+      "sha256": "8705e97020c98bd9d63ae7b2921ae3fa4d2dcdcc58f84282907ed2c38fdb8873"
+    },
+    "R7_source.zip": {
+      "bytes": 464302,
+      "sha256": "b2afed44c83458ec78d4f194248f26df65023639f4c921a882e9f9fc17fa391a"
+    },
+    "R7_raw_results.tar.gz": {
+      "bytes": 92978720,
+      "sha256": "cbb73564968fa375f1165b7935d856614207b805eb5d733ee11bdc9ede81d687"
+    }
+  },
+  "local_verification": {
+    "verified_utc": "2026-10-05T05:00:34.438030+00:00",
+    "archives_all_sha256_match": true,
+    "raw_extracted": true,
+    "local_working_tree_preserved": true,
+    "updated_handoff": "R7_preview/docs/HANDOFF.md"
+  }
+}

@@ -4,9 +4,9 @@
 
 ## 固定目标统计不能直接接世界坐标远目标
 **Tags:** normalization, waypoint, frame, recurrent-memory
-**Conclusion** 已核查14D和18D资产的目标坐标统计均固定于[500,0]且方差为0；直接输入世界系长距离目标会破坏输入语义。在原冻结接口中，刚性局部坐标变更需一致重算进度及因果历史，不能只改终点就宣称等价。R6允许把有限窗口、重置或持续状态作为显式算法变量检验；该历史经验不构成禁止。
+**Conclusion** 已核查14D和18D资产的目标坐标统计均固定于[500,0]且方差为0；直接输入世界系长距离目标会破坏输入语义。刚性局部坐标变更还需一致重算进度及因果历史，不能只改终点或清空记忆。
 **Evidence** docs/migration_identity.json、docs/obstacle_candidate_identity.json、src/sailboat_routing/frames.py、tests/test_frames.py；具体迁移契约见docs/FRAME_PROTOCOL.md。
-**Implication** 使用旧资产时验证统计与接口语义；R6可配套改变或训练归一化/记忆协议，不宣称新协议与旧协议等价。
+**Implication** 冻结统计并验证目标/记忆适配；换新资产时重新检查，不把该结论泛化到所有模型。
 
 ## deterministic动作不等于关闭dropout
 **Tags:** obstacle-candidate, dropout, inference, reproducibility
@@ -61,26 +61,23 @@ Conclusion: 原文的绕行侧承诺不等于世界坐标目标保持。R5的目
 Evidence: docs/R5_METHOD_NOTE.md；runs/r5_literature_20261004T080700Z/literature/R5_WFRS_SOURCE_READOUT.md、final/mechanism_summary.json、frozen_exit_ablation_cases.json；src/sailboat_routing/r5_planner.py。
 Implication: 文献接入时先明确参考量、实际生效时序、公式分支和管理器所有状态更新点，再做等接口比较；整体收益不自动识别方向、长度或保持的独立贡献。
 
+## R6 active scope override
+R6 current authority: low-level models/checkpoints, inputs, normalization, causal memory and goal timing may change. V0-R5 frozen-interface rules are historical, not active restrictions. Preserve original assets/results, source permissions, causal information and evaluation. Recovery and shared budget: CURRENT_PLAN.md and runs/r6_reset_20261004T115808Z/plan.json. R6 completed without GPU use; results in docs/R6_RESEARCH_REPORT.md.
+
 ## 空间风场配对与执行差异核验
 **Tags:** spatial-wind, pairing, actuator-quantization, causal-interface
 **Conclusion:** 配对方法共享时空风场参数，分歧航迹同一时刻的局部风可以不同；按真实位置/时刻核对日志。网络命令变化不等于执行变化：R6实例中命令差异被共同1度增量量化完全消除，物理轨迹不变。
 **Evidence:** runs/r6_reset_20261004T115808Z/analysis_check_correction.md、final/freeze_audit.json、quantized_action_example.json；wind_fields.py与继承step量化代码。
 **Implication:** 分别核对环境参数、当地采样、命令、有效执行增量和真实航迹；离线真值核验不得进入部署输入。该具体量化解释仅对已核对实例成立。
 
-## 动态终点无路不等于物理不可达
-**Tags:** dynamic-vessel, endpoint, causal-history, NoRouteError
-**Conclusion:** 静态路线接口把当前终点占用判成无路；动态任务中这可能只是暂时状态。R7临时接力恢复两个新实例，但名义到达外推误差也造成740秒代价。
-**Evidence:** docs/R7_RESEARCH_REPORT.md；runs/r7_dynamic_20261005T033700Z/no_route_diagnosis.json、goal_confirmation/final_overtaking_1__current_goal/trace.json。
-**Implication:** 分开诊断终点可用性、即时本船安全和长期可达性；保留原目标和实际历史。激活后长期保持可能放大错误预测，不因无碰撞就宣称规则合规。
+## B3：先排除跟踪回路和积分步长造成的策略表面收益
+Tags: control, baseline, numerical-integration, waypoint, B3
+Conclusion: T早期额外减速的采样增量在共同反馈/漂角处理修正后消失；v2半步改变18–31m有效格，最终有限难例半步为0m差。R的瞬时能力余量调速新增失败，不能由静态可行域推断闭环稳定。
+Evidence: ../sailboat-track-b/discovery_b3/candidates/turn_handover/RESULTS.md、verification.json；../sailboat-track-b/discovery_b3/candidates/derated_return/RESULTS.md、verification.json。
+Implication: 在把减速/参考调节增益归因于新机制前，先给全部方法同样正确的限幅分配、实际抗饱和和合理跟踪标定，再查步长；已有负结果不等于所有成熟参考调节无效。
 
-## 预测应包含参考的后续管理协议
-**Tags:** dynamic-prediction, causal-history, feedback, latency
-**Conclusion:** 相同位置参考在固定保持与普通反馈下可诱导不同航迹；预测必须复制已算动作、交付队列、历史重编码与恢复时序。匹配某个候选的低误差不能推广全部候选或实时性。
-**Evidence:** R8_METHOD_NOTE；runs/r8_closedloop_20261005T062543Z/branch_validation.json（115秒四分支前缀匹配，普通续跑复现；同参考不同保持的余量不同）、protocol_prediction_diagnostics.json（普通15s最大误差30.506m）与final_validation.json。
-**Implication:** 先验证无干预续跑及同协议执行段，再解释风估计/预测误差；保持周期也改变估计更新历史。计算冻结时钟不能当硬实时验证。
-
-## 数值等价不保证有计算时钟时的闭环等价
-**Tags:** timing, causality, computation, prediction, deployment
-**Conclusion:** 六个同状态候选和四个理想交付整回合可逐值等价，但优化后的实测交付时刻会改变真实闭环分支；不能从加速推导安全收益。预测必须包含等待期间实际执行的参考和应用后的保持钟；匹配协议仍不能保证预测准确。
-**Evidence:** runs/r9_timing_20261005T085308Z/profile_summary.json、full_replay_equivalence.json、mechanism_case.json、sensitivity/confirm_mixed_3__slot30/trace.json；docs/R9_METHOD_NOTE.md。
-**Implication:** 分开验证同输入数值等价与带时钟的实际闭环；记录ready/apply与真实等待动作。明确区分调度效应、候选选择效应和模型误差，不用理想交付或一个低误差分支代替时延/安全验证。
+## 详细预测优势应先经执行协议匹配的简单对照检验
+Tags: calibration, strong-baseline, prediction, A-route, stop-rule
+Conclusion: 原低阶模型按短时不变参考校准；保持结构/网格/guard不变，仅用开发数据匹配60秒保持/恢复协议校准，就消除了本项目详细模型在旧任务上的额外安全完成。冻结的新配对任务也未保留额外安全完成；不能再沿用旧单例优势论证详细模型必要。
+Evidence: runs/a_fair_20261105/EXPERIMENT_PLAN.md、calibration.json、RESULTS.json、AUDIT.json。
+Implication: 比较模型复杂度前匹配校准覆盖与实际执行；本路线停止，不围绕旧/新测试结果重调直到获胜。新任务仍有局部航时收益，保留并限定，不推导普遍等价或所有详细预测无效。

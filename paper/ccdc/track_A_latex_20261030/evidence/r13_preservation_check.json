@@ -1,0 +1,21 @@
+{
+  "r12_frozen_sources_unchanged": {
+    "scripts/run_r12.py": true,
+    "src/sailboat_routing/r12_model.py": true,
+    "src/sailboat_routing/r8_model.py": true,
+    "src/sailboat_routing/r8_planner.py": true,
+    "scripts/run_r8.py": true
+  },
+  "old_assets_unchanged": {
+    "src/sailboat_routing/r8_model.py": true,
+    "src/sailboat_routing/r8_planner.py": true,
+    "scripts/run_r8.py": true,
+    "scripts/run_r10.py": true,
+    "paper/ccdc/r11_draft/manuscript.md": true
+  },
+  "new_methods": false,
+  "new_independent_tasks": 0,
+  "numerical_replays": 3,
+  "gpu_hours": 0,
+  "max_concurrent_experiment_workers": 1
+}

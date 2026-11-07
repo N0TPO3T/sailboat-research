@@ -1,0 +1,135 @@
+{
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r9_timing_20261005T085308Z",
+  "jobs": [
+    {
+      "scene": {
+        "id": "static_0",
+        "seed": 2026100700,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_0",
+        "seed": 2026100700,
+        "profile": "stable",
+        "base_direction_degrees": 50,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "main",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "optimized": true,
+        "period": 60,
+        "horizon": 86,
+        "guard": 30,
+        "slot": 25,
+        "initial_wait": 25
+      }
+    },
+    {
+      "scene": {
+        "id": "static_1",
+        "seed": 2026100701,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "reactive",
+      "config": {
+        "availability": true
+      }
+    },
+    {
+      "scene": {
+        "id": "static_1",
+        "seed": 2026100701,
+        "profile": "slow",
+        "base_direction_degrees": 90,
+        "goal": [
+          1000,
+          0
+        ],
+        "distance_m": 1000,
+        "family": "static",
+        "vessels": [],
+        "static": [
+          {
+            "center_xy": [
+              500,
+              -50
+            ],
+            "entity_radius": 45
+          }
+        ],
+        "geometry_protocol": "R7_85m_corrected"
+      },
+      "variant": "main",
+      "config": {
+        "sampled": true,
+        "timed": true,
+        "optimized": true,
+        "period": 60,
+        "horizon": 86,
+        "guard": 30,
+        "slot": 25,
+        "initial_wait": 25
+      }
+    }
+  ]
+}

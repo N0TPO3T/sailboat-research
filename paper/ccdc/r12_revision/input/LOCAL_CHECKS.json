@@ -1,0 +1,21 @@
+{
+  "scope": "Text and elementary algebra checks only; no sailing experiment, model training, figure rendering, Word/PDF layout or server source validation was performed.",
+  "source_manuscript_sha256": "14842717f5fd21260d4e55dbb54b597d7bd2c79ae7789db7afdd3ac183134ef1",
+  "revised_manuscript_sha256": "24816eba8f5b5fd01cfd3bf2c6e79e533d37b77f5749072f1759377dd488ccdf",
+  "existing_experimental_section": "Preserved exactly except 'private synthetic wind field' -> 'synthetic wind field'.",
+  "numbered_equations": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10"
+  ],
+  "math_checks": "Random numerical sanity checks for segment minimization, common-domain margin error inequality, feasible-alternative constant cancellation, and a fallback non-equivalence counterexample passed. The written arguments, not numerical checks, supply the derivations.",
+  "figure_assets": "Three original figure references retained; referenced PNG assets not present in this local package.",
+  "layout": "Markdown content revision only, not a new 6-page conference-layout document."
+}

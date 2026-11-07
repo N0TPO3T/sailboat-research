@@ -1,0 +1,26 @@
+[
+  {
+    "wall": 2.2,
+    "slot": null,
+    "status": "delivered",
+    "ready": 13
+  },
+  {
+    "wall": 2.2,
+    "slot": 25,
+    "status": "delivered",
+    "ready": 35
+  },
+  {
+    "wall": 26.2,
+    "slot": 25,
+    "status": "deadline_drop",
+    "ready": 37
+  },
+  {
+    "wall": 60.2,
+    "slot": null,
+    "status": "age_drop",
+    "ready": 71
+  }
+]

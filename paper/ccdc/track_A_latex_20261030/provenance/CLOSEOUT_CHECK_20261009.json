@@ -1,0 +1,30 @@
+{
+  "pdf_sha256": "2c93256041b157b0de6d9728c6a77a2e3dfdb8354a3b0a4052b44d7e0922ddc4",
+  "pdf_pages": 8,
+  "all_fonts_embedded": true,
+  "fonts": {
+    "/BCDEEE+TimesNewRomanPSMT": true,
+    "/BCDFEE+TimesNewRomanPS-BoldMT": true,
+    "/BCDGEE+TimesNewRomanPS-BoldMT": true,
+    "/BCDHEE+TimesNewRomanPS-BoldItalicMT": true,
+    "/BCDIEE+TimesNewRomanPS-ItalicMT": true,
+    "/BCDJEE+TimesNewRomanPSMT": true,
+    "/BCDKEE+CambriaMath": true,
+    "/BCDLEE+CambriaMath": true,
+    "/BCDMEE+SimSun": true
+  },
+  "equations_unchanged": 6,
+  "numerical_tables_unchanged": 3,
+  "bibliography_entries_unchanged": 10,
+  "authors_affiliations_unchanged": true,
+  "ordinary_markdown_paragraphs_present_in_docx": true,
+  "template_styles_unchanged": true,
+  "references_keep_together": 10,
+  "evidence_and_other_figure_files_unchanged": 62,
+  "source_edition_unchanged": true,
+  "visual_inspection": "All 8 final Word-export pages inspected at 1500-pixel height; figures, equations, tables and references readable. No reference entry split across columns/pages.",
+  "new_navigation_experiments": 0,
+  "trajectory_recomputation_this_round": false,
+  "native_tex_compilation": false,
+  "server_sync": false
+}

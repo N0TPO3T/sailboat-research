@@ -1,0 +1,3 @@
+# Current inherited-asset status
+
+User confirmation dated 2026-10-07 authorizes research use and provision of source, weights, normalizer and reproduction files to editors/reviewers. Historical recovery archives remain byte-identical; older README pending-permission language is superseded by this note and Supplement S9/S12. No public release or new open-source license is claimed. Exact 18D training-run linkage is unknown; the related Yang et al. AOR paper describes a distinct 14D formulation. Author order, affiliations and funding of the present manuscript remain for human authors to complete.

@@ -1,0 +1,7 @@
+{
+  "src/sailboat_routing/r8_model.py": "0fa89f4e3ac9fbee514c709baf59936e0bda3d3867105d18c2005231d41cb175",
+  "src/sailboat_routing/r8_planner.py": "ec6313eb3d5329198b0af63867705385b9334a272a13dd174a40235ef4a4dbc8",
+  "scripts/run_r8.py": "1f63512f268892d9b76bbbe5bcf109d7b3301dd52665d02f13a2013d07626424",
+  "scripts/run_r10.py": "794d4589ae7e3ee947aa8601a8971b79014a0f15067e4654ca8d8a3ebc189a95",
+  "paper/ccdc/r11_draft/manuscript.md": "9459f4547b6558525a93a779d0817d6aa73f035b0e877d0f0cb614e2df8cd93e"
+}

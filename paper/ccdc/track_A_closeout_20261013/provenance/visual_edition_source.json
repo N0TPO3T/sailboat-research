@@ -1,0 +1,25 @@
+{
+  "content_source": "track_A_closeout_20261009",
+  "source_sha256": {
+    "manuscript.md": "ea54b9fbf892a3d309503f808b69193b059b791e127479d558f68e173db14f2f",
+    "manuscript.docx": "f262af4d8299816f8b8ea45d6a130d5c256e08a5fe3339c4d313627ef7169141",
+    "manuscript.pdf": "2c93256041b157b0de6d9728c6a77a2e3dfdb8354a3b0a4052b44d7e0922ddc4",
+    "SUPPLEMENT.md": "dfcab9ee52b4d9fb465faed3cd32f3d1165cacc33e4d5f1e0dd62a74cd468fd6"
+  },
+  "server_read_only_check_date": "2026-10-13",
+  "server_editing_directories_present": false,
+  "server_listing": [
+    "r11_draft",
+    "r12_revision",
+    "r13_revision",
+    "track_A_submit"
+  ],
+  "server_synced": false,
+  "new_local_directory": "track_A_closeout_20261013",
+  "source_core_files_match_delivered_Oct9_zip": {
+    "manuscript.md": true,
+    "manuscript.docx": true,
+    "manuscript.pdf": true,
+    "SUPPLEMENT.md": true
+  }
+}

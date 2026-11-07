@@ -1,0 +1,17 @@
+{
+  "reactive": {
+    "availability": true
+  },
+  "sampled": {
+    "sampled": true,
+    "horizon": 60,
+    "period": 15,
+    "guard": 30
+  },
+  "hold60": {
+    "sampled": true,
+    "horizon": 60,
+    "period": 60,
+    "guard": 30
+  }
+}

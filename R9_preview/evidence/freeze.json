@@ -1,0 +1,14 @@
+{
+  "frozen_at": 1791192078.8970017,
+  "no_test_outcomes_seen": true,
+  "files": {
+    "src/sailboat_routing/r9_planner.py": "adeba59365c43f10059472cd3af30037653961dc6c8b3be5368efa8e2fcd02e8",
+    "src/sailboat_routing/r9_model.py": "f9f238311bedaa2a126a1dd85df266c0a7a3e384ef08bdeea85d538c9756be53",
+    "src/sailboat_routing/r9_replay.py": "95d8785f9a6840995fedd54753416463cc486fd9fa3f71505332c46e2b353511",
+    "src/sailboat_routing/r9_timing.py": "3f568c9841863c74941c2c68977092f9303077cd06546171a7c22a39abddd379",
+    "scripts/run_r9.py": "a491737b76d09f350909a791edc607c20a509962ea6f12dd3e98f97ae40ea4e6",
+    "runs/r9_timing_20261005T085308Z/confirmation.json": "49897fa5eb032830dc9a496504adf105a265ce68dc85f5e3de7ca9872f1e99a6",
+    "runs/r9_timing_20261005T085308Z/long_confirmation.json": "0c9a9f8a0ab12af7990cd295b2121f8f41edf26b26cc9f7de9b93d405eb1c5ec",
+    "runs/r9_timing_20261005T085308Z/freeze_design.md": "c98250cde763de2f7213b1f0d305c9e507d486c863c3e08e5dc10f9b0a69e90e"
+  }
+}

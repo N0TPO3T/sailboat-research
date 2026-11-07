@@ -1,0 +1,139 @@
+{
+  "summary": [
+    {
+      "method": "几何导航",
+      "variant": "reactive",
+      "n": 24,
+      "safe": 19,
+      "arrived": 19,
+      "min_dynamic_margin_m": -1.412340768947999,
+      "cpu_total_s": 270.67713405100005,
+      "activated_tasks": 0
+    },
+    {
+      "method": "简化预测",
+      "variant": "simple",
+      "n": 24,
+      "safe": 23,
+      "arrived": 24,
+      "min_dynamic_margin_m": -1.11532173504051,
+      "cpu_total_s": 378.44452266599995,
+      "activated_tasks": 11
+    },
+    {
+      "method": "详细预测",
+      "variant": "sampled",
+      "n": 24,
+      "safe": 24,
+      "arrived": 24,
+      "min_dynamic_margin_m": 30.428345354103698,
+      "cpu_total_s": 2133.2320562050004,
+      "activated_tasks": 11
+    }
+  ],
+  "paired_time": {
+    "n": 23,
+    "faster": 5,
+    "equal": 13,
+    "slower": 5,
+    "min_s": -136,
+    "max_s": 308,
+    "mean_s": 7,
+    "median_s": 0
+  },
+  "family_wind": [
+    [
+      "组合条件",
+      "stable",
+      4,
+      "2/4",
+      "4/4",
+      "4/4"
+    ],
+    [
+      "组合条件",
+      "fast",
+      4,
+      "1/4",
+      "3/4",
+      "4/4"
+    ],
+    [
+      "交叉会遇",
+      "stable",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "交叉会遇",
+      "fast",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "追越",
+      "stable",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "追越",
+      "fast",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "终点附近受阻",
+      "stable",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "终点附近受阻",
+      "fast",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "非冲突",
+      "stable",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ],
+    [
+      "非冲突",
+      "fast",
+      2,
+      "2/2",
+      "2/2",
+      "2/2"
+    ]
+  ],
+  "raw_record_check": {
+    "performed": true,
+    "rows_checked": 72,
+    "checks": "CSV vs raw trace.row selected numeric/boolean fields; initial states same within scenario; not independent reintegration",
+    "frozen_source_hashes": {
+      "scripts/run_r12.py": true,
+      "src/sailboat_routing/r12_model.py": true,
+      "src/sailboat_routing/r8_model.py": true,
+      "src/sailboat_routing/r8_planner.py": true,
+      "scripts/run_r8.py": true
+    },
+    "archive_sha256": "d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640"
+  }
+}

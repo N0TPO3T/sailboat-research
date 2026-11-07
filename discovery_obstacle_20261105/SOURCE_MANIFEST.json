@@ -1,0 +1,103 @@
+{
+  "source_manifest": {
+    "journal_14d": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\main.pdf",
+      "exists": true,
+      "sha256": "9bc5165d59141e64c32cea5f4fbc2f4464c6fe0f88b40334de85703b92d356b9"
+    },
+    "thesis_131_pages": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-research\\大论文-Final.pdf",
+      "exists": true,
+      "sha256": "d04dc4813a01d2dff1f643c056f6f689c4ead38d1c9886a60b6e42185abe4b29"
+    },
+    "thesis_101_pages": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-research\\师兄大论文.pdf",
+      "exists": true,
+      "sha256": "e73ea4c85a1f5bcd1b29d54b5e1ef69c2f5161f3166f652371e6eddf2b35b0e0"
+    },
+    "inherited_protocol": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\docs\\OBSTACLE_PROTOCOL.md",
+      "exists": true,
+      "sha256": "8ab9786aded7d82770452e88ed67256ccd7d301d5624d0eb98675f1afb45dbac"
+    },
+    "checkpoint_identity": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\docs\\obstacle_candidate_identity.json",
+      "exists": true,
+      "sha256": "40190791dea1a3a97b600aa0f82fd6ee4d6da5ce28fbb884cc252e70d671c35d"
+    },
+    "a_results": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\a_fair_20261105\\RESULTS_ZH.md",
+      "exists": true,
+      "sha256": "8c0b8f4d933627a183d789f70f31e3114d7c30ade9d7a7e0330d3d4ea24dc546"
+    },
+    "episodes": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\a_fair_20261105\\episodes.csv",
+      "exists": true,
+      "sha256": "0155a911405495da0ec9d900b93797fc1399af2bf4ed2fffda73949cdb86b51f"
+    },
+    "original_environment": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\a_fair_20261105\\frozen\\third_party\\obstacle_candidate\\sailboat_s14_obst_V3.py",
+      "exists": true,
+      "sha256": "de684a457137798673be7158133ab89e047c4e839a506086f515957d08fc91d7"
+    },
+    "observation_adapter": {
+      "path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\a_fair_20261105\\frozen\\src\\sailboat_routing\\r6_controller.py",
+      "exists": true,
+      "sha256": "5d15a6975b990d19fa8bb5255930b132904dc84409cbb48bd01d6f23bc5b034d"
+    }
+  },
+  "existing_new_batch_summary": {
+    "reactive": {
+      "n": 16,
+      "successes": 12,
+      "max_planning_seconds": 0.012997692916542292,
+      "max_reencoding_seconds": 1.38499911618419,
+      "episodes_reencoding_over_one_second": 6,
+      "failures": [
+        {
+          "scene_id": "a26_mixed_pressure_0_wind0",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": "-0.36836117793475864",
+          "min_entity_margin": "59.63163882206524"
+        },
+        {
+          "scene_id": "a26_mixed_pressure_0_wind1",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": "-1.000625822567244",
+          "min_entity_margin": "58.999374177432756"
+        },
+        {
+          "scene_id": "a26_mixed_pressure_1_wind0",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": "-1.0573579068247483",
+          "min_entity_margin": "58.94264209317525"
+        },
+        {
+          "scene_id": "a26_mixed_pressure_3_wind1",
+          "reason": "NoRouteError",
+          "min_dynamic_margin": "-0.2731571326453093",
+          "min_entity_margin": "59.72684286735469"
+        }
+      ]
+    },
+    "sampled": {
+      "n": 16,
+      "successes": 16,
+      "max_planning_seconds": 98.25499654607847,
+      "max_reencoding_seconds": 1.9240042490419,
+      "episodes_reencoding_over_one_second": 9,
+      "failures": []
+    },
+    "simple_star": {
+      "n": 16,
+      "successes": 16,
+      "max_planning_seconds": 0.9461761920247227,
+      "max_reencoding_seconds": 2.195005090208724,
+      "episodes_reencoding_over_one_second": 8,
+      "failures": []
+    }
+  },
+  "new_navigation_runs": 0,
+  "thesis_raw_results_verified": false,
+  "scope": "read-only local evidence; no server synchronization"
+}

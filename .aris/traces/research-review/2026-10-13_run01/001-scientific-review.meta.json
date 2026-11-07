@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "verdict": "Weak Accept",
+  "model": "gpt-6-astra",
+  "acceptance_status": "provisional",
+  "timestamp": "2026-10-13T16:38:29.9462539+08:00",
+  "call_number": 1,
+  "purpose": "001-scientific-review",
+  "reviewer_family": "openai",
+  "reasoning_effort": "ultra",
+  "agent_id": "/root/scientific_review_oct13",
+  "review_independence": "same-family",
+  "response_kind": "verbatim full reviewer report"
+}

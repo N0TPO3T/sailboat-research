@@ -1,0 +1,45 @@
+{
+  "results": [
+    {
+      "scene": "r12new_mixed_pressure_1",
+      "variant": "reactive",
+      "endpoint_max_error": 0.0,
+      "original_margin": -0.162187293770657,
+      "substep_min": {
+        "time": 391.95,
+        "end_time": 392.0,
+        "margin": -0.162187293770657
+      },
+      "segments": 4312,
+      "max_step": 0.10000000000002274
+    },
+    {
+      "scene": "r12new_mixed_pressure_1",
+      "variant": "simple",
+      "endpoint_max_error": 0.0,
+      "original_margin": -1.11532173504051,
+      "substep_min": {
+        "time": 402.15,
+        "end_time": 402.25,
+        "margin": -1.1173832674724764
+      },
+      "segments": 6226,
+      "max_step": 0.10000000000002274
+    },
+    {
+      "scene": "r12new_mixed_pressure_1",
+      "variant": "sampled",
+      "endpoint_max_error": 0.0,
+      "original_margin": 42.095555249503036,
+      "substep_min": {
+        "time": 290.75,
+        "end_time": 290.85,
+        "margin": 42.094165150424715
+      },
+      "segments": 5709,
+      "max_step": 0.10000000000002274
+    }
+  ],
+  "wall_s": 42.95595836639404,
+  "kind": "same-command observation-only numerical replay; not new independent tasks"
+}

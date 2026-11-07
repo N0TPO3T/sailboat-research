@@ -1,0 +1,35 @@
+{
+  "six_equation_blocks_unchanged": true,
+  "mapping_methods_results_discussion_text_unchanged": true,
+  "changes_limited_to_inherited_attribution_and_availability_and_reference": true,
+  "figure_files": [
+    {
+      "file": "figures\\figure1_interface.png",
+      "sha256": "0a42500a6d2ddf38006f8d1f7fd754a83dbdfbf395dd239625f6cd5cfa6d9e09"
+    },
+    {
+      "file": "figures\\figure2_confirmation.png",
+      "sha256": "a33634f0f23e657eb334115624c5961471b091981ad3e0b9b02e3dff975dafc3"
+    },
+    {
+      "file": "figures\\figure3_guard.png",
+      "sha256": "6619126b55905fb78e6361b7d9f57dfa2657c3edaa36a58d47178071829c2b96"
+    },
+    {
+      "file": "figures\\figure4_prediction.png",
+      "sha256": "c53ab21bbc57ca8204d352a2db12add24360fbd830d6b210e4329c091612de65"
+    },
+    {
+      "file": "figures\\figure5_encounters.png",
+      "sha256": "bd9703dc4d4c9854c256658f5fb221b284b3eaaf252e204839c48cd0dfe6315a"
+    },
+    {
+      "file": "figures\\figure5_rescue.png",
+      "sha256": "7d10b5362071e014562050a7f0dd9b4816aa7810b960605ce75ad045b405ba98"
+    },
+    {
+      "file": "figures\\figure6_adverse.png",
+      "sha256": "61b2491a0ab702e7c2d29b84a7ce5a827ff338d0c926bfef44acb2c0c34e4513"
+    }
+  ]
+}

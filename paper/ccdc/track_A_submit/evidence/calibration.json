@@ -1,0 +1,424 @@
+{
+  "model": "finite course-rate lag, fixed causal speed, current heading-course offset for Relay; no wind access",
+  "parameters_tau_gain_ratecap": [
+    8.0,
+    0.1,
+    0.16
+  ],
+  "fit_objective": "mean over source tasks of within-task mean15s position error",
+  "train_scene_ids": [
+    "r8new_mixed_pressure_0",
+    "r8new_mixed_pressure_2",
+    "r8new_endpoint_0",
+    "r8new_endpoint_2",
+    "r8new_underway_crossing_0",
+    "r8new_underway_overtaking_0",
+    "r8new_nonconflict_0"
+  ],
+  "validation_scene_ids": [
+    "r8new_mixed_pressure_4",
+    "r8new_endpoint_5",
+    "r8new_underway_crossing_1",
+    "r8new_underway_overtaking_1",
+    "r8new_nonconflict_1"
+  ],
+  "training_windows": 136,
+  "validation_windows": 87,
+  "best_training_error_m": 2.7486733040181432,
+  "validation_error_m": 2.6944171906317544,
+  "validation_by_scene": {
+    "r8new_mixed_pressure_4": 2.2275401777908734,
+    "r8new_endpoint_5": 3.9691166273192424,
+    "r8new_underway_crossing_1": 1.848759966705105,
+    "r8new_underway_overtaking_1": 2.202107207860748,
+    "r8new_nonconflict_1": 3.2245619734828024
+  },
+  "grid": [
+    {
+      "params": [
+        1.0,
+        0.025,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.231508758272073
+    },
+    {
+      "params": [
+        1.0,
+        0.025,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.217949555121891
+    },
+    {
+      "params": [
+        1.0,
+        0.025,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.217949555121891
+    },
+    {
+      "params": [
+        1.0,
+        0.05,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.162225406606532
+    },
+    {
+      "params": [
+        1.0,
+        0.05,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.0425817670407467
+    },
+    {
+      "params": [
+        1.0,
+        0.05,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.023602618647775
+    },
+    {
+      "params": [
+        1.0,
+        0.1,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.342414533155228
+    },
+    {
+      "params": [
+        1.0,
+        0.1,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.1491118158771454
+    },
+    {
+      "params": [
+        1.0,
+        0.1,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.0606588431429205
+    },
+    {
+      "params": [
+        1.0,
+        0.2,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.700727516414816
+    },
+    {
+      "params": [
+        1.0,
+        0.2,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.6251375241998223
+    },
+    {
+      "params": [
+        1.0,
+        0.2,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.6316793091143715
+    },
+    {
+      "params": [
+        3.0,
+        0.025,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.0386759820858913
+    },
+    {
+      "params": [
+        3.0,
+        0.025,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.0268668655661903
+    },
+    {
+      "params": [
+        3.0,
+        0.025,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.0268668655661903
+    },
+    {
+      "params": [
+        3.0,
+        0.05,
+        0.04
+      ],
+      "mean_task_mean_position_error": 2.977209369409406
+    },
+    {
+      "params": [
+        3.0,
+        0.05,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.8813669641598456
+    },
+    {
+      "params": [
+        3.0,
+        0.05,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.8614100559158806
+    },
+    {
+      "params": [
+        3.0,
+        0.1,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.110781386219808
+    },
+    {
+      "params": [
+        3.0,
+        0.1,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.922451644040037
+    },
+    {
+      "params": [
+        3.0,
+        0.1,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.796632059084519
+    },
+    {
+      "params": [
+        3.0,
+        0.2,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.396375415510247
+    },
+    {
+      "params": [
+        3.0,
+        0.2,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.3491696715956043
+    },
+    {
+      "params": [
+        3.0,
+        0.2,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.265829238278704
+    },
+    {
+      "params": [
+        8.0,
+        0.025,
+        0.04
+      ],
+      "mean_task_mean_position_error": 2.9837634000671294
+    },
+    {
+      "params": [
+        8.0,
+        0.025,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.9761448448225467
+    },
+    {
+      "params": [
+        8.0,
+        0.025,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.9761448448225467
+    },
+    {
+      "params": [
+        8.0,
+        0.05,
+        0.04
+      ],
+      "mean_task_mean_position_error": 2.924361061477327
+    },
+    {
+      "params": [
+        8.0,
+        0.05,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.8661144757155723
+    },
+    {
+      "params": [
+        8.0,
+        0.05,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.851574180933546
+    },
+    {
+      "params": [
+        8.0,
+        0.1,
+        0.04
+      ],
+      "mean_task_mean_position_error": 2.979063919614084
+    },
+    {
+      "params": [
+        8.0,
+        0.1,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.846940100026938
+    },
+    {
+      "params": [
+        8.0,
+        0.1,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.7486733040181432
+    },
+    {
+      "params": [
+        8.0,
+        0.2,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.117168474776643
+    },
+    {
+      "params": [
+        8.0,
+        0.2,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.0794049195291775
+    },
+    {
+      "params": [
+        8.0,
+        0.2,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.9090909195448864
+    },
+    {
+      "params": [
+        20.0,
+        0.025,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.07709099671631
+    },
+    {
+      "params": [
+        20.0,
+        0.025,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.0732529356666385
+    },
+    {
+      "params": [
+        20.0,
+        0.025,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.0732529356666385
+    },
+    {
+      "params": [
+        20.0,
+        0.05,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.0399751732732425
+    },
+    {
+      "params": [
+        20.0,
+        0.05,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.0107761827421973
+    },
+    {
+      "params": [
+        20.0,
+        0.05,
+        0.16
+      ],
+      "mean_task_mean_position_error": 3.003120542424074
+    },
+    {
+      "params": [
+        20.0,
+        0.1,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.0397009314513896
+    },
+    {
+      "params": [
+        20.0,
+        0.1,
+        0.08
+      ],
+      "mean_task_mean_position_error": 2.970398567277051
+    },
+    {
+      "params": [
+        20.0,
+        0.1,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.916855336667592
+    },
+    {
+      "params": [
+        20.0,
+        0.2,
+        0.04
+      ],
+      "mean_task_mean_position_error": 3.0753365825798373
+    },
+    {
+      "params": [
+        20.0,
+        0.2,
+        0.08
+      ],
+      "mean_task_mean_position_error": 3.039467800642641
+    },
+    {
+      "params": [
+        20.0,
+        0.2,
+        0.16
+      ],
+      "mean_task_mean_position_error": 2.918786362234574
+    }
+  ],
+  "frozen_epoch": 1791261183.360547,
+  "note": "target-unchanged actual windows only; source tasks all previously seen; overlapping windows not independent tasks"
+}

@@ -1,0 +1,12 @@
+{
+  "matched": 42,
+  "different": [],
+  "missing_from_original_recovery": [
+    "checkpoints/normalizer.pth",
+    "checkpoints/actor.pth",
+    "checkpoints/r6_original/saclstm_s14nowind_buf1e6_seed100_q_critic7200.pth",
+    "checkpoints/r6_original/sac_s14nowind_buf1e6_seed100_actor7200.pth",
+    "checkpoints/r6_original/sac_s14nowind_buf1e6_seed100_normalizer7200.pth",
+    "checkpoints/r6_original/saclstm_s14nowind_buf1e6_seed100_training_stats_7200.pth"
+  ]
+}

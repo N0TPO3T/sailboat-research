@@ -1,0 +1,137 @@
+{
+  "first_actual_divergence": 177,
+  "main": [
+    {
+      "time": 64,
+      "position": [
+        152.9219512939453,
+        53.20304870605469
+      ],
+      "selected": "nominal",
+      "candidates": [
+        {
+          "name": "nominal",
+          "margin": 179.27500512195996,
+          "cost": 517.6828461500296,
+          "target": [
+            500.0,
+            0.0
+          ],
+          "feasible": true
+        }
+      ]
+    },
+    {
+      "time": 150,
+      "position": [
+        481.0628662109375,
+        7.829038619995117
+      ],
+      "selected": "turn90",
+      "candidates": [
+        {
+          "name": "nominal",
+          "margin": -1.0321171114682954,
+          "cost": 327.97536266703935,
+          "target": [
+            750.0,
+            -125.0
+          ],
+          "feasible": false
+        },
+        {
+          "name": "continue",
+          "margin": -33.35833838518875,
+          "cost": 299.91457283185537,
+          "target": [
+            750.0,
+            -125.0
+          ],
+          "feasible": false
+        },
+        {
+          "name": "turn-90",
+          "margin": 70.6924161778991,
+          "cost": 606.8146573991446,
+          "target": [
+            326.0704518380752,
+            -305.9819737534889
+          ],
+          "feasible": true
+        },
+        {
+          "name": "turn-45",
+          "margin": 59.47474682822468,
+          "cost": 498.7517407450722,
+          "target": [
+            593.3645738357174,
+            -323.66504347583725
+          ],
+          "feasible": true
+        },
+        {
+          "name": "turn45",
+          "margin": -2.969324058994303,
+          "cost": 289.11906711773776,
+          "target": [
+            812.5569483067699,
+            120.130746244775
+          ],
+          "feasible": false
+        },
+        {
+          "name": "turn90",
+          "margin": 43.54134985534557,
+          "cost": 410.7048409382059,
+          "target": [
+            636.0552805837999,
+            321.6400509934791
+          ],
+          "feasible": true
+        }
+      ]
+    }
+  ],
+  "ablation": [
+    {
+      "time": 64,
+      "position": [
+        152.9219512939453,
+        53.20304870605469
+      ],
+      "selected": "nominal",
+      "candidates": [
+        {
+          "name": "nominal",
+          "margin": 179.27500512195996,
+          "cost": 517.6828461500296,
+          "target": [
+            500.0,
+            0.0
+          ],
+          "feasible": true
+        }
+      ]
+    },
+    {
+      "time": 150,
+      "position": [
+        481.0628662109375,
+        7.829038619995117
+      ],
+      "selected": "nominal",
+      "candidates": [
+        {
+          "name": "nominal",
+          "margin": 88.68883888766067,
+          "cost": 461.68240544341535,
+          "target": [
+            750.0,
+            -125.0
+          ],
+          "feasible": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "reviewed_files": {
+    "manuscript.md": "5d104c82ab58c402ff09bbac34015a8c59052cd63f55bb87a58dc4828dc5cb0c",
+    "manuscript.docx": "c12f3cbf6bc3fda3025776af7d297c370f8380de39706ccc7373f76a78b174a5",
+    "manuscript.pdf": "859c8226cb0abe5e9048fdc11fd3eb4953448534e3b8519f06a81728e7caff43",
+    "SUPPLEMENT.md": "fd974d3ddec2adb58a257e3376215cf952e902f4e1b271c84bd2de0a351ae08c"
+  },
+  "total_review_rounds": 4,
+  "raw_reviews": 12,
+  "verdicts": {
+    "A": "Accept",
+    "B": "Accept",
+    "C": "Accept"
+  },
+  "actual_conference_acceptance": false,
+  "asset_use_and_reviewer_provision": "confirmed by explicit user report of provider permission",
+  "continuation_new_experiments": 0,
+  "artifacts": {
+    "R13_CCDC_REVIEW_preview.zip": {
+      "sha256": "bdfbd13e0ac0fe28a5d505cf0acb9f299967f4f0d4c189f1fae52c9913684612",
+      "bytes": 11200469
+    },
+    "R13_REPRODUCTION_internal.zip": {
+      "sha256": "d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640",
+      "bytes": 12383109
+    }
+  }
+}

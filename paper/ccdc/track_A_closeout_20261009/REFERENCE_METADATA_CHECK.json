@@ -1,0 +1,633 @@
+[
+  {
+    "doi": "10.3390/s20061550",
+    "title": [
+      "High-Level Path Planning for an Autonomous Sailboat Robot Using Q-Learning"
+    ],
+    "author": [
+      {
+        "given": "Andouglas Gonçalves da Silva",
+        "family": "Silva Junior",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Universidade Federal do Rio Grande do Norte, DCA-CT-UFRN, Campus Universitario, Lagoa Nova, Natal, RN 59078-970, Brazil"
+          },
+          {
+            "name": "Instituto Federal do Rio Grande do Norte, Av. Sen. Salgado Filho, 1559 - Tirol, Natal - RN 59015-000, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Davi Henrique dos",
+        "family": "Santos",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidade Federal do Rio Grande do Norte, DCA-CT-UFRN, Campus Universitario, Lagoa Nova, Natal, RN 59078-970, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Alvaro Pinto Fernandes de",
+        "family": "Negreiros",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidade Federal do Rio Grande do Norte, DCA-CT-UFRN, Campus Universitario, Lagoa Nova, Natal, RN 59078-970, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "João Moreno Vilas Boas de Souza",
+        "family": "Silva",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Instituto Federal do Rio Grande do Norte, Av. Sen. Salgado Filho, 1559 - Tirol, Natal - RN 59015-000, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-7735-5630",
+        "authenticated-orcid": false,
+        "given": "Luiz Marcos Garcia",
+        "family": "Gonçalves",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Universidade Federal do Rio Grande do Norte, DCA-CT-UFRN, Campus Universitario, Lagoa Nova, Natal, RN 59078-970, Brazil"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Sensors"
+    ],
+    "volume": "20",
+    "issue": "6",
+    "page": "1550",
+    "published": {
+      "date-parts": [
+        [
+          2020,
+          3,
+          11
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/IROS.2009.5354175",
+    "title": [
+      "Generalized velocity obstacles"
+    ],
+    "author": [
+      {
+        "given": "David",
+        "family": "Wilkie",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jur",
+        "family": "van den Berg",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Dinesh",
+        "family": "Manocha",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "2009 IEEE/RSJ International Conference on Intelligent Robots and Systems"
+    ],
+    "volume": null,
+    "issue": null,
+    "page": "5573-5578",
+    "published": {
+      "date-parts": [
+        [
+          2009,
+          10
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.automatica.2016.08.013",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "doi": "10.1002/rob.22512",
+    "title": [
+      "MoWe: Motion Observation for Wind Estimation of Sailing Robots"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0003-3165-1175",
+        "authenticated-orcid": false,
+        "given": "Qinbo",
+        "family": "Sun",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Shenzhen Institute of Artificial Intelligence and Robotics for Society The Chinese University of Hong Kong Shenzhen China"
+          },
+          {
+            "name": "School of Science and Engineering The Chinese University of Hong Kong Shenzhen China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Weimin",
+        "family": "Qi",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shenzhen Institute of Artificial Intelligence and Robotics for Society The Chinese University of Hong Kong Shenzhen China"
+          },
+          {
+            "name": "School of Science and Engineering The Chinese University of Hong Kong Shenzhen China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Huihuan",
+        "family": "Qian",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Shenzhen Institute of Artificial Intelligence and Robotics for Society The Chinese University of Hong Kong Shenzhen China"
+          },
+          {
+            "name": "School of Science and Engineering The Chinese University of Hong Kong Shenzhen China"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Field Robotics"
+    ],
+    "volume": "42",
+    "issue": "5",
+    "page": "2355-2374",
+    "published": {
+      "date-parts": [
+        [
+          2025,
+          2,
+          5
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1002/rob.21900",
+    "title": [
+      "The branching‐course model predictive control algorithm for maritime collision avoidance"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0000-0002-0786-2549",
+        "authenticated-orcid": false,
+        "given": "Bjørn‐Olav H.",
+        "family": "Eriksen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Centre for Autonomous Marine Operations and Systems, Department of Engineering Cybernetics Norwegian University of Science and Technology (NTNU)  Trondheim Norway"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0002-0457-1850",
+        "authenticated-orcid": false,
+        "given": "Morten",
+        "family": "Breivik",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Autonomous Marine Operations and Systems, Department of Engineering Cybernetics Norwegian University of Science and Technology (NTNU)  Trondheim Norway"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8491-5432",
+        "authenticated-orcid": false,
+        "given": "Erik F.",
+        "family": "Wilthil",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Autonomous Marine Operations and Systems, Department of Engineering Cybernetics Norwegian University of Science and Technology (NTNU)  Trondheim Norway"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-9893-0107",
+        "authenticated-orcid": false,
+        "given": "Andreas L.",
+        "family": "Flåten",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Autonomous Marine Operations and Systems, Department of Engineering Cybernetics Norwegian University of Science and Technology (NTNU)  Trondheim Norway"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-8735-1687",
+        "authenticated-orcid": false,
+        "given": "Edmund F.",
+        "family": "Brekke",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Centre for Autonomous Marine Operations and Systems, Department of Engineering Cybernetics Norwegian University of Science and Technology (NTNU)  Trondheim Norway"
+          }
+        ],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Journal of Field Robotics"
+    ],
+    "volume": "36",
+    "issue": "7",
+    "page": "1222-1249",
+    "published": {
+      "date-parts": [
+        [
+          2019,
+          8,
+          20
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/IROS55552.2023.10341787",
+    "title": [
+      "Feedback Motion Prediction for Safe Unicycle Robot Navigation"
+    ],
+    "author": [
+      {
+        "given": "Aykut",
+        "family": "İşleyen",
+        "sequence": "first",
+        "affiliation": [
+          {
+            "name": "Eindhoven University of Technology,Department of Mechanical Engineering,Eindhoven,The Netherlands,5600 MB"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Nathan",
+        "family": "van de Wouw",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Eindhoven University of Technology,Department of Mechanical Engineering,Eindhoven,The Netherlands,5600 MB"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      },
+      {
+        "given": "Ömür",
+        "family": "Arslan",
+        "sequence": "additional",
+        "affiliation": [
+          {
+            "name": "Eindhoven University of Technology,Department of Mechanical Engineering,Eindhoven,The Netherlands,5600 MB"
+          }
+        ],
+        "role": [
+          {
+            "role": "author",
+            "vocabulary": "crossref"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "2023 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+    ],
+    "volume": null,
+    "issue": null,
+    "page": "10511-10518",
+    "published": {
+      "date-parts": [
+        [
+          2023,
+          10,
+          1
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/JOE.2013.2247276",
+    "title": [
+      "Modeling and Nonlinear Heading Control of Sailing Yachts"
+    ],
+    "author": [
+      {
+        "given": "Lin",
+        "family": "Xiao",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jerome",
+        "family": "Jouffroy",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "IEEE Journal of Oceanic Engineering"
+    ],
+    "volume": "39",
+    "issue": "2",
+    "page": "256-268",
+    "published": {
+      "date-parts": [
+        [
+          2014,
+          4
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1016/j.apor.2026.105246",
+    "title": [
+      "Learning to sail without wind information: reinforcement learning-based control for unmanned sailing vessels under partial observability"
+    ],
+    "author": [
+      {
+        "ORCID": "https://orcid.org/0009-0008-6113-7031",
+        "authenticated-orcid": false,
+        "given": "Chao",
+        "family": "Yang",
+        "sequence": "first",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0001-6497-8540",
+        "authenticated-orcid": false,
+        "given": "Buyu",
+        "family": "Guo",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yulu",
+        "family": "Zhang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0000-0003-4616-867X",
+        "authenticated-orcid": false,
+        "given": "Yanzhen",
+        "family": "Gu",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Yanjun",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "ORCID": "https://orcid.org/0009-0007-5176-8350",
+        "authenticated-orcid": false,
+        "given": "Sheng",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Hui",
+        "family": "Huang",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Jiang",
+        "family": "Dong",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      },
+      {
+        "given": "Peiliang",
+        "family": "Li",
+        "sequence": "additional",
+        "affiliation": [],
+        "role": [
+          {
+            "vocabulary": "crossref",
+            "role": "author"
+          }
+        ]
+      }
+    ],
+    "container-title": [
+      "Applied Ocean Research"
+    ],
+    "volume": "175",
+    "issue": null,
+    "page": "105246",
+    "published": {
+      "date-parts": [
+        [
+          2026,
+          10
+        ]
+      ]
+    }
+  },
+  {
+    "doi": "10.1109/ICRA48506.2021.9560859",
+    "title": "Collision Risk Assessment and Obstacle Avoidance Control for Autonomous Sailing Robots",
+    "year": 2021,
+    "pages": "2511-2517",
+    "verification": "Primary author/institutional listing and IEEE record; no fulltext mechanism comparison",
+    "sources": [
+      "https://crai.cuhk.edu.cn/page/361",
+      "https://ieeexplore.ieee.org/document/9560859"
+    ]
+  }
+]

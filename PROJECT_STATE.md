@@ -1,7 +1,49 @@
 # Project State
 
+## 避障研究交接（2026-11-05，本机）
+- A停止决策保持；用户要求重新从师兄避障方法找问题。交接：discovery_obstacle_20261105/SENIOR_OBSTACLE_HANDOFF_ZH.md、idea-stage/IDEA_REPORT.md。
+- 已读131页《大论文-Final.pdf》第五章；晚探测条件的模型排序反转是论文报告，原日志/checkpoint映射尚未闭合，不称已复现。优先诊断物理可行性、信息可辨识性与策略响应三者。
+- 只读复核既有CSV：低阶重编码最大2.195秒、8/16新任务超过1秒；4个反应式失败均NoRouteError，未发生记录内实体碰撞。核查脚本和来源哈希在交接目录。
+- 本轮无新增训练/导航；文档仅本机，未同步服务器。另一个并行工作的Yara安装状态保留如下，本轮未操作该任务。
+
+## Yara独立环境（2026-11-06）
+- 环境对比资料：../yara-comparison-html/index.html（6部分：平台、Yara论文纯风力实验（主图23，电机辅助图27–28折叠保留，含离线PDF）、18D环境、迁移困难、收益代价、先迁移场景与接口再测试旧权重；旧历史成绩展示页已删除），离线包YARA_COMPARISON.zip；生成器与来源随包保留。18D原日志重绘三场轨迹；Edge实际渲染检查和翻页自检通过；未新增训练或实验。
+- 环境/方法详细对照：docs/YARA_ENV_METHOD_COMPARISON_ZH.md。实测Actor参数量：Yara PPO1350、SAC1446、继承14D667396、18D866820。来源噪声RATE=1与当前14D副本RATE=5有差异，不能用“3%”概括或自动归于同一历史训练配置；详表区分checkpoint事实与脚本默认值。
+- 迁移接口核验及真实可视化已完成：docs/YARA_TRANSFER_AND_BASELINE_ZH.md；本机交付 ../yara-transfer-audit/YARA_TRANSFER_PREVIEW.zip，服务器 yara-env/transfer_audit。迁移路线尚未实施：保留原物理与接口仅接显示原则上不必重训；更换动力学需先对齐18D接口并做旧权重闭环测试，再决定微调或重训；5D/3动作原版与14D/2动作资产、帆缆/帆角语义不等价。
+- 官方PPO/SAC保存SB3 2.0.0，实际使用2.3.2加载有调度对象兼容警告，但策略张量13/32项逐项相同；SAC8步探测通过，PPO固定风可视化24步到达，只是接口/展示材料，不是性能评估。专用noetic-visual镜像支持CPU虚拟显示及真实相机PNG，作业已退出。
+- 用户明确授权删除 hs/pi05_runtime、hs/act-dp-playground，并允许现有 Docker 存储写入；两目录已核对真实路径、进程和挂载后删除，约释放55.68 GiB。授权仅针对本次安装，不改变其他学生目录只读边界。
+- /home/ot/Students/hs/yara-env 已安装官方固定源码 e708703e7367993f56ff2187a06e05b09d19e696；独立标签 hs-yara:noetic-base，ROS Noetic/Gazebo11、Python3.8、CPU Torch1.13.1、Gymnasium0.29.1/SB3 2.3.2。非原论文训练环境逐项复现。
+- catkin 全量编译及复核通过；真实 Eboat53-v0 完成8次步进、仿真时钟4.05→18.06秒，有限观测/奖励/位置。没有训练或使用GPU，不支持模型性能结论。任务容器已退出；安装后根盘剩约57GiB。
+- 入口、限制、来源和日志：docs/YARA_INSTALL_STATUS_ZH.md；服务器 yara-env/README_ZH.md、logs/SMOKE_RESULT.json、docker/IMAGE_RECEIPT.json。旧预检为历史；未改共享系统包、旧研究源码/权重/结果。
+
+## 当前 A 线决策（2026-11-05）
+- 投稿保持暂停。公平低阶对照及冻结新任务验证已完成，按预设门槛停止当前详细预测安全收益路线；不追加调参、样本或模块。
+- 权威结果：runs/a_fair_20261105/RESULTS_ZH.md、RESULTS.json、AUDIT.json、completion.json；所有原稿和旧结果保留，B线不变。
+- 本轮72次完整航行指标复算通过，全部进程退出；汇总null格式报错及只读分析修复记录均保留，无导航重跑。
+
+
+## 当前阶段（B3，2026-10-09）
+- 用户已授权扩大应用范围、改变切入点；以具体任务和成熟强对照筛选CCDC题目。B2结束状态不限制本轮。
+- 独立工作目录 ../sailboat-track-b/discovery_b3；三个实际pilot完成，无直接进入新论文的入选题。条件性首选R的已知单侧降额换线任务可完成性，保留成熟简单方法，不采用动态余量调速；具体数值与边界见该目录idea-stage/IDEA_REPORT.md。
+- 服务器根盘可用空间为0，本轮使用本机既有Anaconda单线程CPU；不清理共享数据、不安装环境、GPU0。A/旧B/B2保持原资产。
+- 全部实验已退出、资源释放；独立证据复算完成，同家族provisional。完整代码/原始结果/图集/预览包见discovery_b3/RESULTS_INDEX.md；未启动写作或第四pilot。下述各阶段均为历史快照。
+
+## 当前阶段（B2，2026-10-08）
+- B2自主选题筛选完成：3个pilot，未选中值得扩大投入的方向；无活跃实验，GPU使用0。
+- F指定指标接近上限；I对强简单路线优化增量不足；U修复失稳后历史更新仍无足够增量，但当前重构偏差仍大，不能称应用已解决。
+- 权威报告、全部证据、原始审查与交接：../sailboat-track-b/discovery_b2/idea-stage/IDEA_REPORT.md、RESULTS_INDEX.md、HANDOFF.md。
+- A与旧B保持原交付；下述AB和R1–R6为历史快照，不恢复旧阶段限制。
+
+## 当前已核对事实（AB续办，2026-10-07）
+- AB工作包已完成：A稿件在paper/ccdc/track_A_submit；B在兄弟目录sailboat-track-b，完成有限恢复研究、三位独立首审与复核、实际包交付。无运行实验。最新事实和证据入口见docs/AB_STATUS.md。
+- 服务器实际稿件已到R13，round04原A/B/C均模拟Accept；这是内部意见，非正式录用。主证据19/23/24，联合压力3/7/8，其余16场均成功；范围为理想计算单船会遇仿真。
+- 本轮独立A/B授权已执行完成，预算记录docs/ab_20261007/SHARED_BUDGET.json；B实际采用传统控制与当前风观测，无训练。历史阶段禁令不恢复为永久限制。
+- A/B目录分离，旧科学资产及未提交代码不修改。Chao Yang继承资产的研究使用和评审材料提供权限已由用户确认。
+- 本文件后续R1—R6段落为本机历史快照，最新论文事实见paper/ccdc/r13_revision。已保留本次同步前原文，未reset/clean/pull覆盖。
+
+
 ## 项目与唯一入口
-- R9研究已完成；当前无活跃研究线程。先读docs/R9_METHOD_NOTE.md和docs/R9_RESEARCH_REPORT.md，R6/R8历史证据保留。
+- 目标：已知完整静态海图、无外部天气预报或直接风传感器，以冻结局部SAC-LSTM验证未知风场下可执行的连续航迹点选择。R1已完成合成1/3/5km评估，结论不外推至实船或其他控制器。
 - 连接：ssh donghai，ot@172.16.2.249；开发根目录 /home/ot/Students/hs/sailboat-routing-v0（NEW_ROOT），独立Git仓库main。
 - 只读上游：/home/ot/Students/hs/sailboat-research（SOURCE_ROOT）；不得覆盖其代码、模型、环境和既有改动。
 - Windows同步目录约定：C:/Users/74095/hs/SailBoat/sailboat-routing-v0；其他设备可选自己的本地路径，均通过SSH开发。
@@ -10,27 +52,19 @@
 - 研发基点4e86b74；V0运行实现857ff57；V0.2候选裕量实现500618a，参数默认0。源码镜像与大产物分开恢复，旧归档回执见docs/DELIVERY.json；新结果不在该历史归档中。
 - 专用解释器 .venv/bin/python，Python 3.13.11；独立依赖见requirements.lock，共享Miniconda仅作为只读解释器来源。安装及命令见README。
 
-## R9 当前结果入口
-- 主方案为GVO思想的候选闭环评价＋25秒计算时隙／26秒参考生效；等待期真实低层反馈继续，预测同样等待；普通接力保留，仅避让保持60秒。无训练，18D旧资产不变。
-- 新短12例主方案与reactive均安全，无新增安全收益，主方案平均多57.42s；新3km保留一例避让收益，5km共同安全多32s。不是普遍优于reactive。
-- 旧mixed7同状态消融支持等待预测改变选择；mixed3收益仅为协议效应。30秒等待反例预测+82.692m但实际−0.949m，不能宣称延迟鲁棒或安全保证。
-- 新短5次guard退化仍用尽力分支。观测到控制tick最大0.645s不构成硬实时保证；独立规划/反馈执行资源为声明条件。
-- 运行根runs/r9_timing_20261005T085308Z，EVIDENCE_INDEX.md/冻结配置/原始trace/审查/资源收据可恢复；R9论文定位仅有边界扩展，paper/ccdc/R9_POSITIONING.md，R3底稿保留。
-- R9全部实验结束，GPU0，无自动push；本机原有未提交上下文修改保持不变，交付包包含服务器状态快照。
-
 ## 实现与协议
-- V0—R5参考连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。
+- 当前连续低层：14D saclstm_s14nowind_buf1e6_seed100@7200，Actor/normalizer冻结；不是官方final@9000或论文最终身份的证明。
 - 新集成协议：configs/navigation_contract.json；无额外sensor/actuator噪声，关闭dropout；原A/B用Dryden，新navigation改用私有SyntheticWindField，须单独验证。
 - third_party/senior保存原样最小继承快照；runtime.py加载资产，continuous.py维护物理连续，frames.py负责刚性坐标与因果记忆重编码。
 - navigation.py已写真实运行链：每控制步一次Actor决策，同前向旁路270维特征，高层t选点在t+1应用。已由真实闭环与旁路非干扰准入验证。
 - wind_readout.py/fit_wind_readout.py实现sin/cos岭回归、整episode/scenario划分、train-only标准化、validation选alpha、test一次评估。
 - planner.py提供静态地图A*和有限候选；wind_fields.py/metrics.py提供私有时空风场与安全/换舷/配对统计。正式planner输入无环境或风场查询器。
 - 三方法geometry_only/oracle_local/estimated_local共享低层与选点参数；oracle只提供当前本船局部真风方向，是诊断参照，不是全局最优上界。
-- V0阶段18D 0204@10800仅验证独立原尺度协议；R6连续接入与选择结果见本文件R6入口，不改写旧协议结果。
+- V0阶段18D仅验证独立原尺度协议；R6连续接入及选择结果见下，不改写旧结果。
 
 ## 已验证能力与证据
 - A/B原协议：迁移及新旧解释器比较误差0，500m为12/12，约1km为5/6；失败前1000步与原500m一致。证据：runs/stage_a、stage_b、stage_b_failure_diagnostic及audit/cross_environment_parity.json。
-- V0阶段18D独立候选原协议8/8，当时尚未连续适配；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
+- 18D独立候选原协议8/8，尚未连续适配，不替换14D；证据runs/obstacle_capability_legacy及docs/OBSTACLE_PROTOCOL.md。
 - 新导航准入54项测试通过，完整274步旁路开/关轨迹及动作一致，2次目标切换连续；140步变风标签检查通过。证据runs/v0_admission_final_20261002、runs/navigation_admission.json。
 - 20个完整采集episode按12/4/4划分，2个训练超时保留；已冻结读出器并完成一次test评估。离线误差、36次闭环结果及全部失败统一见docs/ep_result/V0_RESULTS.md及其原始证据链接。
 - V0交付时上游1351文件与Git状态无变化：runs/audit/upstream_integrity_v0_final_20261002.json。
@@ -94,14 +128,3 @@
 - 实验和有限same-family/provisional审阅结束，原始指标/冻结/输入行为复算通过。未训练、未使用GPU，无运行中实验。资源见run/resources.json，完整预算与停止状态见run/plan.json。
 - seed8371/9471现已见。R3稿与原模型保留，论文定位另存paper/ccdc/R6_POSITIONING.md。源码bundle、继承权重、完整日志分别交付，轻量图集不冒充完整备份；同步核验以docs/R6_DELIVERY.json为准。本机旧工作树与修改保留，不push。
 
-## R7 动态扩展（2026-10-05）
-- 科学冻结b29e459；方法、结果、适用边界统一见docs/R7_METHOD_NOTE.md与docs/R7_RESEARCH_REPORT.md。采用终点占用时间窗+临时目标接力，未训练。
-- 原始/失败/旧协议全部保留：runs/r7_dynamic_20261005T033700Z/RAW_INDEX.json；复现见同目录REPRODUCE.md。推荐仅作有限动态扩展，不作为CCDC主贡献或必要条件。
-- 当前动态协议85m圆代理、理想单目标观测，不代表完整COLREGs、真实船体扫掠或硬实时；历史80m结果不得混入最终确认。
-
-## R8 已验证结果与入口
-- 方法：GVO控制条件运动思想适配，独立因果风辨识＋同一低层闭环预测，采样位置参考保持/恢复协议；未训练网络。科学冻结29124b8，configs/r8_methods.json。
-- 冻结30新实例：reactive28/30，sampled15与hold60均30/30；新增2例为途中85m缓冲侵入避免，非终点恢复或已观测实体碰撞减少。长程3/5km四例为3/4对4/4；静态六例均安全。
-- sampled共同安全新集航时均值+15.29s、最大+267s；全轮单次规划43.46s，尚非硬实时。3次全候选低于规划guard的退化选择保留，不作安全保证。
-- docs/R8_METHOD_NOTE.md、docs/R8_RESEARCH_REPORT.md；runs/r8_closedloop_20261005T062543Z/EVIDENCE_INDEX.md及final_validation.json；真实图集figures/index.html。源码/原始/预览包与本地校验见docs/R8_DELIVERY.json。
-- 建议动态作为有限扩展，R3原稿保留，仅paper/ccdc/R8_POSITIONING.md另存主张衔接；本轮未push。

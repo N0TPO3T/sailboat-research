@@ -1,0 +1,17 @@
+{
+  "reactive": {
+    "cpu_seconds": 403.88186347899983,
+    "wall_episode_sum": 404.04312801361084,
+    "identical_to_reactive": 30
+  },
+  "sampled": {
+    "cpu_seconds": 2640.783111367,
+    "wall_episode_sum": 2641.9741101264954,
+    "identical_to_reactive": 22
+  },
+  "hold60": {
+    "cpu_seconds": 1047.1819063869998,
+    "wall_episode_sum": 1047.5344696044922,
+    "identical_to_reactive": 21
+  }
+}

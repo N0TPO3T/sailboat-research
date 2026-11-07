@@ -1,0 +1,142 @@
+{
+  "confirmation/delayed15": {
+    "gains": [],
+    "losses": []
+  },
+  "confirmation/fast60": {
+    "gains": [],
+    "losses": [
+      "r9new_endpoint_8"
+    ]
+  },
+  "confirmation/ideal15": {
+    "gains": [],
+    "losses": []
+  },
+  "confirmation/main": {
+    "gains": [],
+    "losses": []
+  },
+  "confirmation/reactive": {
+    "gains": [],
+    "losses": []
+  },
+  "development/delayed15": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": []
+  },
+  "development/delayed60": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": [
+      "confirm_mixed_6"
+    ]
+  },
+  "development/ideal15": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": []
+  },
+  "development/reactive": {
+    "gains": [],
+    "losses": []
+  },
+  "development/slot_hold60": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": []
+  },
+  "development2/fast60": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": [
+      "confirm_mixed_6"
+    ]
+  },
+  "development2/reactive": {
+    "gains": [],
+    "losses": []
+  },
+  "development2/slot_feedback60": {
+    "gains": [
+      "confirm_mixed_3",
+      "confirm_mixed_7"
+    ],
+    "losses": []
+  },
+  "development3/fast15": {
+    "gains": [],
+    "losses": []
+  },
+  "development3/ignore_wait": {
+    "gains": [],
+    "losses": []
+  },
+  "long_confirmation/delayed15": {
+    "gains": [
+      "r9new_long_3000"
+    ],
+    "losses": []
+  },
+  "long_confirmation/fast60": {
+    "gains": [
+      "r9new_long_3000"
+    ],
+    "losses": []
+  },
+  "long_confirmation/ideal15": {
+    "gains": [
+      "r9new_long_3000"
+    ],
+    "losses": []
+  },
+  "long_confirmation/main": {
+    "gains": [
+      "r9new_long_3000"
+    ],
+    "losses": []
+  },
+  "long_confirmation/reactive": {
+    "gains": [],
+    "losses": []
+  },
+  "sensitivity/delayed15": {
+    "gains": [
+      "r9_active_turn_mixed7"
+    ],
+    "losses": []
+  },
+  "sensitivity/main": {
+    "gains": [
+      "r9_active_turn_mixed7"
+    ],
+    "losses": []
+  },
+  "sensitivity/reactive": {
+    "gains": [],
+    "losses": []
+  },
+  "sensitivity/slot30": {
+    "gains": [],
+    "losses": []
+  },
+  "static_regression/main": {
+    "gains": [],
+    "losses": []
+  },
+  "static_regression/reactive": {
+    "gains": [],
+    "losses": []
+  }
+}

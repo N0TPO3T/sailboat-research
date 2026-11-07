@@ -1,0 +1,10 @@
+{
+  "archive": "CCDC2027_Track_A_closeout_package.zip",
+  "bytes": 2899131,
+  "sha256": "c6dbf7666138771a7f255085c8bd0ddb9fa4e6230caf2b6598ebe8e287d03d9c",
+  "files": 105,
+  "all_manifest_hashes_verified": true,
+  "complete_recovery_archive_included": false,
+  "model_weights_included": false,
+  "server_synced": false
+}

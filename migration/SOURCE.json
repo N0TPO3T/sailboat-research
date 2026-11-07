@@ -1,0 +1,21 @@
+{
+  "branch": "codex/idea-a-routing",
+  "source": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0",
+  "base": "4c6a07878e7432da12dea50d42a3272dbce7a820",
+  "local_overlay_conflicts_preserved": [
+    ".gitignore",
+    "README.md",
+    "docs/R5_DELIVERY.json",
+    "docs/R5_METHOD_NOTE.md",
+    "docs/R5_RESEARCH_REPORT.md",
+    "docs/R9_DELIVERY.json",
+    "docs/ep_result/V0_1_DIAGNOSIS.md",
+    "paper/ccdc/bibliography_fetch.json",
+    "paper/ccdc/references.bib",
+    "src/sailboat_routing/navigation.py",
+    "src/sailboat_routing/planner.py",
+    "tests/test_planner.py"
+  ],
+  "server_current_worktree_modified": false,
+  "notes": "Migration snapshot only; no new training, evaluation, or claim validation. Other historical source snapshots retain their own provenance."
+}

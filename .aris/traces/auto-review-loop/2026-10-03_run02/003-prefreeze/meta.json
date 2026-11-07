@@ -1,0 +1,13 @@
+{
+  "skill": "auto-review-loop",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "round": 3,
+  "epoch": 1791016656.360668,
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "status": "completed",
+  "raw_response_pending": false,
+  "summary_file": "response_summary.md",
+  "response_file": "response.md"
+}

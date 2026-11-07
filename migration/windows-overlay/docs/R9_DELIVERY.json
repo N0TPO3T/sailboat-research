@@ -1,0 +1,23 @@
+{
+  "scientific_commit": "65b3a7ae392e4401affa9c580438d4efdfcd683e",
+  "run": "/home/ot/Students/hs/sailboat-routing-v0/runs/r9_timing_20261005T085308Z",
+  "files": {
+    "R9_TIMING_preview.zip": {
+      "bytes": 823286,
+      "sha256": "61372fbae389a43903f6edd3e290854d9fb2bd0a7c15c80d3b5c9313d4fedf6a"
+    },
+    "R9_source.zip": {
+      "bytes": 3796944,
+      "sha256": "92eb6f8ab06947ca258c253237b9a6d54df14ad160d3453d575c0785c525a559"
+    },
+    "R9_raw_results.tar.gz": {
+      "bytes": 19377757,
+      "sha256": "c2c5a23693f777717e6e5e7c03e424c2814046c7fbc0f3e8719d0dc806299390"
+    }
+  },
+  "local_dirty_context_preserved": true,
+  "no_push": true,
+  "local_verified": true,
+  "local_root": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0",
+  "raw_extracted": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\r9_timing_20261005T085308Z"
+}

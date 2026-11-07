@@ -1,0 +1,10 @@
+{
+  "local_archive_sha256": "e3d62e0e9f2ccb4dc53e47e7f179d7df39e8fb2f294e3796d7a32e6ae5b9f4d6",
+  "archive_crc": "PASS",
+  "extracted_files_verified": 589,
+  "source": "server a_fair_20261105",
+  "local_path": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\runs\\a_fair_20261105",
+  "scientific_workers_exited": true,
+  "navigation_complete": true,
+  "audit_pass": true
+}

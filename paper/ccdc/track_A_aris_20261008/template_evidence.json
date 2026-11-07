@@ -1,0 +1,60 @@
+{
+  "reference_sha256": "8b9d63f2223b9e8ab547c9095ed80fad5b38cfe5f2146185effb7a7f3ea9257e",
+  "sections": [
+    {
+      "width": 7560310,
+      "height": 10692130,
+      "margins": [
+        342900,
+        914400,
+        567055,
+        567055
+      ],
+      "xml": "<w:sectPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\">\n  <w:headerReference r:id=\"rId4\" w:type=\"first\"/>\n  <w:footerReference r:id=\"rId6\" w:type=\"first\"/>\n  <w:headerReference r:id=\"rId3\" w:type=\"default\"/>\n  <w:footerReference r:id=\"rId5\" w:type=\"default\"/>\n  <w:pgSz w:w=\"11906\" w:h=\"16838\"/>\n  <w:pgMar w:top=\"540\" w:right=\"893\" w:bottom=\"1440\" w:left=\"893\" w:header=\"720\" w:footer=\"720\" w:gutter=\"0\"/>\n  <w:cols w:space=\"720\" w:num=\"1\"/>\n  <w:titlePg/>\n  <w:docGrid w:linePitch=\"360\" w:charSpace=\"0\"/>\n</w:sectPr>\n"
+    },
+    {
+      "width": 7560310,
+      "height": 10692130,
+      "margins": [
+        285750,
+        914400,
+        567055,
+        567055
+      ],
+      "xml": "<w:sectPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\">\n  <w:type w:val=\"continuous\"/>\n  <w:pgSz w:w=\"11906\" w:h=\"16838\"/>\n  <w:pgMar w:top=\"450\" w:right=\"893\" w:bottom=\"1440\" w:left=\"893\" w:header=\"720\" w:footer=\"720\" w:gutter=\"0\"/>\n  <w:cols w:space=\"720\" w:num=\"3\"/>\n  <w:docGrid w:linePitch=\"360\" w:charSpace=\"0\"/>\n</w:sectPr>\n"
+    },
+    {
+      "width": 7560310,
+      "height": 10692130,
+      "margins": [
+        285750,
+        914400,
+        567055,
+        567055
+      ],
+      "xml": "<w:sectPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\">\n  <w:type w:val=\"continuous\"/>\n  <w:pgSz w:w=\"11906\" w:h=\"16838\"/>\n  <w:pgMar w:top=\"450\" w:right=\"893\" w:bottom=\"1440\" w:left=\"893\" w:header=\"720\" w:footer=\"720\" w:gutter=\"0\"/>\n  <w:cols w:space=\"720\" w:num=\"3\"/>\n  <w:docGrid w:linePitch=\"360\" w:charSpace=\"0\"/>\n</w:sectPr>\n"
+    },
+    {
+      "width": 7560310,
+      "height": 10692130,
+      "margins": [
+        685800,
+        914400,
+        575945,
+        575945
+      ],
+      "xml": "<w:sectPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\">\n  <w:type w:val=\"continuous\"/>\n  <w:pgSz w:w=\"11906\" w:h=\"16838\"/>\n  <w:pgMar w:top=\"1080\" w:right=\"907\" w:bottom=\"1440\" w:left=\"907\" w:header=\"720\" w:footer=\"720\" w:gutter=\"0\"/>\n  <w:cols w:space=\"360\" w:num=\"2\"/>\n  <w:docGrid w:linePitch=\"360\" w:charSpace=\"0\"/>\n</w:sectPr>\n"
+    },
+    {
+      "width": 7560310,
+      "height": 10692130,
+      "margins": [
+        685800,
+        914400,
+        567055,
+        567055
+      ],
+      "xml": "<w:sectPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\">\n  <w:type w:val=\"continuous\"/>\n  <w:pgSz w:w=\"11906\" w:h=\"16838\"/>\n  <w:pgMar w:top=\"1080\" w:right=\"893\" w:bottom=\"1440\" w:left=\"893\" w:header=\"720\" w:footer=\"720\" w:gutter=\"0\"/>\n  <w:cols w:space=\"720\" w:num=\"1\"/>\n  <w:docGrid w:linePitch=\"360\" w:charSpace=\"0\"/>\n</w:sectPr>\n"
+    }
+  ]
+}

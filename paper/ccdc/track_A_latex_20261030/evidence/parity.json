@@ -1,0 +1,9 @@
+{
+  "trajectory_raw_bitwise_equal": true,
+  "commands_bitwise_equal": true,
+  "scene": "r8new_mixed_pressure_2",
+  "steps": 444,
+  "time_seconds": 444,
+  "wall": 194.28064012527466,
+  "cpu": 194.01514128299996
+}

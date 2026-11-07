@@ -1,0 +1,13 @@
+{
+  "skill": "research-review",
+  "run_id": "2026-10-13_run01",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "C:/Users/74095/hs/SailBoat/sailboat-routing-v0",
+  "scope": "One user-requested round, two complementary reviewers, no experiments or paper changes",
+  "traced_after_dispatch": true,
+  "completed_at": "2026-10-13T16:38:29.9794792+08:00",
+  "status": "complete"
+}

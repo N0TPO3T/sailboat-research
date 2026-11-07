@@ -1,0 +1,215 @@
+--- track_A_submit/manuscript.md
++++ track_A_aris_20261008/manuscript.md
+@@ -1,10 +1,12 @@
+ # Reference-Conditioned Closed-Loop Prediction for Dynamic Obstacle Avoidance of an Autonomous Sailboat
+ 
+-Authors and affiliations to be confirmed
++Authors: Sheng Huang (1), Chao Yang (1), Buyu Guo (2)
++
++Affiliations: (1) Institute of Physical Oceanography and Remote Sensing, Ocean College, Zhejiang University, Zhoushan, China; (2) Donghai Laboratory, Zhoushan, China
+ 
+ ## Abstract
+ 
+-A geometrically clear waypoint can induce an unsafe sailing trajectory because a recurrent controller responds through wind-dependent dynamics and control history. We adapt control-induced motion prediction to candidate position references together with their hold-and-restore protocols. Independent instances of an inherited sailing policy and dynamics reconstruct causal history, fit local wind from motion and compare synchronized clearance before reference delivery. In a frozen 24-task simulation comparison, reactive navigation, a calibrated low-order predictor and detailed prediction safely complete 19, 23 and 24 tasks. Their counts are 3, 7 and 8 in eight combined-pressure encounters; all three complete the other sixteen tasks. Detailed prediction gains one completion over the low-order comparator, while adding 7 s on average and up to 308 s across 23 common-safe pairs, with 2133.23 versus 378.44 s cumulative episode CPU. Fixed-protocol diagnostics explain a local fidelity advantage and retain a 106 m adverse prediction error. The contribution is an execution-consistent supervisory interface and evidence of its conditional avoidance value and cost under ideal computation, where planning pauses physical time.
++A geometrically clear waypoint can induce an unsafe sailing trajectory when wind, actuator dynamics and controller memory affect its execution. We present a supervisory interface that predicts candidate position references together with their holding and route-restoration rules using a frozen recurrent controller. Each branch preserves causal history and the pending control action, estimates local wind from observed motion, and evaluates synchronized obstacle clearance. In 24 frozen simulation tasks, reactive navigation, a calibrated low-order predictor and detailed prediction safely complete 19, 23 and 24 tasks, respectively. All safe-completion differences occur in the eight combined-pressure encounters. Detailed prediction adds one completion over the low-order comparator but adds 7 s mean and 308 s maximum travel time over 23 common-safe tasks; cumulative episode CPU is 2133.23 versus 378.44 s. Fixed-protocol checks expose decision-relevant prediction differences and a 106 m adverse error. These results characterize the conditional value and cost of predicting executable reference protocols under ideal computation, with physical time paused during planning.
+ 
+ Keywords: autonomous sailing; reference-conditioned prediction; dynamic avoidance; recurrent control; closed-loop simulation
+ 
+@@ -12,23 +14,23 @@
+ 
+ A waypoint specifies where a sailing controller should go, not the trajectory that it will execute. Wind-dependent propulsion, finite turning response, actuator dynamics and recurrent state can produce motion that differs from the waypoint chord. During a moving-vessel encounter, a geometrically clear reference can therefore induce a safety-buffer incursion. The supervisory problem is to compare references together with their holding and feedback-restoration rules.
+ 
+-High-level sailing planners can exploit environmental information; Silva Junior et al. use Q-learning for sailboat path planning [1]. We address the execution interface below planning, with a known static map, no direct wind measurement and observations of one low-speed target. Generalized velocity obstacles (GVO) evaluate control-induced motion rather than assuming that a desired velocity is immediately achievable [2]. Reference governors similarly modify commands supplied to an existing closed loop [3]. Branching-course model predictive control evaluates maritime maneuvers before executing their initial portion [6]. Feedback motion prediction provides controller-specific motion envelopes for unicycle reference regulation [7]. These works motivate the interface studied here; their controller assumptions and safety guarantees are not transferred to a recurrent sailing policy.
+-
+-The missing interface is a candidate execution protocol, rather than only a waypoint coordinate. For a recurrent controller, changing the reference also changes its local frame and reconstructed memory; holding that reference and later restoring route feedback changes the subsequent trajectory. We adapt the control-induced prediction principle of GVO to these finite protocols. A motion-based local wind fit supplies the branch model; MoWe [4] motivates motion-based wind estimation, while the bounded inverse-dynamics fit used here is a separate implementation.
+-
+-Our contribution is an execution-consistent supervisory interface and a matched empirical assessment. The interface preserves the pending old-reference action, causal policy history, hold duration and route-manager restoration in each branch. The inherited policy, dynamics and established prediction principle remain separate from this adaptation; state reconstruction and the clearance-error inequality are not proposed as new control theory. The assessment tests whether detailed execution modeling adds value over a specified calibrated low-order predictor, and accounts for intervention and computation costs alongside safe completions. In the primary comparison, its additional completion occurs in a combined-pressure encounter; an endpoint encounter instead incurs a 308 s detour. These complementary results define the scope of the method.
++High-level sailing planners can exploit environmental information; Silva Junior et al. use Q-learning for sailboat path planning [1]. Qi et al. study collision-risk assessment and obstacle-avoidance control specifically for autonomous sailing robots [2]. We address the execution interface below planning, with a known static map, no direct wind measurement and observations of one low-speed target. Generalized velocity obstacles (GVO) evaluate control-induced motion rather than assuming that a desired velocity is immediately achievable [3]. Reference governors similarly modify commands supplied to an existing closed loop [4]. Branching-course model predictive control evaluates maritime maneuvers before executing their initial portion [5]. Feedback motion prediction provides controller-specific motion envelopes for unicycle reference regulation [6]. These works motivate the interface studied here; their controller assumptions and safety guarantees are not transferred to a recurrent sailing policy.
++
++For the inherited recurrent sailing controller considered here, the supervisory input must specify a complete reference protocol. Changing a reference changes the local observation frame and reconstructed controller memory; holding it and restoring route feedback determine subsequent actions. We implement this interface within the control-induced prediction approach motivated by GVO. A local wind fit uses observed vessel motion; MoWe [7] motivates this information source, while our bounded inverse-dynamics fit is a separate implementation.
++
++The contribution has two parts. First, an execution-consistent interface carries the pending old-reference action, causal controller history, reference hold and route-manager restoration into each candidate prediction. Second, a matched simulation study measures the resulting avoidance decisions, travel-time penalties and computation against reactive navigation and a calibrated low-order predictor. The research question is whether detailed prediction changes a safety-relevant reference decision enough to justify its additional cost in this setting. The inherited controller and dynamics supply the execution model; the new work is their supervisory integration and assessment. The study includes both an additional safe completion and an endpoint case with 308 s extra travel time.
+ 
+ ## II. System and Evaluation Conditions
+ 
+ ### A. Inherited dynamics and local policy
+ 
+-The dynamics implementation and pretrained assets were supplied by Chao Yang from the research codebase associated with Yang et al. [9] and are used with permission. We evaluate an inherited 18-input recurrent SAC policy with temporal attention, a matching frozen normalizer and deterministic tanh actions. This is distinct from the 14-dimensional wind-input-free policy formulation in [9]; checkpoint identity and reproduction of its benchmark results are not claimed. The Actor has hidden layers (256,256), persistent recurrent state and a ten-slot attention history. Reference [5] describes SAC. No policy is trained here. Separate instances of the inherited dynamics isolate physical execution and prediction; this does not isolate model-identification error.
+-
+-The inherited four-degree dynamics include position, roll, heading, surge/sway velocities, roll/yaw rates and actual sail/rudder angles. The model lineage is Xiao and Jouffroy [8]; attribution to the supplied research codebase [9] is separate. Independent predictor and execution instances use the same model structure. Supplement S9 and S11–S12 identify exact parameters, observation mapping, source/weight hashes and reproduction commands. The journal's 14D formulation and this 18D asset are not treated as identical checkpoints; the exact original training-run linkage is undocumented.
+-
+-An active reference g defines a rigid local frame with angle θ equal to its bearing at application and origin g − 500[cos θ,sin θ], placing the reference at (500,0) m without rescaling. The first 14 inputs describe local pose, body velocities/rates, actual actuator angles, progress and reference coordinates. Two obstacle distance/bearing pairs use max(0,d−R+40 m), with exclusion radius R, a 150 m encoded-distance cutoff, distance/bearing sorting and zero-filled missing pairs. This fixed input adapter is shared by all comparators. Its numerical distance transformation is not claimed as an independently established contribution; a historical matched input check did not establish its necessity.
+-
+-Reference changes reconstruct recurrent state by reencoding the real history and replaying issued commands. Each historical moving-obstacle input uses that time's observations. Predicted histories never enter the real history. Commands are scaled by 10 degrees, signed-floor quantized to one-degree increments and accumulated into setpoints, clipped to ±90 degrees for sail and ±30 degrees for rudder. Actual angles move at most 10 degrees per second. The custom adaptive Dormand–Prince integrator advances one-second control intervals; these actuation rules are shared by all physically executed comparators.
++We use dynamics code and pretrained assets supplied with permission by Chao Yang from the codebase associated with Yang et al. [8]. The frozen controller is an 18-input recurrent soft actor-critic (SAC) policy [9] with temporal attention, hidden layers (256,256), persistent recurrent state, a ten-slot attention history and a matching normalizer. It uses deterministic tanh actions; no policy is trained in this study. This asset differs from the 14-dimensional formulation reported in [8], and its exact original training-run linkage is undocumented. All comparators execute the same 18-input asset.
++
++The four-degree-of-freedom sailing dynamics follow the model lineage of Xiao and Jouffroy [10]. The simulated state contains position, roll, heading, surge/sway velocities, roll/yaw rates and actual sail/rudder angles. Prediction and physical execution use independent instances of the same supplied model structure. Thus the experiment tests execution-conditioned prediction within that simulator, including wind-estimation error, but not structural model mismatch. The input ordering and reconstruction are specified in Supplement S2; model parameters, asset hashes and reproduction commands appear in S9 and S11–S12.
++
++An active reference g defines a rigid local frame with angle θ equal to its bearing at application and origin g − 500[cos θ,sin θ], placing g at (500,0) m without rescaling. The first 14 inputs encode local pose, body velocities/rates, actual actuator angles, progress and reference coordinates. Two obstacle distance/bearing pairs use max(0,d−R+40 m), where d is center distance and R is the exclusion radius, with a 150 m encoded-distance cutoff, distance/bearing sorting and zero-filled missing pairs. All comparators share this fixed input adapter; a historical matched check did not establish its independent necessity.
++
++Reference changes rebuild controller memory from the recorded history, as specified in Section III-A. Predicted states never enter the physical controller's history. Commands are scaled by 10 degrees, signed-floor quantized to one-degree increments and accumulated into setpoints, clipped to ±90 degrees for sail and ±30 degrees for rudder. Actual angles move at most 10 degrees per second. A custom adaptive Dormand–Prince integrator advances one-second control intervals. All physically executed comparators share these actuation and integration rules.
+ 
+ ### B. Information, timing and safety
+ 
+@@ -48,17 +50,19 @@
+ 
+ ### A. State reconstruction and reference protocols
+ 
+-The nominal geometric relay uses 120 m planning allowance, 500 m lookahead, 100 m handoff distance and an 80 m geometric-clearance trigger. Its shared temporary-endpoint manager retains a clear incumbent beyond 100 m when the goal is occupied, or considers eight points on a 305 m goal-centered ring. Candidates must be at least 200 m from the boat, have a clear segment and at least 120 m endpoint clearance; distance plus 80 times absolute heading turn ranks them. Goal availability clears the incumbent and reconnects to the mission. No admissible temporary reference causes NoRouteError. This mechanism is shared by all comparators.
+-
+-Prediction eligibility starts at 10 s, requires a valid target strictly within 600 m, and requires the review timer to be due. A non-nominal hold takes precedence while t<until. The representative configuration uses horizon H=60 s, period P=15 s and guard ρ=30 m. A branch needs physical state, accumulated actuator setpoints, recurrent/attention state, reference frame, manager state, actual history and the already computed action. The implementation reconstructs setpoints from the complete command history starting from the zero initial setpoints and reconstructs policy state by historical replay. It asserts equality of the reproduced current action. That is a consistency check, not a future-accuracy proof.
+-
+-Each branch clones the route manager after its current nominal call. While a non-nominal reference is held, the real manager is not advanced; release clears its incumbent before restoring feedback. Branches use the same rules. Thus candidate predictions specify how a reference is applied and released, rather than interpreting its bearing as an instantaneous heading. Supplement S2 records exact reconstruction and clock handling.
+-
+-![Fig. 1. Prediction branches and actual execution. Candidate histories remain separate; only actual observations and commands update the real history.](figures/figure1_interface.png)
++The nominal geometric relay uses 120 m planning allowance, 500 m lookahead, 100 m handoff distance and an 80 m geometric-clearance trigger. Its shared temporary-endpoint manager retains a clear incumbent beyond 100 m when the goal is occupied, or considers eight points on a 305 m goal-centered ring. Candidates must be at least 200 m from the boat, have a clear segment and at least 120 m endpoint clearance; distance plus 80 m/rad times absolute heading turn (radians) ranks them. Goal availability clears the incumbent and reconnects to the mission. No admissible temporary reference causes NoRouteError. This mechanism is shared by all comparators.
++
++Prediction starts no earlier than 10 s, requires a valid target strictly within 600 m, and runs when the review timer is due. A non-nominal hold takes precedence while t<until. The evaluated configuration uses horizon H=60 s, review/hold period P=15 s and guard ρ=30 m. A branch starts from the observed physical state, accumulated actuator setpoints, active reference frame, route-manager state, recorded history and the action already computed for the current interval.
++
++![Fig. 1. Prediction branches and actual execution. Memory replay and setpoint accumulation are separate operations. At t, the old-reference action is already fixed; the new reference applies at t+1 and first affects t+1 to t+2. Only executed observations and commands update real history.](figures/figure1_interface.png)
++
++Controller reconstruction and actuator reconstruction are separate. To rebuild memory at boundary t, the algorithm encodes all recorded states s₀,…,sₜ in the frame active at that boundary, using each state's historical target observations. It resets recurrent and attention state and performs exactly t forward calls for indices 0,…,t−1. Each call uses the encoded current and preceding observations and the actual preceding command; index 0 repeats the initial observation and uses a zero command. Replay outputs are discarded. The next call uses the encoded sₜ and actual command at t−1. Before branching, this call must exactly reproduce the pending old-reference action. Setpoints are reconstructed independently by accumulating the recorded commands through the quantization and clipping rules from zero initial setpoints.
++
++When a changed reference is delivered, the physical controller rebuilds memory in its new frame using the same procedure. A prediction branch repeats that procedure on its own history, which contains the recorded prefix and its simulated continuation. Each branch also clones the route manager after the current nominal call. During a non-nominal hold the manager is not advanced; release clears its incumbent before restoring route feedback. These rules make each prediction correspond to a specified execution protocol. Matching the pending action checks initialization consistency; it does not establish future accuracy.
+ 
+ ### B. Local wind fit and candidate rollout
+ 
+-Let z=(u,v,ωφ,ωψ) and f_z be its derivative from inherited dynamics. Three transitions start at Iₜ={t−6,t−4,t−2}; the most recent ends at t−1. The fitted vector minimizes the residual objective approximately:
++Let z=(u,v,ωφ,ωψ) and f_z be its derivative from inherited dynamics. Three transitions start at Iₜ={t−6,t−4,t−2}; the most recent ends at t−1. The world-frame blowing-toward wind vector w minimizes the residual objective approximately:
+ 
+ $$
+ \mathcal L_t(w)=\sum_{i\in I_t}\|D e_i(w)\|^2,\qquad e_i(w)=f_z(\bar s_i,w)-\frac{z_{i+1}-z_i}{\Delta t}.
+@@ -86,7 +90,7 @@
+ 
+ Nominal feasible returns immediately. Otherwise a nonempty F is ranked by (J,ι). If F is empty but V is nonempty, ranking is lexicographic (−m̂,J,ι): maximum margin, then lower original cost. If V is empty, continuation is retained when available, otherwise nominal. Base-planner failure before candidate construction can still terminate execution. There is no separate side-reference geometric prefilter or certified backup.
+ 
+-The 20 m offset is common to all feasible alternatives after nominal rejection and does not price whether intervention is worthwhile in that branch. It can affect tied-margin fallback comparisons that include nominal. We preserve it in code. Search eligibility and nominal guard determine whether alternatives are considered; terminal preference ranks those alternatives.
++After nominal rejection, every feasible alternative receives the same 20 m offset, so this term does not determine whether intervention is worthwhile. It remains relevant to tied-margin fallback comparisons that include nominal. Search eligibility and the nominal guard trigger intervention; terminal cost ranks feasible alternatives.
+ 
+ ```text
+ Algorithm 1  Selection at a one-second control boundary
+@@ -138,7 +142,7 @@
+ 
+ Twelve preselected old tasks cover 3 pressure, 3 endpoint and 2 each of ordinary crossing/overtaking/non-conflict. We compare ρ∈{0,15,30,60} m without changing true safety. Original 30 m results are reused after a bitwise 444-step S15 reproduction, with other values run as complete tasks. This is sensitivity analysis; no new guard is selected.
+ 
+-Prediction logs are compared only with the actually executed prefix before replanning or termination. Six development snapshots also execute two fixed protocols each, for up to 60 s, after exact physical-prefix and selected-first-15-s reproduction. Real offline branches alone query the actual external evolution; predictors use causal inputs.
++Prediction logs are compared only with the actually executed prefix before replanning or termination. Six selected development snapshots also execute two fixed protocols each, for up to 60 s, after exact physical-prefix reproduction; the six actually selected branches also reproduce their original first 15 s of positions. Three snapshots use the first non-nominal entry in selected tasks, one uses the first prediction, and two use specified diagnostic times (Supplement S7). These are selected cases, not a random accuracy benchmark. Real offline branches alone query the actual external evolution; predictors use causal inputs.
+ 
+ Observation-only integrator-substep replays check selected meter-scale incursions and safe pairs without changing commands or endpoints. They supplement the one-second metric. Experiments use an AMD EPYC 7V12 host, at most four single-thread CPU workers and no GPU.
+ 
+@@ -146,7 +150,7 @@
+ 
+ ### A. Matched 24-task comparison
+ 
+-Table I reports all 24 frozen confirmation tasks. Gains/losses are paired changes in safe completion. Time differences condition on both methods succeeding; they do not assign an artificial navigation time to failures. Table II stratifies the same tasks by their prespecified families.
++Table I reports all 24 frozen confirmation tasks. Gains/losses count paired changes in safe completion. Time differences use only pairs where both methods succeed, so their denominators differ from the completion counts. Table II stratifies the same tasks by prespecified family. These small, designed task sets support descriptive comparisons within their generation envelope, not a population-level estimate of collision risk.
+ 
+ Table I. Matched 24-task results. Δt is relative to R on common-safe pairs; CPU is cumulative episode CPU, not navigation time.
+ 
+@@ -171,7 +175,7 @@
+ | Non-conflict | 4 | 4 | 4 | 4 |
+ | Total | 24 | 19 | 23 | 24 |
+ 
+-Against L, S15 gains one safe completion and loses none. Their 23 common-safe pairs have mean S15−L time +7 s, median 0 and maximum +308 s. Episode CPU is 2133.23 s for S15 versus 378.44 s for L. All five R failures and the one L failure occur in the combined-pressure family; all methods safely complete the other sixteen tasks. L reaches the goal on its failed task, but its buffer incursion makes that task unsafe. S15 and L each activate on eleven tasks. These results show one additional completion within this designed envelope, with navigation and computation costs; they neither isolate a single pressure factor nor estimate natural traffic benefit.
++Against L, S15 gains one safe completion and loses none. Their 23 common-safe pairs have mean S15−L time +7 s, median 0 and maximum +308 s. Episode CPU totals are 2133.23 s for S15 and 378.44 s for L. All five R failures and the one L failure occur in the combined-pressure family; all methods safely complete the other sixteen tasks. L reaches the goal on its failed task but incurs the safety buffer. S15 and L each activate on eleven tasks. The gain therefore concerns one additional completion under joint geometric, wind and static-obstacle pressure.
+ 
+ ![Fig. 2. All 24 matched tasks: common-safe time differences, every actual dynamic margin on a symmetric-log axis (linear for |margin|≤3 m), and a separate safety-status strip. Missing time points are failed pairs, not zero cost. Indices 1–8: pressure; 9–12: crossing; 13–16: overtaking; 17–20: endpoint; 21–24: non-conflict.](figures/figure2_confirmation.png)
+ 
+@@ -179,13 +183,13 @@
+ 
+ The unique L-unsafe/S15-safe task is the second combined-pressure instance (Supplement S8). The two methods have exactly equal recorded physical states, reference histories and issued commands through t=260 s. At that state, detailed nominal prediction gives 11.893 m minimum margin, below ρ=30 m, whereas L gives 59.832 m and returns nominal. Detailed prediction selects +90 degrees with predicted margin 36.546 m and cost 509.528 m; the feasible −90-degree alternative has margin 70.147 m and cost 513.228 m. The selected target is (627.068,163.231) m, versus nominal (575,−200) m. Selection occurs at 260 s, delivery at 261 s, and its first possible physical effect is the 261–262 s interval. This is a verified same-input decision difference; L does not evaluate alternatives after nominal passes.
+ 
+-![Fig. 3. Unique new-confirmation L incursion with complete R/L/S15 and target tracks. Circles and square mark synchronized positions at 260 s; the dotted circle is the target’s 85 m exclusion boundary then. Plus/cross marks identify each run’s minimum-margin endpoint. Lower panel shows the encounter interval, not separate-time closest points.](figures/figure5_rescue.png)
+-
+-Over the complete voyage, L reaches at 566 s with minimum −1.115 m at 402 s; S15 arrives at 519 s with minimum 42.096 m at 291 s. R exits at 392 s with margin −0.162 m. Later states, subsequent interventions and encountered wind differ. We therefore do not attribute the full-voyage outcome solely to the first target change or infer its counterfactual 60-second effect from a later replanned trajectory. The full candidate table and exact log locations are supplied in the supplement.
+-
+-The largest time-cost counterexample is the fourth endpoint instance: R and L safely arrive in 279 s, while S15 takes 587 s. That +308 s penalty remains in the primary table and Fig. 4. Useful risk intervention and unnecessary intervention must both be evaluated.
+-
+-![Fig. 4. Adverse endpoint task: S15 adds 308 s over safe R and L. All complete actual tracks and synchronized target motion are shown. Circles/square mark 200 s; the dotted circle is the exclusion boundary at that time. The lower panel reports synchronized clearance throughout each run.](figures/figure6_adverse.png)
++![Fig. 3. Unique new-confirmation L incursion with complete R/L/S15 and target tracks. Circles and square mark synchronized positions at 260 s; the dotted circle is the target’s 85 m exclusion boundary then. Plus/cross marks identify each run’s minimum-margin endpoint. The gray disk is the static entity; its outer dashed circle adds the 60 m buffer. Lower panel shows the encounter interval, not separate-time closest points.](figures/figure5_rescue.png)
++
++Over the complete voyage, L reaches at 566 s with minimum margin −1.115 m at 402 s; S15 arrives at 519 s with 42.096 m at 291 s. R exits at 392 s with −0.162 m. The methods subsequently replan and encounter different states and local wind. The equal-prefix comparison isolates their decision at 260 s, while the complete-voyage outcomes include all later interventions. Fixed-protocol diagnostics in Section V-D separately test prediction accuracy. The supplement provides the full candidate table and log locations.
++
++The fourth endpoint instance shows the largest travel-time penalty: R and L safely arrive in 279 s, while S15 takes 587 s (Fig. 4). This +308 s intervention cost coexists with the pressure-case benefit.
++
++![Fig. 4. Adverse endpoint task: S15 adds 308 s over safe R and L. R and L coincide. All complete actual tracks and synchronized target motion are shown. Circles/square mark 200 s; the dotted circle is the exclusion boundary at that time. The lower panel reports synchronized clearance throughout each run.](figures/figure6_adverse.png)
+ 
+ Separate historical evaluation recovered two reactive failures among thirty short tasks and one among four long tasks. Another twelve-task confirmation produced no additional completion over R and included a 271 s endpoint detour. Supplement S6 preserves these groups and the overlap of development cases. They do not enlarge the independent task count in Table I.
+ 
+@@ -208,24 +212,24 @@
+ 
+ From 46 distinct historical source tasks, 1083 selected-protocol windows yield 1048 complete 15 s prefixes and 35 truncated prefixes. These are clustered windows, not 1083 independent tasks. Maximum position errors for entering, ordinary feedback, reevaluation and release are 1.039, 30.506, 2.090 and 0.626 m. No compared prefix has a predicted positive margin followed by a nonpositive actual margin; nor does a predicted 30 m guard become an actual guard shortfall on these short prefixes. This limited observation does not validate unexecuted candidates or later replanned tails.
+ 
+-All twelve fixed real branches from six snapshots reproduce their full physical prefixes and the selected first 15 s exactly. Detailed predictions and real branches share the full 60 s in all twelve. Three-way comparisons with L share 60 s in ten branches and 58 s in two because L predicts arrival earlier while the real branch continues. The median branch-maximum position error on those common intervals is 1.104 m for detailed prediction and 53.818 m for L. Three L nominal predictions meet 30 m while actual margins are 17.868, 23.384 and 16.430 m. These are guard shortfalls, not buffer incursions. Conversely, detailed prediction reaches 106.064 m position error at one endpoint snapshot; its nominal and continuation paths coincide and are not independent failures. Its predicted/actual minimum margins remain 140.990/146.171 m. Figure 6 makes both the local accuracy advantage and the adverse error explicit.
+-
+-![Fig. 6. Predictions versus actual fixed-protocol execution. Grouped by six source snapshots, with two protocols per group (circle/triangle; identities in Supplement S7). Errors and margin residuals share ten 60 s and two 58 s intervals. Duplicate nominal/continuation at snapshot 4 is one source state, not independent evidence.](figures/figure4_prediction.png)
++All twelve fixed real branches from six snapshots reproduce their full physical prefixes exactly. The six branches using the actually selected protocols also reproduce the following 15 s of positions from the original executions exactly; the six alternative branches have no corresponding selected-prefix check. Detailed predictions and real branches share the full 60 s in all twelve. Three-way comparisons with L share 60 s in ten branches and 58 s in two because L predicts arrival earlier while the real branch continues. The median branch-maximum position error on those common intervals is 1.104 m for detailed prediction and 53.818 m for L. Three L nominal predictions meet 30 m while actual margins are 17.868, 23.384 and 16.430 m. These are guard shortfalls, not buffer incursions. Conversely, detailed prediction reaches 106.064 m position error at one endpoint snapshot; its nominal and continuation paths coincide and are not independent failures. Its predicted/actual minimum margins remain 140.990/146.171 m. Figure 6 makes both the local accuracy advantage and the adverse error explicit.
++
++![Fig. 6. Predictions versus actual fixed-protocol execution. Grouped by six source snapshots; circle/triangle denote their two protocols, identified on the horizontal axis. Filled markers are S15; open markers are L. N: nominal; C: continuation; signed angles: side protocols. Errors and margin residuals share ten 60 s and two 58 s intervals. Duplicate nominal/continuation at snapshot 4 is one source state, not independent evidence.](figures/figure4_prediction.png)
+ 
+ At the historical pressure snapshot t=149 s, detailed nominal predicts 17.706 m and rejects the 30 m guard; the selected −90-degree side protocol predicts 94.815 m. Fixed execution gives 17.868/95.098 m for the two protocols. The low-order predictor instead accepts nominal at 75.748 m in this same state. This isolates a decision-relevant prediction difference without attributing an entire later voyage to a single branch. This development snapshot illustrates fidelity on a fixed protocol; it is distinct from the new-confirmation complete-task comparison in Figs. 3–4.
+ 
+ Same-command accepted-substep replays preserve all one-second endpoints. The unique confirmation case remains R/L/S15 unsafe/unsafe/safe, with margins −0.162/−1.117/42.094 m. Two historical reactive incursions also retain negative margins, while their S15 pairs remain positive. Maximum accepted step is 0.1 s. This numerical circular-proxy evidence addresses a possible one-second chord artifact; it is not exact hull safety. Full values are in Supplement S4/S11/S14.
+ 
+-At three fixed states with three repetitions per predictor, the median estimation/rollout/selection wall time is 17.009 s for detailed prediction and 0.067 s for L. This excludes loading and initial setup; nominal early return can produce different candidate counts. The episode CPU totals in Table I measure different work and are not planning deadlines. A detailed call can exceed P=15 s while physical time remains paused. Delayed-execution tests use a different protocol and remain separate boundary evidence (Supplement S6/S14).
++At three fixed states with three repetitions per predictor, the median estimation/rollout/selection wall time is 17.009 s for detailed prediction and 0.067 s for L. This excludes loading and initial setup; nominal early return can produce different candidate counts. The episode CPU totals in Table I measure different work and are not planning deadlines. A detailed call can exceed P=15 s while physical time remains paused. 
+ 
+ 
+ ## VI. Discussion and Conclusion
+ 
+-The study adapts control-induced prediction to a recurrent sailboat controller through explicit reference, holding and feedback-restoration protocols. Causal reconstruction makes candidate predictions correspond to the actual control interface. The main selection mechanism is nominal-first guard testing followed by finite alternative evaluation; the 20 m term is not a general intervention-cost tradeoff.
+-
+-The matched experiment locates the additional benefit of detailed prediction in the combined-pressure family: 8/8 safe completions versus 7/8 for L and 3/8 for R, with 16/16 for all methods elsewhere. The single gain over L coexists with +7 s mean and +308 s worst additional time on common-safe tasks and higher episode CPU. L therefore remains a practical computational alternative within the evaluated information setting; the comparison does not establish that detailed dynamics are universally necessary. In particular, L was calibrated on unchanged-reference 15 s windows, not all 60 s hold-and-restore maneuvers. The fixed-protocol checks support local decision fidelity, while the 106 m adverse error and best-effort fallback bound the interpretation of the empirical guard.
+-
+-The results apply to the inherited dynamics, noiseless current motion observations, a known static map and one low-speed constant-velocity target. Maneuvering targets, model mismatch, multi-vessel rules and full COLREGs behavior remain outside the tested scope. Planning pauses physical time, and a measured detailed call can exceed the 15 s review period; deployment needs a moving-while-computing protocol and its own evaluation. Within this scope, comparing executable reference protocols provides a concrete way to expose both useful avoidance choices and costly interventions before selecting a more complex predictor for an application.
++The supervisory interface makes reference prediction consistent with a recurrent sailing controller's execution: the pending action is preserved, memory is reconstructed in the active frame, and reference hold and route restoration are simulated explicitly. The selection rule first tests nominal clearance, then evaluates finite alternatives when needed. The 20 m cost offset does not control intervention in the nominal-rejected feasible branch.
++
++In the matched experiment, detailed prediction completes 8/8 combined-pressure tasks safely, compared with 7/8 for L and 3/8 for R; all methods complete the other sixteen tasks safely. The single additional completion over L accompanies +7 s mean and +308 s maximum travel time on common-safe pairs and higher episode CPU. L is therefore a computationally cheaper alternative with nearly the same completion count in these tasks. Its calibration on unchanged-reference 15 s windows limits the comparison: replacing the full predictor does not isolate which of recurrent memory, actuator, wind or speed modeling produces the difference. Fixed-protocol checks identify local decision-relevant fidelity, while the 106 m adverse error shows that detailed prediction can still be inaccurate.
++
++The evidence is limited to the inherited dynamics, noiseless motion observations, a known static map and one low-speed constant-velocity target. The finite empirical guard and best-effort fallback provide no safety guarantee. Maneuvering targets, structural model mismatch, multi-vessel encounters and COLREGs behavior require separate evaluation. Planning pauses physical time, and a measured detailed call exceeds the 15 s review period; deployment therefore requires a protocol that accounts for motion during computation. Within the tested scope, executable reference protocols reveal both useful avoidance decisions and costly interventions, providing a basis for choosing prediction fidelity according to the application.
+ 
+ ## Code and Model Availability
+ 
+@@ -233,24 +237,26 @@
+ 
+ ## Acknowledgment
+ 
+-The authors thank the inherited-asset provider for permission to use the research code and pretrained assets. Author names, affiliations and funding are to be completed by the authors. AI tools assisted drafting, implementation and internal evidence review; human authors are responsible for verification and any required disclosure.
++AI tools assisted drafting, implementation and internal evidence review.
+ 
+ ## References
+ 
+ [1] A. G. da Silva Junior, D. H. dos Santos, A. P. F. de Negreiros, J. M. V. B. de Souza Silva, and L. M. G. Gonçalves, “High-level path planning for an autonomous sailboat robot using Q-learning,” Sensors, vol. 20, no. 6, Art. 1550, 2020, doi: 10.3390/s20061550.
+ 
+-[2] D. Wilkie, J. van den Berg, and D. Manocha, “Generalized velocity obstacles,” in Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems, 2009, doi: 10.1109/IROS.2009.5354175.
+-
+-[3] E. Garone, S. Di Cairano, and I. Kolmanovsky, “Reference and command governors for systems with constraints: A survey on theory and applications,” Automatica, vol. 75, pp. 306–328, 2017, doi: 10.1016/j.automatica.2016.08.013.
+-
+-[4] Q. Sun, W. Qi, and H. Qian, “MoWe: Motion observation for wind estimation of sailing robots,” Journal of Field Robotics, vol. 42, no. 5, pp. 2355–2374, 2025, doi: 10.1002/rob.22512.
+-
+-[5] T. Haarnoja, A. Zhou, P. Abbeel, and S. Levine, “Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor,” in Proc. 35th International Conference on Machine Learning, vol. 80, pp. 1861–1870, 2018.
+-
+-[6] B.-O. H. Eriksen, M. Breivik, E. F. Wilthil, A. L. Flåten, and E. F. Brekke, “The branching-course model predictive control algorithm for maritime collision avoidance,” Journal of Field Robotics, vol. 36, no. 7, pp. 1222–1249, 2019, doi: 10.1002/rob.21900.
+-
+-[7] A. İşleyen, N. van de Wouw, and Ö. Arslan, “Feedback motion prediction for safe unicycle robot navigation,” in Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems, 2023, pp. 10511–10518, doi: 10.1109/IROS55552.2023.10341787.
+-
+-[8] L. Xiao and J. Jouffroy, “Modeling and nonlinear heading control of sailing yachts,” IEEE Journal of Oceanic Engineering, vol. 39, no. 2, pp. 256–268, 2014, doi: 10.1109/JOE.2013.2247276.
+-
+-[9] C. Yang, B. Guo, Y. Zhang, Y. Gu, Y. Li, S. Huang, H. Huang, J. Dong, and P. Li, “Learning to sail without wind information: reinforcement learning-based control for unmanned sailing vessels under partial observability,” Applied Ocean Research, vol. 175, Art. no. 105246, 2026, doi: 10.1016/j.apor.2026.105246.
++[2] W. Qi, Q. Sun, C. Liu, X. Ji, Z. Cao, Y. Liang, and H. Qian, “Collision Risk Assessment and Obstacle Avoidance Control for Autonomous Sailing Robots,” in Proc. IEEE International Conference on Robotics and Automation (ICRA), pp. 2511–2517, 2021, doi: 10.1109/ICRA48506.2021.9560859.
++
++[3] D. Wilkie, J. van den Berg, and D. Manocha, “Generalized velocity obstacles,” in Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems, 2009, pp. 5573–5578, doi: 10.1109/IROS.2009.5354175.
++
++[4] E. Garone, S. Di Cairano, and I. Kolmanovsky, “Reference and command governors for systems with constraints: A survey on theory and applications,” Automatica, vol. 75, pp. 306–328, 2017, doi: 10.1016/j.automatica.2016.08.013.
++
++[5] B.-O. H. Eriksen, M. Breivik, E. F. Wilthil, A. L. Flåten, and E. F. Brekke, “The branching-course model predictive control algorithm for maritime collision avoidance,” Journal of Field Robotics, vol. 36, no. 7, pp. 1222–1249, 2019, doi: 10.1002/rob.21900.
++
++[6] A. İşleyen, N. van de Wouw, and Ö. Arslan, “Feedback motion prediction for safe unicycle robot navigation,” in Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems, 2023, pp. 10511–10518, doi: 10.1109/IROS55552.2023.10341787.
++
++[7] Q. Sun, W. Qi, and H. Qian, “MoWe: Motion observation for wind estimation of sailing robots,” Journal of Field Robotics, vol. 42, no. 5, pp. 2355–2374, 2025, doi: 10.1002/rob.22512.
++
++[8] C. Yang, B. Guo, Y. Zhang, Y. Gu, Y. Li, S. Huang, H. Huang, J. Dong, and P. Li, “Learning to sail without wind information: reinforcement learning-based control for unmanned sailing vessels under partial observability,” Applied Ocean Research, vol. 175, Art. no. 105246, 2026, doi: 10.1016/j.apor.2026.105246.
++
++[9] T. Haarnoja, A. Zhou, P. Abbeel, and S. Levine, “Soft actor-critic: Off-policy maximum entropy deep reinforcement learning with a stochastic actor,” in Proc. 35th International Conference on Machine Learning, vol. 80, pp. 1861–1870, 2018.
++
++[10] L. Xiao and J. Jouffroy, “Modeling and nonlinear heading control of sailing yachts,” IEEE Journal of Oceanic Engineering, vol. 39, no. 2, pp. 256–268, 2014, doi: 10.1109/JOE.2013.2247276.

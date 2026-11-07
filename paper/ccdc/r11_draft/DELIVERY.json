@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-05",
+  "pdf_pages": 6,
+  "pdf_engine": "Microsoft Word ExportAsFixedFormat",
+  "new_experiments": 0,
+  "new_training": false,
+  "push": false,
+  "files": {
+    "manuscript.md": "9459f4547b6558525a93a779d0817d6aa73f035b0e877d0f0cb614e2df8cd93e",
+    "manuscript.docx": "34ca0c66b8705f6e49945a6c6aea9d8c0c0f11cd886ae742c4d8c96decc3349a",
+    "manuscript.pdf": "2929dfea98f57e387c67080cf2acc9983a0a61cbb892777b6dc1297419090cc0",
+    "AUTHOR_NOTES_ZH.md": "20f1c6492c3aa6cce4dcc1d6d48b3fe54de241b2465a4afd24a828d0526947a3",
+    "REVIEW.md": "b726da6b9f4417172c91da7fe3c75e44d2182a223ee2845779e27dc95bc3b677",
+    "AUTHOR_RESPONSE.md": "7e7dcce3c7494dc023ef84d89f657cc1f07a047924e3c8b9f73f6610efdde8d2",
+    "figure_data.json": "fb9ff5d26d0236ca6b66ff774c7a535ba6d426d98e7f6410cb21136554b26cc9"
+  }
+}

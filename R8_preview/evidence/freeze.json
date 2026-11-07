@@ -1,0 +1,25 @@
+{
+  "time": 1791183052.3781626,
+  "methods": {
+    "reactive": {
+      "availability": true
+    },
+    "sampled": {
+      "sampled": true,
+      "horizon": 60,
+      "period": 15,
+      "guard": 30
+    },
+    "hold60": {
+      "sampled": true,
+      "horizon": 60,
+      "period": 60,
+      "guard": 30
+    }
+  },
+  "primary": "sampled",
+  "fresh_scenes": 30,
+  "primary_analysis": "Underway incursions separated from endpoint and no-conflict; gains/losses and common-safe time mean/median/p90/max; all failures retained",
+  "constraints": "No scientific changes after fresh outcomes unless explicitly return this set to development and label it seen",
+  "scientific_commit": "29124b8"
+}

@@ -1,0 +1,20 @@
+{
+  "files": {
+    "manuscript.md": "cf1cbb4ef56f0086f3641e4306fe6c72ccfc84bee0830d14fd782cff2e23c87f",
+    "manuscript.docx": "02d143cb438236175339f4aab103ef346b4efb652908ec26cbddd45333c65814",
+    "manuscript.pdf": "bf702658243506e24f4088c66e16b8cf3a91532828850d71d939f121a25a3057",
+    "SUPPLEMENT.md": "7c6dbc546536ed740a076f84609f955ffce9be102050f45998a5b69e26ebc917",
+    "AUTHOR_NOTES_ZH.md": "db31c9de7fbe22e237ab6554b95c39eb920ab7f75d7d3dd5a03a05dd4397786b",
+    "CLAIM_LAYOUT_CHECK.json": "609693693fe77a619fa4e02a5af45e8b677239ea33abc09c66032f5f3888518f"
+  },
+  "preserved_recovery_archive_sha256": "d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640",
+  "source_R13": {
+    "manuscript.md": "5d104c82ab58c402ff09bbac34015a8c59052cd63f55bb87a58dc4828dc5cb0c",
+    "manuscript.docx": "c12f3cbf6bc3fda3025776af7d297c370f8380de39706ccc7373f76a78b174a5",
+    "manuscript.pdf": "859c8226cb0abe5e9048fdc11fd3eb4953448534e3b8519f06a81728e7caff43",
+    "SUPPLEMENT.md": "fd974d3ddec2adb58a257e3376215cf952e902f4e1b271c84bd2de0a351ae08c"
+  },
+  "new_experiments": 0,
+  "physics_changed": false,
+  "A_independent_of_B": true
+}

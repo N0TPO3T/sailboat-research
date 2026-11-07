@@ -1,0 +1,22 @@
+[
+  {
+    "scene": "confirm_mixed_3",
+    "full_actual_state_action_equal": true,
+    "steps": 431
+  },
+  {
+    "scene": "confirm_mixed_7",
+    "full_actual_state_action_equal": true,
+    "steps": 540
+  },
+  {
+    "scene": "confirm_mixed_6",
+    "full_actual_state_action_equal": true,
+    "steps": 336
+  },
+  {
+    "scene": "r8new_endpoint_5",
+    "full_actual_state_action_equal": true,
+    "steps": 584
+  }
+]

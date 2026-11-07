@@ -1,0 +1,399 @@
+{
+  "development": {
+    "parity30": {
+      "tasks": 1,
+      "safe": 1,
+      "failures": {
+        "safe": 1
+      },
+      "rescues": 0,
+      "losses": 0,
+      "min_dynamic_margin": 43.589225351722575,
+      "interventions": 4,
+      "activated_tasks": 1,
+      "fallbacks": 0,
+      "non_nominal_selections": 6,
+      "cpu_total": 194.01514128299996,
+      "planning_total": 175.18573688389733,
+      "common_safe_time_delta_vs_R": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "max": null,
+        "min": null
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "max": null,
+        "min": null
+      }
+    },
+    "simple": {
+      "tasks": 12,
+      "safe": 12,
+      "failures": {
+        "safe": 12
+      },
+      "rescues": 0,
+      "losses": 0,
+      "min_dynamic_margin": 0.016868762320370934,
+      "interventions": 19,
+      "activated_tasks": 6,
+      "fallbacks": 13,
+      "non_nominal_selections": 36,
+      "cpu_total": 252.119544446,
+      "planning_total": 34.39557225210592,
+      "common_safe_time_delta_vs_R": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "max": null,
+        "min": null
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "p90": null,
+        "max": null,
+        "min": null
+      }
+    }
+  },
+  "guard": {
+    "guard0": {
+      "tasks": 12,
+      "safe": 12,
+      "failures": {
+        "safe": 12
+      },
+      "rescues": 2,
+      "losses": 0,
+      "min_dynamic_margin": 3.3468233173292816,
+      "interventions": 7,
+      "activated_tasks": 3,
+      "fallbacks": 0,
+      "non_nominal_selections": 7,
+      "cpu_total": 988.4011816519998,
+      "planning_total": 805.2805655184202,
+      "common_safe_time_delta_vs_R": {
+        "n": 10,
+        "mean": 2.8,
+        "median": 0.0,
+        "p90": 2.79999999999999,
+        "max": 28,
+        "min": 0
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 10,
+        "mean": 7.911919105052948,
+        "median": 0.0,
+        "p90": 7.91191910505292,
+        "max": 79.11919105052948,
+        "min": 0.0
+      }
+    },
+    "guard15": {
+      "tasks": 12,
+      "safe": 12,
+      "failures": {
+        "safe": 12
+      },
+      "rescues": 2,
+      "losses": 0,
+      "min_dynamic_margin": 24.879040101787282,
+      "interventions": 9,
+      "activated_tasks": 5,
+      "fallbacks": 1,
+      "non_nominal_selections": 13,
+      "cpu_total": 1229.7519753289998,
+      "planning_total": 1026.0660744458437,
+      "common_safe_time_delta_vs_R": {
+        "n": 10,
+        "mean": 32.7,
+        "median": 0.0,
+        "p90": 78.39999999999989,
+        "max": 334,
+        "min": -57
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 10,
+        "mean": 106.01377605199814,
+        "median": 0.0,
+        "p90": 269.53584964275325,
+        "max": 1153.0856724977493,
+        "min": -264.3115590810776
+      }
+    },
+    "guard30": {
+      "tasks": 12,
+      "safe": 12,
+      "failures": {
+        "safe": 12
+      },
+      "rescues": 2,
+      "losses": 0,
+      "min_dynamic_margin": 31.78118816235593,
+      "interventions": 12,
+      "activated_tasks": 5,
+      "fallbacks": 0,
+      "non_nominal_selections": 20,
+      "cpu_total": 1301.440870775,
+      "planning_total": 1106.595137189608,
+      "common_safe_time_delta_vs_R": {
+        "n": 10,
+        "mean": 29.2,
+        "median": 0.0,
+        "p90": 86.09999999999994,
+        "max": 267,
+        "min": -41
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 10,
+        "mean": 103.15991274118423,
+        "median": 0.0,
+        "p90": 302.13238190412494,
+        "max": 1008.8439673185349,
+        "min": -200.85371232032776
+      }
+    },
+    "guard60": {
+      "tasks": 12,
+      "safe": 12,
+      "failures": {
+        "safe": 12
+      },
+      "rescues": 2,
+      "losses": 0,
+      "min_dynamic_margin": 61.76745622529472,
+      "interventions": 13,
+      "activated_tasks": 7,
+      "fallbacks": 2,
+      "non_nominal_selections": 32,
+      "cpu_total": 1601.198615221,
+      "planning_total": 1403.8396221110597,
+      "common_safe_time_delta_vs_R": {
+        "n": 10,
+        "mean": 40.2,
+        "median": 0.0,
+        "p90": 112.19999999999992,
+        "max": 321,
+        "min": -13
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 10,
+        "mean": 124.64944061040879,
+        "median": 0.0,
+        "p90": 317.6264585614201,
+        "max": 1138.9287394285202,
+        "min": -119.46543443202972
+      }
+    },
+    "reactive": {
+      "tasks": 12,
+      "safe": 10,
+      "failures": {
+        "buffer_incursion": 2,
+        "safe": 10
+      },
+      "rescues": 0,
+      "losses": 0,
+      "min_dynamic_margin": -1.2250195657901486,
+      "interventions": 0,
+      "activated_tasks": 0,
+      "fallbacks": 0,
+      "non_nominal_selections": 0,
+      "cpu_total": 162.25616810199998,
+      "planning_total": 2.141838622279465,
+      "common_safe_time_delta_vs_R": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0,
+        "min": 0
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 10,
+        "mean": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      }
+    }
+  },
+  "confirmation": {
+    "reactive": {
+      "tasks": 24,
+      "safe": 19,
+      "failures": {
+        "buffer_incursion": 5,
+        "safe": 19
+      },
+      "rescues": 0,
+      "losses": 0,
+      "min_dynamic_margin": -1.412340768947999,
+      "interventions": 0,
+      "activated_tasks": 0,
+      "fallbacks": 0,
+      "non_nominal_selections": 0,
+      "cpu_total": 270.67713405100005,
+      "planning_total": 4.068794182036072,
+      "common_safe_time_delta_vs_R": {
+        "n": 19,
+        "mean": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0,
+        "min": 0
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 19,
+        "mean": 0.0,
+        "median": 0.0,
+        "p90": 0.0,
+        "max": 0.0,
+        "min": 0.0
+      }
+    },
+    "sampled": {
+      "tasks": 24,
+      "safe": 24,
+      "failures": {
+        "safe": 24
+      },
+      "rescues": 5,
+      "losses": 0,
+      "min_dynamic_margin": 30.428345354103698,
+      "interventions": 20,
+      "activated_tasks": 11,
+      "fallbacks": 2,
+      "non_nominal_selections": 29,
+      "cpu_total": 2133.2320562050004,
+      "planning_total": 1796.1042552506551,
+      "common_safe_time_delta_vs_R": {
+        "n": 19,
+        "mean": 25.157894736842106,
+        "median": 0.0,
+        "p90": 61.19999999999996,
+        "max": 308,
+        "min": -19
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 19,
+        "mean": 82.86686984488838,
+        "median": 0.0,
+        "p90": 149.5474519014357,
+        "max": 1071.2065947651863,
+        "min": -45.0886435508728
+      }
+    },
+    "simple": {
+      "tasks": 24,
+      "safe": 23,
+      "failures": {
+        "buffer_incursion": 1,
+        "safe": 23
+      },
+      "rescues": 4,
+      "losses": 0,
+      "min_dynamic_margin": -1.11532173504051,
+      "interventions": 29,
+      "activated_tasks": 11,
+      "fallbacks": 15,
+      "non_nominal_selections": 54,
+      "cpu_total": 378.44452266599995,
+      "planning_total": 43.83045947458595,
+      "common_safe_time_delta_vs_R": {
+        "n": 19,
+        "mean": 6.631578947368421,
+        "median": 0.0,
+        "p90": 16.99999999999998,
+        "max": 69,
+        "min": -1
+      },
+      "common_safe_path_delta_vs_R": {
+        "n": 19,
+        "mean": 17.090017130500392,
+        "median": 0.0,
+        "p90": 33.25649304389948,
+        "max": 199.84983253479004,
+        "min": 0.0
+      }
+    }
+  },
+  "detailed_vs_simple": {
+    "paired_tasks": 24,
+    "rescues": 1,
+    "losses": 0,
+    "common_safe_time_delta": {
+      "n": 23,
+      "mean": 7.0,
+      "median": 0.0,
+      "p90": 38.20000000000002,
+      "max": 308,
+      "min": -136
+    },
+    "common_safe_path_delta": {
+      "n": 23,
+      "mean": 40.17690498414247,
+      "median": 0.0,
+      "p90": 90.5950321674347,
+      "max": 1071.2065947651863,
+      "min": -306.31639897823334
+    }
+  },
+  "planning_profile": {
+    "detailed": {
+      "wall_seconds": {
+        "n": 9,
+        "mean": 12.308401798467255,
+        "median": 17.009143771138042,
+        "p90": 17.63924405798316,
+        "max": 17.68497254513204,
+        "min": 2.2892430131323636
+      },
+      "cpu_seconds": {
+        "n": 9,
+        "mean": 12.304479463444444,
+        "median": 17.004498683,
+        "p90": 17.6287459332,
+        "max": 17.68079451,
+        "min": 2.288558600999991
+      }
+    },
+    "simple": {
+      "wall_seconds": {
+        "n": 9,
+        "mean": 0.07095825692845716,
+        "median": 0.06705116899684072,
+        "p90": 0.13603413365781308,
+        "max": 0.1364204529672861,
+        "min": 0.009627159684896469
+      },
+      "cpu_seconds": {
+        "n": 9,
+        "mean": 0.07089284344444262,
+        "median": 0.0670524320000041,
+        "p90": 0.1359429036000023,
+        "max": 0.13642065399999126,
+        "min": 0.00962790499998789
+      }
+    }
+  },
+  "fixed_protocol": {
+    "snapshots": 6,
+    "branches": 12,
+    "full60_common": 12,
+    "max_error_m": 106.06365950002986,
+    "max_abs_margin_error": 5.180983040071709,
+    "predsafe0_actualunsafe": 0,
+    "predguard30_actualunsafe": 0
+  }
+}

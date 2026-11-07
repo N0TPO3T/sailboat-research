@@ -1,0 +1,36 @@
+--- round03
++++ round04
+@@ -20,9 +20,9 @@
+ 
+ ### A. Inherited dynamics and local policy
+ 
+-The local controller is an inherited 18-input recurrent SAC policy with temporal attention, a frozen normalizer and deterministic tanh evaluation actions. Reference [5] describes SAC, not the specific inherited checkpoint. The Actor has hidden layers (256,256) and persistent recurrent state; its ten-slot attention history is not a periodic memory reset. No network is trained in this study. The physical simulator and detailed predictor use separate instances of the same inherited dynamics. This isolates state and hidden information, not model-identification error.
+-
+-The implemented four-degree motion state includes position, roll, heading, body surge/sway velocities and roll/yaw rates, plus actual sail and rudder angles. Implemented parameters include mass 25,900 kg and sail, rudder and keel areas 170, 1.17 and 8.7 m². The reproducibility supplement lists the full parameter dictionary, exact code and weight hashes. The author-maintained model release associated with [8] describes the same four-degree modeling family; the inherited local thesis draft also cites it. Exact equivalence of the Python port to that release is not established. The checkpoint is traced to a user-supplied archive and PART5/SAC-LSTM-att evaluation entries; the dynamics is a separate byte-identified source snapshot. An internal recovery bundle loads the exact weights and reproduces Table I from all 72 traces. Original training-to-checkpoint linkage and permission for the inherited port/weights remain unconfirmed. Supplement S9 and S11–S12 separate verified local lineage, primary-source metadata and these outstanding provenance/access limits.
++The dynamics implementation and pretrained assets were supplied by Chao Yang from the research codebase associated with Yang et al. [9] and are used with permission. We evaluate an inherited 18-input recurrent SAC policy with temporal attention, a matching frozen normalizer and deterministic tanh actions. This is distinct from the 14-dimensional wind-input-free policy formulation in [9]; checkpoint identity and reproduction of its benchmark results are not claimed. The Actor has hidden layers (256,256), persistent recurrent state and a ten-slot attention history. Reference [5] describes SAC. No policy is trained here. Separate instances of the inherited dynamics isolate physical execution and prediction; this does not isolate model-identification error.
++
++The implemented four-degree motion state includes position, roll, heading, body surge/sway velocities and roll/yaw rates, plus actual sail and rudder angles. Parameters include mass 25,900 kg and sail, rudder and keel areas 170, 1.17 and 8.7 m². Reference [8] supplies the original modeling lineage; software attribution to the associated research codebase [9] is separate. Exact equivalence of the Python port to the original model release is not established. Supplement S9 and S11–S12 specify the observation mapping, normalization, code/weight identities and authorized reproduction route. The internal recovery bundle loads the exact assets and reconstructs Table I from all 72 traces. The exact 18D checkpoint-to-training-run linkage remains undocumented.
+ 
+ An active reference g defines a rigid frame with angle θ equal to the boat-to-reference bearing at application and origin g − 500[cos θ,sin θ]. It places the reference at (500,0) m without rescaling. The first 14 policy inputs are local position, roll/local heading, body velocities, angular rates, actual sail/rudder angles, two progress differences and reference coordinates. Progress differences are previous minus current goal distance and previous minus current |500 − x_local|, initially zero. Body velocities remain in body coordinates. Two additional obstacle distance/bearing pairs use max(0,d−R+40 m), where R is exclusion radius; pairs within 150 m in that encoding are sorted by distance/bearing, with missing entries zero-filled.
+ 
+@@ -214,9 +214,13 @@
+ 
+ The evaluation assumes the inherited dynamics, noiseless current motion observations, a known static map and one non-cooperative low-speed vessel with constant velocity. Target extrapolation is matched in these tests; maneuvering-target robustness, broader model mismatch, multi-vessel encounters and complete COLREGs behavior are not established. Prediction windows and development branches are diagnostic, not independent task trials. The physical clock pauses during planning; a measured call can exceed the review period. Real-time deployment would require a separate moving-while-computing delivery evaluation. Within these limits, the paper provides a specified reference-execution interface, an internally recovery-checked artifact and evidence of both useful avoidance and conservative intervention, rather than a universal improvement claim.
+ 
++## Code and Model Availability
++
++With permission from the inherited-asset provider, source code, pretrained weights, the matching normalizer, configurations and records needed to reproduce the reported experiments can be provided to editors and reviewers upon request. Supplement S9 and S11–S12 identify the versions and commands. This is an authorized provision route, not a claim of public release of the exact 18D assets.
++
+ ## Acknowledgment and Author Actions
+ 
+-Author names, affiliations, funding and formal attribution/release permission for inherited assets remain to be confirmed. AI tools assisted drafting, implementation and internal evidence review. Human authors remain responsible for verification and disclosure. The experiments are simulation comparisons and offline checks; this revision reorganizes their evidence without policy training or a physical experiment.
++Author names, affiliations and funding remain to be confirmed. AI tools assisted drafting, implementation and internal evidence review. Human authors remain responsible for verification and disclosure. The experiments are simulation comparisons and offline checks; this revision reorganizes their evidence without policy training or a physical experiment.
+ 
+ ## References
+ 
+@@ -235,3 +239,5 @@
+ [7] A. İşleyen, N. van de Wouw, and Ö. Arslan, “Feedback motion prediction for safe unicycle robot navigation,” in Proc. IEEE/RSJ International Conference on Intelligent Robots and Systems, 2023, pp. 10511–10518, doi: 10.1109/IROS55552.2023.10341787.
+ 
+ [8] L. Xiao and J. Jouffroy, “Modeling and nonlinear heading control of sailing yachts,” IEEE Journal of Oceanic Engineering, vol. 39, no. 2, pp. 256–268, 2014, doi: 10.1109/JOE.2013.2247276.
++
++[9] C. Yang, B. Guo, Y. Zhang, Y. Gu, Y. Li, S. Huang, H. Huang, J. Dong, and P. Li, “Learning to sail without wind information: reinforcement learning-based control for unmanned sailing vessels under partial observability,” Applied Ocean Research, vol. 175, Art. no. 105246, 2026, doi: 10.1016/j.apor.2026.105246.

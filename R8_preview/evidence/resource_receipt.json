@@ -1,0 +1,13 @@
+{
+  "science_finished_epoch": 1791184859.5560172,
+  "started_epoch": 1791181543.5121374,
+  "wall_to_science_completion_s": 3316.0438797473907,
+  "recorded_cpu_seconds": 7068.308275421,
+  "unrecorded_interrupted_cpu": "unknown; not included in recorded total",
+  "max_experiment_workers": 4,
+  "numerical_threads": 1,
+  "gpu_hours": 0,
+  "training_steps": 0,
+  "scientific_commit": "29124b8",
+  "no_running_experiments": true
+}

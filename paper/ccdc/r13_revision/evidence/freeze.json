@@ -1,0 +1,45 @@
+{
+  "epoch": 1791261430.0781424,
+  "generation_seed": 202610612,
+  "count": 24,
+  "families": {
+    "mixed_pressure": 8,
+    "underway_crossing": 4,
+    "underway_overtaking": 4,
+    "endpoint": 4,
+    "nonconflict": 4
+  },
+  "methods": {
+    "reactive": {
+      "availability": true
+    },
+    "sampled": {
+      "sampled": true,
+      "period": 15,
+      "horizon": 60,
+      "guard": 30
+    },
+    "simple": {
+      "sampled": true,
+      "period": 15,
+      "horizon": 60,
+      "guard": 30,
+      "low_order_params": [
+        8.0,
+        0.1,
+        0.16
+      ]
+    }
+  },
+  "sources": {
+    "scripts/run_r12.py": "0d50d4be9b1bb5711517612cd68982cb853bd97c065a498f8dd86e73e0bc663e",
+    "src/sailboat_routing/r12_model.py": "0fbb61043fbc302464b2ddcd8feb810d75ac0328ce35f7475bdd75f26e5327af",
+    "src/sailboat_routing/r8_model.py": "0fa89f4e3ac9fbee514c709baf59936e0bda3d3867105d18c2005231d41cb175",
+    "src/sailboat_routing/r8_planner.py": "ec6313eb3d5329198b0af63867705385b9334a272a13dd174a40235ef4a4dbc8",
+    "scripts/run_r8.py": "1f63512f268892d9b76bbbe5bcf109d7b3301dd52665d02f13a2013d07626424"
+  },
+  "no_outcome_filtering": true,
+  "no_post_confirmation_tuning": true,
+  "cost_basis": "12 low-order development tasks completed within minutes; original parity benchmark under same single-thread runtime;24 tasks fixed within12h budget",
+  "resource_only_note": "Runner accepts capped worker count, guard3+offline branch1; no scientific change, before new results"
+}

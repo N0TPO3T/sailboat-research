@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-30",
+  "content_source": "track_A_closeout_20261013",
+  "compiler": "Tectonic 0.15.0 (XeTeX engine)",
+  "status": "SUCCESS",
+  "application_compiler_attempt": "timed out; independent Tectonic build succeeded",
+  "scientific_experiments_run": 0,
+  "visual_check": "All 17 pages rendered and inspected in page overviews; no visible overlap or clipping. Not a new scientific review.",
+  "documents": {
+    "main": {
+      "pages": 8,
+      "overfull_boxes": 0,
+      "undefined_references_or_citations": 0,
+      "underfull_warnings": 10,
+      "remaining_warnings": "Non-fatal underfull spacing warnings; Tectonic emitted a non-fatal fontconfig configuration warning. Compiled PDF created."
+    },
+    "supplement": {
+      "pages": 9,
+      "overfull_boxes": 0,
+      "undefined_references_or_citations": 0,
+      "underfull_warnings": 3,
+      "remaining_warnings": "Non-fatal underfull spacing warnings; Tectonic emitted a non-fatal fontconfig configuration warning. Compiled PDF created."
+    }
+  },
+  "markdown_sources_byte_identical": true
+}

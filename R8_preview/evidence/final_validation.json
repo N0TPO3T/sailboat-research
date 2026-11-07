@@ -1,0 +1,61 @@
+{
+  "confirmation": {
+    "complete_rows": 90,
+    "source_hash_match": true,
+    "fallback": [
+      {
+        "scene": "r8new_mixed_pressure_3",
+        "variant": "hold60",
+        "time": 310,
+        "event": "reevaluate",
+        "selected": "turn-90",
+        "target": [
+          593.8103099365319,
+          -598.246002568921
+        ],
+        "all_predicted_infeasible": true
+      }
+    ]
+  },
+  "long": {
+    "complete_rows": 12,
+    "source_hash_match": true,
+    "fallback": [
+      {
+        "scene": "r8long_5000_crossing",
+        "variant": "hold60",
+        "time": 799,
+        "event": "reevaluate",
+        "selected": "turn-90",
+        "target": [
+          2781.629446816096,
+          -399.2374115218825
+        ],
+        "all_predicted_infeasible": true
+      },
+      {
+        "scene": "r8long_3000_crossing",
+        "variant": "sampled",
+        "time": 551,
+        "event": "ordinary",
+        "selected": "nominal",
+        "target": [
+          1750.0,
+          -200.0
+        ],
+        "all_predicted_infeasible": true
+      }
+    ]
+  },
+  "static_regression": {
+    "complete_rows": 12,
+    "source_hash_match": true,
+    "fallback": []
+  },
+  "timing_controls": {
+    "complete_rows": 4,
+    "source_hash_match": true,
+    "fallback": [],
+    "full_trajectory_equal": true
+  }
+}

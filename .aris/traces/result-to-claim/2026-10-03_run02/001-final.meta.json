@@ -1,0 +1,21 @@
+{
+  "call_number": 1,
+  "purpose": "final-result-to-claim",
+  "recorded_at": "2026-10-03T10:36:47.715916+00:00",
+  "agent_id": "/root/r2_final_claim_review",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "reviewer_family": "openai",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "integrity_status": "unavailable",
+  "evidence_helper": "unavailable",
+  "status": "ok",
+  "completed_at": "2026-10-03T10:40:42.387082+00:00",
+  "claim_supported": "no",
+  "report_revisions": [
+    "fix supplemental figure path",
+    "clarify planned map filtering",
+    "replace undefined near-behavior claim with exact outcomes"
+  ]
+}

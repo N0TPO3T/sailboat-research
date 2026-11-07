@@ -1,0 +1,10 @@
+{
+  "skill": "auto-paper-improvement-loop",
+  "run_id": "2026-10-08_run01",
+  "executor": "codex",
+  "executor_family": "openai",
+  "review_independence": "same-family, fresh context each round",
+  "acceptance_status": "provisional",
+  "project_dir": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0",
+  "artifact_dir": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\paper\\ccdc\\track_A_aris_20261008"
+}

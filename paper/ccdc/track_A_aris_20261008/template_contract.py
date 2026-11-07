@@ -1,0 +1,7 @@
+from pathlib import Path
+from docx import Document
+import zipfile,hashlib,json
+P=Path(__file__).resolve().parent;d=Document(P/'official_template.docx')
+data={'reference_sha256':hashlib.sha256((P/'official_template.docx').read_bytes()).hexdigest(),'sections':[{'width':s.page_width,'height':s.page_height,'margins':[s.top_margin,s.bottom_margin,s.left_margin,s.right_margin],'xml':s._sectPr.xml} for s in d.sections]}
+(P/'template_evidence.json').write_text(json.dumps(data,indent=2),encoding='utf8')
+(P/'artifact.md').write_text('# Template execution contract\n\nSource: official_template.docx copied byte-identically from R13 and supplied CCDC Word template. Exact section geometry and XML in template_evidence.json. Reuse established R13 builder: title uses template first-section properties; body uses fourth-section two-column properties; source styles and numbering remain intact. Slots: complete current manuscript replaces body; formulas rendered native Office Math; six original log-derived figures retained; three tables (new family table); unknown author metadata kept explicit. No font shrink or generic restyling. Title/Author/Abstract/Keywords/Heading/body/caption/reference styles remain from the template. Full final PDF pages will be visually inspected; source template hash and styles.xml will be checked unchanged. User explicitly requests existing Word pipeline, so native Word PDF export plus Poppler pages replaces unavailable container LibreOffice renderer.\n',encoding='utf8')

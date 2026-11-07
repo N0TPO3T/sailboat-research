@@ -1,0 +1,641 @@
+{
+  "confirmation": {
+    "complete": true,
+    "methods": {
+      "delayed15": {
+        "n": 12,
+        "safe": 12,
+        "arrived": 12,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 12
+        },
+        "active_episodes": 4,
+        "max_planning": 22.714945469982922,
+        "mean_time_all": 365.1666666666667
+      },
+      "fast60": {
+        "n": 12,
+        "safe": 11,
+        "arrived": 12,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 12
+        },
+        "active_episodes": 4,
+        "max_planning": 12.980442798230797,
+        "mean_time_all": 366.5833333333333
+      },
+      "ideal15": {
+        "n": 12,
+        "safe": 12,
+        "arrived": 12,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 12
+        },
+        "active_episodes": 4,
+        "max_planning": 22.435447620227933,
+        "mean_time_all": 346.3333333333333
+      },
+      "main": {
+        "n": 12,
+        "safe": 12,
+        "arrived": 12,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 12
+        },
+        "active_episodes": 4,
+        "max_planning": 19.111658892594278,
+        "mean_time_all": 368.0833333333333
+      },
+      "reactive": {
+        "n": 12,
+        "safe": 12,
+        "arrived": 12,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 12
+        },
+        "active_episodes": 0,
+        "max_planning": 0.013830466195940971,
+        "mean_time_all": 310.6666666666667
+      }
+    },
+    "comparisons": {
+      "delayed15": {
+        "n": 12,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 12,
+        "dt_mean": 54.5,
+        "dt_median": 3.0,
+        "dt_p90": 163.90000000000003,
+        "dt_p95": 253.89999999999986,
+        "dt_max": 354
+      },
+      "fast60": {
+        "n": 12,
+        "gains": 0,
+        "losses": 1,
+        "common_safe": 11,
+        "dt_mean": 28.545454545454547,
+        "dt_median": 1.0,
+        "dt_p90": 114.0,
+        "dt_p95": 116.5,
+        "dt_max": 119
+      },
+      "ideal15": {
+        "n": 12,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 12,
+        "dt_mean": 35.666666666666664,
+        "dt_median": 0.0,
+        "dt_p90": 75.10000000000001,
+        "dt_p95": 177.09999999999985,
+        "dt_max": 297
+      },
+      "main": {
+        "n": 12,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 12,
+        "dt_mean": 57.416666666666664,
+        "dt_median": 7.5,
+        "dt_p90": 229.80000000000007,
+        "dt_p95": 279.15,
+        "dt_max": 316
+      }
+    }
+  },
+  "development": {
+    "complete": true,
+    "methods": {
+      "delayed15": {
+        "n": 4,
+        "safe": 4,
+        "arrived": 4,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 4,
+        "max_planning": 32.6165189743042,
+        "mean_time_all": 525.75
+      },
+      "delayed60": {
+        "n": 4,
+        "safe": 3,
+        "arrived": 4,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 4,
+        "max_planning": 15.10580200701952,
+        "mean_time_all": 522.5
+      },
+      "ideal15": {
+        "n": 4,
+        "safe": 4,
+        "arrived": 4,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 4,
+        "max_planning": 28.012561136856675,
+        "mean_time_all": 472.75
+      },
+      "reactive": {
+        "n": 4,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 2,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 2,
+          "arrived": 2
+        },
+        "active_episodes": 0,
+        "max_planning": 0.0158153111115098,
+        "mean_time_all": 264.0
+      },
+      "slot_hold60": {
+        "n": 4,
+        "safe": 4,
+        "arrived": 4,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 0,
+        "max_planning": 19.147752463817596,
+        "mean_time_all": 824.25
+      }
+    },
+    "comparisons": {
+      "delayed15": {
+        "n": 4,
+        "gains": 2,
+        "losses": 0,
+        "common_safe": 2,
+        "dt_mean": 233.5,
+        "dt_median": 233.5,
+        "dt_p90": 334.7,
+        "dt_p95": 347.34999999999997,
+        "dt_max": 360
+      },
+      "delayed60": {
+        "n": 4,
+        "gains": 2,
+        "losses": 1,
+        "common_safe": 1,
+        "dt_mean": 350.0,
+        "dt_median": 350.0,
+        "dt_p90": 350.0,
+        "dt_p95": 350.0,
+        "dt_max": 350
+      },
+      "ideal15": {
+        "n": 4,
+        "gains": 2,
+        "losses": 0,
+        "common_safe": 2,
+        "dt_mean": 155.0,
+        "dt_median": 155.0,
+        "dt_p90": 244.6,
+        "dt_p95": 255.79999999999998,
+        "dt_max": 267
+      },
+      "slot_hold60": {
+        "n": 4,
+        "gains": 2,
+        "losses": 0,
+        "common_safe": 2,
+        "dt_mean": 595.5,
+        "dt_median": 595.5,
+        "dt_p90": 607.9,
+        "dt_p95": 609.45,
+        "dt_max": 611
+      }
+    }
+  },
+  "development2": {
+    "complete": true,
+    "methods": {
+      "fast60": {
+        "n": 4,
+        "safe": 3,
+        "arrived": 4,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 4,
+        "max_planning": 16.729711844120175,
+        "mean_time_all": 524.0
+      },
+      "reactive": {
+        "n": 4,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 2,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 2,
+          "arrived": 2
+        },
+        "active_episodes": 0,
+        "max_planning": 0.015822160989046097,
+        "mean_time_all": 264.0
+      },
+      "slot_feedback60": {
+        "n": 4,
+        "safe": 4,
+        "arrived": 4,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 4
+        },
+        "active_episodes": 2,
+        "max_planning": 16.76696466607973,
+        "mean_time_all": 499.5
+      }
+    },
+    "comparisons": {
+      "fast60": {
+        "n": 4,
+        "gains": 2,
+        "losses": 1,
+        "common_safe": 1,
+        "dt_mean": 346.0,
+        "dt_median": 346.0,
+        "dt_p90": 346.0,
+        "dt_p95": 346.0,
+        "dt_max": 346
+      },
+      "slot_feedback60": {
+        "n": 4,
+        "gains": 2,
+        "losses": 0,
+        "common_safe": 2,
+        "dt_mean": 232.5,
+        "dt_median": 232.5,
+        "dt_p90": 414.5,
+        "dt_p95": 437.25,
+        "dt_max": 460
+      }
+    }
+  },
+  "development3": {
+    "complete": true,
+    "methods": {
+      "fast15": {
+        "n": 4,
+        "safe": 3,
+        "arrived": 3,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 1,
+          "arrived": 3
+        },
+        "active_episodes": 4,
+        "max_planning": 25.91851163096726,
+        "mean_time_all": 442.5
+      },
+      "ignore_wait": {
+        "n": 4,
+        "safe": 3,
+        "arrived": 3,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 1,
+          "arrived": 3
+        },
+        "active_episodes": 1,
+        "max_planning": 18.30389281688258,
+        "mean_time_all": 390.0
+      }
+    },
+    "comparisons": {
+      "fast15": {
+        "n": 0,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 0,
+        "dt_mean": null,
+        "dt_median": null,
+        "dt_p90": null,
+        "dt_p95": null,
+        "dt_max": null
+      },
+      "ignore_wait": {
+        "n": 0,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 0,
+        "dt_mean": null,
+        "dt_median": null,
+        "dt_p90": null,
+        "dt_p95": null,
+        "dt_max": null
+      }
+    }
+  },
+  "long_confirmation": {
+    "complete": true,
+    "methods": {
+      "delayed15": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 2,
+        "max_planning": 45.81905917590484,
+        "mean_time_all": 1130.0
+      },
+      "fast60": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 2,
+        "max_planning": 16.954041843302548,
+        "mean_time_all": 1161.0
+      },
+      "ideal15": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 2,
+        "max_planning": 48.760038066189736,
+        "mean_time_all": 1076.0
+      },
+      "main": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 2,
+        "max_planning": 21.41372291604057,
+        "mean_time_all": 1127.0
+      },
+      "reactive": {
+        "n": 2,
+        "safe": 1,
+        "arrived": 1,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 1,
+          "arrived": 1
+        },
+        "active_episodes": 0,
+        "max_planning": 0.022376423235982656,
+        "mean_time_all": 899.0
+      }
+    },
+    "comparisons": {
+      "delayed15": {
+        "n": 2,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 1,
+        "dt_mean": 77.0,
+        "dt_median": 77.0,
+        "dt_p90": 77.0,
+        "dt_p95": 77.0,
+        "dt_max": 77
+      },
+      "fast60": {
+        "n": 2,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 1,
+        "dt_mean": 107.0,
+        "dt_median": 107.0,
+        "dt_p90": 107.0,
+        "dt_p95": 107.0,
+        "dt_max": 107
+      },
+      "ideal15": {
+        "n": 2,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 1,
+        "dt_mean": 2.0,
+        "dt_median": 2.0,
+        "dt_p90": 2.0,
+        "dt_p95": 2.0,
+        "dt_max": 2
+      },
+      "main": {
+        "n": 2,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 1,
+        "dt_mean": 32.0,
+        "dt_median": 32.0,
+        "dt_p90": 32.0,
+        "dt_p95": 32.0,
+        "dt_max": 32
+      }
+    }
+  },
+  "sensitivity": {
+    "complete": true,
+    "methods": {
+      "delayed15": {
+        "n": 1,
+        "safe": 1,
+        "arrived": 1,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 1
+        },
+        "active_episodes": 1,
+        "max_planning": 27.34542254032567,
+        "mean_time_all": 607.0
+      },
+      "main": {
+        "n": 1,
+        "safe": 1,
+        "arrived": 1,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 1
+        },
+        "active_episodes": 1,
+        "max_planning": 16.837114636786282,
+        "mean_time_all": 530.0
+      },
+      "reactive": {
+        "n": 1,
+        "safe": 0,
+        "arrived": 0,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 1
+        },
+        "active_episodes": 0,
+        "max_planning": 0.007010516710579395,
+        "mean_time_all": 326.0
+      },
+      "slot30": {
+        "n": 2,
+        "safe": 1,
+        "arrived": 1,
+        "dynamic": 1,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "NoRouteError": 1,
+          "arrived": 1
+        },
+        "active_episodes": 1,
+        "max_planning": 16.59225605102256,
+        "mean_time_all": 323.5
+      }
+    },
+    "comparisons": {
+      "delayed15": {
+        "n": 1,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 0,
+        "dt_mean": null,
+        "dt_median": null,
+        "dt_p90": null,
+        "dt_p95": null,
+        "dt_max": null
+      },
+      "main": {
+        "n": 1,
+        "gains": 1,
+        "losses": 0,
+        "common_safe": 0,
+        "dt_mean": null,
+        "dt_median": null,
+        "dt_p90": null,
+        "dt_p95": null,
+        "dt_max": null
+      },
+      "slot30": {
+        "n": 0,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 0,
+        "dt_mean": null,
+        "dt_median": null,
+        "dt_p90": null,
+        "dt_p95": null,
+        "dt_max": null
+      }
+    }
+  },
+  "static_regression": {
+    "complete": true,
+    "methods": {
+      "main": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 0,
+        "max_planning": 0.005995728075504303,
+        "mean_time_all": 319.0
+      },
+      "reactive": {
+        "n": 2,
+        "safe": 2,
+        "arrived": 2,
+        "dynamic": 0,
+        "static": 0,
+        "collision": 0,
+        "reasons": {
+          "arrived": 2
+        },
+        "active_episodes": 0,
+        "max_planning": 0.006841055117547512,
+        "mean_time_all": 319.0
+      }
+    },
+    "comparisons": {
+      "main": {
+        "n": 2,
+        "gains": 0,
+        "losses": 0,
+        "common_safe": 2,
+        "dt_mean": 0.0,
+        "dt_median": 0.0,
+        "dt_p90": 0.0,
+        "dt_p95": 0.0,
+        "dt_max": 0
+      }
+    }
+  }
+}

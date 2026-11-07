@@ -1,0 +1,51 @@
+{
+  "delivery_commit": "e6b91fb952e466e31987351218c2c3cbcdd708dd",
+  "scientific_commit": "f572dac20e3e8a13bda57ebac0c6bf2343d384f2",
+  "created_epoch": 1791122199.755835,
+  "packages": [
+    {
+      "path": "R6_RESEARCH_preview.zip",
+      "bytes": 5733380,
+      "sha256": "fac19ad50df0919dc745fb79ce0e9bb40c450a2d4938b2283e95210d528bf1ba",
+      "local_verified": true
+    },
+    {
+      "path": "runs/r6_reset_20261004T115808Z/R6_source.bundle",
+      "bytes": 464726,
+      "sha256": "6d9f733441af596bbd16cc5df08354f9222ee8ed856587b79fe9608a107eed8a",
+      "local_verified": true
+    },
+    {
+      "path": "runs/r6_reset_20261004T115808Z/R6_source.zip",
+      "bytes": 427798,
+      "sha256": "f401a77bbcaed231d615c280050c819fbcc27c551d04002248e9d1410780051e",
+      "local_verified": true
+    },
+    {
+      "path": "runs/r6_reset_20261004T115808Z/R6_controller_assets.zip",
+      "bytes": 8209135,
+      "sha256": "87c69f7e2a0b476f16131b15c4a06c8dd2c961f28c82fa6cfaaeaa16c7ad40b8",
+      "local_verified": true
+    },
+    {
+      "path": "runs/r6_reset_20261004T115808Z/R6_raw_evidence.tar.gz",
+      "bytes": 158494431,
+      "sha256": "65a1e48875532770340749648b85e993de3a714c6b70f36aeef5933743f46a99",
+      "local_verified": true
+    }
+  ],
+  "raw_files": 4691,
+  "preview_files": 163,
+  "local_transfer": "complete_sha256_verified",
+  "notes": [
+    "Assets inherited; no new training.",
+    "Old local checkout must not be reset; bundle enables clean checkout.",
+    "Preview excludes full raw logs and weights. Raw archive includes referenced cached R5 controls.",
+    "Preview captures packaging-time plan/resources; this external receipt and unpacked plan.json record completed transfer, avoiding self-referential package hashes."
+  ],
+  "local_verified_at": "2026-10-04T14:02:54.590485+00:00",
+  "local_root": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0",
+  "local_source_ref": "refs/remotes/server-r6/delivery",
+  "old_worktree_checkout_preserved": true,
+  "push_performed": false
+}

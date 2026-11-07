@@ -1,0 +1,47 @@
+{
+  "status": "complete",
+  "pdf_pages": 7,
+  "review": "one separated simulated-review pass with code, evidence and final phases; author revisions applied",
+  "experiments": {
+    "development": 13,
+    "guard_new": 36,
+    "confirmation": 72,
+    "fixed_protocol_branches": 12,
+    "numerical_command_replays": 4,
+    "profile_calls": 18,
+    "experiment_wall_seconds": 2423.320528268814,
+    "maximum_cpu_workers": 4,
+    "gpu": 0,
+    "training": false,
+    "no_running_owned_jobs": true
+  },
+  "artifacts": {
+    "manuscript.md": {
+      "bytes": 33242,
+      "sha256": "104290c9df4712a7208d8af6d1f9f6822d5db2b966874aa225ecbe79a5dc8e32"
+    },
+    "manuscript.docx": {
+      "bytes": 634010,
+      "sha256": "304a7fd99f9ed0caf1d465a691499c8995a99014b75d17e9710545b084b5cf1b"
+    },
+    "manuscript.pdf": {
+      "bytes": 699555,
+      "sha256": "1a896cb0350035f90ce112c3b61f112d9943a7e01b7692b67150f7d4466cab70"
+    },
+    "R12_REVISION_REPORT.md": {
+      "bytes": 11400,
+      "sha256": "5b91c6f4145392dce8d467ebafb98965a37b0be8e8b2b03f93359af493c6b874"
+    },
+    "R12_REVISION_preview.zip": {
+      "bytes": 5619735,
+      "sha256": "a30aba4eb2f24352e4eb121e4f0e556750ad418a045f12b914b4228eb17283a8"
+    },
+    "R12_raw_results.tar.gz": {
+      "bytes": 25323522,
+      "sha256": "a0d1be6102bccf99a01c947f58d47e1721630dff47bd0e910bb2ab9d3c7ad618"
+    }
+  },
+  "zip_files": 91,
+  "local_context_policy": "Existing local dirty HANDOFF/STATE/PLAN preserved; updated canonical server copies are in server_state.",
+  "remaining_author_items": "Attribution/license, author/affiliation/funding, final venue policy details; no missing experimental results are filled or assumed."
+}

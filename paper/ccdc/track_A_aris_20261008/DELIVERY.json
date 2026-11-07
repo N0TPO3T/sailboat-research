@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-10-08T11:24:27.825970+08:00",
+  "scope": "local editorial revision of the user-named draft; server research state not queried or superseded",
+  "source_pdf": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-routing-v0\\paper\\ccdc\\track_A_submit\\manuscript.pdf",
+  "source_pdf_sha256": "bf702658243506e24f4088c66e16b8cf3a91532828850d71d939f121a25a3057",
+  "recovery_archive_sha256": "d0fdc80b40b5252ced7dfd15370a30e092b3232cc1b7ef65e131bedac50ce640",
+  "new_navigation_experiments": 0,
+  "training": false,
+  "authors_source": "user message in current chat",
+  "files": {
+    "manuscript.pdf": "23e1c8fe24bac26d3114ef3194977511a7074ee3407e15f959f974082442a0b1",
+    "manuscript.docx": "4b9ca951313433d43c188ec01943635ee55a9201410d5b98a83cee1860ef017c",
+    "manuscript.md": "6c62b6708758e5d5f8b0f9e6d28512a4a1c32921bc321450fa6e6dbfca94840a",
+    "SUPPLEMENT.md": "bcd664a7a233a409af77643580f57346d7608b93d7c8d9032c91e59a6cf96fc2",
+    "AUTHOR_NOTES_ZH.md": "c8de05867c964e0109313be82a4870da850774d315670cc25c286e8d0e1b630a",
+    "PAPER_IMPROVEMENT_LOG.md": "a962260e214d47e6b1aab7fd86290de43361a54da3155e32098cd90216271ac5",
+    "REVISION_VERIFICATION.json": "d6e8e5af359dd250cfa76e78927f33d2303df6b3293e72ceaffce0973095a1ea",
+    "REVISION.diff": "c30082efdaea9ed973c37c4aaf485299f195209a3f21ac6444f02e427abe0e3f",
+    "LaTeX_source.zip": "cc83d7e619aca45768f59e7c8a4fef8ba8fd818d6dc1c99157cdd0172b55154b",
+    "VENUE_CHECK.md": "fb5b94e2834513e0ed3c12b4084baf69d05bf38cc9d4353b18db0baa6764e99f",
+    "EVIDENCE_INDEX.md": "5ef3dc9a20309e9c6fb25ae8ee34021e532155f2c53363417689a3322b10ccfc",
+    "README.md": "c8bacdc80f1d9cb96df42c363d20f31a97591c4adf1e2f29fcbe725f71c4808c",
+    "STATUS.md": "d661646453b8529e9b78d18f5f87968c3f955e30b3278b1642d5c299800f9ed4",
+    "review_round1.md": "df238a48331293efd7e751f499d383aafab010b465ab2f8292e7bb80ae865fb4",
+    "review_round2.md": "2b497f26995bd9f6b47c70cc3edad05e53420d7fde22c4eaa112504caf73c2f4",
+    "manuscript_round0_original.pdf": "bf702658243506e24f4088c66e16b8cf3a91532828850d71d939f121a25a3057",
+    "manuscript_round1.pdf": "a7f4f4f82634a10981a312ce5a122ffc1c2e4b0dd7ec5c81523d362fc7fadad2",
+    "manuscript_round2.pdf": "23e1c8fe24bac26d3114ef3194977511a7074ee3407e15f959f974082442a0b1",
+    "REFERENCE_METADATA_CHECK.json": "500c45769e6f9f1f003c5e05c3ba7bc0bc2d845bd1b25efb824299c4866960a1"
+  },
+  "submission_uploaded": false,
+  "push_or_server_sync": false
+}

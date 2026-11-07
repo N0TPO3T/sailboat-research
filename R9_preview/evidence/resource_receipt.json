@@ -1,0 +1,20 @@
+{
+  "science_finished_epoch": 1791193794.1144457,
+  "started_epoch": 1791190388.3818629,
+  "wall_to_science_completion_s": 3405.7325847148895,
+  "recorded_episode_cpu_seconds": 6738.29444226,
+  "recorded_profile_cpu_seconds": 942.181180737,
+  "offline_analysis_packaging_cpu": "not included",
+  "episodes": 119,
+  "postfix_audited_episodes": 99,
+  "max_experiment_workers": 4,
+  "numerical_threads": 1,
+  "gpu_hours": 0,
+  "training_steps": 0,
+  "no_running_experiments": true,
+  "checkpoint_hashes": {
+    "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth": "6092d4543c003793f4cd3f21c5ed722f0978eebfdba2f62d77892af333085bd6",
+    "checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth": "3baf7d1d9d4c9e4505fc991f339221e9e0dc64e9777c6f1c568413a2846b63b6"
+  },
+  "scientific_commit": "65b3a7ae392e4401affa9c580438d4efdfcd683e"
+}
