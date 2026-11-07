@@ -14,12 +14,12 @@ from sailboat_routing.metrics import segment_circle_clearance
 from sailboat_routing.planner import CircleObstacle
 CONFIG=json.loads((R/'config.json').read_text())
 class Transport:
- def __init__(self):
+ def __init__(self,world=None,gazebo_args=None):
   self.ipc=R/'ipc';self.i=0
   for n in ['ready','request.json','response.json']:
    (self.ipc/n).unlink(missing_ok=True)
   self.log=(R/'logs/bridge.log').open('w')
-  self.proc=subprocess.Popen([str(R.parent/'run-yara-visual.sh'),'bash','/work/migration18/container.sh'],stdout=self.log,stderr=subprocess.STDOUT)
+  self.proc=subprocess.Popen([str(R.parent/'run-yara-visual.sh'),'bash','/work/migration18/container.sh',world or '/work/migration18/ocean.world',gazebo_args or ''],stdout=self.log,stderr=subprocess.STDOUT)
   deadline=time.monotonic()+100
   while not (self.ipc/'ready').exists():
    if self.proc.poll() is not None:raise RuntimeError('container exited; logs/bridge.log')
@@ -80,11 +80,16 @@ class MigrationEnv(gym.Env):
   raw[:]=np.asarray(self.config['initial'],dtype=np.float32);raw[12:14]=scene['goals'][0]
   self.obstacles=tuple(CircleObstacle(tuple(o['center_xy']),o['entity_radius'],o['safety_buffer']) for o in scene['obstacles'])
   g=self.modules.globals;wind=self.config['wind'];g.w_change_v=float(np.linalg.norm(wind[:2]));g.w_change_d=math.atan2(wind[1],wind[0])
-  self.env.update_wind=lambda:None # matched fixed diagnostic wind, declared in config
+  self.wind_mode=self.config.get('wind_mode','fixed')
+  if self.wind_mode not in ['fixed','legacy_dryden']:raise ValueError('wind_mode')
+  for prefix in ['w_ini','w_last']:
+   setattr(g,prefix+'_v',g.w_change_v);setattr(g,prefix+'_d',g.w_change_d)
+  self.env.dryden_state_u=0.;self.env.dryden_state_v=0.;self.env.dryden_params['V']=g.w_change_v
+  self.env.update_wind=(self.modules.environment.Sailboat_nowind_last.update_wind.__get__(self.env) if self.wind_mode=='legacy_dryden' else lambda:None)
   self.target=np.zeros(2);self.t=0.;self.min_safety=math.inf;self.goal=np.array(scene['goals'][0],dtype=np.float32)
   if self.backend=='yara':
    reset_raw=raw.copy();reset_raw[[2,6,8,9]]*=-1
-   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'))
+   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'),physics_mode=self.config.get('physics_mode','native'))
    measured=from_gazebo(self.diag);measured[12:14]=self.goal
    if not np.allclose(measured[:10],raw[:10],atol=2e-5,rtol=0):raise AssertionError(('reset mismatch',measured,raw))
    raw=measured;self.clock0=self.diag['clock']
@@ -108,13 +113,17 @@ class MigrationEnv(gym.Env):
    np.testing.assert_allclose(self.target,[self.env.target_sail_angle,self.env.target_rudder_angle],rtol=0,atol=1e-12)
    self.diag=dict(clock=self.t,dt=1.,motor_command=0,motor_applied_thrust=0,cable_actual=None)
   else:
-   self.diag=self.transport.request('step',cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))
+   g=self.modules.globals
+   step_wind=(self.config['wind'] if self.wind_mode=='fixed' else [g.w_change_v*math.cos(g.w_change_d),g.w_change_v*math.sin(g.w_change_d),0.])
+   self.diag=self.transport.request('step',wind=step_wind,cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))
    assert abs(self.diag['dt']-1)<1e-8,self.diag
    self.t+=1
    assert abs(self.diag['clock']-self.clock0-self.t)<1e-8
    raw=from_gazebo(self.diag);raw[12:14]=self.goal
    g=self.modules.globals;self.env.state=raw.copy();g.state=raw.copy();g.current_state=self.env.state[:12];g.current_action=physical;g.current_time=self.t
    self._progress(before);raw=self.env.state.copy()
+   if self.wind_mode=='legacy_dryden':
+    with self.physics._rng():self.env.update_wind()
    reward=self.env.calculate_reward(before,False);reached=self.env.check_done()
    self.physics.raw=raw.copy();truncated=self.t>=self.config['limit_s'] or np.linalg.norm(raw[:2])>=self.config['world_radius_m']
    info=dict(integration_failed=False)
@@ -122,6 +131,6 @@ class MigrationEnv(gym.Env):
   clearance=segment_circle_clearance(before[:2],raw[:2],self.obstacles);self.min_safety=min(self.min_safety,clearance['safety_m'])
   collision=clearance['entity_m']<=0
   self.raw=raw.copy();self.history.append(raw.copy());self.commands.append(action.astype(np.float32))
-  info.update(time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
+  info.update(wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
   return self.frame.encode(raw,before),float(reward),bool(collision or reached),bool(truncated),info
  def close(self):self.physics.close()

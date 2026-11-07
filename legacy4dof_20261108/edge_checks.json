@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "checks": [
+    "milestone_once_and_arrival_reward",
+    "integration_failure_penalty",
+    "goal_10m_closed_boundary",
+    "float32_high_asymmetric_floor_preserved",
+    "tie_sort_buffer60_visibility_and_overlap",
+    "explicit_gazebo_sign_conversion"
+  ],
+  "action_high": [
+    0.1745329201221466,
+    0.1745329201221466
+  ],
+  "positive_endpoint_deg": [
+    9.0,
+    9.0
+  ],
+  "negative_endpoint_deg": [
+    -10.0,
+    -10.0
+  ]
+}

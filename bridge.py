@@ -76,6 +76,9 @@ while not rospy.is_shutdown():
    rospy.set_param('/migration/model',boat_name)
    rospy.set_param('/migration/actuator_mode',q.get('actuator_mode','native'))
    rospy.set_param('/migration/sail_target',0.)
+   rospy.set_param('/migration/physics_mode',q.get('physics_mode','native'))
+   initial=list(q['raw'][:10]);initial[2]*=-1;initial[6]*=-1;initial[8]*=-1;initial[9]*=-1
+   rospy.set_param('/migration/legacy_initial',initial)
    raw=q['raw'];p=Pose();p.position.x=raw[0];p.position.y=raw[1];p.position.z=0.
    quat=quaternion_from_euler(raw[2],0,raw[3]);p.orientation.x,p.orientation.y,p.orientation.z,p.orientation.w=quat
    ans=spawn(boat_name,(r/'boat.urdf').read_text(),'',p,'world');assert ans.success,ans.status_message
@@ -91,6 +94,8 @@ while not rospy.is_shutdown():
    rospy.set_param('/migration/wx',float(q['wind'][0]));rospy.set_param('/migration/wy',float(q['wind'][1]))
    result=call(0,True)
   elif op=='step':
+   if 'wind' in q:
+    rospy.set_param('/migration/wx',float(q['wind'][0]));rospy.set_param('/migration/wy',float(q['wind'][1]))
    rospy.set_param('/migration/cable',float(q['cable']));rospy.set_param('/migration/rudder',float(q['rudder']))
    rospy.set_param('/migration/sail_target',float(q.get('sail_target',0.)))
    result=call(100)

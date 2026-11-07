@@ -7,7 +7,7 @@ XPID=$!
 # Wait for display readiness, unrelated to simulation stepping.
 for i in $(seq 1 40); do [ -S /tmp/.X11-unix/X98 ] && break; sleep 0.1; done
 sleep 1
-roslaunch yara_gazebo empty_ocean.launch world:=/work/migration18/ocean.world gui:=false paused:=true verbose:=false > /work/migration18/logs/gazebo.log 2>&1 &
+roslaunch yara_gazebo empty_ocean.launch world:="${1:-/work/migration18/ocean.world}" "extra_gazebo_args:=${2:-}" gui:=false paused:=true verbose:=false > /work/migration18/logs/gazebo.log 2>&1 &
 RPID=$!
 trap 'kill -INT "$RPID" 2>/dev/null || true; kill "$XPID" 2>/dev/null || true' EXIT
 python3 -u /work/migration18/bridge.py

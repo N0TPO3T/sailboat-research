@@ -6,13 +6,15 @@
 #include <sstream>
 #include <iomanip>
 #include <cmath>
+#include "legacy_dynamics.hh"
 namespace gazebo {
 class MigrationStep: public WorldPlugin {
  physics::WorldPtr w; physics::ModelPtr m; physics::JointPtr sail,rudder;
  event::ConnectionPtr update; std::unique_ptr<ros::NodeHandle> n;
  std::unique_ptr<ros::AsyncSpinner> spinner; ros::ServiceServer service;
  double cable=0, rudderTarget=0, sailTarget=0, sailStart=0, rudderStart=0;
- std::string actuatorMode="native"; int controlTick=0;
+ std::string actuatorMode="native", physicsMode="native"; int controlTick=0;
+ legacy::State legacyState{}; double legacySail=0,legacyRudder=0,legacyDs=0,legacyDr=0,legacyWx=0,legacyWy=0;
  public: void Load(physics::WorldPtr world,sdf::ElementPtr) {
  w=world; n.reset(new ros::NodeHandle("migration"));
  service=n->advertiseService("step",&MigrationStep::step,this);
@@ -20,7 +22,19 @@ class MigrationStep: public WorldPlugin {
  spinner.reset(new ros::AsyncSpinner(1)); spinner->start();
  }
  void tick() {
- if(!m || !sail || !rudder || m->IsStatic()) return;
+ if(!m || !sail || !rudder) return;
+ if(physicsMode=="legacy4dof") {
+  const double dt=w->Physics()->GetMaxStepSize(),t=controlTick*dt;
+  legacyState=legacy::rk4(legacyState,t,dt,legacySail,legacyRudder,legacyDs,legacyDr,legacyWx,legacyWy);
+  ++controlTick;
+  if(controlTick==100){legacyState[3]=legacy::wrap(legacyState[3]);for(auto &v:legacyState)v=static_cast<float>(v);}
+  m->SetWorldPose(ignition::math::Pose3d(legacyState[0],legacyState[1],0,-legacyState[2],0,legacyState[3]));
+  double sa=-(legacySail+controlTick*dt*legacyDs),ra=-(legacyRudder+controlTick*dt*legacyDr);
+  sail->SetUpperLimit(0,sa);sail->SetLowerLimit(0,sa);rudder->SetUpperLimit(0,ra);rudder->SetLowerLimit(0,ra);
+  sail->SetPosition(0,sa,true);rudder->SetPosition(0,ra,true);
+  return;
+ }
+ if(m->IsStatic())return;
  if(actuatorMode=="signed") {
   // Prescribed-angle actuator, matching the inherited 1 s linear rate-limited motion.
   const double rate=M_PI/18, dt=w->Physics()->GetMaxStepSize();
@@ -50,6 +64,8 @@ class MigrationStep: public WorldPlugin {
  bool reset=false;int count=100;
  n->param("reset",reset,false);n->param("count",count,100);
  n->param<std::string>("actuator_mode",actuatorMode,"native");
+ n->param<std::string>("physics_mode",physicsMode,"native");
+ if(physicsMode!="native" && physicsMode!="legacy4dof")throw std::runtime_error("physics mode");
  n->param("sail_target",sailTarget,0.);
  if(actuatorMode!="native" && actuatorMode!="signed")throw std::runtime_error("actuator mode");
  n->param("cable",cable,0.);n->param("rudder",rudderTarget,0.);
@@ -60,17 +76,36 @@ class MigrationStep: public WorldPlugin {
  sail->SetUpperLimit(0,0);sail->SetLowerLimit(0,0);
  sail->SetPosition(0,0);rudder->SetPosition(0,0);sail->SetVelocity(0,0);rudder->SetVelocity(0,0);
  }
+ if(physicsMode=="legacy4dof") {
+  if(actuatorMode!="signed")throw std::runtime_error("legacy4dof requires signed actuator");
+  if(reset){std::vector<double> initial;n->getParam("legacy_initial",initial);if(initial.size()!=10)throw std::runtime_error("legacy_initial");for(int i=0;i<8;i++)legacyState[i]=initial[i];legacySail=initial[8];legacyRudder=initial[9];}
+  else {legacySail=-sail->Position(0);legacyRudder=-rudder->Position(0);}
+  legacyDs=std::max(-M_PI/18,std::min(M_PI/18,-sailTarget-legacySail));
+  legacyDr=std::max(-M_PI/18,std::min(M_PI/18,-rudderTarget-legacyRudder));legacyWx=wx;legacyWy=wy;
+  m->SetStatic(false);
+  for(auto link:m->GetLinks()){link->SetKinematic(true);link->SetGravityMode(false);}
+  // Kinematic links keep valid articulated joint feedback across repeated resets.
+  // The custom 4DOF integrator owns motion; native force/contact response is disabled.
+ }
  sailStart=sail->Position(0);rudderStart=rudder->Position(0);controlTick=0;
  double start=w->SimTime().Double();
  if(count) w->Step(count);
+ if(physicsMode=="legacy4dof") {
+  auto desired=ignition::math::Pose3d(legacyState[0],legacyState[1],0,-legacyState[2],0,legacyState[3]);
+  m->SetLinkWorldPose(desired,m->GetLink("base_link"));
+ }
  auto b=m->GetLink("base_link");auto pose=b->WorldPose(); auto e=pose.Rot().Euler();
  auto v=b->RelativeLinearVel();auto a=b->RelativeAngularVel();
+ if(physicsMode=="legacy4dof"){v.Set(legacyState[4],legacyState[5],0);a.Set(-legacyState[6],0,legacyState[7]);}
  double pd=a.X()+std::sin(e.X())*std::tan(e.Y())*a.Y()+std::cos(e.X())*std::tan(e.Y())*a.Z();
+ if(physicsMode=="legacy4dof")pd=-legacyState[6];
  double rd=(std::sin(e.X())*a.Y()+std::cos(e.X())*a.Z())/std::cos(e.Y());
  std::ostringstream s;s<<std::setprecision(17);
  s<<"{\"clock\":"<<w->SimTime().Double()<<",\"dt\":"<<w->SimTime().Double()-start
  <<",\"raw\":["<<pose.Pos().X()<<","<<pose.Pos().Y()<<","<<e.X()<<","<<e.Z()<<","<<v.X()<<","<<v.Y()<<","<<pd<<","<<a.Z()<<","<<sail->Position(0)<<","<<rudder->Position(0)<<",0,0,0,0]"
  <<",\"z\":"<<pose.Pos().Z()<<",\"pitch\":"<<e.Y()<<",\"cable_actual\":"<<sail->UpperLimit(0)
+ <<",\"model_x\":"<<m->WorldPose().Pos().X()<<",\"model_y\":"<<m->WorldPose().Pos().Y()
+ <<",\"physics_mode\":\""<<physicsMode<<"\""
  <<",\"actuator_mode\":\""<<actuatorMode<<"\""
  <<",\"motor_command\":0,\"motor_applied_thrust\":0,\"motor_plugin_present\":false}";
  out.success=true;out.message=s.str();
