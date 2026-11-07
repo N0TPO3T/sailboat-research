@@ -1,0 +1,22 @@
+[
+  {
+    "batch": "recovery_confirmation",
+    "episodes": 144,
+    "tasks": 24,
+    "source_hash_matches": true,
+    "paired_initial_states_identical": true,
+    "finite_states": true,
+    "isolated_source_paths": true,
+    "endpoint_and_failure_checks": true
+  },
+  {
+    "batch": "recovery_scale",
+    "episodes": 32,
+    "tasks": 8,
+    "source_hash_matches": true,
+    "paired_initial_states_identical": true,
+    "finite_states": true,
+    "isolated_source_paths": true,
+    "endpoint_and_failure_checks": true
+  }
+]

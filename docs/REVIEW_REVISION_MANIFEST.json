@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-07T17:23:04.769064+00:00",
+  "purpose": "targeted recheck; scientific code/results unchanged",
+  "files": {
+    "docs/B_METHOD_NOTE.md": "83e33c63673e6f044cb0887ea20677f68e8b02df91b2fa595b3b8cbd85db6e23",
+    "docs/B_RESEARCH_REPORT.md": "4501b0c9688ee54898576297af872ff04e78ca91b037fbc40edfa4f74e48d9ec",
+    "RESULTS_INDEX.json": "f9a768542c5595faf37b7797498a363292ea3b3a8dbbd3a7298ad044039f6e59",
+    "RESOURCE_LEDGER.json": "8e211da409c744670b448042dfef82a7b6b1d97f9ce9a1c48d3c6113fc61d2a9",
+    "README.md": "a3f23ad6c74d73fca990f0e66c65416aea9469e790b2fce37b5566be99973354",
+    "reviews/AUTHOR_RESPONSE.md": "354b5bf147c845f7bfe290eb0b2ecd1e24a0eddc31f21b0620273b6ec034868c",
+    "docs/ASSET_AND_SENSOR_SCOPE.md": "6823b20d17c47c2ee70b0d2aa1b190d3c15709d7c742bf95018d02fb268e486e",
+    "scripts/station_recovery.py": "60bcdc3d1da4f5e69c2c813767510d5bb87429abf9935d2e67574adc82c11b5e",
+    "scripts/station_luff_control.py": "bb5af3718ef7b26f46b9c091c2399da607afc32efe3b096bbab1e147d5c897f8",
+    "scripts/station_reproduce.py": "1353b3734ff6f1d3ed7361d9c4cbe0c462c564866dd1993e9d413010fec947f2",
+    "docs/REPRODUCTION_SOURCE_DIFF.json": "3f5ea17cca7a6752b5cf726816dabbc574bb14e1d3238441616eecdd3dbb5888"
+  }
+}

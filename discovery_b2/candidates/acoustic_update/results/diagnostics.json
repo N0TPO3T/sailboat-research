@@ -1,0 +1,9 @@
+{
+  "constant_kriging": "pass",
+  "constant_stratum": "pass",
+  "covariance_symmetry": "pass",
+  "finite_features": "pass",
+  "linear_log_roundtrip": "pass",
+  "buffer": "pass",
+  "greg_zero_residual": "pass"
+}

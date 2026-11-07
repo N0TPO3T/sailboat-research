@@ -1,0 +1,21 @@
+{
+  "registered_utc": "2026-10-07T16:42:39.827964+00:00",
+  "reason": "Structural fairness: selected release removed speed-build; give luff the identical removal. Registered before inspecting any V2 result. Not a tuned alternative or change to selected method.",
+  "source": "scripts/station_luff_control.py",
+  "source_sha256": "bb5af3718ef7b26f46b9c091c2399da607afc32efe3b096bbab1e147d5c897f8",
+  "base_source_sha256": "60bcdc3d1da4f5e69c2c813767510d5bb87429abf9935d2e67574adc82c11b5e",
+  "only_changes": [
+    "Add luff_no_build flag to luff sail selection",
+    "Add same flag to beam-or-downwind immediate exit"
+  ],
+  "unchanged": [
+    "primary method",
+    "all new instances",
+    "metrics",
+    "physics",
+    "observation",
+    "common low-level"
+  ],
+  "jobs": 32,
+  "workers": "after current4workers end; max4total"
+}

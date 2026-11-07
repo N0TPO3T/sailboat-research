@@ -1,0 +1,65 @@
+{
+  "params": {
+    "rate": 0.12,
+    "brake": 0.15,
+    "lookahead": 4.0,
+    "kd": 90.0,
+    "kp": 200.0,
+    "beta_tau": 5.0
+  },
+  "cases": [
+    {
+      "id": "r8_u1.2_c0",
+      "radius": 8.0,
+      "cruise": 1.2,
+      "current": 0.0
+    },
+    {
+      "id": "r8_u1.2_c0.3",
+      "radius": 8.0,
+      "cruise": 1.2,
+      "current": 0.3
+    },
+    {
+      "id": "r8_u1.8_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0
+    },
+    {
+      "id": "r8_u1.8_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3
+    },
+    {
+      "id": "r16_u1.2_c0",
+      "radius": 16.0,
+      "cruise": 1.2,
+      "current": 0.0
+    },
+    {
+      "id": "r16_u1.2_c0.3",
+      "radius": 16.0,
+      "cruise": 1.2,
+      "current": 0.3
+    },
+    {
+      "id": "r16_u1.8_c0",
+      "radius": 16.0,
+      "cruise": 1.8,
+      "current": 0.0
+    },
+    {
+      "id": "r16_u1.8_c0.3",
+      "radius": 16.0,
+      "cruise": 1.8,
+      "current": 0.3
+    }
+  ],
+  "methods": [
+    "curvature",
+    "heading",
+    "reserve"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "skill": "research-review",
+  "recorded_at": "2026-10-07T17:21:03.834104+00:00",
+  "executor": "codex",
+  "executor_model": "not exposed",
+  "review_independence": "same-family",
+  "acceptance_status": "provisional",
+  "project_dir": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-track-b",
+  "routing_note": "User-defined three-role review used native inherited models. Actual inherited model/effort was not exposed; no model-tier claim. Capacity failures were preserved; same identities resumed once, without model downgrade."
+}

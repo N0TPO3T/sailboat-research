@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "episode_rows": 72,
+  "tasks": 24,
+  "minimum_deadline_slack_including_plan_s": 5.674476106391012,
+  "checks": [
+    "no duplicate visits",
+    "trajectory time monotonic",
+    "returns to home",
+    "sample count matches point observations",
+    "all posterior subsets positive and monotone",
+    "posterior consumes only measured indices",
+    "route invariant to hidden truth/kernel",
+    "including measured planning latency still on time"
+  ],
+  "limitations": [
+    "does not validate hydrodynamics or maneuver displacement",
+    "exactness limited to fixed edge trajectories"
+  ]
+}

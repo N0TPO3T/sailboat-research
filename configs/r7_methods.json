@@ -1,0 +1,51 @@
+{
+  "created": 1791174651.4414113,
+  "selected": "current_goal",
+  "reason": "All8seen overtaking safe vs6/8current;3inactive controls safe;time gate restored281s control vs1063s ungated. Still costly intervention in othercases;fresh evaluation required. CPA stage1not supported. No further tuning after freeze.",
+  "variants": {
+    "current": {
+      "mode": "current"
+    },
+    "current_goal": {
+      "mode": "current",
+      "goal_relay": true,
+      "goal_time_gate": true
+    },
+    "cpa_goal": {
+      "mode": "no_commit",
+      "goal_relay": true,
+      "goal_time_gate": true,
+      "horizon": 180,
+      "guard": 100,
+      "offset": 240
+    },
+    "ungated_goal": {
+      "mode": "current",
+      "goal_relay": true,
+      "goal_time_gate": false
+    }
+  },
+  "geometry": {
+    "own_proxy": 10,
+    "target_radius": 15,
+    "buffer": 60,
+    "safe": 85
+  },
+  "goal_relay": {
+    "staging_radius": 305,
+    "entry_goal_margin": 120,
+    "exit_goal_margin": 120,
+    "handoff": 100,
+    "min_candidate_distance": 200,
+    "candidate_count": 8,
+    "turn_cost_m_per_rad": 80,
+    "arrival_time_slack_s": 30
+  },
+  "first_confirmation_now_seen": true,
+  "new_generator_seed": 20261015,
+  "source_sha256": {
+    "scripts/run_r7.py": "44ab0903ac5b6d094960d2386b9f1ea2ba649c41d5773aa0f7a2897278641635",
+    "src/sailboat_routing/r7_dynamic.py": "4bc7a961f2ab1bf8ec077bd0ffa18aa9ef6049ab01f6a578712ae3839bad2533",
+    "src/sailboat_routing/r7_goal.py": "138af281a5db41e4a3d1973d9ee907fc333554e4b775e624ff015a42d40b0b43"
+  }
+}

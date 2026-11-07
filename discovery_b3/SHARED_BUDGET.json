@@ -1,0 +1,40 @@
+{
+  "start_utc": "2026-10-09T12:01:51.293772+08:00",
+  "deadline_utc": "2026-10-10T12:01:51.293772+08:00",
+  "authorization": "user renewed broader discovery 2026-10-09",
+  "max_candidates": 3,
+  "max_cpu_workers": 4,
+  "threads_each": 1,
+  "gpu_used": 0,
+  "gpu_permission": "unverified; do not use",
+  "allocated_workers": 0,
+  "execution_host": "local Windows CPU",
+  "server_status": "no free disk; no experiment writes",
+  "python": "C:/Users/74095/anaconda3/python.exe",
+  "allocations": {
+    "turn_handover": {
+      "owner": "/root/b3_control_opportunities",
+      "workers": 1,
+      "threads": 1,
+      "gpu": 0,
+      "status": "complete; worker released"
+    },
+    "position_outage": {
+      "owner": "/root/b3_reliability",
+      "workers": 1,
+      "threads": 1,
+      "gpu": 0,
+      "status": "complete; worker released; fixed-normal analysis also complete"
+    },
+    "derated_return": {
+      "owner": "/root/b3_control_opportunities",
+      "workers": 1,
+      "threads": 1,
+      "gpu": 0,
+      "status": "complete; all worker processes exited",
+      "deadline_minutes": 90
+    }
+  },
+  "status": "finite discovery completed; no direct writing selection; no active experiments",
+  "finished_utc": "2026-10-09T04:27:04.5639857Z"
+}

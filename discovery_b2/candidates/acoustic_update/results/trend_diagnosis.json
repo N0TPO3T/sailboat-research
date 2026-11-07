@@ -1,0 +1,202 @@
+{
+  "2020": {
+    "raw_log_prediction_quantiles": [
+      2.052049613485932,
+      8.855290343590866,
+      18.576384150156645,
+      25.540677159633695
+    ],
+    "training_log_bounds": [
+      -1.6652538421034981,
+      9.8108707625926
+    ],
+    "clipping_fraction": 0.33663366336633666,
+    "smear": 2.0072854746621083,
+    "top_terms": [
+      {
+        "term": "cube:Chl_surf",
+        "max_absolute_log_contribution": 10.633176263042355
+      },
+      {
+        "term": "cube:SO_surf",
+        "max_absolute_log_contribution": 9.735218715716819
+      },
+      {
+        "term": "hinge_q90:SO_surf",
+        "max_absolute_log_contribution": 7.940503884877904
+      },
+      {
+        "term": "hinge_q50:SO_surf",
+        "max_absolute_log_contribution": 7.198126316402388
+      },
+      {
+        "term": "hinge_q50:Mean_EW_uo_Wclm",
+        "max_absolute_log_contribution": 5.978262471519512
+      }
+    ],
+    "max_abs_z": {
+      "X": 2.5593718226413094,
+      "Y": 2.7968272541162245,
+      "Depth": 2.0843728794391807,
+      "Month": 1.8070693498874713,
+      "Mean_thetao_SST": 2.3463388446768443,
+      "Chl_surf": 5.490181782635712,
+      "Mean_NS_vo_Wclm": 2.9498929753179173,
+      "Mean_EW_uo_Wclm": 3.242200986124386,
+      "SO_surf": 6.276962321989924,
+      "Mean_current_speed": 2.858552291674808,
+      "hour_sin": 1.4788936698535766,
+      "hour_cos": 1.4913709230101102
+    }
+  },
+  "2021": {
+    "raw_log_prediction_quantiles": [
+      2.8658444208037097,
+      5.19642865025467,
+      29.129190227276467,
+      71.10791425972448
+    ],
+    "training_log_bounds": [
+      -2.305077573717007,
+      10.12065588767106
+    ],
+    "clipping_fraction": 0.2980769230769231,
+    "smear": 2.589454177350572,
+    "top_terms": [
+      {
+        "term": "hinge_q90:Mean_thetao_SST",
+        "max_absolute_log_contribution": 67.50845560390995
+      },
+      {
+        "term": "cube:SO_surf",
+        "max_absolute_log_contribution": 6.179078889146341
+      },
+      {
+        "term": "cube:Mean_thetao_SST",
+        "max_absolute_log_contribution": 5.251847442783606
+      },
+      {
+        "term": "linear:Mean_thetao_SST",
+        "max_absolute_log_contribution": 3.436133362423361
+      },
+      {
+        "term": "hinge_q10:Mean_thetao_SST",
+        "max_absolute_log_contribution": 2.9992388074658307
+      }
+    ],
+    "max_abs_z": {
+      "X": 2.1212702537266566,
+      "Y": 2.268294531572614,
+      "Depth": 2.6664162582451283,
+      "Month": 1.4112081975054687,
+      "Mean_thetao_SST": 2.4127552723253007,
+      "Chl_surf": 2.0871356136926607,
+      "Mean_NS_vo_Wclm": 2.1515176807041483,
+      "Mean_EW_uo_Wclm": 4.419798239385599,
+      "SO_surf": 3.691101741126614,
+      "Mean_current_speed": 1.819040678846228,
+      "hour_sin": 1.5270292046115377,
+      "hour_cos": 1.486502293641358
+    }
+  },
+  "2022": {
+    "raw_log_prediction_quantiles": [
+      2.167411164003284,
+      4.977913220238708,
+      5.989061767604234,
+      7.062140217503646
+    ],
+    "training_log_bounds": [
+      -2.662047862706398,
+      10.12065588767106
+    ],
+    "clipping_fraction": 0.0,
+    "smear": 2.464960678346249,
+    "top_terms": [
+      {
+        "term": "hinge_q50:Mean_current_speed",
+        "max_absolute_log_contribution": 7.267884090671676
+      },
+      {
+        "term": "hinge_q90:Mean_current_speed",
+        "max_absolute_log_contribution": 6.27571570572763
+      },
+      {
+        "term": "hinge_q90:Mean_NS_vo_Wclm",
+        "max_absolute_log_contribution": 5.84851565957068
+      },
+      {
+        "term": "cube:Mean_current_speed",
+        "max_absolute_log_contribution": 4.895290130099033
+      },
+      {
+        "term": "hinge_q50:X",
+        "max_absolute_log_contribution": 3.22513589690228
+      }
+    ],
+    "max_abs_z": {
+      "X": 2.1986157248093443,
+      "Y": 2.309738311513957,
+      "Depth": 2.7849601035868505,
+      "Month": 1.5370823533978675,
+      "Mean_thetao_SST": 1.8425264286540872,
+      "Chl_surf": 2.418915499005233,
+      "Mean_NS_vo_Wclm": 3.318206469477163,
+      "Mean_EW_uo_Wclm": 4.533124061856595,
+      "SO_surf": 1.5589097490656816,
+      "Mean_current_speed": 4.08249258446001,
+      "hour_sin": 1.5648242983414857,
+      "hour_cos": 1.5325312564759528
+    }
+  },
+  "2023": {
+    "raw_log_prediction_quantiles": [
+      -8.716021980098814,
+      4.45660282834846,
+      5.875339085992458,
+      13.910089497755042
+    ],
+    "training_log_bounds": [
+      -2.662047862706398,
+      10.12065588767106
+    ],
+    "clipping_fraction": 0.04006968641114982,
+    "smear": 2.5123261527088254,
+    "top_terms": [
+      {
+        "term": "hinge_q50:Mean_current_speed",
+        "max_absolute_log_contribution": 32.622119587631275
+      },
+      {
+        "term": "hinge_q90:Mean_EW_uo_Wclm",
+        "max_absolute_log_contribution": 20.16842142996645
+      },
+      {
+        "term": "cube:Mean_current_speed",
+        "max_absolute_log_contribution": 16.79874948403939
+      },
+      {
+        "term": "hinge_q50:Mean_EW_uo_Wclm",
+        "max_absolute_log_contribution": 16.128907187002092
+      },
+      {
+        "term": "hinge_q10:Mean_EW_uo_Wclm",
+        "max_absolute_log_contribution": 14.767852132687025
+      }
+    ],
+    "max_abs_z": {
+      "X": 2.1680692761450095,
+      "Y": 2.2112607273738965,
+      "Depth": 2.5779145121959535,
+      "Month": 1.5419947903625033,
+      "Mean_thetao_SST": 1.6504544767794196,
+      "Chl_surf": 5.450297500854942,
+      "Mean_NS_vo_Wclm": 3.922835636623002,
+      "Mean_EW_uo_Wclm": 6.721674192047602,
+      "SO_surf": 1.5694847417468107,
+      "Mean_current_speed": 4.956621042335489,
+      "hour_sin": 1.5728463544097258,
+      "hour_cos": 1.529640286431048
+    }
+  }
+}

@@ -1,0 +1,569 @@
+{
+  "frozen_utc": "2026-10-07T15:53:41.081082+00:00",
+  "source_sha256": "c3a759055c3d61aaaacee744dfa5553b7eeeca55162579e7ff8e632b01e66edb",
+  "generator_seed": 202610708,
+  "instances": [
+    {
+      "scenario": "confirmation_00",
+      "seed": 2026107080,
+      "wind": -55.994045286202436,
+      "heading": -32.24793987839894,
+      "profile": "stable",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -1.1932814791960304,
+        0.7945579743309101
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_01",
+      "seed": 2026107081,
+      "wind": 15.889895292297638,
+      "heading": -116.21160436942696,
+      "profile": "slow",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        4.557132895619095,
+        3.6568090481039977
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_02",
+      "seed": 2026107082,
+      "wind": 38.99783366341063,
+      "heading": 4.347098977511251,
+      "profile": "fast",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        5.550290247089702,
+        0.13458064036076287
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_03",
+      "seed": 2026107083,
+      "wind": 148.04577820853,
+      "heading": -116.86132293535456,
+      "profile": "stable",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -1.8891774293061747,
+        3.0376726793802207
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_04",
+      "seed": 2026107084,
+      "wind": 121.6014306615757,
+      "heading": -175.894089866796,
+      "profile": "slow",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -3.290263571042148,
+        -7.071131124175311
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_05",
+      "seed": 2026107085,
+      "wind": -121.09312080381426,
+      "heading": 2.238094370650174,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -1.3489770548322357,
+        5.859104061454512
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_06",
+      "seed": 2026107086,
+      "wind": -102.58459565492325,
+      "heading": -131.99863818702426,
+      "profile": "stable",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        1.5944933472611271,
+        -0.8243263928286004
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_07",
+      "seed": 2026107087,
+      "wind": -83.76142886827294,
+      "heading": 156.91611569688968,
+      "profile": "slow",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -0.5017416256894804,
+        7.926167983134107
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_08",
+      "seed": 2026107088,
+      "wind": -9.528485406942082,
+      "heading": -62.732721677593105,
+      "profile": "fast",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -5.315541935551371,
+        -5.392285167720339
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_09",
+      "seed": 2026107089,
+      "wind": 92.18748424784638,
+      "heading": 24.175505799837083,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -7.1172528168571585,
+        0.9399729676701902
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_10",
+      "seed": 2026107090,
+      "wind": 153.5641087007324,
+      "heading": 103.30682666087381,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -0.6355435152591478,
+        2.331941165330053
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_11",
+      "seed": 2026107091,
+      "wind": -92.97023042142825,
+      "heading": 165.07600848979348,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        6.05390907537597,
+        2.2770751307135084
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_12",
+      "seed": 2026107092,
+      "wind": 142.84483831350025,
+      "heading": 13.64236202834877,
+      "profile": "stable",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        0.10756499037645617,
+        -1.1364399567629868
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_13",
+      "seed": 2026107093,
+      "wind": -137.37497371281498,
+      "heading": 49.147066765942725,
+      "profile": "slow",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        1.9046710519907382,
+        -1.2227736532252371
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_14",
+      "seed": 2026107094,
+      "wind": 78.30447058252963,
+      "heading": -149.6820692585462,
+      "profile": "fast",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        2.3018010420251227,
+        -1.0511110116083195
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_15",
+      "seed": 2026107095,
+      "wind": -15.657071028321269,
+      "heading": -68.55464591878685,
+      "profile": "stable",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        1.5939631336193585,
+        -4.098003997089266
+      ],
+      "stratum": "inside",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_16",
+      "seed": 2026107096,
+      "wind": 55.372731732805164,
+      "heading": -151.4951917220495,
+      "profile": "slow",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        74.35799255899892,
+        -9.792289956688505
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_17",
+      "seed": 2026107097,
+      "wind": 76.7838537233273,
+      "heading": 142.98422736847937,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        6.42836281627258,
+        74.7239998360792
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_18",
+      "seed": 2026107098,
+      "wind": -27.05489168487435,
+      "heading": 76.86953739120548,
+      "profile": "stable",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -27.712384720748247,
+        -69.69235060671464
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_19",
+      "seed": 2026107099,
+      "wind": 170.6115019595668,
+      "heading": 96.79506076108157,
+      "profile": "slow",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        17.048481947084973,
+        -73.03662959981052
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_20",
+      "seed": 2026107100,
+      "wind": 92.97135665479163,
+      "heading": 80.9857390454398,
+      "profile": "fast",
+      "speed": 0.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        20.91995229775777,
+        -72.02329897928544
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_21",
+      "seed": 2026107101,
+      "wind": 51.89413892181972,
+      "heading": 89.15295307849885,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        62.608718607378805,
+        -41.293442025847874
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_22",
+      "seed": 2026107102,
+      "wind": 142.55747181792213,
+      "heading": 158.64397400329915,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -74.53305956974101,
+        -8.35601766234589
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "confirmation_23",
+      "seed": 2026107103,
+      "wind": 4.270321001874123,
+      "heading": -40.959735643033156,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        69.639636326624,
+        27.844587486539496
+      ],
+      "stratum": "entry",
+      "batch": "confirmation"
+    },
+    {
+      "scenario": "scale_check_00",
+      "seed": 2026107180,
+      "wind": -37.79892471781221,
+      "heading": 95.9960194555083,
+      "profile": "stable",
+      "speed": 0.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        0.4604620868835214,
+        -0.34493279292352885
+      ],
+      "stratum": "inside",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_01",
+      "seed": 2026107181,
+      "wind": -127.39792048179686,
+      "heading": 112.68030740529878,
+      "profile": "slow",
+      "speed": 0.5,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        1.683274237447326,
+        -7.729678225551263
+      ],
+      "stratum": "inside",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_02",
+      "seed": 2026107182,
+      "wind": 118.40644894729616,
+      "heading": -176.45229900510358,
+      "profile": "fast",
+      "speed": 2.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        3.5343738600985026,
+        4.098881247269115
+      ],
+      "stratum": "inside",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_03",
+      "seed": 2026107183,
+      "wind": -138.65582387557504,
+      "heading": -110.02380524791226,
+      "profile": "stable",
+      "speed": 4.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -1.636586765035169,
+        -8.591853645112971
+      ],
+      "stratum": "inside",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_04",
+      "seed": 2026107184,
+      "wind": -108.08125848062713,
+      "heading": -76.23614102602114,
+      "profile": "slow",
+      "speed": 0.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -89.47164353922955,
+        -120.39445586234045
+      ],
+      "stratum": "entry",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_05",
+      "seed": 2026107185,
+      "wind": 14.460343398386641,
+      "heading": 139.09621385467204,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -104.80500926786158,
+        107.31220821678886
+      ],
+      "stratum": "entry",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_06",
+      "seed": 2026107186,
+      "wind": 136.48463627430016,
+      "heading": -126.31499807335605,
+      "profile": "stable",
+      "speed": 2.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -41.577523136505384,
+        144.12255052500757
+      ],
+      "stratum": "entry",
+      "batch": "scale_check"
+    },
+    {
+      "scenario": "scale_check_07",
+      "seed": 2026107187,
+      "wind": 69.30497641134548,
+      "heading": 99.58076624606468,
+      "profile": "slow",
+      "speed": 4.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        100.96899470252048,
+        -110.92908594576262
+      ],
+      "stratum": "entry",
+      "batch": "scale_check"
+    }
+  ],
+  "variants": [
+    [
+      "relay",
+      {
+        "method": "shuttle",
+        "span": 0.5
+      }
+    ],
+    [
+      "center",
+      {
+        "method": "center"
+      }
+    ],
+    [
+      "phase_small",
+      {
+        "method": "phase",
+        "inner": 0.2,
+        "outer": 1.0,
+        "surge_floor": 0
+      }
+    ],
+    [
+      "phase_footprint",
+      {
+        "method": "phase",
+        "inner": 1.0,
+        "outer": 2.0,
+        "surge_floor": 0
+      }
+    ],
+    [
+      "relay_no_tack",
+      {
+        "method": "shuttle_no_tack",
+        "span": 0.5
+      }
+    ]
+  ],
+  "primary": "Pre-step 1-second inside samples divided by full 1200 seconds, missing tail counts outside",
+  "protected": [
+    "completed1200s/nointegrationfailure",
+    "longest consecutive sampled outside duration",
+    "maxradius including t1200",
+    "actual actuator absolute variation",
+    "maxheel"
+  ],
+  "selection": "relay and center tied at 100% on 4 development tasks; relay lower mean actuator travel. Not a new algorithm claim.",
+  "rules": "No tuning after confirmation; report all tasks; strata separate. Scale check only changes region radius; same controller ratios, distribution and duration. No new experiment expansion based on wins."
+}

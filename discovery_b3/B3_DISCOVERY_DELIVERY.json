@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-09T04:28:16.903830+00:00",
+  "file": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-track-b\\discovery_b3\\B3_DISCOVERY_preview.zip",
+  "bytes": 69657361,
+  "sha256": "808085e8d7854fb3de82ce9574006672576b4f276b4a92107c7ff85d14037d5d",
+  "entries": 259,
+  "crc_test": "pass",
+  "excluded": [
+    "cache directories",
+    "__pycache__",
+    "archive itself",
+    "archive receipt"
+  ],
+  "manifest_excludes_itself": true
+}

@@ -1,0 +1,15 @@
+{
+  "status": "pass",
+  "allocation_checks": 150,
+  "max_wrench_roundtrip_error": 1.4210854715202004e-14,
+  "force_limits_original": [
+    -66.708,
+    119.682
+  ],
+  "Dsurge": 77.55443234836703,
+  "fixed_speed_caps": {
+    "0.25": 0.6944400000000001,
+    "0.5": 1.3888800000000001
+  },
+  "config_sha256": "fe815802e7b3937976e8f9554089010aa301d7f9ca6b03d1f818640b3c04cb81"
+}

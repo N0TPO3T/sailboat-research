@@ -1,0 +1,13 @@
+{
+  "base": "scripts/station_luff_control.py",
+  "reproduction": "scripts/station_reproduce.py",
+  "base_sha256": "bb5af3718ef7b26f46b9c091c2399da607afc32efe3b096bbab1e147d5c897f8",
+  "reproduction_sha256": "1353b3734ff6f1d3ed7361d9c4cbe0c462c564866dd1993e9d413010fec947f2",
+  "exact_only_change": {
+    "old": "if time.time()>1791472420:raise TimeoutError('shared deadline')",
+    "new": "if time.time()>float(os.environ.get('B_RESEARCH_DEADLINE','1791472420')):raise TimeoutError('research run deadline')"
+  },
+  "scientific_controller_physics_and_metrics_unchanged": true,
+  "default_deadline_unchanged": true,
+  "not_used_for_reported_experiments": true
+}

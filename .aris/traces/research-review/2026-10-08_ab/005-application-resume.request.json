@@ -1,0 +1,11 @@
+{
+  "call_number": 5,
+  "purpose": "application-resume",
+  "tool": "followup_task",
+  "model": "inherited; actual not exposed",
+  "reasoning_effort": "inherited; actual not exposed",
+  "files_referenced": [
+    "docs/REVIEW_INPUT_MANIFEST.json"
+  ],
+  "prompt": "上一回合因容量失败而无意见。请做一次同身份恢复，继续原应用/来源/表达/图表独立审查；勿查看另外两位意见（尚未向你提供）。同一docs/REVIEW_INPUT_MANIFEST.json材料，输出reviews/APPLICATION_REVIEW.md。记录same-family/provisional，不要求接收或分数；再次容量失败就如实REVIEW_UNAVAILABLE，不循环重试。不新增实验。"
+}

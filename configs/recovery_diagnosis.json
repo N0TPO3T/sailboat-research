@@ -1,0 +1,180 @@
+[
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "continue",
+    "branch": null
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "neutral",
+    "branch": {
+      "rudder": 0
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "opposite",
+    "branch": {
+      "rudder": 30
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "same",
+    "branch": {
+      "rudder": -30
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "neutral_flat",
+    "branch": {
+      "rudder": 0,
+      "sail": 0
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "neutral_backwind",
+    "branch": {
+      "rudder": 0,
+      "sail": -30
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "opposite_flat",
+    "branch": {
+      "rudder": 30,
+      "sail": 0
+    }
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 400,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_diagnosis",
+    "method": "center",
+    "variant": "center",
+    "id": "opposite_backwind",
+    "branch": {
+      "rudder": 30,
+      "sail": -30
+    }
+  }
+]

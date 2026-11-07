@@ -1,0 +1,36 @@
+{
+  "start_utc": "2026-10-08T02:51:58Z",
+  "deadline_utc": "2026-10-09T02:51:58Z",
+  "max_wall_hours": 24,
+  "max_experiment_workers_total": 4,
+  "numerical_threads_per_worker": 1,
+  "gpu_max_devices": 1,
+  "gpu_hours_limit": 12,
+  "gpu_authorization": "not verified; request once if training actually requires it",
+  "AUTO_PROCEED": true,
+  "pilot_max_candidates": 3,
+  "pilot_timeout_hours": 3,
+  "worker_allocation": {
+    "front_sampling": {
+      "owner": "/root/b2_simple_physics",
+      "cpu_workers": 0,
+      "gpu": 0,
+      "status": "released; main and verification exited 0; results retained"
+    },
+    "others": 0,
+    "return_sampling": {
+      "owner": "/root/b2_literature",
+      "cpu_workers": 0,
+      "gpu": 0,
+      "status": "released; main and verification exited 0; results retained"
+    },
+    "acoustic_update": {
+      "owner": "/root/b2_needs",
+      "cpu_workers": 0,
+      "gpu": 0,
+      "status": "released; stable run and verification exited; final artifacts delivered"
+    }
+  },
+  "completion_utc": "2026-10-08T03:41:43.398128+00:00",
+  "result": "no candidate selected; 3 pilot candidates; GPU used 0"
+}

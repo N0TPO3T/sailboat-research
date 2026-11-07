@@ -1,0 +1,40 @@
+{
+  "initial_agents": [
+    {
+      "agent": "/root/b2_needs",
+      "model": "inherited; exact version unreported",
+      "scope": "independent application needs",
+      "artifact": "notes/needs.md"
+    },
+    {
+      "agent": "/root/b2_literature",
+      "model": "inherited; exact version unreported",
+      "scope": "independent literature and code",
+      "artifact": "notes/literature.md"
+    },
+    {
+      "agent": "/root/b2_simple_physics",
+      "model": "inherited; exact version unreported",
+      "scope": "independent strong simple solutions and physical constraints",
+      "artifact": "notes/simple_physics.md"
+    }
+  ],
+  "independence": "initial cards formed without reading each others output; merged only after submission",
+  "selection_review": {
+    "agent": "/root/b2_selection_review",
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh",
+    "scope": "fresh novelty and pilot selection; application evidence scale",
+    "review_independence": "same-family",
+    "raw_artifact": "notes/selection_review.md",
+    "verdict": "F PROCEED; I and E PROCEED WITH CAUTION; all gaps unverified before pilot"
+  },
+  "user_overrides": [
+    "mature methods not eliminated for being published",
+    "CPU pilot allowed; no GPU required",
+    "no paper writing",
+    "no accept-score target",
+    "one canonical IDEA_REPORT plus raw evidence"
+  ],
+  "unavailable_optional_model": "gpt-5.5 not in exposed model list; did not invent second-model generation"
+}

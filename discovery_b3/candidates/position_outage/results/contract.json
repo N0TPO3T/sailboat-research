@@ -1,0 +1,22 @@
+{
+  "reference_velocity_transform_max_error_mps": 7.110336388265311e-16,
+  "raw_gyro_reference_axis_correlation": [
+    0.9117884497694873,
+    0.8261116043935649,
+    0.9713452956880717
+  ],
+  "raw_gyro_minus_reference_median_radps": [
+    0.014393981230102987,
+    -0.007373289518681749,
+    0.0026238738276800097
+  ],
+  "imu_span_s": 597.797001,
+  "reference_span_s": 970.5383139999999,
+  "mean_accel_norm_mps2": 10.098671175737037,
+  "lever_arm_m": [
+    -0.002441,
+    -0.009725,
+    0.007533000000000001
+  ],
+  "time_max_gap_s": 0.010011000000019976
+}

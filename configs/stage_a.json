@@ -1,0 +1,16 @@
+{
+  "protocol": "root_seed100_7200_reference_smoke_extended",
+  "checkpoint": "saclstm_s14nowind_buf1e6_seed100@7200",
+  "identity_limit": "Matching 14D Actor/normalizer and existing inference entry; original training environment and final@9000/paper identity are not verified",
+  "actor": "checkpoints/actor.pth",
+  "normalizer": "checkpoints/normalizer.pth",
+  "noise_enabled": false,
+  "noise_reason": "Preserve the existing research/smoke_baseline.py path for these exact assets; retain native Dryden wind. Official final@9000 evaluation uses extra 3% noise and is a different protocol.",
+  "wind_degrees": [0, 90, 150, 180],
+  "seeds": [0, 1, 2],
+  "episode_limit": 1000,
+  "target_metres": [500, 0],
+  "capability_gate": {"minimum_successes": 9, "minimum_successes_per_wind": 1, "meaning": "Conservative engineering gate fixed before this 12-episode run, not a paper benchmark"},
+  "parity": {"fixed_inputs": 32, "closed_loop_steps": 25, "atol_action_hidden": 0.000001, "atol_state_reward": 0.00001, "rtol": 0.000001},
+  "compute": {"device": "cpu", "threads": 1, "pilot_wall_seconds_limit": 240, "total_experiment_wall_seconds_budget": 3600}
+}

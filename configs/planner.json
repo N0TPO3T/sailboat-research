@@ -1,0 +1,14 @@
+{
+  "nominal_distance": 500.0,
+  "maximum_distance": 550.0,
+  "lateral_angles_rad": [-0.25, 0.25],
+  "arrival_radius": 30.0,
+  "replan_period": 10.0,
+  "minimum_hold_time": 30.0,
+  "improvement_threshold": 25.0,
+  "smoothing": 0.75,
+  "map_distance_weight": 1.0,
+  "wind_weight": 0.3,
+  "turn_weight": 20.0,
+  "change_weight": 0.1
+}

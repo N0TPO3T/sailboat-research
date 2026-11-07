@@ -1,0 +1,25 @@
+# Position-outage oracle-initialized propagation pilot — frozen protocol
+
+2026-10-09, before method propagation/scoring. One local CPU worker, threads=1, GPU=0, no server writes. Task is **offline propagation diagnosis**, not online GNSS-outage control or safety certification.
+
+Data: first CANOE sequence in chronological S3 listing, canoe-2025-08-20-16-07. Take its first 8 MiB Ouster IMU prefix and first 3 MiB lidar-reference prefix; no sequence/window chosen by method success. Retain trailing partial CSV line on disk but exclude it in parser. Data remains CC BY 4.0; cite dataset authors.
+
+Input contract: 100Hz raw IMU, microsecond UTC timestamps; independent Ouster IMU vs reference Novatel GNSS/INS. Postprocessed references are future-informed. All methods share **oracle position/velocity/orientation at t0 and the preceding 20s reference history**; this is explicitly a privileged diagnostic, not a causal deployment initializer. After t0, methods may only access raw IMU samples up to current time. Future reference is accessible to scoring only. No synthetic noise/position fixes.
+
+Coordinate contract: official pycanoe C1(x) C2(y) C3(z) matrices use passive principal rotations. Check their product times reference body velocity equals ENU velocity. IMU-lidar rotation is identity; their 12.55mm lever arm is retained for p/v reference transformation. Verify raw gyro units/sign against pre-window reference angular velocities; do not reverse axes to improve method results. Transform reference lidar pose to IMU point using T_lidar_imu. All comparisons evaluate same IMU point.
+
+Windows: t0 offsets 40,100,160,220,280,340,400,460,520 seconds from first IMU sample; horizon60s. Keep every complete window; no winner-based replacement. Classify ONLY using previous20s reference: median ground speed<0.5m/s=low_speed; otherwise absolute COG angular regression rate>1deg/s=turning; others=ordinary. Report absent classes honestly.
+
+Methods: CV holds oracle world velocity; CTR uses previous20s COG linear-regression rate and oracle speed; gyro_raw rotates initial horizontal ground-velocity vector by heading change integrated from 3D raw gyroscope; gyro_bias does the same after subtracting previous20s mean(raw angular rate minus oracle-reference body angular rate). All gyro propagation uses full3D rotation and extracts ENU projected body-x direction; initial course-heading offset is held fixed. This is mature gyro-aided dead reckoning, not a new estimator. No accelerometer double integration in this first pilot; without validated bias/gravity it is not required to establish the proposed lightweight baseline comparison.
+
+Scores: Euclidean horizontal and lateral error at10/30/60s; lateral axis is perpendicular to actual reference horizontal velocity (speed<0.1 falls back t0 direction). First |lateral error|>2/5/10m time, censored at60s, is a retrospective descriptor. Thresholds are explicit illustrative sensitivity budgets, **not validated surveying tolerance**. Report course-heading offset change and actual speed change; fixed-side-slip/fixed-speed approximation can fail. No covariance confidence/safety bound claimed.
+
+Decision: look for consistent paired improvement of gyro_bias over BOTH strong baselines with real turning information, and costs/failures. If no turns/low-speed cases, classify task coverage insufficient, not success at missing conditions. Nine windows from one recording are correlated, not nine independent missions. This diagnostic can motivate better initialization/uncertainty validation; it cannot decide online stop time, certify safety, or support broad navigation gains. No method parameter sweep; no new data chosen from outcome.
+
+## Post-run metric contract clarification (2026-10-09)
+
+The initial protocol above explicitly defined lateral error using the **instantaneous reference-velocity normal**: |(p_pred(t)-p_ref(t)) dot n_ref(t)|. This differs from the separate selection-review request for an **initial survey-line normal**. Preserve original scores and report the mismatch; it is not correct to call the original quantity deviation from the initial straight survey line.
+
+A trace-only supplemental analysis (`check_fixed_normal.py`) now evaluates |(p_pred(t)-p_ref(t)) dot n_0|, where n_0 is perpendicular to oracle initial horizontal velocity. It also records |(p_ref(t)-p_ref(0)) dot n_0| separately. Neither projection converts offline prediction into actual closed-loop corridor control. No new windows, predictions, parameters or thresholds were introduced.
+
+`PROTOCOL_FROZEN.md` is the exact original preregistered file whose SHA256 appears in `results/receipt.json`; this clarification is post-run and does not silently revise preregistration.

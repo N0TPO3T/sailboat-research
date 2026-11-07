@@ -1,0 +1,482 @@
+[
+  {
+    "scenario": "confirmation_01",
+    "seed": 2026107081,
+    "wind": 15.889895292297638,
+    "heading": -116.21160436942696,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      4.557132895619095,
+      3.6568090481039977
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev01_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_01",
+    "seed": 2026107081,
+    "wind": 15.889895292297638,
+    "heading": -116.21160436942696,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      4.557132895619095,
+      3.6568090481039977
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev01_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_01",
+    "seed": 2026107081,
+    "wind": 15.889895292297638,
+    "heading": -116.21160436942696,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      4.557132895619095,
+      3.6568090481039977
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev01_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev12_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev12_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev12_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_13",
+    "seed": 2026107093,
+    "wind": -137.37497371281498,
+    "heading": 49.147066765942725,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      1.9046710519907382,
+      -1.2227736532252371
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev13_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_13",
+    "seed": 2026107093,
+    "wind": -137.37497371281498,
+    "heading": 49.147066765942725,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      1.9046710519907382,
+      -1.2227736532252371
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev13_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_13",
+    "seed": 2026107093,
+    "wind": -137.37497371281498,
+    "heading": 49.147066765942725,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      1.9046710519907382,
+      -1.2227736532252371
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev13_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_16",
+    "seed": 2026107096,
+    "wind": 55.372731732805164,
+    "heading": -151.4951917220495,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      74.35799255899892,
+      -9.792289956688505
+    ],
+    "stratum": "entry",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev16_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_16",
+    "seed": 2026107096,
+    "wind": 55.372731732805164,
+    "heading": -151.4951917220495,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      74.35799255899892,
+      -9.792289956688505
+    ],
+    "stratum": "entry",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev16_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_16",
+    "seed": 2026107096,
+    "wind": 55.372731732805164,
+    "heading": -151.4951917220495,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      74.35799255899892,
+      -9.792289956688505
+    ],
+    "stratum": "entry",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev16_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_00",
+    "seed": 2026107080,
+    "wind": -55.994045286202436,
+    "heading": -32.24793987839894,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.1932814791960304,
+      0.7945579743309101
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev00_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_00",
+    "seed": 2026107080,
+    "wind": -55.994045286202436,
+    "heading": -32.24793987839894,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.1932814791960304,
+      0.7945579743309101
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev00_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_00",
+    "seed": 2026107080,
+    "wind": -55.994045286202436,
+    "heading": -32.24793987839894,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.1932814791960304,
+      0.7945579743309101
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev00_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_02",
+    "seed": 2026107082,
+    "wind": 38.99783366341063,
+    "heading": 4.347098977511251,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      5.550290247089702,
+      0.13458064036076287
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev02_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_02",
+    "seed": 2026107082,
+    "wind": 38.99783366341063,
+    "heading": 4.347098977511251,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      5.550290247089702,
+      0.13458064036076287
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev02_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_02",
+    "seed": 2026107082,
+    "wind": 38.99783366341063,
+    "heading": 4.347098977511251,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      5.550290247089702,
+      0.13458064036076287
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev02_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_03",
+    "seed": 2026107083,
+    "wind": 148.04577820853,
+    "heading": -116.86132293535456,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.8891774293061747,
+      3.0376726793802207
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev03_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_03",
+    "seed": 2026107083,
+    "wind": 148.04577820853,
+    "heading": -116.86132293535456,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.8891774293061747,
+      3.0376726793802207
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev03_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_03",
+    "seed": 2026107083,
+    "wind": 148.04577820853,
+    "heading": -116.86132293535456,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.8891774293061747,
+      3.0376726793802207
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev03_turn_only",
+    "recovery": "turn_only"
+  },
+  {
+    "scenario": "confirmation_04",
+    "seed": 2026107084,
+    "wind": 121.6014306615757,
+    "heading": -175.894089866796,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -3.290263571042148,
+      -7.071131124175311
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "luff",
+    "id": "dev04_luff",
+    "recovery": "luff"
+  },
+  {
+    "scenario": "confirmation_04",
+    "seed": 2026107084,
+    "wind": 121.6014306615757,
+    "heading": -175.894089866796,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -3.290263571042148,
+      -7.071131124175311
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "ease",
+    "id": "dev04_ease",
+    "recovery": "ease"
+  },
+  {
+    "scenario": "confirmation_04",
+    "seed": 2026107084,
+    "wind": 121.6014306615757,
+    "heading": -175.894089866796,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -3.290263571042148,
+      -7.071131124175311
+    ],
+    "stratum": "inside",
+    "batch": "recovery_simplification",
+    "method": "center",
+    "variant": "turn_only",
+    "id": "dev04_turn_only",
+    "recovery": "turn_only"
+  }
+]

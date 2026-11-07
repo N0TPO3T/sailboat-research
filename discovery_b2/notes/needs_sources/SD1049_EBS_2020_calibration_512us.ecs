@@ -1,0 +1,105 @@
+﻿#========================================================================================#
+#ECHOVIEW CALIBRATION SUPPLEMENT (.ECS) FILE (Simrad EK80, ES80, WBAT, EKAuto or Kongsberg EA640)#
+#                                 10/6/2020 13:22:39.0850                                #
+#========================================================================================#
+#       +----------+   +-----------+   +----------+   +-----------+   +----------+       #
+#       | Default  |-->| Data File |-->| Fileset  |-->| SourceCal |-->| LocalCal |       #
+#       | Settings |   | Settings  |   | Settings |   | Settings  |   | Settings |       #
+#       +----------+   +-----------+   +----------+   +-----------+   +----------+       #
+# - Settings to the right override those to their left.                                  #
+# - See the Help file page "About calibration".                                          #
+#========================================================================================#
+
+Version 1.00
+
+
+# SD 1043 calibration ECS file for summer 2020 EBS Saildrone survey - SD1043_EBS_2020_calibration_512us.ecs
+#  VERSION r 1.0
+# 
+# INTENDED USE - final processing of 512 us pulse length data
+# 
+# SUMMARY
+# based on average of calibrations prior (13 or 14 aug 2020) to and after  (27 October 2020) the 2020 EBS missions
+# calibrations are really close within 0.09 at 38 kHz, and 0.1 dB for 200 kHz 
+# (i.e. max diference in Svgain at start and end of deployment across 3 drones)
+# see source data for details
+
+# EBA is from specification sheet and sound speed corrected for sound speed in survey area
+# uses nomial enviornmental paramters used in in AFSC survey
+# gains from on-axis method as per AFSC surveys, 38 kHz beam angles from simrad Calibration program (39 kHz on axis and Simrad calibration gains are all within 0.6 dB (n=6))
+# 200 kHz is a single beam and was processed with 38 kHz split-beam angles to locate the on-axis measurements.
+# 
+# 
+#
+# SOURCES
+# calibration data summary at - G:\Saildrone\2020_EBS\calibration\Saildrone_Calibration_template_EBS_2020.xlsx
+# 
+# updated with final values 10/30/20 ADR
+
+
+#========================================================================================#
+#                                    FILESET SETTINGS                                    #
+#========================================================================================#
+
+SoundSpeed = 1470 # (meters per second) [1400.00..1700.00] # apply to all data - MACE standard values
+TvgRangeCorrection =  SimradEK80# [None, BySamples, SimradEx500, SimradEx60, BioSonics, Kaijo, PulseLength, Ex500Forced, SimradEK80, Standard]
+# TvgRangeCorrectionOffset = # (samples) [-10000.00..10000.00]
+
+
+#========================================================================================#
+#                                   SOURCECAL SETTINGS                                   #
+#========================================================================================#
+
+# 38 kHz - preliminary based on 38 kHz swing pre-deployement calibration on 5/14/20
+
+SourceCal T1 (channel 1)
+     AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+     Acidity = 8.000 # (pH) [0.000..14.000]
+     EffectivePulseLength = 0.339 # (milliseconds) [0.001..50.000]
+     EK60SaCorrection = 0.04 # (decibels) [-99.9900..99.9900]
+     Frequency = 38.00 # (kilohertz) [0.01..10000.00]
+     MajorAxis3dbBeamAngle = 15.30 # (degrees) [0.00..359.99] 
+     MajorAxisAngleOffset = -0.16 # (degrees) [-9.99..9.99]
+     MajorAxisAngleSensitivity = 10.500000 # [0.100000..100.000000]
+     MinorAxis3dbBeamAngle = 15.91 # (degrees) [0.00..359.99]
+     MinorAxisAngleOffset = -0.16 # (degrees) [-9.99..9.99]
+     MinorAxisAngleSensitivity = 10.500000 # [0.100000..100.000000]
+     NumberOfTransducerSegments = 3 # [1..4]
+     Salinity = 33.500 # (parts per thousand) [0.000..50.000] # Nominal value used in EBS survey 
+     SamplingFrequency = 8.3330000 # (kilohertz) [0.0100000..1000.0000000]
+     SoundSpeed = 1470 # (meters per second) [1400.00..1700.00]# Nominal value used in EBS survey 
+     Temperature = 4.000 # (degrees celsius) [-10.000..100.000] # Nominal value used in EBS survey 
+     TransceiverImpedance = 10800.0 # (ohms) [0.0..1000000.0] # value from instrument
+     TransceiverSamplingFrequency = 1499.94 # (kilohertz) [1.00..5000.00] # value from instrument
+     TransducerGain = 19.08 # (decibels) [1.0000..99.0000]
+     TransmittedPower = 500.00000 # (watts) [1.00000..30000.00000]
+     TransmittedPulseLength = 0.512 # (milliseconds) [0.001..50.000]
+     TvgRangeCorrection = SimradEK80 # [None, BySamples, SimradEx500, SimradEx60, BioSonics, Kaijo, PulseLength, Ex500Forced, SimradEK80, Standard]
+     TwoWayBeamAngle = -13.07 # (decibels re 1 steradian) [-99.000000..-1.000000] # specification sheet tank measurement adjusted for nonmial sound speed in survey area
+
+SourceCal T1 (channel 2)
+    # AbsorptionDepth = 0.000 # (meters) [0.000..10000.000]
+    # Acidity = 8.000 # (pH) [0.000..14.000]
+    # EffectivePulseLength = 0.427 # (milliseconds) [0.001..50.000]
+     EK60SaCorrection = -0.03 # (decibels) [-99.9900..99.9900]
+    # Frequency = 200.00 # (kilohertz) [0.01..10000.00]
+    # MajorAxis3dbBeamAngle = 16.90 # (degrees) [0.00..359.99]
+    # MinorAxis3dbBeamAngle = 17.30 # (degrees) [0.00..359.99]
+    # NumberOfTransducerSegments = 1 # [1..4]
+     Salinity = 33.500 # (parts per thousand) [0.000..50.000]
+    # SamplingFrequency = 8.3330000 # (kilohertz) [0.0100000..1000.0000000]
+     SoundSpeed = 1470 # (meters per second) [1400.00..1700.00]
+     Temperature = 4.000 # (degrees celsius) [-10.000..100.000]
+    # TransceiverImpedance = 10800.0 # (ohms) [0.0..1000000.0]
+    # TransceiverSamplingFrequency = 1499.94 # (kilohertz) [1.00..5000.00]
+     TransducerGain = 19.56 # (decibels) [1.0000..99.0000]
+    # TransmittedPower = 188.00000 # (watts) [1.00000..30000.00000]
+    # TransmittedPulseLength = 0.512 # (milliseconds) [0.001..50.000]
+    # TvgRangeCorrection = SimradEK80 # [None, BySamples, SimradEx500, SimradEx60, BioSonics, Kaijo, PulseLength, Ex500Forced, SimradEK80, Standard]
+     TwoWayBeamAngle = -12.77 # (decibels re 1 steradian) [-99.000000..-1.000000] # specification sheet tank measurement adjusted for nonmial sound speed in survey area
+
+
+#========================================================================================#
+#                                    LOCALCAL SETTINGS                                   #
+#========================================================================================#
+

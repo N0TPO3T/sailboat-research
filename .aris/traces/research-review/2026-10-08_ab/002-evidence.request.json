@@ -1,0 +1,11 @@
+{
+  "call_number": 2,
+  "purpose": "evidence",
+  "tool": "spawn_agent",
+  "model": "inherited; actual not exposed",
+  "reasoning_effort": "inherited; actual not exposed",
+  "files_referenced": [
+    "docs/REVIEW_INPUT_MANIFEST.json"
+  ],
+  "prompt": "独立审查B研究，角色：实验、强基线、统计与结果归因。用户要求3名真实独立审查者，此为其中一名。只读同版本docs/REVIEW_INPUT_MANIFEST.json指定材料：本地C:/Users/74095/hs/SailBoat/sailboat-track-b；服务器/home/ot/Students/hs/sailboat-track-b，SSH -F C:/Users/74095/.ssh/config donghai。完整读docs/B_METHOD_NOTE.md、docs/B_RESEARCH_REPORT.md、结果索引及冻结记录；重点独立复核主数字/配对与分层/失败保留/版本与初态匹配、强luff_no_build对照、v1转开发后未与v2合并、操纵/横倾/最长离区代价、资源调度说明。允许离线复算不推进环境，不新增实验。不要查看其他审查者意见或早审意见。给整体判断、保留理由、最多3项实质问题，区分必需修复、补证、可接受边界；不要求新网络/理论，不给分数或预设Accept。仅可写reviews/EVIDENCE_REVIEW.md（本地/服务器同路径），不得修改其他文件。共享预算，不能启动实验worker。完成发root，首轮独立前不传播他人意见。输入缺失如实说明。"
+}

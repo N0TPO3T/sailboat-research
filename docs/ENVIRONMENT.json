@@ -1,0 +1,11 @@
+{
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+  "platform": "Linux-7.0.0-30-generic-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.4.6",
+    "scipy": "1.18.1",
+    "torch": "2.13.0+cpu",
+    "gymnasium": "1.3.0",
+    "matplotlib": "3.11.1"
+  }
+}

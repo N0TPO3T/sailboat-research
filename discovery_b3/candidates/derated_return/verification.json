@@ -1,0 +1,239 @@
+{
+  "status": "pass",
+  "checks": [
+    {
+      "case": "normal_c0",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "normal_c0",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "normal_c0",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "normal_c0.3",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "normal_c0.3",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "normal_c0.3",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0.3",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0.3",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_left_c0.3",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0.3",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0.3",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.5_right_c0.3",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0.3",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0.3",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_left_c0.3",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0.3",
+      "method": "curvature",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0.3",
+      "method": "fixed",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    },
+    {
+      "case": "rho0.25_right_c0.3",
+      "method": "reserve",
+      "hull_recomputed": true,
+      "commands_within_known_derated_limits": true,
+      "actual_within_original_hard_limits": true
+    }
+  ],
+  "dt_comparison": [
+    {
+      "method": "curvature",
+      "main_safe": true,
+      "fine_safe": true,
+      "time_difference_s": -0.03750000000002274,
+      "clearance_difference_m": -0.022292690088867584
+    },
+    {
+      "method": "fixed",
+      "main_safe": true,
+      "fine_safe": true,
+      "time_difference_s": -0.037499999999994316,
+      "clearance_difference_m": -0.022292690088867584
+    },
+    {
+      "method": "reserve",
+      "main_safe": false,
+      "fine_safe": false,
+      "time_difference_s": 0.0,
+      "clearance_difference_m": 0.8873111933474433
+    }
+  ],
+  "config_sha256": "fe815802e7b3937976e8f9554089010aa301d7f9ca6b03d1f818640b3c04cb81"
+}

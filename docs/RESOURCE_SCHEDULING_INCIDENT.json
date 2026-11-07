@@ -1,0 +1,310 @@
+{
+  "audit_utc": "2026-10-07T16:58:05.979705+00:00",
+  "scheduling_error": "Scale batch started without requiring preceding poll exit_code; predecessor was reported running on last poll.",
+  "all_sessions_exit_code": 0,
+  "current_jobs": "none; both agent and root checked",
+  "gpu_used": false,
+  "estimated_batch_gap_seconds": 1.8523106575012207,
+  "estimated_overlap_seconds": 0,
+  "estimated_peak_active_episode_intervals": 4,
+  "estimated_seconds_over_four": 0,
+  "precision_limit": "Start estimated as JSON filesystem mtime minus recorded wall_s; serialization/close time and process startup are not exact numerical-compute timestamps. This cannot prove precise process overlap or its absence; retain launch/poll discrepancy and interval bounds.",
+  "known_scale_pids": [
+    942023,
+    942028,
+    942031,
+    942032,
+    942033
+  ],
+  "corrective_action": "No further batch until explicit previous exit_code; all experimental runs now finished.",
+  "intervals": [
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_02_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:04.337823+00:00",
+      "write_mtime_utc": "2026-10-07T16:52:39.667438+00:00",
+      "estimated_start_epoch": 1791391924.3378234,
+      "write_epoch": 1791391959.6674378,
+      "wall_s": 35.32961440086365
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_22_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:58.303354+00:00",
+      "write_mtime_utc": "2026-10-07T16:55:33.016604+00:00",
+      "estimated_start_epoch": 1791392098.303354,
+      "write_epoch": 1791392133.0166037,
+      "wall_s": 34.71324968338013
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_15_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:50.162883+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:25.530622+00:00",
+      "estimated_start_epoch": 1791392030.1628828,
+      "write_epoch": 1791392065.5306215,
+      "wall_s": 35.36773872375488
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_18_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:23.586633+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:58.287496+00:00",
+      "estimated_start_epoch": 1791392063.5866332,
+      "write_epoch": 1791392098.2874959,
+      "wall_s": 34.700862646102905
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_03_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:04.338617+00:00",
+      "write_mtime_utc": "2026-10-07T16:52:39.262425+00:00",
+      "estimated_start_epoch": 1791391924.3386166,
+      "write_epoch": 1791391959.2624254,
+      "wall_s": 34.92380881309509
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_07_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:39.686098+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:14.985511+00:00",
+      "estimated_start_epoch": 1791391959.6860979,
+      "write_epoch": 1791391994.985511,
+      "wall_s": 35.299413204193115
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_13_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:48.244588+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:22.609535+00:00",
+      "estimated_start_epoch": 1791392028.244588,
+      "write_epoch": 1791392062.609535,
+      "wall_s": 34.36494708061218
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_14_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:48.736042+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:23.570564+00:00",
+      "estimated_start_epoch": 1791392028.7360425,
+      "write_epoch": 1791392063.5705636,
+      "wall_s": 34.83452105522156
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_04_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:38.770276+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:13.095876+00:00",
+      "estimated_start_epoch": 1791391958.7702758,
+      "write_epoch": 1791391993.095876,
+      "wall_s": 34.325600147247314
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_19_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:25.548059+00:00",
+      "write_mtime_utc": "2026-10-07T16:55:00.976909+00:00",
+      "estimated_start_epoch": 1791392065.548059,
+      "write_epoch": 1791392100.9769092,
+      "wall_s": 35.428850173950195
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_10_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:14.057238+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:48.710800+00:00",
+      "estimated_start_epoch": 1791391994.057238,
+      "write_epoch": 1791392028.7108,
+      "wall_s": 34.65356183052063
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_01_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:04.329976+00:00",
+      "write_mtime_utc": "2026-10-07T16:52:39.296427+00:00",
+      "estimated_start_epoch": 1791391924.329976,
+      "write_epoch": 1791391959.2964265,
+      "wall_s": 34.966450452804565
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_20_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:55.993303+00:00",
+      "write_mtime_utc": "2026-10-07T16:55:30.663535+00:00",
+      "estimated_start_epoch": 1791392095.9933026,
+      "write_epoch": 1791392130.663535,
+      "wall_s": 34.67023253440857
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_00_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:04.320258+00:00",
+      "write_mtime_utc": "2026-10-07T16:52:38.751410+00:00",
+      "estimated_start_epoch": 1791391924.3202584,
+      "write_epoch": 1791391958.7514098,
+      "wall_s": 34.431151390075684
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_17_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:22.636050+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:56.779544+00:00",
+      "estimated_start_epoch": 1791392062.6360495,
+      "write_epoch": 1791392096.7795436,
+      "wall_s": 34.14349412918091
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_09_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:13.956249+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:48.227511+00:00",
+      "estimated_start_epoch": 1791391993.956249,
+      "write_epoch": 1791392028.2275107,
+      "wall_s": 34.27126169204712
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_16_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:21.533444+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:55.977824+00:00",
+      "estimated_start_epoch": 1791392061.5334437,
+      "write_epoch": 1791392095.9778242,
+      "wall_s": 34.44438052177429
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_05_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:39.281987+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:14.041090+00:00",
+      "estimated_start_epoch": 1791391959.2819872,
+      "write_epoch": 1791391994.0410898,
+      "wall_s": 34.75910258293152
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_23_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:55:00.992941+00:00",
+      "write_mtime_utc": "2026-10-07T16:55:36.428703+00:00",
+      "estimated_start_epoch": 1791392100.9929414,
+      "write_epoch": 1791392136.428703,
+      "wall_s": 35.43576169013977
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_21_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:54:56.796167+00:00",
+      "write_mtime_utc": "2026-10-07T16:55:31.165550+00:00",
+      "estimated_start_epoch": 1791392096.7961671,
+      "write_epoch": 1791392131.1655498,
+      "wall_s": 34.36938261985779
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_06_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:52:39.313378+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:13.939479+00:00",
+      "estimated_start_epoch": 1791391959.3133779,
+      "write_epoch": 1791391993.9394794,
+      "wall_s": 34.62610149383545
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_08_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:13.112264+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:47.287750+00:00",
+      "estimated_start_epoch": 1791391993.112264,
+      "write_epoch": 1791392027.2877495,
+      "wall_s": 34.175485610961914
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_11_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:15.002036+00:00",
+      "write_mtime_utc": "2026-10-07T16:53:50.146568+00:00",
+      "estimated_start_epoch": 1791391995.002036,
+      "write_epoch": 1791392030.1465683,
+      "wall_s": 35.144532203674316
+    },
+    {
+      "batch": "recovery_luff_control",
+      "file": "runs/recovery_luff_control/recovery_confirmation_12_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:53:47.303842+00:00",
+      "write_mtime_utc": "2026-10-07T16:54:21.516856+00:00",
+      "estimated_start_epoch": 1791392027.3038423,
+      "write_epoch": 1791392061.516856,
+      "wall_s": 34.213013648986816
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_00_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:55:38.281014+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:12.531068+00:00",
+      "estimated_start_epoch": 1791392138.2810137,
+      "write_epoch": 1791392172.5310676,
+      "wall_s": 34.25005388259888
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_06_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:56:13.702274+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:48.465783+00:00",
+      "estimated_start_epoch": 1791392173.702274,
+      "write_epoch": 1791392208.4657826,
+      "wall_s": 34.763508558273315
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_02_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:55:38.285459+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:13.683783+00:00",
+      "estimated_start_epoch": 1791392138.285459,
+      "write_epoch": 1791392173.6837828,
+      "wall_s": 35.39832377433777
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_01_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:55:38.286674+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:13.391774+00:00",
+      "estimated_start_epoch": 1791392138.2866743,
+      "write_epoch": 1791392173.3917742,
+      "wall_s": 35.10509991645813
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_05_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:56:13.411182+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:48.462805+00:00",
+      "estimated_start_epoch": 1791392173.411182,
+      "write_epoch": 1791392208.4628048,
+      "wall_s": 35.05162286758423
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_03_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:55:38.286696+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:13.740226+00:00",
+      "estimated_start_epoch": 1791392138.2866962,
+      "write_epoch": 1791392173.7402258,
+      "wall_s": 35.453529596328735
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_04_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:56:12.549084+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:46.707187+00:00",
+      "estimated_start_epoch": 1791392172.549084,
+      "write_epoch": 1791392206.7071872,
+      "wall_s": 34.158103227615356
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "file": "runs/recovery_luff_scale/recovery_scale_07_luff_no_build__center.json",
+      "estimated_start_utc": "2026-10-07T16:56:13.757804+00:00",
+      "write_mtime_utc": "2026-10-07T16:56:49.115057+00:00",
+      "estimated_start_epoch": 1791392173.7578042,
+      "write_epoch": 1791392209.1150572,
+      "wall_s": 35.357253074645996
+    }
+  ]
+}

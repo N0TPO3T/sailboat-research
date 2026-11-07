@@ -1,0 +1,196 @@
+{
+  "schema": 1,
+  "status": "frozen for new-instance evaluation; research candidate, not deployment recommendation",
+  "main_variant": "tangent_exit90",
+  "methods": {
+    "relay_m120": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 120.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "relay_m160": {
+      "planner_kind": "relay",
+      "config": {
+        "margin": 160.0,
+        "lookahead": 500.0,
+        "handoff": 100.0,
+        "trigger_clearance": 80.0,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0
+      }
+    },
+    "tangent_minimal": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 12.0,
+        "entry_clearance": 12.0,
+        "exit_clearance": 18.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 10.0,
+        "target_length": 500.0,
+        "hold_position": false
+      }
+    },
+    "tangent_scaled": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 90.0,
+        "entry_clearance": 90.0,
+        "exit_clearance": 135.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 10.0,
+        "target_length": 500.0,
+        "hold_position": false
+      }
+    },
+    "tangent_fixed12": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 12.0,
+        "entry_clearance": 12.0,
+        "exit_clearance": 18.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 10.0,
+        "target_length": 500.0,
+        "hold_position": true
+      }
+    },
+    "tangent_fixed90": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 90.0,
+        "entry_clearance": 90.0,
+        "exit_clearance": 135.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 10.0,
+        "target_length": 500.0,
+        "hold_position": true
+      }
+    },
+    "tangent_period30": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 90.0,
+        "entry_clearance": 90.0,
+        "exit_clearance": 135.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 30.0,
+        "target_length": 500.0,
+        "hold_position": false
+      }
+    },
+    "tangent_period60": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 90.0,
+        "entry_clearance": 90.0,
+        "exit_clearance": 135.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 60.0,
+        "target_length": 500.0,
+        "hold_position": false
+      }
+    },
+    "tangent_exit90": {
+      "planner_kind": "tangent",
+      "config": {
+        "margin": 160,
+        "lookahead": 500.0,
+        "handoff": 100,
+        "trigger_clearance": 80,
+        "maximum_distance": 550.0,
+        "prediction_horizon": 0.0,
+        "prediction_guard": 40.0,
+        "tangent_buffer": 90.0,
+        "entry_clearance": 90.0,
+        "exit_clearance": 90.0,
+        "commitment_time": 60.0,
+        "minimum_recovery_time": 60.0,
+        "side_bonus": 0.05,
+        "switch_improvement": 0.1,
+        "update_period": 60.0,
+        "target_length": 500.0,
+        "hold_position": false
+      }
+    }
+  },
+  "default_reference": "relay_m160",
+  "evaluation_methods": [
+    "relay_m120",
+    "relay_m160",
+    "tangent_exit90",
+    "tangent_minimal",
+    "tangent_period60",
+    "tangent_fixed90"
+  ],
+  "source_doi": "10.3390/drones10080578",
+  "run": "runs/r5_literature_20261004T080700Z"
+}

@@ -1,0 +1,40 @@
+{
+  "best_vs_center": "recovery_confirmation_06",
+  "worst_vs_matched_luff": "recovery_confirmation_08",
+  "mechanism": "recovery_confirmation_00",
+  "recovery_start": 9,
+  "recovery_end": 25,
+  "activation_record": {
+    "t": 9,
+    "raw": [
+      -4.502154350280762,
+      3.3956637382507324,
+      -0.02587616629898548,
+      0.6269291639328003,
+      0.17164354026317596,
+      0.4636300802230835,
+      0.07290229946374893,
+      -0.004071800038218498,
+      0.24434609711170197,
+      0.24434609711170197,
+      -0.11731412261724472,
+      -0.114501953125,
+      500.0,
+      0.0
+    ],
+    "d": 5.6391423121803665,
+    "desired_heading": -3.051656713820995,
+    "mode": "recovery_turn",
+    "wind": -3.051656713820995,
+    "wind_speed": 8.0,
+    "command": [
+      1.0,
+      1.0
+    ],
+    "sail_ref_rad": 1.5707963267948966,
+    "rudder_ref_rad": 0.5235987901687622,
+    "low_count": 10,
+    "recovery_age": 1,
+    "recovery_state": "turn"
+  }
+}

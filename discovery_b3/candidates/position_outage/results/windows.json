@@ -1,0 +1,119 @@
+[
+  {
+    "start_s": 40,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.14257991594664945,
+    "past_speed_mps": 1.0535522422004893,
+    "gyro_bias_radps": [
+      0.014274630571700987,
+      -0.007360968617638482,
+      0.0026141200146130934
+    ],
+    "speed_change_max_mps": 0.0359488894823492,
+    "course_heading_offset_change_max_deg": 2.5650264984708238
+  },
+  {
+    "start_s": 100,
+    "kind": "ordinary",
+    "past_COG_rate_degps": 0.0018385780607915426,
+    "past_speed_mps": 1.0431348937244413,
+    "gyro_bias_radps": [
+      0.014337915261323502,
+      -0.00741500829724367,
+      0.002623282954852708
+    ],
+    "speed_change_max_mps": 0.022075333062914204,
+    "course_heading_offset_change_max_deg": 1.4953343831876367
+  },
+  {
+    "start_s": 160,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.6096145400046277,
+    "past_speed_mps": 1.039344476171577,
+    "gyro_bias_radps": [
+      0.014094711848303618,
+      -0.007508279535703611,
+      0.002640001693969273
+    ],
+    "speed_change_max_mps": 0.045774361837353394,
+    "course_heading_offset_change_max_deg": 2.8657277157975702
+  },
+  {
+    "start_s": 220,
+    "kind": "ordinary",
+    "past_COG_rate_degps": 0.03330400924464857,
+    "past_speed_mps": 1.059840003360463,
+    "gyro_bias_radps": [
+      0.01424937225304464,
+      -0.00760346635603656,
+      0.002646373376477432
+    ],
+    "speed_change_max_mps": 0.025460897147851824,
+    "course_heading_offset_change_max_deg": 1.9936575158212495
+  },
+  {
+    "start_s": 280,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.1616784857211108,
+    "past_speed_mps": 1.045888306534687,
+    "gyro_bias_radps": [
+      0.014187990717071197,
+      -0.007577243052162168,
+      0.0025623308492529933
+    ],
+    "speed_change_max_mps": 0.02931312150636689,
+    "course_heading_offset_change_max_deg": 1.9395803508718459
+  },
+  {
+    "start_s": 340,
+    "kind": "ordinary",
+    "past_COG_rate_degps": 0.01603972568547317,
+    "past_speed_mps": 1.0522517651407854,
+    "gyro_bias_radps": [
+      0.014316051380485861,
+      -0.0074732967576879444,
+      0.00254585695785685
+    ],
+    "speed_change_max_mps": 0.02838878713613857,
+    "course_heading_offset_change_max_deg": 2.7874385684386573
+  },
+  {
+    "start_s": 400,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.0136228359078187,
+    "past_speed_mps": 1.0545421033623743,
+    "gyro_bias_radps": [
+      0.01440749965772969,
+      -0.007397815723461757,
+      0.0026536560292795995
+    ],
+    "speed_change_max_mps": 0.033364576504789634,
+    "course_heading_offset_change_max_deg": 1.6979926547248605
+  },
+  {
+    "start_s": 460,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.026150848832299668,
+    "past_speed_mps": 1.0414282825296948,
+    "gyro_bias_radps": [
+      0.01451484744907163,
+      -0.007418517358883166,
+      0.0026954852784556093
+    ],
+    "speed_change_max_mps": 0.03138510815512996,
+    "course_heading_offset_change_max_deg": 1.0627169161314096
+  },
+  {
+    "start_s": 520,
+    "kind": "ordinary",
+    "past_COG_rate_degps": -0.08285791257095292,
+    "past_speed_mps": 1.038872158700066,
+    "gyro_bias_radps": [
+      0.014394252906739955,
+      -0.00739950878257635,
+      0.0025944578032085024
+    ],
+    "speed_change_max_mps": 0.02473350812295294,
+    "course_heading_offset_change_max_deg": 1.7940602396484733
+  }
+]

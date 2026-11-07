@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path(__file__).parent/'station.py';s=p.read_text(encoding='utf-8-sig')
+s=s.replace("q=1;trace=[]", "q=1;leg=1;trace=[]")
+s=s.replace("u>0 else wind+math.pi-math.radians(50)*np.sign(v)","u>j.get('surge_floor',0) else wind+math.pi-math.radians(50)*(np.sign(v) if abs(v)>1e-8 else q)")
+s=s.replace("target=center+q*R*.5*beam", "target=center+leg*R*j.get('span',.5)*beam")
+s=s.replace("q=-q;target=center+leg", "leg=-leg;target=center+leg")
+s=s.replace("d-R*.55,R*.3", "d-R*j.get('orbit_radius',.55),R*.3")
+s=s.replace("if mode!='hold' and method!='heading':", "if mode!='hold' and method not in ['heading','center_no_tack']:")
+s=s.replace("if mode=='hold' and u>0:", "if mode=='hold' and u>j.get('surge_floor',0):")
+p.write_text(s,encoding='utf-8')

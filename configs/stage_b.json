@@ -1,0 +1,20 @@
+{
+  "task_length_m": 1000,
+  "segment_length_m": 500,
+  "arrival_radius_m": 10,
+  "total_time_limit_s": 2400,
+  "segment_time_limit_s": 1200,
+  "world_radius_limit_m": 5000,
+  "noise_enabled": false,
+  "frame": "fixed per target; translation+rotation only; local target exactly [500,0]",
+  "memory": "full causal reencoding on frame change using actual past normalized commands",
+  "gate": {"minimum_successes": 6, "required_continuity_error": 0, "meaning": "Six predeclared engineering scenes, not a generalization estimate"},
+  "scenarios": [
+    {"id": "straight_w0", "seed": 11, "wind_degrees": 0, "goals": [[500,0],[1000,0]]},
+    {"id": "straight_w90", "seed": 11, "wind_degrees": 90, "goals": [[500,0],[1000,0]]},
+    {"id": "straight_w150", "seed": 11, "wind_degrees": 150, "goals": [[500,0],[1000,0]]},
+    {"id": "straight_w180", "seed": 11, "wind_degrees": 180, "goals": [[500,0],[1000,0]]},
+    {"id": "rotated_45", "seed": 12, "wind_degrees": 135, "goals": [[353.553390593,353.553390593],[707.106781187,707.106781187]]},
+    {"id": "turn_15", "seed": 13, "wind_degrees": 90, "goals": [[500,0],[982.962913145,129.409522551]]}
+  ]
+}

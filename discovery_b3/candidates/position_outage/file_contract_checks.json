@@ -1,0 +1,63 @@
+{
+  "imu_prefix_8MiB.csv": {
+    "rows_complete": 59780,
+    "columns": [
+      "time",
+      "wx",
+      "wy",
+      "wz",
+      "ax",
+      "ay",
+      "az"
+    ],
+    "first_us": 1755706569007588,
+    "last_us": 1755707166804589,
+    "span_s": 597.797001,
+    "monotonic": true,
+    "trailing_partial_discarded": true,
+    "first100_accel_norm_mean": 10.093455280183367
+  },
+  "radar_poses_prefix_1MiB.csv": {
+    "rows_complete": 3254,
+    "columns": [
+      "utc_micro",
+      "x",
+      "y",
+      "z",
+      "ang_x",
+      "ang_y",
+      "ang_z",
+      "vel_x_enuref",
+      "vel_y_enuref",
+      "vel_z_enuref",
+      "angvel_x",
+      "angvel_y",
+      "angvel_z",
+      "vel_x_body",
+      "vel_y_body",
+      "vel_z_body"
+    ],
+    "first_us": 1755706569029907,
+    "last_us": 1755707382406751,
+    "span_s": 813.376844,
+    "monotonic": true,
+    "trailing_partial_discarded": true
+  },
+  "novatel_imu_prefix_64KiB.csv": {
+    "rows_complete": 625,
+    "columns": [
+      "utc_microsec",
+      "angvel_x",
+      "angvel_y",
+      "angvel_z",
+      "acc_x",
+      "acc_y",
+      "acc_z"
+    ],
+    "first_us": 1755706569000000,
+    "last_us": 1755706569624000,
+    "span_s": 0.624,
+    "monotonic": true,
+    "trailing_partial_discarded": true
+  }
+}

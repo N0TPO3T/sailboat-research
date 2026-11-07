@@ -1,0 +1,554 @@
+{
+  "frozen_utc": "2026-10-07T16:26:34.307208+00:00",
+  "generator_seed": 202610709,
+  "reason": "V1 revealed common low-surge/upwind drift. Risk family defined by initial physical state, not by outcomes of these unseen instances.",
+  "definition": "12 low-speed-upwind and12 ordinary tasks; each8 inside/4 entry. Risk heading within35deg of upwind, speed0/.25/.5. Ordinary heading within110deg of blowing-toward wind, speed.5/2/4. Uniform base wind and spatial start angles. Scale8 has4+4, each2inside/2entry.",
+  "instances": [
+    {
+      "scenario": "recovery_confirmation_00",
+      "seed": 2026109000,
+      "wind": -174.8470502247051,
+      "heading": 37.762377252468696,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -3.8163782705521334,
+        0.5789510414029804
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_01",
+      "seed": 2026109001,
+      "wind": 5.998575743441165,
+      "heading": 155.77879547536338,
+      "profile": "slow",
+      "speed": 0.25,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -4.008223912032657,
+        4.200776324691532
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_02",
+      "seed": 2026109002,
+      "wind": 78.26344120771955,
+      "heading": -67.30454665074592,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -2.803198360769342,
+        -8.841478486034902
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_03",
+      "seed": 2026109003,
+      "wind": -150.27591915031718,
+      "heading": 47.14450595279129,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        2.8275240839636884,
+        2.9625580641576525
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_04",
+      "seed": 2026109004,
+      "wind": -104.2581206605043,
+      "heading": 84.55621791217305,
+      "profile": "slow",
+      "speed": 0.25,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -0.9732630857857736,
+        -2.719347525923268
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_05",
+      "seed": 2026109005,
+      "wind": 86.99320528520616,
+      "heading": -86.46720740815078,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        3.9648382076096573,
+        -1.5428799237143724
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_06",
+      "seed": 2026109006,
+      "wind": -5.756684440325927,
+      "heading": 159.22395254993796,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -4.13173079707356,
+        7.654403205106141
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_07",
+      "seed": 2026109007,
+      "wind": -72.32387277038262,
+      "heading": 126.76731163946795,
+      "profile": "slow",
+      "speed": 0.25,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        3.9297523040559783,
+        0.9137133917400865
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_08",
+      "seed": 2026109008,
+      "wind": -66.51026589171124,
+      "heading": 108.55937454766553,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        74.87702539848924,
+        4.293141911700311
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_09",
+      "seed": 2026109009,
+      "wind": 33.81366492626674,
+      "heading": -132.64885983743886,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -44.36017333905025,
+        60.47458161351276
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_10",
+      "seed": 2026109010,
+      "wind": -141.57736802260808,
+      "heading": 56.19181476432405,
+      "profile": "slow",
+      "speed": 0.25,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        37.10824465397761,
+        -65.17651554586622
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_11",
+      "seed": 2026109011,
+      "wind": -81.1416192866663,
+      "heading": 85.9060964671213,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -73.49513536377042,
+        14.94874837105312
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_12",
+      "seed": 2026109012,
+      "wind": -138.73548229614912,
+      "heading": 178.3189320369229,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -7.9700390840817015,
+        3.3493494052639745
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_13",
+      "seed": 2026109013,
+      "wind": 22.154758982920328,
+      "heading": -43.24214996200632,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        9.367086706116238,
+        -0.43165302047491527
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_14",
+      "seed": 2026109014,
+      "wind": 85.27747342534377,
+      "heading": 39.10169538182831,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -0.06518161820582923,
+        -3.6455522296716305
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_15",
+      "seed": 2026109015,
+      "wind": 92.26944226086766,
+      "heading": 178.08025258750365,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        2.477995083595838,
+        -5.49437902470275
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_16",
+      "seed": 2026109016,
+      "wind": 106.61298603123709,
+      "heading": -151.85455878296864,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -2.404527403820356,
+        8.330877155753706
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_17",
+      "seed": 2026109017,
+      "wind": 142.84223359777576,
+      "heading": 39.244330558595664,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        3.8493985353900655,
+        0.23996280240813447
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_18",
+      "seed": 2026109018,
+      "wind": -120.71049231007417,
+      "heading": -20.679445078912494,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        5.52064189098309,
+        3.2275956540898125
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_19",
+      "seed": 2026109019,
+      "wind": 157.99888562547113,
+      "heading": -118.07138323237086,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -1.4343627953502474,
+        -6.805551849437548
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_20",
+      "seed": 2026109020,
+      "wind": -64.88285075996635,
+      "heading": -80.00926014802077,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -63.77851909130539,
+        39.462646927442584
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_21",
+      "seed": 2026109021,
+      "wind": 124.11236524333941,
+      "heading": 107.02653572801489,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -46.35631795620727,
+        58.9583902896188
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_22",
+      "seed": 2026109022,
+      "wind": 55.67318094428697,
+      "heading": 77.25304996177317,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        66.85501796455587,
+        -33.9912720114872
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_confirmation_23",
+      "seed": 2026109023,
+      "wind": -155.6580439001169,
+      "heading": -117.8305655139551,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 50,
+      "horizon": 1200,
+      "start": [
+        -21.937100747964895,
+        -71.7200363271913
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_confirmation"
+    },
+    {
+      "scenario": "recovery_scale_00",
+      "seed": 2026109100,
+      "wind": 0.10404366506134011,
+      "heading": 150.6226684266382,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        1.8328287545824389,
+        -6.363361799102702
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_01",
+      "seed": 2026109101,
+      "wind": 134.48326122686,
+      "heading": -68.70861784532747,
+      "profile": "slow",
+      "speed": 0.25,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -6.442148447554769,
+        1.115027921611226
+      ],
+      "stratum": "inside",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_02",
+      "seed": 2026109102,
+      "wind": 13.078375639993624,
+      "heading": -149.3088104488872,
+      "profile": "fast",
+      "speed": 0.5,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        117.31803800607648,
+        -93.46912837084123
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_03",
+      "seed": 2026109103,
+      "wind": -169.92483997509837,
+      "heading": 11.328275548316782,
+      "profile": "stable",
+      "speed": 0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        125.40112218455927,
+        82.3077065337945
+      ],
+      "stratum": "entry",
+      "condition": "low_speed_upwind",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_04",
+      "seed": 2026109104,
+      "wind": -97.7145267313958,
+      "heading": -10.073643281021731,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -7.584901557975071,
+        2.1102312126930425
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_05",
+      "seed": 2026109105,
+      "wind": 163.74938026958313,
+      "heading": 66.26491980679353,
+      "profile": "slow",
+      "speed": 2.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        3.843136429411835,
+        -0.8549965094443919
+      ],
+      "stratum": "inside",
+      "condition": "ordinary",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_06",
+      "seed": 2026109106,
+      "wind": 113.36794661660969,
+      "heading": 171.57873084060003,
+      "profile": "fast",
+      "speed": 4.0,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -98.03010888041646,
+        -113.53456633507567
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_scale"
+    },
+    {
+      "scenario": "recovery_scale_07",
+      "seed": 2026109107,
+      "wind": 18.76796338252592,
+      "heading": 106.34441038333017,
+      "profile": "stable",
+      "speed": 0.5,
+      "radius": 100,
+      "horizon": 1200,
+      "start": [
+        -137.10811379834124,
+        60.838845573047436
+      ],
+      "stratum": "entry",
+      "condition": "ordinary",
+      "batch": "recovery_scale"
+    }
+  ],
+  "metrics_unchanged_from_v1": true,
+  "rule": "No method tuning after first evaluation of these instances. Old confirmation now development, never pooled as unseen."
+}

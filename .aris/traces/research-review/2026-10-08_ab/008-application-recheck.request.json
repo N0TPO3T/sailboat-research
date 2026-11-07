@@ -1,0 +1,12 @@
+{
+  "call_number": 8,
+  "tool": "followup_task",
+  "purpose": "targeted-recheck",
+  "model": "inherited; actual not exposed",
+  "reasoning_effort": "inherited; actual not exposed",
+  "files_referenced": [
+    "docs/REVIEW_REVISION_MANIFEST.json",
+    "reviews/AUTHOR_RESPONSE.md"
+  ],
+  "prompt": "同一实际修订版已完成，请定点复核原应用意见：docs/REVIEW_REVISION_MANIFEST.json（17:23:04UTC），reviews/AUTHOR_RESPONSE.md，方法83e33c…报告4501b0…，原首审版reviews/submitted_v1。核对90°同侧命令不等于被动松帆/未继承Viel可达约束、区内时间为几何代理、图08退出仍倒航与朝向条件，以及收益/代价表述。图与科学结果未改，无新实验。请仅写reviews/APPLICATION_RECHECK.md并同步，明确关闭项和继续保留边界；不要求Accept，same-family/provisional。"
+}

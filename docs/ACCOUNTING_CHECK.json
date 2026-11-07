@@ -1,0 +1,60 @@
+[
+  {
+    "id": "early",
+    "method": "center",
+    "inside_fraction": 0.5,
+    "observed_fraction": 1.0,
+    "max_outside_s": 0,
+    "max_radius": 2.035647374719693,
+    "rms_radius": 0.0,
+    "completed": false,
+    "integration_failed": true,
+    "duration_s": 1,
+    "actuator_variation_rad": 0.15707963705062866,
+    "max_heel_deg": 9.219511431314626,
+    "cpu_s": 0.501136394,
+    "wall_s": 0.5032458305358887,
+    "source_paths": {
+      "globals": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/globals.py",
+      "network": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/utils_lstm.py",
+      "noise": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/noise_utils_nowind.py",
+      "environment": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/sailboat_s14.py"
+    },
+    "job": {
+      "id": "early",
+      "method": "center",
+      "seed": 901,
+      "horizon": 2,
+      "batch": "accounting_fault_check"
+    }
+  },
+  {
+    "id": "last",
+    "method": "center",
+    "inside_fraction": 1.0,
+    "observed_fraction": 1.0,
+    "max_outside_s": 0,
+    "max_radius": 4.14694988855972,
+    "rms_radius": 1.439420062768888,
+    "completed": false,
+    "integration_failed": true,
+    "duration_s": 2,
+    "actuator_variation_rad": 0.48869219422340393,
+    "max_heel_deg": 19.456152435712745,
+    "cpu_s": 0.14177935600000002,
+    "wall_s": 0.14198517799377441,
+    "source_paths": {
+      "globals": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/globals.py",
+      "network": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/utils_lstm.py",
+      "noise": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/noise_utils_nowind.py",
+      "environment": "/home/ot/Students/hs/sailboat-track-b/third_party/senior/sailboat_s14.py"
+    },
+    "job": {
+      "id": "last",
+      "method": "center",
+      "seed": 901,
+      "horizon": 2,
+      "batch": "accounting_fault_check"
+    }
+  }
+]

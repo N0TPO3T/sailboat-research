@@ -1,0 +1,20 @@
+{
+  "input_sha256": "b3936d9d7507679d3b98ed6f4e0db34a4f6011e43c346e59491a7ff267006b7b",
+  "code_sha256": "ccaaa598206bb4f16b135fb3699872af286e17a33bb37441f3289df473485be6",
+  "protocol_sha256": "7263c01c50519a3d8e37cf46ccbc8be830f8e823db2de439f09905125677f073",
+  "development_choice_sha256": "6c0e49ba7ff331d9be9cc60647c1f08cccf3cda9a687b6bedbc16d319e7018ee",
+  "elapsed_seconds": 4.274001598358154,
+  "python": "3.13.11",
+  "numpy": "2.4.6",
+  "cpu_workers": 1,
+  "thread_env": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "gpu": 0,
+  "rows_grouped": 30329,
+  "groups": 3324,
+  "status": "STOP_BOTH_GATES"
+}

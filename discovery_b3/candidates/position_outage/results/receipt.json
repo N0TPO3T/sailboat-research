@@ -1,0 +1,20 @@
+{
+  "start_utc": "2026-10-09T04:10:45.933236+00:00",
+  "end_utc": "2026-10-09T04:10:49.647059+00:00",
+  "wall_seconds": 3.7134579999838024,
+  "pid": 88588,
+  "worker": 1,
+  "threads": 1,
+  "gpu": 0,
+  "python": "C:\\Users\\74095\\anaconda3\\python.exe",
+  "windows": 9,
+  "method_window_rows": 36,
+  "source_sha256": "f390901d11519e6c4c253e7303ac48d080aa0c3090839601d958f28afcb98c54",
+  "input_sha256": {
+    "imu_prefix_8MiB.csv": "77d9157a14548cdd9f17eba84252e90bbf0927f8d0b7bbcfe78873efc65a148f",
+    "lidar_poses_prefix_3MiB.csv": "bc309077feb3cfa694c9f4149769954e7486b6fc52384f74460e89afb5ff86dd",
+    "T_lidar_imu.txt": "46940765c006cf3c5de3c8fd8d97e8f267643bb76c928534c9821946c9067fa3",
+    "PROTOCOL.md": "b9c9713abd18ea26f2d6de721f43d861c76d07f95f0a640490faf464ac588f9c"
+  },
+  "exit_status": "completed"
+}

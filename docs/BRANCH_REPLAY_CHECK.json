@@ -1,0 +1,13 @@
+{
+  "identical_before100": [
+    "continue__center.json",
+    "neutral__center.json",
+    "neutral_backwind__center.json",
+    "neutral_flat__center.json",
+    "opposite__center.json",
+    "opposite_backwind__center.json",
+    "opposite_flat__center.json",
+    "same__center.json"
+  ],
+  "continued_raw_matches_original": true
+}

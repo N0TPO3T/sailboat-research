@@ -1,0 +1,11 @@
+{
+  "call_number": 4,
+  "purpose": "method-resume",
+  "tool": "followup_task",
+  "model": "inherited; actual not exposed",
+  "reasoning_effort": "inherited; actual not exposed",
+  "files_referenced": [
+    "docs/REVIEW_INPUT_MANIFEST.json"
+  ],
+  "prompt": "上一回合容量错误，无实际意见。请仅做这一次同材料恢复，继续原方法/控制/接口独立审查，勿读其他审查意见。适用ARIS research-review，记录same-family/provisional，不要求接收或分数。若再次容量失败如实REVIEW_UNAVAILABLE，不循环重试。审查输入仍docs/REVIEW_INPUT_MANIFEST.json，输出reviews/METHOD_REVIEW.md。"
+}

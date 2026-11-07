@@ -1,0 +1,170 @@
+[
+  {
+    "scenario": "recovery_scale_00",
+    "seed": 2026109100,
+    "wind": 0.10404366506134011,
+    "heading": 150.6226684266382,
+    "profile": "stable",
+    "speed": 0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      1.8328287545824389,
+      -6.363361799102702
+    ],
+    "stratum": "inside",
+    "condition": "low_speed_upwind",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_00_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_01",
+    "seed": 2026109101,
+    "wind": 134.48326122686,
+    "heading": -68.70861784532747,
+    "profile": "slow",
+    "speed": 0.25,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -6.442148447554769,
+      1.115027921611226
+    ],
+    "stratum": "inside",
+    "condition": "low_speed_upwind",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_01_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_02",
+    "seed": 2026109102,
+    "wind": 13.078375639993624,
+    "heading": -149.3088104488872,
+    "profile": "fast",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      117.31803800607648,
+      -93.46912837084123
+    ],
+    "stratum": "entry",
+    "condition": "low_speed_upwind",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_02_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_03",
+    "seed": 2026109103,
+    "wind": -169.92483997509837,
+    "heading": 11.328275548316782,
+    "profile": "stable",
+    "speed": 0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      125.40112218455927,
+      82.3077065337945
+    ],
+    "stratum": "entry",
+    "condition": "low_speed_upwind",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_03_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_04",
+    "seed": 2026109104,
+    "wind": -97.7145267313958,
+    "heading": -10.073643281021731,
+    "profile": "stable",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -7.584901557975071,
+      2.1102312126930425
+    ],
+    "stratum": "inside",
+    "condition": "ordinary",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_04_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_05",
+    "seed": 2026109105,
+    "wind": 163.74938026958313,
+    "heading": 66.26491980679353,
+    "profile": "slow",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      3.843136429411835,
+      -0.8549965094443919
+    ],
+    "stratum": "inside",
+    "condition": "ordinary",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_05_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_06",
+    "seed": 2026109106,
+    "wind": 113.36794661660969,
+    "heading": 171.57873084060003,
+    "profile": "fast",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -98.03010888041646,
+      -113.53456633507567
+    ],
+    "stratum": "entry",
+    "condition": "ordinary",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_06_luff_no_build"
+  },
+  {
+    "scenario": "recovery_scale_07",
+    "seed": 2026109107,
+    "wind": 18.76796338252592,
+    "heading": 106.34441038333017,
+    "profile": "stable",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -137.10811379834124,
+      60.838845573047436
+    ],
+    "stratum": "entry",
+    "condition": "ordinary",
+    "batch": "recovery_luff_scale",
+    "method": "center",
+    "variant": "luff_no_build",
+    "recovery": "luff_no_build",
+    "id": "recovery_scale_07_luff_no_build"
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "params": {
+    "rate": 0.12,
+    "brake": 0.15,
+    "lookahead": 4.0,
+    "kd": 90.0,
+    "kp": 200.0,
+    "beta_tau": 5.0
+  },
+  "cases": [
+    {
+      "id": "normal_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0,
+      "rho": 1.0,
+      "side": 0
+    },
+    {
+      "id": "normal_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3,
+      "rho": 1.0,
+      "side": 0
+    },
+    {
+      "id": "rho0.5_left_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0,
+      "rho": 0.5,
+      "side": 0
+    },
+    {
+      "id": "rho0.5_left_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3,
+      "rho": 0.5,
+      "side": 0
+    },
+    {
+      "id": "rho0.5_right_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0,
+      "rho": 0.5,
+      "side": 1
+    },
+    {
+      "id": "rho0.5_right_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3,
+      "rho": 0.5,
+      "side": 1
+    },
+    {
+      "id": "rho0.25_left_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0,
+      "rho": 0.25,
+      "side": 0
+    },
+    {
+      "id": "rho0.25_left_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3,
+      "rho": 0.25,
+      "side": 0
+    },
+    {
+      "id": "rho0.25_right_c0",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.0,
+      "rho": 0.25,
+      "side": 1
+    },
+    {
+      "id": "rho0.25_right_c0.3",
+      "radius": 8.0,
+      "cruise": 1.8,
+      "current": 0.3,
+      "rho": 0.25,
+      "side": 1
+    }
+  ],
+  "methods": [
+    "curvature",
+    "fixed",
+    "reserve"
+  ],
+  "timeout_s": 500,
+  "dt": 0.025
+}

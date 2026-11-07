@@ -1,0 +1,12 @@
+{
+  "call_number": 7,
+  "tool": "followup_task",
+  "purpose": "targeted-recheck",
+  "model": "inherited; actual not exposed",
+  "reasoning_effort": "inherited; actual not exposed",
+  "files_referenced": [
+    "docs/REVIEW_REVISION_MANIFEST.json",
+    "reviews/AUTHOR_RESPONSE.md"
+  ],
+  "prompt": "同一作者修订版已实际完成，请定点复核你的原意见：docs/REVIEW_REVISION_MANIFEST.json（17:23:04UTC），reviews/AUTHOR_RESPONSE.md，方法83e33c…报告4501b0…；原首审版reviews/submitted_v1。核对V1结果索引用途、8内全平与4接入−19/+28/+32/+30s表述、最长离区含首次接入、完整本地索引/ledger；科学源码/结果不变，无新实验。保持真实判断，不要求Accept。仅写reviews/EVIDENCE_RECHECK.md并同步，same-family/provisional。"
+}

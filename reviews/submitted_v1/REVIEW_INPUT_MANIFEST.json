@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-07T17:06:45.633613+00:00",
+  "status": "same input for independent reviewers; no review outcome presumed",
+  "files": {
+    "docs/B_METHOD_NOTE.md": "87f1ebd3899b5a76f529c2976caeb8a9b7e61bdfbfae64fc36666015d3e88036",
+    "docs/B_RESEARCH_REPORT.md": "9a85c114b94d3f57e00c0a0dab0be157f58398f9f9c21874d4959fd0e2f80752",
+    "analysis_v2/all_results.csv": "2e9b05cf8c283ebcf95daf2722f374722c7cddb85effa5e036efb80a1225d553",
+    "analysis_v2/group_summary.json": "6d4afaee081188d27588fa3f3b5f246ee719f6045b6236c4dd2aeb13b414947b",
+    "analysis_v2/paired_summary.json": "3396e9e294a861e57b239fb565de50890799105b17b655881345e8547afb32b2",
+    "scripts/station_recovery.py": "60bcdc3d1da4f5e69c2c813767510d5bb87429abf9935d2e67574adc82c11b5e",
+    "scripts/station_luff_control.py": "bb5af3718ef7b26f46b9c091c2399da607afc32efe3b096bbab1e147d5c897f8",
+    "docs/FREEZE_V2.json": "9f1248b3720c425e32f13c95d768a629c5f469c26715c2b36cb20dcedf9a1ba2",
+    "docs/CONFIRMATION_INTEGRITY_V2.json": "857f693f9a6852b46540303c10db5d7a0c11ddb31939fb9891330c69c83f9928",
+    "RESOURCE_LEDGER.json": "8e211da409c744670b448042dfef82a7b6b1d97f9ce9a1c48d3c6113fc61d2a9",
+    "figures/06_recovery_all_tasks.png": "69351b40562b273fcb177b67ff1e904c47a411a97909991dba55be0aec4681dc",
+    "figures/07_recovery_case.png": "7be98c59c885fb098bd9dcc6e81e79916b51c776b983fc4d6281fbb01d24fe32",
+    "figures/08_recovery_mechanism.png": "68e960d294e0dd3ca81802b3e1376d9976f2f52c85889fa27be2942f0538aa34",
+    "figures/09_recovery_counterexample.png": "19f1e50aa5e7211d9fe47ccccc29bc8d2b8a5ee281a5d120362fdfa6e0e5de8e",
+    "figures/10_recovery_scale.png": "29decac3311bb85ce8b15a20cfb24a58e51afab868ed3fc5eec1486d2cbbad38"
+  }
+}

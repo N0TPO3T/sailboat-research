@@ -1,0 +1,20 @@
+{
+  "status": "pre-result protocol; CPU pilot authorized by coordinator",
+  "tasks": "12 geometry/wind/budget seeds (100..111), each crossed with short/long true-field lengthscale; 24 paired tasks",
+  "candidate_stations": 8,
+  "shared_gp_lengthscale_m": 220,
+  "true_gp_lengthscale_m": [
+    120,
+    350
+  ],
+  "measurement_noise_sd": 0.05,
+  "primary": "actual full-domain final RMSE, all tasks retained; deadline return success",
+  "secondary": "posterior integrated variance, samples, travel/turn/dwell seconds, planning wall time",
+  "continue_gate": "exact information-optimal prototype vs multistart insertion+2opt: zero late returns in both; median paired RMSE reduction >=10%, wins >=17/24; mean posterior variance reduction >=5%. Otherwise stop or unproven, no extra scenario search.",
+  "baseline": "directed-time feasible marginal information/time greedy; multistart cheapest insertion with asymmetric route-aware 2opt; alpha=1 fixed without tuning",
+  "prototype": "exact exhaustive finite station route search maximizing GP expected integrated variance reduction; diagnostic achievable optimum within this route family, not new algorithm",
+  "physics": "static known wind/current, velocity polar, no water-relative heading within 45deg of upwind; convex velocity mixture creates explicit 1/2-leg tacking trajectories; turn rate 8deg/s, 5s extra wind-side switching cost, 0s ideal instantaneous point measurement; no station holding; no obstacles; no low-level sail/rudder dynamics",
+  "sampling": "one ideal instantaneous noisy point measurement at visited stations, pump off during transit; home initial sample shared; all methods same per-station noise; hidden truth only consumed by measurement and scoring",
+  "budget": "1 numerical thread, GPU0, first batch <=1 CPU hour; hard shared deadline 2026-10-09T02:51:58Z",
+  "planning_latency_revision": "After verification failure of first batch, same task deadlines with 2s shared predeparture compute reserve; navigation budget reduced by 2s; actual computation added for final deadline test. No retuning/seeds changed."
+}

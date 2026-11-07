@@ -1,0 +1,33 @@
+{
+  "frozen_utc": "2026-10-07T16:30:12.727584+00:00",
+  "source_sha256": "60bcdc3d1da4f5e69c2c813767510d5bb87429abf9935d2e67574adc82c11b5e",
+  "instance_freeze_sha256": "037481c3b913a38b59e4fea2e0573c65be67a5681de94da34c50128d5d2ab9b1",
+  "selected": "release: centre guidance with same-side full sail release + downwind heading during persistent low-speed upwind trap; return immediately at beam/downwind orientation; no speed-build stage",
+  "variants": [
+    [
+      "center",
+      null
+    ],
+    [
+      "downwind",
+      "heading"
+    ],
+    [
+      "luff",
+      "luff"
+    ],
+    [
+      "release_build",
+      "ease"
+    ],
+    [
+      "release",
+      "ease_no_build"
+    ]
+  ],
+  "trigger": "abs(u)<0.5m/s AND heading within70deg of upwind for10consecutive1s observations; only when no recovery and cooldown0",
+  "recovery": "target heading=current blowing-toward wind; same common rudder feedback (reversed for u<0); sail=sign(apparent lateral wind)*pi/2, original actuator limits",
+  "exit": "cos(wind-heading)>=0, or120s timeout; reset low counter;10s cooldown",
+  "development_selection": "4 failures:release 100/100/100/95.67%, ordinary4 all100%; no worse occupancy and lower actuator travel than explicit speed-build; luff is retained as strong alternative.",
+  "rule": "No tuning on these instances; original confirmation now development, not pooled as unseen. Any bug repair requires separate version and affected rerun."
+}

@@ -1,0 +1,33 @@
+{
+  "generation": [
+    {
+      "agent": "/root/b3_operations",
+      "model": "inherited; exact version unreported",
+      "raw": "notes/operations.md"
+    },
+    {
+      "agent": "/root/b3_reliability",
+      "model": "inherited; exact version unreported",
+      "raw": "notes/reliability.md"
+    },
+    {
+      "agent": "/root/b3_control_opportunities",
+      "model": "inherited; exact version unreported",
+      "raw": "notes/control_opportunities.md"
+    }
+  ],
+  "selection": {
+    "agent": "/root/b3_selection_review",
+    "model": "gpt-6-astra",
+    "reasoning": "xhigh",
+    "independence": "fresh same-family provisional"
+  },
+  "secondary_generator": "gpt-5.5 not exposed; not executed",
+  "evidence_review": {
+    "agent": "/root/b3_evidence_review",
+    "model": "gpt-6-astra",
+    "reasoning": "ultra",
+    "independence": "fresh same-family provisional",
+    "raw": "notes/evidence_review.md"
+  }
+}

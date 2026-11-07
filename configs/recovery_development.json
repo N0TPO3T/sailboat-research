@@ -1,0 +1,322 @@
+[
+  {
+    "scenario": "confirmation_01",
+    "seed": 2026107081,
+    "wind": 15.889895292297638,
+    "heading": -116.21160436942696,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      4.557132895619095,
+      3.6568090481039977
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev01_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_01",
+    "seed": 2026107081,
+    "wind": 15.889895292297638,
+    "heading": -116.21160436942696,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      4.557132895619095,
+      3.6568090481039977
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev01_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev12_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_12",
+    "seed": 2026107092,
+    "wind": 142.84483831350025,
+    "heading": 13.64236202834877,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      0.10756499037645617,
+      -1.1364399567629868
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev12_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_13",
+    "seed": 2026107093,
+    "wind": -137.37497371281498,
+    "heading": 49.147066765942725,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      1.9046710519907382,
+      -1.2227736532252371
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev13_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_13",
+    "seed": 2026107093,
+    "wind": -137.37497371281498,
+    "heading": 49.147066765942725,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      1.9046710519907382,
+      -1.2227736532252371
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev13_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_16",
+    "seed": 2026107096,
+    "wind": 55.372731732805164,
+    "heading": -151.4951917220495,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      74.35799255899892,
+      -9.792289956688505
+    ],
+    "stratum": "entry",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev16_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_16",
+    "seed": 2026107096,
+    "wind": 55.372731732805164,
+    "heading": -151.4951917220495,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      74.35799255899892,
+      -9.792289956688505
+    ],
+    "stratum": "entry",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev16_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_00",
+    "seed": 2026107080,
+    "wind": -55.994045286202436,
+    "heading": -32.24793987839894,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.1932814791960304,
+      0.7945579743309101
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev00_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_00",
+    "seed": 2026107080,
+    "wind": -55.994045286202436,
+    "heading": -32.24793987839894,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.1932814791960304,
+      0.7945579743309101
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev00_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_02",
+    "seed": 2026107082,
+    "wind": 38.99783366341063,
+    "heading": 4.347098977511251,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      5.550290247089702,
+      0.13458064036076287
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev02_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_02",
+    "seed": 2026107082,
+    "wind": 38.99783366341063,
+    "heading": 4.347098977511251,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      5.550290247089702,
+      0.13458064036076287
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev02_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_03",
+    "seed": 2026107083,
+    "wind": 148.04577820853,
+    "heading": -116.86132293535456,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.8891774293061747,
+      3.0376726793802207
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev03_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_03",
+    "seed": 2026107083,
+    "wind": 148.04577820853,
+    "heading": -116.86132293535456,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -1.8891774293061747,
+      3.0376726793802207
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev03_backwind",
+    "recovery": "backwind"
+  },
+  {
+    "scenario": "confirmation_04",
+    "seed": 2026107084,
+    "wind": 121.6014306615757,
+    "heading": -175.894089866796,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -3.290263571042148,
+      -7.071131124175311
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "downwind",
+    "id": "dev04_downwind",
+    "recovery": "heading"
+  },
+  {
+    "scenario": "confirmation_04",
+    "seed": 2026107084,
+    "wind": 121.6014306615757,
+    "heading": -175.894089866796,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 50,
+    "horizon": 1200,
+    "start": [
+      -3.290263571042148,
+      -7.071131124175311
+    ],
+    "stratum": "inside",
+    "batch": "recovery_development",
+    "method": "center",
+    "variant": "backwind",
+    "id": "dev04_backwind",
+    "recovery": "backwind"
+  }
+]

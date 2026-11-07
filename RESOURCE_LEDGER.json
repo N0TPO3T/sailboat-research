@@ -1,0 +1,18 @@
+{
+  "start_utc": "2026-10-07T15:13:40Z",
+  "deadline_utc": "2026-10-08T15:13:40Z",
+  "indexed_utc": "2026-10-07T16:58:50.141860+00:00",
+  "episodes_including_fault_and_obsolete": 516,
+  "sum_worker_process_cpu_seconds": 16750.924611979,
+  "sum_episode_wall_seconds_not_elapsed": 16756.12443614006,
+  "numerical_threads_per_worker": 1,
+  "gpu_hours": 0,
+  "training": "none; mature conventional controller route",
+  "note": "CPU totals from worker process_time; exclude startup imports and report tooling; accumulated episode wall is NOT elapsed wall.",
+  "configured_workers_per_batch": 4,
+  "global_process_peak": "not verified; startup/cleanup overlap cannot be excluded",
+  "estimated_episode_compute_peak": 4,
+  "estimated_new_start_after_old_last_write_seconds": 1.8523,
+  "incident": "docs/RESOURCE_SCHEDULING_INCIDENT.json",
+  "all_batches_exit_code": 0
+}

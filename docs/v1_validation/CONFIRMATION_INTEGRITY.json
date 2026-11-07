@@ -1,0 +1,22 @@
+[
+  {
+    "batch": "confirmation",
+    "n": 120,
+    "distinct_tasks": 24,
+    "source_hash_matches": true,
+    "paired_initial_states_identical": true,
+    "finite_states": true,
+    "all_physics_paths_isolated": true,
+    "endpoint_and_failure_accounting": true
+  },
+  {
+    "batch": "scale_check",
+    "n": 24,
+    "distinct_tasks": 8,
+    "source_hash_matches": true,
+    "paired_initial_states_identical": true,
+    "finite_states": true,
+    "all_physics_paths_isolated": true,
+    "endpoint_and_failure_accounting": true
+  }
+]

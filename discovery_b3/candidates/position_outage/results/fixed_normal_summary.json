@@ -1,0 +1,25 @@
+{
+  "CV": {
+    "crossed_2m": 1,
+    "crossed_5m": 1
+  },
+  "CTR": {
+    "crossed_2m": 6,
+    "crossed_5m": 4
+  },
+  "gyro_raw": {
+    "crossed_2m": 0,
+    "crossed_5m": 0
+  },
+  "gyro_bias": {
+    "crossed_2m": 0,
+    "crossed_5m": 0
+  },
+  "definition": "prediction-minus-reference position projected on initial ground-velocity normal; not absolute initial-line departure",
+  "windows": 9,
+  "worker": 1,
+  "gpu": 0,
+  "wall_seconds": 0.07622470008209348,
+  "utc": "2026-10-09T04:16:44.758882+00:00",
+  "pid": 89252
+}

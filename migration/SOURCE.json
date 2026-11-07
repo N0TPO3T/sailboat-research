@@ -1,0 +1,8 @@
+{
+  "branch": "codex/idea-b-recovery",
+  "source": "C:\\Users\\74095\\hs\\SailBoat\\sailboat-track-b",
+  "base": null,
+  "local_overlay_conflicts_preserved": [],
+  "server_current_worktree_modified": false,
+  "notes": "Migration snapshot only; no new training, evaluation, or claim validation. Other historical source snapshots retain their own provenance."
+}

@@ -1,0 +1,16 @@
+{
+  "exact_two_flag_extensions_only": true,
+  "existing_flag_behaviour_unchanged_by_construction": true,
+  "configs": [
+    {
+      "batch": "recovery_luff_control",
+      "physical_inputs_identical": true,
+      "count": 24
+    },
+    {
+      "batch": "recovery_luff_scale",
+      "physical_inputs_identical": true,
+      "count": 8
+    }
+  ]
+}

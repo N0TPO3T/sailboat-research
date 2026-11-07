@@ -1,0 +1,108 @@
+{
+  "best_current_only": "current_median",
+  "best_history_enabled": "regression_kriging",
+  "training_years": [
+    2019
+  ],
+  "selection_year": 2020,
+  "ridge": 1.0,
+  "ok_kernel": [
+    2.0,
+    5.0
+  ],
+  "rk_kernel": [
+    20.0,
+    0.1
+  ],
+  "fixed_simple": "current_median",
+  "ridge_scores": [
+    {
+      "nmae": 59.50494882307331,
+      "ridge": 1.0
+    },
+    {
+      "nmae": 76.94928108611505,
+      "ridge": 10.0
+    },
+    {
+      "nmae": 68.89742063616048,
+      "ridge": 100.0
+    }
+  ],
+  "kernel_scores": [
+    {
+      "radius": 2.0,
+      "nugget": 0.1,
+      "current_ok": 1.2116094389616963,
+      "regression_kriging": 20.260418150887034
+    },
+    {
+      "radius": 2.0,
+      "nugget": 1.0,
+      "current_ok": 1.198771593815622,
+      "regression_kriging": 21.203596235071675
+    },
+    {
+      "radius": 2.0,
+      "nugget": 5.0,
+      "current_ok": 1.1907484011768181,
+      "regression_kriging": 22.126556520357855
+    },
+    {
+      "radius": 5.0,
+      "nugget": 0.1,
+      "current_ok": 1.2781472327916468,
+      "regression_kriging": 15.699294459266094
+    },
+    {
+      "radius": 5.0,
+      "nugget": 1.0,
+      "current_ok": 1.2302432042904508,
+      "regression_kriging": 17.504068529908526
+    },
+    {
+      "radius": 5.0,
+      "nugget": 5.0,
+      "current_ok": 1.2014173498431109,
+      "regression_kriging": 19.967457848920755
+    },
+    {
+      "radius": 10.0,
+      "nugget": 0.1,
+      "current_ok": 1.3406879499214581,
+      "regression_kriging": 12.075121260973104
+    },
+    {
+      "radius": 10.0,
+      "nugget": 1.0,
+      "current_ok": 1.2584314858125276,
+      "regression_kriging": 14.046522445098624
+    },
+    {
+      "radius": 10.0,
+      "nugget": 5.0,
+      "current_ok": 1.2129192293781295,
+      "regression_kriging": 17.194258854038075
+    },
+    {
+      "radius": 20.0,
+      "nugget": 0.1,
+      "current_ok": 1.3721220803009766,
+      "regression_kriging": 9.803857731251734
+    },
+    {
+      "radius": 20.0,
+      "nugget": 1.0,
+      "current_ok": 1.2657672298908151,
+      "regression_kriging": 11.477133102717032
+    },
+    {
+      "radius": 20.0,
+      "nugget": 5.0,
+      "current_ok": 1.2168984005951629,
+      "regression_kriging": 14.525862366504773
+    }
+  ],
+  "created_unix": 1791430060.027277,
+  "selection_rule": "minimum development mean nmae; no target-year scores used"
+}

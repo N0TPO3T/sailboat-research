@@ -1,0 +1,27 @@
+[
+  {
+    "file": "runs/turn_admission/turn0_reverseTrue__heading.json",
+    "first_10deg_s": 15,
+    "displacement_m": 37.75116507065603
+  },
+  {
+    "file": "runs/turn_admission/turn1_reverseTrue__heading.json",
+    "first_10deg_s": 19,
+    "displacement_m": 32.47340816839812
+  },
+  {
+    "file": "runs/turn_admission/turn2_reverseTrue__heading.json",
+    "first_10deg_s": 31,
+    "displacement_m": 31.118483100381532
+  },
+  {
+    "file": "runs/turn_admission/turn3_reverseTrue__heading.json",
+    "first_10deg_s": 25,
+    "displacement_m": 44.11555520007659
+  },
+  {
+    "file": "runs/turn_admission/turn4_reverseTrue__heading.json",
+    "first_10deg_s": 27,
+    "displacement_m": 41.84941785593793
+  }
+]

@@ -1,0 +1,112 @@
+{
+  "status": "STOP_BOTH_GATES",
+  "fixed_simple": "current_median",
+  "gate_cells": [
+    {
+      "year": 2021,
+      "budget": 0.15,
+      "simple_nmae": 0.8252873788176741,
+      "rk_nmae": 1.0029918130643187,
+      "improvement": -0.17770443424664462,
+      "simple_abs_bias": 0.5930243201945427,
+      "rk_abs_bias": 0.28342529751330686,
+      "bias_gate": true
+    },
+    {
+      "year": 2021,
+      "budget": 0.35,
+      "simple_nmae": 0.8046196047831652,
+      "rk_nmae": 0.9429950453498392,
+      "improvement": -0.13837544056667406,
+      "simple_abs_bias": 0.6454761216086045,
+      "rk_abs_bias": 0.20788239101934677,
+      "bias_gate": true
+    },
+    {
+      "year": 2022,
+      "budget": 0.15,
+      "simple_nmae": 0.8712354398377437,
+      "rk_nmae": 1.2588736840876023,
+      "improvement": -0.3876382442498586,
+      "simple_abs_bias": 0.5975142180221288,
+      "rk_abs_bias": 0.29665023321317757,
+      "bias_gate": true
+    },
+    {
+      "year": 2022,
+      "budget": 0.35,
+      "simple_nmae": 0.8545143561566451,
+      "rk_nmae": 1.1233366673056187,
+      "improvement": -0.2688223111489736,
+      "simple_abs_bias": 0.6789475279822978,
+      "rk_abs_bias": 0.10805361221833759,
+      "bias_gate": true
+    },
+    {
+      "year": 2023,
+      "budget": 0.15,
+      "simple_nmae": 0.6756593641848766,
+      "rk_nmae": 0.7650862448662937,
+      "improvement": -0.08942688068141713,
+      "simple_abs_bias": 0.4068459831454949,
+      "rk_abs_bias": 0.21683041386525023,
+      "bias_gate": true
+    },
+    {
+      "year": 2023,
+      "budget": 0.35,
+      "simple_nmae": 0.6716394700077414,
+      "rk_nmae": 0.7341971993057063,
+      "improvement": -0.06255772929796488,
+      "simple_abs_bias": 0.4329818398588116,
+      "rk_abs_bias": 0.09164393637282957,
+      "bias_gate": true
+    }
+  ],
+  "qualified_cells": 0,
+  "protocol": "PROTOCOL.md; all tests are exploratory across three target years",
+  "rk_increment_status": "STOP_RK_INCREMENT",
+  "application_status": "STOP_HISTORY_UPDATE_SIGNAL",
+  "application_comparison": {
+    "current": "current_median",
+    "history_enabled": "history_median",
+    "cells": [
+      {
+        "year": 2021,
+        "budget": 0.15,
+        "improvement": 0.004309961924868766,
+        "bias_gate": true
+      },
+      {
+        "year": 2021,
+        "budget": 0.35,
+        "improvement": 0.0009299507763437243,
+        "bias_gate": true
+      },
+      {
+        "year": 2022,
+        "budget": 0.15,
+        "improvement": -0.0002405204319573251,
+        "bias_gate": true
+      },
+      {
+        "year": 2022,
+        "budget": 0.35,
+        "improvement": 0.0030761737175767356,
+        "bias_gate": true
+      },
+      {
+        "year": 2023,
+        "budget": 0.15,
+        "improvement": 0.0058887314270708035,
+        "bias_gate": true
+      },
+      {
+        "year": 2023,
+        "budget": 0.35,
+        "improvement": 0.005619224899666264,
+        "bias_gate": true
+      }
+    ]
+  }
+}

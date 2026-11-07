@@ -1,0 +1,474 @@
+[
+  {
+    "scenario": "scale_check_00",
+    "seed": 2026107180,
+    "wind": -37.79892471781221,
+    "heading": 95.9960194555083,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      0.4604620868835214,
+      -0.34493279292352885
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_00_relay"
+  },
+  {
+    "scenario": "scale_check_00",
+    "seed": 2026107180,
+    "wind": -37.79892471781221,
+    "heading": 95.9960194555083,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      0.4604620868835214,
+      -0.34493279292352885
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_00_center"
+  },
+  {
+    "scenario": "scale_check_00",
+    "seed": 2026107180,
+    "wind": -37.79892471781221,
+    "heading": 95.9960194555083,
+    "profile": "stable",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      0.4604620868835214,
+      -0.34493279292352885
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_00_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_01",
+    "seed": 2026107181,
+    "wind": -127.39792048179686,
+    "heading": 112.68030740529878,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      1.683274237447326,
+      -7.729678225551263
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_01_relay"
+  },
+  {
+    "scenario": "scale_check_01",
+    "seed": 2026107181,
+    "wind": -127.39792048179686,
+    "heading": 112.68030740529878,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      1.683274237447326,
+      -7.729678225551263
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_01_center"
+  },
+  {
+    "scenario": "scale_check_01",
+    "seed": 2026107181,
+    "wind": -127.39792048179686,
+    "heading": 112.68030740529878,
+    "profile": "slow",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      1.683274237447326,
+      -7.729678225551263
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_01_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_02",
+    "seed": 2026107182,
+    "wind": 118.40644894729616,
+    "heading": -176.45229900510358,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      3.5343738600985026,
+      4.098881247269115
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_02_relay"
+  },
+  {
+    "scenario": "scale_check_02",
+    "seed": 2026107182,
+    "wind": 118.40644894729616,
+    "heading": -176.45229900510358,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      3.5343738600985026,
+      4.098881247269115
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_02_center"
+  },
+  {
+    "scenario": "scale_check_02",
+    "seed": 2026107182,
+    "wind": 118.40644894729616,
+    "heading": -176.45229900510358,
+    "profile": "fast",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      3.5343738600985026,
+      4.098881247269115
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_02_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_03",
+    "seed": 2026107183,
+    "wind": -138.65582387557504,
+    "heading": -110.02380524791226,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -1.636586765035169,
+      -8.591853645112971
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_03_relay"
+  },
+  {
+    "scenario": "scale_check_03",
+    "seed": 2026107183,
+    "wind": -138.65582387557504,
+    "heading": -110.02380524791226,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -1.636586765035169,
+      -8.591853645112971
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_03_center"
+  },
+  {
+    "scenario": "scale_check_03",
+    "seed": 2026107183,
+    "wind": -138.65582387557504,
+    "heading": -110.02380524791226,
+    "profile": "stable",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -1.636586765035169,
+      -8.591853645112971
+    ],
+    "stratum": "inside",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_03_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_04",
+    "seed": 2026107184,
+    "wind": -108.08125848062713,
+    "heading": -76.23614102602114,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -89.47164353922955,
+      -120.39445586234045
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_04_relay"
+  },
+  {
+    "scenario": "scale_check_04",
+    "seed": 2026107184,
+    "wind": -108.08125848062713,
+    "heading": -76.23614102602114,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -89.47164353922955,
+      -120.39445586234045
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_04_center"
+  },
+  {
+    "scenario": "scale_check_04",
+    "seed": 2026107184,
+    "wind": -108.08125848062713,
+    "heading": -76.23614102602114,
+    "profile": "slow",
+    "speed": 0.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -89.47164353922955,
+      -120.39445586234045
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_04_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_05",
+    "seed": 2026107185,
+    "wind": 14.460343398386641,
+    "heading": 139.09621385467204,
+    "profile": "fast",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -104.80500926786158,
+      107.31220821678886
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_05_relay"
+  },
+  {
+    "scenario": "scale_check_05",
+    "seed": 2026107185,
+    "wind": 14.460343398386641,
+    "heading": 139.09621385467204,
+    "profile": "fast",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -104.80500926786158,
+      107.31220821678886
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_05_center"
+  },
+  {
+    "scenario": "scale_check_05",
+    "seed": 2026107185,
+    "wind": 14.460343398386641,
+    "heading": 139.09621385467204,
+    "profile": "fast",
+    "speed": 0.5,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -104.80500926786158,
+      107.31220821678886
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_05_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_06",
+    "seed": 2026107186,
+    "wind": 136.48463627430016,
+    "heading": -126.31499807335605,
+    "profile": "stable",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -41.577523136505384,
+      144.12255052500757
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_06_relay"
+  },
+  {
+    "scenario": "scale_check_06",
+    "seed": 2026107186,
+    "wind": 136.48463627430016,
+    "heading": -126.31499807335605,
+    "profile": "stable",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -41.577523136505384,
+      144.12255052500757
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_06_center"
+  },
+  {
+    "scenario": "scale_check_06",
+    "seed": 2026107186,
+    "wind": 136.48463627430016,
+    "heading": -126.31499807335605,
+    "profile": "stable",
+    "speed": 2.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      -41.577523136505384,
+      144.12255052500757
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_06_relay_no_tack"
+  },
+  {
+    "scenario": "scale_check_07",
+    "seed": 2026107187,
+    "wind": 69.30497641134548,
+    "heading": 99.58076624606468,
+    "profile": "slow",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      100.96899470252048,
+      -110.92908594576262
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle",
+    "span": 0.5,
+    "variant": "relay",
+    "id": "scale_check_07_relay"
+  },
+  {
+    "scenario": "scale_check_07",
+    "seed": 2026107187,
+    "wind": 69.30497641134548,
+    "heading": 99.58076624606468,
+    "profile": "slow",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      100.96899470252048,
+      -110.92908594576262
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "center",
+    "variant": "center",
+    "id": "scale_check_07_center"
+  },
+  {
+    "scenario": "scale_check_07",
+    "seed": 2026107187,
+    "wind": 69.30497641134548,
+    "heading": 99.58076624606468,
+    "profile": "slow",
+    "speed": 4.0,
+    "radius": 100,
+    "horizon": 1200,
+    "start": [
+      100.96899470252048,
+      -110.92908594576262
+    ],
+    "stratum": "entry",
+    "batch": "scale_check",
+    "method": "shuttle_no_tack",
+    "span": 0.5,
+    "variant": "relay_no_tack",
+    "id": "scale_check_07_relay_no_tack"
+  }
+]

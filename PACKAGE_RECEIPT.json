@@ -1,0 +1,11 @@
+{
+  "zip": "B_RESEARCH_preview.zip",
+  "bytes": 91556391,
+  "sha256": "aeca2939e012f96a561884b75081067e9b4d05f44a0eac30305201a89073d0dd",
+  "entries": 826,
+  "testzip": "pass",
+  "package_manifest_hashes": "825 entries verified",
+  "indexed_raw_results": "516 exact SHA256 matches",
+  "additional_run_json": "9 preserved batch/admission metadata files",
+  "required_reviews_trace_source_gallery": "present"
+}

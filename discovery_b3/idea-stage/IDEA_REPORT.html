@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B3：具体应用选题筛选与实际证据</title>
+
+<meta name="generator" content="ARIS render-html (academic, v1)">
+<meta name="aris:source-path" content="IDEA_REPORT.md">
+<meta name="aris:source-sha256" content="0807848855712dd73fcb7bc63c650e8d7c9a08c9440d1d01492651a83e6e864a">
+<meta name="aris:generated-at" content="2026-10-09 04:28 UTC">
+
+<!-- offline mode: MathJax + highlight.js skipped; math and code blocks render as plain text -->
+
+<style>
+:root {
+  --bg: #fdfcf7;
+  --bg-soft: #f4f1ea;
+  --bg-code: #f8f5ec;
+  --ink: #1a1a1a;
+  --ink-soft: #4a4a4a;
+  --ink-muted: #6b6b6b;
+  --primary: #1a4a8c;
+  --primary-soft: #2d6cb8;
+  --accent: #b8390e;
+  --warn: #b45309;
+  --warn-bg: #fef3c7;
+  --info-bg: #dbeafe;
+  --good-bg: #d1fae5;
+  --good: #065f46;
+  --bad-bg: #fee2e2;
+  --bad: #991b1b;
+  --border: #d6d0c0;
+  --border-soft: #e8e3d5;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Source Serif Pro", "Source Serif 4", "Crimson Pro", "Georgia", "Songti SC", "STSong", serif;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.layout {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 48px;
+  padding: 40px 32px;
+}
+
+nav.toc {
+  position: sticky;
+  top: 24px;
+  align-self: start;
+  font-size: 13px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  border-right: 1px solid var(--border-soft);
+  padding-right: 16px;
+}
+nav.toc h3 {
+  margin: 0 0 12px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+  font-weight: 600;
+}
+nav.toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+nav.toc ol li { margin: 5px 0; counter-increment: toc; }
+nav.toc ol li::before { content: counter(toc) ". "; color: var(--ink-muted); margin-right: 4px; }
+nav.toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted transparent;
+}
+nav.toc a:hover { color: var(--primary); border-bottom-color: var(--primary); }
+nav.toc ul { list-style: none; padding-left: 14px; margin: 3px 0; font-size: 12px; }
+nav.toc ul li::before { content: "→ "; color: var(--border); }
+
+main { min-width: 0; }
+
+header.hero {
+  border-bottom: 3px double var(--primary);
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+}
+header.hero .eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+header.hero h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+header.hero .subtitle {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 8px;
+  font-style: italic;
+}
+header.hero .byline {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: 0 0 20px;
+}
+header.hero .byline strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+header.hero .meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border-soft);
+  padding-top: 14px;
+}
+header.hero .meta span strong { color: var(--ink-soft); }
+header.hero .meta code {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 11px;
+  background: var(--bg-soft);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+}
+
+h2 {
+  font-size: 24px;
+  margin: 44px 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 700;
+}
+h2 .num { color: var(--primary); font-weight: 600; margin-right: 8px; }
+h3 { font-size: 19px; margin: 28px 0 10px; color: var(--primary); font-weight: 600; }
+h4 { font-size: 16px; margin: 20px 0 8px; color: var(--ink); font-weight: 600; }
+
+p { margin: 10px 0; }
+ul, ol { padding-left: 22px; margin: 10px 0; }
+ul li, ol li { margin: 4px 0; }
+ul li::marker { color: var(--primary); }
+
+strong { color: var(--accent); font-weight: 600; }
+em { color: var(--ink-soft); }
+
+a { color: var(--primary); }
+a:hover { color: var(--accent); }
+
+code:not(.hljs) {
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", "Consolas", monospace;
+  font-size: 0.86em;
+  background: var(--bg-code);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid var(--border-soft);
+  color: var(--accent);
+}
+
+pre {
+  background: #fafaf6;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  padding: 0;
+  overflow-x: auto;
+  border-radius: 4px;
+  margin: 14px 0;
+}
+pre code, pre code.hljs {
+  background: transparent !important;
+  display: block;
+  padding: 14px 18px !important;
+  font-size: 13px;
+  line-height: 1.55;
+  font-family: "JetBrains Mono", "SF Mono", "Menlo", monospace;
+  color: var(--ink);
+}
+pre.diagram {
+  background: #f9f6ed;
+  border-left: 4px solid var(--accent);
+  font-size: 12.5px;
+  line-height: 1.4;
+}
+
+.callout {
+  margin: 16px 0;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-left: 4px solid;
+  font-size: 15px;
+}
+.callout-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.callout-info { background: var(--info-bg); border-left-color: var(--primary); }
+.callout-info .callout-title { color: var(--primary); }
+.callout-warn { background: var(--warn-bg); border-left-color: var(--warn); }
+.callout-warn .callout-title { color: var(--warn); }
+.callout-good { background: var(--good-bg); border-left-color: var(--good); }
+.callout-good .callout-title { color: var(--good); }
+.callout-bad { background: var(--bad-bg); border-left-color: var(--bad); }
+.callout-bad .callout-title { color: var(--bad); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+thead { background: var(--primary); color: white; }
+th, td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 13px; letter-spacing: 0.02em; }
+tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) { background: var(--bg-soft); }
+
+details.qa, details {
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-radius: 6px;
+  margin: 10px 0;
+  padding: 0;
+}
+details summary {
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary);
+  list-style: none;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: "▸ ";
+  margin-right: 4px;
+  display: inline-block;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { border-bottom: 1px solid var(--border-soft); }
+details > :not(summary) { padding: 10px 14px; }
+details p:first-of-type { margin-top: 8px; }
+
+mjx-container[display="true"] { margin: 12px 0 !important; }
+
+footer.aris-footer {
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--ink-muted);
+}
+footer.aris-footer a { color: var(--ink-muted); border-bottom: 1px dotted var(--border); }
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; gap: 20px; padding: 20px 16px; }
+  nav.toc {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border-soft);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+  header.hero h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+}
+@media print {
+  nav.toc { display: none; }
+  .layout { grid-template-columns: 1fr; padding: 0; }
+  body { background: white; }
+  header.hero { border-bottom-color: var(--ink); }
+}
+</style>
+</head>
+<body>
+<div class="layout">
+
+<nav class="toc">
+  <h3>Contents</h3>
+  <ol>
+<li><a href="#当前选择">当前选择</a>
+</li>
+<li><a href="#literature-landscape">Literature landscape</a>
+</li>
+<li><a href="#ranked-ideas">Ranked ideas</a>
+</li>
+<li><a href="#novelty-verification">Novelty verification</a>
+</li>
+<li><a href="#external-critical-review">External critical review</a>
+</li>
+<li><a href="#pilot-evidence">Pilot evidence</a>
+<ul>
+<li><a href="#r实质改变任务的第三次筛选">R：实质改变任务的第三次筛选</a></li>
+<li><a href="#水质采样扩大范围后的文献与资产筛除">水质采样：扩大范围后的文献与资产筛除</a></li>
+<li><a href="#t-的可检验机制尚非收益结论">T 的可检验机制（尚非收益结论）</a></li>
+</ul>
+</li>
+<li><a href="#关键图与复现">关键图与复现</a>
+</li>
+<li><a href="#后续方向与停止条件">后续方向与停止条件</a>
+</li>
+<li><a href="#evidence-gate">Evidence Gate</a>
+</li>
+</ol>
+</nav>
+
+<main>
+<header class="hero">
+  
+  <h1>B3：具体应用选题筛选与实际证据</h1>
+  
+  
+  <div class="meta">
+    <span><strong>Source:</strong> <code>IDEA_REPORT.md</code></span>
+    <span><strong>SHA256:</strong> <code>080784885571</code></span>
+    <span><strong>Rendered:</strong> 2026-10-09 04:28 UTC</span>
+    
+  </div>
+</header>
+
+<h1 id="b3从具体作业环节寻找ccdc选题">B3：从具体作业环节寻找CCDC选题</h1>
+<p>状态：三个实际pilot及最终独立证据审查已完成。2026-10-09。用户续授权扩大问题范围，A/旧B/B2保留。方法可以直接采用成熟算法，价值要由具体任务和实际结果支撑。</p>
+<h2 id="当前选择">当前选择</h2>
+<p><strong>本轮尚未选出足以启动新论文的题目。</strong> 这不是因方法不够新：T与R的成熟方案已经可运行，但本批任务没有暴露需要新增策略的缺口；N存在信息收益，却缺少因果初始化和关键机动覆盖。将正常实现工作包装成新课题，会重复前几轮的问题。</p>
+<p>本轮从“旧帆船控制器怎么再加模块”改为三个明确操作问题：有限水域换线、位置更新中断、单侧执行器降额后的路径接续。另核查了移动水质测量，未把数据缺失用合成结果补齐。</p>
+<table><thead><tr><th>实际筛选问题</th><th>最强实际简单对照</th><th>真实效果与代价</th><th>决定</th></tr></thead><tbody><tr><td>T：转弯后接回下一条测线</td><td>曲率前视减速+合理反馈+约束分配</td><td>8/8完成且无外廓越界；三法有效格数相同，额外余量法零激活</td><td>保留成熟原型，不增加模块，不直接立新题</td></tr><tr><td>N：位置更新缺失后的10–60s传播</td><td>恒速度、恒转率、原始gyro</td><td>原始gyro将60s平均误差1.920降至0.834m；阈值状态只改变1窗，存在退化</td><td>保留条件性信息价值；不能写安全续航</td></tr><tr><td>R：已知一侧降额后在有限水域接续U形路径</td><td>同限值非对称分配+实际抗饱和</td><td>简单方法10/10；固定能力限速10/10但更慢；动态余量9/10且新增失控案例</td><td>采用简单参考作为工程默认；不保留动态余量法</td></tr></tbody></table>
+<p>对CCDC的建议仍是“具体任务+成熟方法+可信证据”，而非必须发明新网络。这里缺的是能改变实际作业结果的条件和独立验证，不是公式数量。若必须在现有资产中选择一项有限深化，<strong>条件性首选R：已知单侧推力限幅下，小型双桨无人艇的换线任务可完成性与速度参考选择</strong>。选择的是任务，不是失败的reserve方法。它不依赖尚缺的声纳质量或在线GNSS初态，已有完整闭环简单原型；但当前10条件都被该原型解决，还不能直接立为新论文。</p>
+<p>R下一步只有一个优先判别：先取得有来源的作业水域、流速与推进能力范围，再检验成熟基线在哪些条件可完成、哪些条件必须改变任务。如果没有影响操作选择的能力边界，就停止；不能根据本批输赢缩窄水域或提高流速制造困难。水质走航的质量—航时折中为需数据的备选，当前也不是实测入选。</p>
+<h2 id="literature-landscape">Literature landscape</h2>
+<p>应用锚点先于算法。UNH/NOAA对Surveyor实际作业的98页报告指出，转弯数据需移除，风流引起测线变化与覆盖缺口；这是作业需求，不是小型船上的定量性能结论。https://web.uri.edu/oeci/wp-content/uploads/sites/1967/Observations-on-Initial-Use-of-Saildrone-Surveyor-for-Deep_Sea-Mapping_cp.pdf （实际读印刷7–11页及P86相关段，不宣称通读）。</p>
+<p>现成解法包括Dubins/TSP测线连接、跳行与在线传感覆盖适配；控制上有ILOS/ALOS、约束推力分配与抗饱和。Fossen官方Otter模型提供实际六自由度积分和推进器动态，但不是本项目实船标定。任何在正反推映射、分配或限幅上的修复都应公平用于基线，不当作新方法收益。</p>
+<p>定位方向存在CANOE真实原始IMU和后处理GNSS/INS参考；官方明确参考由全序列批处理产生，不能冒充在线GNSS，更不能拿未来平滑值初始化可部署算法。仅在数据契约支持的范围内试验。</p>
+<p>官网当前CCDC2027，初稿2026-10-31；无人系统控制应用在会议范围内，但没有核实到“创新要求较低”的官方规则。选择应在约三周的准备尺度内有可完成证据，不估计接收概率。来源、环境和日期见 ../notes/venue_and_execution.md。</p>
+<h2 id="ranked-ideas">Ranked ideas</h2>
+<p>三路初始意见独立形成；原始意见 ../notes/operations.md、control_opportunities.md、reliability.md。九条仅合并O1/C1，形成八个问题；完全无位置更新与低频位置更新的信息条件不同，不预先合并。表中不是性能排名，未实测的缺口一律是假设。</p>
+<table><thead><tr><th>ID</th><th>具体问题</th><th>首批必须出现的成熟强对照</th><th>主要风险</th></tr></thead><tbody><tr><td>T</td><td>测线端部转弯后恢复有效采样</td><td>可行圆弧/Dubins/跳行；相同LOS、抗饱和、前视曲率减速</td><td>简单方法已足够；不能凭声纳无数据声称测绘质量</td></tr><tr><td>R</td><td>已知单侧推力降额后完成下一段或中止</td><td>同约束分配+抗饱和+曲率限速；保守低速</td><td>故障发生率/程度未标定，信息须双方同给</td></tr><tr><td>N</td><td>短时位置更新缺失时还能沿测线继续多久</td><td>因果恒速度/恒转率、惯导/EKF和固定暂停</td><td>真实数据online输入未核验，不能偷用后处理真值</td></tr><tr><td>H</td><td>低速横流时COG误作船首造成错误校正</td><td>低速禁用、创新门控及适用融合</td><td>可能只是常规传感契约修复</td></tr><tr><td>C2</td><td>低频位置更新或短丢测后恢复有效采样</td><td>多速率EKF、合理位置辅助航迹角估计</td><td>缺少核实的在线GNSS记录；不能把加噪后处理参考当实测GNSS</td></tr><tr><td>S</td><td>舵机速率约束下连续变向</td><td>实际执行反馈抗饱和+参考平滑</td><td>无可信硬件参数，不随意造极慢舵机</td></tr><tr><td>G</td><td>已知覆盖缺口的最少补测</td><td>在线幅宽适配+贪心补线</td><td>传感覆盖日志未确认，不能虚构声纳质量</td></tr><tr><td>D</td><td>回收接近同时满足位置/艏向/速度</td><td>成熟受限轨迹规划+分段减速控制</td><td>推力与横流可达性、复现成本</td></tr></tbody></table>
+<h2 id="novelty-verification">Novelty verification</h2>
+<p>真实独立gpt-6-astra xhigh /root/b3_selection_review已完成来源与应用范围审查，见 ../notes/selection_review.md。同家族、provisional。保留T与N进行有限实测；G待覆盖数据契约，其他候选未被证明无效。成熟方法有效可以采用，但相同问题重复实现不能宣称新发现。</p>
+<h2 id="external-critical-review">External critical review</h2>
+<p>真实独立 /root/b3_evidence_review（gpt-6-astra，ultra）已对T/N及R原始轨迹进行复算，最终意见见 ../notes/evidence_review.md。同家族provisional，不是CCDC外部评审或接收意见。复算支持有限结论；R失败仅分类在半步下保持，不宣称逐点收敛。N的单460s窗贡献约60–68%的平均误差降低，其余窗口仍有平均收益；“一个窗口”仅指示例阈值状态改变。</p>
+<h2 id="pilot-evidence">Pilot evidence</h2>
+<p>T完成了共同跟踪器修复与最终核验：8个配对任务全部完成且外廓不越界，三法有效格数逐任务相同，平均157.75/160m；推力余量法全程未激活。难例半步核验有效格数差0m、航时差−0.0375s、余量差−0.0223m。旧v1/v2步长敏感的表面收益不作性能结论。全部场景已见，最终批是探索配对，不称新确认。详见 ../candidates/turn_handover/RESULTS.md。</p>
+<p>该有效长度按每1m格至少一次满足位置、航迹角和速度门槛计数，不代表连续合格采样或实际声纳质量。当前不再追加名义测线场景来追求新模块优势。</p>
+<p>N已完成固定9窗×4方法，实际进程退出，详见 ../candidates/position_outage/RESULTS.md。服务器磁盘满，使用本机已有Anaconda CPU环境，不安装新包、不清理共享数据。共享上限24h、3候选、4单线程CPU，GPU0。</p>
+<p>N的60s平均水平误差为CV 1.920m、CTR 5.744m、原始gyro 0.834m、校准gyro 0.649m。CV有1/9窗超过示例侧向预算，gyro没有；两种gyro的阈值结果相同。全部窗口来自单条记录的普通近匀速航段，且初态及过去校准参考有后处理特权。这支持限定条件下陀螺信息有用，不支持部署安全续航或暂停决策；不据此进入论文写作。</p>
+<p>原N侧向预测误差按每时刻参考速度法向计算；另复算了固定初始速度法向。两者不等于真实船离初始直线的距离。复算只改变CTR一个2m临界窗口，不改变CV与gyro主要结论，原评分保留。</p>
+<h3 id="r实质改变任务的第三次筛选">R：实质改变任务的第三次筛选</h3>
+<p>具体问题：双桨艇在有限水域已知一侧命令能力下降后，如何完成U形转弯并返回起始侧。允许低速返回，主指标不沿用T的采样速度门槛。这里不是回到原出发点，也没有实现自动继续/中止决策。固定10个条件、三个公平策略：正确非对称分配下的自然降速、能力匹配固定速度上限、当前偏航请求下的可用能力调节。全部都知道相同降额，全部通过原轴动态实际执行。</p>
+<table><thead><tr><th>方法</th><th style="text-align:right">安全完成/10任务</th><th style="text-align:right">平均全航时s（保留超时）</th><th style="text-align:right">平均桨转速总变化</th></tr></thead><tbody><tr><td>自然限力降速</td><td style="text-align:right">10</td><td style="text-align:right">150.045</td><td style="text-align:right">1389.02</td></tr><tr><td>能力匹配固定上限</td><td style="text-align:right">10</td><td style="text-align:right">165.038</td><td style="text-align:right">1448.86</td></tr><tr><td>动态余量调节</td><td style="text-align:right">9</td><td style="text-align:right">184.050</td><td style="text-align:right">3243.01</td></tr></tbody></table>
+<p>这些是同一结构化压力组合下的描述性结果，不是故障概率或随机独立样本。反例为左侧25%能力、横流0.3m/s：简单方法204.75s、固定上限220.65s完成；动态余量500s超时，最小外廓余量约−113.5m。半步核验保留三者成败，失败轨迹精确偏移量仍有约0.89m差异，不把它当实船精确预测。协议、全部结果及实际轨迹见 ../candidates/derated_return/。不把静态瞬时可行域误写成闭环稳定或返回保证。</p>
+<h3 id="水质采样扩大范围后的文献与资产筛除">水质采样：扩大范围后的文献与资产筛除</h3>
+<p>额外核查了移动水质测量的响应延迟与速度安排。Wateree原始论文实际为2024年，直接浸水探头没有管路；高速偏差混有推进混合、内部滤波及响应时间。成熟固定低速、停留与已标定补偿必须作为强对照。当前未取得足以区分这些原因的同步原始记录，因此不运行人为一阶滞后仿真冒充真实应用验证。该问题保留为需数据的候选，不占第四pilot。来源与完整理由见 ../notes/water_sampling_screen.md。</p>
+<h3 id="t-的可检验机制尚非收益结论">T 的可检验机制（尚非收益结论）</h3>
+<p>已固定官方Otter源commit a93d1938ba1f78f2580c24c73f003091b2f03cd0，准入正反推往返误差2.84e-14 N，镜像转向符号检查通过。每侧推力范围[-66.708,119.682] N，力臂0.395m。令总纵向力X=f_L+f_R，偏航力矩N=0.395(f_L-f_R)，两侧共同限幅给出 |N|≤0.395 min(X+133.416,239.364−X)。例如X=200N时偏航余量仅15.55Nm；请求总推力与转向确实耦合。但公平基线已按偏航优先分配，也有抗饱和，因此这个公式不能代替候选收益证据；剩下要测的是提前速度安排是否改变实际进入下一条测线的过程。</p>
+<p>流程示意（不是实验图）：共同几何路线 → 当前反馈与前视曲率 → 速度参考策略 → 共同航向/速度反馈及抗饱和 → 共同可行推力分配 → 实际六自由度动力学 → 下一步反馈。仅速度参考策略在候选间变化。</p>
+<h2 id="关键图与复现">关键图与复现</h2>
+<p>T：同一实际动力学积分下，额外策略几乎重合。此图不是实船记录。</p>
+<p><img src="../candidates/turn_handover/trajectory_response.png" alt="T实际仿真轨迹" /></p>
+<p>N：真实船运动记录上的离线预测误差，不是方法执行的闭环航迹。</p>
+<p><img src="../candidates/position_outage/results/propagation_errors.png" alt="N全部固定窗口" /></p>
+<p>R：预先指定困难任务；动态余量法严重退化，不能只展示正常成功。</p>
+<p><img src="../candidates/derated_return/trajectory_response.png" alt="R实际仿真反例" /></p>
+<p>所有可运行入口、来源、日志时间约定和完整原始记录见 <a href="../RESULTS_INDEX.md">RESULTS_INDEX</a>。三类任务分母分别为8个仿真条件、单记录9窗和10个仿真条件，不能相加成总体成功率。独立角色原始意见保留；其判断不是科学证据的替代。</p>
+<p>本轮未训练、未用GPU、未修改A/旧B/B2、未push。服务器满盘仅影响服务器写入，本轮已有本地可运行成果；未清理共享数据。三个pilot名额已用完，不为凑一个正结果追加第四题或继续扫描。</p>
+<h2 id="后续方向与停止条件">后续方向与停止条件</h2>
+<p>条件性R问题可以写成：<strong>在已知单侧执行器降额和给定作业水域下，什么时候成熟约束分配足以完成换线，什么时候必须改变速度参考或任务？</strong> 方法优先保留当前简单反馈，不预设需要MPC、网络或失败的reserve。</p>
+<p>当前可证：有限已知条件下，简单方案足够；多一层静态能力调速可能更差。当前不可证：未知故障检测、真实损坏、现场安全、一般稳定性或完整返航系统。下一阶段须先有操作范围来源，再固定新的独立条件，并报告完成、边界、航时与操纵成本；不能事后调边界制造优势。如果来源范围内简单方案仍充分，就采用它或结束该题，不强行增加机制。</p>
+<p>因没有足够信号，本轮没有启动最终方法精炼与大实验计划。ARIS完整五阶段的推进门保留未通过状态；这是未将有限筛选升级为成熟研究方案，不是隐瞒执行失败或等待新授权。有限发现工作包本身已交付。</p>
+<p>&lt;!-- ARIS_IDEA_DISCOVERY_EVIDENCE_GATE:START --&gt;</p>
+<h2 id="evidence-gate">Evidence Gate</h2>
+<p><strong>Status:</strong> BLOCKED</p>
+<p>The workflow is not complete. Required stage evidence is missing:</p>
+<ul><li>BLOCKED: research-refine-pipeline evidence missing (status=skipped)</li></ul>
+<p>&lt;!-- ARIS_IDEA_DISCOVERY_EVIDENCE_GATE:END --&gt;</p>
+
+<footer class="aris-footer">
+  Generated by <a href="https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep/blob/main/skills/render-html/SKILL.md">ARIS <code>/render-html</code></a> ·
+  source path <code>IDEA_REPORT.md</code> ·
+  SHA256 <code>080784885571</code> ·
+  generated at 2026-10-09 04:28 UTC.
+  This is a generated view — edit the source Markdown, then re-render.
+</footer>
+</main>
+
+</div>
+</body>
+</html>

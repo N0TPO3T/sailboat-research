@@ -1,0 +1,15 @@
+{
+  "pid": 1086660,
+  "start_utc": "2026-10-08T03:11:50.501271+00:00",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "gpu": "",
+  "script_sha256": "c23d9be7a74f3280d47f2bac9808662e1d3694f1bf9b06d634c4a4692d3dc75a",
+  "end_utc": "2026-10-08T03:11:57.355278+00:00",
+  "elapsed_s": 6.852999763097614,
+  "exit_status": "completed"
+}

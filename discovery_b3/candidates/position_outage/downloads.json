@@ -1,0 +1,52 @@
+{
+  "data_download_bytes_including_redundant_contract_samples": 13697024,
+  "license": "CC BY 4.0 per official AWS registry",
+  "small_metadata_and_calibration_additional": true,
+  "files": [
+    {
+      "file": "imu_prefix.csv",
+      "url": "https://canoe-data.s3.us-west-2.amazonaws.com/canoe-2025-08-20-16-07/imu/imu.csv",
+      "range": "bytes=0-1048575",
+      "status": 206,
+      "bytes": 1048576,
+      "sha256": "e75a8f43ee4225f0bc4596dabf8c32cd175b55f2f788063f118707a0c2e6e90f",
+      "used_for_pilot": false
+    },
+    {
+      "file": "imu_prefix_8MiB.csv",
+      "url": "https://canoe-data.s3.us-west-2.amazonaws.com/canoe-2025-08-20-16-07/imu/imu.csv",
+      "range": "bytes=0-8388607",
+      "status": 206,
+      "bytes": 8388608,
+      "sha256": "77d9157a14548cdd9f17eba84252e90bbf0927f8d0b7bbcfe78873efc65a148f",
+      "used_for_pilot": true
+    },
+    {
+      "file": "radar_poses_prefix_1MiB.csv",
+      "url": "https://canoe-data.s3.us-west-2.amazonaws.com/canoe-2025-08-20-16-07/novatel/radar_poses.csv",
+      "range": "bytes=0-1048575",
+      "status": 206,
+      "bytes": 1048576,
+      "sha256": "ff6a408e5c35f08a1a6657b6bde48469e81405979f991afd4e65a5b6c4a70515",
+      "used_for_pilot": false
+    },
+    {
+      "file": "novatel_imu_prefix_64KiB.csv",
+      "url": "https://canoe-data.s3.us-west-2.amazonaws.com/canoe-2025-08-20-16-07/novatel/novatel_imu.csv",
+      "range": "bytes=0-65535",
+      "status": 206,
+      "bytes": 65536,
+      "sha256": "af69b4d1190bff0210438a2b1476646906f5a75847800878652044311eb1af42",
+      "used_for_pilot": false
+    },
+    {
+      "file": "lidar_poses_prefix_3MiB.csv",
+      "url": "https://canoe-data.s3.us-west-2.amazonaws.com/canoe-2025-08-20-16-07/novatel/lidar_poses.csv",
+      "range": "bytes=0-3145727",
+      "status": 206,
+      "bytes": 3145728,
+      "sha256": "bc309077feb3cfa694c9f4149769954e7486b6fc52384f74460e89afb5ff86dd",
+      "used_for_pilot": true
+    }
+  ]
+}

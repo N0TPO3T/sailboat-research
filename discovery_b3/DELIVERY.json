@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-09",
+  "status": "finite discovery completed; no writing-ready new topic",
+  "archive": "B3_DISCOVERY_preview.zip",
+  "archive_receipt": "B3_DISCOVERY_DELIVERY.json (outside archive)",
+  "payload": "all B3 evidence, raw data fragments, complete simulation traces and old diagnostics; caches excluded",
+  "server_copy": "not written: server disk full",
+  "a_and_old_b": "unchanged",
+  "active_experiments": 0,
+  "gpu_used": 0
+}
