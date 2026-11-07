@@ -1,7 +1,7 @@
 # Project State
 
 ## GitHub 分支管理（2026-11-07）
-- 本方向版本分支：`codex/idea-a-routing`；同仓库的其他思路使用独立分支，入口为 `codex/project-index`。`main` 保留原历史基点。
+- 本方向版本分支：`idea/A`；同仓库的其他思路使用独立分支，入口为 `main`。`main` 保留原历史基点。
 - 模型与原始结果的位置由 `migration/ASSETS.json` 维护；原服务器工作区和原有产物未修改。此次仅整理并发布版本，未重新运行实验。
 
 

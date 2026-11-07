@@ -1,6 +1,6 @@
 # Sailboat Routing V0
 
-本方向 GitHub 分支：`codex/idea-a-routing`。其他思路见 `codex/project-index`；资产恢复见 `migration/ASSETS.json`。本次发布保留原研究结论与限制，不代表重新运行验证。
+本方向 GitHub 分支：`idea/A`。其他思路见 `main`；资产恢复见 `migration/ASSETS.json`。本次发布保留原研究结论与限制，不代表重新运行验证。
 
 
 冻结局部SAC-LSTM的连续多航迹点与局部风向旁路研究。服务器、路径、当前能力与证据见[PROJECT_STATE](PROJECT_STATE.md)；下一步见[CURRENT_PLAN](CURRENT_PLAN.md)，Agent首先遵循[AGENTS](AGENTS.md)。本页只维护操作方法。
