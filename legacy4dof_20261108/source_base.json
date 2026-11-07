@@ -1,0 +1,7 @@
+{
+  "base_commit": "3d2f46833393d205dc9428cf2bee9cebd8dcbe5b",
+  "mode": "server authoring, no training, no GPU",
+  "source": "source_final/; previous failed sources in source_policy_reset_failed/",
+  "asset_hash_index": "../ASSET_HASHES.json (existing index reused; no new hash calculation)",
+  "configuration": "config_legacy4dof.json fixed tasks; config_legacy_dryden.json 30-step wind parity"
+}

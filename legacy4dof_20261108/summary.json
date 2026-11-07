@@ -1,0 +1,56 @@
+[
+  {
+    "backend": "original",
+    "scene": "clear",
+    "reason": "arrived",
+    "time": 123.0,
+    "success": true,
+    "min_safety": null,
+    "final_distance": 7.378934870754299
+  },
+  {
+    "backend": "original",
+    "scene": "single",
+    "reason": "arrived_with_buffer_violation",
+    "time": 139.0,
+    "success": false,
+    "min_safety": -14.907946457744103,
+    "final_distance": 8.93779289099103
+  },
+  {
+    "backend": "original",
+    "scene": "switch",
+    "reason": "arrived",
+    "time": 147.0,
+    "success": true,
+    "min_safety": null,
+    "final_distance": 9.634380397940989
+  },
+  {
+    "backend": "yara",
+    "scene": "clear",
+    "reason": "arrived",
+    "time": 123.0,
+    "success": true,
+    "min_safety": null,
+    "final_distance": 7.379230464413268
+  },
+  {
+    "backend": "yara",
+    "scene": "single",
+    "reason": "arrived_with_buffer_violation",
+    "time": 139.0,
+    "success": false,
+    "min_safety": -14.907941460030898,
+    "final_distance": 8.937993140031816
+  },
+  {
+    "backend": "yara",
+    "scene": "switch",
+    "reason": "arrived",
+    "time": 147.0,
+    "success": true,
+    "min_safety": null,
+    "final_distance": 9.634494937620136
+  }
+]

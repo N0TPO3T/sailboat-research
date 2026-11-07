@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "mode": "legacy4dof",
+      "reset_count": 2,
+      "passed": true
+    },
+    {
+      "mode": "native",
+      "reset_count": 2,
+      "passed": true
+    },
+    {
+      "mode": "legacy4dof",
+      "reset_count": 2,
+      "passed": true
+    },
+    {
+      "mode": "signed",
+      "reset_count": 2,
+      "passed": true
+    },
+    {
+      "mode": "legacy4dof",
+      "reset_count": 2,
+      "passed": true
+    }
+  ]
+}

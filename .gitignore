@@ -11,3 +11,6 @@ frozen/.cache/
 frozen/.tmp/
 frozen/checkpoints/
 DELIVERY.json
+
+signed_20261107/
+legacy4dof_20261108/

@@ -1,0 +1,41 @@
+{
+  "passed": false,
+  "gazebo_seed": 61106,
+  "steps": 49,
+  "checks": [
+    {
+      "mode": "native",
+      "max_state_difference": [
+        0.03187370300292969,
+        0.0328369140625,
+        0.009420918300747871,
+        0.005577683448791504,
+        0.014789879322052002,
+        0.011876728385686874,
+        0.11739876866340637,
+        0.03226920962333679,
+        0.2746864855289459,
+        1.1641532182693481e-10
+      ],
+      "bitwise_equal": false
+    },
+    {
+      "mode": "signed",
+      "max_state_difference": [
+        0.02024555206298828,
+        0.030935287475585938,
+        0.004044177010655403,
+        0.0038547515869140625,
+        0.004730597138404846,
+        0.007567044347524643,
+        0.03400963172316551,
+        0.009546153247356415,
+        8.881784197001252e-16,
+        0.0
+      ],
+      "bitwise_equal": false
+    }
+  ],
+  "baseline_commit": "3d2f468",
+  "historical_unseeded_bitwise_check": "failed; preserved in regression.log; no relaxed numerical tolerance used"
+}
