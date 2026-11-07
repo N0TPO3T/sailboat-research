@@ -31831,6 +31831,517 @@
       "storage": "project-assets-20261107",
       "asset": "dual-policy-assets-007.tar.gz",
       "archive_member": "runs/train_v3/source_train.py"
+    },
+    {
+      "path": "runs/contract_check_final.log",
+      "size": 1402,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/contract_check_final.log"
+    },
+    {
+      "path": "runs/confirmation/avoid.log",
+      "size": 8878,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/confirmation/avoid.log"
+    },
+    {
+      "path": "runs/confirmation/normal.log",
+      "size": 8872,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/confirmation/normal.log"
+    },
+    {
+      "path": "runs/confirmation/plot_manifest.log",
+      "size": 1719,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/confirmation/plot_manifest.log"
+    },
+    {
+      "path": "runs/confirmation/range.log",
+      "size": 8851,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/confirmation/range.log"
+    },
+    {
+      "path": "runs/confirmation/risk.log",
+      "size": 8828,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/confirmation/risk.log"
+    },
+    {
+      "path": "runs/round2_20261011/pipeline.log",
+      "size": 16833,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/pipeline.log"
+    },
+    {
+      "path": "runs/round2_20261011/train_20261011.log",
+      "size": 114706,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/train_20261011.log"
+    },
+    {
+      "path": "runs/round2_20261011/train_20261012.log",
+      "size": 114420,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/train_20261012.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/0_normal.log",
+      "size": 32327,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/0_normal.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261011_avoid.log",
+      "size": 32518,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261011_avoid.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261011_range.log",
+      "size": 32552,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261011_range.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261011_risk.log",
+      "size": 32531,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261011_risk.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261012_avoid.log",
+      "size": 32549,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261012_avoid.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261012_range.log",
+      "size": 32595,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261012_range.log"
+    },
+    {
+      "path": "runs/round2_20261011/confirmation50/20261012_risk.log",
+      "size": 32539,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/confirmation50/20261012_risk.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/0_normal.log",
+      "size": 3625,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/0_normal.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261011_avoid.log",
+      "size": 3705,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261011_avoid.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261011_range.log",
+      "size": 3703,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261011_range.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261011_risk.log",
+      "size": 3666,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261011_risk.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261012_avoid.log",
+      "size": 3710,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261012_avoid.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261012_range.log",
+      "size": 3703,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261012_range.log"
+    },
+    {
+      "path": "runs/round2_20261011/retrained_key_cases/20261012_risk.log",
+      "size": 3677,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round2_20261011/retrained_key_cases/20261012_risk.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/branches.log",
+      "size": 11659,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/branches.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/pipeline.log",
+      "size": 13970,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/pipeline.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen.log",
+      "size": 993,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/train_20261011.log",
+      "size": 109033,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/train_20261011.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/train_20261012.log",
+      "size": 116367,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/train_20261012.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/w0_old50.log",
+      "size": 32192,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/w0_old50.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261011_final_avoid.log",
+      "size": 32474,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261011_final_avoid.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261011_final_range.log",
+      "size": 32567,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261011_final_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261011_guard_old_range.log",
+      "size": 32525,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261011_guard_old_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261011_old_avoid.log",
+      "size": 32452,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261011_old_avoid.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261011_old_range.log",
+      "size": 32532,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261011_old_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261012_final_avoid.log",
+      "size": 32448,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261012_final_avoid.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261012_final_range.log",
+      "size": 32533,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261012_final_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261012_guard_old_range.log",
+      "size": 32523,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261012_guard_old_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261012_old_avoid.log",
+      "size": 32462,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261012_old_avoid.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/20261012_old_range.log",
+      "size": 32534,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/20261012_old_range.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/normal.log",
+      "size": 32231,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/normal.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/confirmation50/w0.log",
+      "size": 32175,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/confirmation50/w0.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen/20261011_headon_guard.log",
+      "size": 32529,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen/20261011_headon_guard.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen/20261011_shrink.log",
+      "size": 32750,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen/20261011_shrink.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen/20261012_headon_guard.log",
+      "size": 32554,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen/20261012_headon_guard.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen/20261012_shrink.log",
+      "size": 32605,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen/20261012_shrink.log"
+    },
+    {
+      "path": "runs/round3_20261011_2308/screen/w0_range.log",
+      "size": 32313,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round3_20261011_2308/screen/w0_range.log"
+    },
+    {
+      "path": "runs/round4_20261025/branches.log",
+      "size": 4197,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/branches.log"
+    },
+    {
+      "path": "runs/round4_20261025/compression.log",
+      "size": 0,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/compression.log"
+    },
+    {
+      "path": "runs/round4_20261025/finish.log",
+      "size": 111,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/finish.log"
+    },
+    {
+      "path": "runs/round4_20261025/round4_confirm.py.log",
+      "size": 11086,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/round4_confirm.py.log"
+    },
+    {
+      "path": "runs/round4_20261025/round4_report.py.log",
+      "size": 148,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/round4_report.py.log"
+    },
+    {
+      "path": "runs/round4_20261025/round4_select.py.log",
+      "size": 12998,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/round4_select.py.log"
+    },
+    {
+      "path": "runs/round4_20261025/round4_status.py.log",
+      "size": 2287,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/round4_status.py.log"
+    },
+    {
+      "path": "runs/round4_20261025/round4_verify.py.log",
+      "size": 2337,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/round4_verify.py.log"
+    },
+    {
+      "path": "runs/round4_20261025/selected_branches.log",
+      "size": 4197,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/selected_branches.log"
+    },
+    {
+      "path": "runs/round4_20261025/training_launcher.log",
+      "size": 435,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/training_launcher.log"
+    },
+    {
+      "path": "runs/round4_20261025/training_v2_launcher.log",
+      "size": 116,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/training_v2_launcher.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_20261011_control.log",
+      "size": 1307,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_20261011_control.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_20261011_takeover4.log",
+      "size": 846,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_20261011_takeover4.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_20261012_control.log",
+      "size": 3152,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_20261012_control.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_20261012_takeover4.log",
+      "size": 3163,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_20261012_takeover4.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_v2_20261011_control.log",
+      "size": 60605,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_v2_20261011_control.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_v2_20261011_takeover4.log",
+      "size": 59709,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_v2_20261011_takeover4.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_v2_20261012_control.log",
+      "size": 59283,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_v2_20261012_control.log"
+    },
+    {
+      "path": "runs/round4_20261025/train_v2_20261012_takeover4.log",
+      "size": 58254,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/train_v2_20261012_takeover4.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261011_old_avoid.log",
+      "size": 32469,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261011_old_avoid.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261011_old_range.log",
+      "size": 32533,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261011_old_range.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261011_weighted_avoid.log",
+      "size": 32461,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261011_weighted_avoid.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261011_weighted_range.log",
+      "size": 32476,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261011_weighted_range.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261012_old_avoid.log",
+      "size": 32468,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261012_old_avoid.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/20261012_old_range.log",
+      "size": 32527,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/20261012_old_range.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/normal.log",
+      "size": 32201,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/normal.log"
+    },
+    {
+      "path": "runs/round4_20261025/confirmation50/w0.log",
+      "size": 32153,
+      "storage": "project-assets-20261107",
+      "asset": "dual-policy-logs.tar.gz",
+      "archive_member": "runs/round4_20261025/confirmation50/w0.log"
     }
   ],
   "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."
