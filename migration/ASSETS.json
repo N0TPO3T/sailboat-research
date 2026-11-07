@@ -2805,6 +2805,82 @@
       "storage": "project-assets-20261107",
       "asset": "static-assets-000.tar.gz",
       "archive_member": "saclstm_s14obst_noise_0204_actor10800.zip"
+    },
+    {
+      "path": "research/validation/stage15_launch.log",
+      "size": 59319,
+      "storage": "existing-release:consolidated-20261001",
+      "archive_member": "sailboat-research/research/validation/stage15_launch.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/saclstm_s14nowind_seed300_20260516_082316.log",
+      "size": 834,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/saclstm_s14nowind_seed300_20260516_082316.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/saclstm_s14nowind_seed400_20260516_082327.log",
+      "size": 834,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/saclstm_s14nowind_seed400_20260516_082327.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082102.log",
+      "size": 411,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082102.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082126.log",
+      "size": 1654,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082126.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082148.log",
+      "size": 22173,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082148.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082254.log",
+      "size": 838,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082254.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082338.log",
+      "size": 838,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed300_20260516_082338.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed400_20260516_082349.log",
+      "size": 838,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14nowind_seed400_20260516_082349.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14wind_seed300_20260516_082400.log",
+      "size": 836,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14wind_seed300_20260516_082400.log"
+    },
+    {
+      "path": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14wind_seed400_20260516_082411.log",
+      "size": 836,
+      "storage": "project-assets-20261107",
+      "asset": "static-logs.tar.gz",
+      "archive_member": "sailboat_RL/PART4/seed_reward_ablation/logs/sac_s14wind_seed400_20260516_082411.log"
     }
   ],
   "note": "Extract each selected asset archive into this branch checkout; existing baseline assets are mapped to the older release archive."

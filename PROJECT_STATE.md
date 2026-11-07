@@ -1,5 +1,10 @@
 # Project State
 
+## GitHub 分支管理（2026-11-07）
+- 本方向版本分支：`codex/static-baseline`；同仓库的其他思路使用独立分支，入口为 `codex/project-index`。`main` 保留原历史基点。
+- 模型与原始结果的位置由 `migration/ASSETS.json` 维护；原服务器工作区和原有产物未修改。此次仅整理并发布版本，未重新运行实验。
+
+
 ## 项目目标与事实边界
 - 基于师兄的无人帆船强化学习工作完成有独立增量的小论文，仅纯仿真；优先可实现、可复现与投稿可行性。
 - 候选 CCDC / ICAUS / ICCA / DDCLS，期望约 2027-09-14 前录用，不保证录用；具体届次、学校认定、ICCA 全称和训练预算仍需确认。
@@ -8,7 +13,7 @@
 
 ## 唯一开发入口与来源
 - Windows Git 同步仓库：`C:\Users\74095\hs\SailBoat\sailboat-research`；GitHub：私有仓库 `N0TPO3T/sailboat-research`。实际开发、调试、测试和实验均在服务器完成，本地不承担开发或运行职责。
-- 唯一日常开发分支为 `main`；原研究基点 `ce83544e8dfd6a6833da03d626025b4e0a2ba000` 和后续整合提交保留在历史中，不再要求使用临时整合分支。
+- 本方向开发分支为 `codex/static-baseline`；原研究基点 `ce83544e8dfd6a6833da03d626025b4e0a2ba000` 和后续整合提交保留在历史中，不再要求使用临时整合分支。
 - `sailboat_RL/` 是主仓库直接跟踪的普通参考目录，677 个文件及文件模式来自 `19422525cb337831ca68f53a45661d34f3683ee1`，内容逐字节保留。已移除子模块依赖；旧 `N0TPO3T/sailboat_RL` 只归档留证，不作为开发入口。
 - 海南工程提交：`143a508c422f746adb7af3577818060053f2620b`，比师兄基点多 8 个提交。它没有改动原 PART4/PART5、Gymnasium 参考目录和 requirements，而是增加独立工程包、回归测试及工程上下文。
 - 海南下载工作区不完整，原 pack/index 不匹配；123 个有效 loose objects 经 SHA1 校验后与 GitHub 基础历史合并，完整 Git 对象校验通过。原下载保持不动，不能用其零字节工作文件覆盖有效源码。

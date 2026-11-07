@@ -1,5 +1,8 @@
 # Sailboat research
 
+本方向 GitHub 分支：`codex/static-baseline`。其他思路见 `codex/project-index`；资产恢复见 `migration/ASSETS.json`。本次发布保留原研究结论与限制，不代表重新运行验证。
+
+
 本地仅作为 Git 同步仓库；实际开发、调试、测试和实验均在 `ssh donghai` 服务器上进行。研究事实与当前目标分别见 `PROJECT_STATE.md`、`CURRENT_PLAN.md`；操作边界见 `AGENTS.md`。
 
 ## 代码来源与目录
@@ -23,7 +26,7 @@
 git clone https://github.com/N0TPO3T/sailboat-research.git
 ```
 
-唯一日常开发入口是本仓库的 `main`。一次普通克隆即可得到完整源码，不需要 `--recurse-submodules`、`git submodule update` 或旧仓库的访问权限。本仓库是私有仓库，需要 GitHub 认证；不要将令牌写进远程 URL、脚本或仓库文件。
+静态基线方向的开发入口是本仓库的 `codex/static-baseline`。一次普通克隆即可得到完整源码，不需要 `--recurse-submodules`、`git submodule update` 或旧仓库的访问权限。本仓库是私有仓库，需要 GitHub 认证；不要将令牌写进远程 URL、脚本或仓库文件。
 
 已有工作区先检查本地修改；工作区干净时才执行：
 
