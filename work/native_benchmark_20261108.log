@@ -1,0 +1,118 @@
+Generated isolated MigrationSailPolar; underwater source retained verbatim.
+-- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found version "3.6.1") 
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Searching for dependencies of ignition-math6
+-- Looking for OGRE...
+-- Found Ogre Ghadamon (1.9.0)
+-- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+-- Looking for OGRE_Paging...
+-- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+-- Looking for OGRE_Terrain...
+-- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+-- Looking for OGRE_Property...
+-- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+-- Looking for OGRE_RTShaderSystem...
+-- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+-- Looking for OGRE_Volume...
+-- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+-- Looking for OGRE_Overlay...
+-- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-transport8 -- found version 8.5.0
+-- Searching for dependencies of ignition-transport8
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq , version 4.3.2
+-- Checking for module 'uuid'
+--   Found uuid, version 2.34.0
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Searching for dependencies of ignition-msgs5
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so;-lpthread (found suitable version "3.6.1", minimum required is "3") 
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 6.2.0
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Looking for ignition-common3 -- found version 3.17.0
+-- Searching for dependencies of ignition-common3
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Searching for <ignition-common3> component [graphics]
+-- Looking for ignition-common3-graphics -- found version 3.17.0
+-- Searching for dependencies of ignition-common3-graphics
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-fuel_tools4 -- found version 4.9.1
+-- Searching for dependencies of ignition-fuel_tools4
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.7.4
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.2.2
+-- Checking for module 'libzip'
+--   Found libzip, version 1.5.1
+-- Looking for ignition-common3 -- found version 3.17.0
+-- Looking for ignition-math6 -- found version 6.15.1
+-- Looking for ignition-msgs5 -- found version 5.11.0
+-- Using CATKIN_DEVEL_PREFIX: /work/migration18/build/devel
+-- Using CMAKE_PREFIX_PATH: /work/workspace/devel;/opt/ros/noetic
+-- This workspace overlays: /work/workspace/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /work/migration18/build/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.12
+-- BUILD_SHARED_LIBS is on
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /work/migration18/build
+Scanning dependencies of target MigrationSailPolar
+Scanning dependencies of target MigrationStep
+[ 25%] Building CXX object CMakeFiles/MigrationSailPolar.dir/sail_polar_plugin.cc.o
+[ 50%] Building CXX object CMakeFiles/MigrationStep.dir/step.cc.o
+[ 75%] Linking CXX shared library libMigrationStep.so
+[ 75%] Built target MigrationStep
+[100%] Linking CXX shared library libMigrationSailPolar.so
+[100%] Built target MigrationSailPolar
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+SEMANTIC_PASS 10
+{"profile": "yara", "passed": true, "steps": 23}
+NATIVE_CHECK_PASS ['installed_hull_inertia_and_force_parameters_unchanged', 'shared_observation_reward_safety_history_semantics', 'native_absolute_controls_23_steps', 'three_nonzero_attitude_and_twist_resets', '49_step_increment_accumulation_saturation_hold_and_native_commands', 'causal_goal_replay_and_reset', 'rudder_world_yaw_direction', 'actual_obstacle_contact_separate_from_unchanged_point_safety_score']
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+STEP clear 1.0 [0.6239832043647766, 0.04907027631998062]
+STEP clear 101.0 [292.1376953125, -29.285762786865234]
+RESULT {"scene": "clear", "reason": "arrived", "success": true, "time_s": 171.0, "min_safety_m": null, "final_distance_m": 9.613215655366924, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": null, "max_clock_error_s": 0}
+STEP single 1.0 [0.6239832043647766, 0.04907027631998062]
+STEP single 101.0 [193.61354064941406, 97.80060577392578]
+STEP single 201.0 [315.7104187011719, 140.51431274414062]
+STEP single 301.0 [406.2811584472656, 164.2229766845703]
+STEP single 401.0 [513.3851928710938, 195.91041564941406]
+STEP single 501.0 [566.8357543945312, 207.03860473632812]
+STEP single 601.0 [584.730224609375, 209.40940856933594]
+STEP single 701.0 [607.4656982421875, 212.76837158203125]
+STEP single 801.0 [710.49658203125, 245.4407958984375]
+RESULT {"scene": "single", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": 17.932632511502106, "final_distance_m": 397.32537295499264, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": null, "max_clock_error_s": 0}
+STEP switch 1.0 [0.6275110840797424, 0.0487670823931694]
+STEP switch 101.0 [221.63311767578125, 25.30389404296875]
+STEP switch 201.0 [407.7900390625, 97.16242218017578]
+STEP switch 301.0 [494.5005798339844, 139.3481903076172]
+STEP switch 401.0 [523.69091796875, 145.3127899169922]
+STEP switch 501.0 [523.81640625, 146.98013305664062]
+STEP switch 601.0 [523.7120971679688, 148.66217041015625]
+STEP switch 701.0 [523.6130981445312, 150.34356689453125]
+STEP switch 801.0 [523.5206298828125, 152.02432250976562]
+RESULT {"scene": "switch", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": null, "final_distance_m": 77.32464894755516, "physical_contact_steps": 0, "target_changes": 1, "max_angle_error_rad": null, "max_clock_error_s": 0}
+COMPLETE /home/ot/Students/hs/yara-env/migration18/work/native_benchmark_20261108/policy
+RESULTS /home/ot/Students/hs/yara-env/migration18/work/native_benchmark_20261108

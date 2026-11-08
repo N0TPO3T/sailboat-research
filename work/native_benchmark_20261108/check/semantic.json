@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "tests": [
+    "rotated_14_dimensions_progress",
+    "18D_boundary_distance_sort_150_cutoff",
+    "missing_slots_and_initial_progress_zero",
+    "wrap_rotation",
+    "action_scale_floor_accumulate_saturate_matches_actual_legacy_step",
+    "zero_increment_holds_target",
+    "reward_reuse_actual_transition",
+    "tangent_collision_buffer_chord_exact",
+    "real_history_replay_same_frame",
+    "reset_clears_policy_memory"
+  ],
+  "tolerances": {
+    "obs_atol": 2e-05,
+    "action_atol": 1e-12,
+    "clock_atol": 1e-08
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "config": {
+    "policy_dt": 1.0,
+    "physics_dt": 0.01,
+    "limit_s": 900,
+    "world_radius_m": 3500,
+    "goal_radius_m": 10,
+    "seed": 61106,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500,
+      0
+    ],
+    "obstacle_input": "boundary40",
+    "sail_mapping": "abs_accumulated_legacy_sail_target_to_native_cable",
+    "scenes": [
+      {
+        "name": "clear",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": []
+      },
+      {
+        "name": "single",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": [
+          {
+            "center_xy": [
+              250,
+              0
+            ],
+            "entity_radius": 30,
+            "safety_buffer": 60
+          }
+        ]
+      },
+      {
+        "name": "switch",
+        "goals": [
+          [
+            250,
+            0
+          ],
+          [
+            500,
+            80
+          ]
+        ],
+        "switch_at": 80,
+        "obstacles": []
+      }
+    ],
+    "water": "flat: wave gain zero, matched to original no-wave model",
+    "gazebo_signs": {
+      "roll": -1,
+      "roll_rate": -1,
+      "sail_joint": -1,
+      "rudder_joint": -1,
+      "yaw": 1,
+      "body_yaw_rate": 1
+    },
+    "profile_id": "yara_native_frozen18d_transfer_diagnostic",
+    "physics_mode": "native",
+    "actuator_mode": "native",
+    "action_mode": "legacy_delta",
+    "sail_force_model": "native",
+    "wind_mode": "fixed",
+    "paper_reproduction": false,
+    "motor_enabled": false,
+    "benchmark_note": "Frozen legacy actor and normalizer diagnostic only. Native 6DOF forces and actuator laws. Signed sail target becomes cable magnitude; sign cannot be commanded. Not a trained native baseline or paper reproduction.",
+    "reward_action_semantics": "original physical angle increments; unchanged legacy reward"
+  },
+  "scene_order": [
+    "clear",
+    "single",
+    "switch"
+  ],
+  "max_episodes": 3,
+  "max_steps_each": 900,
+  "gazebo_seed": 61106,
+  "fresh_world_per_scene": true,
+  "actor_mode": "eval",
+  "loading_paths": {
+    "snapshot": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate",
+    "actor": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+    "normalizer": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth"
+  },
+  "assets_equal_to_original_project": {
+    "actor": true,
+    "normalizer": true
+  },
+  "existing_asset_index": "/home/ot/Students/hs/yara-env/migration18/ASSET_HASHES.json",
+  "code_commit": "7b865f166160e777ece2b3c151ceadb4dea6df4b",
+  "runner": "runner.py",
+  "references": {
+    "clear": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_clear.json",
+    "single": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_single.json",
+    "switch": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_switch.json"
+  },
+  "training": false
+}
