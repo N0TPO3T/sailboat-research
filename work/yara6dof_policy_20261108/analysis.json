@@ -1,0 +1,129 @@
+{
+  "checks": [
+    {
+      "scene": "clear",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    },
+    {
+      "scene": "single",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    },
+    {
+      "scene": "switch",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    }
+  ],
+  "paired": [
+    {
+      "scene": "clear",
+      "original": {
+        "reason": "arrived",
+        "time_s": 123.0,
+        "min_safety_m": null,
+        "success": true
+      },
+      "yara": {
+        "scene": "clear",
+        "reason": "time_limit",
+        "success": false,
+        "time_s": 900.0,
+        "min_safety_m": null,
+        "final_distance_m": 178.7603361444923,
+        "physical_contact_steps": 0,
+        "target_changes": 0,
+        "max_angle_error_rad": 8.432968079397085e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "max_abs_roll_deg": 5.921740922212926,
+        "max_abs_pitch_deg": 1.9198527997528254,
+        "z_range_m": [
+          -0.12371703762194047,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.04956388981632984,
+          3.515427227604205
+        ],
+        "clock_error_s": 0
+      }
+    },
+    {
+      "scene": "single",
+      "original": {
+        "reason": "arrived_with_buffer_violation",
+        "time_s": 139.0,
+        "min_safety_m": -14.907946457744103,
+        "success": false
+      },
+      "yara": {
+        "scene": "single",
+        "reason": "time_limit",
+        "success": false,
+        "time_s": 900.0,
+        "min_safety_m": 55.23229998917196,
+        "final_distance_m": 387.6875509874681,
+        "physical_contact_steps": 0,
+        "target_changes": 0,
+        "max_angle_error_rad": 5.823710225172363e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "max_abs_roll_deg": 4.608687439807515,
+        "max_abs_pitch_deg": 1.6680043448358541,
+        "z_range_m": [
+          -0.12371703762194047,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.05395572642217236,
+          2.7449608788559208
+        ],
+        "clock_error_s": 0
+      }
+    },
+    {
+      "scene": "switch",
+      "original": {
+        "reason": "arrived",
+        "time_s": 147.0,
+        "min_safety_m": null,
+        "success": true
+      },
+      "yara": {
+        "scene": "switch",
+        "reason": "time_limit",
+        "success": false,
+        "time_s": 900.0,
+        "min_safety_m": null,
+        "final_distance_m": 189.6820440705117,
+        "physical_contact_steps": 0,
+        "target_changes": 1,
+        "max_angle_error_rad": 5.823710202967902e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "max_abs_roll_deg": 5.203887220851636,
+        "max_abs_pitch_deg": 1.497154636456901,
+        "z_range_m": [
+          -0.12374612389812678,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.04970762634720431,
+          3.3733385449581363
+        ],
+        "clock_error_s": 0
+      }
+    }
+  ]
+}

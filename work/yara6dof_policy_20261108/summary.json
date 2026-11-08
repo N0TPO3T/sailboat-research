@@ -1,0 +1,41 @@
+{
+  "complete": true,
+  "episodes": [
+    {
+      "scene": "clear",
+      "reason": "time_limit",
+      "success": false,
+      "time_s": 900.0,
+      "min_safety_m": null,
+      "final_distance_m": 178.7603361444923,
+      "physical_contact_steps": 0,
+      "target_changes": 0,
+      "max_angle_error_rad": 8.432968079397085e-08,
+      "max_clock_error_s": 0
+    },
+    {
+      "scene": "single",
+      "reason": "time_limit",
+      "success": false,
+      "time_s": 900.0,
+      "min_safety_m": 55.23229998917196,
+      "final_distance_m": 387.6875509874681,
+      "physical_contact_steps": 0,
+      "target_changes": 0,
+      "max_angle_error_rad": 5.823710225172363e-08,
+      "max_clock_error_s": 0
+    },
+    {
+      "scene": "switch",
+      "reason": "time_limit",
+      "success": false,
+      "time_s": 900.0,
+      "min_safety_m": null,
+      "final_distance_m": 189.6820440705117,
+      "physical_contact_steps": 0,
+      "target_changes": 1,
+      "max_angle_error_rad": 5.823710202967902e-08,
+      "max_clock_error_s": 0
+    }
+  ]
+}
