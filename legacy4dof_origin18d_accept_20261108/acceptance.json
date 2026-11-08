@@ -1,0 +1,5 @@
+{
+  "passed": false,
+  "paired": [],
+  "error": "Traceback (most recent call last):\n  File \"/home/ot/Students/hs/yara-env/migration18/origin18d_audit.py\", line 81, in postflight\n    d=y['diagnostics'];assert d['physics_mode']=='legacy4dof' and d['body_kinematic']\n                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

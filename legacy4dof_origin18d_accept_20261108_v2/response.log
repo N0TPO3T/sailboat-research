@@ -1,0 +1,6 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+RESPONSE [7.6293945e-05 8.0108643e-05 1.6231090e-05 1.6421080e-05 5.0187111e-05
+ 1.2874603e-05 1.9724481e-05 4.1276217e-06 1.1920929e-07 2.9802322e-08]

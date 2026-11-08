@@ -1,0 +1,10 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+RESULT {'backend': 'original', 'scene': 'clear', 'reason': 'arrived', 'time': 123.0, 'success': True, 'min_safety': inf, 'final_distance': 7.378934870754299}
+RESULT {'backend': 'original', 'scene': 'single', 'reason': 'arrived_with_buffer_violation', 'time': 139.0, 'success': False, 'min_safety': -14.907946457744103, 'final_distance': 8.93779289099103}
+RESULT {'backend': 'original', 'scene': 'switch', 'reason': 'arrived', 'time': 147.0, 'success': True, 'min_safety': inf, 'final_distance': 9.634380397940989}
+RESULT {'backend': 'yara', 'scene': 'clear', 'reason': 'arrived', 'time': 123.0, 'success': True, 'min_safety': inf, 'final_distance': 7.379230464413268}
+RESULT {'backend': 'yara', 'scene': 'single', 'reason': 'arrived_with_buffer_violation', 'time': 139.0, 'success': False, 'min_safety': -14.907941460030898, 'final_distance': 8.937993140031816}
+RESULT {'backend': 'yara', 'scene': 'switch', 'reason': 'arrived', 'time': 147.0, 'success': True, 'min_safety': inf, 'final_distance': 9.634494937620136}

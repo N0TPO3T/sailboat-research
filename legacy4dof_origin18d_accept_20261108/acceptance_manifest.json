@@ -1,0 +1,323 @@
+{
+  "config": {
+    "policy_dt": 1.0,
+    "physics_dt": 0.01,
+    "limit_s": 900,
+    "world_radius_m": 3500,
+    "goal_radius_m": 10,
+    "seed": 61106,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500,
+      0
+    ],
+    "obstacle_input": "boundary40",
+    "sail_mapping": "signed_target",
+    "scenes": [
+      {
+        "name": "clear",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": []
+      },
+      {
+        "name": "single",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": [
+          {
+            "center_xy": [
+              250,
+              0
+            ],
+            "entity_radius": 30,
+            "safety_buffer": 60
+          }
+        ]
+      },
+      {
+        "name": "switch",
+        "goals": [
+          [
+            250,
+            0
+          ],
+          [
+            500,
+            80
+          ]
+        ],
+        "switch_at": 80,
+        "obstacles": []
+      }
+    ],
+    "water": "flat: wave gain zero, matched to original no-wave model",
+    "gazebo_signs": {
+      "roll": -1,
+      "roll_rate": -1,
+      "sail_joint": -1,
+      "rudder_joint": -1,
+      "yaw": 1,
+      "body_yaw_rate": 1
+    },
+    "actuator_mode": "signed",
+    "physics_mode": "legacy4dof",
+    "geometry_note": "Yara visual proxy; original 3D hull unspecified; original point-vessel safety is authoritative"
+  },
+  "code_commit": "8fd436c59020abab5523aedf39c26f16e813e23e",
+  "actual_loading": {
+    "snapshot": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate",
+    "actor": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+    "normalizer": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth"
+  },
+  "identity": [
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/senior/globals.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/senior/globals.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/senior/utils_lstm.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/senior/utils_lstm.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/senior/noise_utils_nowind.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/senior/noise_utils_nowind.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/senior/sailboat_s14.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/senior/sailboat_s14.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate/globals.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/obstacle_candidate/globals.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate/utils_lstm_att_normal.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/obstacle_candidate/utils_lstm_att_normal.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate/SAC_lstm_att_normal.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/obstacle_candidate/SAC_lstm_att_normal.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate/noise_utils.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/obstacle_candidate/noise_utils.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate/sailboat_s14_obst_V3.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/third_party/obstacle_candidate/sailboat_s14_obst_V3.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/runtime.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/runtime.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/continuous.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/continuous.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/r6_controller.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/r6_controller.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/obstacle_candidate.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/obstacle_candidate.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/metrics.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/metrics.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/planner.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/planner.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/frames.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/frames.py",
+      "byte_equal": true
+    },
+    {
+      "path": "/home/ot/Students/hs/yara-env/migration18/frozen/src/sailboat_routing/r7_dynamic.py",
+      "original": "/home/ot/Students/hs/sailboat-routing-v0/src/sailboat_routing/r7_dynamic.py",
+      "byte_equal": true
+    }
+  ],
+  "parameters": {
+    "m": 25900,
+    "Ixx": 133690,
+    "Izz": 24760,
+    "Ixz": 2180,
+    "a11": 970,
+    "a22": 17430,
+    "a44": 106500,
+    "a66": 101650,
+    "a24": -13160,
+    "a26": -6190,
+    "a46": 4730,
+    "rho_a": 1.2,
+    "As": 170,
+    "h0": 0.0005,
+    "h1": 11.58,
+    "z_s": -11.58,
+    "xs": 0,
+    "ys": 0,
+    "zs": -11.58,
+    "Xce": 0.6,
+    "Xm": 0.3,
+    "rho_w": 1025,
+    "Ar": 1.17,
+    "d_r": 1.9,
+    "zeta_r": 0.8,
+    "x_r": -8.2,
+    "z_r": -0.78,
+    "xr": -8.2,
+    "yr": 0,
+    "zr": -0.78,
+    "Ak": 8.7,
+    "d_k": 2.49,
+    "zeta_k": 0.7,
+    "x_k": 0,
+    "z_k": -0.58,
+    "xk": 0,
+    "yk": 0,
+    "zk": -0.58,
+    "x_h": 0,
+    "z_h": -1.18,
+    "xh": 0,
+    "yh": 0,
+    "zh": -1.18,
+    "w_c": 60000,
+    "x_c": -8,
+    "y_bm": 3.6,
+    "a": -5.89,
+    "b": 8160,
+    "c": 120000,
+    "d": 50000
+  },
+  "mass_inverse": [
+    [
+      3.721622627465575e-05,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      2.362986875813332e-05,
+      1.2826697638129855e-06,
+      1.1312244261935142e-06
+    ],
+    [
+      0.0,
+      1.2826697638129855e-06,
+      4.2338880074641025e-06,
+      -2.259859647995475e-08
+    ],
+    [
+      0.0,
+      1.1312244261935142e-06,
+      -2.2598596479954752e-08,
+      7.966615818520384e-06
+    ]
+  ],
+  "existing_asset_index": "ASSET_HASHES.json",
+  "scope": "all source-defined 4DOF/18D behavior; original hull CAD and 6DOF/contact physics not defined",
+  "geometry_source": "frozen/third_party/senior/sailboat_s14.py render: pygame.draw.circle, radius 5 screen pixels; not physical hull radius",
+  "training": false,
+  "actor_mode": "eval",
+  "seed": 61106,
+  "max_scored_episodes": 6,
+  "max_steps_per_episode": 900,
+  "tolerances": {
+    "raw": [
+      0.001,
+      0.001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      1e-06,
+      1e-06,
+      0.001,
+      0.001,
+      0,
+      0
+    ],
+    "observation": [
+      0.001,
+      0.001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      0.0001,
+      1e-06,
+      1e-06,
+      0.001,
+      0.001,
+      0,
+      0,
+      0.001,
+      0.0001,
+      0.001,
+      0.0001
+    ],
+    "action": 0.0001,
+    "reward": 0.001,
+    "clock": 1e-08,
+    "derivative": 1e-09,
+    "discrete": "exact"
+  }
+}

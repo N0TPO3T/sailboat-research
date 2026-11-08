@@ -115,7 +115,9 @@ class MigrationStep: public WorldPlugin {
   legacyDs=std::max(-M_PI/18,std::min(M_PI/18,-sailTarget-legacySail));
   legacyDr=std::max(-M_PI/18,std::min(M_PI/18,-rudderTarget-legacyRudder));legacyWx=wx;legacyWy=wy;
   m->SetStatic(false);
-  for(auto link:m->GetLinks()){link->SetKinematic(true);link->SetGravityMode(false);}
+  // Gazebo 11 ODELink::SetKinematic(true) toggles an already-kinematic body.
+  // Query first so this operation is idempotent across policy steps.
+  for(auto link:m->GetLinks()){if(!link->GetKinematic())link->SetKinematic(true);link->SetGravityMode(false);}
   // Kinematic links keep valid articulated joint feedback across repeated resets.
   // The custom 4DOF integrator owns motion; native force/contact response is disabled.
  }

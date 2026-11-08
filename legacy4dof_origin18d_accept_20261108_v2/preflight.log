@@ -1,0 +1,11 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+SEMANTIC_PASS 10
+EDGE_CHECK_PASS ['milestone_once_and_arrival_reward', 'integration_failure_penalty', 'goal_10m_closed_boundary', 'float32_high_asymmetric_floor_preserved', 'tie_sort_buffer60_visibility_and_overlap', 'explicit_gazebo_sign_conversion']
+PREFLIGHT_PASS 50 19
