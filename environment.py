@@ -74,6 +74,12 @@ class MigrationEnv(gym.Env):
   self.action_space=gym.spaces.Box(-1.,1.,shape=(2,),dtype=np.float32)
   self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(18,),dtype=np.float32)
   self._progress=shared_progress(self.modules.environment)
+  self.action_mode=self.config.get('action_mode','legacy_delta')
+  if self.action_mode not in ['legacy_delta','native_absolute']:raise ValueError('action_mode')
+  if self.action_mode=='native_absolute':
+   assert backend=='yara' and self.config['physics_mode']=='native' and self.config['actuator_mode']=='native'
+   assert self.config.get('sail_force_model','native')=='native'
+
  def reset(self,*,seed=None,options=None):
   scene=options or self.config['scenes'][0];self.scene=scene
   raw=self.physics.reset(self.config['seed'] if seed is None else seed)
@@ -106,8 +112,15 @@ class MigrationEnv(gym.Env):
  def step(self,action):
   action=np.asarray(action,dtype=float)
   if action.shape!=(2,) or not np.isfinite(action).all() or np.any(np.abs(action)>1):raise ValueError('normalized action')
-  before=self.raw.copy();physical=self.modules.network.Action_adapter(action,self.high)
-  self.target=accumulate(self.target,physical)
+  before=self.raw.copy()
+  if self.action_mode=='legacy_delta':
+   physical=self.modules.network.Action_adapter(action,self.high)
+   self.target=accumulate(self.target,physical)
+  else:
+   # Native joint coordinates: cable opening [0,90] deg and rudder [-60,60] deg.
+   # Repeating an action holds its absolute target; [0,0] commands 45 deg / 0 deg.
+   physical=np.array([(action[0]+1)*np.pi/4,action[1]*np.pi/3])
+   self.target=physical.copy()
   if self.backend=='original':
    raw,reward,reached,truncated,info=self.physics.step(action);self.t=info['time']
    np.testing.assert_allclose(self.target,[self.env.target_sail_angle,self.env.target_rudder_angle],rtol=0,atol=1e-12)
@@ -115,7 +128,9 @@ class MigrationEnv(gym.Env):
   else:
    g=self.modules.globals
    step_wind=(self.config['wind'] if self.wind_mode=='fixed' else [g.w_change_v*math.cos(g.w_change_d),g.w_change_v*math.sin(g.w_change_d),0.])
-   self.diag=self.transport.request('step',wind=step_wind,cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))
+   command=(dict(cable=float(self.target[0]),rudder=float(self.target[1])) if self.action_mode=='native_absolute'
+            else dict(cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0])))
+   self.diag=self.transport.request('step',wind=step_wind,**command)
    assert abs(self.diag['dt']-1)<1e-8,self.diag
    self.t+=1
    assert abs(self.diag['clock']-self.clock0-self.t)<1e-8
@@ -131,6 +146,6 @@ class MigrationEnv(gym.Env):
   clearance=segment_circle_clearance(before[:2],raw[:2],self.obstacles);self.min_safety=min(self.min_safety,clearance['safety_m'])
   collision=clearance['entity_m']<=0
   self.raw=raw.copy();self.history.append(raw.copy());self.commands.append(action.astype(np.float32))
-  info.update(physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
+  info.update(action_mode=self.action_mode,physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
   return self.frame.encode(raw,before),float(reward),bool(collision or reached),bool(truncated),info
  def close(self):self.physics.close()

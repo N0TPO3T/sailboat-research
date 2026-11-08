@@ -1,0 +1,97 @@
+{
+  "passed": true,
+  "profile": "legacy",
+  "config": {
+    "policy_dt": 1.0,
+    "physics_dt": 0.01,
+    "limit_s": 900,
+    "world_radius_m": 3500,
+    "goal_radius_m": 10,
+    "seed": 61106,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500,
+      0
+    ],
+    "obstacle_input": "boundary40",
+    "sail_mapping": "signed_target",
+    "scenes": [
+      {
+        "name": "clear",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": []
+      },
+      {
+        "name": "single",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": [
+          {
+            "center_xy": [
+              250,
+              0
+            ],
+            "entity_radius": 30,
+            "safety_buffer": 60
+          }
+        ]
+      },
+      {
+        "name": "switch",
+        "goals": [
+          [
+            250,
+            0
+          ],
+          [
+            500,
+            80
+          ]
+        ],
+        "switch_at": 80,
+        "obstacles": []
+      }
+    ],
+    "water": "flat: wave gain zero, matched to original no-wave model",
+    "gazebo_signs": {
+      "roll": -1,
+      "roll_rate": -1,
+      "sail_joint": -1,
+      "rudder_joint": -1,
+      "yaw": 1,
+      "body_yaw_rate": 1
+    },
+    "actuator_mode": "signed",
+    "physics_mode": "legacy4dof",
+    "geometry_note": "Yara visual proxy; original 3D hull unspecified; original point-vessel safety is authoritative"
+  },
+  "rows": [],
+  "error": null,
+  "training": false,
+  "paper_reproduction": false
+}

@@ -87,7 +87,8 @@ class MigrationStep: public WorldPlugin {
  n->param("sail_target",sailTarget,0.);
  if(actuatorMode!="native" && actuatorMode!="signed")throw std::runtime_error("actuator mode");
  n->param("cable",cable,0.);n->param("rudder",rudderTarget,0.);
- if(count<0 || count>100 || cable<0 || cable>M_PI/2+1e-8 || std::abs(rudderTarget)>M_PI/6+1e-8) throw std::runtime_error("invalid controls");
+ const double rudderLimit=(physicsMode=="native" && actuatorMode=="native")?M_PI/3:M_PI/6;
+ if(count<0 || count>100 || cable<0 || cable>M_PI/2+1e-8 || std::abs(rudderTarget)>rudderLimit+1e-8) throw std::runtime_error("invalid controls");
  double wx=0,wy=8;n->param("wx",wx,0.);n->param("wy",wy,8.);
  w->Wind().SetLinearVel(ignition::math::Vector3d(wx,wy,0));
  if(reset) {
@@ -146,6 +147,7 @@ class MigrationStep: public WorldPlugin {
  <<",\"model_x\":"<<m->WorldPose().Pos().X()<<",\"model_y\":"<<m->WorldPose().Pos().Y()
  <<",\"physics_mode\":\""<<physicsMode<<"\""
  <<",\"actuator_mode\":\""<<actuatorMode<<"\""
+ <<",\"cable_command\":"<<cable<<",\"rudder_command\":"<<rudderTarget
  <<",\"motor_command\":0,\"motor_applied_thrust\":0,\"motor_plugin_present\":false}";
  out.success=true;out.message=s.str();
  }catch(const std::exception&e){out.success=false;out.message=e.what();}return true;
