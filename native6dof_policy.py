@@ -7,6 +7,14 @@ import argparse,traceback,shutil
 def write(folder,name,value):
  with (folder/name).open("x") as f:json.dump(clean(value),f,indent=2)
 
+def capture_scene(tr,out,name,scene,rows):
+ captures={}
+ trace=[x["raw"][:2].tolist() for x in rows];xy=np.array(trace+scene["goals"]);center=(xy.min(0)+xy.max(0))/2;span=max(80.,float(np.ptp(xy,axis=0).max()))
+ prefix="../"+str(out.relative_to(R))+"/"+name
+ captures["scene"]=tr.request("capture",filename=prefix+"_scene.png",trace=trace,xy=center.tolist(),offset=[0,-.7*span,.9*span],look_z=0.)
+ captures["boat"]=tr.request("capture",filename=prefix+"_boat.png",trace=[],xy=np.asarray(rows[-1]["raw"][:2]).tolist(),offset=[-7,-8,5],look_z=1.)
+ return captures
+
 def main(out,config_path=None,gate_path=None):
  out=out.resolve()
  if not out.is_relative_to(R/"work"):raise ValueError("output must be inside migration18/work")
@@ -68,10 +76,7 @@ def main(out,config_path=None,gate_path=None):
    print("RESULT",json.dumps(clean(summary)),flush=True)
    # Rendering advances the world only after the scored episode. The next episode starts a fresh world.
    try:
-    trace=[x["raw"][:2].tolist() for x in rows];xy=np.array(trace+scene["goals"]);center=(xy.min(0)+xy.max(0))/2;span=max(80.,float(np.ptp(xy,axis=0).max()))
-    prefix="../work/"+out.name+"/"+name
-    captures["scene"]=tr.request("capture",filename=prefix+"_scene.png",trace=trace,xy=center.tolist(),offset=[0,-.7*span,.9*span],look_z=0.)
-    captures["boat"]=tr.request("capture",filename=prefix+"_boat.png",trace=[],xy=e.raw[:2].tolist(),offset=[-7,-8,5],look_z=1.)
+    captures=capture_scene(tr,out,name,scene,rows)
    except Exception:captures["error"]=traceback.format_exc()
    write(out,"capture_"+name+".json",dict(scored=False,**captures))
   except Exception:

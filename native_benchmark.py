@@ -141,8 +141,26 @@ def plots(out,gate):
   a.set_title(name+': '+p['summary']['reason']);a.set_xlabel('x (m)');a.set_ylabel('y (m)');a.grid(alpha=.25);a.legend(fontsize=7)
  fig.tight_layout();fig.savefig(out/'native_trajectories.png',dpi=150);plt.close(fig)
 
+def capture(out):
+ from native6dof_policy import capture_scene
+ out=out.resolve();out.mkdir(parents=True,exist_ok=False)
+ c=json.loads((R/'config_yara_transfer.json').read_text());scene=c['scenes'][1]
+ tr=Transport(gazebo_args='--seed 61106');e=MigrationEnv('yara',tr,c);p=ObstacleController(mode='eval');rows=[]
+ try:
+  obs,_=e.reset(options=scene);p.reset(obs);rows.append(dict(raw=e.raw.copy(),time=0))
+  for k in range(60):
+   obs,reward,_,_,info=e.step(p.act(obs).action);native_state(info['diagnostics'])
+   rows.append(dict(reward=reward,observation=obs,**info))
+  receipts=capture_scene(tr,out,'single_demo',scene,rows)
+  write(out,'capture.json',dict(scored=False,description='60-step actual frozen-policy demonstration; separate from the three scored tasks; camera advancement excluded',rows=rows,receipts=receipts))
+ finally:
+  p.close();e.close();tr.close()
+  for n in ['bridge.log','gazebo.log','xvfb.log']:
+   if (R/'logs'/n).exists():shutil.copy2(R/'logs'/n,out/n)
+
 if __name__=='__main__':
- p=argparse.ArgumentParser();p.add_argument('stage',choices=['check','plots']);p.add_argument('--output',required=True,type=Path);p.add_argument('--gate',type=Path);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('stage',choices=['check','plots','capture']);p.add_argument('--output',required=True,type=Path);p.add_argument('--gate',type=Path);a=p.parse_args()
  if not a.output.resolve().is_relative_to(R/'work'):raise ValueError('output must be in work')
  if a.stage=='check':check(a.output)
+ elif a.stage=='capture':capture(a.output)
  else:plots(a.output,a.gate)
