@@ -1,0 +1,28 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+STEP clear 1.0 [0.6185688972473145, 0.053319767117500305]
+STEP clear 101.0 [272.2563171386719, -31.9053955078125]
+RESULT {"scene": "clear", "reason": "arrived", "success": true, "time_s": 172.0, "min_safety_m": null, "final_distance_m": 8.230965037708877, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": 2.468028448276982e-08, "max_clock_error_s": 0}
+STEP single 1.0 [0.6185688972473145, 0.053319767117500305]
+STEP single 101.0 [148.77635192871094, 48.75276565551758]
+STEP single 201.0 [300.27960205078125, 125.75239562988281]
+STEP single 301.0 [248.39727783203125, 159.6614227294922]
+STEP single 401.0 [243.20773315429688, 166.99655151367188]
+STEP single 501.0 [236.8973388671875, 174.28189086914062]
+STEP single 601.0 [233.91983032226562, 181.6597900390625]
+STEP single 701.0 [228.25869750976562, 188.9083709716797]
+STEP single 801.0 [220.0897979736328, 196.17507934570312]
+RESULT {"scene": "single", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": -2.37364624935843, "final_distance_m": 341.57449687407717, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": 5.805809499825898e-08, "max_clock_error_s": 0}
+STEP switch 1.0 [0.6158912777900696, 0.053566593676805496]
+STEP switch 101.0 [-17.744625091552734, 9.04008960723877]
+STEP switch 201.0 [-38.156551361083984, 15.947104454040527]
+STEP switch 301.0 [-65.53600311279297, 22.764755249023438]
+STEP switch 401.0 [-86.65059661865234, 29.719560623168945]
+STEP switch 501.0 [-101.69093322753906, 37.14992141723633]
+STEP switch 601.0 [-123.2940444946289, 44.35456848144531]
+STEP switch 701.0 [-135.6382293701172, 51.91440963745117]
+STEP switch 801.0 [-148.62713623046875, 59.30703353881836]
+RESULT {"scene": "switch", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": null, "final_distance_m": 665.4815392506229, "physical_contact_steps": 0, "target_changes": 1, "max_angle_error_rad": 5.823710202967902e-08, "max_clock_error_s": 0}
+COMPLETE /home/ot/Students/hs/yara-env/migration18/work/yara6dof_polar_policy_20261108

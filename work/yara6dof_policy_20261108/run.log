@@ -1,0 +1,35 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+STEP clear 1.0 [0.5533267259597778, 0.05600517615675926]
+STEP clear 101.0 [116.80027770996094, 26.98469352722168]
+STEP clear 201.0 [344.0129699707031, 13.004096984863281]
+STEP clear 301.0 [378.54217529296875, 85.52864074707031]
+STEP clear 401.0 [373.9942932128906, 94.70361328125]
+STEP clear 501.0 [371.78765869140625, 101.48284149169922]
+STEP clear 601.0 [370.52740478515625, 107.68414306640625]
+STEP clear 701.0 [369.9856872558594, 113.61363220214844]
+STEP clear 801.0 [370.1316223144531, 119.29535675048828]
+RESULT {"scene": "clear", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": null, "final_distance_m": 178.7603361444923, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": 8.432968079397085e-08, "max_clock_error_s": 0}
+STEP single 1.0 [0.5533267259597778, 0.05600517615675926]
+STEP single 101.0 [100.1071548461914, 33.34946823120117]
+STEP single 201.0 [82.87012481689453, 69.2009506225586]
+STEP single 301.0 [79.64519500732422, 77.1916275024414]
+STEP single 401.0 [77.83798217773438, 84.22816467285156]
+STEP single 501.0 [77.08865356445312, 90.96366882324219]
+STEP single 601.0 [77.54922485351562, 97.66101837158203]
+STEP single 701.0 [92.66032409667969, 108.64659118652344]
+STEP single 801.0 [113.31455993652344, 119.55077362060547]
+RESULT {"scene": "single", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": 55.23229998917196, "final_distance_m": 387.6875509874681, "physical_contact_steps": 0, "target_changes": 0, "max_angle_error_rad": 5.823710225172363e-08, "max_clock_error_s": 0}
+STEP switch 1.0 [0.5501152276992798, 0.056168098002672195]
+STEP switch 101.0 [36.1317024230957, 17.39815902709961]
+STEP switch 201.0 [272.639892578125, 42.03880310058594]
+STEP switch 301.0 [301.2330017089844, 57.79970932006836]
+STEP switch 401.0 [299.810546875, 64.15272521972656]
+STEP switch 501.0 [299.2036437988281, 69.98107147216797]
+STEP switch 601.0 [299.2892150878906, 75.66472625732422]
+STEP switch 701.0 [301.2494201660156, 81.38055419921875]
+STEP switch 801.0 [305.3802795410156, 87.19012451171875]
+RESULT {"scene": "switch", "reason": "time_limit", "success": false, "time_s": 900.0, "min_safety_m": null, "final_distance_m": 189.6820440705117, "physical_contact_steps": 0, "target_changes": 1, "max_angle_error_rad": 5.823710202967902e-08, "max_clock_error_s": 0}
+COMPLETE /home/ot/Students/hs/yara-env/migration18/work/yara6dof_policy_20261108

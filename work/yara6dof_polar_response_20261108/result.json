@@ -1,0 +1,385 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "reset_attitude_and_twist",
+      "passed": true,
+      "roll": 0.0,
+      "pitch": 0.0,
+      "yaw": 0.0
+    },
+    {
+      "name": "reset_attitude_and_twist",
+      "passed": true,
+      "roll": 0.17,
+      "pitch": 0.12,
+      "yaw": 1.1
+    },
+    {
+      "name": "reset_attitude_and_twist",
+      "passed": true,
+      "roll": -0.21,
+      "pitch": -0.09,
+      "yaw": -1.4
+    },
+    {
+      "name": "fluid_density_buoyancy_and_foils",
+      "passed": true,
+      "applied": {
+        "air_density": 1.2,
+        "waterDensity": 1025.0,
+        "water_density": 1025.0
+      }
+    },
+    {
+      "name": "exception",
+      "passed": false,
+      "traceback": "Traceback (most recent call last):\n  File \"/home/ot/Students/hs/yara-env/migration18/native6dof_check.py\", line 32, in run\n    old_target=e.target.copy();before=e.raw.copy();obs,reward,_,_,info=e.step(action);d=info[\"diagnostics\"]\n                                                                       ~~~~~~^^^^^^^^\n  File \"/home/ot/Students/hs/yara-env/migration18/environment.py\", line 118, in step\n    self.diag=self.transport.request('step',wind=step_wind,cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))\n              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ot/Students/hs/yara-env/migration18/environment.py\", line 37, in request\n    if 'error' in response:raise RuntimeError(response['error'])\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Traceback (most recent call last):\n  File \"/work/migration18/bridge.py\", line 137, in <module>\n    result=call(100)\n  File \"/work/migration18/bridge.py\", line 66, in call\n    assert abs(result['clock']-d['clock']-.01)<1e-8,(result['clock'],d)\nAssertionError: (1, {'air_density': 1.2, 'attack_deg': 74.19358318709496, 'cd': 1.0709818341961719, 'cl': 0.7317502579936628, 'clock': 1.0, 'drag_direction_world': [-0.10572792630306699, 0.9935243155195168, 0.041605769685570754], 'drag_world': [-13.18982810230054, 123.944688932938, 5.1904257409110475], 'force_world': [70.97100691069583, 132.99622184677077, 2.912677210464784], 'lift_direction_world': [0.9873697886598973, 0.10619203265745915, -0.026722406981582642], 'lift_world': [84.16083501299637, 9.051532913832744, -2.2777485304462637], 'model': 'migration_boat_4', 'pressure': 116.4842792683842, 'sail_area': 3.18776, 'source': 'legacy_polar', 'wind_world': [-0.8250968689943997, 7.753427411932298, 0.32468990455051344]})\n\n"
+    }
+  ],
+  "records": {
+    "resets": [
+      {
+        "raw": [
+          0.0,
+          0.0,
+          -0.0,
+          0.0,
+          0.699999988079071,
+          0.11999999731779099,
+          0.03999999910593033,
+          0.05999999865889549,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          500.0,
+          0.0
+        ],
+        "diagnostics": {
+          "clock": 0,
+          "dt": 0,
+          "raw": [
+            0,
+            0,
+            0,
+            0,
+            0.699999988079071,
+            0.11999999731779099,
+            -0.03999999910593033,
+            0.05999999865889549,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose6": [
+            0,
+            0,
+            0.15,
+            0,
+            0,
+            0
+          ],
+          "body_twist6": [
+            0.699999988079071,
+            0.11999999731779099,
+            0.11999999999999998,
+            -0.03999999910593033,
+            0.07,
+            0.05999999865889549
+          ],
+          "euler_rates": [
+            -0.03999999910593033,
+            0.07,
+            0.05999999865889549
+          ],
+          "body_static": false,
+          "body_kinematic": false,
+          "contact_points": 0,
+          "contact_max_depth": 0,
+          "contact_pairs": [],
+          "z": 0.15,
+          "pitch": 0,
+          "cable_actual": 0,
+          "model_x": 0,
+          "model_y": 0,
+          "physics_mode": "native",
+          "actuator_mode": "signed",
+          "motor_command": 0,
+          "motor_applied_thrust": 0,
+          "motor_plugin_present": false,
+          "sail_force_model": "legacy_polar",
+          "fluid_density": {
+            "air_density": 1.2,
+            "waterDensity": 1025.0,
+            "water_density": 1025.0
+          }
+        }
+      },
+      {
+        "raw": [
+          0.0,
+          0.0,
+          0.17000000178813934,
+          1.100000023841858,
+          0.699999988079071,
+          0.11999999731779099,
+          0.03999999910593033,
+          0.05999999865889549,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          500.0,
+          0.0
+        ],
+        "diagnostics": {
+          "clock": 0,
+          "dt": 0,
+          "raw": [
+            0,
+            0,
+            -0.17000000178813934,
+            1.100000023841858,
+            0.699999988079071,
+            0.11999999731779099,
+            -0.039999999105930335,
+            0.05999999865889549,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose6": [
+            0,
+            0,
+            0.15,
+            -0.17000000178813934,
+            0.12,
+            1.100000023841858
+          ],
+          "body_twist6": [
+            0.699999988079071,
+            0.11999999731779099,
+            0.12,
+            -0.04570247572077425,
+            0.07,
+            0.05999999865889549
+          ],
+          "euler_rates": [
+            -0.039999999105930335,
+            0.07914187448536307,
+            0.0476348798838975
+          ],
+          "body_static": false,
+          "body_kinematic": false,
+          "contact_points": 0,
+          "contact_max_depth": 0,
+          "contact_pairs": [],
+          "z": 0.15,
+          "pitch": 0.12,
+          "cable_actual": 0,
+          "model_x": 0,
+          "model_y": 0,
+          "physics_mode": "native",
+          "actuator_mode": "signed",
+          "motor_command": 0,
+          "motor_applied_thrust": 0,
+          "motor_plugin_present": false,
+          "sail_force_model": "legacy_polar",
+          "fluid_density": {
+            "air_density": 1.2,
+            "waterDensity": 1025.0,
+            "water_density": 1025.0
+          }
+        }
+      },
+      {
+        "raw": [
+          0.0,
+          0.0,
+          -0.20999999344348907,
+          -1.399999976158142,
+          0.699999988079071,
+          0.11999999731779099,
+          0.03999999910593033,
+          0.05999999865889549,
+          -0.0,
+          -0.0,
+          0.0,
+          0.0,
+          500.0,
+          0.0
+        ],
+        "diagnostics": {
+          "clock": 0,
+          "dt": 0,
+          "raw": [
+            0,
+            0,
+            0.2099999934434891,
+            -1.399999976158142,
+            0.699999988079071,
+            0.11999999731779093,
+            -0.039999999105930335,
+            0.05999999865889548,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "pose6": [
+            0,
+            0,
+            0.15,
+            0.2099999934434891,
+            -0.09000000000000004,
+            -1.399999976158142
+          ],
+          "body_twist6": [
+            0.699999988079071,
+            0.11999999731779093,
+            0.11999999999999997,
+            -0.03338747147534397,
+            0.07,
+            0.05999999865889548
+          ],
+          "euler_rates": [
+            -0.039999999105930335,
+            0.05595457079991301,
+            0.07357181095589703
+          ],
+          "body_static": false,
+          "body_kinematic": false,
+          "contact_points": 0,
+          "contact_max_depth": 0,
+          "contact_pairs": [],
+          "z": 0.15,
+          "pitch": -0.09000000000000004,
+          "cable_actual": 0,
+          "model_x": 0,
+          "model_y": 0,
+          "physics_mode": "native",
+          "actuator_mode": "signed",
+          "motor_command": 0,
+          "motor_applied_thrust": 0,
+          "motor_plugin_present": false,
+          "sail_force_model": "legacy_polar",
+          "fluid_density": {
+            "air_density": 1.2,
+            "waterDensity": 1025.0,
+            "water_density": 1025.0
+          }
+        }
+      }
+    ],
+    "response": []
+  },
+  "config": {
+    "policy_dt": 1.0,
+    "physics_dt": 0.01,
+    "limit_s": 900,
+    "world_radius_m": 3500,
+    "goal_radius_m": 10,
+    "seed": 61106,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500,
+      0
+    ],
+    "obstacle_input": "boundary40",
+    "sail_mapping": "signed_target",
+    "scenes": [
+      {
+        "name": "clear",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": []
+      },
+      {
+        "name": "single",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": [
+          {
+            "center_xy": [
+              250,
+              0
+            ],
+            "entity_radius": 30,
+            "safety_buffer": 60
+          }
+        ]
+      },
+      {
+        "name": "switch",
+        "goals": [
+          [
+            250,
+            0
+          ],
+          [
+            500,
+            80
+          ]
+        ],
+        "switch_at": 80,
+        "obstacles": []
+      }
+    ],
+    "water": "flat: wave gain zero, matched to original no-wave model",
+    "gazebo_signs": {
+      "roll": -1,
+      "roll_rate": -1,
+      "sail_joint": -1,
+      "rudder_joint": -1,
+      "yaw": 1,
+      "body_yaw_rate": 1
+    },
+    "actuator_mode": "signed",
+    "physics_mode": "native",
+    "wind_mode": "fixed",
+    "initial_6dof": {
+      "z": 0.0,
+      "pitch": 0.0,
+      "w": 0.0,
+      "q": 0.0
+    },
+    "fluid_density": {
+      "air": 1.2,
+      "water": 1025.0
+    },
+    "sail_force_model": "legacy_polar"
+  }
+}

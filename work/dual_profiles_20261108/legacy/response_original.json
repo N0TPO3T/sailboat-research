@@ -1,0 +1,3875 @@
+{
+  "rows": [
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        0.5558356046676636,
+        0.1181892678141594,
+        0.15891946852207184,
+        0.00023467130085919052,
+        0.6135777235031128,
+        0.19779664278030396,
+        0.2456604540348053,
+        0.0045463889837265015,
+        0.15707963705062866,
+        0.15707963705062866,
+        0.5558215975761414,
+        0.5558356046676636,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.6152751922607422,
+      "integration_failed": false,
+      "time": 1.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        0.5558356046676636,
+        0.1181892678141594,
+        0.15891946852207184,
+        0.00023467130085919052,
+        0.6135777235031128,
+        0.19779664278030396,
+        0.2456604540348053,
+        0.0045463889837265015,
+        0.15707963705062866,
+        0.15707963705062866,
+        0.5558245778083801,
+        0.55584716796875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 0.5682622194290161,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.15707963267948966,
+        0.15707963267948966
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 1.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        1.2279748916625977,
+        0.31753432750701904,
+        0.32430583238601685,
+        0.00938216969370842,
+        0.7373386025428772,
+        0.18956875801086426,
+        0.02802853286266327,
+        0.011429174803197384,
+        0.3141592741012573,
+        0.3141592741012573,
+        0.6720522046089172,
+        0.6721392869949341,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.5347754955291748,
+      "integration_failed": false,
+      "time": 2.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        1.2279748916625977,
+        0.31753432750701904,
+        0.32430583238601685,
+        0.00938216969370842,
+        0.7373386025428772,
+        0.18956875801086426,
+        0.02802853286266327,
+        0.011429174803197384,
+        0.3141592741012573,
+        0.3141592741012573,
+        0.6720424890518188,
+        0.672119140625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 1.2683652639389038,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.3141592653589793,
+        0.3141592653589793
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 2.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        2.039689064025879,
+        0.500338613986969,
+        0.19924511015415192,
+        0.014908713288605213,
+        0.8994553685188293,
+        0.18898920714855194,
+        -0.23240263760089874,
+        -0.0033454501535743475,
+        0.471238911151886,
+        0.471238911151886,
+        0.8115639090538025,
+        0.8117141723632812,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.4373681545257568,
+      "integration_failed": false,
+      "time": 3.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        2.039689064025879,
+        0.500338613986969,
+        0.19924511015415192,
+        0.014908713288605213,
+        0.8994553685188293,
+        0.18898920714855194,
+        -0.23240263760089874,
+        -0.0033454501535743475,
+        0.471238911151886,
+        0.471238911151886,
+        0.811589241027832,
+        0.811737060546875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 2.1001596450805664,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.47123889803846897,
+        0.47123889803846897
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 3.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        3.027311325073242,
+        0.7389892339706421,
+        -0.009404496289789677,
+        -0.00030871553462930024,
+        1.0752202272415161,
+        0.2757353186607361,
+        -0.1263701468706131,
+        -0.024620158597826958,
+        0.6283185482025146,
+        0.5235987901687622,
+        0.9873241782188416,
+        0.9876222610473633,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.3232698440551758,
+      "integration_failed": false,
+      "time": 4.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        3.027311325073242,
+        0.7389892339706421,
+        -0.009404496289789677,
+        -0.00030871553462930024,
+        1.0752202272415161,
+        0.2757353186607361,
+        -0.1263701468706131,
+        -0.024620158597826958,
+        0.6283185482025146,
+        0.5235987901687622,
+        0.9873144626617432,
+        0.98760986328125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 3.1162025928497314,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.6283185307179586,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 4.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        4.191079139709473,
+        1.021559238433838,
+        -0.0017454293556511402,
+        -0.02200266905128956,
+        1.2497692108154297,
+        0.29502755403518677,
+        0.1287839710712433,
+        -0.01162460632622242,
+        0.7853981852531433,
+        0.5235987901687622,
+        1.1632648706436157,
+        1.1637678146362305,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.2054478645324707,
+      "integration_failed": false,
+      "time": 5.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        4.191079139709473,
+        1.021559238433838,
+        -0.0017454293556511402,
+        -0.02200266905128956,
+        1.2497692108154297,
+        0.29502755403518677,
+        0.1287839710712433,
+        -0.01162460632622242,
+        0.7853981852531433,
+        0.5235987901687622,
+        1.1632386445999146,
+        1.16375732421875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 4.313783645629883,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.7853981633974483,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 5.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        5.527688026428223,
+        1.2260303497314453,
+        0.14759498834609985,
+        -0.01312565803527832,
+        1.406056523323059,
+        0.14963217079639435,
+        0.10780023038387299,
+        0.03230336681008339,
+        0.942477822303772,
+        0.5235987901687622,
+        1.3361413478851318,
+        1.33660888671875,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.0759116172790528,
+      "integration_failed": false,
+      "time": 6.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        5.527688026428223,
+        1.2260303497314453,
+        0.14759498834609985,
+        -0.01312565803527832,
+        1.406056523323059,
+        0.14963217079639435,
+        0.10780023038387299,
+        0.03230336681008339,
+        0.942477822303772,
+        0.5235987901687622,
+        1.3361542224884033,
+        1.33660888671875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 5.662021160125732,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.9424777960769379,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 6.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        6.999106407165527,
+        1.310716986656189,
+        0.1410960555076599,
+        0.04254710301756859,
+        1.5336050987243652,
+        0.012272399850189686,
+        -0.11975406110286713,
+        0.0733269676566124,
+        1.0995573997497559,
+        0.5235987901687622,
+        1.471195936203003,
+        1.4714183807373047,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.9657292366027832,
+      "integration_failed": false,
+      "time": 7.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        6.999106407165527,
+        1.310716986656189,
+        0.1410960555076599,
+        0.04254710301756859,
+        1.5336050987243652,
+        0.012272399850189686,
+        -0.11975406110286713,
+        0.0733269676566124,
+        1.0995573997497559,
+        0.5235987901687622,
+        1.4712059497833252,
+        1.471435546875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 7.120777130126953,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.0995574287564276,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 7.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        8.569893836975098,
+        1.445925235748291,
+        -0.020662449300289154,
+        0.11822966486215591,
+        1.6124922037124634,
+        0.018994638696312904,
+        -0.15239964425563812,
+        0.07811866700649261,
+        1.2566370964050293,
+        0.5235987901687622,
+        1.5704026222229004,
+        1.5707874298095703,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8994502067565919,
+      "integration_failed": false,
+      "time": 8.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        8.569893836975098,
+        1.445925235748291,
+        -0.020662449300289154,
+        0.11822966486215591,
+        1.6124922037124634,
+        0.018994638696312904,
+        -0.15239964425563812,
+        0.07811866700649261,
+        1.2566370964050293,
+        0.5235987901687622,
+        1.570380687713623,
+        1.570770263671875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 8.691017150878906,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.2566370614359172,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 8.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        10.182507514953613,
+        1.7291179895401,
+        -0.08685575425624847,
+        0.20595039427280426,
+        1.6570672988891602,
+        0.009861471131443977,
+        0.03460707515478134,
+        0.10223089158535004,
+        1.4137166738510132,
+        0.5235987901687622,
+        1.6116888523101807,
+        1.6126136779785156,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8687098503112793,
+      "integration_failed": false,
+      "time": 9.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        10.182507514953613,
+        1.7291179895401,
+        -0.08685575425624847,
+        0.20595039427280426,
+        1.6570672988891602,
+        0.009861471131443977,
+        0.03460707515478134,
+        0.10223089158535004,
+        1.4137166738510132,
+        0.5235987901687622,
+        1.6116992235183716,
+        1.61260986328125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 10.328277587890625,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.413716694115407,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 9.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        11.799552917480469,
+        2.1280202865600586,
+        0.01896851882338524,
+        0.32397887110710144,
+        1.6698979139328003,
+        -0.08767440170049667,
+        0.13855624198913574,
+        0.13027210533618927,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.6154594421386719,
+        1.6170454025268555,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8768707275390626,
+      "integration_failed": false,
+      "time": 10.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        11.799552917480469,
+        2.1280202865600586,
+        0.01896851882338524,
+        0.32397887110710144,
+        1.6698979139328003,
+        -0.08767440170049667,
+        0.13855624198913574,
+        0.13027210533618927,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.6154676675796509,
+        1.6170654296875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 11.989909172058105,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 10.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        13.40177059173584,
+        2.642638921737671,
+        0.11027304828166962,
+        0.453309565782547,
+        1.6898448467254639,
+        -0.16391125321388245,
+        0.015911715105175972,
+        0.12339534610509872,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.599679708480835,
+        1.602217674255371,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8945046424865724,
+      "integration_failed": false,
+      "time": 11.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        13.40177059173584,
+        2.642638921737671,
+        0.11027304828166962,
+        0.453309565782547,
+        1.6898448467254639,
+        -0.16391125321388245,
+        0.015911715105175972,
+        0.12339534610509872,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.5996699333190918,
+        1.602203369140625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 13.659831047058105,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 11.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        14.971187591552734,
+        3.33813214302063,
+        0.04129881411790848,
+        0.5636112689971924,
+        1.7373452186584473,
+        -0.14338642358779907,
+        -0.13280808925628662,
+        0.09867148101329803,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.56510591506958,
+        1.5694169998168945,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.9081159591674806,
+      "integration_failed": false,
+      "time": 12.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        14.971187591552734,
+        3.33813214302063,
+        0.04129881411790848,
+        0.5636112689971924,
+        1.7373452186584473,
+        -0.14338642358779907,
+        -0.13280808925628662,
+        0.09867148101329803,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.5651280879974365,
+        1.569427490234375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 15.338826179504395,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 12.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        16.491233825683594,
+        4.2677226066589355,
+        -0.0846136063337326,
+        0.6582403779029846,
+        1.8294103145599365,
+        -0.0851440355181694,
+        -0.08417297899723053,
+        0.09663578867912292,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.5126988887786865,
+        1.5200462341308594,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": 1.0932061672210693,
+      "integration_failed": false,
+      "time": 13.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        16.491233825683594,
+        4.2677226066589355,
+        -0.0846136063337326,
+        0.6582403779029846,
+        1.8294103145599365,
+        -0.0851440355181694,
+        -0.08417297899723053,
+        0.09663578867912292,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.5126875638961792,
+        1.520050048828125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 17.034502029418945,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 13.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        17.984010696411133,
+        5.436168670654297,
+        -0.09237603843212128,
+        0.7662654519081116,
+        1.964688777923584,
+        -0.11064139753580093,
+        0.06387799978256226,
+        0.12318478524684906,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.4809576272964478,
+        1.492776870727539,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": 1.0813970565795898,
+      "integration_failed": false,
+      "time": 14.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        17.984010696411133,
+        5.436168670654297,
+        -0.09237603843212128,
+        0.7662654519081116,
+        1.964688777923584,
+        -0.11064139753580093,
+        0.06387799978256226,
+        0.12318478524684906,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.4809516668319702,
+        1.492767333984375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 18.787670135498047,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 14.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        19.46891975402832,
+        6.839344501495361,
+        -0.00378438294865191,
+        0.9016307592391968,
+        2.1060657501220703,
+        -0.1986767053604126,
+        0.08212490379810333,
+        0.14391322433948517,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.466893196105957,
+        1.4849090576171875,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": 1.0713335275650024,
+      "integration_failed": false,
+      "time": 15.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        19.46891975402832,
+        6.839344501495361,
+        -0.00378438294865191,
+        0.9016307592391968,
+        2.1060657501220703,
+        -0.1986767053604126,
+        0.08212490379810333,
+        0.14391322433948517,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.4669015407562256,
+        1.48492431640625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 20.635295867919922,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 15.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        20.858625411987305,
+        8.497209548950195,
+        0.030775269493460655,
+        1.0456815958023071,
+        2.1921069622039795,
+        -0.22348502278327942,
+        -0.01832295022904873,
+        0.14148156344890594,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.3630350828170776,
+        1.3897056579589844,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": 1.0027738809585571,
+      "integration_failed": false,
+      "time": 16.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        20.858625411987305,
+        8.497209548950195,
+        0.030775269493460655,
+        1.0456815958023071,
+        2.1921069622039795,
+        -0.22348502278327942,
+        -0.01832295022904873,
+        0.14148156344890594,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.3630168437957764,
+        1.389678955078125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 22.52298355102539,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 16.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        22.02042007446289,
+        10.398900032043457,
+        -0.02570546418428421,
+        1.1830240488052368,
+        2.2487452030181885,
+        -0.18481625616550446,
+        -0.07515229284763336,
+        0.13485798239707947,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.1240289211273193,
+        1.161794662475586,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": 0.8461249470710754,
+      "integration_failed": false,
+      "time": 17.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        22.02042007446289,
+        10.398900032043457,
+        -0.02570546418428421,
+        1.1830240488052368,
+        2.2487452030181885,
+        -0.18481625616550446,
+        -0.07515229284763336,
+        0.13485798239707947,
+        1.5707963705062866,
+        0.5235987901687622,
+        1.1240324974060059,
+        1.16180419921875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 24.352331161499023,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.5707963267948966,
+        0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 17.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        22.89498519897461,
+        12.51430606842041,
+        -0.06875213980674744,
+        1.3046914339065552,
+        2.329435110092163,
+        -0.12983624637126923,
+        0.007995611056685448,
+        0.10500796139240265,
+        1.3962634801864624,
+        0.3490658700466156,
+        0.8235759139060974,
+        0.8745651245117188,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.2894742012023925,
+      "integration_failed": false,
+      "time": 18.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        22.89498519897461,
+        12.51430606842041,
+        -0.06875213980674744,
+        1.3046914339065552,
+        2.329435110092163,
+        -0.12983624637126923,
+        0.007995611056685448,
+        0.10500796139240265,
+        1.3962634801864624,
+        0.3490658700466156,
+        0.8235917687416077,
+        0.87457275390625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 26.0919189453125,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.3962634015954636,
+        0.34906585039886584
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 18.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        23.52956199645996,
+        14.814614295959473,
+        -0.010450932197272778,
+        1.3926619291305542,
+        2.4403390884399414,
+        -0.11535529792308807,
+        0.09313297271728516,
+        0.07011856883764267,
+        1.2217305898666382,
+        0.174532949924469,
+        0.5684162378311157,
+        0.6345767974853516,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.4269165039062501,
+      "integration_failed": false,
+      "time": 19.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        23.52956199645996,
+        14.814614295959473,
+        -0.010450932197272778,
+        1.3926619291305542,
+        2.4403390884399414,
+        -0.11535529792308807,
+        0.09313297271728516,
+        0.07011856883764267,
+        1.2217305898666382,
+        0.174532949924469,
+        0.5684306025505066,
+        0.63458251953125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 27.80491065979004,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.2217304763960306,
+        0.1745329251994329
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 19.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        24.00794219970703,
+        17.26570701599121,
+        0.07484234869480133,
+        1.4390912055969238,
+        2.550816774368286,
+        -0.08676379173994064,
+        0.056998562067747116,
+        0.018948672339320183,
+        1.047197699546814,
+        2.472503624062483e-08,
+        0.3955981731414795,
+        0.4783802032470703,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.511387538909912,
+      "integration_failed": false,
+      "time": 20.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        24.00794219970703,
+        17.26570701599121,
+        0.07484234869480133,
+        1.4390912055969238,
+        2.550816774368286,
+        -0.08676379173994064,
+        0.056998562067747116,
+        0.018948672339320183,
+        1.047197699546814,
+        2.472503624062483e-08,
+        0.3955576717853546,
+        0.478363037109375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 29.57170867919922,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        1.0471975511965976,
+        -5.551115123125783e-17
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 20.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        24.39792823791504,
+        19.84160041809082,
+        0.0835983157157898,
+        1.4247257709503174,
+        2.6568117141723633,
+        0.007753076497465372,
+        -0.03737126663327217,
+        -0.04914708808064461,
+        0.872664749622345,
+        -0.1745329052209854,
+        0.28931841254234314,
+        0.3899860382080078,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.5426355838775636,
+      "integration_failed": false,
+      "time": 21.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        24.39792823791504,
+        19.84160041809082,
+        0.0835983157157898,
+        1.4247257709503174,
+        2.6568117141723633,
+        0.007753076497465372,
+        -0.03737126663327217,
+        -0.04914708808064461,
+        0.872664749622345,
+        -0.1745329052209854,
+        0.2893260419368744,
+        0.389984130859375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 31.44754409790039,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.8726646259971647,
+        -0.174532925199433
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 21.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        24.81951904296875,
+        22.508434295654297,
+        0.027356714010238647,
+        1.3418165445327759,
+        2.73258638381958,
+        0.12696529924869537,
+        -0.055128313601017,
+        -0.11540067940950394,
+        0.698131799697876,
+        -0.3490658402442932,
+        0.3025027811527252,
+        0.42159080505371094,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.5521969318389892,
+      "integration_failed": false,
+      "time": 22.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        24.81951904296875,
+        22.508434295654297,
+        0.027356714010238647,
+        1.3418165445327759,
+        2.73258638381958,
+        0.12696529924869537,
+        -0.055128313601017,
+        -0.11540067940950394,
+        0.698131799697876,
+        -0.3490658402442932,
+        0.30252504348754883,
+        0.421600341796875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 33.505794525146484,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.6981317007977317,
+        -0.34906585039886595
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 22.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        25.456701278686523,
+        25.17799186706543,
+        0.006755739450454712,
+        1.1970205307006836,
+        2.7338669300079346,
+        0.20636944472789764,
+        0.022248437628149986,
+        -0.17348797619342804,
+        0.523598849773407,
+        -0.5235987901687622,
+        0.50250643491745,
+        0.6371822357177734,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.4449500083923341,
+      "integration_failed": false,
+      "time": 23.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        25.456701278686523,
+        25.17799186706543,
+        0.006755739450454712,
+        1.1970205307006836,
+        2.7338669300079346,
+        0.20636944472789764,
+        0.022248437628149986,
+        -0.17348797619342804,
+        0.523598849773407,
+        -0.5235987901687622,
+        0.5024881958961487,
+        0.637176513671875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 35.8046760559082,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.5235987755982987,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 23.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        26.47141456604004,
+        27.697845458984375,
+        0.06309807300567627,
+        1.0175331830978394,
+        2.686852216720581,
+        0.21992267668247223,
+        0.07636040449142456,
+        -0.17744125425815582,
+        0.3490659296512604,
+        -0.5235987901687622,
+        0.8728165030479431,
+        1.0147132873535156,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.2276840209960938,
+      "integration_failed": false,
+      "time": 24.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        26.47141456604004,
+        27.697845458984375,
+        0.06309807300567627,
+        1.0175331830978394,
+        2.686852216720581,
+        0.21992267668247223,
+        0.07636040449142456,
+        -0.17744125425815582,
+        0.3490659296512604,
+        -0.5235987901687622,
+        0.8728159070014954,
+        1.01470947265625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 38.31326675415039,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.34906585039886573,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 24.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        27.886611938476562,
+        29.956911087036133,
+        0.12803915143013,
+        0.8426177501678467,
+        2.6325061321258545,
+        0.21872879564762115,
+        0.04094991460442543,
+        -0.1761123239994049,
+        0.17453300952911377,
+        -0.5235987901687622,
+        1.2750929594039917,
+        1.4151973724365234,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.9909237861633302,
+      "integration_failed": false,
+      "time": 25.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        27.886611938476562,
+        29.956911087036133,
+        0.12803915143013,
+        0.8426177501678467,
+        2.6325061321258545,
+        0.21872879564762115,
+        0.04094991460442543,
+        -0.1761123239994049,
+        0.17453300952911377,
+        -0.5235987901687622,
+        1.2750840187072754,
+        1.415191650390625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 40.927738189697266,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        0.17453292519943278,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 25.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        29.619003295898438,
+        31.904001235961914,
+        0.1366591900587082,
+        0.6658570766448975,
+        2.560084104537964,
+        0.25313860177993774,
+        -0.018422069028019905,
+        -0.1804032325744629,
+        8.432967746330178e-08,
+        -0.5235987901687622,
+        1.601144552230835,
+        1.732391357421875,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8087474822998046,
+      "integration_failed": false,
+      "time": 26.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        29.619003295898438,
+        31.904001235961914,
+        0.1366591900587082,
+        0.6658570766448975,
+        2.560084104537964,
+        0.25313860177993774,
+        -0.018422069028019905,
+        -0.1804032325744629,
+        8.432967746330178e-08,
+        -0.5235987901687622,
+        1.6011857986450195,
+        1.732421875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 43.533329010009766,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.6653345369377348e-16,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 26.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        31.56969451904297,
+        33.500526428222656,
+        0.11510426551103592,
+        0.48817890882492065,
+        2.4493565559387207,
+        0.2953253388404846,
+        -0.010666221380233765,
+        -0.17538373172283173,
+        -0.17453284561634064,
+        -0.5235987901687622,
+        1.8350145816802979,
+        1.9506912231445312,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.6867674827575684,
+      "integration_failed": false,
+      "time": 27.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        31.56969451904297,
+        33.500526428222656,
+        0.11510426551103592,
+        0.48817890882492065,
+        2.4493565559387207,
+        0.2953253388404846,
+        -0.010666221380233765,
+        -0.17538373172283173,
+        -0.17453284561634064,
+        -0.5235987901687622,
+        1.8350096940994263,
+        1.95068359375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 46.03184509277344,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.17453292519943311,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 27.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        33.63376235961914,
+        34.71199417114258,
+        0.13274350762367249,
+        0.32184600830078125,
+        2.29771089553833,
+        0.30643007159233093,
+        0.04591735824942589,
+        -0.1585054248571396,
+        -0.34906578063964844,
+        -0.5235987901687622,
+        1.9704254865646362,
+        2.064067840576172,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.6231492042541504,
+      "integration_failed": false,
+      "time": 28.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        33.63376235961914,
+        34.71199417114258,
+        0.13274350762367249,
+        0.32184600830078125,
+        2.29771089553833,
+        0.30643007159233093,
+        0.04591735824942589,
+        -0.1585054248571396,
+        -0.34906578063964844,
+        -0.5235987901687622,
+        1.970406174659729,
+        2.064056396484375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 48.333763122558594,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.34906585039886606,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 28.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        35.69965362548828,
+        35.53944396972656,
+        0.1890597641468048,
+        0.17379724979400635,
+        2.111832857131958,
+        0.293376624584198,
+        0.052313320338726044,
+        -0.14287801086902618,
+        -0.5235987305641174,
+        -0.5235987901687622,
+        1.9977465867996216,
+        2.0658912658691406,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.6244412422180177,
+      "integration_failed": false,
+      "time": 29.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        35.69965362548828,
+        35.53944396972656,
+        0.1890597641468048,
+        0.17379724979400635,
+        2.111832857131958,
+        0.293376624584198,
+        0.052313320338726044,
+        -0.14287801086902618,
+        -0.5235987305641174,
+        -0.5235987901687622,
+        1.9977517127990723,
+        2.065887451171875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 50.373775482177734,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.523598775598299,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 29.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        37.6612663269043,
+        36.03526306152344,
+        0.21215195953845978,
+        0.03754447400569916,
+        1.8905463218688965,
+        0.29366955161094666,
+        -0.012624671682715416,
+        -0.1368788331747055,
+        -0.6981316804885864,
+        -0.5235987901687622,
+        1.9176026582717896,
+        1.9616127014160156,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.6945055961608887,
+      "integration_failed": false,
+      "time": 30.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        37.6612663269043,
+        36.03526306152344,
+        0.21215195953845978,
+        0.03754447400569916,
+        1.8905463218688965,
+        0.29366955161094666,
+        -0.012624671682715416,
+        -0.1368788331747055,
+        -0.6981316804885864,
+        -0.5235987901687622,
+        1.9175857305526733,
+        1.96160888671875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 52.12399673461914,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.698131700797732,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 30.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        39.43157958984375,
+        36.2878303527832,
+        0.1705353707075119,
+        -0.09514104574918747,
+        1.6290374994277954,
+        0.3248278796672821,
+        -0.058086808770895004,
+        -0.13289780914783478,
+        -0.8726646304130554,
+        -0.5235987901687622,
+        1.7451704740524292,
+        1.7703132629394531,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.8249004364013672,
+      "integration_failed": false,
+      "time": 31.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        39.43157958984375,
+        36.2878303527832,
+        0.1705353707075119,
+        -0.09514104574918747,
+        1.6290374994277954,
+        0.3248278796672821,
+        -0.058086808770895004,
+        -0.13289780914783478,
+        -0.8726646304130554,
+        -0.5235987901687622,
+        1.7451810836791992,
+        1.77032470703125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 53.58783721923828,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.872664625997165,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 31.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        40.95022964477539,
+        36.39427185058594,
+        0.12478820234537125,
+        -0.22139619290828705,
+        1.332196593284607,
+        0.36704471707344055,
+        -0.023598039522767067,
+        -0.12079186737537384,
+        -1.0471975803375244,
+        -0.5235987901687622,
+        1.505542516708374,
+        1.5186500549316406,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.9966020584106445,
+      "integration_failed": false,
+      "time": 32.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        40.95022964477539,
+        36.39427185058594,
+        0.12478820234537125,
+        -0.22139619290828705,
+        1.332196593284607,
+        0.36704471707344055,
+        -0.023598039522767067,
+        -0.12079186737537384,
+        -1.0471975803375244,
+        -0.5235987901687622,
+        1.5055445432662964,
+        1.518646240234375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 54.785621643066406,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.0471975511965979,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 32.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        42.18095016479492,
+        36.436805725097656,
+        0.12357761710882187,
+        -0.3331403136253357,
+        1.0073020458221436,
+        0.3869321048259735,
+        0.012934071943163872,
+        -0.10460861027240753,
+        -1.2217304706573486,
+        -0.5235987901687622,
+        1.2234878540039062,
+        1.2307205200195312,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.1918405532836915,
+      "integration_failed": false,
+      "time": 33.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        42.18095016479492,
+        36.436805725097656,
+        0.12357761710882187,
+        -0.3331403136253357,
+        1.0073020458221436,
+        0.3869321048259735,
+        0.012934071943163872,
+        -0.10460861027240753,
+        -1.2217304706573486,
+        -0.5235987901687622,
+        1.223471999168396,
+        1.230712890625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 55.73933410644531,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.2217304763960308,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 33.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        43.10108184814453,
+        36.48697280883789,
+        0.12961186468601227,
+        -0.43051227927207947,
+        0.659602165222168,
+        0.39524999260902405,
+        -0.009486241266131401,
+        -0.09244668483734131,
+        -1.3962633609771729,
+        -0.5235987901687622,
+        0.9132347106933594,
+        0.9201316833496094,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.4033985614776612,
+      "integration_failed": false,
+      "time": 34.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        43.10108184814453,
+        36.48697280883789,
+        0.12961186468601227,
+        -0.43051227927207947,
+        0.659602165222168,
+        0.39524999260902405,
+        -0.009486241266131401,
+        -0.09244668483734131,
+        -1.3962633609771729,
+        -0.5235987901687622,
+        0.9132488369941711,
+        0.920135498046875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 56.47125244140625,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.3962634015954638,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 34.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        43.707035064697266,
+        36.62516403198242,
+        0.09548674523830414,
+        -0.5160685181617737,
+        0.29078859090805054,
+        0.4033641219139099,
+        -0.059222739189863205,
+        -0.07915090024471283,
+        -1.570796251296997,
+        -0.5235987901687622,
+        0.592991828918457,
+        0.6059532165527344,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.620890212059021,
+      "integration_failed": false,
+      "time": 35.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        43.707035064697266,
+        36.62516403198242,
+        0.09548674523830414,
+        -0.5160685181617737,
+        0.29078859090805054,
+        0.4033641219139099,
+        -0.059222739189863205,
+        -0.07915090024471283,
+        -1.570796251296997,
+        -0.5235987901687622,
+        0.5929939150810242,
+        0.60595703125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 57.023746490478516,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 35.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        44.0211296081543,
+        36.91797637939453,
+        0.034684646874666214,
+        -0.5861681699752808,
+        -0.05754958093166351,
+        0.42825448513031006,
+        -0.04217170923948288,
+        -0.059376008808612823,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        0.2895500063896179,
+        0.31409454345703125,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.8253942847251892,
+      "integration_failed": false,
+      "time": 36.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        44.0211296081543,
+        36.91797637939453,
+        0.034684646874666214,
+        -0.5861681699752808,
+        -0.05754958093166351,
+        0.42825448513031006,
+        -0.04217170923948288,
+        -0.059376008808612823,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        0.2895442545413971,
+        0.3140869140625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 57.45256042480469,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 36.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        44.09965133666992,
+        37.40215301513672,
+        0.033099595457315445,
+        -0.6307995915412903,
+        -0.359919011592865,
+        0.44605961441993713,
+        0.03727066516876221,
+        -0.02879105694591999,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        0.038931190967559814,
+        0.078521728515625,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.9936167031526566,
+      "integration_failed": false,
+      "time": 37.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        44.09965133666992,
+        37.40215301513672,
+        0.033099595457315445,
+        -0.6307995915412903,
+        -0.359919011592865,
+        0.44605961441993713,
+        0.03727066516876221,
+        -0.02879105694591999,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        0.038921475410461426,
+        0.078521728515625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 57.824737548828125,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 37.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        43.967044830322266,
+        38.039981842041016,
+        0.08322282880544662,
+        -0.642929196357727,
+        -0.6062481999397278,
+        0.4117167294025421,
+        0.044359173625707626,
+        0.004372115712612867,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.18474146723747253,
+        -0.13260650634765625,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.1433601498603823,
+      "integration_failed": false,
+      "time": 38.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        43.967044830322266,
+        38.039981842041016,
+        0.08322282880544662,
+        -0.642929196357727,
+        -0.6062481999397278,
+        0.4117167294025421,
+        0.044359173625707626,
+        0.004372115712612867,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.1847408264875412,
+        -0.132598876953125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 58.138980865478516,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 38.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        -1,
+        -1
+      ],
+      "observation": [
+        43.61574172973633,
+        38.77042007446289,
+        0.0936410054564476,
+        -0.6219339370727539,
+        -0.8238280415534973,
+        0.3512418866157532,
+        -0.02820494771003723,
+        0.03892245516180992,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.41133880615234375,
+        -0.3513031005859375,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.295747804641724,
+      "integration_failed": false,
+      "time": 39.0,
+      "physical_action": [
+        -0.1745329201221466,
+        -0.1745329201221466
+      ],
+      "raw": [
+        43.61574172973633,
+        38.77042007446289,
+        0.0936410054564476,
+        -0.6219339370727539,
+        -0.8238280415534973,
+        0.3512418866157532,
+        -0.02820494771003723,
+        0.03892245516180992,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.4113050699234009,
+        -0.351287841796875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 58.356475830078125,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 39.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        43.03487014770508,
+        39.56074523925781,
+        0.04248081147670746,
+        -0.5617611408233643,
+        -1.0210151672363281,
+        0.31893041729927063,
+        -0.05572463572025299,
+        0.08173468708992004,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.6462792754173279,
+        -0.58087158203125,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.7425218820571899,
+      "integration_failed": false,
+      "time": 40.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        43.03487014770508,
+        39.56074523925781,
+        0.04248081147670746,
+        -0.5617611408233643,
+        -1.0210151672363281,
+        0.31893041729927063,
+        -0.05572463572025299,
+        0.08173468708992004,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.6462872624397278,
+        -0.58087158203125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 58.455562591552734,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 40.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        42.227108001708984,
+        40.38380813598633,
+        0.015111826360225677,
+        -0.46279647946357727,
+        -1.1914247274398804,
+        0.32056090235710144,
+        0.0063462830148637295,
+        0.1135057732462883,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.876353919506073,
+        -0.8077621459960938,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -0.9227867126464844,
+      "integration_failed": false,
+      "time": 41.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        42.227108001708984,
+        40.38380813598633,
+        0.015111826360225677,
+        -0.46279647946357727,
+        -1.1914247274398804,
+        0.32056090235710144,
+        0.0063462830148637295,
+        0.1135057732462883,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -0.8763680458068848,
+        -0.807769775390625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 58.42927932739258,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 41.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        41.18547058105469,
+        41.169010162353516,
+        0.04976353421807289,
+        -0.3394221067428589,
+        -1.3379862308502197,
+        0.3078480660915375,
+        0.05156334862112999,
+        0.13174505531787872,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.1071263551712036,
+        -1.0416374206542969,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.1041730642318726,
+      "integration_failed": false,
+      "time": 42.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        41.18547058105469,
+        41.169010162353516,
+        0.04976353421807289,
+        -0.3394221067428589,
+        -1.3379862308502197,
+        0.3078480660915375,
+        0.05156334862112999,
+        0.13174505531787872,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.1071199178695679,
+        -1.0416259765625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 58.23341369628906,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 42.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        39.932212829589844,
+        41.81547927856445,
+        0.07780176401138306,
+        -0.20290789008140564,
+        -1.3995039463043213,
+        0.2643752098083496,
+        -0.01597440056502819,
+        0.1402842402458191,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.3063240051269531,
+        -1.2532577514648438,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.2606394290924072,
+      "integration_failed": false,
+      "time": 43.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        39.932212829589844,
+        41.81547927856445,
+        0.07780176401138306,
+        -0.20290789008140564,
+        -1.3995039463043213,
+        0.2643752098083496,
+        -0.01597440056502819,
+        0.1402842402458191,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.3063143491744995,
+        -1.253265380859375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 57.81968307495117,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 43.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        0,
+        0
+      ],
+      "observation": [
+        38.64541244506836,
+        42.24686813354492,
+        0.018464695662260056,
+        -0.06010683253407478,
+        -1.225990891456604,
+        0.2711902856826782,
+        -0.06836779415607452,
+        0.14716221392154694,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.3206716775894165,
+        -1.2868003845214844,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -1.2584902048110962,
+      "integration_failed": false,
+      "time": 44.0,
+      "physical_action": [
+        0.0,
+        0.0
+      ],
+      "raw": [
+        38.64541244506836,
+        42.24686813354492,
+        0.018464695662260056,
+        -0.06010683253407478,
+        -1.225990891456604,
+        0.2711902856826782,
+        -0.06836779415607452,
+        0.14716221392154694,
+        -1.5707963705062866,
+        -0.5235987901687622,
+        -1.3206748962402344,
+        -1.28680419921875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 57.256141662597656,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.5707963267948966,
+        -0.5235987755982988
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 44.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        37.548301696777344,
+        42.53312301635742,
+        -0.014948721043765545,
+        0.08523377031087875,
+        -0.97137051820755,
+        0.3169034719467163,
+        0.0032749411184340715,
+        0.13922761380672455,
+        -1.4137166738510132,
+        -0.36651915311813354,
+        -1.1186800003051758,
+        -1.0971107482910156,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.7406528472900393,
+      "integration_failed": false,
+      "time": 45.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        37.548301696777344,
+        42.53312301635742,
+        -0.014948721043765545,
+        0.08523377031087875,
+        -0.97137051820755,
+        0.3169034719467163,
+        0.0032749411184340715,
+        0.13922761380672455,
+        -1.4137166738510132,
+        -0.36651915311813354,
+        -1.118674397468567,
+        -1.09710693359375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 56.7357177734375,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.413716694115407,
+        -0.36651914291880916
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 45.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        36.633705139160156,
+        42.71719741821289,
+        0.010693580843508244,
+        0.21436816453933716,
+        -0.8018448352813721,
+        0.3132379353046417,
+        0.03571457415819168,
+        0.11790022999048233,
+        -1.2566370964050293,
+        -0.20943951606750488,
+        -0.9276220202445984,
+        -0.9145965576171875,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.6150411605834964,
+      "integration_failed": false,
+      "time": 46.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        36.633705139160156,
+        42.71719741821289,
+        0.010693580843508244,
+        0.21436816453933716,
+        -0.8018448352813721,
+        0.3132379353046417,
+        0.03571457415819168,
+        0.11790022999048233,
+        -1.2566370964050293,
+        -0.20943951606750488,
+        -0.9276503920555115,
+        -0.91461181640625,
+        500.0,
+        0.0
+      ],
+      "world_radius": 56.27421569824219,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.2566370614359172,
+        -0.2094395102393195
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 46.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        35.80765151977539,
+        42.8095588684082,
+        0.0465882234275341,
+        0.31959620118141174,
+        -0.7620319724082947,
+        0.31347665190696716,
+        0.04449554532766342,
+        0.09304112941026688,
+        -1.0995573997497559,
+        -0.05235987901687622,
+        -0.831044614315033,
+        -0.8260536193847656,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.5556428432464604,
+      "integration_failed": false,
+      "time": 47.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        35.80765151977539,
+        42.8095588684082,
+        0.0465882234275341,
+        0.31959620118141174,
+        -0.7620319724082947,
+        0.31347665190696716,
+        0.04449554532766342,
+        0.09304112941026688,
+        -1.0995573997497559,
+        -0.05235987901687622,
+        -0.8310412168502808,
+        -0.8260498046875,
+        500.0,
+        0.0
+      ],
+      "world_radius": 55.81080627441406,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -1.0995574287564276,
+        -0.05235987755982985
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 47.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        34.96072006225586,
+        42.844844818115234,
+        0.11276953667402267,
+        0.40186941623687744,
+        -0.8043451905250549,
+        0.36074450612068176,
+        0.08772900700569153,
+        0.07307202368974686,
+        -0.942477822303772,
+        0.10471975803375244,
+        -0.8465949892997742,
+        -0.8469314575195312,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.567132472991944,
+      "integration_failed": false,
+      "time": 48.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        34.96072006225586,
+        42.844844818115234,
+        0.11276953667402267,
+        0.40186941623687744,
+        -0.8043451905250549,
+        0.36074450612068176,
+        0.08772900700569153,
+        0.07307202368974686,
+        -0.942477822303772,
+        0.10471975803375244,
+        -0.8465925455093384,
+        -0.846923828125,
+        500.0,
+        0.0
+      ],
+      "world_radius": 55.29857635498047,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.9424777960769379,
+        0.10471975511965981
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 48.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    },
+    {
+      "action": [
+        1,
+        1
+      ],
+      "observation": [
+        34.04281234741211,
+        42.84103775024414,
+        0.20545269548892975,
+        0.4672276973724365,
+        -0.8603609204292297,
+        0.41724705696105957,
+        0.08368469029664993,
+        0.060675330460071564,
+        -0.7853981852531433,
+        0.2617993950843811,
+        -0.9136956334114075,
+        -0.91790771484375,
+        500.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "reward": -2.6097627162933352,
+      "integration_failed": false,
+      "time": 49.0,
+      "physical_action": [
+        0.1745329201221466,
+        0.1745329201221466
+      ],
+      "raw": [
+        34.04281234741211,
+        42.84103775024414,
+        0.20545269548892975,
+        0.4672276973724365,
+        -0.8603609204292297,
+        0.41724705696105957,
+        0.08368469029664993,
+        0.060675330460071564,
+        -0.7853981852531433,
+        0.2617993950843811,
+        -0.9136868119239807,
+        -0.91790771484375,
+        500.0,
+        0.0
+      ],
+      "world_radius": 54.71990203857422,
+      "total_time_limit_reached": false,
+      "world_radius_limit_reached": false,
+      "legacy_radius_limit_reached": false,
+      "legacy_time_limit_reached": false,
+      "legacy_limits_enforced": false,
+      "goal_reached": false,
+      "action_mode": "legacy_delta",
+      "physical_contact": false,
+      "wind_next": [
+        8.0,
+        1.5707963267948966
+      ],
+      "target_angles": [
+        -0.7853981633974483,
+        0.26179938779914946
+      ],
+      "clearance": {
+        "entity_m": null,
+        "safety_m": null
+      },
+      "min_safety": null,
+      "collision": false,
+      "diagnostics": {
+        "clock": 49.0,
+        "dt": 1.0,
+        "motor_command": 0,
+        "motor_applied_thrust": 0,
+        "cable_actual": null
+      }
+    }
+  ]
+}

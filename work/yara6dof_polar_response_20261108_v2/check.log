@@ -1,0 +1,14 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+{"name": "reset_attitude_and_twist", "passed": true, "roll": 0.0, "pitch": 0.0, "yaw": 0.0}
+{"name": "reset_attitude_and_twist", "passed": true, "roll": 0.17, "pitch": 0.12, "yaw": 1.1}
+{"name": "reset_attitude_and_twist", "passed": true, "roll": -0.21, "pitch": -0.09, "yaw": -1.4}
+{"name": "fluid_density_buoyancy_and_foils", "passed": true, "applied": {"air_density": 1.2, "waterDensity": 1025.0, "water_density": 1025.0}}
+{"name": "original_polar_and_full_force", "passed": true, "max_coefficient_error": 4.440892098500626e-16, "attack_range_deg": [52.548765002466716, 179.36289797810664], "samples_above_100": 34, "samples_above_165": 18, "force_tolerance_N": 1e-09}
+{"name": "signed_actuator_rate_and_hold", "passed": true, "max_tracking_error_rad": 8.432968079397085e-08, "tolerance_rad": 0.0008726646259971648}
+{"name": "native_6dof_clock_and_information_boundary", "passed": true, "steps": 49, "policy_dimensions": 18, "heave_range": 0.045317373471371436, "pitch_range": 0.05756931981456775}
+{"name": "actual_external_contact_recorded", "passed": true, "contact_steps": 2, "contact_pairs": [[["obstacle_0::link::collision", "migration_boat_54::base_link::base_link_fixed_joint_lump__hull_link_collision"]], [["obstacle_0::link::collision", "migration_boat_54::base_link::base_link_fixed_joint_lump__mast_link_collision_1"]]], "original_entity_collision": [false, false, false, false, false]}
+{"name": "same_18d_policy_and_causal_goal_change", "passed": true, "policy_steps": 5}
+{"name": "reset_clears_target_history_and_6dof_state", "passed": true}

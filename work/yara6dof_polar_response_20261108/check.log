@@ -1,0 +1,28 @@
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:231: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/home/ot/Students/hs/sailboat-routing-v0/.venv/lib/python3.13/site-packages/gymnasium/spaces/box.py:297: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+{"name": "reset_attitude_and_twist", "passed": true, "roll": 0.0, "pitch": 0.0, "yaw": 0.0}
+{"name": "reset_attitude_and_twist", "passed": true, "roll": 0.17, "pitch": 0.12, "yaw": 1.1}
+{"name": "reset_attitude_and_twist", "passed": true, "roll": -0.21, "pitch": -0.09, "yaw": -1.4}
+{"name": "fluid_density_buoyancy_and_foils", "passed": true, "applied": {"air_density": 1.2, "waterDensity": 1025.0, "water_density": 1025.0}}
+Traceback (most recent call last):
+  File "/home/ot/Students/hs/yara-env/migration18/native6dof_check.py", line 81, in <module>
+    run(args.output,args.config)
+    ~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ot/Students/hs/yara-env/migration18/native6dof_check.py", line 32, in run
+    old_target=e.target.copy();before=e.raw.copy();obs,reward,_,_,info=e.step(action);d=info["diagnostics"]
+                                                                       ~~~~~~^^^^^^^^
+  File "/home/ot/Students/hs/yara-env/migration18/environment.py", line 118, in step
+    self.diag=self.transport.request('step',wind=step_wind,cable=abs(float(self.target[0])),rudder=-float(self.target[1]),sail_target=-float(self.target[0]))
+              ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ot/Students/hs/yara-env/migration18/environment.py", line 37, in request
+    if 'error' in response:raise RuntimeError(response['error'])
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Traceback (most recent call last):
+  File "/work/migration18/bridge.py", line 137, in <module>
+    result=call(100)
+  File "/work/migration18/bridge.py", line 66, in call
+    assert abs(result['clock']-d['clock']-.01)<1e-8,(result['clock'],d)
+AssertionError: (1, {'air_density': 1.2, 'attack_deg': 74.19358318709496, 'cd': 1.0709818341961719, 'cl': 0.7317502579936628, 'clock': 1.0, 'drag_direction_world': [-0.10572792630306699, 0.9935243155195168, 0.041605769685570754], 'drag_world': [-13.18982810230054, 123.944688932938, 5.1904257409110475], 'force_world': [70.97100691069583, 132.99622184677077, 2.912677210464784], 'lift_direction_world': [0.9873697886598973, 0.10619203265745915, -0.026722406981582642], 'lift_world': [84.16083501299637, 9.051532913832744, -2.2777485304462637], 'model': 'migration_boat_4', 'pressure': 116.4842792683842, 'sail_area': 3.18776, 'source': 'legacy_polar', 'wind_world': [-0.8250968689943997, 7.753427411932298, 0.32468990455051344]})
+
