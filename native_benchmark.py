@@ -152,6 +152,7 @@ def capture(out):
    obs,reward,_,_,info=e.step(p.act(obs).action);native_state(info['diagnostics'])
    rows.append(dict(reward=reward,observation=obs,**info))
   receipts=capture_scene(tr,out,'single_demo',scene,rows)
+  receipts['rudder']=tr.request('capture',filename='../'+str(out.relative_to(R))+'/single_demo_rudder.png',trace=[],xy=e.raw[:2].tolist(),offset=[-2,-4,-.7],look_z=-.4,hide_water=True)
   write(out,'capture.json',dict(scored=False,description='60-step actual frozen-policy demonstration; separate from the three scored tasks; camera advancement excluded',rows=rows,receipts=receipts))
  finally:
   p.close();e.close();tr.close()
