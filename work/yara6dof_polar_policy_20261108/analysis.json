@@ -1,0 +1,144 @@
+{
+  "checks": [
+    {
+      "scene": "clear",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    },
+    {
+      "scene": "single",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    },
+    {
+      "scene": "switch",
+      "safety_recomputed": true,
+      "clock_and_native_body_checked": true,
+      "motor_off": true,
+      "score_matches_original_rules": true
+    }
+  ],
+  "paired": [
+    {
+      "scene": "clear",
+      "original": {
+        "reason": "arrived",
+        "time_s": 123.0,
+        "min_safety_m": null,
+        "success": true
+      },
+      "yara": {
+        "scene": "clear",
+        "reason": "arrived",
+        "success": true,
+        "time_s": 172.0,
+        "min_safety_m": null,
+        "final_distance_m": 8.230965037708877,
+        "physical_contact_steps": 0,
+        "target_changes": 0,
+        "max_angle_error_rad": 2.468028448276982e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "sail_attack_range_deg": [
+          13.89586890439288,
+          99.4402925606756
+        ],
+        "last100_mean_speed_m_s": 3.238827085796359,
+        "max_abs_roll_deg": 5.72617840586166,
+        "max_abs_pitch_deg": 1.554609938357156,
+        "z_range_m": [
+          -0.123823492150828,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.5,
+          3.5828544619335694
+        ],
+        "clock_error_s": 0
+      }
+    },
+    {
+      "scene": "single",
+      "original": {
+        "reason": "arrived_with_buffer_violation",
+        "time_s": 139.0,
+        "min_safety_m": -14.907946457744103,
+        "success": false
+      },
+      "yara": {
+        "scene": "single",
+        "reason": "time_limit",
+        "success": false,
+        "time_s": 900.0,
+        "min_safety_m": -2.37364624935843,
+        "final_distance_m": 341.57449687407717,
+        "physical_contact_steps": 0,
+        "target_changes": 0,
+        "max_angle_error_rad": 5.805809499825898e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "sail_attack_range_deg": [
+          0.7813337086670127,
+          179.9461381789622
+        ],
+        "last100_mean_speed_m_s": 0.25192113636535185,
+        "max_abs_roll_deg": 5.725199404666186,
+        "max_abs_pitch_deg": 1.4997555142026464,
+        "z_range_m": [
+          -0.123823492150828,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.06736531020076478,
+          3.355129595154106
+        ],
+        "clock_error_s": 0
+      }
+    },
+    {
+      "scene": "switch",
+      "original": {
+        "reason": "arrived",
+        "time_s": 147.0,
+        "min_safety_m": null,
+        "success": true
+      },
+      "yara": {
+        "scene": "switch",
+        "reason": "time_limit",
+        "success": false,
+        "time_s": 900.0,
+        "min_safety_m": null,
+        "final_distance_m": 665.4815392506229,
+        "physical_contact_steps": 0,
+        "target_changes": 1,
+        "max_angle_error_rad": 5.823710202967902e-08,
+        "max_clock_error_s": 0
+      },
+      "diagnostics": {
+        "sail_attack_range_deg": [
+          92.7518824182742,
+          179.9887325727517
+        ],
+        "last100_mean_speed_m_s": 0.5327605370597369,
+        "max_abs_roll_deg": 4.716565400320571,
+        "max_abs_pitch_deg": 1.3066745985923496,
+        "z_range_m": [
+          -0.12381535810548366,
+          0.0
+        ],
+        "speed_range_m_s": [
+          0.06839478872487371,
+          1.4300650512479511
+        ],
+        "clock_error_s": 0
+      }
+    }
+  ]
+}

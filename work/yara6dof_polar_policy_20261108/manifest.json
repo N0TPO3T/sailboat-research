@@ -1,0 +1,130 @@
+{
+  "config": {
+    "policy_dt": 1.0,
+    "physics_dt": 0.01,
+    "limit_s": 900,
+    "world_radius_m": 3500,
+    "goal_radius_m": 10,
+    "seed": 61106,
+    "wind": [
+      0,
+      8,
+      0
+    ],
+    "initial": [
+      0,
+      0,
+      0,
+      0,
+      0.5,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      500,
+      0
+    ],
+    "obstacle_input": "boundary40",
+    "sail_mapping": "signed_target",
+    "scenes": [
+      {
+        "name": "clear",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": []
+      },
+      {
+        "name": "single",
+        "goals": [
+          [
+            500,
+            0
+          ]
+        ],
+        "obstacles": [
+          {
+            "center_xy": [
+              250,
+              0
+            ],
+            "entity_radius": 30,
+            "safety_buffer": 60
+          }
+        ]
+      },
+      {
+        "name": "switch",
+        "goals": [
+          [
+            250,
+            0
+          ],
+          [
+            500,
+            80
+          ]
+        ],
+        "switch_at": 80,
+        "obstacles": []
+      }
+    ],
+    "water": "flat: wave gain zero, matched to original no-wave model",
+    "gazebo_signs": {
+      "roll": -1,
+      "roll_rate": -1,
+      "sail_joint": -1,
+      "rudder_joint": -1,
+      "yaw": 1,
+      "body_yaw_rate": 1
+    },
+    "actuator_mode": "signed",
+    "physics_mode": "native",
+    "wind_mode": "fixed",
+    "initial_6dof": {
+      "z": 0.0,
+      "pitch": 0.0,
+      "w": 0.0,
+      "q": 0.0
+    },
+    "fluid_density": {
+      "air": 1.2,
+      "water": 1025.0
+    },
+    "sail_force_model": "legacy_polar"
+  },
+  "scene_order": [
+    "clear",
+    "single",
+    "switch"
+  ],
+  "max_episodes": 3,
+  "max_steps_each": 900,
+  "gazebo_seed": 61106,
+  "fresh_world_per_scene": true,
+  "actor_mode": "eval",
+  "loading_paths": {
+    "snapshot": "/home/ot/Students/hs/yara-env/migration18/frozen/third_party/obstacle_candidate",
+    "actor": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_actor10800.pth",
+    "normalizer": "/home/ot/Students/hs/yara-env/migration18/frozen/checkpoints/obstacle_candidate/saclstm_s14obst_noise_0204_normalizer10800.pth"
+  },
+  "assets_equal_to_original_project": {
+    "actor": true,
+    "normalizer": true
+  },
+  "existing_asset_index": "/home/ot/Students/hs/yara-env/migration18/ASSET_HASHES.json",
+  "code_commit": "9e1d7e2cd63e3cf19d7e06c2fd1c8884775f50c5",
+  "runner": "runner.py",
+  "references": {
+    "clear": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_clear.json",
+    "single": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_single.json",
+    "switch": "/home/ot/Students/hs/yara-env/migration18/legacy4dof_20261108/policy_original_switch.json"
+  },
+  "training": false
+}
