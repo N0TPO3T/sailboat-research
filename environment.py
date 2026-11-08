@@ -115,11 +115,13 @@ class MigrationEnv(gym.Env):
   before=self.raw.copy()
   if self.action_mode=='legacy_delta':
    physical=self.modules.network.Action_adapter(action,self.high)
+   reward_action=physical.copy()
    self.target=accumulate(self.target,physical)
   else:
    # Native joint coordinates: cable opening [0,90] deg and rudder [-60,60] deg.
    # Repeating an action holds its absolute target; [0,0] commands 45 deg / 0 deg.
    physical=np.array([(action[0]+1)*np.pi/4,action[1]*np.pi/3])
+   reward_action=physical-self.target
    self.target=physical.copy()
   if self.backend=='original':
    raw,reward,reached,truncated,info=self.physics.step(action);self.t=info['time']
@@ -135,7 +137,7 @@ class MigrationEnv(gym.Env):
    self.t+=1
    assert abs(self.diag['clock']-self.clock0-self.t)<1e-8
    raw=from_gazebo(self.diag);raw[12:14]=self.goal
-   g=self.modules.globals;self.env.state=raw.copy();g.state=raw.copy();g.current_state=self.env.state[:12];g.current_action=physical;g.current_time=self.t
+   g=self.modules.globals;self.env.state=raw.copy();g.state=raw.copy();g.current_state=self.env.state[:12];g.current_action=reward_action;g.current_time=self.t
    self._progress(before);raw=self.env.state.copy()
    if self.wind_mode=='legacy_dryden':
     with self.physics._rng():self.env.update_wind()
@@ -146,6 +148,6 @@ class MigrationEnv(gym.Env):
   clearance=segment_circle_clearance(before[:2],raw[:2],self.obstacles);self.min_safety=min(self.min_safety,clearance['safety_m'])
   collision=clearance['entity_m']<=0
   self.raw=raw.copy();self.history.append(raw.copy());self.commands.append(action.astype(np.float32))
-  info.update(action_mode=self.action_mode,physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
+  info.update(action_mode=self.action_mode,reward_action_delta=reward_action.tolist(),physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
   return self.frame.encode(raw,before),float(reward),bool(collision or reached),bool(truncated),info
  def close(self):self.physics.close()

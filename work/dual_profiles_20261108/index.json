@@ -1,0 +1,22 @@
+{
+  "legacy": {
+    "config": "config_legacy4dof.json",
+    "checks": [
+      "legacy/kernel_gate.json",
+      "legacy/response_gate.json"
+    ],
+    "scope": "original 4DOF mathematics and 18D task; original 3D hull unspecified"
+  },
+  "yara": {
+    "config": "config_yara_benchmark.json",
+    "checks": [
+      "yara_reward_aligned/result.json"
+    ],
+    "scope": "native hull, forces, absolute cable/rudder; original 18D/task extension; motor off; not paper reproduction"
+  },
+  "superseded": {
+    "receipt": "yara/result.json",
+    "reason": "actuator checks valid; action penalty incorrectly used absolute target; corrected in yara_reward_aligned"
+  },
+  "training": false
+}

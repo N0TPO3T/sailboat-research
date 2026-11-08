@@ -91,5 +91,6 @@
   "wind_mode": "fixed",
   "paper_reproduction": false,
   "motor_enabled": false,
-  "benchmark_note": "Installed native hull, foil laws and actuator laws; original 18D/task/reward/safety extension; paper allows motor, this task does not. Frozen legacy policy/normalizer are not a trained native-action baseline."
+  "benchmark_note": "Installed native hull, foil laws and actuator laws; original 18D/task/reward/safety extension; paper allows motor, this task does not. Frozen legacy policy/normalizer are not a trained native-action baseline.",
+  "reward_action_semantics": "change of native absolute targets in radians; holding targets has zero action-change penalty"
 }

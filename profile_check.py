@@ -23,10 +23,12 @@ def run(profile,out):
    tr=Transport(gazebo_args='--seed 61106');e=MigrationEnv('yara',tr,c);obs,_=e.reset()
    assert e.diag['fluid_density']==dict(air_density=1.201,waterDensity=997.,water_density=997.)
    actions=[[-1,0]]*2+[[1,1]]*7+[[1,-1]]*6+[[0,0]]*4+[[-1,0]]*4
-   previous_cable=e.diag['cable_actual']
+   previous_cable=e.diag['cable_actual'];previous_target=np.zeros(2)
    for i,a in enumerate(actions):
     obs,reward,_,_,info=e.step(a);d=info['diagnostics'];expected=np.array([(a[0]+1)*np.pi/4,a[1]*np.pi/3])
     np.testing.assert_array_equal(e.target,expected)
+    np.testing.assert_allclose(info["reward_action_delta"],expected-previous_target,rtol=0,atol=1e-12)
+    previous_target=expected.copy()
     np.testing.assert_allclose([d['cable_command'],d['rudder_command']],expected,rtol=0,atol=1e-12)
     assert obs.shape==(18,) and np.isfinite(obs).all()
     assert d['physics_mode']==d['actuator_mode']==d['sail_force_model']=='native'
