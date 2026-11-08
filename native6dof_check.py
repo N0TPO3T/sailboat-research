@@ -3,10 +3,10 @@ from environment import *
 from validate import clean
 import argparse,traceback,shutil
 
-def run(output):
+def run(output,config_path=None):
  output=output.resolve();output.mkdir(parents=True,exist_ok=True)
  if (output/"result.json").exists():raise FileExistsError("Existing check receipt preserved")
- c=json.loads((R/"config_yara6dof.json").read_text());checks=[];records={};tr=Transport(gazebo_args="--seed 61106")
+ c=json.loads((config_path or R/"config_yara6dof.json").read_text());checks=[];records={};tr=Transport(gazebo_args="--seed 61106")
  def save():
   (output/"result.json").write_text(json.dumps(clean(dict(passed=all(x["passed"] for x in checks),checks=checks,records=records,config=c)),indent=2))
  def checked(name,passed,**details):
@@ -25,7 +25,7 @@ def run(output):
    finally:e.close()
   e=MigrationEnv("yara",tr,c);obs,_=e.reset();rows=[];records["response"]=rows
   checked("fluid_density_buoyancy_and_foils",e.diag["fluid_density"]==dict(air_density=1.2,waterDensity=1025.,water_density=1025.),applied=e.diag["fluid_density"])
-  prev=e.raw[8:10].astype(float);max_error=0.
+  prev=e.raw[8:10].astype(float);max_error=0.;polar_errors=[];attacks=[]
   try:
    actions=[[1,1]]*12+[[0,0]]*5+[[-1,-1]]*22+[[0,0]]*5+[[1,1]]*5
    for action in actions:
@@ -33,9 +33,18 @@ def run(output):
     expected=prev+np.clip(e.target-prev,-np.pi/18,np.pi/18);error=float(np.max(np.abs(e.raw[8:10]-expected)));max_error=max(max_error,error);prev=e.raw[8:10].astype(float)
     assert d["physics_mode"]=="native" and not d["body_static"] and not d["body_kinematic"]
     assert obs.shape==(18,) and np.isfinite(obs).all()
+    if c.get("sail_force_model")=="legacy_polar":
+     f=d["sail_force"];attack=f["attack_deg"];attacks.append(attack)
+     assert f["source"]=="legacy_polar" and abs(f["sail_area"]-3.18776)<1e-10
+     cl=float(e.env.sail_cl_interp(attack));cd=float(e.env.sail_cd_interp(attack))
+     polar_errors.append(max(abs(cl-f["cl"]),abs(cd-f["cd"])))
+     np.testing.assert_allclose(f["force_world"],np.array(f["lift_world"])+f["drag_world"],atol=1e-9,rtol=0)
+     np.testing.assert_allclose(f["lift_world"],f["pressure"]*cl*np.array(f["lift_direction_world"]),atol=1e-9,rtol=0)
+     np.testing.assert_allclose(f["drag_world"],f["pressure"]*cd*np.array(f["drag_direction_world"]),atol=1e-9,rtol=0)
     assert d["motor_command"]==0 and d["motor_applied_thrust"]==0 and not d["motor_plugin_present"]
     if action==[0,0]:np.testing.assert_array_equal(e.target,old_target)
     rows.append(dict(action=action,reward=reward,observation=obs,**info))
+   if polar_errors:checked("original_polar_and_full_force",max(polar_errors)<1e-10,max_coefficient_error=max(polar_errors),attack_range_deg=[min(attacks),max(attacks)],samples_above_100=sum(a>100 for a in attacks),samples_above_165=sum(a>165 for a in attacks),force_tolerance_N=1e-9)
    checked("signed_actuator_rate_and_hold",max_error<=math.radians(.05),max_tracking_error_rad=max_error,tolerance_rad=math.radians(.05))
    checked("native_6dof_clock_and_information_boundary",all(abs(x["diagnostics"]["dt"]-1)<1e-8 for x in rows),steps=len(rows),policy_dimensions=18,heave_range=np.ptp([x["diagnostics"]["pose6"][2] for x in rows]),pitch_range=np.ptp([x["diagnostics"]["pose6"][4] for x in rows]))
   finally:e.close()
@@ -67,6 +76,6 @@ def run(output):
   for name in ["bridge.log","gazebo.log","xvfb.log"]:
    if (R/"logs"/name).exists():shutil.copy2(R/"logs"/name,output/name)
 if __name__=="__main__":
- a=argparse.ArgumentParser();a.add_argument("--output",required=True,type=Path);args=a.parse_args()
+ a=argparse.ArgumentParser();a.add_argument("--output",required=True,type=Path);a.add_argument("--config",type=Path);args=a.parse_args()
  if not args.output.resolve().is_relative_to(R/"work"):raise ValueError("check output must be inside migration18/work")
- run(args.output)
+ run(args.output,args.config)

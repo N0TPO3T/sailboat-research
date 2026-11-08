@@ -7,19 +7,19 @@ import argparse,traceback,shutil
 def write(folder,name,value):
  with (folder/name).open("x") as f:json.dump(clean(value),f,indent=2)
 
-def main(out):
+def main(out,config_path=None,gate_path=None):
  out=out.resolve()
  if not out.is_relative_to(R/"work"):raise ValueError("output must be inside migration18/work")
  out.mkdir(parents=True,exist_ok=True)
- c=json.loads((R/"config_yara6dof.json").read_text())
- gate=json.loads((R/"work/yara6dof_20261108/result.json").read_text())
+ c=json.loads((config_path or R/"config_yara6dof.json").read_text())
+ gate=json.loads((gate_path or R/"work/yara6dof_20261108/result.json").read_text())
  assert gate["passed"] and gate["config"]==c,"configuration differs from checked adapter"
  base=json.loads((R/"legacy4dof_20261108/source_final/config_legacy4dof.json").read_text())
  for key in ["policy_dt","limit_s","world_radius_m","goal_radius_m","seed","wind","initial","obstacle_input","scenes"]:assert c[key]==base[key],key
  assert c["physics_mode"]=="native" and c["actuator_mode"]=="signed"
  paths=loading_paths();original=Path("/home/ot/Students/hs/sailboat-routing-v0/checkpoints/obstacle_candidate")
  assets={key:Path(paths[key]).read_bytes()==(original/Path(paths[key]).name).read_bytes() for key in ["actor","normalizer"]};assert all(assets.values())
- sources=["environment.py","bridge.py","step.cc","config_yara6dof.json"]
+ sources=["environment.py","bridge.py","step.cc","config_yara6dof.json",str((config_path or R/"config_yara6dof.json").resolve().relative_to(R))]
  assert not subprocess.check_output(["git","diff","HEAD","--",*sources],cwd=R),"uncommitted runtime changes"
  references={scene["name"]:R/"legacy4dof_20261108"/("policy_original_"+scene["name"]+".json") for scene in c["scenes"]}
  for scene in c["scenes"]:assert json.loads(references[scene["name"]].read_text())["scene"]==scene
@@ -37,6 +37,10 @@ def main(out):
     d=info["diagnostics"]
     assert d["physics_mode"]=="native" and not d["body_static"] and not d["body_kinematic"]
     assert d["fluid_density"]==dict(air_density=1.2,waterDensity=1025.,water_density=1025.)
+    if c.get("sail_force_model")=="legacy_polar":
+     f=d["sail_force"];assert f["source"]=="legacy_polar"
+     assert abs(f["cl"]-float(e.env.sail_cl_interp(f["attack_deg"])))<1e-10
+     assert abs(f["cd"]-float(e.env.sail_cd_interp(f["attack_deg"])))<1e-10
     assert d["motor_command"]==0 and d["motor_applied_thrust"]==0 and not d["motor_plugin_present"]
     expected=previous+np.clip(e.target-previous,-np.pi/18,np.pi/18)
     error=float(np.max(np.abs(e.raw[8:10]-expected)));max_angle_error=max(max_angle_error,error);previous=e.raw[8:10].astype(float)
@@ -73,4 +77,4 @@ def main(out):
  write(out,"summary.json",dict(complete=True,episodes=summaries))
  print("COMPLETE",out,flush=True)
 if __name__=="__main__":
- parser=argparse.ArgumentParser();parser.add_argument("--output",type=Path,required=True);args=parser.parse_args();main(args.output)
+ parser=argparse.ArgumentParser();parser.add_argument("--output",type=Path,required=True);parser.add_argument("--config",type=Path);parser.add_argument("--gate",type=Path);args=parser.parse_args();main(args.output,args.config,args.gate)

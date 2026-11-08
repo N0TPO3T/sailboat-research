@@ -20,6 +20,7 @@ step=rospy.ServiceProxy('/migration/step',Trigger)
 models=[]
 boat_name=None
 active_density=None
+active_sail_model='native'
 def mark(name,xy,radius,color,collision=False,z=0.2):
  pose=Pose();pose.position.x=xy[0];pose.position.y=xy[1];pose.position.z=z;pose.orientation.w=1
  geom='<geometry><cylinder><radius>%s</radius><length>0.4</length></cylinder></geometry>'%radius
@@ -57,7 +58,14 @@ def save_image(q):
 def call(count,reset=False):
  rospy.set_param('/migration/count',count);rospy.set_param('/migration/reset',reset)
  ans=step();assert ans.success,ans.message
- return json.loads(ans.message)
+ result=json.loads(ans.message)
+ result['sail_force_model']=active_sail_model
+ if active_sail_model=='legacy_polar' and count==100:
+  d=rospy.get_param('/migration/sail_diagnostics')
+  assert d['model']==boat_name,d
+  assert abs(result['clock']-d['clock'])<1e-8,(result['clock'],d)
+  result['sail_force']=d
+ return result
 (ipc/'ready').write_text('ready')
 last=-1
 while not rospy.is_shutdown():
@@ -92,6 +100,14 @@ while not rospy.is_shutdown():
     for tag,value in [('air_density',density['air']),('waterDensity',density['water']),('water_density',density['water'])]:
      elements=tree.findall('.//plugin/'+tag);assert len(elements)==1,(tag,len(elements))
      elements[0].text=str(float(value))
+    boat_xml=ET.tostring(tree,encoding='unicode')
+   active_sail_model=q.get('sail_force_model','native')
+   assert active_sail_model in ['native','legacy_polar']
+   if rospy.has_param('/migration/sail_diagnostics'):rospy.delete_param('/migration/sail_diagnostics')
+   if active_sail_model=='legacy_polar':
+    assert q.get('physics_mode','native')=='native' and q.get('actuator_mode','native')=='signed'
+    plugins=[x for x in tree.findall('.//plugin') if x.get('filename')=='libLiftDragForces.so'];assert len(plugins)==1
+    plugins[0].set('filename','libMigrationSailPolar.so');plugins[0].set('name','migration_sail_polar')
     boat_xml=ET.tostring(tree,encoding='unicode')
    active_density={tag:float(tree.find('.//plugin/'+tag).text) for tag in ['air_density','waterDensity','water_density']}
    ans=spawn(boat_name,boat_xml,'',p,'world');assert ans.success,ans.status_message

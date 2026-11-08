@@ -89,7 +89,7 @@ class MigrationEnv(gym.Env):
   self.target=np.zeros(2);self.t=0.;self.min_safety=math.inf;self.goal=np.array(scene['goals'][0],dtype=np.float32)
   if self.backend=='yara':
    reset_raw=raw.copy();reset_raw[[2,6,8,9]]*=-1
-   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'),physics_mode=self.config.get('physics_mode','native'),initial_6dof=self.config.get('initial_6dof',{}),fluid_density=self.config.get('fluid_density'))
+   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'),physics_mode=self.config.get('physics_mode','native'),initial_6dof=self.config.get('initial_6dof',{}),fluid_density=self.config.get('fluid_density'),sail_force_model=self.config.get('sail_force_model','native'))
    measured=from_gazebo(self.diag);measured[12:14]=self.goal
    if not np.allclose(measured[:10],raw[:10],atol=2e-5,rtol=0):raise AssertionError(('reset mismatch',measured,raw))
    raw=measured;self.clock0=self.diag['clock']

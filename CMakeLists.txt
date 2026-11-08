@@ -7,3 +7,6 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS} -std=c++17")
 add_library(MigrationStep SHARED step.cc)
 target_link_libraries(MigrationStep ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+
+add_library(MigrationSailPolar SHARED ${CMAKE_CURRENT_BINARY_DIR}/sail_polar_plugin.cc)
+target_link_libraries(MigrationSailPolar ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
