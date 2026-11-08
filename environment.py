@@ -75,6 +75,8 @@ class MigrationEnv(gym.Env):
   self.observation_space=gym.spaces.Box(-np.inf,np.inf,shape=(18,),dtype=np.float32)
   self._progress=shared_progress(self.modules.environment)
   self.action_mode=self.config.get('action_mode','legacy_delta')
+  if self.config['policy_dt']!=1. or self.config['physics_dt']!=.01:
+   raise ValueError('synchronous backend supports policy_dt=1 and physics_dt=.01')
   if self.action_mode not in ['legacy_delta','native_absolute']:raise ValueError('action_mode')
   if self.action_mode=='native_absolute':
    assert backend=='yara' and self.config['physics_mode']=='native' and self.config['actuator_mode']=='native'
@@ -148,6 +150,7 @@ class MigrationEnv(gym.Env):
   clearance=segment_circle_clearance(before[:2],raw[:2],self.obstacles);self.min_safety=min(self.min_safety,clearance['safety_m'])
   collision=clearance['entity_m']<=0
   self.raw=raw.copy();self.history.append(raw.copy());self.commands.append(action.astype(np.float32))
-  info.update(action_mode=self.action_mode,reward_action_delta=reward_action.tolist(),physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
+  native_commands=([self.diag['cable_command'],self.diag['rudder_command']] if self.backend=='yara' else None)
+  info.update(native_commands=native_commands,action_mode=self.action_mode,reward_action_delta=reward_action.tolist(),physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
   return self.frame.encode(raw,before),float(reward),bool(collision or reached),bool(truncated),info
  def close(self):self.physics.close()
