@@ -89,7 +89,7 @@ class MigrationEnv(gym.Env):
   self.target=np.zeros(2);self.t=0.;self.min_safety=math.inf;self.goal=np.array(scene['goals'][0],dtype=np.float32)
   if self.backend=='yara':
    reset_raw=raw.copy();reset_raw[[2,6,8,9]]*=-1
-   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'),physics_mode=self.config.get('physics_mode','native'))
+   self.diag=self.transport.request('reset',raw=reset_raw.tolist(),wind=wind,obstacles=scene['obstacles'],goals=scene['goals'],actuator_mode=self.config.get('actuator_mode','native'),physics_mode=self.config.get('physics_mode','native'),initial_6dof=self.config.get('initial_6dof',{}),fluid_density=self.config.get('fluid_density'))
    measured=from_gazebo(self.diag);measured[12:14]=self.goal
    if not np.allclose(measured[:10],raw[:10],atol=2e-5,rtol=0):raise AssertionError(('reset mismatch',measured,raw))
    raw=measured;self.clock0=self.diag['clock']
@@ -131,6 +131,6 @@ class MigrationEnv(gym.Env):
   clearance=segment_circle_clearance(before[:2],raw[:2],self.obstacles);self.min_safety=min(self.min_safety,clearance['safety_m'])
   collision=clearance['entity_m']<=0
   self.raw=raw.copy();self.history.append(raw.copy());self.commands.append(action.astype(np.float32))
-  info.update(wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
+  info.update(physical_contact=bool(self.diag.get('contact_points',0)),wind_next=[self.modules.globals.w_change_v,self.modules.globals.w_change_d],time=self.t,raw=raw.copy(),physical_action=physical.copy(),target_angles=self.target.tolist(),clearance=clearance,min_safety=self.min_safety,collision=collision,goal_reached=bool(reached),diagnostics=self.diag)
   return self.frame.encode(raw,before),float(reward),bool(collision or reached),bool(truncated),info
  def close(self):self.physics.close()
